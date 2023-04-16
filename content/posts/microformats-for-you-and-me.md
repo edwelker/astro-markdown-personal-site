@@ -20,11 +20,11 @@ tag:
     - xhtml
 post_format: []
 ---
-After nearly 3 months sitting on my bookshelf, I got around to ![Microformats Logo](../../../../uploads/2007/10/microformats1.png "Microformats Logo")reading [the Microformats book](http://microformats.org/blog/2007/04/19/microformats-the-book/). I probably don't need to mention that they've been pretty high on the "buzz" list for a while now. That aside, I like the idea, and believe they are worth using. With this post, I hope to give a high-level overview of Microformatsâ€¦ first sampling what they are and how to use them, followed by my thoughts on why you should use them.
+After nearly 3 months sitting on my bookshelf, I got around to ![Microformats Logo](../../../../uploads/2007/10/microformats1.png "Microformats Logo")reading [the Microformats book](http://microformats.org/blog/2007/04/19/microformats-the-book/). I probably don't need to mention that they've been pretty high on the "buzz" list for a while now. That aside, I like the idea, and believe they are worth using. With this post, I hope to give a high-level overview of Microformats... first sampling what they are and how to use them, followed by my thoughts on why you should use them.
 
 **What and How**
 
-Very simply, Microformats give our already semantic xhtml elements an extra layer of meaning when using a common set of attribute values. Consider the case of an "[hCalendar](http://microformats.org/wiki/hcalendar)", a microformat that gives xhtml the structure of an events calendar. An events calendar is simply a set of events. This relationship is easily described by a parent-children relationship. The problem is that xhtml can easily describe parent-children relationships, yet it cannot semantically describe this calendar-events relationship. Microformats do just thatâ€¦ they provide a way to describe this common relationship through the use of attribute values.
+Very simply, Microformats give our already semantic xhtml elements an extra layer of meaning when using a common set of attribute values. Consider the case of an "[hCalendar](http://microformats.org/wiki/hcalendar)", a microformat that gives xhtml the structure of an events calendar. An events calendar is simply a set of events. This relationship is easily described by a parent-children relationship. The problem is that xhtml can easily describe parent-children relationships, yet it cannot semantically describe this calendar-events relationship. Microformats do just that... they provide a way to describe this common relationship through the use of attribute values.
 
 To create an "hCalendar", you would write something like the following:
 
@@ -44,7 +44,7 @@ As you can see, the supplementary calendar-events structure is added by setting 
 
 While I foresee a wide array of future uses for Microformats, there are limited practical applications today. That being said, the small number does not mean they have limited value; their use can provide substantial value. For example: later this week I am going to re-write the [concert-listing page](http://columbiaorchestra.org/season/) for my [ orchestra website](http://columbiaorchestra.org). I am going to use the hCalendar Microformat to code this season's events. I will then use an open-source converter to allow users to download a iCal file of this calendar on the fly.
 
-Why would I do this? Because it's advantageous. Using the hCalendar Microformat I canâ€¦
+Why would I do this? Because it's advantageous. Using the hCalendar Microformat I can...
 
 - provide an additional interface (the iCal file) to my users for free.
 - syndicate these events. That way, if I ping a Microformat aware service (like [pingerati.net](http://pingerati.net/)) I will have published these events elsewhere, without any additional work.

@@ -53,21 +53,21 @@ Location-based selectors prohibit code reuse because they are intended to isolat
 
 Location-based selectors are easy to spot. The pattern is a long list of selectors that starts with the same initial selector, as follows (assuming the source is reasonably ordered).
 
-`.sidebar {â€¦}
-.sidebar .nav {â€¦}
-.sidebar .nav .box {â€¦}
-.sidebar .nav .box .header {â€¦}
-.sidebar .nav .box .body p {â€¦}`
+`.sidebar {...}
+.sidebar .nav {...}
+.sidebar .nav .box {...}
+.sidebar .nav .box .header {...}
+.sidebar .nav .box .body p {...}`
 
 Because each selector chain starts with a location-based selector, none of them are reusable. What if we add a new group of pages that use the same .box structure but need to be placed in the content, header, or footer? A novice would add more comma separated selector chains, but that amounts to copying code.  
 `
-.sidebar .nav .box, .content .nav .box, .header .nav .box, .footer .nav .box {â€¦}`
+.sidebar .nav .box, .content .nav .box, .header .nav .box, .footer .nav .box {...}`
 
 The correct approach is to factor out the common functionality while ditching the location-based rules. Now the styles can be reused regardless of the box location.
 
-`.box {â€¦}
-.box .header {â€¦}
-.box .footer {â€¦}`
+`.box {...}
+.box .header {...}
+.box .footer {...}`
 
 Why not break the .box and .header/.footer chains apart? Here the .box class encapsulates the .header and .footer behaviors, hiding these names from the global scope and allowing the "header" and "footer" classnames to be used elsewhere.
 
@@ -79,7 +79,7 @@ By 2010, everyone should be aware that adding "style" attributes directly to HTM
 
 Selectors that contain properties set as `!important` should be avoided because their specificity makes them difficult to override.
 
-Browser selector hacks like `* html {â€¦}` should be avoided because they tend to require redefinition of both the problem properties and all other properties, leading to duplicate code. When hacks are needed, use property hacks like the star (IE7 and less) and underscore (IE6 and less) instead.
+Browser selector hacks like `* html {...}` should be avoided because they tend to require redefinition of both the problem properties and all other properties, leading to duplicate code. When hacks are needed, use property hacks like the star (IE7 and less) and underscore (IE6 and less) instead.
 
 Because IDs can be used only once per-page, selectors containing IDs can typically only be used in a specific place on each page. IDs are great when you need to grab something from the DOM in JavaScript, but avoid them in your CSS.
 
@@ -116,9 +116,9 @@ Before:
 
 (my.css)
 
-`.portlet {margin:0; padding:0; â€¦ }
-.header {margin:0; padding:0; â€¦ }
-.footer {margin:0; padding:0; â€¦}
+`.portlet {margin:0; padding:0; ... }
+.header {margin:0; padding:0; ... }
+.footer {margin:0; padding:0; ...}
 `
 
 After:
@@ -129,9 +129,9 @@ After:
 
 (my.css)
 
-`.portlet { â€¦ }
-.header { â€¦ }
-.footer { â€¦ }`
+`.portlet { ... }
+.header { ... }
+.footer { ... }`
 
 ### Float
 
@@ -158,7 +158,7 @@ Visual design patterns
 
 In the last section, we looked at the effects of mingling box model, visual formatting model, and presentational properties. Searching for visual design patterns is the next logical step, albeit a complicated one.
 
-This technique is tricky. Unlike the others, this has the additional restriction in that it is usually only suitable for finished designs. Attempting this on an in-development design may send you on the road toward madness. Additionally, it doesn't lend itself very well to searching code. In effect we are looking for repeating groups of CSS propertiesâ€¦ but these properties can typically span multiple selectors! So instead of looking to the code for patterns, we look for patterns in the other direction, at the visual output.
+This technique is tricky. Unlike the others, this has the additional restriction in that it is usually only suitable for finished designs. Attempting this on an in-development design may send you on the road toward madness. Additionally, it doesn't lend itself very well to searching code. In effect we are looking for repeating groups of CSS properties... but these properties can typically span multiple selectors! So instead of looking to the code for patterns, we look for patterns in the other direction, at the visual output.
 
 This technique also takes the longest, since it requires looking at all of the pages on a site as a whole.
 
