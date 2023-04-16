@@ -31,4 +31,4 @@ Low and behold, Microsoft hasn't added that to IE. Of course not. Why would they
 
 I am not "new" as my sister would say... I know how it is. I hadn't expected it to be there, but the more work I had to do on an alternate table-based solution, the more it annoyed me. I keep hearing more and more about the CSS3 recommendation, adding more elements to HTML 5, and all of these other grand documents, which all currently amount to little-to-nothing. Maybe I am missing the point, but if 1998 is going to be ignored, why should 2008 be any different?
 
-I am going to keep this rant short, the rant wasn't really the point. The greater point is that was enough of a call-to-action for me. That's what it took to realize I should start looking into what I can do about giving certain browsers a push in the right direction.Â They seem to be lost.
+I am going to keep this rant short, the rant wasn't really the point. The greater point is that was enough of a call-to-action for me. That's what it took to realize I should start looking into what I can do about giving certain browsers a push in the right direction. They seem to be lost.

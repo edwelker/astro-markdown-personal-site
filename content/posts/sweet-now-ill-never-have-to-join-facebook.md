@@ -16,6 +16,6 @@ tag:
     - OpenSocial
 post_format: []
 ---
-[Google just saved me the effort](http://www.techcrunch.com/2007/10/30/details-revealed-google-opensocial-to-be-common-apis-for-building-social-apps/).Â Thanks Goog!
+[Google just saved me the effort](http://www.techcrunch.com/2007/10/30/details-revealed-google-opensocial-to-be-common-apis-for-building-social-apps/). Thanks Goog!
 
 I'll have to take a look and see if I can make something real outta this...

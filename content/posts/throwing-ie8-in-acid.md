@@ -15,4 +15,4 @@ tag:
     - acid3
 post_format: []
 ---
-My IE8 happiness was so yesterday.Â Now let's tear all these browsers apart, IE8 included, with [the Acid3 test](http://www.webstandards.org/2008/03/03/acid3-putting-browser-makers-on-notice-again/)!
+My IE8 happiness was so yesterday. Now let's tear all these browsers apart, IE8 included, with [the Acid3 test](http://www.webstandards.org/2008/03/03/acid3-putting-browser-makers-on-notice-again/)!

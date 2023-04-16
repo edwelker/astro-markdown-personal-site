@@ -14,4 +14,4 @@ tag:
     - scheme
 post_format: []
 ---
-I am finished my XSLT class, and learned some very interesting things.Â Very cool the way some of the features of the language fit within the context of Scheme (and Lisp, for that matter).Â Â More to come.
+I am finished my XSLT class, and learned some very interesting things. Very cool the way some of the features of the language fit within the context of Scheme (and Lisp, for that matter).  More to come.

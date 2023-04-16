@@ -37,4 +37,4 @@ post_format: []
 
 7\) I've been hard at work designing a new version of [My NCBI](http://pubmed.gov), while thinking in terms of designing a base application class for all NCBI applications (using the new system inheritance feature). I haven't had to deal with large-scale OOP for a while, and feel a bit rusty. I'm thrilled to be working through the rust. That, and [the new spending bill](http://www.readwriteweb.com/archives/nih_law_29b_in_health_science.php) should make sure that I am working on this for a long time. Exiting times.
 
-And #8:Â January 1: My birthday.
+And #8: January 1: My birthday.

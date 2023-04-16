@@ -41,13 +41,13 @@ Alt (kosher salt, 2 tbsp, added at the corned beef stage)
 
 2\) Cook for 2.5 hours, turning every half-hour.
 
-3\) After 2.5 hours, take out the corned beef, and add half the potatoes, carrots, and onion.Â Cook for 15-25 minutes.
+3\) After 2.5 hours, take out the corned beef, and add half the potatoes, carrots, and onion. Cook for 15-25 minutes.
 
 4\) After those 15-25 minutes, add the rest of the veggies, and cook for another 15 minutes.
 
-5\) Take out half, and fill the empty space with the cabbage.Â Cook on high for another 15 minutes.
+5\) Take out half, and fill the empty space with the cabbage. Cook on high for another 15 minutes.
 
-6\) Serve an 8th of cabbage, 2 slices of corned beef, a bowl-full of veggies, and add chopped fresh parsley on top.Â Â Serve along with the Irish soda bread.
+6\) Serve an 8th of cabbage, 2 slices of corned beef, a bowl-full of veggies, and add chopped fresh parsley on top.  Serve along with the Irish soda bread.
 
 Irish soda bread
 
