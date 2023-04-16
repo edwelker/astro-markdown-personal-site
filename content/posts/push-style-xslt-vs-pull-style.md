@@ -91,7 +91,7 @@ and the XSLTs,
     </template>
 ```
 
-and the rule in “imageformat.xsl” (the template being extended in this case),
+and the rule in "imageformat.xsl” (the template being extended in this case),
 
 ```
 <pre lang="xml">

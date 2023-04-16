@@ -36,4 +36,4 @@ Then I looked at [Flanagan’s](http://www.davidflanagan.com/) [*Javascript: The
 
 If you read this, I hope I could save you a bit of time.
 
-P.S. – I used IE8a’s Debugger to help.Â Here’s hoping they develop it further before the standard release.Â It’s MUCH better than flying blind, but I can’t imagine a less helpful message than specifying an object in the console, and seeing “{…}”.
+P.S. – I used IE8a’s Debugger to help.Â Here’s hoping they develop it further before the standard release.Â It’s MUCH better than flying blind, but I can’t imagine a less helpful message than specifying an object in the console, and seeing "{…}”.

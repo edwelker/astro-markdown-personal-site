@@ -49,4 +49,4 @@ Another interesting application is to include labels for screenreaders, while us
 
 Back to using one label again, I ran into a [Firefox Bug where a link is included in a label element](https://bugzilla.mozilla.org/show_bug.cgi?id=163912). When a link is clicked inside a label element that is associated with a checkbox, the checkbox becomes checked! Hit the back button, and the item will still be checked, with the visual check the only evidence anything happened. You can see how this would not be friendly to a screenreader (not to mention visual users!) IE and Opera both behave without checking the box. If you have a moment, [*please vote for this bug*](https://bugzilla.mozilla.org/show_bug.cgi?id=163912) and help me get it fixed.
 
-P.S. – when I mention “hoping” to test further, I mean when my Jaws activation FINALLY gets worked out.
+P.S. – when I mention "hoping” to test further, I mean when my Jaws activation FINALLY gets worked out.

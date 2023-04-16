@@ -20,7 +20,7 @@ post_format: []
 ---
 In the last few years much emphasis has been placed on web performance issues. Browser vendors have optimized JavaScript engines, JavaScript libraries have been honed, and content delivery has been improved. Unfortunately, CSS has received less attention. Developers have been advised how to optimally transfer CSS files, and instructed to use CSS shorthand, but very little has targeted CSS code itself.
 
-[Ms. Nicole Sullivan](http://www.stubbornella.org/) is among those looking to improve CSS code. She has been promoting “[OOCSS](https://github.com/stubbornella/oocss),” or “[Object Oriented CSS](https://github.com/stubbornella/oocss),” her methodology for how to design and refactor CSS<sup>[1](#n1)</sup>. She has collected a number of best practices for architecting a CSS framework. The benefits are simple: CSS will perform better, become more modular, as well as being grounded with a consistent API, making it easier to learn and use. This is accomplished by reducing the file size and complexity of our CSS.
+[Ms. Nicole Sullivan](http://www.stubbornella.org/) is among those looking to improve CSS code. She has been promoting "[OOCSS](https://github.com/stubbornella/oocss),” or "[Object Oriented CSS](https://github.com/stubbornella/oocss),” her methodology for how to design and refactor CSS<sup>[1](#n1)</sup>. She has collected a number of best practices for architecting a CSS framework. The benefits are simple: CSS will perform better, become more modular, as well as being grounded with a consistent API, making it easier to learn and use. This is accomplished by reducing the file size and complexity of our CSS.
 
 While many of these techniques can be considered common practice for experienced CSS programmers, implementing them can be difficult. The art is in analyzing trade-offs and picking the optimal path. That said, these rules are not for everyone, or every site. It all boils down to deciding if the site’s performance gain is greater than the time it takes to learn and use the techniques.
 
@@ -33,10 +33,10 @@ While many of these techniques can be considered common practice for experienced
 ### Less useful for sites with
 
 - A few pages or just one page
-- Varying design (possibly “portfolio” or design sites)
+- Varying design (possibly "portfolio” or design sites)
 - Few performance concerns
 
-So how do we get started? We go hunting for bad code smells. In Chapter 3 of [*Refactoring: Improving the Design of Existing Code*](http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672), [Martin Fowler](http://martinfowler.com/) and [Kent Beck](http://twitter.com/kentbeck) coin the phrase “code smell,” meaning “structures in the code that suggest the possibility of refactoring.” Simply put, we go looking for chunks of code that our intuition tells us could be cleaned. In the chapter heading, Grandma Beck is quoted (then talking about child-rearing), “If it stinks, change it.” We’ll take a more formal approach to finding these code smells, going from easy to difficult. First, we’ll sniff around the CSS selectors, and then move onto the CSS properties. Finally we’ll look for visual design patterns that can direct the structure of our CSS.
+So how do we get started? We go hunting for bad code smells. In Chapter 3 of [*Refactoring: Improving the Design of Existing Code*](http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672), [Martin Fowler](http://martinfowler.com/) and [Kent Beck](http://twitter.com/kentbeck) coin the phrase "code smell,” meaning "structures in the code that suggest the possibility of refactoring.” Simply put, we go looking for chunks of code that our intuition tells us could be cleaned. In the chapter heading, Grandma Beck is quoted (then talking about child-rearing), "If it stinks, change it.” We’ll take a more formal approach to finding these code smells, going from easy to difficult. First, we’ll sniff around the CSS selectors, and then move onto the CSS properties. Finally we’ll look for visual design patterns that can direct the structure of our CSS.
 
 Selectors
 ---------
@@ -62,13 +62,13 @@ The correct approach is to factor out the common functionality while ditching th
 
 `.box {â€¦}<br></br>.box .header {â€¦}<br></br>.box .footer {â€¦}`
 
-Why not break the .box and .header/.footer chains apart? Here the .box class encapsulates the .header and .footer behaviors, hiding these names from the global scope and allowing the “header” and “footer” classnames to be used elsewhere.
+Why not break the .box and .header/.footer chains apart? Here the .box class encapsulates the .header and .footer behaviors, hiding these names from the global scope and allowing the "header” and "footer” classnames to be used elsewhere.
 
 To those looking ahead to HTML5, you should already recognize how this pattern can be applied to section elements containing header and footer elements.
 
 ### Varying specificity
 
-By 2010, everyone should be aware that adding “style” attributes directly to HTML elements is a bad idea (and code smell). What about everything else?
+By 2010, everyone should be aware that adding "style” attributes directly to HTML elements is a bad idea (and code smell). What about everything else?
 
 Selectors that contain properties set as `!important` should be avoided because their specificity makes them difficult to override.
 
@@ -129,7 +129,7 @@ It’s rare for sites to use multiple sizes of body text on one page, or site wi
 
 ### Mingling box model, visual formatting model, and presentational properties
 
-The CSS specification groups similar properties into sections. The Box model is the most famous (because it had previously been the most infamous). Everyone is familiar with its margins, paddings, and borders building on widths and heights. The Visual formatting model uses the display, position, float, clear, and z-index properties to dictate the layout of the boxes in the document. The CSS specification makes no mention of “presentational properties,” but that’s a term I use to include color, background, font, and text properties that style the boxes or their contents.
+The CSS specification groups similar properties into sections. The Box model is the most famous (because it had previously been the most infamous). Everyone is familiar with its margins, paddings, and borders building on widths and heights. The Visual formatting model uses the display, position, float, clear, and z-index properties to dictate the layout of the boxes in the document. The CSS specification makes no mention of "presentational properties,” but that’s a term I use to include color, background, font, and text properties that style the boxes or their contents.
 
 Separating selectors along these lines allows for greater code reuse. The box model properties are the most easily re-used of the three. It is not uncommon for a number of boxes on the page to share the same properties, so moving these properties into a new class will allow you to apply these styles in a consistent and efficient manner. The visual formatting properties are typically less likely to be reused, therefore separating them from the boxes will allow greater reuse of both the visual formatting and box properties.
 
@@ -162,9 +162,9 @@ Alignment is the key to identifying patterns where grids can be applied. Take fi
 
 Then start the tedious process of tearing out the previous code and replacing with a grid structure.. The end product will be far more efficient and easier to maintain. (Which grid should you use? Which every you choose! As long as you are using one your code will be cleaner and more efficient.)
 
-### “Media Blocks”
+### "Media Blocks”
 
-One pattern that Ms. Sullivan found frequently on the Facebook site is something she has coined a “Media Block,” which [she defines](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) as “an image to the left, with descriptive content to the right.” Simply put, this is just a compound object, which is slightly more abstract than the previous examples. She analyzes these media blocks in two steps. First define their constant functional properties (what they do), then identify the variables in the design (parts could fluctuate in certain conditions).
+One pattern that Ms. Sullivan found frequently on the Facebook site is something she has coined a "Media Block,” which [she defines](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) as "an image to the left, with descriptive content to the right.” Simply put, this is just a compound object, which is slightly more abstract than the previous examples. She analyzes these media blocks in two steps. First define their constant functional properties (what they do), then identify the variables in the design (parts could fluctuate in certain conditions).
 
 Not all sites will contain objects like these, but if yours does, identifying the patterns will help to reduce code duplication and promote code reuse.
 
@@ -182,6 +182,6 @@ Once these rules have been applied, your file size should be smaller, so less in
 Footnotes
 ---------
 
-<sup><a id="n1">1</a></sup> Personally, I find the choice of the “OOCSS” or “Object Oriented CSS” name both poor and misleading. To call something “Object Oriented” when the metaphor doesn’t fit (CSS has no data per se, and it certainly has no methods) is confusing, especially when the audience is likely to be familiar with the term. To then give your CSS library the same name and overload the term twice obscures a very useful set of CSS refactoring methods.
+<sup><a id="n1">1</a></sup> Personally, I find the choice of the "OOCSS” or "Object Oriented CSS” name both poor and misleading. To call something "Object Oriented” when the metaphor doesn’t fit (CSS has no data per se, and it certainly has no methods) is confusing, especially when the audience is likely to be familiar with the term. To then give your CSS library the same name and overload the term twice obscures a very useful set of CSS refactoring methods.
 
 <sup><a id="n2">2</a></sup> This can be accomplished with the Unix tool grep, a powerful text searching utility. It is also possible to accomplish this through your editor, as long as it supports searching multiple files at once. It is especially useful to be able to count occurrences across files.

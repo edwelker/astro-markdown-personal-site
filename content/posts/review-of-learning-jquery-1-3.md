@@ -16,7 +16,7 @@ post_format: []
 
 Learning jQuery 1.3 has a writing style that is very dry for a book written in a semi-conversational voice. I prefer a writing style with a little more personality to it, but acknowledge that’s not for everyone.
 
-I did have two small complaints. First, I like to see the API list out at the top of the chapters. Appendix D contains a complete reference, but I like having a list of methods to be covered at the beginning of the chapter. While I’m at it, I may mention that the “complete” reference is little more than a cheetsheet style list. Perhaps a little more would have been useful.
+I did have two small complaints. First, I like to see the API list out at the top of the chapters. Appendix D contains a complete reference, but I like having a list of methods to be covered at the beginning of the chapter. While I’m at it, I may mention that the "complete” reference is little more than a cheetsheet style list. Perhaps a little more would have been useful.
 
 My second complaint is about the poor code syntax highlighting. Just for record, this has nothing to do with the content, it’s just a complaint against the publisher. Take page 145, where three-quarters of the page is example code, but contains only bold line at the top showing the emphasized line. First, the bold often wasn’t enough to draw the eye… especially at the beginning of the book when a novice reader has to mentally separate standard JavaScript from jQuery code. Second, I understand that the example code is included, but couldn’t it have simply been excerpted here? I don’t understand wasting an entire page, when much less would do.
 
