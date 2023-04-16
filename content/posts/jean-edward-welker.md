@@ -30,7 +30,7 @@ His wife of 23 years, Joan M. Welker, died in 2000.
 
 Survivors include three children, Edward Welker of Kensington, Catherine Welker of Washington and Tania Welker of New York; one sister, Nancy Frenze of Philadelphia; and three brothers, Paul Welker of Providence, R.I., Robert Welker of Arlington and Kenneth Welker of Oslo.
 
-——--
+------
 
 Jean Edward Welker
 
@@ -38,7 +38,7 @@ Jean Edward Welker
 
 [<span class="Small">Published in the Boston Globe on 12/9/2007.</span>](http://www.legacy.com/bostonglobe/DeathNotices.asp?Page=Lifestory&PersonId=99306256)
 
-——--
+------
 
 [Jean E. Welker,  
 NASA Technical Reports Server  ](http://ntrs.nasa.gov/search.jsp?N=0&Ntk=all%7Call&Ntx=mode+matchall%7Cmode%20matchall&Ntt=welker%7Cjean)
