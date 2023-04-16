@@ -23,9 +23,9 @@ First, I needed to install the python developer tools. (Use apt-get or aptitude,
 
 `$ sudo aptitude install python-dev`
 
-Then, I needed to install libjpeg and libjpeg-dev.Â I’m not sure why, but I needed libjpeg simply doesn’t exist, so I needed to install libjpeg62.Â I can’t pretend that I know the difference (or if there is one).Â In fact, I may have gotten away with installing libjpeg62 and libjpeg-dev (rather than both "62" versions... libjpeg62 and libjpeg62-dev), but only further testing will tell.
+Then, I needed to install libjpeg and libjpeg-dev.Â I'm not sure why, but I needed libjpeg simply doesn't exist, so I needed to install libjpeg62.Â I can't pretend that I know the difference (or if there is one).Â In fact, I may have gotten away with installing libjpeg62 and libjpeg-dev (rather than both "62" versions... libjpeg62 and libjpeg62-dev), but only further testing will tell.
 
-Why? If you install PIL without this library, you’ll get those wonderful "decoder jpeg not available" messages in Python.Â Or worse yet, if you’re trying to use it in a Django, you may get some errors (specifically the "Upload a valid image. The file you uploaded was either not an image or a corrupted image" warning), or you may not get any until you open the shell.Â Either way, you can test with the method listed below.Â If you get the "decoder jpeg not available" message, your install didn’t work.
+Why? If you install PIL without this library, you'll get those wonderful "decoder jpeg not available" messages in Python.Â Or worse yet, if you're trying to use it in a Django, you may get some errors (specifically the "Upload a valid image. The file you uploaded was either not an image or a corrupted image" warning), or you may not get any until you open the shell.Â Either way, you can test with the method listed below.Â If you get the "decoder jpeg not available" message, your install didn't work.
 
 The zlib package handles PNGs.
 
@@ -37,7 +37,7 @@ Alright, now we seem to be done with the prerequisites. Start your virtualenv (o
 
 `$ source myEnv/bin/activate`
 
-Download PIL and install.Â This will make sure to install PIL within your virtualenv’s site-packages.
+Download PIL and install.Â This will make sure to install PIL within your virtualenv's site-packages.
 
 `(myEnv)$ wget http://effbot.org/downloads/Imaging-1.1.7.tar.gz
 (myEnv)$ tar zxvf Imaging-1.1.7.tar.gz

@@ -22,6 +22,6 @@ Brown an onion in a tablespoon of olive oil, adding some salt (I used a medium a
 
 Add 2 (or more... as much as you like) tablespoons of sliced garlic (not too thin), and 1 red pepper, cut into aprox. 1cm by 1cm cubes (you want a little flavor in each bite), and another tablespoon of olive oil. Â Cook until the peppers look good (the garlic will follow).
 
-Add about 4-5 sprigs of fresh dill, ripping it into small pieces, and then the rice, and stir (feel free to add a tbsp or so of water if it’s sticking). Â Cook for another 3-5 minutes, until the liquid is drained.
+Add about 4-5 sprigs of fresh dill, ripping it into small pieces, and then the rice, and stir (feel free to add a tbsp or so of water if it's sticking). Â Cook for another 3-5 minutes, until the liquid is drained.
 
 I served it with two tiny-tiny steaks cooked in the same large-sized pan, seasoned with salt and pepper, though the rice would have been enough split between two people.

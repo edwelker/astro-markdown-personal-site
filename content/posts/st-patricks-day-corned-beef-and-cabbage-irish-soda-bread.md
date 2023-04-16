@@ -26,13 +26,13 @@ cloves
 juniper berries  
 bay leaves (the strongest you can find)  
 all spice berries  
-thyme (a lot of dried, since it’s very water soluable, and doesn’t last long when boiled)
+thyme (a lot of dried, since it's very water soluable, and doesn't last long when boiled)
 
 potatoes (baby, about the size of a tablespoon)  
 onion (4+ big onions)  
 carrot (5+ medium carrots)  
 celery (3+ small stalks, not too much)  
-cabbage (a small one... it’ll have to be cooked after taking some veggies/broth out, so it can’t be too large.)  
+cabbage (a small one... it'll have to be cooked after taking some veggies/broth out, so it can't be too large.)  
 corned beef (the larger the better, also try to get a flat cut, not a point cut, ~$10, so x lbs)
 
 Alt (kosher salt, 2 tbsp, added at the corned beef stage)

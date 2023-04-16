@@ -22,7 +22,7 @@ In the last few years much emphasis has been placed on web performance issues. B
 
 [Ms. Nicole Sullivan](http://www.stubbornella.org/) is among those looking to improve CSS code. She has been promoting "[OOCSS](https://github.com/stubbornella/oocss)," or "[Object Oriented CSS](https://github.com/stubbornella/oocss)," her methodology for how to design and refactor CSS<sup>[1](#n1)</sup>. She has collected a number of best practices for architecting a CSS framework. The benefits are simple: CSS will perform better, become more modular, as well as being grounded with a consistent API, making it easier to learn and use. This is accomplished by reducing the file size and complexity of our CSS.
 
-While many of these techniques can be considered common practice for experienced CSS programmers, implementing them can be difficult. The art is in analyzing trade-offs and picking the optimal path. That said, these rules are not for everyone, or every site. It all boils down to deciding if the site’s performance gain is greater than the time it takes to learn and use the techniques.
+While many of these techniques can be considered common practice for experienced CSS programmers, implementing them can be difficult. The art is in analyzing trade-offs and picking the optimal path. That said, these rules are not for everyone, or every site. It all boils down to deciding if the site's performance gain is greater than the time it takes to learn and use the techniques.
 
 ### Useful for sites with
 
@@ -36,7 +36,7 @@ While many of these techniques can be considered common practice for experienced
 - Varying design (possibly "portfolio" or design sites)
 - Few performance concerns
 
-So how do we get started? We go hunting for bad code smells. In Chapter 3 of [*Refactoring: Improving the Design of Existing Code*](http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672), [Martin Fowler](http://martinfowler.com/) and [Kent Beck](http://twitter.com/kentbeck) coin the phrase "code smell," meaning "structures in the code that suggest the possibility of refactoring." Simply put, we go looking for chunks of code that our intuition tells us could be cleaned. In the chapter heading, Grandma Beck is quoted (then talking about child-rearing), "If it stinks, change it." We’ll take a more formal approach to finding these code smells, going from easy to difficult. First, we’ll sniff around the CSS selectors, and then move onto the CSS properties. Finally we’ll look for visual design patterns that can direct the structure of our CSS.
+So how do we get started? We go hunting for bad code smells. In Chapter 3 of [*Refactoring: Improving the Design of Existing Code*](http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672), [Martin Fowler](http://martinfowler.com/) and [Kent Beck](http://twitter.com/kentbeck) coin the phrase "code smell," meaning "structures in the code that suggest the possibility of refactoring." Simply put, we go looking for chunks of code that our intuition tells us could be cleaned. In the chapter heading, Grandma Beck is quoted (then talking about child-rearing), "If it stinks, change it." We'll take a more formal approach to finding these code smells, going from easy to difficult. First, we'll sniff around the CSS selectors, and then move onto the CSS properties. Finally we'll look for visual design patterns that can direct the structure of our CSS.
 
 Selectors
 ---------
@@ -139,17 +139,17 @@ Overuse of the float property is a code smell indicating repetition in placing i
 
 ### Font-size
 
-It’s rare for sites to use multiple sizes of body text on one page, or site wide. Therefore most font-size properties are likely used to define header-like text sizes. [Ms. Sullivan does an excellent job pointing out](http://www.stubbornella.org/content/2010/07/01/top-5-mistakes-of-massive-css/), that of a finite number of font-sizes that can be used on a page, there are even fewer that a user can differentiate (for example the difference between 15px and 16px browser font sizes). Font-size therefore is usually a code smell for repeating headers.
+It's rare for sites to use multiple sizes of body text on one page, or site wide. Therefore most font-size properties are likely used to define header-like text sizes. [Ms. Sullivan does an excellent job pointing out](http://www.stubbornella.org/content/2010/07/01/top-5-mistakes-of-massive-css/), that of a finite number of font-sizes that can be used on a page, there are even fewer that a user can differentiate (for example the difference between 15px and 16px browser font sizes). Font-size therefore is usually a code smell for repeating headers.
 
 ### Mingling box model, visual formatting model, and presentational properties
 
-The CSS specification groups similar properties into sections. The Box model is the most famous (because it had previously been the most infamous). Everyone is familiar with its margins, paddings, and borders building on widths and heights. The Visual formatting model uses the display, position, float, clear, and z-index properties to dictate the layout of the boxes in the document. The CSS specification makes no mention of "presentational properties," but that’s a term I use to include color, background, font, and text properties that style the boxes or their contents.
+The CSS specification groups similar properties into sections. The Box model is the most famous (because it had previously been the most infamous). Everyone is familiar with its margins, paddings, and borders building on widths and heights. The Visual formatting model uses the display, position, float, clear, and z-index properties to dictate the layout of the boxes in the document. The CSS specification makes no mention of "presentational properties," but that's a term I use to include color, background, font, and text properties that style the boxes or their contents.
 
 Separating selectors along these lines allows for greater code reuse. The box model properties are the most easily re-used of the three. It is not uncommon for a number of boxes on the page to share the same properties, so moving these properties into a new class will allow you to apply these styles in a consistent and efficient manner. The visual formatting properties are typically less likely to be reused, therefore separating them from the boxes will allow greater reuse of both the visual formatting and box properties.
 
 It must be noted, however, that there will be cases where the same box model properties will often be paired with the same visual formatting properties. In that case it is perfectly acceptable to leave them coupled together.
 
-Presentational properties are the least likely set to be reused. This isn’t surprising because they are typically dependent on the contents of the boxes. That makes these the most logical candidate for extraction, because doing so will increase the usability of the remaining properties.
+Presentational properties are the least likely set to be reused. This isn't surprising because they are typically dependent on the contents of the boxes. That makes these the most logical candidate for extraction, because doing so will increase the usability of the remaining properties.
 
 Keep in mind we are still trying to build a consistent API for others to use. Creating new patterns of box model, visual formatting model, and presentational property oriented classes will give future developers a wide range of flexibility to mix-and-match these classes while styling new elements.
 
@@ -158,21 +158,21 @@ Visual design patterns
 
 In the last section, we looked at the effects of mingling box model, visual formatting model, and presentational properties. Searching for visual design patterns is the next logical step, albeit a complicated one.
 
-This technique is tricky. Unlike the others, this has the additional restriction in that it is usually only suitable for finished designs. Attempting this on an in-development design may send you on the road toward madness. Additionally, it doesn’t lend itself very well to searching code. In effect we are looking for repeating groups of CSS propertiesâ€¦ but these properties can typically span multiple selectors! So instead of looking to the code for patterns, we look for patterns in the other direction, at the visual output.
+This technique is tricky. Unlike the others, this has the additional restriction in that it is usually only suitable for finished designs. Attempting this on an in-development design may send you on the road toward madness. Additionally, it doesn't lend itself very well to searching code. In effect we are looking for repeating groups of CSS propertiesâ€¦ but these properties can typically span multiple selectors! So instead of looking to the code for patterns, we look for patterns in the other direction, at the visual output.
 
 This technique also takes the longest, since it requires looking at all of the pages on a site as a whole.
 
 ### Headers
 
-Finding headers on the page should be fairly simple, and to be honest, you’ve probably taken care of this searching for repeated font-size properties as described above. However a visual inventory may convince you that your headers are more alike than different, and you may find an opportunity to tighten the differences. You may even decide to dump one of the variationsâ€"even better.
+Finding headers on the page should be fairly simple, and to be honest, you've probably taken care of this searching for repeated font-size properties as described above. However a visual inventory may convince you that your headers are more alike than different, and you may find an opportunity to tighten the differences. You may even decide to dump one of the variationsâ€"even better.
 
 ### Portlets
 
-In a portal or information dashboard oriented design, each chunk of output, whether contained in a box/window type structure, or structure-less (think Apple’s Dashboard) is bound to share common characteristics. In the structure-less design you can focus on extracting the visual formatting properties into reusable classes defining position. Box or window contained portlets can be constructed using a combination of box model, and presentational properties. And if you’re using a dashboard design, these chunks of output can probably be arranged using a grid structure.
+In a portal or information dashboard oriented design, each chunk of output, whether contained in a box/window type structure, or structure-less (think Apple's Dashboard) is bound to share common characteristics. In the structure-less design you can focus on extracting the visual formatting properties into reusable classes defining position. Box or window contained portlets can be constructed using a combination of box model, and presentational properties. And if you're using a dashboard design, these chunks of output can probably be arranged using a grid structure.
 
 ### Grids
 
-Alignment is the key to identifying patterns where grids can be applied. Take five steps back from your monitor and look at the top-level page objects. If some of these objects are loosely aligned, they can probably be included into a grid. Sketch the grid and the objects within on a piece of paper. Now walk three steps forward, and look at the each individual section in your wireframe. If you identify objects aligned in your sections, you may be primed for using a nested grid. Sketch that grid (have you realized that you’re wireframing yet?). Keep going until you’ve exhausted all of the sections you’ve drawn (have you realized you’re using recursion yet?)
+Alignment is the key to identifying patterns where grids can be applied. Take five steps back from your monitor and look at the top-level page objects. If some of these objects are loosely aligned, they can probably be included into a grid. Sketch the grid and the objects within on a piece of paper. Now walk three steps forward, and look at the each individual section in your wireframe. If you identify objects aligned in your sections, you may be primed for using a nested grid. Sketch that grid (have you realized that you're wireframing yet?). Keep going until you've exhausted all of the sections you've drawn (have you realized you're using recursion yet?)
 
 Then start the tedious process of tearing out the previous code and replacing with a grid structure.. The end product will be far more efficient and easier to maintain. (Which grid should you use? Which every you choose! As long as you are using one your code will be cleaner and more efficient.)
 
@@ -184,7 +184,7 @@ Not all sites will contain objects like these, but if yours does, identifying th
 
 ### More
 
-This short list couldn’t hope to represent the entirety of the visual design patterns that can be found on a website. That’s why a site inventory is required. If you find similar patterns repeating multiple times, this is a chance for you to optimize.
+This short list couldn't hope to represent the entirety of the visual design patterns that can be found on a website. That's why a site inventory is required. If you find similar patterns repeating multiple times, this is a chance for you to optimize.
 
 Results
 -------
@@ -196,6 +196,6 @@ Once these rules have been applied, your file size should be smaller, so less in
 Footnotes
 ---------
 
-<sup><a id="n1">1</a></sup> Personally, I find the choice of the "OOCSS" or "Object Oriented CSS" name both poor and misleading. To call something "Object Oriented" when the metaphor doesn’t fit (CSS has no data per se, and it certainly has no methods) is confusing, especially when the audience is likely to be familiar with the term. To then give your CSS library the same name and overload the term twice obscures a very useful set of CSS refactoring methods.
+<sup><a id="n1">1</a></sup> Personally, I find the choice of the "OOCSS" or "Object Oriented CSS" name both poor and misleading. To call something "Object Oriented" when the metaphor doesn't fit (CSS has no data per se, and it certainly has no methods) is confusing, especially when the audience is likely to be familiar with the term. To then give your CSS library the same name and overload the term twice obscures a very useful set of CSS refactoring methods.
 
 <sup><a id="n2">2</a></sup> This can be accomplished with the Unix tool grep, a powerful text searching utility. It is also possible to accomplish this through your editor, as long as it supports searching multiple files at once. It is especially useful to be able to count occurrences across files.

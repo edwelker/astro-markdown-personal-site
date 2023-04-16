@@ -15,4 +15,4 @@ tag:
     - 'this site'
 post_format: []
 ---
-Yes, if you happen to see some weird things going on, I am tweaking the CSS on the site.Â Live.Â See me work, or become annoyed and return when I’m finished. 🙂
+Yes, if you happen to see some weird things going on, I am tweaking the CSS on the site.Â Live.Â See me work, or become annoyed and return when I'm finished. 🙂

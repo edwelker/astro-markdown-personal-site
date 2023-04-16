@@ -18,11 +18,11 @@ Washington Post – Obituaries
 
 Jean Edward Welker – NASA Physicist
 
-Jean Edward Welker, 72, who spent 50 years as a physicist at NASA’s Goddard Space Flight Center in Greenbelt, died Dec. 5 of heart disease at Washington Hospital Center. He lived in Laurel.
+Jean Edward Welker, 72, who spent 50 years as a physicist at NASA's Goddard Space Flight Center in Greenbelt, died Dec. 5 of heart disease at Washington Hospital Center. He lived in Laurel.
 
 Mr. Welker was a specialist in examining climate patterns in Russia and Eastern Europe. He worked at NASA until his death.
 
-He was born in Mineola, N.Y., and received bachelor’s and master’s degrees in physics from Hofstra University in Hempstead, N.Y. He received a doctorate in history from the University of Maryland in the early 1990s.
+He was born in Mineola, N.Y., and received bachelor's and master's degrees in physics from Hofstra University in Hempstead, N.Y. He received a doctorate in history from the University of Maryland in the early 1990s.
 
 He was a member of St. Louis Catholic Church in Clarksville and sang in the choir. He had also sung in the University of Maryland choir.
 

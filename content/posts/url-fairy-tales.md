@@ -28,12 +28,12 @@ On Mar 31, 2009, at 11:45 AM, Edward Welker wrote:
 
 \*\*\*
 
-To me, that URL tells a delightful children’s story...
+To me, that URL tells a delightful children's story...
 
 FlashSubContent = a wonderful fantasy world  
 \[elephant\] id = 11654 \[Dumbo\]  
 \[elephant\] parentID = 320 \[Mrs. Jumbo\]  
 \[cage\] FolderID = 340 \[because they took her Dumbo away, and Mrs. Jumbo got angry, so she had to get locked up\]  
-aspx = evil clown makeup wearing Microsoft employees who locked Dumbo’s mother up
+aspx = evil clown makeup wearing Microsoft employees who locked Dumbo's mother up
 
 -e

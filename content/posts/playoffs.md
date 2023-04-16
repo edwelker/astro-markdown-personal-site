@@ -20,4 +20,4 @@ The Red Sox start the playoffs tomorrow at Fenway against the Angels. I will be 
 
 Getting tickets is rather unpleasant, but I managed them somehow.
 
-Guess I’ll have to start planning a trip to Boston.
+Guess I'll have to start planning a trip to Boston.

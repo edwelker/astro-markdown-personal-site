@@ -22,14 +22,14 @@ tag:
     - screenreader
 post_format: []
 ---
-I’ve always been a fan of the <label> element. It’s an incredibly simple way to make a form more accessible. It does two things:
+I've always been a fan of the <label> element. It's an incredibly simple way to make a form more accessible. It does two things:
 
-- It explicitly associates text with a form element, so a screenreader doesn’t have to guess what text goes with what form element.
+- It explicitly associates text with a form element, so a screenreader doesn't have to guess what text goes with what form element.
 - For checkboxes/radio buttons, it gives the user a larger click area, which is useful for people with limited vision (or me, since I always end up missing them!)
 
 You can find a number of simple usage examples on the [<acronym title="World Wide Web Consortium">W3C</acronym>‘s <acronym title="Web Content Accessibility Guidelines">WCAG</acronym> Techniques page for labels](http://www.w3.org/TR/WCAG20-TECHS/H44.html).
 
-I recently discovered something new about the <label> element (new to me). I hadn’t realized that you can associate **multiple labels** to one form element. This is useful because it allows you to associate even more information with a form element. With it, I could write something like this:
+I recently discovered something new about the <label> element (new to me). I hadn't realized that you can associate **multiple labels** to one form element. This is useful because it allows you to associate even more information with a form element. With it, I could write something like this:
 
 ```
 <label for="box">1. </label>
@@ -43,7 +43,7 @@ I recently discovered something new about the <label> element (new to me). I had
 <abbr title="full title name">shrt. title</abbr> other stuff inside.</label>
 ```
 
-This isn’t the most useful example, but I think it demonstrates the general idea. \[Note: normally, I wouldn’t write out an explicit number, I would use an unordered list. But without major support for [CSS counters](http://www.w3.org/TR/REC-CSS2/generate.html#counters "CSS Counters"), I find myself between a rock and a hard place.\] My optimism was quickly quashed though, because, as [Roger Johansson mentions, screenreaders tend to ignore two labels](http://www.456bereastreet.com/archive/200711/use_the_label_element_to_make_your_html_forms_accessible/). I will have to do some of my own testing to find out more, but I find this very disappointing.
+This isn't the most useful example, but I think it demonstrates the general idea. \[Note: normally, I wouldn't write out an explicit number, I would use an unordered list. But without major support for [CSS counters](http://www.w3.org/TR/REC-CSS2/generate.html#counters "CSS Counters"), I find myself between a rock and a hard place.\] My optimism was quickly quashed though, because, as [Roger Johansson mentions, screenreaders tend to ignore two labels](http://www.456bereastreet.com/archive/200711/use_the_label_element_to_make_your_html_forms_accessible/). I will have to do some of my own testing to find out more, but I find this very disappointing.
 
 Another interesting application is to include labels for screenreaders, while using CSS to hide them from visual users. Just make your label a block element, give it a 0 width (to remove the width it would have taken in the document flow), and move it off-screen. You cannot simply `display: none` the label, as that usually hides it from screenreaders. I would like to look further into the end result using current technology ([hoping for improved results since 2004](http://juicystudio.com/article/invisible-form-prompts.php)), but I certainly believe this leaves **no excuse** for anyone NOT including labels in their forms.
 

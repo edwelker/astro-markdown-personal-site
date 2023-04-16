@@ -17,4 +17,4 @@ post_format: []
 ---
 **Goal for today:** figure out why Firefox for Mac is displaying drastically smaller font-sizes than Firefox for Windows.
 
-**Why this may be difficult:** I don’t have a Mac to use at work.
+**Why this may be difficult:** I don't have a Mac to use at work.
