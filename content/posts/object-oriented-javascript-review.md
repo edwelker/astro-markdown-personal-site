@@ -18,7 +18,7 @@ tag:
     - review
 post_format: []
 ---
-[![Object Oriented JavaScript](../../../../uploads/2008/10/objectorientedjavascript.jpg "Object Oriented JavaScript")](http://www.packtpub.com/object-oriented-javascript-applications-libraries/book)
+[![Object Oriented JavaScript](/objectorientedjavascript.jpg "Object Oriented JavaScript")](http://www.packtpub.com/object-oriented-javascript-applications-libraries/book)
 
 I recently read [Object-Oriented JavaScript](http://www.packtpub.com/object-oriented-javascript-applications-libraries/book), by [Stoyan Stefanov](http://www.phpied.com/). In reviewing it, I found it was one of the most interesting books I've read in a while, for some good reasons and a few more curious reasons.
 

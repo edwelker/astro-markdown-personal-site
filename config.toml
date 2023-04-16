@@ -2,9 +2,16 @@ baseURL = 'http://eddiewelker.com/'
 languageCode = 'en-us'
 title = 'eddiewelker.com'
 theme = 'ananke'
+Paginate = 10
+enableRobotsTXT = true
 
-# [params]
-#   commentoEnable = true
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+recent_posts_number = 8
 
 [[params.ananke_socials]]
 name = "twitter"

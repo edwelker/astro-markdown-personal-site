@@ -20,7 +20,7 @@ tag:
     - xhtml
 post_format: []
 ---
-After nearly 3 months sitting on my bookshelf, I got around to ![Microformats Logo](../../../../uploads/2007/10/microformats1.png "Microformats Logo")reading [the Microformats book](http://microformats.org/blog/2007/04/19/microformats-the-book/). I probably don't need to mention that they've been pretty high on the "buzz" list for a while now. That aside, I like the idea, and believe they are worth using. With this post, I hope to give a high-level overview of Microformats... first sampling what they are and how to use them, followed by my thoughts on why you should use them.
+After nearly 3 months sitting on my bookshelf, I got around to ![Microformats Logo](/microformats1.png "Microformats Logo")reading [the Microformats book](http://microformats.org/blog/2007/04/19/microformats-the-book/). I probably don't need to mention that they've been pretty high on the "buzz" list for a while now. That aside, I like the idea, and believe they are worth using. With this post, I hope to give a high-level overview of Microformats... first sampling what they are and how to use them, followed by my thoughts on why you should use them.
 
 **What and How**
 

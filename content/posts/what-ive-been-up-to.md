@@ -16,7 +16,7 @@ tag:
     - work
 post_format: []
 ---
-Though I doubt it will mean anything to anyone... I threw this diagram together Monday night. It's [](http://edwardwelker.com/wordpress/wp-content/uploads/2008/01/myncbiwireframesv1.pdf "NCBI Application design")[my application design](http://www.eddiewelker.com/wp-content/uploads/2008/01/ncbibaseapp_designv1.pdf "my application design") for a default NCBI application. I'm pretty excited about it. Not too fancy, but a nice start.
+Though I doubt it will mean anything to anyone... I threw this diagram together Monday night. It's [](/myncbiwireframesv1.pdf "NCBI Application design")[my application design](/ncbibaseapp_designv1.pdf "my application design") for a default NCBI application. I'm pretty excited about it. Not too fancy, but a nice start.
 
 I've also been thinking about writing a Firefox extension. It's about time that I play around with it, and I was thinking that a pretty simple app (like [twitbin](http://www.twitbin.com/)) would be a good place to start. No plans yet, but... ideas.
 

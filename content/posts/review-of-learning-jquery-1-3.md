@@ -12,7 +12,7 @@ category:
 tag: []
 post_format: []
 ---
-[![Learning jQuery 1.3 Cover](../../../../uploads/2009/09/learningjQuery.jpg "Learning jQuery 1.3")](http://www.packtpub.com/learning-jquery-1.3/book)There were many things to like about this book [Learning jQuery 1.3](http://www.packtpub.com/learning-jquery-1.3/book) by Jonathan Chaffer and [Karl Swedberg](http://www.karlswedberg.com/). The stand-out positive in my mind is the wealth of topics covered. Both simple and difficult concepts are included, and both are handled with ease. Good coding habits are repeatedly mentioned throughout. Subjects like progressive enhancement are encouraged, and pitfalls like memory leaks are warned against. Many real-world examples are included, as well as the full source code.
+[![Learning jQuery 1.3 Cover](/learningjQuery.jpg "Learning jQuery 1.3")](http://www.packtpub.com/learning-jquery-1.3/book)There were many things to like about this book [Learning jQuery 1.3](http://www.packtpub.com/learning-jquery-1.3/book) by Jonathan Chaffer and [Karl Swedberg](http://www.karlswedberg.com/). The stand-out positive in my mind is the wealth of topics covered. Both simple and difficult concepts are included, and both are handled with ease. Good coding habits are repeatedly mentioned throughout. Subjects like progressive enhancement are encouraged, and pitfalls like memory leaks are warned against. Many real-world examples are included, as well as the full source code.
 
 Learning jQuery 1.3 has a writing style that is very dry for a book written in a semi-conversational voice. I prefer a writing style with a little more personality to it, but acknowledge that's not for everyone.
 
