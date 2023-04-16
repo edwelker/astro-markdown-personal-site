@@ -25,6 +25,6 @@ After my testing, I’ve found that the statement of the problem isn’t quite c
 
 This makes it a wider problem than I had originally thought. The one caveat I have found is that an inline event (for example, an ‘onclick’ attribute written in the <element>) will not trigger this effect.
 
-The thing that amazes me about this, and worries me about those trying to apply a duplicate background-image to hide the flicker, is that every mouseover is causing another server hit for that image. It seems incredible that individuals and companies can just turn a blind eye to this. I would be inclined to send Microsoft an invoice…
+The thing that amazes me about this, and worries me about those trying to apply a duplicate background-image to hide the flicker, is that every mouseover is causing another server hit for that image. It seems incredible that individuals and companies can just turn a blind eye to this. I would be inclined to send Microsoft an invoice...
 
 *Postscript:* I used [Fiddler](http://www.fiddlertool.com/fiddler/) which was a really big help testing for this. Turns out it is owned by Microsoft. Anyone sensing any guilt there???

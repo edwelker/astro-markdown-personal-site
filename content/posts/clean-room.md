@@ -25,4 +25,4 @@ My favorite books are mostly at the top (actually, there’s no rhyme or reason 
 
 My monitor setup.Â I’ve got 3 computers, the laptop, my ‘frankenmac’ desktop, and a pc.Â The frankenmac is dying, so I am probably going to have to shift things around.Â I don’t have a plan for which computer will go with which monitor, but the desk is now set, and won’t change.Â I’ve got my new [Griffin Elevator](http://www.griffintechnology.com/products/elevator) sitting there.Â I’m happy with it, keeps the bottom of the laptop really cool.
 
-Anyway, it’s been a week… let’s see how clean I can keep it.
+Anyway, it’s been a week... let’s see how clean I can keep it.

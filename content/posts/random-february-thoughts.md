@@ -22,7 +22,7 @@ I went to see the Ingmar Bergman film, *The Magician* the other day at the [AFI 
 
 I have been working extremely hard on the next version of My NCBI, the preferences section of the [NCBI website](http://www.ncbi.nlm.nih.gov/). This is where you can set preferences for PubMed, Blast, and all of the rest of the NCBI sites/databases. It is hard, writing everything in a internally-created language, which is slightly buggy and tends to make easy things easy, but hard things very hard, with XSLTs completing the system. I haven’t had to write a ton of recursive XSLT functions or anything, (mostly because of the inclusion of [EXSLT extensions](http://www.exslt.org/)), but development time is still very slow. It also seems that with every step I take forward, I discover 4 new things I have to do. Throw in the fact I made time estimates without knowing the language, and the NCBI announcement that the budget fell flat (and actually decreased) this year and people were dismissed, and that makes my life particularly fun. I knew what I was getting into when I signed up, and I wanted to do a LOT of work, but that doesn’t mean I feel that way every second of every day.
 
-Additionally, I’ve had to meet a bunch of deadlines for the legal aspects of my dad’s passing. Trips/talks to lawyers, a visit to DC Vital Records, Orphan’s Court (yes, they call it that!) and NASA have really been a… treat, let’s say.
+Additionally, I’ve had to meet a bunch of deadlines for the legal aspects of my dad’s passing. Trips/talks to lawyers, a visit to DC Vital Records, Orphan’s Court (yes, they call it that!) and NASA have really been a... treat, let’s say.
 
 Also, some of the better (or at least unexpected) and smaller moments of the month were:
 

@@ -15,4 +15,4 @@ tag:
     - tbs
 post_format: []
 ---
-Alright, so I would be willing to admint that this is TBS’s first year covering the playoffs… but come on guys, can’t you do better than this??? You have cut out during first pitches, missed plays, repeated common Red Sox knowledge… and worst yet, you put Don Orsillio on the Rockies game. You’re on the clock guys.
+Alright, so I would be willing to admint that this is TBS’s first year covering the playoffs... but come on guys, can’t you do better than this??? You have cut out during first pitches, missed plays, repeated common Red Sox knowledge... and worst yet, you put Don Orsillio on the Rockies game. You’re on the clock guys.

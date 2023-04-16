@@ -14,7 +14,7 @@ post_format: []
 ---
 Oct. 8, 2009 – 12:32am
 
-Right now I’m…
+Right now I’m...
 
 Sitting on my bed reading the [Fannie Farmer Cookbook](http://www.bartleby.com/87/) (my favorite) on how to bake a 9.25lb ham.Â Page 201. Remembering how I tell everyone they can’t take it into the kitchen, because I don’t want it getting dirty.
 

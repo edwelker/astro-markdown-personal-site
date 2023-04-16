@@ -28,7 +28,7 @@ On Mar 31, 2009, at 11:45 AM, Edward Welker wrote:
 
 \*\*\*
 
-To me, that URL tells a delightful children’s story…
+To me, that URL tells a delightful children’s story...
 
 FlashSubContent = a wonderful fantasy world  
 \[elephant\] id = 11654 \[Dumbo\]  

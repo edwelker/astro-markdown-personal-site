@@ -22,7 +22,7 @@ tag:
     - value
 post_format: []
 ---
-After spending a small part of my evening debugging Javascript in IE (which is ALWAYS a pleasure), I found out one of my errors was a mistake I had made before… trying to access button.value in IE.Â IE, of course, being IE, returns the innerHTML value of the button, instead of the value attribute.Â Last time I ran into this, I used a class instead of value, and moved on with my life.Â Tonight, I was feeling stubborn, and I found a better way…
+After spending a small part of my evening debugging Javascript in IE (which is ALWAYS a pleasure), I found out one of my errors was a mistake I had made before... trying to access button.value in IE.Â IE, of course, being IE, returns the innerHTML value of the button, instead of the value attribute.Â Last time I ran into this, I used a class instead of value, and moved on with my life.Â Tonight, I was feeling stubborn, and I found a better way...
 
 target.value = target.getAttributeNode(‘value’).nodeValue;
 
@@ -36,4 +36,4 @@ Then I looked at [Flanagan’s](http://www.davidflanagan.com/) [*Javascript: The
 
 If you read this, I hope I could save you a bit of time.
 
-P.S. – I used IE8a’s Debugger to help.Â Here’s hoping they develop it further before the standard release.Â It’s MUCH better than flying blind, but I can’t imagine a less helpful message than specifying an object in the console, and seeing "{…}".
+P.S. – I used IE8a’s Debugger to help.Â Here’s hoping they develop it further before the standard release.Â It’s MUCH better than flying blind, but I can’t imagine a less helpful message than specifying an object in the console, and seeing "{...}".

@@ -22,7 +22,7 @@ post_format: []
 ---
 I woke up this morning and read the A List Apart articles (that I defered reading until this a.m.). Â The powers that be have decided that [IE will now use a metatag to decide what rendering type](http://alistapart.com/articles/beyonddoctype)Â (ie6,Â ie7,Â ie9, etc.) to use. Â This allows for backwards compatibility. Â Supposedly.
 
-First,Â IÂ don’tÂ reallyÂ careÂ aboutÂ theÂ meta.Â Â It’sÂ fine…Â itÂ isÂ just one more trick to add to the pile. Generally, I agree with [Eric Meyer’s points](http://alistapart.com/articles/fromswitchestotargets), that it’sÂ betterÂ thanÂ browserÂ switching.Â Â AndÂ itÂ is.Â Â It’s also better than conditional CSS comments.
+First,Â IÂ don’tÂ reallyÂ careÂ aboutÂ theÂ meta.Â Â It’sÂ fine...Â itÂ isÂ just one more trick to add to the pile. Generally, I agree with [Eric Meyer’s points](http://alistapart.com/articles/fromswitchestotargets), that it’sÂ betterÂ thanÂ browserÂ switching.Â Â AndÂ itÂ is.Â Â It’s also better than conditional CSS comments.
 
 There are a few problems that I see, however. The first one was actually thrown into my lap as a twitter discussion between [Jeremy Keith](http://adactio.com/) (down-to-earth web guy) and [Chris Wilson](http://blogs.msdn.com/cwilso/) (worksÂ onÂ IE). Following the twitter-timeline, [first](http://twitter.com/adactio/statuses/627930532), [second](http://twitter.com/cwilso/statuses/628255922), [third](http://twitter.com/adactio/statuses/628305212). Apparently the default behavior for rendering a document with a HTML 4.01 doctype will be IE7. That’s right, it doesn’t fall through, it will be stuck on IE7. That is just wrong. Hopefully, bothÂ JeremyÂ andÂ Chris and the other powers that be work that detail out further before Microsoft proceeds.
 

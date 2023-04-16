@@ -19,7 +19,7 @@ post_format: []
 
 2\) Letterman is still pretty much the same.Â I haven’t seen Leno.Â Jon Stewart, however, looked TOTALLY crazy last night.Â It was really quite scary.
 
-3\) Rob Coburn, you had better hang out with Raluca and I pretty darned soon….
+3\) Rob Coburn, you had better hang out with Raluca and I pretty darned soon....
 
 4\) Despite ordering the Python in a Nutshell book, I have semi-officially decided to put off learning Python for a bit.Â I think that I am going to re-focus my attentions on Scheme, and work my way through the Little Schemer, [The Scheme Programming Language](http://www.scheme.com/tspl3/), and [SICP](http://mitpress.mit.edu/sicp/). Â I’ve been through some of them, but haven’t gotten to the end of any of them.
 

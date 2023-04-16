@@ -22,7 +22,7 @@ post_format: []
 
 I ran across a mention of "Prototype-Based Programming" back when I was first learning JavaScript.Â I thought it would be an interesting read, but forgot to bookmark it, and forgot to look into it further.Â Once I finally remembered it, it proved hard to find (and an expensive gamble from Amazon), until I found it through NIH’s interlibrary loan system.
 
-I was quite excited to get my hands on a copy of this book, I was interested in learning more about the general theory that went into languages with prototypal inheritance.Â I thought this would allow me a special insight into JavaScript.Â However, as I found reading it… despite it’s 1999 publication date, JavaScript wasn’t even mentioned in the book!Â Regardless, I found parts of it to be quite interesting and insightful.
+I was quite excited to get my hands on a copy of this book, I was interested in learning more about the general theory that went into languages with prototypal inheritance.Â I thought this would allow me a special insight into JavaScript.Â However, as I found reading it... despite it’s 1999 publication date, JavaScript wasn’t even mentioned in the book!Â Regardless, I found parts of it to be quite interesting and insightful.
 
 The book is broken up into three sections (as mentioned on the cover), Concepts, Languages, and Applications.Â Each section has 4 associated chapters which are really various papers, some of which seem to be difficult to find elsewhere.
 

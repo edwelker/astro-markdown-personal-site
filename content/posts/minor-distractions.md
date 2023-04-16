@@ -22,7 +22,7 @@ In an effort to keep my mind occupied elsewhere, here are a couple of distractio
 
 [The Magical Minimalism of Microformat](http://open.blogs.nytimes.com/2007/12/05/the-magical-minimalism-of-microformats/) – The New York Times tipping their hat to Microformats
 
-[Internet Explorer 8](http://blogs.msdn.com/ie/archive/2007/12/05/internet-explorer-8.aspx) – Please don’t be lying, please don’t be lying, please don’t be lying…
+[Internet Explorer 8](http://blogs.msdn.com/ie/archive/2007/12/05/internet-explorer-8.aspx) – Please don’t be lying, please don’t be lying, please don’t be lying...
 
 [Email Standards Project](http://www.email-standards.org/) – Please turn out to be relevant
 

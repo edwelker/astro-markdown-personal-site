@@ -21,7 +21,7 @@ tag:
     - 'second base'
 post_format: []
 ---
-From the views that you will see on all of the replays, you will see Kenny Lofton’s hand getting to the bag before Pedroia’s tag touches him. That I will give you. However, from my view point, the point at which the Indians left fielder was out was AFTER that… when his hands both came up off the bag, and I could see no part of him touching second base. His hands shot over the base, and because he doesn’t weigh 300 pounds, his chest was not touching the bag.
+From the views that you will see on all of the replays, you will see Kenny Lofton’s hand getting to the bag before Pedroia’s tag touches him. That I will give you. However, from my view point, the point at which the Indians left fielder was out was AFTER that... when his hands both came up off the bag, and I could see no part of him touching second base. His hands shot over the base, and because he doesn’t weigh 300 pounds, his chest was not touching the bag.
 
 I would like to see another view, and will be the first to admit that I may be biased. I tried watching it on Sportscenter, but they cut away before you could see his hands leave the bag. Objectively, however, I believe that the umpire could have seen this, and that would be the basis of the call. His hand was in there first, but did he stay on the base? I think not.
 

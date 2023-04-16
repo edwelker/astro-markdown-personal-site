@@ -14,4 +14,4 @@ tag:
     - orioles
 post_format: []
 ---
-Day after the Orioles make their interim manager permanent, they lose 30-3. First time any team has scored 30 runs since 1897, when Chicago (I assume the Cubs) scored 36. Way to go guys…
+Day after the Orioles make their interim manager permanent, they lose 30-3. First time any team has scored 30 runs since 1897, when Chicago (I assume the Cubs) scored 36. Way to go guys...
