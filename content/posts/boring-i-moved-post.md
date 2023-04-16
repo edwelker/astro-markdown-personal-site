@@ -1,5 +1,5 @@
 ---
-title: 'Boring &#8220;I moved&#8221; post'
+title: 'Boring "I moved" post'
 date: '2009-09-09T20:07:12-05:00'
 status: publish
 permalink: /2009/09/09/boring-i-moved-post

@@ -1,5 +1,5 @@
 ---
-title: 'Cat's out of the bag'
+title: "Cat's out of the bag"
 date: '2007-12-28T10:55:48-05:00'
 status: publish
 permalink: /2007/12/28/cats-out-of-the-bag

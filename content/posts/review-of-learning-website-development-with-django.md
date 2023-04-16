@@ -1,5 +1,5 @@
 ---
-title: 'Review of &#8220;Learning Website Development with Django&#8221;'
+title: 'Review of "Learning Website Development with Django"'
 date: '2008-07-07T23:09:03-05:00'
 status: publish
 permalink: /2008/07/07/review-of-learning-website-development-with-django

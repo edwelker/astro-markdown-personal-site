@@ -1,5 +1,5 @@
 ---
-title: 'Review of &#8220;Expert Python Programming&#8221;'
+title: 'Review of "Expert Python Programming"'
 date: '2009-01-25T13:02:24-05:00'
 status: publish
 permalink: /2009/01/25/review-of-expert-python-programming

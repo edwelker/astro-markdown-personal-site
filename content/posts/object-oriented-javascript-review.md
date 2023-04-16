@@ -1,5 +1,5 @@
 ---
-title: 'Review of &#8220;Object-Oriented JavaScript&#8221;'
+title: 'Review of "Object-Oriented JavaScript"'
 date: '2008-10-25T22:02:16-05:00'
 status: publish
 permalink: /2008/10/25/object-oriented-javascript-review

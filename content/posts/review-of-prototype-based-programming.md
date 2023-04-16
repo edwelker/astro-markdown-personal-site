@@ -1,5 +1,5 @@
 ---
-title: 'Review of &#8220;Prototype-Based Programming&#8221;'
+title: 'Review of "Prototype-Based Programming"'
 date: '2009-01-29T20:14:56-05:00'
 status: publish
 permalink: /2009/01/29/review-of-prototype-based-programming
