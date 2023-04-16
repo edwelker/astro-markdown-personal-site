@@ -58,7 +58,7 @@ Our function starts in the same manner as all recursive functions, dealing with 
     <template name="splitcommas"><choose><when test=" not(contains($comma, ','))"></when><otherwise></otherwise></choose></template>
 ```
 
-We use the XPath "not(contains($comma, ‘,'))" to, obviously, test whether our list contains a comma. As you probably noticed, we don't actually have a $comma variable defined, so we'll add our xsl:param to the template.
+We use the XPath "not(contains($comma, ','))" to, obviously, test whether our list contains a comma. As you probably noticed, we don't actually have a $comma variable defined, so we'll add our xsl:param to the template.
 
 ```
 <pre lang="xml">

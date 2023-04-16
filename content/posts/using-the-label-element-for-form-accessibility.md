@@ -27,7 +27,7 @@ I've always been a fan of the <label> element. It's an incredibly simple way to 
 - It explicitly associates text with a form element, so a screenreader doesn't have to guess what text goes with what form element.
 - For checkboxes/radio buttons, it gives the user a larger click area, which is useful for people with limited vision (or me, since I always end up missing them!)
 
-You can find a number of simple usage examples on the [<acronym title="World Wide Web Consortium">W3C</acronym>‘s <acronym title="Web Content Accessibility Guidelines">WCAG</acronym> Techniques page for labels](http://www.w3.org/TR/WCAG20-TECHS/H44.html).
+You can find a number of simple usage examples on the [<acronym title="World Wide Web Consortium">W3C</acronym>'s <acronym title="Web Content Accessibility Guidelines">WCAG</acronym> Techniques page for labels](http://www.w3.org/TR/WCAG20-TECHS/H44.html).
 
 I recently discovered something new about the <label> element (new to me). I hadn't realized that you can associate **multiple labels** to one form element. This is useful because it allows you to associate even more information with a form element. With it, I could write something like this:
 
