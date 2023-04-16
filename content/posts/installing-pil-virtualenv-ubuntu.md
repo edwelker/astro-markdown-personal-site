@@ -15,7 +15,7 @@ post_format: []
 ---
 I just removed a (real live) bat from my living room.Â That was easier than installing PIL in a virtualenv for Ubuntu 9.10. Why?Â Googling the subject seems to bring up a lot of old or mis-information.Â This will explain how... mostly so I can do it again next time.
 
-I started with a –no-site-packages virtualenv, so as not to use (or moreÂ importantly depend) on any of the global site-packages.Â Ok, cool.
+I started with a --no-site-packages virtualenv, so as not to use (or moreÂ importantly depend) on any of the global site-packages.Â Ok, cool.
 
 `$ virtualenv --no-site-packages myEnv`
 

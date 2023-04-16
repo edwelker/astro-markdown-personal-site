@@ -12,7 +12,7 @@ category:
 tag: []
 post_format: []
 ---
-Oct. 8, 2009 – 12:32am
+Oct. 8, 2009 -- 12:32am
 
 Right now I'm...
 
