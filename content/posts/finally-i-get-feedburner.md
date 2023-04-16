@@ -21,6 +21,6 @@ So I have off for Martin Luther King day today.Â I found myself with a chunk of
 
 You will notice the bright orange RSS logo on the side there… that now squishes my blog, del.icio.us links, and flickr images together for a nice big mess.Â Just the way I like it.
 
-Feedburner is not hard, but I had no patience for it.Â I was under the assumption that you added your feeds, and there would be a grand final step where you could parse them all together.Â I kept looking around for this final step, but it turns out this is not the case.Â Instead, you choose one of your feeds, and then add little "enhancements” to pull in specific alternate feeds, such as del.icio.us, and flickr.Â Lame, compared to what I was thinking, but much faster than writing my own parser.
+Feedburner is not hard, but I had no patience for it.Â I was under the assumption that you added your feeds, and there would be a grand final step where you could parse them all together.Â I kept looking around for this final step, but it turns out this is not the case.Â Instead, you choose one of your feeds, and then add little "enhancements" to pull in specific alternate feeds, such as del.icio.us, and flickr.Â Lame, compared to what I was thinking, but much faster than writing my own parser.
 
 Of course, I’m sure everyone else out there understood this, so I’m being redundant.Â Oh well.Â That’s what you get when you try to learn everything from scratch.

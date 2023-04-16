@@ -21,7 +21,7 @@ wp-syntax-cache-content:
 ---
 Using XSLT to copy elements is extremely common when you’re transforming a source document of a certain type (XML, HTML, etc.) to the same type. Often, you need an exact copy of an element verbatim, but other times you need to selectively choose certain elements to copy and others to discard. XSLT makes this process quite elegant using it’s xsl:copy-of and xsl:copy elements. The following is a setp-by-step tutorial on how these elements are used.
 
-When you need an exact copy of an element and it’s children, you use the xsl:copy-of element, which makes an exact copy of the selected element and it’s children. Given the following XML data, which represents a (trivial) inventory of a store, let’s say you want an exact copy of any items with the name "XSLT”.
+When you need an exact copy of an element and it’s children, you use the xsl:copy-of element, which makes an exact copy of the selected element and it’s children. Given the following XML data, which represents a (trivial) inventory of a store, let’s say you want an exact copy of any items with the name "XSLT".
 
 ```
 <pre lang="xml">
@@ -35,7 +35,7 @@ You simply apply the following XSLT stylesheet to your source document:
 <?xml version="1.0" encoding="UTF-8"??><stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><template match="/"><copy-of select="inventory/item[name = 'XSLT']"></copy-of></template></stylesheet>
 ```
 
-Which gives you exactly what you were looking for, the "item” with the name "XSLT”.
+Which gives you exactly what you were looking for, the "item" with the name "XSLT".
 
 ```
 <pre lang="xml">
@@ -61,14 +61,14 @@ Using this template, I can write a XSLT stylesheet that will copy the entire sou
 <?xml version="1.0" encoding="UTF-8"??><stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><template match="/"><apply-templates></apply-templates></template><template match="@*|node()"><copy><apply-templates select="@*|node()"></apply-templates></copy></template></stylesheet>
 ```
 
-So how do we add the profit made from each item and remove the unnecessary information? We use the fact that our xsl:match=”@\*|node()” template has a very low priority. Determination of default XSLT priorities are an advanced topic I won’t go into right now, but feel free to [explore the topic](http://www.w3.org/TR/xslt#conflict) if [you are interested](http://www.dpawson.co.uk/xsl/sect2/N7654.html#d11689e235). Our template is essentially given a priority of -.5. Templates such as xsl:template match=”foo”, however, are given a default priority of 0. Because templates matching element names are higher priority, we can easily figure out how to remove the "author” and "conductor” elements, just declare templates without outputs!
+So how do we add the profit made from each item and remove the unnecessary information? We use the fact that our xsl:match="@\*|node()" template has a very low priority. Determination of default XSLT priorities are an advanced topic I won’t go into right now, but feel free to [explore the topic](http://www.w3.org/TR/xslt#conflict) if [you are interested](http://www.dpawson.co.uk/xsl/sect2/N7654.html#d11689e235). Our template is essentially given a priority of -.5. Templates such as xsl:template match="foo", however, are given a default priority of 0. Because templates matching element names are higher priority, we can easily figure out how to remove the "author" and "conductor" elements, just declare templates without outputs!
 
 ```
 <pre lang="xml">
 <template match="author"></template><template match="conductor"></template>
 ```
 
-We use the same technique to add an element to our "item” elements. First we use xsl:copy to copy the item node itself. Then we apply-templates to any attribute or children nodes found. When an author or conductor element is found, it will match our explicit rules and produce no output, therefore they will not be copied into our result. Finally, we create a new element named "profit” which will contain the difference between the sell-price and the cost.
+We use the same technique to add an element to our "item" elements. First we use xsl:copy to copy the item node itself. Then we apply-templates to any attribute or children nodes found. When an author or conductor element is found, it will match our explicit rules and produce no output, therefore they will not be copied into our result. Finally, we create a new element named "profit" which will contain the difference between the sell-price and the cost.
 
 ```
 <pre lang="xml">
@@ -82,18 +82,18 @@ So we arrive at our final XSLT stylesheet, which looks like this:
 <?xml version="1.0" encoding="UTF-8"??><stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><template match="/"><apply-templates></apply-templates></template><template match="item"><copy><apply-templates select="@*|node()"></apply-templates><profit><value-of select="(sell-price - cost)"></value-of></profit></copy></template><template match="author"></template><template match="conductor"></template><template match="@*|node()"><copy><apply-templates select="@*|node()"></apply-templates></copy></template></stylesheet>
 ```
 
-When applied to our source document, we get the result our boss wanted, it excludes any "author” or "composer” elements, and includes a "profit” element.
+When applied to our source document, we get the result our boss wanted, it excludes any "author" or "composer" elements, and includes a "profit" element.
 
 ```
 <pre lang="xml">
 <?xml version="1.0" encoding="utf-8"??><inventory><item id="1"><name>The Little Schemer</name><type>book</type><list-price>29.95</list-price><sell-price>26.99</sell-price><cost>17.92</cost><profit>9.07</profit></item><item id="2"><name>XSLT</name><type>book</type><list-price>49.95</list-price><sell-price>34.99</sell-price><cost>22.92</cost><profit>12.07</profit></item><item id="3"><name>Romeo and Juliet</name><type>compact disc</type><list-price>18.98</list-price><sell-price>13.99</sell-price><cost>9.92</cost><profit>4.07</profit></item></inventory>
 ```
 
-Using this technique, we can then easily prepare another XSLT stylesheet to generate an inventory list for the customer, which will exclude the "cost” element, since we don’t want them knowing it! All we need is to match all attribute and children nodes and copy them as normal, while providing no output when the XSLT processor encounters a "cost” element.
+Using this technique, we can then easily prepare another XSLT stylesheet to generate an inventory list for the customer, which will exclude the "cost" element, since we don’t want them knowing it! All we need is to match all attribute and children nodes and copy them as normal, while providing no output when the XSLT processor encounters a "cost" element.
 
 ```
 <pre lang="xml">
 <?xml version="1.0" encoding="UTF-8"??><stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><template match="/"><apply-templates></apply-templates></template><template match="cost"></template><template match="@*|node()"><copy><apply-templates select="@*|node()"></apply-templates></copy></template></stylesheet>
 ```
 
-Personally, because I end up transforming XML sources to XML output, I end up using xsl:copy-of and xsl:template match=”@\*|node()” all the time. In fact, xsl:template match=”@\*|node()” just happens to be the first piece of code in my XSLT toolbox.
+Personally, because I end up transforming XML sources to XML output, I end up using xsl:copy-of and xsl:template match="@\*|node()" all the time. In fact, xsl:template match="@\*|node()" just happens to be the first piece of code in my XSLT toolbox.

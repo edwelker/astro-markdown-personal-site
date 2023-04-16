@@ -15,7 +15,7 @@ tag:
     - desk
 post_format: []
 ---
-Last weekend, I FINALLY had a chance to clean my room, and I’m pleased with the results.Â Really, though, this post is just an excuse to do one of those "this is my desk, this is my bookshelf” posts that everyone seems to do.Â 🙂
+Last weekend, I FINALLY had a chance to clean my room, and I’m pleased with the results.Â Really, though, this post is just an excuse to do one of those "this is my desk, this is my bookshelf" posts that everyone seems to do.Â 🙂
 
 [![Top of bookshelf #1](http://farm4.static.flickr.com/3055/2678365341_976fc6f181.jpg "Top of bookshelf #1")](http://www.flickr.com/photos/ed_welker/2678365341/ "Top of bookshelf #1 by eddie.welker, on Flickr")
 

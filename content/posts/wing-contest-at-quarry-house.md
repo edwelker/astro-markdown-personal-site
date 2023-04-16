@@ -12,7 +12,7 @@ category:
 tag: []
 post_format: []
 ---
-My first order of Quarry House wings was "medium.”Â The waitress had told me that they ran one level hot, and the medium were actually hotter than an standard "hot.”Â My nose was stuffed and my eyes were fully watered up at the end of twelve.
+My first order of Quarry House wings was "medium."Â The waitress had told me that they ran one level hot, and the medium were actually hotter than an standard "hot."Â My nose was stuffed and my eyes were fully watered up at the end of twelve.
 
 We decided to set up a trip with Andrew, Rich, myself, and my sister. I realized that Aman loves hot food too, so I invited him as well.Â We formally decided to go the night that Young Frankenstein played at the [AFI](http://afi.com/silver/). The final group was myself, Simon, Andrew, Rich, Alissa, Cathy, Shveta, and Aman.
 

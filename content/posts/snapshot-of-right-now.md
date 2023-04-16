@@ -20,7 +20,7 @@ Sitting on my bed reading the [Fannie Farmer Cookbook](http://www.bartleby.com/8
 
 Thinking about how I need a roasting pan, which I should have grabbed when I was in Laurel, picking up my new camera lens from UPS. Thinking about how I waited 45 minutes for it, when I probably should have had it re-delivered.Â Also thinking that the roasting pan may be too large for my oven here.
 
-Listening to George Crumb’s [*Ancient Voices of Children*](http://www.georgecrumb.net/comp/ancien.html).Â Wishing it drowned out more of "The Shield,” the program my roommates are watching/listening to.Â Thinking how much I like *Ancient Voices of Children*, despite how weird some of the sounds are.
+Listening to George Crumb’s [*Ancient Voices of Children*](http://www.georgecrumb.net/comp/ancien.html).Â Wishing it drowned out more of "The Shield," the program my roommates are watching/listening to.Â Thinking how much I like *Ancient Voices of Children*, despite how weird some of the sounds are.
 
 Finished taking a few play photos with the new lens. [Posted them to flickr](http://flickr.com/photos/ed_welker/).Â Wondering if every good lens makes it this easy, which should I purchase next?Â Thinking I made a good choice to start.
 

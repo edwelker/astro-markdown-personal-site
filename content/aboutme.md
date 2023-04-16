@@ -18,7 +18,7 @@ I work in the… some group (the name keeps changing, and I’ve never gotten it
 
 I’ve played the cello since fourth grade, and am principal cellist of the [Columbia Orchestra](http://columbiaorchestra.org "The Columbia Orchestra"). I love music (of almost all genres) and enjoy to listen/play/read about music history. My favorite cellist has always been Mstislav Rostropovich, and I am especially fond of 20th-century Russian composers like Prokofiev, Shostakovich, and Miaskovsky. I used to be a member of the University of Maryland and [Greater Baltimore Youth Orchestra](http://gbyo.com "Greater Baltimore Youth Orchestra")s.
 
-I’m an avid [Red Sox](http://boston.com/redsox/ "Boston Red Sox") fan who grew up watching them during the summers I spent at my grandparents house. I’m told the only thing I say during games is "Come on Man-ny!”
+I’m an avid [Red Sox](http://boston.com/redsox/ "Boston Red Sox") fan who grew up watching them during the summers I spent at my grandparents house. I’m told the only thing I say during games is "Come on Man-ny!"
 
 My basement is filled with a fleet of 8 bicycles (currently), 4 fixed gears, 3 road, and one old mountain. I love riding, and go whenever I can, rain or shine, in the hot or extreme cold.
 

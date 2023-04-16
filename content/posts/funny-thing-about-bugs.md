@@ -17,7 +17,7 @@ post_format: []
 ---
 They just keep popping up.
 
-I just scrolled down my own blog, and saw a post titled "Down to three bugs.”Â Funny enough, three months later, we’re still trying to push the website out. (Wow, those were some really big bugs!!!Â Haha, jk…)Â In fact, I’ve been *pressing* for the last 2 days, trying to expedite a few last-minute bugs so that QA testing could begin (for about the 18th time, now in snapshot 21).Â Kinda odd, when QA finds bugs in round 20 that they didn’t find in round 10… despite no code changes in the meantime…
+I just scrolled down my own blog, and saw a post titled "Down to three bugs."Â Funny enough, three months later, we’re still trying to push the website out. (Wow, those were some really big bugs!!!Â Haha, jk…)Â In fact, I’ve been *pressing* for the last 2 days, trying to expedite a few last-minute bugs so that QA testing could begin (for about the 18th time, now in snapshot 21).Â Kinda odd, when QA finds bugs in round 20 that they didn’t find in round 10… despite no code changes in the meantime…
 
 But I’m not going to complain.Â Programming is still a lot of fun *when you’re actually doing it*.Â It ends up being almost therapeutic when you’ve got other stuff going on that you’re trying to ignore.Â Not only that, but there’s always room to improve.Â A co-worker came to my desk yesterday and schooled me on how to write code.Â When you’re young, you’re stupid.Â He had lots of experience, and was… well, right… most of the time.Â I was boxed into a corner at some points, but also made a few bad decisions.Â The good thing is that I always learn from my mistakes, and next time will be *much* better.
 
@@ -25,7 +25,7 @@ I remember writing 3.5 websites before I really got common code working the way 
 
 \[Of course, dirty secret (I know you’re skimming at this point, not really reading) is that I’m almost on only my 2 year anniversary (Sept. 20) of doing programming/development work.Â So my progress is still quite good.\]
 
-Alright, I admit that this post was far more stream-of-conciousness than actual post, but it was good for me.Â It wasn’t intended to be a "I haven’t written in a month, here’s what I’ve been doing” post, but more a "I’m busy, I’ll be back soon, but I don’t know when” type post.Â So on that note…
+Alright, I admit that this post was far more stream-of-conciousness than actual post, but it was good for me.Â It wasn’t intended to be a "I haven’t written in a month, here’s what I’ve been doing" post, but more a "I’m busy, I’ll be back soon, but I don’t know when" type post.Â So on that note…
 
 \[I think it’s [Siouxsie](http://www.vamp.org/Siouxsie/Images/) that’s making me intentionally ambiguous. \]
 

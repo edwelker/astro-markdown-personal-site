@@ -47,9 +47,9 @@ The result is, (new-lines added for readability):
 
 Excellent. But let’s say that we don’t have access to the EXSLT functions, and we have to write a template to perform the same thing.
 
-So now we think up a recursive algorithm. Let’s look at a simplified list with three numbers, such as "1,2,3”. First, we print the "1”, the value before the first comma, and then we discard the first comma. At that point, our list will be "2,3” and we repeat, printing the new first value, and discarding the new first comma. Finally, the list becomes only "3”. There is no comma, so we simply print out the rest of the list, "3”. So we will be recursing over the string printing the first number, and then popping off the first number and first comma. This technique will work with a three number list, or a million-number list (though your processor will probably run out of memory before that).
+So now we think up a recursive algorithm. Let’s look at a simplified list with three numbers, such as "1,2,3". First, we print the "1", the value before the first comma, and then we discard the first comma. At that point, our list will be "2,3" and we repeat, printing the new first value, and discarding the new first comma. Finally, the list becomes only "3". There is no comma, so we simply print out the rest of the list, "3". So we will be recursing over the string printing the first number, and then popping off the first number and first comma. This technique will work with a three number list, or a million-number list (though your processor will probably run out of memory before that).
 
-XPath’s "substring-before”, "substring-after”, and "contains” functions are all of the tools that we’ll need to implement our algorithm. "substring-before” lets us obtain the number before the first comma. "substring-after” lets us discard the first number and first comma, and "contains” allows us figure out the last, comma-less case.
+XPath’s "substring-before", "substring-after", and "contains" functions are all of the tools that we’ll need to implement our algorithm. "substring-before" lets us obtain the number before the first comma. "substring-after" lets us discard the first number and first comma, and "contains" allows us figure out the last, comma-less case.
 
 Our function starts in the same manner as all recursive functions, dealing with the last case, and then all of the cases before it. The last case will be the comma-less case from our algorithm. So here’s our template skeleton.
 
@@ -58,14 +58,14 @@ Our function starts in the same manner as all recursive functions, dealing with 
     <template name="splitcommas"><choose><when test=" not(contains($comma, ','))"></when><otherwise></otherwise></choose></template>
 ```
 
-We use the XPath "not(contains($comma, ‘,’))” to, obviously, test whether our list contains a comma. As you probably noticed, we don’t actually have a $comma variable defined, so we’ll add our xsl:param to the template.
+We use the XPath "not(contains($comma, ‘,’))" to, obviously, test whether our list contains a comma. As you probably noticed, we don’t actually have a $comma variable defined, so we’ll add our xsl:param to the template.
 
 ```
 <pre lang="xml">
     <template name="splitcommas"><param name="comma"></param><choose><when test=" not(contains($comma, ','))"></when><otherwise></otherwise></choose></template>
 ```
 
-Now we fill in the holes in the template’s framework. First, we’ll handle the comma-less case, simply outputting the value wrapped in a "value” element.
+Now we fill in the holes in the template’s framework. First, we’ll handle the comma-less case, simply outputting the value wrapped in a "value" element.
 
 ```
 <pre lang="xml">
@@ -86,7 +86,7 @@ Then we’ll perform the same operation on the list after discarding the first n
 <call-template name="splitcommas"><with-param name="comma" select="substring-after($comma, ',')"></with-param></call-template>
 ```
 
-Finally, we’ll put all of these parts together, as well as adding a root template that will call our "splitcommas” template.
+Finally, we’ll put all of these parts together, as well as adding a root template that will call our "splitcommas" template.
 
 ```
 <pre lang="xml">
