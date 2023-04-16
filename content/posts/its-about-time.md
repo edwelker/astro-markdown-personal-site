@@ -1,5 +1,5 @@
 ---
-title: 'itâ€™s about time'
+title: 'it's about time'
 date: '2008-03-27T20:19:37-05:00'
 status: publish
 permalink: /2008/03/27/its-about-time
