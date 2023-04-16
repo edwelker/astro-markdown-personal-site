@@ -53,14 +53,21 @@ Location-based selectors prohibit code reuse because they are intended to isolat
 
 Location-based selectors are easy to spot. The pattern is a long list of selectors that starts with the same initial selector, as follows (assuming the source is reasonably ordered).
 
-`.sidebar {â€¦}<br></br>.sidebar .nav {â€¦}<br></br>.sidebar .nav .box {â€¦}<br></br>.sidebar .nav .box .header {â€¦}<br></br>.sidebar .nav .box .body p {â€¦}`
+`.sidebar {â€¦}
+.sidebar .nav {â€¦}
+.sidebar .nav .box {â€¦}
+.sidebar .nav .box .header {â€¦}
+.sidebar .nav .box .body p {â€¦}`
 
 Because each selector chain starts with a location-based selector, none of them are reusable. What if we add a new group of pages that use the same .box structure but need to be placed in the content, header, or footer? A novice would add more comma separated selector chains, but that amounts to copying code.  
-`<br></br>.sidebar .nav .box, .content .nav .box, .header .nav .box, .footer .nav .box {â€¦}`
+`
+.sidebar .nav .box, .content .nav .box, .header .nav .box, .footer .nav .box {â€¦}`
 
 The correct approach is to factor out the common functionality while ditching the location-based rules. Now the styles can be reused regardless of the box location.
 
-`.box {â€¦}<br></br>.box .header {â€¦}<br></br>.box .footer {â€¦}`
+`.box {â€¦}
+.box .header {â€¦}
+.box .footer {â€¦}`
 
 Why not break the .box and .header/.footer chains apart? Here the .box class encapsulates the .header and .footer behaviors, hiding these names from the global scope and allowing the "header" and "footer" classnames to be used elsewhere.
 
@@ -92,7 +99,9 @@ HTML:
 
 ` `
 
-`/* simple selectors because the specificity is equal to the base ".box" object's selector */<br></br>.green_border { border: 2px solid green; }<br></br>.red_border { border: 2px solid red; }`
+`/* simple selectors because the specificity is equal to the base ".box" object's selector */
+.green_border { border: 2px solid green; }
+.red_border { border: 2px solid red; }`
 
 Properties
 ----------
@@ -107,7 +116,10 @@ Before:
 
 (my.css)
 
-`.portlet {margin:0; padding:0; â€¦ }<br></br>.header {margin:0; padding:0; â€¦ }<br></br>.footer {margin:0; padding:0; â€¦}<br></br>`
+`.portlet {margin:0; padding:0; â€¦ }
+.header {margin:0; padding:0; â€¦ }
+.footer {margin:0; padding:0; â€¦}
+`
 
 After:
 
@@ -117,7 +129,9 @@ After:
 
 (my.css)
 
-`.portlet { â€¦ }<br></br>.header { â€¦ }<br></br>.footer { â€¦ }`
+`.portlet { â€¦ }
+.header { â€¦ }
+.footer { â€¦ }`
 
 ### Float
 

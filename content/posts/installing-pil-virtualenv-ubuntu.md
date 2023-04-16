@@ -29,7 +29,9 @@ Why? If you install PIL without this library, you’ll get those wonderful "deco
 
 The zlib package handles PNGs.
 
-`$ sudo aptitude install libjpeg62 libjpeg62-dev<br></br>$ sudo aptitude install zlib1g-dev<br></br>$ sudo aptitude install libfreetype6 libfreetype6-dev`
+`$ sudo aptitude install libjpeg62 libjpeg62-dev
+$ sudo aptitude install zlib1g-dev
+$ sudo aptitude install libfreetype6 libfreetype6-dev`
 
 Alright, now we seem to be done with the prerequisites. Start your virtualenv (of course, myEnv in the example is the name of your virtualenv).
 
@@ -37,7 +39,10 @@ Alright, now we seem to be done with the prerequisites. Start your virtualenv (o
 
 Download PIL and install.Â This will make sure to install PIL within your virtualenv’s site-packages.
 
-`(myEnv)$ wget http://effbot.org/downloads/Imaging-1.1.7.tar.gz<br></br>(myEnv)$ tar zxvf Imaging-1.1.7.tar.gz<br></br>(myEnv)$ cd Imaging-1.1.7<br></br>(myEnv)$ python setup.py install`
+`(myEnv)$ wget http://effbot.org/downloads/Imaging-1.1.7.tar.gz
+(myEnv)$ tar zxvf Imaging-1.1.7.tar.gz
+(myEnv)$ cd Imaging-1.1.7
+(myEnv)$ python setup.py install`
 
 If you run into further problems (the "decoder jpeg not available" message again), you may have to resort to the [long directions](http://effbot.org/zone/pil-decoder-jpeg-not-available.htm) to get PIL and libjpeg to play happily together, but I hope not.
 
@@ -47,7 +52,9 @@ Now that you have everything installed, test it.Â Open up a python shell from w
 
 Now try the following (with an image in your home directory) to see if everything is running smoothly.
 
-`>>> from PIL import Image<br></br>>>> i = Image.open('/home/username/someJpeg.jpg')<br></br>>>> i.save('/home/username/someOtherJpeg.jpg')`
+`>>> from PIL import Image
+>>> i = Image.open('/home/username/someJpeg.jpg')
+>>> i.save('/home/username/someOtherJpeg.jpg')`
 
 If all of that works, you should now be ready to work.
 
