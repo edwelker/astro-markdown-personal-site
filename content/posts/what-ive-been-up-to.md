@@ -1,5 +1,5 @@
 ---
-title: 'what I&#8217;ve been up to'
+title: 'what I've been up to'
 date: '2008-01-16T13:44:14-05:00'
 status: publish
 permalink: /2008/01/16/what-ive-been-up-to

@@ -1,5 +1,5 @@
 ---
-title: 'My XSLT Toolbox &#8211; 5 Favorite XSLT Books'
+title: 'My XSLT Toolbox – 5 Favorite XSLT Books'
 date: '2009-01-08T23:42:00-05:00'
 status: publish
 permalink: /2009/01/08/top-5-xslt-books

@@ -1,5 +1,5 @@
 ---
-title: 'My XSLT Toolbox &#8211; copy and copy-of'
+title: 'My XSLT Toolbox – copy and copy-of'
 date: '2008-12-27T16:05:09-05:00'
 status: publish
 permalink: /2008/12/27/xslt-copy-copy-of

@@ -1,5 +1,5 @@
 ---
-title: 'My XSLT Toolbox &#8211; Recursive XSLT templates'
+title: 'My XSLT Toolbox – Recursive XSLT templates'
 date: '2008-12-28T17:21:35-05:00'
 status: publish
 permalink: /2008/12/28/recursive-xslt-templates

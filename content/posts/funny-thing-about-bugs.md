@@ -1,5 +1,5 @@
 ---
-title: 'Funny thing about bugs&#8230;'
+title: 'Funny thing about bugs…'
 date: '2008-09-18T21:17:12-05:00'
 status: publish
 permalink: /2008/09/18/funny-thing-about-bugs

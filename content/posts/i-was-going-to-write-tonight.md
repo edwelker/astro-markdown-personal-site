@@ -1,5 +1,5 @@
 ---
-title: 'I was going to write tonight&#8230;'
+title: 'I was going to write tonight…'
 date: '2008-02-21T00:05:05-05:00'
 status: publish
 permalink: /2008/02/21/i-was-going-to-write-tonight

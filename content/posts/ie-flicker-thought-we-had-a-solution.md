@@ -1,5 +1,5 @@
 ---
-title: 'IE Flicker&#8230; thought we had a solution'
+title: 'IE Flicker… thought we had a solution'
 date: '2007-08-22T20:44:13-05:00'
 status: publish
 permalink: /2007/08/22/ie-flicker-thought-we-had-a-solution

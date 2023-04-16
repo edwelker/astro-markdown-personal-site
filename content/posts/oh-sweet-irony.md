@@ -1,5 +1,5 @@
 ---
-title: 'Oh sweet irony&#8230;'
+title: 'Oh sweet irony…'
 date: '2007-08-22T20:40:57-05:00'
 status: publish
 permalink: /2007/08/22/oh-sweet-irony
