@@ -1,5 +1,5 @@
 ---
-title: 'Getting a button element's value attribute (not innerHTML) in IE'
+title: "Getting a button element's value attribute (not innerHTML) in IE"
 date: '2008-05-23T00:52:25-05:00'
 status: publish
 permalink: /2008/05/23/getting-a-button-elements-value-attribute-not-innerhtml-in-ie
