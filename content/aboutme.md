@@ -16,7 +16,7 @@ I work in the… some group (the name keeps changing, and I’ve never gotten it
 
 [![Me in front of the Lincoln Center fountain](http://farm3.static.flickr.com/2399/2109275877_a5f83c80a0_m.jpg)](http://www.flickr.com/photos/ed_welker/2109275877/ "Me in front of the Lincoln Center fountain by eddie.welker, on Flickr")My side projects are many, and most are never seen by eyes other than my own. I like to toy around Django, Python, Javascript, and Scheme.
 
-I’ve played the cello since fourth grade, and am principal cellist of the [Columbia Orchestra](http://columbiaorchestra.org "The Columbia Orchestra"). I love music (of almost all genres) and enjoy to listen/play/read about music history. My favorite cellist has always been Mstislav Rostropovich, and I am especially fond of 20thâ€“century Russian composers like Prokofiev, Shostakovich, and Miaskovsky. I used to be a member of the University of Maryland and [Greater Baltimore Youth Orchestra](http://gbyo.com "Greater Baltimore Youth Orchestra")s.
+I’ve played the cello since fourth grade, and am principal cellist of the [Columbia Orchestra](http://columbiaorchestra.org "The Columbia Orchestra"). I love music (of almost all genres) and enjoy to listen/play/read about music history. My favorite cellist has always been Mstislav Rostropovich, and I am especially fond of 20th-century Russian composers like Prokofiev, Shostakovich, and Miaskovsky. I used to be a member of the University of Maryland and [Greater Baltimore Youth Orchestra](http://gbyo.com "Greater Baltimore Youth Orchestra")s.
 
 I’m an avid [Red Sox](http://boston.com/redsox/ "Boston Red Sox") fan who grew up watching them during the summers I spent at my grandparents house. I’m told the only thing I say during games is “Come on Man-ny!”
 
