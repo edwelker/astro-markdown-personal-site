@@ -20,23 +20,23 @@ tag:
     - xhtml
 post_format: []
 ---
-After nearly 3 months sitting on my bookshelf, I got around to ![Microformats Logo](../../../../uploads/2007/10/microformats1.png "Microformats Logo")reading [the Microformats book](http://microformats.org/blog/2007/04/19/microformats-the-book/). I probably donâ€™t need to mention that theyâ€™ve been pretty high on the â€œbuzzâ€&#157; list for a while now. That aside, I like the idea, and believe they are worth using. With this post, I hope to give a high-level overview of Microformatsâ€¦ first sampling what they are and how to use them, followed by my thoughts on why you should use them.
+After nearly 3 months sitting on my bookshelf, I got around to ![Microformats Logo](../../../../uploads/2007/10/microformats1.png "Microformats Logo")reading [the Microformats book](http://microformats.org/blog/2007/04/19/microformats-the-book/). I probably donâ€™t need to mention that theyâ€™ve been pretty high on the â€œbuzz" list for a while now. That aside, I like the idea, and believe they are worth using. With this post, I hope to give a high-level overview of Microformatsâ€¦ first sampling what they are and how to use them, followed by my thoughts on why you should use them.
 
 **What and How**
 
-Very simply, Microformats give our already semantic xhtml elements an extra layer of meaning when using a common set of attribute values. Consider the case of an â€œ[hCalendar](http://microformats.org/wiki/hcalendar)â€&#157;, a microformat that gives xhtml the structure of an events calendar. An events calendar is simply a set of events. This relationship is easily described by a parent-children relationship. The problem is that xhtml can easily describe parent-children relationships, yet it cannot semantically describe this calendar-events relationship. Microformats do just thatâ€¦ they provide a way to describe this common relationship through the use of attribute values.
+Very simply, Microformats give our already semantic xhtml elements an extra layer of meaning when using a common set of attribute values. Consider the case of an â€œ[hCalendar](http://microformats.org/wiki/hcalendar)", a microformat that gives xhtml the structure of an events calendar. An events calendar is simply a set of events. This relationship is easily described by a parent-children relationship. The problem is that xhtml can easily describe parent-children relationships, yet it cannot semantically describe this calendar-events relationship. Microformats do just thatâ€¦ they provide a way to describe this common relationship through the use of attribute values.
 
-To create an â€œhCalendarâ€&#157;, you would write something like the following:
+To create an â€œhCalendar", you would write something like the following:
 
-> &lt;div class=â€&#157;vcalendarâ€&#157;&gt;
+> &lt;div class="vcalendar"&gt;
 > 
-> > &lt;span class=â€&#157;veventâ€&#157;/&gt;  
-> > &lt;div class=â€&#157;veventâ€&#157;/&gt;  
-> > &lt;dl class=â€&#157;veventâ€&#157;/&gt;
+> > &lt;span class="vevent"/&gt;  
+> > &lt;div class="vevent"/&gt;  
+> > &lt;dl class="vevent"/&gt;
 > 
 > &lt;/div&gt;
 
-As you can see, the supplementary calendar-events structure is added by setting specific attribute values, in this case â€˜vcalendarâ€™ and â€˜veventâ€™. Microformats use exiting attributes like â€˜classâ€™ and â€˜relâ€™ as hooks for this structure, in the same way these attributes can be used as hooks for additional CSS information. Additionally, these attributes can be applied to whichever element you choose\*. I demonstrated the use of the same attribute/value pair (class=â€&#157;veventâ€&#157;) on the â€˜spanâ€™, â€˜divâ€™, and â€˜dlâ€™ elements in the example above.
+As you can see, the supplementary calendar-events structure is added by setting specific attribute values, in this case â€˜vcalendarâ€™ and â€˜veventâ€™. Microformats use exiting attributes like â€˜classâ€™ and â€˜relâ€™ as hooks for this structure, in the same way these attributes can be used as hooks for additional CSS information. Additionally, these attributes can be applied to whichever element you choose\*. I demonstrated the use of the same attribute/value pair (class="vevent") on the â€˜spanâ€™, â€˜divâ€™, and â€˜dlâ€™ elements in the example above.
 
 \[\* The rules for applying attributes to elements are the same as [the existing xhtml spec](http://www.w3.org/TR/xhtml11/)\]
 
