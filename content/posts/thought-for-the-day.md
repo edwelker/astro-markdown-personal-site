@@ -15,4 +15,4 @@ post_format: []
 ---
 My thought for the day is this:
 
-Everyone should keep usability in mind while performing their job.<span> </span>While creating something (especially like a website), some aspects end up being unrelated–graphic<span> </span>design to programmers, implementation details to designers, etc–however usability should be an part of every aspect of the creation process.<span> </span>There are an unending number of uses to design for, the least we can do is succeed for one or two.<span></span>
+Everyone should keep usability in mind while performing their job.<span> </span>While creating something (especially like a website), some aspects end up being unrelated-graphic<span> </span>design to programmers, implementation details to designers, etc-however usability should be an part of every aspect of the creation process.<span> </span>There are an unending number of uses to design for, the least we can do is succeed for one or two.<span></span>

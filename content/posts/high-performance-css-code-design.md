@@ -164,7 +164,7 @@ This technique also takes the longest, since it requires looking at all of the p
 
 ### Headers
 
-Finding headers on the page should be fairly simple, and to be honest, you've probably taken care of this searching for repeated font-size properties as described above. However a visual inventory may convince you that your headers are more alike than different, and you may find an opportunity to tighten the differences. You may even decide to dump one of the variations–even better.
+Finding headers on the page should be fairly simple, and to be honest, you've probably taken care of this searching for repeated font-size properties as described above. However a visual inventory may convince you that your headers are more alike than different, and you may find an opportunity to tighten the differences. You may even decide to dump one of the variations-even better.
 
 ### Portlets
 
