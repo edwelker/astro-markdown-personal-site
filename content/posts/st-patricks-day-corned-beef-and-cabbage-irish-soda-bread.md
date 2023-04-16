@@ -19,21 +19,24 @@ tag:
     - 'St. Patrick''s Day'
 post_format: []
 ---
-Fresh parsley  
-mustard Seed  
-4+ peppercorn mix  
-cloves  
-juniper berries  
-bay leaves (the strongest you can find)  
-all spice berries  
-thyme (a lot of dried, since it's very water soluable, and doesn't last long when boiled)
+# Corned Beef and Cabbage
 
-potatoes (baby, about the size of a tablespoon)  
-onion (4+ big onions)  
-carrot (5+ medium carrots)  
-celery (3+ small stalks, not too much)  
-cabbage (a small one... it'll have to be cooked after taking some veggies/broth out, so it can't be too large.)  
-corned beef (the larger the better, also try to get a flat cut, not a point cut, ~$10, so x lbs)
+- Fresh parsley
+- mustard Seed
+- 4+ peppercorn mix
+- cloves
+- juniper berries
+- bay leaves (the strongest you can find)
+- all spice berries
+- thyme (a lot of dried, since it's very water soluable, and doesn't last long when boiled)
+
+
+* potatoes (baby, about the size of a tablespoon)
+* onion (4+ big onions)
+* carrot (5+ medium carrots)
+* celery (3+ small stalks, not too much)
+* cabbage (a small one... it'll have to be cooked after taking some veggies/broth out, so it can't be too large.)
+* corned beef (the larger the better, also try to get a flat cut, not a point cut, ~$10, so x lbs)
 
 Alt (kosher salt, 2 tbsp, added at the corned beef stage)
 
@@ -49,14 +52,14 @@ Alt (kosher salt, 2 tbsp, added at the corned beef stage)
 
 6\) Serve an 8th of cabbage, 2 slices of corned beef, a bowl-full of veggies, and add chopped fresh parsley on top.  Serve along with the Irish soda bread.
 
-Irish soda bread
+# Irish soda bread
 
-2 cups all purpose flour  
-2 cups whole wheat flour  
-1 tablespoon (or less) of baking soda  
-1 tablespoon (or more) of salt  
-1 quart (or less) of buttermilk  
-Any amount of Irish butter  
+2 cups all purpose flour
+2 cups whole wheat flour
+1 tablespoon (or less) of baking soda
+1 tablespoon (or more) of salt
+1 quart (or less) of buttermilk
+Any amount of Irish butter
 A little bunch of caraway seeds
 
 (Pre-heat a cast iron pan to 450)

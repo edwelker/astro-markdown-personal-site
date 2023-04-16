@@ -2,3 +2,16 @@ baseURL = 'http://eddiewelker.com/'
 languageCode = 'en-us'
 title = 'eddiewelker.com'
 theme = 'ananke'
+
+# [params]
+#   commentoEnable = true
+
+[[params.ananke_socials]]
+name = "twitter"
+url = "https://twitter.com/edwelker"
+[[params.ananke_socials]]
+name = "github"
+url = "https://github.com/edwelker"
+[[params.ananke_socials]]
+name = "instagram"
+url = "https://instagram.com/edwelker"
