@@ -1,5 +1,5 @@
 ---
-title: 'â€¦all this traffic.'
+title: '...all this traffic.'
 date: '2007-09-01T09:52:07-05:00'
 status: publish
 permalink: /2007/09/01/all-this-traffic
