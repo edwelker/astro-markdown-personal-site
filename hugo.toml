@@ -4,12 +4,24 @@ title = 'eddiewelker.com'
 theme = 'ananke'
 enableRobotsTXT = true
 ignoreLogs = ['warning-goldmark-raw-html']
+SummaryLength = 100
+sectionPagesMenu = 'main'
 
-[menu]
+[menus]
+ [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
  [[menu.main]]
     name = "About"
     pageRef = "/about"
-    weight = 10
+    weight = 20
+
+[permalinks]
+  [permalinks.page]
+    posts = '/articles/:year/:month/:day/:slug/'
+  [permalinks.section]
+    posts = '/articles/'
 
 [sitemap]
   changefreq = "monthly"
@@ -17,24 +29,25 @@ ignoreLogs = ['warning-goldmark-raw-html']
   filename = "sitemap.xml"
 
 [pagination]
-pagerSize = 10
+pagerSize = 20
 
 [params]
+author = "Eddie Welker"
 recent_posts_number = 8
-github = "https://github.com/edwelker"
-featured_image = "/images/learningjQuery.jpg"
+featured_image = "/header/springs.jpg"
 # choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
 background_color_class = "bg-dark-gray"
+cover_dimming_class = "bg-black-40"
 
 
 # https://github.com/theNewDynamic/gohugo-theme-ananke/blob/main/exampleSite/config.toml
 
-[params.ananke.social.share]
-networks = [
-  "instagram",
-  "spotify",
-  "github"
-]
+# [params.ananke.social.share]
+# networks = [
+#   "instagram",
+#   "spotify",
+#   "github"
+# ]
 
 [params.ananke.social.follow]
 networks = [
@@ -58,3 +71,15 @@ label = "spotify"
 profile = "https://open.spotify.com/user/%s"
 # https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs/brands
 icon = "spotify"
+
+[services]
+  [services.googleAnalytics]
+    id = ''
+  [services.rss]
+    limit = -1
+
+[privacy]
+  [privacy.instagram]
+    disable = false
+    simple = false
+

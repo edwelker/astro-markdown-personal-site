@@ -3,7 +3,6 @@ title: 'St. Patricks Day Corned beef and cabbage & Irish soda bread'
 date: '2014-03-16T21:25:35-05:00'
 status: publish
 permalink: /2014/03/16/st-patricks-day-corned-beef-and-cabbage-irish-soda-bread
-author: Eddie
 excerpt: ''
 type: post
 id: 397
