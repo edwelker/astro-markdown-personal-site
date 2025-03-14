@@ -20,7 +20,7 @@ post_format: []
 ---
 In the last few years much emphasis has been placed on web performance issues. Browser vendors have optimized JavaScript engines, JavaScript libraries have been honed, and content delivery has been improved. Unfortunately, CSS has received less attention. Developers have been advised how to optimally transfer CSS files, and instructed to use CSS shorthand, but very little has targeted CSS code itself.
 
-[Ms. Nicole Sullivan](http://www.stubbornella.org/) is among those looking to improve CSS code. She has been promoting "[OOCSS](https://github.com/stubbornella/oocss)," or "[Object Oriented CSS](https://github.com/stubbornella/oocss)," her methodology for how to design and refactor CSS<sup>[1](#n1)</sup>. She has collected a number of best practices for architecting a CSS framework. The benefits are simple: CSS will perform better, become more modular, as well as being grounded with a consistent API, making it easier to learn and use. This is accomplished by reducing the file size and complexity of our CSS.
+[Ms. Nicole Sullivan](http://www.stubbornella.org/) is among those looking to improve CSS code. She has been promoting "[OOCSS](https://github.com/stubbornella/oocss)," or "[Object Oriented CSS](https://github.com/stubbornella/oocss)," her methodology for how to design and refactor CSS [1](#n1). She has collected a number of best practices for architecting a CSS framework. The benefits are simple: CSS will perform better, become more modular, as well as being grounded with a consistent API, making it easier to learn and use. This is accomplished by reducing the file size and complexity of our CSS.
 
 While many of these techniques can be considered common practice for experienced CSS programmers, implementing them can be difficult. The art is in analyzing trade-offs and picking the optimal path. That said, these rules are not for everyone, or every site. It all boils down to deciding if the site's performance gain is greater than the time it takes to learn and use the techniques.
 
@@ -53,21 +53,25 @@ Location-based selectors prohibit code reuse because they are intended to isolat
 
 Location-based selectors are easy to spot. The pattern is a long list of selectors that starts with the same initial selector, as follows (assuming the source is reasonably ordered).
 
-`.sidebar {...}
+```
+.sidebar {...}
 .sidebar .nav {...}
 .sidebar .nav .box {...}
 .sidebar .nav .box .header {...}
-.sidebar .nav .box .body p {...}`
+.sidebar .nav .box .body p {...}
+```
 
 Because each selector chain starts with a location-based selector, none of them are reusable. What if we add a new group of pages that use the same .box structure but need to be placed in the content, header, or footer? A novice would add more comma separated selector chains, but that amounts to copying code.  
-`
-.sidebar .nav .box, .content .nav .box, .header .nav .box, .footer .nav .box {...}`
+
+```.sidebar .nav .box, .content .nav .box, .header .nav .box, .footer .nav .box {...}```
 
 The correct approach is to factor out the common functionality while ditching the location-based rules. Now the styles can be reused regardless of the box location.
 
-`.box {...}
+```
+.box {...}
 .box .header {...}
-.box .footer {...}`
+.box .footer {...}
+```
 
 Why not break the .box and .header/.footer chains apart? Here the .box class encapsulates the .header and .footer behaviors, hiding these names from the global scope and allowing the "header" and "footer" classnames to be used elsewhere.
 
@@ -89,24 +93,26 @@ Keeping selector specificity as similar as possible makes it easy to use classes
 
 HTML:
 
-``
+```
+<div>Default (black) box</div>
 
-<div>Default (black) box</div>``
+<div>Green box</div><div> Red box</div>
+```
 
-<div>Green box</div><div> Red box</div>CSS:
+CSS:
 
-`.box { padding:1em; color:black; border: 1px solid black; }`
+```
+.box { padding:1em; color:black; border: 1px solid black; }
 
-` `
-
-`/* simple selectors because the specificity is equal to the base ".box" object's selector */
+/* simple selectors because the specificity is equal to the base ".box" object's selector */
 .green_border { border: 2px solid green; }
-.red_border { border: 2px solid red; }`
+.red_border { border: 2px solid red; }
+```
 
 Properties
 ----------
 
-Properties appear in CSS more frequently than selectors, and as a result their quantity masks their code smells a bit. However we can exploit their frequency to find repetitive code<sup>[2](#n2)</sup>.
+Properties appear in CSS more frequently than selectors, and as a result their quantity masks their code smells a bit. However we can exploit their frequency to find repetitive code [2](#n2).
 
 ### Margin: 0 and padding: 0
 
@@ -116,22 +122,27 @@ Before:
 
 (my.css)
 
-`.portlet {margin:0; padding:0; ... }
+```
+.portlet {margin:0; padding:0; ... }
 .header {margin:0; padding:0; ... }
 .footer {margin:0; padding:0; ...}
-`
+```
 
 After:
 
 (Reset.css)
 
-`div {margin:0; padding:0}`
+```
+div {margin:0; padding:0}
+```
 
 (my.css)
 
-`.portlet { ... }
+```
+.portlet { ... }
 .header { ... }
-.footer { ... }`
+.footer { ... }
+```
 
 ### Float
 
@@ -196,6 +207,6 @@ Once these rules have been applied, your file size should be smaller, so less in
 Footnotes
 ---------
 
-<sup><a id="n1">1</a></sup> Personally, I find the choice of the "OOCSS" or "Object Oriented CSS" name both poor and misleading. To call something "Object Oriented" when the metaphor doesn't fit (CSS has no data per se, and it certainly has no methods) is confusing, especially when the audience is likely to be familiar with the term. To then give your CSS library the same name and overload the term twice obscures a very useful set of CSS refactoring methods.
+1 Personally, I find the choice of the "OOCSS" or "Object Oriented CSS" name both poor and misleading. To call something "Object Oriented" when the metaphor doesn't fit (CSS has no data per se, and it certainly has no methods) is confusing, especially when the audience is likely to be familiar with the term. To then give your CSS library the same name and overload the term twice obscures a very useful set of CSS refactoring methods.
 
-<sup><a id="n2">2</a></sup> This can be accomplished with the Unix tool grep, a powerful text searching utility. It is also possible to accomplish this through your editor, as long as it supports searching multiple files at once. It is especially useful to be able to count occurrences across files.
+2 This can be accomplished with the Unix tool grep, a powerful text searching utility. It is also possible to accomplish this through your editor, as long as it supports searching multiple files at once. It is especially useful to be able to count occurrences across files.

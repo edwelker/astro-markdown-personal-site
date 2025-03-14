@@ -28,6 +28,7 @@ Very simply, Microformats give our already semantic xhtml elements an extra laye
 
 To create an "hCalendar", you would write something like the following:
 
+```
 > <div class="vcalendar">
 > 
 > > <span class="vevent"/>  
@@ -35,6 +36,7 @@ To create an "hCalendar", you would write something like the following:
 > > <dl class="vevent"/>
 > 
 > </div>
+```
 
 As you can see, the supplementary calendar-events structure is added by setting specific attribute values, in this case 'vcalendar' and 'vevent'. Microformats use exiting attributes like 'class' and 'rel' as hooks for this structure, in the same way these attributes can be used as hooks for additional CSS information. Additionally, these attributes can be applied to whichever element you choose\*. I demonstrated the use of the same attribute/value pair (class="vevent") on the 'span', 'div', and 'dl' elements in the example above.
 
