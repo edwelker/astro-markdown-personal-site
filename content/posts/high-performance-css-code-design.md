@@ -63,7 +63,9 @@ Location-based selectors are easy to spot. The pattern is a long list of selecto
 
 Because each selector chain starts with a location-based selector, none of them are reusable. What if we add a new group of pages that use the same .box structure but need to be placed in the content, header, or footer? A novice would add more comma separated selector chains, but that amounts to copying code.  
 
-```.sidebar .nav .box, .content .nav .box, .header .nav .box, .footer .nav .box {...}```
+```
+.sidebar .nav .box, .content .nav .box, .header .nav .box, .footer .nav .box {...}
+```
 
 The correct approach is to factor out the common functionality while ditching the location-based rules. Now the styles can be reused regardless of the box location.
 
