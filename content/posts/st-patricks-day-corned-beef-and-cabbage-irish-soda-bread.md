@@ -9,6 +9,7 @@ id: 397
 categories:
     - cooking
     - food
+    - recipes
 tags:
     - cabbage
     - 'corned beef'
@@ -46,6 +47,8 @@ Alt (kosher salt, 2 tbsp, added at the corned beef stage)
 4. After those 15-25 minutes, add the rest of the veggies, and cook for another 15 minutes.
 5. Take out half, and fill the empty space with the cabbage. Cook on high for another 15 minutes.
 6. Serve an 8th of cabbage, 2 slices of corned beef, a bowl-full of veggies, and add chopped fresh parsley on top.  Serve along with the Irish soda bread.
+
+![soda bread](https://live.staticflickr.com/65535/32852496747_04f1e7ef92_b_d.jpg)
 
 # Irish soda bread
 
