@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 71
-category:
+categories:
     - javascript
 tag:
     - 'global scope'

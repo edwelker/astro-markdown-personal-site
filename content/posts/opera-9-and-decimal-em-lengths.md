@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 19
-category: []
+categories: []
 tag:
     - opera
     - 'opera 9'

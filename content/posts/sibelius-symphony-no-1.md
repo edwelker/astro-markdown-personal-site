@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 222
-category:
+categories:
     - cello
     - 'classical music'
     - music

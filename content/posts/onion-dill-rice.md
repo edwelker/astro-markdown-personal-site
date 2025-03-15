@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 385
-category:
+categories:
     - cooking
     - food
     - recipes

@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 38
-category:
+categories:
     - Boston
     - 'classical music'
     - 'red sox'

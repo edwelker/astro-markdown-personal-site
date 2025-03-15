@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 92
-category:
+categories:
     - books
     - django
     - programming

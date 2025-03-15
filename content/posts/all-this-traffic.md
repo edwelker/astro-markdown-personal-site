@@ -7,7 +7,7 @@ author: admin
 excerpt: ''
 type: post
 id: 23
-category:
+categories:
     - personal
 tag:
     - moving

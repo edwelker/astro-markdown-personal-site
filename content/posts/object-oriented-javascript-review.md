@@ -7,7 +7,7 @@ author: Eddie
 excerpt: 'I recently read Object Oriented JavaScript, by Stoyan Stefanov. In reviewing it, I found it was one of the most interesting books I''ve read in a while, for some good reasons and a few more curious reasons.'
 type: post
 id: 122
-category:
+categories:
     - books
     - javascript
     - programming

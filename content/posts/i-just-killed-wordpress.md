@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 43
-category:
+categories:
     - firefox
 tag:
     - mac

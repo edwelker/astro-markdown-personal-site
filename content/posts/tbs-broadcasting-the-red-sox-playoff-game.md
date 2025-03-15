@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 32
-category:
+categories:
     - baseball
     - 'red sox'
 tag:

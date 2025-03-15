@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 241
-category:
+categories:
     - urls
 tag:
     - email

@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 87
-category:
+categories:
     - programming
 tag:
     - holiday

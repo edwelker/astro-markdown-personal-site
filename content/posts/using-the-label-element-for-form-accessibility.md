@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 78
-category:
+categories:
     - accessibility
     - firefox
     - usability

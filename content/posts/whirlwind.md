@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 36
-category:
+categories:
     - baseball
     - Boston
     - cello

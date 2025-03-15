@@ -7,7 +7,7 @@ author: admin
 excerpt: ''
 type: post
 id: 15
-category:
+categories:
     - ie
     - microsoft
 tag:

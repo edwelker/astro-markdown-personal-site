@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 52
-category:
+categories:
     - books
     - firefox
 tag:

@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 214
-category:
+categories:
     - programming
     - xslt
 tag:

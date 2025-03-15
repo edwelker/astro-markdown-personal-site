@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 64
-category:
+categories:
     - usability
     - web
 tag: []

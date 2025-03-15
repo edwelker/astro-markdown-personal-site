@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 63
-category:
+categories:
     - Uncategorized
 tag:
     - personal

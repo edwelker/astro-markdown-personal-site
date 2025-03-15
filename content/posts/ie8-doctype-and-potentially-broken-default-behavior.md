@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 69
-category:
+categories:
     - ie
     - ie8
     - microsoft

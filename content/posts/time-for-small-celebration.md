@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 48
-category: []
+categories: []
 tag:
     - pubmed
 post_format: []

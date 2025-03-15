@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 83
-category:
+categories:
     - programming
     - python
 tag:

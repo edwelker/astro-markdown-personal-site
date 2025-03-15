@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 37
-category:
+categories:
     - xslt
 tag:
     - 'functional programming'

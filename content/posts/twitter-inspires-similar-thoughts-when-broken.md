@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 67
-category:
+categories:
     - twitter
 tag:
     - client

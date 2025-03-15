@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 20
-category: []
+categories: []
 tag:
     - 'kensington md'
     - moving

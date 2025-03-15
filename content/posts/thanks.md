@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 61
-category:
+categories:
     - blog
     - personal
     - 'this site'

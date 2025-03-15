@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 60
-category:
+categories:
     - personal
     - typography
 tag:

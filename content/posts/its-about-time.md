@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 80
-category:
+categories:
     - personal
     - programming
     - web

@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 42
-category:
+categories:
     - firefox
     - microsoft
 tag:

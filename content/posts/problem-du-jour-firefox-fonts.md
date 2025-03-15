@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 35
-category:
+categories:
     - firefox
 tag:
     - 'font rendering'

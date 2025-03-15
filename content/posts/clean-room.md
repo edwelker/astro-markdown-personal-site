@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 94
-category:
+categories:
     - books
     - photos
 tag:

@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 56
-category:
+categories:
     - design
     - firefox
     - ie

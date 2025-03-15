@@ -7,7 +7,7 @@ author: admin
 excerpt: ''
 type: post
 id: 9
-category:
+categories:
     - books
 tag:
     - expressionengine

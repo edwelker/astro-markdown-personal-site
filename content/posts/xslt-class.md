@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 40
-category:
+categories:
     - xslt
 tag:
     - 'beginning xslt'

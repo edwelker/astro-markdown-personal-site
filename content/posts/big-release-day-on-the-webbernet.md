@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 77
-category:
+categories:
     - firefox
     - ie
     - ie8
@@ -43,7 +43,7 @@ The other biggest buzz of the day was from Yahoo, in announcing the [beta of the
 
 Of more direct importance to me, [Google has announced their Contacts API](http://googledataapis.blogspot.com/2008/03/3-2-1-contact-api-has-landed.html "Google introduces Contacts API for accessing Gmail contacts securely"). I despise when sites ask me to enter my username/password for *other sites*. The most offensive request is for Gmail. I don't have any interesting emails, let me tell you... but I certainly don't want to let others read them. The Contacts API is a safe way for distribution and use of your Gmail contacts, without threatening the security of your Gmail account or your other Google-stored information. With this, I should be able to sync my Gmail contacts with my desktop mail contacts. I'm very happy about that.
 
-Heading up the long-since-overdue category, [AOL has announced they've opened their Instant Messenger Protocol, OpenAIM](http://dev.aol.com/aim "AOL opens Instant Messenger Protocol, OpenAIM"). **Finally**. I remember ages ago when... well, it's all in the past now. That's one big wall that has been broken down between protocols, and hopefully Yahoo and Microsoft will fall in line. It will be great if other apps can finally use the features that have been limited to the AIM client for all this time. I use [Adium](http://www.adiumx.com/ "Adium; A Mac Instant Messenging Client") and [Pidgin](http://www.pidgin.im/ "Pidgin; Open Source Messenging Client") most of the time (Adium, I believe uses Pidgin's core), and look forward to seeing what they do with the new open protocol. (On a personal note, hopefully this doesn't spell any negative news for my friends who work on AIM.)
+Heading up the long-since-overdue categories, [AOL has announced they've opened their Instant Messenger Protocol, OpenAIM](http://dev.aol.com/aim "AOL opens Instant Messenger Protocol, OpenAIM"). **Finally**. I remember ages ago when... well, it's all in the past now. That's one big wall that has been broken down between protocols, and hopefully Yahoo and Microsoft will fall in line. It will be great if other apps can finally use the features that have been limited to the AIM client for all this time. I use [Adium](http://www.adiumx.com/ "Adium; A Mac Instant Messenging Client") and [Pidgin](http://www.pidgin.im/ "Pidgin; Open Source Messenging Client") most of the time (Adium, I believe uses Pidgin's core), and look forward to seeing what they do with the new open protocol. (On a personal note, hopefully this doesn't spell any negative news for my friends who work on AIM.)
 
 And to round things off, here's two smaller releases today (one based on IE8's Activities):
 

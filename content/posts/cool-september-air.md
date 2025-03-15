@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 28
-category:
+categories:
     - 'red sox'
 tag:
     - 'big papi'

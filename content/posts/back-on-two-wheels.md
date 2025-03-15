@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 62
-category:
+categories:
     - bethesda
     - bikes
 tag:

@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 46
-category:
+categories:
     - microformats
 tag:
     - attribute

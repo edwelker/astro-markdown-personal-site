@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 254
-category:
+categories:
     - bikes
     - personal
 tag:

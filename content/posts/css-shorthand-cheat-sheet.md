@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 25
-category:
+categories:
     - design
     - fonts
 tag:

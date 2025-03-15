@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 322
-category:
+categories:
     - django
     - python
 tag: []

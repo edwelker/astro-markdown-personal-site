@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 73
-category:
+categories:
     - 'classical music'
     - xslt
 tag:

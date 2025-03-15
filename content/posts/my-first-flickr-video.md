@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 84
-category:
+categories:
     - flickr
 tag:
     - concert

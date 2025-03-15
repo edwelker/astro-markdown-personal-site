@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 309
-category:
+categories:
     - Uncategorized
 tag: []
 post_format: []

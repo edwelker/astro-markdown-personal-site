@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 18
-category:
+categories:
     - 'east hampton'
 tag:
     - 'columbia orchestra'

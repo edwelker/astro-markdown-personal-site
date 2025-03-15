@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 95
-category:
+categories:
     - accessibility
     - books
     - design

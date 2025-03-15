@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 33
-category:
+categories:
     - baseball
     - bethesda
     - Boston

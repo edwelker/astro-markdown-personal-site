@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 50
-category:
+categories:
     - 'east hampton'
 tag:
     - Amagansett

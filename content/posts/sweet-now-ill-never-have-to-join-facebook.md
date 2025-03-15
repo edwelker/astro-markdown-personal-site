@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 47
-category: []
+categories: []
 tag:
     - api
     - facebook

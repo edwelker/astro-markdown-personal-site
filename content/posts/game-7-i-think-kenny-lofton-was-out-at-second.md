@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 39
-category:
+categories:
     - Boston
     - 'red sox'
 tag:

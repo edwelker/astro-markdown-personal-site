@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 90
-category:
+categories:
     - Boston
     - django
     - python

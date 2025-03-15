@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 261
-category:
+categories:
     - personal
 tag:
     - moving

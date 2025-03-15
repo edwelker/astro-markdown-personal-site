@@ -7,7 +7,7 @@ author: Eddie
 excerpt: 'Not a technical post, but a personal update. I promised over a week ago.'
 type: post
 id: 247
-category:
+categories:
     - bikes
     - books
     - design

@@ -7,7 +7,7 @@ author: admin
 excerpt: ''
 type: post
 id: 12
-category:
+categories:
     - 'classical music'
 tag:
     - 'gerard schwarz'

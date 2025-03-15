@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 232
-category:
+categories:
     - books
     - javascript
     - programming

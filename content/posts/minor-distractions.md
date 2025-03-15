@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 53
-category:
+categories:
     - ie
     - microformats
     - rss

@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 51
-category:
+categories:
     - Boston
     - flickr
     - personal

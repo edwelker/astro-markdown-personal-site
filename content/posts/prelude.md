@@ -7,7 +7,7 @@ author: admin
 excerpt: ''
 type: post
 id: 7
-category:
+categories:
     - personal
     - 'this site'
 tag:

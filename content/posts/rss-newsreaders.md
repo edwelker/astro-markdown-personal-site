@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 34
-category:
+categories:
     - firefox
     - rss
 tag:

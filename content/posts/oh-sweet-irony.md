@@ -7,7 +7,7 @@ author: admin
 excerpt: ''
 type: post
 id: 14
-category:
+categories:
     - baseball
 tag:
     - cubs

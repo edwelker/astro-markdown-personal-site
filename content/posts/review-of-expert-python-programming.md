@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 225
-category:
+categories:
     - books
     - programming
     - python

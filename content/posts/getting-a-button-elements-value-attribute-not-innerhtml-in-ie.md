@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 86
-category:
+categories:
     - ie
     - ie8
     - javascript

@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 330
-category:
+categories:
     - css
     - programming
     - 'web design'

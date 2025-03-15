@@ -7,7 +7,7 @@ author: Eddie
 excerpt: ''
 type: post
 id: 131
-category:
+categories:
     - movies
 tag:
     - halloween
