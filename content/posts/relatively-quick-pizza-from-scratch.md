@@ -7,7 +7,7 @@ author: Eddie
 excerpt: 'Tonight I tried a new recipe, for two whole large pizzas, which turned out really well. Only tools used were a food processor (with dough blade), oven, two pizza pans, and a pizza cutter. Adding the recipe here for my own records. :)'
 type: post
 id: 368
-category:
+categories:
     - cooking
     - food
     - recipes

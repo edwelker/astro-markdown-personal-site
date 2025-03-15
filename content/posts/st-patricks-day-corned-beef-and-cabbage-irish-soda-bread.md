@@ -6,10 +6,10 @@ permalink: /2014/03/16/st-patricks-day-corned-beef-and-cabbage-irish-soda-bread
 excerpt: ''
 type: post
 id: 397
-category:
+categories:
     - cooking
     - food
-tag:
+tags:
     - cabbage
     - 'corned beef'
     - dinner

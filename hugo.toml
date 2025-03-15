@@ -17,14 +17,14 @@ sectionPagesMenu = 'main'
     name = 'Home'
     pageRef = '/'
     weight = 10
-
-
-# hugo setting, cross-theme
-[permalinks]
-  [permalinks.page]
-    posts = '/articles/:year/:month/:day/:slug/'
-  [permalinks.section]
-    posts = '/articles/'
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 20
+  [[menus.main]]
+    name = 'Articles'
+    pageRef = '/articles'
+    weight = 30
 
 [sitemap]
   changefreq = "monthly"
@@ -70,3 +70,16 @@ creditsText = "eddiewelker.com"
 [services]
     [services.googleAnalytics]
         ID = 'G-19CWWGK0FL'
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+# hugo setting, cross-theme
+[permalinks]
+  categories = "/:section/:slug/"
+  [permalinks.page]
+    posts = '/articles/:year/:month/:day/:slug/'
+  [permalinks.section]
+    posts = '/articles/'
