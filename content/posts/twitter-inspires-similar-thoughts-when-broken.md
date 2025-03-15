@@ -9,7 +9,7 @@ type: post
 id: 67
 categories:
     - twitter
-tag:
+tags:
     - client
     - decentralization
     - 'decentralized service'

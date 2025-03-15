@@ -10,7 +10,7 @@ id: 81
 categories:
     - programming
     - xslt
-tag:
+tags:
     - php
     - 'programming language'
     - scheme

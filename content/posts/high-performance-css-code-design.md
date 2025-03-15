@@ -11,7 +11,7 @@ categories:
     - css
     - programming
     - 'web design'
-tag:
+tags:
     - css
     - oocss
     - programming

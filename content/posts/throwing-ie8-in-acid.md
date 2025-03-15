@@ -11,7 +11,7 @@ categories:
     - ie
     - ie8
     - standards
-tag:
+tags:
     - acid3
 post_format: []
 ---

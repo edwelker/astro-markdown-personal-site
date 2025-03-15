@@ -9,7 +9,7 @@ type: post
 id: 50
 categories:
     - 'east hampton'
-tag:
+tags:
     - Amagansett
     - 'Farmers Market'
     - 'Long Island'

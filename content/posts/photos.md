@@ -12,7 +12,7 @@ categories:
     - flickr
     - personal
     - photos
-tag:
+tags:
     - 'alcs game'
     - 'ashes of kings'
     - fenway

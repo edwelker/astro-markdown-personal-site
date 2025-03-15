@@ -9,7 +9,7 @@ type: post
 id: 28
 categories:
     - 'red sox'
-tag:
+tags:
     - 'big papi'
     - 'david ortiz'
     - 'home run'

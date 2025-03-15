@@ -10,7 +10,7 @@ id: 22
 categories:
     - blog
     - design
-tag:
+tags:
     - css
     - html
     - photoshop

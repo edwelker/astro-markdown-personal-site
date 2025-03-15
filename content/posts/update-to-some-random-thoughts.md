@@ -9,7 +9,7 @@ type: post
 id: 63
 categories:
     - Uncategorized
-tag:
+tags:
     - personal
     - random
     - thoughts

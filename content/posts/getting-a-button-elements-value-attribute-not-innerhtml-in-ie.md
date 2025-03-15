@@ -12,7 +12,7 @@ categories:
     - ie8
     - javascript
     - microsoft
-tag:
+tags:
     - attribute
     - 'attributes array'
     - button

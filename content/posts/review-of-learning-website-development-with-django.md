@@ -13,7 +13,7 @@ categories:
     - programming
     - python
     - web
-tag:
+tags:
     - application
     - 'application framework'
     - 'ayman hourieh'

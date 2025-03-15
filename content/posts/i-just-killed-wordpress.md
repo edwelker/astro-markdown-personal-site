@@ -9,7 +9,7 @@ type: post
 id: 43
 categories:
     - firefox
-tag:
+tags:
     - mac
     - windows
     - wordpress

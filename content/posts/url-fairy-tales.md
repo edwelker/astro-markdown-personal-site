@@ -9,7 +9,7 @@ type: post
 id: 241
 categories:
     - urls
-tag:
+tags:
     - email
     - 'fairy tales'
     - urls

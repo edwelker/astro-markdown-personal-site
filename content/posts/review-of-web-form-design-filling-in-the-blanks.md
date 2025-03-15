@@ -13,7 +13,7 @@ categories:
     - design
     - usability
     - 'web design'
-tag:
+tags:
     - forms
     - 'luke wroblewski'
     - 'web form design'

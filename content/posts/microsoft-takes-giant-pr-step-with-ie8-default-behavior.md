@@ -12,7 +12,7 @@ categories:
     - ie8
     - microsoft
     - standards
-tag: []
+tags: []
 post_format: []
 ---
 So[ Microsoft announced they're changing the default rendering behavior in IE8](http://blogs.msdn.com/ie/archive/2008/03/03/microsoft-s-interoperability-principles-and-ie8.aspx). Reasons why aside ([see 3rd to last paragraph](http://www.microsoft.com/presspass/press/2008/mar08/03-03WebStandards.mspx)), they are actually doing it. This simply spreads good will, which is something Microsoft is hardly known for. It's a big public relations boon.

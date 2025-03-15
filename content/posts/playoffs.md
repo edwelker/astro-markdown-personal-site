@@ -10,7 +10,7 @@ id: 31
 categories:
     - baseball
     - 'red sox'
-tag:
+tags:
     - alcs
     - angels
     - fenway

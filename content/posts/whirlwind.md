@@ -12,7 +12,7 @@ categories:
     - Boston
     - cello
     - 'red sox'
-tag:
+tags:
     - 'alcs game'
     - 'boston red sox'
     - fall

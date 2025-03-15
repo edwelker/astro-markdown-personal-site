@@ -11,7 +11,7 @@ categories:
     - personal
     - programming
     - web
-tag:
+tags:
     - time
 post_format: []
 ---

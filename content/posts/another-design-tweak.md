@@ -11,7 +11,7 @@ categories:
     - design
     - firefox
     - ie
-tag:
+tags:
     - css
     - mac
     - 'mac pc'

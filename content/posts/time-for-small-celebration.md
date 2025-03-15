@@ -8,7 +8,7 @@ excerpt: ''
 type: post
 id: 48
 categories: []
-tag:
+tags:
     - pubmed
 post_format: []
 ---

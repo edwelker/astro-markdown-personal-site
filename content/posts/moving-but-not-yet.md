@@ -9,7 +9,7 @@ type: post
 id: 11
 categories:
     - personal
-tag:
+tags:
     - moving
     - 'purple line'
 post_format: []

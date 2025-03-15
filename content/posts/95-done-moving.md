@@ -10,7 +10,7 @@ id: 30
 categories:
     - personal
     - 'red sox'
-tag:
+tags:
     - manny
     - moving
     - papi

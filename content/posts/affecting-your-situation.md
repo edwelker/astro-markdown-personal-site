@@ -10,7 +10,7 @@ id: 179
 categories:
     - cello
     - 'classical music'
-tag:
+tags:
     - 'classical music'
     - Mahler
     - 'New York Philharmonic'

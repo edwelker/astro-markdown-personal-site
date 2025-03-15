@@ -10,7 +10,7 @@ id: 32
 categories:
     - baseball
     - 'red sox'
-tag:
+tags:
     - rockies
     - tbs
 post_format: []

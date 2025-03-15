@@ -10,7 +10,7 @@ id: 52
 categories:
     - books
     - firefox
-tag:
+tags:
     - firebug
     - 'high performance web sites'
     - 'load time'

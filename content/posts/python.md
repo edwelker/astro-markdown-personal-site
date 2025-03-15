@@ -10,7 +10,7 @@ id: 83
 categories:
     - programming
     - python
-tag:
+tags:
     - language
     - PLT
     - 'programming language theory'

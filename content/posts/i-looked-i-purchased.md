@@ -8,7 +8,7 @@ excerpt: ''
 type: post
 id: 20
 categories: []
-tag:
+tags:
     - 'kensington md'
     - moving
     - 'rent a house'

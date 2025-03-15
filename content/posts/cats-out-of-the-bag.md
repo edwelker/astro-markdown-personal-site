@@ -10,7 +10,7 @@ id: 58
 categories:
     - personal
     - 'this site'
-tag:
+tags:
     - 'this site'
 post_format: []
 ---

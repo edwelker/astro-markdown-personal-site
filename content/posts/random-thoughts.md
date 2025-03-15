@@ -10,7 +10,7 @@ id: 60
 categories:
     - personal
     - typography
-tag:
+tags:
     - 'david letterman'
     - 'little schemer'
     - 'music arts'

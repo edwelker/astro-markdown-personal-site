@@ -9,7 +9,7 @@ type: post
 id: 120
 categories:
     - movies
-tag:
+tags:
     - halloween
     - movies
     - scary

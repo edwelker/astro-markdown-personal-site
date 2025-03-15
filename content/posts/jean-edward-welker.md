@@ -9,7 +9,7 @@ type: post
 id: 54
 categories:
     - personal
-tag: []
+tags: []
 post_format: []
 ---
 Washington Post -- Obituaries

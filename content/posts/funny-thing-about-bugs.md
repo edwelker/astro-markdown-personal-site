@@ -10,7 +10,7 @@ id: 113
 categories:
     - programming
     - xslt
-tag:
+tags:
     - programming
     - xslt
 post_format: []

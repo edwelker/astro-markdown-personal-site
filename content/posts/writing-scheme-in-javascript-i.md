@@ -9,7 +9,7 @@ type: post
 id: 71
 categories:
     - javascript
-tag:
+tags:
     - 'global scope'
     - 'kent dybvig'
     - scheme

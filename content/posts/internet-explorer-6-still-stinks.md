@@ -10,7 +10,7 @@ id: 10
 categories:
     - ie
     - microsoft
-tag:
+tags:
     - software
 post_format: []
 ---

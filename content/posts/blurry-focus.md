@@ -10,7 +10,7 @@ id: 27
 categories:
     - ie
     - microsoft
-tag:
+tags:
     - constraints
     - css
     - 'display table'

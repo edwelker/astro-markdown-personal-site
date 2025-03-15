@@ -9,7 +9,7 @@ type: post
 id: 256
 categories:
     - programming
-tag:
+tags:
     - programming
     - scheme
 post_format: []

@@ -11,7 +11,7 @@ categories:
     - cooking
     - food
     - recipes
-tag: []
+tags: []
 post_format: []
 ---
 Managed to concoct a recipe that I ended up quite liking today.  Documented since I am unlikely to randomly repeat it.  Makes 3-ish decently sized portions.

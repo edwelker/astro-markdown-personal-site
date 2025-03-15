@@ -8,7 +8,7 @@ excerpt: ''
 type: post
 id: 41
 categories: []
-tag:
+tags:
     - halloween
     - movies
     - 'rob zombie'

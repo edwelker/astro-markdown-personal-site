@@ -11,7 +11,7 @@ categories:
     - ie
     - microformats
     - rss
-tag:
+tags:
     - 'email standards project'
     - 'internet explorer 8'
     - 'new york times'

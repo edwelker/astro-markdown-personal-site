@@ -9,7 +9,7 @@ type: post
 id: 40
 categories:
     - xslt
-tag:
+tags:
     - 'beginning xslt'
     - 'doug tidwell'
     - functional

@@ -10,7 +10,7 @@ id: 55
 categories:
     - css
     - 'this site'
-tag:
+tags:
     - css
     - 'this site'
 post_format: []

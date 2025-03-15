@@ -9,7 +9,7 @@ type: post
 id: 72
 categories:
     - photos
-tag: []
+tags: []
 post_format: []
 ---
 but I got distracted uploading a boat-load of photos. [Look at them instead.](http://flickr.com/photos/ed_welker/)

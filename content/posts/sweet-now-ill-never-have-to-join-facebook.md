@@ -8,7 +8,7 @@ excerpt: ''
 type: post
 id: 47
 categories: []
-tag:
+tags:
     - api
     - facebook
     - google

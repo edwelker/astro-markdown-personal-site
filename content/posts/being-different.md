@@ -9,7 +9,7 @@ type: post
 id: 12
 categories:
     - 'classical music'
-tag:
+tags:
     - 'gerard schwarz'
     - orchestras
     - seattle

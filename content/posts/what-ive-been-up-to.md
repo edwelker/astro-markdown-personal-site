@@ -10,7 +10,7 @@ id: 65
 categories:
     - firefox
     - twitter
-tag:
+tags:
     - 'application design'
     - 'firefox extension'
     - work

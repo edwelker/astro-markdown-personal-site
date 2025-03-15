@@ -12,7 +12,7 @@ categories:
     - ie8
     - microsoft
     - standards
-tag:
+tags:
     - 'acid2 test'
 post_format: []
 ---

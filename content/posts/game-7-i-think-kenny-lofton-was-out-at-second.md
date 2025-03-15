@@ -10,7 +10,7 @@ id: 39
 categories:
     - Boston
     - 'red sox'
-tag:
+tags:
     - alcs
     - 'called out'
     - 'dustin pedroia'

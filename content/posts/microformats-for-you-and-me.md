@@ -9,7 +9,7 @@ type: post
 id: 46
 categories:
     - microformats
-tag:
+tags:
     - attribute
     - class
     - cons

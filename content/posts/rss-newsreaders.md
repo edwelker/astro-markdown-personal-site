@@ -10,7 +10,7 @@ id: 34
 categories:
     - firefox
     - rss
-tag:
+tags:
     - feeddemon
     - poor
     - 'rss newsreader'

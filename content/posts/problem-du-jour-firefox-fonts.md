@@ -9,7 +9,7 @@ type: post
 id: 35
 categories:
     - firefox
-tag:
+tags:
     - 'font rendering'
     - mac
     - windows

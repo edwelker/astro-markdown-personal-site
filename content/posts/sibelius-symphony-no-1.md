@@ -11,7 +11,7 @@ categories:
     - cello
     - 'classical music'
     - music
-tag:
+tags:
     - classical
     - 'columbia orchestra'
     - music

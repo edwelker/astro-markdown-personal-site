@@ -11,7 +11,7 @@ categories:
     - cooking
     - food
     - recipes
-tag: []
+tags: []
 post_format: []
 ---
 Tonight I tried a new recipe tonight, on a whim (I hit up the grocery store on the way home from work\]. It was my first time making any pizza, much less two whole large pizzas, and they turned out extremely well.  Only tools used were a food processor (with dough blade), oven, two pizza pans, and a pizza cutter.  Adding the recipe here for my own records.

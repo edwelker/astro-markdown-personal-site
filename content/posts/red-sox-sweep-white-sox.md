@@ -10,7 +10,7 @@ id: 17
 categories:
     - baseball
     - 'red sox'
-tag:
+tags:
     - 'boston red sox'
     - 'chicago white sox'
     - 'white sox'

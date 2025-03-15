@@ -11,7 +11,7 @@ categories:
     - books
     - javascript
     - programming
-tag:
+tags:
     - book
     - prototypal
     - prototype

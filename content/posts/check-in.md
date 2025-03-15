@@ -14,7 +14,7 @@ categories:
     - photos
     - programming
     - 'web design'
-tag:
+tags:
     - bikes
     - books
     - me

@@ -9,7 +9,7 @@ type: post
 id: 9
 categories:
     - books
-tag:
+tags:
     - expressionengine
     - 'html css'
     - software

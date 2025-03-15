@@ -10,7 +10,7 @@ id: 94
 categories:
     - books
     - photos
-tag:
+tags:
     - bookshelf
     - desk
 post_format: []

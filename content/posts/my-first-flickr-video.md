@@ -9,7 +9,7 @@ type: post
 id: 84
 categories:
     - flickr
-tag:
+tags:
     - concert
     - 'leon redbone'
     - leonredbone

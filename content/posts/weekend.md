@@ -9,7 +9,7 @@ type: post
 id: 49
 categories:
     - personal
-tag: []
+tags: []
 post_format: []
 ---
 Leaving in about an hour to drive up to the summer house in New York. Yes, I know it's fall, and it will be cold (40's) but I have to shut off the fridge. Really. Anyway, I hope that I can relax a tiny bit for the time I am there.

@@ -10,7 +10,7 @@ id: 42
 categories:
     - firefox
     - microsoft
-tag:
+tags:
     - 'anti aliasing'
     - 'bug report'
     - css

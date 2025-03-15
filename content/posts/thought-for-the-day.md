@@ -10,7 +10,7 @@ id: 29
 categories:
     - design
     - usability
-tag: []
+tags: []
 post_format: []
 ---
 My thought for the day is this:

@@ -9,7 +9,7 @@ type: post
 id: 18
 categories:
     - 'east hampton'
-tag:
+tags:
     - 'columbia orchestra'
     - fall
     - 'fall semester'

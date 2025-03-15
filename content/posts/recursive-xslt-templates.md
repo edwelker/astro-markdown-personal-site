@@ -10,7 +10,7 @@ id: 199
 categories:
     - programming
     - xslt
-tag:
+tags:
     - exslt
     - recursive
     - templates

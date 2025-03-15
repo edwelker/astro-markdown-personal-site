@@ -8,7 +8,7 @@ excerpt: ''
 type: post
 id: 19
 categories: []
-tag:
+tags:
     - opera
     - 'opera 9'
     - opera_browser

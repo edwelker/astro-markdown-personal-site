@@ -9,7 +9,7 @@ type: post
 id: 89
 categories:
     - 'red sox'
-tag:
+tags:
     - work
 post_format: []
 ---

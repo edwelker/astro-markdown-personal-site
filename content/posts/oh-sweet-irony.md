@@ -9,7 +9,7 @@ type: post
 id: 14
 categories:
     - baseball
-tag:
+tags:
     - cubs
     - orioles
 post_format: []

@@ -12,7 +12,7 @@ categories:
     - django
     - python
     - 'red sox'
-tag:
+tags:
     - 'database api'
     - 'food network'
     - 'hot dog eating competition'

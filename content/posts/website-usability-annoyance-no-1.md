@@ -10,7 +10,7 @@ id: 64
 categories:
     - usability
     - web
-tag: []
+tags: []
 post_format: []
 ---
 When you do a search, and you click on a deep page. The website makes you login, which you do begrudgingly. Where do they take you? To your home page. Do they even offer to send you to the page you were looking for? Almost never.

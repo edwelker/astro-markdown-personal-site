@@ -10,7 +10,7 @@ id: 25
 categories:
     - design
     - fonts
-tag:
+tags:
     - background
     - border
     - 'cheat sheet'

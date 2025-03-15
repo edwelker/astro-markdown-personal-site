@@ -9,7 +9,7 @@ type: post
 id: 93
 categories:
     - bikes
-tag:
+tags:
     - bicycle
     - bicycling
     - france

@@ -11,7 +11,7 @@ categories:
     - Boston
     - 'classical music'
     - 'red sox'
-tag:
+tags:
     - 'columbia orchestra'
     - 'horn concerto'
     - tchaikovsky

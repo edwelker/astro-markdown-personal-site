@@ -11,7 +11,7 @@ categories:
     - blog
     - personal
     - 'this site'
-tag:
+tags:
     - '"new years"'
     - blog
     - 'this site'

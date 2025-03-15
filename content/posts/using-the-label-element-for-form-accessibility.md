@@ -12,7 +12,7 @@ categories:
     - firefox
     - usability
     - web
-tag:
+tags:
     - bug
     - css
     - element

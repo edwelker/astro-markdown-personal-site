@@ -10,7 +10,7 @@ id: 16
 categories:
     - books
     - javascript
-tag:
+tags:
     - closures
 post_format: []
 ---

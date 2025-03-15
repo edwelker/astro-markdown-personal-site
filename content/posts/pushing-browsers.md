@@ -12,7 +12,7 @@ categories:
     - ie
     - microsoft
     - standards
-tag:
+tags:
     - css
     - display
     - html

@@ -13,7 +13,7 @@ categories:
     - microsoft
     - standards
     - web
-tag:
+tags:
     - 'civil discourse'
     - 'default behavior'
     - doctype

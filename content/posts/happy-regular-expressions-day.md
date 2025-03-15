@@ -9,7 +9,7 @@ type: post
 id: 87
 categories:
     - programming
-tag:
+tags:
     - holiday
     - 'regular expressions'
 post_format: []

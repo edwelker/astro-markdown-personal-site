@@ -9,7 +9,7 @@ type: post
 id: 118
 categories:
     - personal
-tag: []
+tags: []
 post_format: []
 ---
 Oct. 8, 2009 -- 12:32am

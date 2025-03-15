@@ -10,7 +10,7 @@ id: 73
 categories:
     - 'classical music'
     - xslt
-tag:
+tags:
     - 'columbia orchestra'
 post_format: []
 ---

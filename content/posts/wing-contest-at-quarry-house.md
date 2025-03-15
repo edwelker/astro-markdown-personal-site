@@ -9,7 +9,7 @@ type: post
 id: 391
 categories:
     - Uncategorized
-tag: []
+tags: []
 post_format: []
 featuredImage: "https://live.staticflickr.com/2746/4461565840_02fda45cb2_b_d.jpg"
 ---

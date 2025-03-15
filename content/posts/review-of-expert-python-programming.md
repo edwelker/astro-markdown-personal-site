@@ -11,7 +11,7 @@ categories:
     - books
     - programming
     - python
-tag:
+tags:
     - book
     - programming
     - python

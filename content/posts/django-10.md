@@ -10,7 +10,7 @@ id: 111
 categories:
     - django
     - python
-tag: []
+tags: []
 post_format: []
 ---
 Sweet, [Django 1.0 has been released](http://www.djangoproject.com/download/).

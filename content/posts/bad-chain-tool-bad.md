@@ -10,7 +10,7 @@ id: 254
 categories:
     - bikes
     - personal
-tag:
+tags:
     - bikes
     - chain
     - tool

@@ -9,7 +9,7 @@ type: post
 id: 37
 categories:
     - xslt
-tag:
+tags:
     - 'functional programming'
     - scheme
 post_format: []

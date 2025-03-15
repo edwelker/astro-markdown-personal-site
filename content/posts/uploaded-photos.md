@@ -9,7 +9,7 @@ type: post
 id: 79
 categories:
     - photos
-tag: []
+tags: []
 post_format: []
 ---
 [![](http://farm3.static.flickr.com/2327/2344026927_f9d790229f_m.jpg)](http://www.flickr.com/people/ed_welker)My new resolution: learn how to take better photographs, simply to reduce the time I spend editing them!

@@ -9,7 +9,7 @@ type: post
 id: 261
 categories:
     - personal
-tag:
+tags:
     - moving
     - personal
 post_format: []

@@ -11,7 +11,7 @@ categories:
     - blog
     - flickr
     - rss
-tag:
+tags:
     - del.icio.us
     - feed
     - feedburner

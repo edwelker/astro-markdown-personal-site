@@ -10,7 +10,7 @@ id: 184
 categories:
     - programming
     - xslt
-tag:
+tags:
     - copy
     - copy-of
     - tutorial

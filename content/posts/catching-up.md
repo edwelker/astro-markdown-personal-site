@@ -14,7 +14,7 @@ categories:
     - 'classical music'
     - 'red sox'
     - xslt
-tag:
+tags:
     - 'Advanced DOM Scripting'
     - kensington
     - moving

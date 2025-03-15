@@ -10,7 +10,7 @@ id: 62
 categories:
     - bethesda
     - bikes
-tag:
+tags:
     - bianchi
     - 'fixed gear'
     - 'gear ratio'

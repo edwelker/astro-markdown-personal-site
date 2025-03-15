@@ -10,7 +10,7 @@ id: 322
 categories:
     - django
     - python
-tag: []
+tags: []
 post_format: []
 ---
 I just removed a (real live) bat from my living room. That was easier than installing PIL in a virtualenv for Ubuntu 9.10. Why? Googling the subject seems to bring up a lot of old or mis-information. This will explain how... mostly so I can do it again next time.

@@ -10,7 +10,7 @@ id: 13
 categories:
     - ie
     - microsoft
-tag:
+tags:
     - 'background image'
     - flicker
     - 'internet explorer'
