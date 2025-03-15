@@ -1,9 +1,8 @@
 ---
-title: about
+title: About
 date: '2007-08-15T20:40:50-05:00'
 status: publish
 permalink: /aboutme
-author: admin
 excerpt: ''
 type: page
 id: 6

@@ -13,14 +13,11 @@ SummaryLength = 100
 sectionPagesMenu = 'main'
 
 [menus]
- [[menus.main]]
+  [[menus.main]]
     name = 'Home'
     pageRef = '/'
     weight = 10
- [[menu.main]]
-    name = "About"
-    pageRef = "/about"
-    weight = 20
+
 
 # hugo setting, cross-theme
 [permalinks]
