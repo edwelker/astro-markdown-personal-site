@@ -80,6 +80,4 @@ creditsText = "eddiewelker.com"
 [permalinks]
   categories = "/:section/:slug/"
   [permalinks.page]
-    posts = '/articles/:year/:month/:day/:slug/'
-  [permalinks.section]
-    posts = '/articles/'
+    posts = '/:year/:month/:day/:slug/'
