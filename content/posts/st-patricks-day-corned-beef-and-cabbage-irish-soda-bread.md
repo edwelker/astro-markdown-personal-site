@@ -16,7 +16,8 @@ tag:
     - food
     - 'irish soda bread'
     - 'St. Patrick''s Day'
-post_format: []
+noSummary: true
+featuredImage: "https://live.staticflickr.com/65535/53710594871_651243773c_o.jpg"
 ---
 # Corned Beef and Cabbage
 

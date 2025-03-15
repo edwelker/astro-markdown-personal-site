@@ -11,6 +11,7 @@ category:
     - Uncategorized
 tag: []
 post_format: []
+featuredImage: "https://live.staticflickr.com/2746/4461565840_02fda45cb2_b_d.jpg"
 ---
 My first order of Quarry House wings was "medium." The waitress had told me that they ran one level hot, and the medium were actually hotter than an standard "hot." My nose was stuffed and my eyes were fully watered up at the end of twelve.
 

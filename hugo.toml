@@ -6,7 +6,7 @@
 baseURL = 'http://eddiewelker.com/'
 languageCode = 'en-us'
 title = 'eddiewelker.com'
-theme = 'ananke'
+theme = 'bilberry-hugo-theme'
 enableRobotsTXT = true
 ignoreLogs = ['warning-goldmark-raw-html']
 SummaryLength = 100
@@ -22,6 +22,7 @@ sectionPagesMenu = 'main'
     pageRef = "/about"
     weight = 20
 
+# hugo setting, cross-theme
 [permalinks]
   [permalinks.page]
     posts = '/articles/:year/:month/:day/:slug/'
@@ -38,47 +39,37 @@ pagerSize = 20
 
 [params]
 author = "Eddie Welker"
-recent_posts_number = 8
-featured_image = "/header/springs.jpg"
-# choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
-background_color_class = "bg-dark-gray"
-cover_dimming_class = "bg-black-40"
+paginate = 10
+resizeImages = false
+gravatarEMail = "eddie.welker@gmail.com"
+permanentTopNav = true
+enableMomentJs = true
+showReadingTime = true
+enableLightDarkTheme = true
 
-
-# https://github.com/theNewDynamic/gohugo-theme-ananke/blob/main/exampleSite/config.toml
-
-# [params.ananke.social.share]
-# networks = [
-#   "instagram",
-#   "spotify",
-#   "github"
-# ]
-
-[params.ananke.social.follow]
-networks = [
-  "instagram",
-  "spotify",
-  "github"
+# define your links with FontAwesome 5 (only free icons are supported)
+# all icons https://fontawesome.com/icons?d=gallery&m=free
+# brand icons https://fontawesome.com/icons?d=gallery&s=brands&m=free
+socialMediaLinks = [
+  { link = "https://instagram.com/edwelker", icon = "fab fa-instagram" },
+  { link = "https://www.flickr.com/photos/ed_welker/", icon = "fab fa-flickr" },
+  { link = "https://github.com/edwelker", icon = "fab fa-github" },
+  { link = "https://open.spotify.com/user/edwelker", icon = "fab fa-spotify" },
 ]
 
-[params.ananke.social.instagram]
-username = "edwelker"
+# show an archive link in the footer
+showArchive = true
 
-[params.ananke.social.github]
-username = "edwelker"
+# archive grouping: "2006" by year, "2006-01" by month
+archiveDateGrouping = "2006-01"
 
-[params.ananke.social.spotify]
-username = "edwelker"
-
-[params.ananke.social.networks.spotify]
-slug = "spotify"
-label = "spotify"
-profile = "https://open.spotify.com/user/%s"
-# https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs/brands
-icon = "spotify"
+# credits line configuration
+copyrightBy = "by eddie welker"
+copyrightUseCurrentYear = true
+copyrightYearOverride = "2005"
+copyrightUrl = "https://github.com/edwelker"
+creditsText = "eddiewelker.com"
 
 [services]
-  [services.googleAnalytics]
-    id = ''
-  [services.rss]
-    limit = -1
+    [services.googleAnalytics]
+        ID = 'G-19CWWGK0FL'
