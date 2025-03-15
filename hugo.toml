@@ -6,43 +6,29 @@
 baseURL = 'http://eddiewelker.com/'
 languageCode = 'en-us'
 title = 'eddiewelker.com'
-theme = 'bilberry-hugo-theme'
+theme = 'bilberry-hugo-theme/v4'
 enableRobotsTXT = true
 ignoreLogs = ['warning-goldmark-raw-html']
-SummaryLength = 100
+SummaryLength = 400
 sectionPagesMenu = 'main'
-
-[menus]
-  [[menus.main]]
-    name = 'Home'
-    pageRef = '/'
-    weight = 10
-  [[menus.main]]
-    name = 'About'
-    pageRef = '/about'
-    weight = 20
-  [[menus.main]]
-    name = 'Articles'
-    pageRef = '/articles'
-    weight = 30
 
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
   filename = "sitemap.xml"
 
-[pagination]
-pagerSize = 20
-
 [params]
 author = "Eddie Welker"
-paginate = 10
+paginate = 5
 resizeImages = false
 gravatarEMail = "eddie.welker@gmail.com"
 permanentTopNav = true
 enableMomentJs = true
 showReadingTime = true
-enableLightDarkTheme = true
+enableLightDarkTheme = false
+amountLatestPostsInFooter = 5
+amountCategoriesInFooter = 5
+showFooterLanguageChooser = false
 
 # define your links with FontAwesome 5 (only free icons are supported)
 # all icons https://fontawesome.com/icons?d=gallery&m=free
@@ -56,28 +42,49 @@ socialMediaLinks = [
 
 # show an archive link in the footer
 showArchive = true
-
 # archive grouping: "2006" by year, "2006-01" by month
-archiveDateGrouping = "2006-01"
+archiveDateGrouping = "2006"
+
+# TODO
+# Enable an optional pinned page to display at the top of the index
+pinnedPost = "/article/series-list/"
+# Set to true to pin only to the first page, false to all pages
+pinOnlyToFirstPage = true
 
 # credits line configuration
 copyrightBy = "by eddie welker"
-copyrightUseCurrentYear = true
-copyrightYearOverride = "2005"
+copyrightUseCurrentYear = false
+copyrightYearOverride = "2007"
 copyrightUrl = "https://github.com/edwelker"
 creditsText = "eddiewelker.com"
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Change to 'true' if you need to render raw HTMLs whithin your markdown content
+      unsafe = false
+  [markup.tableOfContents]
+    endLevel = 5
+    ordered = false
+    startLevel = 2
 
 [services]
     [services.googleAnalytics]
         ID = 'G-19CWWGK0FL'
 
 [taxonomies]
-  tag = "tags"
+  author   = "author"
+  tag      = "tags"
   category = "categories"
-  series = "series"
+  series   = "series"
 
 # hugo setting, cross-theme
 [permalinks]
   categories = "/:section/:slug/"
   [permalinks.page]
     posts = '/:year/:month/:day/:slug/'
+
+[outputs]
+  home = [ "HTML", "JSON", "RSS" ]
+  page = [ "HTML" ]

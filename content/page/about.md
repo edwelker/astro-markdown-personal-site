@@ -1,13 +1,12 @@
 ---
-title: About
+title: "About"
 date: '2007-08-15T20:40:50-05:00'
-status: publish
-permalink: /aboutme
-excerpt: ''
-type: page
-id: 6
-localDraftUniqueID:
-    - DA49B0FF-F61A-4B4B-A5C3-14DB8BC5BCAF-153-0000000A9DBCC990
+menu: "topnav"
+showDate: false
+showComments: false
+weight: 10
+link: ""
+target: "_blank"
 ---
 Part programmer, cellist, biker, and photographer, I live in the suburbs of Maryland. Weee! I work at the [NCBI at NIH](http://www.ncbi.nlm.nih.gov "National Center for Biotechnology Information"), and pass the rest of the time reading, rooting for the Red Sox, and riding my bike.
 
