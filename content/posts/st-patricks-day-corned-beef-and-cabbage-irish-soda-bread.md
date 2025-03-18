@@ -30,6 +30,7 @@ featuredImage: https://live.staticflickr.com/65535/52425587443_640596352e_b_d.jp
 - bay leaves (the strongest you can find)
 - all spice berries
 - thyme (a lot of dried, since it's very water soluable, and doesn't last long when boiled)
+- Optional: dried ginger, star anise
 
 
 * potatoes (baby, about the size of a tablespoon)
@@ -58,11 +59,12 @@ Alt (kosher salt, 2 tbsp, added at the corned beef stage)
 - 1 tablespoon (or more) of salt
 - 1 quart (or less) of buttermilk
 - Any amount of Irish butter
-- A little bunch of caraway seeds
+- A little bunch... or a ton... of caraway seeds
+- (note people like raisins or currants in this, but I find that's less appropriate for dipping in the soup)
 
 (Pre-heat a cast iron pan to 450)
 
 1. Mix all of the dry ingredients together.
 2. Stir in the buttermilk past where the dough looks shaggy, until the dough looks smooth.
 3. Place in a cast iron pan already pre-heated to 450, and cook for 30~ish minutes.
-4. Take out and serve with the Irish butter.
+4. Take out and test that the middle is 190 deg F with a therometer, and serve with the Irish butter.
