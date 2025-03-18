@@ -62,9 +62,9 @@ Alt (kosher salt, 2 tbsp, added at the corned beef stage)
 - A little bunch... or a ton... of caraway seeds
 - (note people like raisins or currants in this, but I find that's less appropriate for dipping in the soup)
 
-(Pre-heat a cast iron pan to 450)
+(Pre-heat a cast iron pan to 425)
 
 1. Mix all of the dry ingredients together.
 2. Stir in the buttermilk past where the dough looks shaggy, until the dough looks smooth.
-3. Place in a cast iron pan already pre-heated to 450, and cook for 30~ish minutes.
+3. Place in a cast iron pan already pre-heated to 425, and cook for 40~ish minutes.
 4. Take out and test that the middle is 190 deg F with a therometer, and serve with the Irish butter.
