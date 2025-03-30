@@ -32,9 +32,11 @@ No garlic, ginger, sesame seeds/peanuts, scallions, etc.
 Only Cuke, garlic, sesame oil, and salt (no soy sauce).
 
 ## Tofu Celery
-Pressed tea tofu, american (not chinese) celery, soy sauce, sesame oil, and likely some red Szechuan peppercorn oil. A lot of it. but less than I typically do, Only slightly noticable.
+Pressed tea tofu, american (not chinese) celery, soy sauce, sesame oil, and likely some red Szechuan peppercorn oil. A lot of it. but less than I typically do, Only slightly notacable.
 
 ## Dan Dan noodles
 * pork
 * yui cai
 * 3-ish HOT dried red peppers
+* possibly some szechuan peppercorn oil
+*
