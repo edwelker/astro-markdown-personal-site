@@ -1,7 +1,6 @@
 ---
 title: ''
 date: '2025-03-30T12:53:35-05:00'
-status: draft
 draft: true
 <!-- permalink: /2014/03/16/st-patricks-day-corned-beef-and-cabbage-irish-soda-bread -->
 excerpt: ''
