@@ -14,6 +14,7 @@ tags:
     - personal
     - recipes
 post_format: []
+featuredImage: "/noodles.jpg"
 ---
 My base recipe for Szechuan noodles (noods)
 
