@@ -1,5 +1,5 @@
 ---
-title: Prelude
+title: my Szechuan Noodles
 date: '2025-09-01T05:04:28-05:00'
 status: publish
 permalink: /2025/09/01/szechuan_noodles
@@ -17,7 +17,9 @@ post_format: []
 ---
 My base recipe for Szechuan noodles (noods)
 
-Almost all of these are optional:
+## Ingredients
+
+Almost all of these are optional.
 
 * ⅓ teaspoon mushroom or other MSG powder (chicken, etc.)
 * Chili oil
@@ -32,8 +34,9 @@ Almost all of these are optional:
 * 1 teaspoon Chinese soy sauce
 * Salt to taste
 
+## Process
 
-* Compose the components above into a bowl
-* Cook the noods
-* Ladle about ⅓ or ½ of a cup of the noodle cooking water over the mix to cook the raw (garlic mostly)
-* Mix
+1. Compose the components above into a bowl
+2. Cook the noods
+3. Ladle about ⅓ or ½ of a cup of the noodle cooking water over the mix to cook the raw (garlic mostly)
+4. Mix
