@@ -24,9 +24,9 @@ Almost all of these are optional.
 
 * ⅓ teaspoon mushroom or other MSG powder (chicken, etc.)
 * Chili oil
-* Lao Ga Man Chili in Oil & Chili Crisp (More the Chili in oil)
+* Lao Ga Man Chili in Oil & Chili Crisp (I prefer the Chili in oil, tho a little Chili Crisp can be nice)
 * Garlic (not more than 2 cloves)
-* Pepper
+* Dried Chili (the Chengdu dried are amazing, and totally different than Western)
 * Tahini (⅓ teaspoon) (you can also use standard deeper sesame paste here)
 * Any amount of dried peppers to taste (but use less “Danshan” type chili/fennel than usual)
 * Optional ⅓ teaspoon Chinese vinegar
