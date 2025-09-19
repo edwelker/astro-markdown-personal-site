@@ -3,7 +3,7 @@ title: my Szechuan Noodles
 date: '2025-09-01T05:04:28-05:00'
 status: publish
 permalink: /2025/09/01/szechuan_noodles
-author: admin
+author: Eddie
 excerpt: ''
 type: post
 id: 7
