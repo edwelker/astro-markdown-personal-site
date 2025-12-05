@@ -17,6 +17,12 @@ sectionPagesMenu = 'main'
   priority = 0.5
   filename = "sitemap.xml"
 
+[[menu.main]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/edwelker"
+    weight = 3  # This puts it first (left-most). Increase weight to move it right.
+
 [params]
 author = "Eddie Welker"
 paginate = 5
