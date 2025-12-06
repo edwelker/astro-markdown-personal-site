@@ -38,6 +38,7 @@ Though [All City ceased this year](https://theradavist.com/all-city-cycles-closi
 | | Front hub | [SON 28 Dynamo hub](https://nabendynamo.de/en/products/hub-dynamos/for-thru-axles/) |
 | | Rear hub | [Onyx Vesper](https://onyxrp.com/product-category/road-gravel-hubs/) |
 | | Spokes | Sapim Laser |
+| | Tires | Panaracer Gravelking, 650b x 48mm front, 42mm rear (I love how quiet the new versions are) |
 | | Axles (Front) | 12 x 119.5 P1.5 (100x12) |
 | | Axles (Rear) | 12 x 161.5 P1.5 (142x12) |
 | *Accessories* | | |
