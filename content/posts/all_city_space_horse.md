@@ -42,7 +42,7 @@ Though [All City ceased this year](https://theradavist.com/all-city-cycles-closi
 | | Axles (Front) | 12 x 119.5 P1.5 (100x12) |
 | | Axles (Rear) | 12 x 161.5 P1.5 (142x12) |
 | *Accessories* | | |
-| | Front Rack | Nitto |
+| | Front Rack | Nitto Campee 32F Front Rack |
 | | Front Rack | [Tubus Tara Titan](https://www.tubus.com/en/products/front-carriers/tubus-product/tara-edelstahl) |
 | | Fenders | Portland Design Works |
 | | Bottle Cages | Arundel Looney Bin, Widefoot Liter cage |
