@@ -7,9 +7,9 @@ tags: ["All-City", "Gravel", "Touring", "Shimano GRX", "C&O Canal"]
 
 Though [All City ceased this year](https://theradavist.com/all-city-cycles-closing), my All City Dusty Rose Space Horse is still my favorite current bike. I've done three tours of the GAP/C&O, one of the Erie Canal, and many shorter adventures on it.  It fits me like a glove.
 
-{{< figure src="https://live.staticflickr.com/65535/54697029505_a51a3c4d1a_c.jpg" link="https://flickr.com/photos/ed_welker/54697029505/" title="On the water" >}}
+{{< figure src="https://live.staticflickr.com/65535/54697029505_a51a3c4d1a_c.jpg" link="https://flickr.com/photos/ed_welker/54697029505/" title="On the water, summer 2025" >}}
 
-{{< figure src="https://live.staticflickr.com/65535/54198132135_ba053c18c5_b.jpg" link="https://flickr.com/photos/ed_welker/54198132135/" title="Loaded for camping" >}}
+{{< figure src="https://live.staticflickr.com/65535/54198132135_ba053c18c5_b.jpg" link="https://flickr.com/photos/ed_welker/54198132135/" title="Loaded for camping, 2024" >}}
 
 ---
 
