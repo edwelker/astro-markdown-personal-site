@@ -4,3 +4,18 @@
 .bilberry-hugo-theme li { margin-bottom: .5rem; }
 
 .bilberry-hugo-theme article .footer, .bilberry-hugo-theme footer .container{ font-family: "Open Sans", sans-serif;}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+figure {
+    margin: 1.5em 0;
+}
+figcaption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0.5em;
+}
