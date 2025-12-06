@@ -13,7 +13,7 @@ Though [All City ceased this year](https://theradavist.com/all-city-cycles-closi
 
 ---
 
-### Component Specifications
+### Specs
 
 | Component | Part / Model | Notes |
 | :--- | :--- | :--- |
@@ -33,7 +33,7 @@ Though [All City ceased this year](https://theradavist.com/all-city-cycles-closi
 | | Chain | KMC X10, EPT Anti-Rust |
 | *Brakes* | Calipers | Shimano GRX (Flat-mount) |
 | | Rotors | [180mm Rever Front](https://analogcycles.com/products/rever-rotors), 160mm rear |
-| *Wheels* | Wheels | |
+| *Wheels* | | |
 | | Rims | [Astral Wanderlust Gen 1 650b 32h](https://astralcycling.com/) |
 | | Front hub | [SON 28 Dynamo hub](https://nabendynamo.de/en/products/hub-dynamos/for-thru-axles/) |
 | | Rear hub | [Onyx Vesper](https://onyxrp.com/product-category/road-gravel-hubs/) |
@@ -63,3 +63,5 @@ There are a few specific tweaks I made to this build to get the fit and gearing 
 * Cabling:
     * Brake Housing: Shimano Hydro
     * Shift Housing: Jagwire LEX-SL Black
+
+{{< figure src="https://live.staticflickr.com/65535/54542368037_d912326138_b.jpg" link="https://flickr.com/photos/ed_welker/54542368037/" title="Post C&O, mile 0" >}}
