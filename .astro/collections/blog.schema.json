@@ -26,23 +26,16 @@
             }
           ]
         },
-        "updatedDate": {
-          "anyOf": [
-            {
-              "type": "string",
-              "format": "date-time"
-            },
-            {
-              "type": "string",
-              "format": "date"
-            },
-            {
-              "type": "integer",
-              "format": "unix-time"
-            }
-          ]
+        "draft": {
+          "type": "boolean"
         },
-        "heroImage": {
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "$schema": {
           "type": "string"
         }
       },
