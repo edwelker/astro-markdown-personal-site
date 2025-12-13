@@ -13,7 +13,7 @@ Though [All City ceased this year](https://theradavist.com/all-city-cycles-closi
 
 ---
 
-### Specs
+## Specs
 
 | Component | Part / Model | Notes |
 | :--- | :--- | :--- |

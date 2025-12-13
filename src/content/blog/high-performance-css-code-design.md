@@ -24,7 +24,7 @@ In the last few years much emphasis has been placed on web performance issues. B
 
 While many of these techniques can be considered common practice for experienced CSS programmers, implementing them can be difficult. The art is in analyzing trade-offs and picking the optimal path. That said, these rules are not for everyone, or every site. It all boils down to deciding if the site's performance gain is greater than the time it takes to learn and use the techniques.
 
-### Useful for sites with
+## Useful for sites with
 
 - Many pages
 - A common visual and structural design
