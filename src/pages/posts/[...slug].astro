@@ -1,0 +1,47 @@
+---
+// src/pages/posts/[...slug].astro
+import { getCollection, render } from 'astro:content';
+
+// 1. Tell Astro which URLs to generate
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(entry => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+// 2. Get the specific post data for the current URL
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{entry.data.title}</title>
+    <style>
+      /* Temporary CSS just to make it readable */
+      body { max-width: 65ch; margin: 0 auto; padding: 2rem; font-family: system-ui, sans-serif; line-height: 1.6; }
+      img { max-width: 100%; height: auto; border-radius: 8px; }
+      h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+      .meta { color: #666; margin-bottom: 2rem; }
+      /* Handle your table specs */
+      table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
+      th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+      th { background-color: #f4f4f4; }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1>{entry.data.title}</h1>
+      <div class="meta">
+        <time>{entry.data.date.toDateString()}</time>
+        {entry.data.categories && <span> • {entry.data.categories.join(', ')}</span>}
+      </div>
+
+      <Content />
+    </article>
+  </body>
+</html>
