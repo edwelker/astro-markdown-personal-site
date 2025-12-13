@@ -6,11 +6,29 @@
 baseURL = 'http://eddiewelker.com/'
 languageCode = 'en-us'
 title = 'eddiewelker.com'
-theme = 'bilberry-hugo-theme/v4'
+theme = "hugo-theme-stack"
 enableRobotsTXT = true
 ignoreLogs = ['warning-goldmark-raw-html']
 SummaryLength = 400
 # sectionPagesMenu = 'main'
+
+[params.sidebar]
+    emoji = "🚲"
+    subtitle = "Gravel & Code"
+
+[params.sidebar.avatar]
+    enabled = true
+    local = false        # Set to true if the image is in /assets/, false if it's a URL or in /static/
+    src = "/img/me.jpg"  # Put your image path here
+
+[params.article]
+    math = false
+    toc = true
+    readingTime = true
+
+[params.author]
+  name = "Eddie Welker"
+  email = "eddie.welker@gmail.com" # Required by the theme's RSS template
 
 [sitemap]
   changefreq = "monthly"
@@ -18,10 +36,9 @@ SummaryLength = 400
   filename = "sitemap.xml"
 
 [params]
-author = "Eddie Welker"
+mainSections = ["posts"]
 paginate = 5
 resizeImages = false
-gravatarEMail = "eddie.welker@gmail.com"
 permanentTopNav = true
 enableMomentJs = true
 showReadingTime = true
