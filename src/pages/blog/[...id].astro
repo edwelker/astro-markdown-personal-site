@@ -48,7 +48,20 @@ const { Content, headings } = await render(post);
   <Container>
     <main class="prose dark:prose-invert mx-auto py-8">
 
-      <h1 class="text-3xl font-bold">{post.data.title}</h1>
+        <h1 class="text-3xl font-bold">{post.data.title}</h1>
+
+        {post.data.featuredImage && (
+            <figure class="my-6">
+                <img
+                    src={post.data.featuredImage}
+                    alt={post.data.featuredImageAlt || `Featured image for ${post.data.title}`}
+                    loading="lazy"
+                    class="w-full h-auto rounded-lg shadow-lg"
+                />
+            </figure>
+        )}
+
+
         <p class="text-sm text-gray-500">
             Published: <FormattedDate date={post.data.date} />
             &bull; Read time: {readingTime(post.body ?? "")} min

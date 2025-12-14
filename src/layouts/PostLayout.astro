@@ -1,0 +1,34 @@
+---
+// src/layouts/PostLayout.astro (Based on your working PageLayout)
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+// Make sure this is present to access the frontmatter:
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <Container>
+    <article class="space-y-4 prose prose-neutral dark:prose-invert max-w-none">
+
+        <header>
+            AHHH
+            <h1 class="text-3xl mb-4">BBBBBBB {frontmatter.title}</h1>
+
+            {frontmatter.featuredImage && (
+                <figure class="my-6">
+                    <img
+                        src={frontmatter.featuredImage}
+                        alt={frontmatter.featuredImageAlt || `Featured image for ${frontmatter.title}`}
+                        loading="lazy"
+                        class="w-full h-auto rounded-lg shadow-lg"
+                    />
+                </figure>
+            )}
+            {/* ------------------------------------------- */}
+        </header>
+
+        <slot />
+
+    </article>
+  </Container>
+</Layout>

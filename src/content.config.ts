@@ -18,7 +18,15 @@ const blog = defineCollection({
     date: z.coerce.date(),
     draft: z.boolean().optional(),
     tags: z.array(z.string()).optional(),
+    featuredImage: z.string().optional(),
+    featuredImageAlt: z.string().optional(),
+
+      layout: z.string().optional(),
   }),
+
+  default: {
+     layout: './layouts/PostLayout.astro',
+  },
 });
 
 const highlights = defineCollection({
@@ -32,6 +40,8 @@ const highlights = defineCollection({
     draft: z.boolean().optional(),
     url: z.string().optional(),
     tags: z.array(z.string()).optional(),
+    featuredImage: z.string().optional(),
+    featuredImageAlt: z.string().optional(),
   }),
 });
 
