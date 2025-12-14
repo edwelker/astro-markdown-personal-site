@@ -1,5 +1,8 @@
+// src/content/config.ts
 import { defineCollection, z } from "astro:content";
 import { glob } from 'astro/loaders';
+
+export const collections = { blog };
 
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: "./src/content/blog" }),
