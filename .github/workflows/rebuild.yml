@@ -1,18 +1,31 @@
-# .github/workflows/rebuild.yml
-name: Daily Rebuild
-
-on:
-  schedule:
-    # Runs every day at midnight (00:00 UTC)
-    - cron: '0 0 * * *'
-  # This allows you to manually run the workflow from the Actions tab
-  workflow_dispatch:
+# .github/workflows/rebuild.yml (Snippet)
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Step 3: Install project dependencies (to use 'fetch' if needed, though we used native fetch)
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: RUN THE FLICKR FETCH SCRIPT
+      - name: Fetch Flickr Photos
+        run: npm run fetch:flickr
+        env:
+          # Pass the secret API key to the script
+          FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
+
+      # Step 5: Trigger Cloudflare Pages Build Hook
       - name: Trigger Cloudflare Pages Build Hook
         run: |
-          # The URL is now securely retrieved from your GitHub Secrets
           curl -X POST "${{ secrets.CLOUDFLARE_BUILD_HOOK }}"

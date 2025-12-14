@@ -1,0 +1,42 @@
+---
+// src/components/FlickrGallery.astro
+import data from '../data/flickr-photos.json'; // 1. Import the generated JSON data
+
+// Set a max number to display, or just use all data.
+const photosToShow = data.slice(0, 10);
+---
+
+<section class="my-10">
+  <h2 class="font-semibold mb-6 border-b pb-2">Latest Photos from Flickr</h2>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    {photosToShow.map((photo) => (
+      <a
+          href={`https://www.flickr.com/photos/ed_welker/${photo.id}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300
+        relative aspect-square"
+      >
+        <img
+          src={photo.src}
+          alt={photo.title || 'Flickr photo'}
+          width="320"
+          height="240"
+          loading="lazy"
+          class="w-full h-full aspect-square object-cover absolute inset-0"
+        />
+        {/* Optional: Add a title overlay for flair */}
+        <p class="text-xs p-1 text-gray-500 truncate" title={photo.title}>
+            {photo.title}
+        </p>
+      </a>
+    ))}
+  </div>
+
+  <p class="mt-6 text-center text-sm">
+    <a href="https://flickr.com/photos/ed_welker/" class="text-blue-500 hover:text-blue-700 transition">
+      View all photos on Flickr &rarr;
+    </a>
+  </p>
+</section>

@@ -19,6 +19,7 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
 
 import { Image } from "astro:assets";
 import { getImage } from "astro:assets";
+import FlickrGallery from '@components/FlickrGallery.astro';
 ---
 
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -35,64 +36,39 @@ import { getImage } from "astro:assets";
         </section>
 
         <section class="animate space-y-6">
+            <div class="flex flex-wrap gap-y-2 items-center justify-between">
+              <h5 class="font-semibold text-black dark:text-white">
+                Posts
+              </h5>
+              <Link href="/blog/">
+                See all posts
+              </Link>
+            </div>
           <ul class="not-prose flex flex-col gap-4">
             {
-              await Promise.all( // <--- CRITICAL: AWAIT THE PROMISE.ALL
-                blog.map(async (post) => {
-
-                  // 1. Get image source
-                  const imageSrc = post.data.heroImage;
-
-                  // 2. Process the image for the teaser strip (KEEP 'const' here!)
-                  const teaserImage = imageSrc
-                    ? await getImage({
-                          src: imageSrc,
-                          width: 600,
-                          height: 10,
-                          format: 'webp',
-                          quality: 60
-                      })
-                    : null;
-
-                  // 3. RETURN the fully rendered list item with the link, image, and text
-                  return (
-                    <li
-                        class="p-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-150 flex flex-col"
-                    >
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        aria-label={post.data.title}
-                      >
-                        {/* 1. IMAGE STRIP */}
-                        {teaserImage && (
-                          <div class="w-full h-[10px] overflow-hidden rounded-t-lg">
-                            <Image
-                              src={teaserImage.src}
-                              width={(teaserImage as any).width ?? 600}
-                              height={(teaserImage as any).height ?? 10}
-                              alt={`Teaser strip for ${post.data.title}`}
-                              style={{
-                                  objectFit: 'cover',
-                                  filter: 'blur(3px) contrast(1.2)'
-                              }}
-                            />
-                          </div>
-                        )}
-
-                        {/* 2. POST TITLE AND DATE (THE MISSING PART) */}
-                        <div class="flex flex-col pt-2">
-                          <h3 class="text-lg font-semibold text-black dark:text-white">
-                            {post.data.title}
-                          </h3>
-                          <p class="text-sm text-gray-500">
-                            {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                          </p>
-                        </div>
-                      </Link>
-                    </li>
-                  );
-                })
-              )
+              // We can now use a simple map function since there are no promises (await) inside
+              blog.map((post) => (
+                <li
+                    // Reusing your list item styling, but keeping it simpler without the flex-col
+                    class="py-2 px-0 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-150"
+                >
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    aria-label={post.data.title}
+                    class="flex flex-col" // Wrap the title/date in the link
+                  >
+                    {/* POST TITLE AND DATE */}
+                    <div class="flex flex-col">
+                      <h3 class="text-lg font-semibold text-black dark:text-white">
+                        {post.data.title}
+                      </h3>
+                      <p class="text-sm text-gray-500">
+                        {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                      </p>
+                    </div>
+                  </Link>
+                </li>
+              ))
             }
           </ul>
         </section>
@@ -165,6 +141,10 @@ import { getImage } from "astro:assets";
                 ))
               }
             </ul>
+        </section>
+
+        <section>
+            <FlickrGallery />
         </section>
       </div>
     </aside>
