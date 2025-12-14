@@ -5,7 +5,6 @@ import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { readingTime } from "@lib/utils";
 import BackToPrevious from "@components/BackToPrevious.astro";
-import Link from "@components/Link.astro";
 import TableOfContents from "@components/TableOfContents.astro";
 
 export async function getStaticPaths() {
@@ -20,7 +19,6 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"highlights">;
 
 const project = Astro.props;
-const isExternal = project.data.url?.startsWith("http");
 const { Content, headings } = await render(project);
 ---
 

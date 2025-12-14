@@ -59,21 +59,20 @@ import { getImage } from "astro:assets";
                       {/* The Blurry Image Strip Container */}
                       {teaserImage && (
                         <div class="w-full h-[10px] overflow-hidden rounded-t-lg">
-                          <Image
-                            src={teaserImage.src}
+                        {/* Clean up the Image component call */}
+                            <Image
+                              src={teaserImage.src}
 
-                              //  FIX: Add ts-ignore above these lines
-                              //@ts-ignore
-                              width={teaserImage.width ?? 600}
+                              {/* Remove the @ts-ignore lines and use a type assertion for safety */}
+                              width={(teaserImage as any).width ?? 600}
+                              height={(teaserImage as any).height ?? 10}
 
-                              //@ts-ignore
-                              height={teaserImage.height ?? 10}
-                            alt={`Teaser strip for ${post.data.title}`}
-                            style={{
-                                objectFit: 'cover',
-                                filter: 'blur(3px) contrast(1.2)'
-                            }}
-                          />
+                              alt={`Teaser strip for ${post.data.title}`}
+                              style={{
+                                  objectFit: 'cover',
+                                  filter: 'blur(3px) contrast(1.2)'
+                              }}
+                            />
                         </div>
                       )}
 
