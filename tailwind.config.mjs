@@ -11,5 +11,10 @@ export default {
       },
     },
   },
+  variants: {
+    extend: {
+        textColor: ['visited'],
+    },
+  },
   plugins: [],
 }

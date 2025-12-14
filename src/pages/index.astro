@@ -46,16 +46,14 @@ import FlickrGallery from '@components/FlickrGallery.astro';
             {
               // We can now use a simple map function since there are no promises (await) inside
               blog.map((post) => (
-                <li
-                    class="py-2 px-0 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-150"
-                >
+                <li>
                   <Link
                     href={`/blog/${post.slug}`}
                     aria-label={post.data.title}
                   >
                     {/* POST TITLE AND DATE */}
                     <div class="flex flex-col">
-                      <h3 class="text-lg font-semibold text-black dark:text-white">
+                      <h3 class="font-medium text-black dark:text-white">
                         {post.data.title}
                       </h3>
                       <p class="text-sm text-gray-500">
