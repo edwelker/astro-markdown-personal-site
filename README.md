@@ -25,11 +25,13 @@ This is the repository for my personal site, eddiewelker.com.
 | Location | Purpose | Critical Reminders |
 | :--- | :--- | :--- |
 | `src/content/blog/` | Blog Posts | **Frontmatter is strictly validated.** Must match the schema in `src/content/config.ts`. If you get a `TypeError`, check your dates or boolean values (`draft: true`, NOT `draft: "true"`). |
-| `src/content/config.ts` | Schema | This file defines what fields are allowed in your blog and project frontmatter. If you need a new field (like `highlight`), **you must update this file first.** |
+| `src/content.config.ts` | Schema | This file defines what fields are allowed in your blog and project frontmatter. If you need a new field (like `highlight`), **you must update this file first.** |
 | `src/data/highlights.ts` | Project Data | This is a static TypeScript array of your key projects and external links. **The field for your personal commentary is named `thought`** (an optional string). |
 | `src/lib/highlights.ts` | Data Bridge | This simple helper file exports the function `getAllHighlights()`. Do not touch it unless the data source moves. |
 
 ### 3. Styling & Customization
+
+I'm picky about this stuff. Make the web work like it should.
 
 | Item | What to Remember |
 | :--- | :--- |
@@ -41,6 +43,5 @@ This is the repository for my personal site, eddiewelker.com.
 
 | Feature | Your Customization | Remember This |
 | :--- | :--- | :--- |
-| **`index.astro` Intro** | Your intro text is locked to: *Programmer, Cyclist, Cellist, Photographer, Cook, Northeast, USA.* | To edit the intro or the highlight loop layout, update the section in `src/pages/index.astro`. |
 | **Markdown Rendering** | You are using the default Markdown setup. | If you need custom components *inside* Markdown files, you need to convert that file to MDX (rename it to `.mdx`). |
 | **Component Logic** | Logic is contained within the component's frontmatter (`---` block) for server-side execution. | If a component is behaving strangely, remember its JavaScript runs *only* on the server at build time unless you add a `client:` directive (and you shouldn't need one). |
