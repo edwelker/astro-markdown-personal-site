@@ -1,44 +1,37 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
-import { getCollection } from "astro:content";
+import { getAllHighlights } from "@lib/highlights"; // Import the helper
 import { SITE } from "@consts";
 
-// Fetch from the new 'highlights' collection
-const highlights = (await getCollection("highlights"))
-  .filter((item) => !item.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const highlights = await getAllHighlights();
 ---
 
 <Layout title={`Highlights | ${SITE.TITLE}`} description="Curated photos and code.">
   <Container>
     <div class="space-y-4">
-      <h1 class="font-semibold text-black dark:text-white text-xl mb-6">
-        Highlights
-      </h1>
+      <h1 class="font-semibold text-black dark:text-white text-xl mb-6">Highlights</h1>
 
       <div class="grid grid-cols-1 gap-4">
         {highlights.map((item) => (
           <div class="border border-black/15 dark:border-white/20 p-4 rounded-sm hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
             <h3 class="font-semibold text-black dark:text-white">
-              {/* If 'url' exists, link externally. Otherwise, link internally. */}
               <a
-                href={item.data.url || `/highlights/${item.id}/`}
-                target={item.data.url ? "_blank" : "_self"}
-                rel={item.data.url ? "noopener noreferrer" : ""}
+                href={item.url}
+                target={item.isExternal ? "_blank" : "_self"}
+                rel={item.isExternal ? "noopener noreferrer" : ""}
                 class="hover:underline"
               >
-                {item.data.title}
-                {item.data.url && <span class="text-xs ml-1 opacity-70">↗</span>}
+                {item.title}
+                {item.isExternal && <span class="text-xs ml-1 opacity-70">↗</span>}
               </a>
             </h3>
             <p class="text-sm text-black/60 dark:text-white/60 mt-1">
-              {item.data.description}
+              {item.description}
             </p>
           </div>
         ))}
       </div>
-
     </div>
   </Container>
 </Layout>

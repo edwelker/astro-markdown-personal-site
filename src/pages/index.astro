@@ -12,12 +12,11 @@ const blog = (await getCollection("blog"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
-const projects: CollectionEntry<"projects">[] = (
-  await getCollection("projects")
-)
-  .filter((project) => !project.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
+import Link from "@components/Link.astro";
+import { getAllHighlights } from "@lib/highlights";
+
+// Fetch and slice the top 3
+const recentHighlights = (await getAllHighlights()).slice(0, 5);
 ---
 
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -87,20 +86,29 @@ const projects: CollectionEntry<"projects">[] = (
         </section>
 
         <section class="animate space-y-6">
-          <div class="flex flex-wrap items-center justify-between gap-y-2">
-            <h2 class="font-semibold text-black dark:text-white">
-              Recent projects
-            </h2>
-            <Link href="/projects"> See all projects </Link>
+          <div class="flex flex-wrap gap-y-2 items-center justify-between">
+            <h5 class="font-semibold text-black dark:text-white">
+              Highlights
+            </h5>
+            <Link href="/highlights">
+              See all highlights
+            </Link>
           </div>
-          <ul class="not-prose flex flex-col gap-4">
-            {
-              projects.map((project) => (
-                <li>
-                  <ArrowCard entry={project} />
-                </li>
-              ))
-            }
+
+          <ul class="flex flex-col gap-4">
+            {recentHighlights.map((item) => (
+              <li>
+                <Link
+                  href={item.url}
+                  external={item.isExternal}
+                  aria-label={item.title}
+                >
+                  {item.title}
+                </Link>
+                {/* Optional: Add an arrow if it's external so user knows it leaves the site */}
+                {item.isExternal && <span class="text-xs text-gray-500 ml-1">↗</span>}
+              </li>
+            ))}
           </ul>
         </section>
 
