@@ -6,6 +6,9 @@ import Link from "@components/Link.astro";
 import { getCollection } from "astro:content";
 import { getAllHighlights } from "@lib/highlights";
 
+// DELETE THIS LINE IF YOU ARE NOT USING IT:
+// import ArrowCard from "@components/ArrowCard.astro";
+
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -21,41 +24,61 @@ import { getImage } from "astro:assets";
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <aside data-pagefind-ignore>
-        <h1 class="font-extrabold text-3xl text-black dark:text-white">
-          Eddie Welker
-        </h1>
+      <h1 class="font-extrabold text-3xl text-black dark:text-white">
+        Eddie Welker
+      </h1>
       <div class="space-y-16">
         <section>
           <article class="space-y-4">
-              <p>Programmer, Cyclist, Cellist, Photographer, Cook, Woodworker, Northeast, USA.</p>
+            <p>Programmer, Cyclist, Cellist, Photographer, Cook, Woodworker, Northeast, USA.</p>
           </article>
         </section>
 
         <section class="animate space-y-6">
-<ul class="not-prose flex flex-col gap-4">
+          <ul class="not-prose flex flex-col gap-4">
             {
-              await Promise.all(
+              await Promise.all( // <--- CRITICAL: AWAIT THE PROMISE.ALL
                 blog.map(async (post) => {
-                  const imageSrc = post.data.heroImage;
-                  // ... (Keep the image processing code)
 
-                  // 3. RETURN the rendered list item
+                  // 1. Get image source
+                  const imageSrc = post.data.heroImage;
+
+                  // 2. Process the image for the teaser strip (KEEP 'const' here!)
+                  const teaserImage = imageSrc
+                    ? await getImage({
+                          src: imageSrc,
+                          width: 600,
+                          height: 10,
+                          format: 'webp',
+                          quality: 60
+                      })
+                    : null;
+
+                  // 3. RETURN the fully rendered list item with the link, image, and text
                   return (
                     <li class="w-full">
                       <Link
                         href={`/blog/${post.slug}`}
                         aria-label={post.data.title}
-                        // Use the custom class for the post card look
                         class="p-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-150 flex flex-col"
                       >
-                        {/* 1. IMAGE STRIP (Keep this as is) */}
+                        {/* 1. IMAGE STRIP */}
                         {teaserImage && (
                           <div class="w-full h-[10px] overflow-hidden rounded-t-lg">
-                            {/* ... Image Component Code ... */}
+                            <Image
+                              src={teaserImage.src}
+                              width={(teaserImage as any).width ?? 600}
+                              height={(teaserImage as any).height ?? 10}
+                              alt={`Teaser strip for ${post.data.title}`}
+                              style={{
+                                  objectFit: 'cover',
+                                  filter: 'blur(3px) contrast(1.2)'
+                              }}
+                            />
                           </div>
                         )}
 
-                        {/* 2. POST TITLE AND DATE (THIS IS THE MISSING PART) */}
+                        {/* 2. POST TITLE AND DATE (THE MISSING PART) */}
                         <div class="flex flex-col pt-2">
                           <h3 class="text-lg font-semibold text-black dark:text-white">
                             {post.data.title}
@@ -71,7 +94,7 @@ import { getImage } from "astro:assets";
               )
             }
           </ul>
-      </section>
+        </section>
 
 
         <section class="animate space-y-6">
