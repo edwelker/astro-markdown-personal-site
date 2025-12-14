@@ -1,13 +1,7 @@
 ---
 title: 'Random Thoughts'
 date: '2007-12-30T00:21:34-05:00'
-status: publish
-permalink: /2007/12/30/random-thoughts
-author: Eddie
-excerpt: ''
-type: post
-id: 60
-categories:
+slug: 2007/12/30/random-thoughts
     - personal
     - typography
 tags:
@@ -21,7 +15,6 @@ tags:
     - 'programming books'
     - 'strunk and white'
     - 'writers guild'
-post_format: []
 ---
 1\) [The idea of beautiful programming books representing the connection between art and programming](http://ejohn.org/blog/beautiful-programming-books/) is an interesting one. I think that there is an "art" to programming, but I don't think there is really a direct connection. As a musician, I have a very formal vision of an "artist", and knowing many programmers, few have qualities that I consider artistic. I think that the art of programming is different than visual or music arts. That being said, there are many artistic looking books, including programming books. My favorite is [The Little Schemer](http://www.ccs.neu.edu/home/matthias/BTLS/), and it's successful typography. [](http://gothamist.com/2007/12/29/wga_update_real.php "David Letterman")
 

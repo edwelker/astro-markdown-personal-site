@@ -1,16 +1,9 @@
 ---
 title: 'Jean Edward Welker'
 date: '2007-12-17T22:23:47-05:00'
-status: publish
-permalink: /2007/12/17/jean-edward-welker
-author: Eddie
-excerpt: ''
-type: post
-id: 54
-categories:
+slug: 2007/12/17/jean-edward-welker
     - personal
 tags: []
-post_format: []
 ---
 Washington Post -- Obituaries
 

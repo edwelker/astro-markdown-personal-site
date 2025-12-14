@@ -1,13 +1,7 @@
 ---
 title: 'Review of "Expert Python Programming"'
 date: '2009-01-25T13:02:24-05:00'
-status: publish
-permalink: /2009/01/25/review-of-expert-python-programming
-author: Eddie
-excerpt: ''
-type: post
-id: 225
-categories:
+slug: 2009/01/25/review-of-expert-python-programming
     - books
     - programming
     - python
@@ -16,7 +10,6 @@ tags:
     - programming
     - python
     - review
-post_format: []
 ---
 [![Expert Python Programming](/expertpythonprogramming.jpg "Expert Python Programming")](http://www.packtpub.com/expert-python-programming/book)
 

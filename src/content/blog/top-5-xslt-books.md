@@ -1,20 +1,13 @@
 ---
 title: 'My XSLT Toolbox – 5 Favorite XSLT Books'
 date: '2009-01-08T23:42:00-05:00'
-status: publish
-permalink: /2009/01/08/top-5-xslt-books
-author: Eddie
-excerpt: ''
-type: post
-id: 214
-categories:
+slug: 2009/01/08/top-5-xslt-books
     - programming
     - xslt
 tags:
     - books
     - xpath
     - xslt
-post_format: []
 ---
 I love reading programming books, especially to learn a new programming language. Learning XSLT, I read a large number of books, as there are quite a few available. The quality of the XSLT books struck me as particularly all over the place, some were quite good while others weren't even worth the time to skim. So I'm throwing together a simple list of my current collection of XSLT references, which happened to be my favorites of the bunch.  These books are all geared towards specific audiences... beginners, advanced, etc, so I included their audiences.
 

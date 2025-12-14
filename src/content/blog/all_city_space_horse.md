@@ -1,7 +1,6 @@
 ---
 title: "My All-City Space Horse Setup"
 date: 2025-12-05T17:30:00-05:00
-categories: ["Bicycles", "Builds"]
 tags: ["All-City", "Gravel", "Touring", "Shimano GRX", "C&O Canal", "Bicycles, Builds"]
 ---
 

@@ -1,13 +1,7 @@
 ---
 title: 'Minor distractions'
 date: '2007-12-05T20:04:45-05:00'
-status: publish
-permalink: /2007/12/05/minor-distractions
-author: Eddie
-excerpt: ''
-type: post
-id: 53
-categories:
+slug: 2007/12/05/minor-distractions
     - ie
     - microformats
     - rss
@@ -16,7 +10,6 @@ tags:
     - 'internet explorer 8'
     - 'new york times'
     - podcasts
-post_format: []
 ---
 In an effort to keep my mind occupied elsewhere, here are a couple of distractions to share.
 

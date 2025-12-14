@@ -1,13 +1,7 @@
 ---
 title: 'Big release day on the webbernet'
 date: '2008-03-05T23:06:37-05:00'
-status: publish
-permalink: /2008/03/05/big-release-day-on-the-webbernet
-author: Eddie
-excerpt: ''
-type: post
-id: 77
-categories:
+slug: 2008/03/05/big-release-day-on-the-webbernet
     - firefox
     - ie
     - ie8
@@ -33,7 +27,6 @@ tags:
     - whitepapers
     - 'wia aria'
     - yahoo
-post_format: []
 ---
 So I guess it's simply the time of year. Many big releases today... software, APIs, and more!
 

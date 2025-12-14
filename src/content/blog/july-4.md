@@ -1,13 +1,7 @@
 ---
 title: 'July 4'
 date: '2008-07-04T19:46:39-05:00'
-status: publish
-permalink: /2008/07/04/july-4
-author: Eddie
-excerpt: ''
-type: post
-id: 90
-categories:
+slug: 2008/07/04/july-4
     - Boston
     - django
     - python
@@ -20,7 +14,6 @@ tags:
     - kobayashi
     - publishers
     - resturants
-post_format: []
 ---
 [![Photo by Vidiot. Click image for details.](http://farm4.static.flickr.com/3079/2636931241_f5f3e3d390_m.jpg "Photo by Vidiot. Click image for details.")](http://www.flickr.com/photos/vidiot/2636931241/)Happy July 4th! Now, with that out of the way...
 

@@ -1,13 +1,7 @@
 ---
 title: 'Firefox for Mac and displaying small font sizes'
 date: '2007-10-25T15:19:27-05:00'
-status: publish
-permalink: /2007/10/25/firefox-for-mac-and-displaying-small-font-sizes
-author: Eddie
-excerpt: ''
-type: post
-id: 42
-categories:
+slug: 2007/10/25/firefox-for-mac-and-displaying-small-font-sizes
     - firefox
     - microsoft
 tags:
@@ -20,7 +14,6 @@ tags:
     - mozilla
     - opera
     - pixel
-post_format: []
 ---
 So I had a problem a while back where I thought Firefox for Mac was picking up some left-over or un-overridden size styles, while the other browsers were not. It turns out that it wasn't actually my problem.
 

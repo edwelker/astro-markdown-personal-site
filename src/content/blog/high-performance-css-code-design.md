@@ -1,13 +1,7 @@
 ---
 title: 'High Performance CSS code design'
 date: '2011-04-06T00:44:25-05:00'
-status: publish
-permalink: /2011/04/06/high-performance-css-code-design
-author: Eddie
-excerpt: ''
-type: post
-id: 330
-categories:
+slug: 2011/04/06/high-performance-css-code-design
     - css
     - programming
     - 'web design'
@@ -16,7 +10,6 @@ tags:
     - oocss
     - programming
     - refactoring
-post_format: []
 ---
 In the last few years much emphasis has been placed on web performance issues. Browser vendors have optimized JavaScript engines, JavaScript libraries have been honed, and content delivery has been improved. Unfortunately, CSS has received less attention. Developers have been advised how to optimally transfer CSS files, and instructed to use CSS shorthand, but very little has targeted CSS code itself.
 

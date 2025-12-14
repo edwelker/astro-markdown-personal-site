@@ -1,13 +1,7 @@
 ---
 title: 'My XSLT Toolbox – copy and copy-of'
 date: '2008-12-27T16:05:09-05:00'
-status: publish
-permalink: /2008/12/27/xslt-copy-copy-of
-author: Eddie
-excerpt: ''
-type: post
-id: 184
-categories:
+slug: 2008/12/27/xslt-copy-copy-of
     - programming
     - xslt
 tags:
@@ -15,7 +9,6 @@ tags:
     - copy-of
     - tutorial
     - xslt
-post_format: []
 ---
 Using XSLT to copy elements is extremely common when you're transforming a source document of a certain type (XML, HTML, etc.) to the same type. Often, you need an exact copy of an element verbatim, but other times you need to selectively choose certain elements to copy and others to discard. XSLT makes this process quite elegant using it's xsl:copy-of and xsl:copy elements. The following is a setp-by-step tutorial on how these elements are used.
 

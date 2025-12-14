@@ -1,20 +1,13 @@
 ---
 title: 'Not the worst movie ever, and the worst'
 date: '2007-10-23T23:14:27-05:00'
-status: publish
-permalink: /2007/10/23/not-the-worst-movie-ever-and-the-worst
-author: Eddie
-excerpt: ''
-type: post
-id: 41
-categories: []
+slug: 2007/10/23/not-the-worst-movie-ever-and-the-worst
 tags:
     - halloween
     - movies
     - 'rob zombie'
     - 'snakes on a plane'
     - 'terrible movie'
-post_format: []
 ---
 I know the title isn't English... but I'm a little out of it after what I just watched.
 

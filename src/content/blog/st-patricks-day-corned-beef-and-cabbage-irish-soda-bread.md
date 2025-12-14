@@ -1,12 +1,7 @@
 ---
 title: 'St. Patricks Day Corned beef and cabbage & Irish soda bread'
 date: '2014-03-16T21:25:35-05:00'
-status: publish
-permalink: /2014/03/16/st-patricks-day-corned-beef-and-cabbage-irish-soda-bread
-excerpt: ''
-type: post
-id: 397
-categories:
+slug: 2014/03/16/st-patricks-day-corned-beef-and-cabbage-irish-soda-bread
     - cooking
     - food
     - recipes
@@ -17,8 +12,6 @@ tags:
     - food
     - 'irish soda bread'
     - 'St. Patrick''s Day'
-noSummary: true
-cover: https://live.staticflickr.com/65535/52425587443_640596352e_b_d.jpg
 ---
 ## Corned Beef and Cabbage
 

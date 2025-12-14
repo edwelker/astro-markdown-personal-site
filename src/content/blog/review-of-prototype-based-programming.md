@@ -1,13 +1,7 @@
 ---
 title: 'Review of "Prototype-Based Programming"'
 date: '2009-01-29T20:14:56-05:00'
-status: publish
-permalink: /2009/01/29/review-of-prototype-based-programming
-author: Eddie
-excerpt: ''
-type: post
-id: 232
-categories:
+slug: 2009/01/29/review-of-prototype-based-programming
     - books
     - javascript
     - programming
@@ -16,7 +10,6 @@ tags:
     - prototypal
     - prototype
     - review
-post_format: []
 ---
 ![Prototype-Based Programming](/prototypebasedprogramming.png "Prototype-Based Programming")
 

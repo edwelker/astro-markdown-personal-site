@@ -1,18 +1,11 @@
 ---
 title: 'Boring "I moved" post'
 date: '2009-09-09T20:07:12-05:00'
-status: publish
-permalink: /2009/09/09/boring-i-moved-post
-author: Eddie
-excerpt: ''
-type: post
-id: 261
-categories:
+slug: 2009/09/09/boring-i-moved-post
     - personal
 tags:
     - moving
     - personal
-post_format: []
 ---
 Summer was ending so I decided to move. Ok, not really, it was simply time.
 

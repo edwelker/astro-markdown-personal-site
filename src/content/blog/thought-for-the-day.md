@@ -1,17 +1,10 @@
 ---
 title: 'Thought for the day'
 date: '2007-09-18T18:55:50-05:00'
-status: publish
-permalink: /2007/09/18/thought-for-the-day
-author: Eddie
-excerpt: ''
-type: post
-id: 29
-categories:
+slug: 2007/09/18/thought-for-the-day
     - design
     - usability
 tags: []
-post_format: []
 ---
 My thought for the day is this:
 

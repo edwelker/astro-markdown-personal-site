@@ -1,16 +1,9 @@
 ---
 title: 'Time for small celebration!'
 date: '2007-11-08T21:48:35-05:00'
-status: publish
-permalink: /2007/11/08/time-for-small-celebration
-author: Eddie
-excerpt: ''
-type: post
-id: 48
-categories: []
+slug: 2007/11/08/time-for-small-celebration
 tags:
     - pubmed
-post_format: []
 ---
 Indeed, it is time for a small party... my last 2 to 3 months of work has gone live!
 

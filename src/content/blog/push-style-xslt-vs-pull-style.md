@@ -1,13 +1,7 @@
 ---
 title: 'Advantages of push-style XSLT over pull-style'
 date: '2008-11-25T00:56:24-05:00'
-status: publish
-permalink: /2008/11/25/push-style-xslt-vs-pull-style
-author: Eddie
-excerpt: ''
-type: post
-id: 155
-categories:
+slug: 2008/11/25/push-style-xslt-vs-pull-style
     - programming
     - xslt
 tags:
@@ -18,7 +12,6 @@ tags:
     - style
     - templates
     - xslt
-post_format: []
 ---
 Working with more than a few new-hires over the last few weeks, I've noticed that new XSLT developers often write pull-style XSLTs by default. However, this tends to defy XSLT's functional heritage, and is not as useful as the opposite form, push-style XSLTs.
 

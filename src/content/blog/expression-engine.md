@@ -1,20 +1,13 @@
 ---
 title: 'Expression Engine'
 date: '2007-08-19T10:55:05-05:00'
-status: publish
-permalink: /2007/08/19/expression-engine
-author: admin
-excerpt: ''
-type: post
-id: 9
-categories:
+slug: 2007/08/19/expression-engine
     - books
 tags:
     - expressionengine
     - 'html css'
     - software
     - 'template syntax'
-post_format: []
 ---
 I created a fresh installation and played around with it for a little while. Upon moving these WordPress posts over, it broke. Since I still had all of my pieces lined up, I removed everything and did a second fresh install. Posting broke that one too. I guess that I am going to have to actually watch the videos on the website to figure out what is going on. (I hate having to read the manual! I'd much rather just start playing with it.)
 

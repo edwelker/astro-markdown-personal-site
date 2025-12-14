@@ -1,17 +1,10 @@
 ---
 title: 'Installing PIL inside virtualenv for Ubuntu 9.10'
 date: '2010-03-31T20:50:42-05:00'
-status: publish
-permalink: /2010/03/31/installing-pil-virtualenv-ubuntu
-author: Eddie
-excerpt: ''
-type: post
-id: 322
-categories:
+slug: 2010/03/31/installing-pil-virtualenv-ubuntu
     - django
     - python
 tags: []
-post_format: []
 ---
 I just removed a (real live) bat from my living room. That was easier than installing PIL in a virtualenv for Ubuntu 9.10. Why? Googling the subject seems to bring up a lot of old or mis-information. This will explain how... mostly so I can do it again next time.
 

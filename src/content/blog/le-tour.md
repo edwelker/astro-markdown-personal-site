@@ -1,13 +1,7 @@
 ---
 title: 'Le Tour'
 date: '2008-07-15T21:01:52-05:00'
-status: publish
-permalink: /2008/07/15/le-tour
-author: Eddie
-excerpt: ''
-type: post
-id: 93
-categories:
+slug: 2008/07/15/le-tour
     - bikes
 tags:
     - bicycle
@@ -15,7 +9,6 @@ tags:
     - france
     - 'le tour'
     - tour
-post_format: []
 ---
 I've been following [Le Tour](http://www.letour.fr/) again this year. Previously, the aerial shots of France kept my attention, but this year I have been interested in the competition. I've found the mini-goals and side stories are as good as the goal of *le maillot jeune*.![Le Tour](http://farm4.static.flickr.com/3286/2666603321_2c10b6c79c_m_d.jpg "Le Tour")
 

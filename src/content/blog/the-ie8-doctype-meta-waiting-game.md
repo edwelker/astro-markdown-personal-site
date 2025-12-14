@@ -1,13 +1,7 @@
 ---
 title: 'The IE8 doctype meta waiting game'
 date: '2008-01-26T20:16:26-05:00'
-status: publish
-permalink: /2008/01/26/the-ie8-doctype-meta-waiting-game
-author: Eddie
-excerpt: ''
-type: post
-id: 70
-categories:
+slug: 2008/01/26/the-ie8-doctype-meta-waiting-game
     - ie
     - ie8
     - microsoft
@@ -20,7 +14,6 @@ tags:
     - meta
     - proposal
     - 'web developer'
-post_format: []
 ---
 The first time I played Yahtzee was... only about a month ago. I won 3 of my first 4 games. It was a fun game. I wonder how that game would be if I played against... oh, let's say... Microsoft. Probably... not so much.
 

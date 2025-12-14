@@ -1,19 +1,12 @@
 ---
 title: 'Horror Movies, Final installment'
 date: '2008-11-11T12:47:43-05:00'
-status: publish
-permalink: /2008/11/11/horror-movies-final-installment
-author: Eddie
-excerpt: ''
-type: post
-id: 145
-categories:
+slug: 2008/11/11/horror-movies-final-installment
     - movies
 tags:
     - halloween
     - movies
     - scary
-post_format: []
 ---
 The final installment... a little late.
 

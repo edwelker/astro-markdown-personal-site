@@ -1,19 +1,12 @@
 ---
 title: 'More October Horror Movies'
 date: '2008-10-26T15:07:47-05:00'
-status: publish
-permalink: /2008/10/26/more-october-horror-movies
-author: Eddie
-excerpt: ''
-type: post
-id: 131
-categories:
+slug: 2008/10/26/more-october-horror-movies
     - movies
 tags:
     - halloween
     - movies
     - scary
-post_format: []
 ---
 Continuing the reviews of my house's October horror movie film-fest:
 

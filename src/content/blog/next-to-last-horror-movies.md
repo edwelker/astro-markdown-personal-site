@@ -1,19 +1,12 @@
 ---
 title: 'Next-to-last Horror Movies'
 date: '2008-10-30T00:56:47-05:00'
-status: publish
-permalink: /2008/10/30/next-to-last-horror-movies
-author: Eddie
-excerpt: ''
-type: post
-id: 139
-categories:
+slug: 2008/10/30/next-to-last-horror-movies
     - movies
 tags:
     - halloween
     - movies
     - scary
-post_format: []
 ---
 Latest installment...
 

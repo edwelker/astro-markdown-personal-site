@@ -1,17 +1,9 @@
 ---
 title: 'Wing contest at Quarry House'
 date: '2013-05-15T23:50:58-05:00'
-status: publish
-permalink: /2013/05/15/wing-contest-at-quarry-house
-author: Eddie
-excerpt: ''
-type: post
-id: 391
-categories:
+slug: 2013/05/15/wing-contest-at-quarry-house
     - Uncategorized
 tags: []
-post_format: []
-featuredImage: "https://live.staticflickr.com/2746/4461565840_02fda45cb2_b_d.jpg"
 ---
 My first order of Quarry House wings was "medium." The waitress had told me that they ran one level hot, and the medium were actually hotter than an standard "hot." My nose was stuffed and my eyes were fully watered up at the end of twelve.
 

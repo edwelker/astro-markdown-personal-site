@@ -1,13 +1,7 @@
 ---
 title: 'IE8, Doctype and potentially broken default behavior'
 date: '2008-01-22T11:21:53-05:00'
-status: publish
-permalink: /2008/01/22/ie8-doctype-and-potentially-broken-default-behavior
-author: Eddie
-excerpt: ''
-type: post
-id: 69
-categories:
+slug: 2008/01/22/ie8-doctype-and-potentially-broken-default-behavior
     - ie
     - ie8
     - microsoft
@@ -18,7 +12,6 @@ tags:
     - doctype
     - ie7
     - metatag
-post_format: []
 ---
 I woke up this morning and read the A List Apart articles (that I defered reading until this a.m.).  The powers that be have decided that [IE will now use a metatag to decide what rendering type](http://alistapart.com/articles/beyonddoctype) (ie6, ie7, ie9, etc.) to use.  This allows for backwards compatibility.  Supposedly.
 

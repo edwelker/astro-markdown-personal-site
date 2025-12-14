@@ -1,19 +1,12 @@
 ---
 title: 'Update to some random thoughts'
 date: '2008-01-08T19:19:16-05:00'
-status: publish
-permalink: /2008/01/08/update-to-some-random-thoughts
-author: Eddie
-excerpt: ''
-type: post
-id: 63
-categories:
+slug: 2008/01/08/update-to-some-random-thoughts
     - Uncategorized
 tags:
     - personal
     - random
     - thoughts
-post_format: []
 ---
 1\) I took a look at the book on [Processing](http://en.wikipedia.org/wiki/Processing_(programming_language)), and it does look quite nice. That being said, I'm not quite sure what I'd use it for. So it fell a bit on my list.
 

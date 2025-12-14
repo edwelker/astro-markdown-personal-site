@@ -1,20 +1,13 @@
 ---
 title: 'Url Fairy Tales'
 date: '2009-03-31T11:23:47-05:00'
-status: publish
-permalink: /2009/03/31/url-fairy-tales
-author: Eddie
-excerpt: ''
-type: post
-id: 241
-categories:
+slug: 2009/03/31/url-fairy-tales
     - urls
 tags:
     - email
     - 'fairy tales'
     - urls
     - work
-post_format: []
 ---
 On Mar 31, 2009, at 11:45 AM, Edward Welker wrote:
 

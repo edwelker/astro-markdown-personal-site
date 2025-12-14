@@ -1,16 +1,9 @@
 ---
 title: 'Snapshot of right now'
 date: '2008-10-08T00:39:48-05:00'
-status: publish
-permalink: /2008/10/08/snapshot-of-right-now
-author: Eddie
-excerpt: ''
-type: post
-id: 118
-categories:
+slug: 2008/10/08/snapshot-of-right-now
     - personal
 tags: []
-post_format: []
 ---
 Oct. 8, 2009 -- 12:32am
 

@@ -1,19 +1,12 @@
 ---
 title: "it's about time"
 date: '2008-03-27T20:19:37-05:00'
-status: publish
-permalink: /2008/03/27/its-about-time
-author: Eddie
-excerpt: ''
-type: post
-id: 80
-categories:
+slug: 2008/03/27/its-about-time
     - personal
     - programming
     - web
 tags:
     - time
-post_format: []
 ---
 I have no time for anything!
 

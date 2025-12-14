@@ -1,13 +1,7 @@
 ---
 title: 'Twitter inspires similar thoughts (when broken!)'
 date: '2008-01-20T12:15:03-05:00'
-status: publish
-permalink: /2008/01/20/twitter-inspires-similar-thoughts-when-broken
-author: Eddie
-excerpt: ''
-type: post
-id: 67
-categories:
+slug: 2008/01/20/twitter-inspires-similar-thoughts-when-broken
     - twitter
 tags:
     - client
@@ -18,7 +12,6 @@ tags:
     - 'macworld keynote address'
     - servers
     - storage
-post_format: []
 ---
 First, I just watched what can only be described as a "herd" of squirrels, run across a neighbors front lawn. I've seen one chase another before, but I have never seen 5 all move together with a direction change. Very odd. Anyway...
 

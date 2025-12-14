@@ -1,18 +1,11 @@
 ---
 title: 'Onion-dill rice'
 date: '2011-08-03T21:39:41-05:00'
-status: publish
-permalink: /2011/08/03/onion-dill-rice
-author: Eddie
-excerpt: ''
-type: post
-id: 385
-categories:
+slug: 2011/08/03/onion-dill-rice
     - cooking
     - food
     - recipes
 tags: []
-post_format: []
 ---
 Managed to concoct a recipe that I ended up quite liking today.  Documented since I am unlikely to randomly repeat it.  Makes 3-ish decently sized portions.
 

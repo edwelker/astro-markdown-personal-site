@@ -1,13 +1,7 @@
 ---
 title: Photos!
 date: '2007-11-16T12:48:41-05:00'
-status: publish
-permalink: /2007/11/16/photos
-author: Eddie
-excerpt: ''
-type: post
-id: 51
-categories:
+slug: 2007/11/16/photos
     - Boston
     - flickr
     - personal
@@ -18,7 +12,6 @@ tags:
     - fenway
     - party
     - photoshop
-post_format: []
 ---
 [![Outside Fenway Park](http://farm3.static.flickr.com/2052/2037125504_838bd18b89_m.jpg "Outside Fenway Park")](http://flickr.com/photos/ed_welker/sets/72157603199931598/)Some part of me, deep down, will not let me post photos without cracking open Photoshop first. I don't know why I feel so strongly about it, but my gut won't let me avoid it. So of course, it's ages before I feel alright showing anyone what I took.
 

@@ -1,13 +1,7 @@
 ---
 title: 'catching up'
 date: '2007-10-03T22:16:00-05:00'
-status: publish
-permalink: /2007/10/03/catching-up
-author: Eddie
-excerpt: ''
-type: post
-id: 33
-categories:
+slug: 2007/10/03/catching-up
     - baseball
     - bethesda
     - Boston
@@ -21,7 +15,6 @@ tags:
     - 'random thoughts'
     - 'riding my bike'
     - tchaikovsky
-post_format: []
 ---
 This is my appropriately named "catching up" post. As most know, I've moved over the last month. Despite my early action, I still had to do a lot of work at the end of the month. C'est la vie, that's what moving is. Aside that, I've also been focused on various work related things (css, xslt, and the "portal" system), as well as the end of baseball's regular season and the beginning of the post season.
 

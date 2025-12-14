@@ -1,13 +1,7 @@
 ---
 title: 'Finally, I get feedburner'
 date: '2008-01-21T15:32:04-05:00'
-status: publish
-permalink: /2008/01/21/finally-i-get-feedburner
-author: Eddie
-excerpt: ''
-type: post
-id: 68
-categories:
+slug: 2008/01/21/finally-i-get-feedburner
     - blog
     - flickr
     - rss
@@ -15,7 +9,6 @@ tags:
     - del.icio.us
     - feed
     - feedburner
-post_format: []
 ---
 So I have off for Martin Luther King day today. I found myself with a chunk of time, and decided once and for all, to make [feedburner](http://feedburner.com) work for me. Happily, I can now say that I did that, and can move on.
 

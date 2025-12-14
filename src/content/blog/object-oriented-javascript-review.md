@@ -1,13 +1,7 @@
 ---
 title: 'Review of "Object-Oriented JavaScript"'
 date: '2008-10-25T22:02:16-05:00'
-status: publish
-permalink: /2008/10/25/object-oriented-javascript-review
-author: Eddie
-excerpt: 'I recently read Object Oriented JavaScript, by Stoyan Stefanov. In reviewing it, I found it was one of the most interesting books I''ve read in a while, for some good reasons and a few more curious reasons.'
-type: post
-id: 122
-categories:
+slug: 2008/10/25/object-oriented-javascript-review
     - books
     - javascript
     - programming
@@ -16,7 +10,6 @@ tags:
     - javascript
     - programming
     - review
-post_format: []
 ---
 [![Object Oriented JavaScript](/objectorientedjavascript.jpg "Object Oriented JavaScript")](http://www.packtpub.com/object-oriented-javascript-applications-libraries/book)
 

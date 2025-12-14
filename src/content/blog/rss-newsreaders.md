@@ -1,13 +1,7 @@
 ---
 title: 'RSS newsreaders'
 date: '2007-10-03T23:46:54-05:00'
-status: publish
-permalink: /2007/10/03/rss-newsreaders
-author: Eddie
-excerpt: ''
-type: post
-id: 34
-categories:
+slug: 2007/10/03/rss-newsreaders
     - firefox
     - rss
 tags:
@@ -16,7 +10,6 @@ tags:
     - 'rss newsreader'
     - sage
     - vienna
-post_format: []
 ---
 I am a big fan of Sage, the RSS newsreader plugin for Firefox. In my move, I have tried a few other apps that I thought would be a little better at handling the on-again, off-again nature of me checking my favorite feeds.
 

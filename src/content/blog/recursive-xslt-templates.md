@@ -1,13 +1,7 @@
 ---
 title: 'My XSLT Toolbox – Recursive XSLT templates'
 date: '2008-12-28T17:21:35-05:00'
-status: publish
-permalink: /2008/12/28/recursive-xslt-templates
-author: Eddie
-excerpt: ''
-type: post
-id: 199
-categories:
+slug: 2008/12/28/recursive-xslt-templates
     - programming
     - xslt
 tags:
@@ -17,7 +11,6 @@ tags:
     - tokenize
     - xpath
     - xslt
-post_format: []
 ---
 Recursion is one of the core concepts in programming. It's valuable not only as a technique for writing programs, but as a general concept for solving problems. XSLT provides many useful elements such as for-each (and apply-templates), but occasionally you will run into a problem which must be solved with recursion. Let's take a look at a real-world (no Fibonacci!!) example, where we have to operate on a simple string of numbers separated by commas. We'll take a step-by-step approach to writing a recursive template.
 

@@ -1,13 +1,7 @@
 ---
 title: "Getting a button element's value attribute (not innerHTML) in IE"
 date: '2008-05-23T00:52:25-05:00'
-status: publish
-permalink: /2008/05/23/getting-a-button-elements-value-attribute-not-innerhtml-in-ie
-author: Eddie
-excerpt: ''
-type: post
-id: 86
-categories:
+slug: 2008/05/23/getting-a-button-elements-value-attribute-not-innerhtml-in-ie
     - ie
     - ie8
     - javascript
@@ -20,7 +14,6 @@ tags:
     - ie6
     - ie7
     - value
-post_format: []
 ---
 After spending a small part of my evening debugging Javascript in IE (which is ALWAYS a pleasure), I found out one of my errors was a mistake I had made before... trying to access button.value in IE. IE, of course, being IE, returns the innerHTML value of the button, instead of the value attribute. Last time I ran into this, I used a class instead of value, and moved on with my life. Tonight, I was feeling stubborn, and I found a better way...
 

@@ -1,19 +1,12 @@
 ---
 title: My Szechuan Noodles
 date: '2025-09-01T05:04:28-05:00'
-status: publish
-permalink: /2025/09/01/szechuan_noodles
-author: Eddie
-excerpt: ''
-type: post
-id: 7
-categories:
+slug: 2025/09/01/szechuan_noodles
     - personal
     - recipes
 tags:
     - personal
     - recipes
-post_format: []
 ---
 My base recipe for Szechuan noodles (noods)
 

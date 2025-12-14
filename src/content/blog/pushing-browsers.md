@@ -1,13 +1,7 @@
 ---
 title: 'Pushing Browsers'
 date: '2007-09-04T22:59:03-05:00'
-status: publish
-permalink: /2007/09/04/pushing-browsers
-author: Eddie
-excerpt: ''
-type: post
-id: 24
-categories:
+slug: 2007/09/04/pushing-browsers
     - firefox
     - ie
     - microsoft
@@ -17,7 +11,6 @@ tags:
     - display
     - html
     - 'table cell'
-post_format: []
 ---
 So I have been working on a small piece of navigation at work. Tabs, to be exact. Multiple items, but no more than 5 at a time. Variable length titles (including some rather long). As it is a list of links, of course, I wanted to use an unordered list. It all made perfect semantic sense. Just spit out the list, add some CSS for the tab look, and done.
 

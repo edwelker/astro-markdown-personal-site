@@ -1,13 +1,7 @@
 ---
 title: 'XSLT Class'
 date: '2007-10-23T22:07:13-05:00'
-status: publish
-permalink: /2007/10/23/xslt-class
-author: Eddie
-excerpt: ''
-type: post
-id: 40
-categories:
+slug: 2007/10/23/xslt-class
     - xslt
 tags:
     - 'beginning xslt'
@@ -21,7 +15,6 @@ tags:
     - xml
     - 'xslt 1.0'
     - 'xslt class'
-post_format: []
 ---
 Last Monday through last Wednesday I attended [Mulberry Technologies' XSLT course](http://mulberrytech.com/). I had a fun time, and learned a bunch.
 

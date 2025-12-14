@@ -1,13 +1,7 @@
 ---
 title: 'Review of "Web Form Design, Filling in the Blanks"'
 date: '2008-08-04T21:33:45-05:00'
-status: publish
-permalink: /2008/08/04/review-of-web-form-design-filling-in-the-blanks
-author: Eddie
-excerpt: ''
-type: post
-id: 95
-categories:
+slug: 2008/08/04/review-of-web-form-design-filling-in-the-blanks
     - accessibility
     - books
     - design
@@ -17,7 +11,6 @@ tags:
     - forms
     - 'luke wroblewski'
     - 'web form design'
-post_format: []
 ---
 > "Forms suck. If you don't believe me, try to find people who like filling them in.";
 
