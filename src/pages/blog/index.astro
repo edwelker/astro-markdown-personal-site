@@ -7,7 +7,10 @@ import { BLOG } from "@consts";
 
 const data = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+    // Change the sort function to use the nullish coalescing operator (??)
+    // to safely fall back to the required 'date' field if 'pubDate' is undefined:
+
+    .sort((a, b) => (b.data.pubDate ?? b.data.date).valueOf() - (a.data.pubDate ?? a.data.date).valueOf())
 
 type Acc = {
   [year: string]: CollectionEntry<"blog">[];
