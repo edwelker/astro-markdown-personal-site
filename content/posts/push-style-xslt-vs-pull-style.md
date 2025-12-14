@@ -19,7 +19,6 @@ tags:
     - templates
     - xslt
 post_format: []
-wp-syntax-cache-content:
 ---
 Working with more than a few new-hires over the last few weeks, I've noticed that new XSLT developers often write pull-style XSLTs by default. However, this tends to defy XSLT's functional heritage, and is not as useful as the opposite form, push-style XSLTs.
 
