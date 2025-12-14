@@ -23,28 +23,34 @@ Recursion is one of the core concepts in programming. It's valuable not only as 
 
 Let's say we have the following source document, short and sweet. We want to take each number, and wrap it with an element.
 
-```xml
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <comma>1,2,3,4,5,6,7,88,99,100</comma>
+
+
 ```
 
 The easy way to do this is to use the [EXSLT str:tokenize function](http://www.exslt.org/str/functions/tokenize/), which takes a string and some delimiters and splits the string based on those delimiters. All we do is add the xmlns:str and extension-element-prefixes attributes to our xsl:stylesheet declaration, and then call the str:tokenize function.
 
-```xml
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  version="1.0" xmlns:str="http://exslt.org/strings"
-  extension-element-prefixes="str">
-  <xsl:template match="/>
-  <xsl:for-each select="str:tokenize( comma, ',')">
-    <xsl:copy-of select="."/>
-  </xsl:for-each>
-</xsl:template>
+```
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+version="1.0" xmlns:str="http://exslt.org/strings" 
+extension-element-prefixes="str">
+ 
+    <xsl:template match="/>
+        <xsl:for-each select="str:tokenize( comma, ',')">
+            <xsl:copy-of select="."/>
+        </xsl:for-each>
+    </xsl:template>
+ 
 </xsl:stylesheet>
+
+
 ```
 
 The result is, (new-lines added for readability):
 
-```xml
+```
 <?xml version="1.0"?>
 <token>1</token>
 <token>2</token>
@@ -56,6 +62,8 @@ The result is, (new-lines added for readability):
 <token>88</token>
 <token>99</token>
 <token>100</token>
+
+
 ```
 
 Excellent. But let's say that we don't have access to the EXSLT functions, and we have to write a template to perform the same thing.
@@ -66,93 +74,98 @@ XPath's "substring-before", "substring-after", and "contains" functions are all 
 
 Our function starts in the same manner as all recursive functions, dealing with the last case, and then all of the cases before it. The last case will be the comma-less case from our algorithm. So here's our template skeleton.
 
-```xml
-<xsl:template name="splitcommas">
-  <xsl:choose>
-    <xsl:when test=" not(contains($comma, ','))">
-      <!-- do something -->
-      </xsl:when>
-      <xsl:otherwise>
-        <!-- do something -->
-        </xsl:otherwise>
-      </xsl:choose>
+```
+    <xsl:template name="splitcommas">
+        <xsl:choose>
+            <xsl:when test=" not(contains($comma, ','))">
+                <!-- do something -->
+            </xsl:when>
+            <xsl:otherwise>
+                <!-- do something -->
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 ```
 
 We use the XPath "not(contains($comma, ','))" to, obviously, test whether our list contains a comma. As you probably noticed, we don't actually have a $comma variable defined, so we'll add our xsl:param to the template.
 
-```xml
-<xsl:template name="splitcommas">
-  <xsl:param name="comma"/>
-  <xsl:choose>
-    <xsl:when test=" not(contains($comma, ','))">
-      <!-- do something -->
-      </xsl:when>
-      <xsl:otherwise>
-        <!-- do something -->
-        </xsl:otherwise>
-      </xsl:choose>
+```
+    <xsl:template name="splitcommas">
+        <xsl:param name="comma"/>
+        <xsl:choose>
+            <xsl:when test=" not(contains($comma, ','))">
+                <!-- do something -->
+            </xsl:when>
+            <xsl:otherwise>
+                <!-- do something -->
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
+
+
 ```
 
 Now we fill in the holes in the template's framework. First, we'll handle the comma-less case, simply outputting the value wrapped in a "value" element.
 
-```xml
-<value>
-  <xsl:value-of select="$comma"/>
-</value>
+```
+<value><xsl:value-of select="$comma"/></value>
+
+
 ```
 
 Then we will deal with the otherwise case. We'll first print out the number before the first comma in the same manner that we printed the comma-less case.
 
-```xml
-<value>
-  <xsl:value-of select="substring-before($comma, ',')"/>
-</value>
+```
+<value><xsl:value-of select="substring-before($comma, ',')"/></value>
+
+
 ```
 
 Then we'll perform the same operation on the list after discarding the first number and first comma. We'll call the template again, passing everything after the first comma (thus excluding both the first number and the first comma).
 
-```xml
+```
 <xsl:call-template name="splitcommas">
-  <xsl:with-param name="comma" select="substring-after($comma, ',')"/>
+    <xsl:with-param name="comma" select="substring-after($comma, ',')"/>
 </xsl:call-template>
+
+
 ```
 
 Finally, we'll put all of these parts together, as well as adding a root template that will call our "splitcommas" template.
 
-```xml
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-  <xsl:template match="/">
-    <xsl:call-template name="splitcommas">
-      <xsl:with-param name="comma" select="comma"/>
-    </xsl:call-template>
-  </xsl:template>
-  <xsl:template name="splitcommas">
-    <xsl:param name="comma"/>
-    <xsl:choose>
-      <xsl:when test=" not(contains($comma, ','))">
-        <value>
-          <xsl:value-of select="$comma"/>
-        </value>
-      </xsl:when>
-      <xsl:otherwise>
-        <value>
-          <xsl:value-of select="substring-before($comma, ',')"/>
-        </value>
+ 
+    <xsl:template match="/">
         <xsl:call-template name="splitcommas">
-          <xsl:with-param name="comma" select="substring-after($comma, ',')"/>
+            <xsl:with-param name="comma" select="comma"/>
         </xsl:call-template>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
+    </xsl:template>
+ 
+    <xsl:template name="splitcommas">
+        <xsl:param name="comma"/>
+        <xsl:choose>
+            <xsl:when test=" not(contains($comma, ','))">
+                <value><xsl:value-of select="$comma"/></value>
+            </xsl:when>
+            <xsl:otherwise>
+                <value><xsl:value-of select="substring-before($comma, ',')"/></value>
+                <xsl:call-template name="splitcommas">
+                    <xsl:with-param name="comma" select="substring-after($comma, ',')"/>
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+ 
 </xsl:stylesheet>
+
+
 ```
 
 When applied to our source document, we get exactly what we wanted, each number of the string, enclosed in a `<value>` element (I added new-lines for readability).
 
-```xml
+```
 <?xml version="1.0"?>
 <value>1</value>
 <value>2</value>
@@ -164,6 +177,8 @@ When applied to our source document, we get exactly what we wanted, each number 
 <value>88</value>
 <value>99</value>
 <value>100</value>
+
+
 ```
 
 So we accomplished what we were looking to accomplish by writing a recursive template, however our template only deals with commas. What if our list was separated by spaces instead of commas? We'd have to either write a new template that deals with spaces, or, better yet, modify our template to be more generic and handle many cases. I invite you to take a look at the [actual implementation of the str:tokenize function](http://www.exslt.org/str/functions/tokenize/str.tokenize.template.xsl). It isn't that much more complicated, but does contain a few interesting wrinkles.

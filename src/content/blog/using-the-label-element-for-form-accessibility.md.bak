@@ -31,14 +31,18 @@ You can find a number of simple usage examples on the [W3C's WCAG Techniques pag
 
 I recently discovered something new about the `<label>` element (new to me). I hadn't realized that you can associate **multiple labels** to one form element. This is useful because it allows you to associate even more information with a form element. With it, I could write something like this:
 
-```xml
+```
 <label for="box">1. </label>
+
 <input type="checkbox" id="box"/>
-<label for="box">This is some text with a
+
+<label for="box">This is some text with a 
 ```
 
-```xml
+```
 <abbr title="full title name">shrt. title</abbr> other stuff inside.</label>
+
+
 ```
 
 This isn't the most useful example, but I think it demonstrates the general idea. \[Note: normally, I wouldn't write out an explicit number, I would use an unordered list. But without major support for [CSS counters](http://www.w3.org/TR/REC-CSS2/generate.html#counters "CSS Counters"), I find myself between a rock and a hard place.\] My optimism was quickly quashed though, because, as [Roger Johansson mentions, screenreaders tend to ignore two labels](http://www.456bereastreet.com/archive/200711/use_the_label_element_to_make_your_html_forms_accessible/). I will have to do some of my own testing to find out more, but I find this very disappointing.
