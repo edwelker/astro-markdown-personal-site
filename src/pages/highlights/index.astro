@@ -16,17 +16,12 @@ const highlights = await getAllHighlights();
         {highlights.map((item) => (
           <div class="border border-black/15 dark:border-white/20 p-4 rounded-sm hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
             <h3 class="font-semibold text-black dark:text-white">
-              <a
-                href={item.url}
-                // Line 21
+              <a href={item.url}
                 target={item.url?.startsWith("http") ? "_blank" : "_self"}
-
-                // Line 22
-                rel={item.url?.startsWith("http") ? "noopener noreferrer" : ""}
-                class="hover:underline"
-              >
-                {item.title}
-                {item.url?.startsWith("http") && <span class="text-xs ml-1 opacity-70">↗</span>}
+                external={item.url?.startsWith("http")}
+                target={item.url?.startsWith("http") ? "_blank" : "_self"}
+                rel={item.url?.startsWith("http") ? "noopener noreferrer" : ""} >
+                  {item.title}
               </a>
             </h3>
             <p class="text-sm text-black/60 dark:text-white/60 mt-1">
