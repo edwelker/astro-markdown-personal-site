@@ -15,6 +15,9 @@ const blog = (await getCollection("blog"))
 
 // Fetch and slice the top 5
 const recentHighlights = (await getAllHighlights()).slice(0, 5);
+
+import { Image } from "astro:assets";
+import { getImage } from "astro:assets";
 ---
 
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -31,22 +34,54 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
         </section>
 
         <section class="animate space-y-6">
-          <div class="flex flex-wrap items-center justify-between gap-y-2">
-            <h2 class="font-semibold text-black dark:text-white">
-              Latest posts
-            </h2>
-            <Link href="/blog"> See all posts </Link>
-          </div>
           <ul class="not-prose flex flex-col gap-4">
             {
-              blog.map((post) => (
-                <li>
-                  <ArrowCard entry={post} />
-                </li>
-              ))
+              await Promise.all( // <--- CRITICAL: AWAIT THE PROMISE.ALL
+                blog.map(async (post) => {
+
+                  // 1. Get image source (Make sure 'coverImage' matches your frontmatter field name)
+                  const imageSrc = post.data.coverImage;
+
+                  // 2. Process the image for the teaser strip
+                  const teaserImage = imageSrc
+                    ? await getImage({
+                        src: imageSrc,
+                        width: 600,
+                        height: 10,
+                        format: 'webp',
+                        // This 'quality' helps prevent the image processor from failing
+                        quality: 60
+                      })
+                    : null;
+
+                  // 3. RETURN the rendered list item
+                  return (
+                    <li>
+                      {/* The Blurry Image Strip Container */}
+                      {teaserImage && (
+                        <div class="w-full h-[10px] overflow-hidden rounded-t-lg">
+                          <Image
+                            src={teaserImage.src}
+                            width={teaserImage.width}
+                            height={teaserImage.height}
+                            alt={`Teaser strip for ${post.data.title}`}
+                            style={{
+                                objectFit: 'cover',
+                                filter: 'blur(3px) contrast(1.2)'
+                            }}
+                          />
+                        </div>
+                      )}
+
+                      <ArrowCard entry={post} />
+                    </li>
+                  );
+                })
+              )
             }
           </ul>
         </section>
+
 
         <section class="animate space-y-6">
           <div class="flex flex-wrap gap-y-2 items-center justify-between">
