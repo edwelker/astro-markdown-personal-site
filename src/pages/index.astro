@@ -32,51 +32,46 @@ import { getImage } from "astro:assets";
         </section>
 
         <section class="animate space-y-6">
-          <ul class="not-prose flex flex-col gap-4">
+<ul class="not-prose flex flex-col gap-4">
             {
-              await Promise.all( // <--- CRITICAL: AWAIT THE PROMISE.ALL
+              await Promise.all(
                 blog.map(async (post) => {
-
-                  // 1. Get image source (Make sure 'coverImage' matches your frontmatter field name)
                   const imageSrc = post.data.heroImage;
-
-                  // 2. Process the image for the teaser strip
-                  const teaserImage = imageSrc
-                    ? await getImage({
-                        src: imageSrc,
-                        width: 600,
-                        height: 10,
-                        format: 'webp',
-                        // This 'quality' helps prevent the image processor from failing
-                        quality: 60
-                      })
-                    : null;
+                  // ... (Keep the image processing code)
 
                   // 3. RETURN the rendered list item
                   return (
-                    <li>
-                        {/* Check this entire block and ensure NO stray comments or quotes remain */}
+                    <li class="w-full">
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        aria-label={post.data.title}
+                        // Use the custom class for the post card look
+                        class="p-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-150 flex flex-col"
+                      >
+                        {/* 1. IMAGE STRIP (Keep this as is) */}
                         {teaserImage && (
                           <div class="w-full h-[10px] overflow-hidden rounded-t-lg">
-                            <Image
-                              src={teaserImage.src}
-                              width={(teaserImage as any).width ?? 600}
-                              height={(teaserImage as any).height ?? 10}
-                              alt={`Teaser strip for ${post.data.title}`}
-                              style={{
-                                  objectFit: 'cover',
-                                  filter: 'blur(3px) contrast(1.2)'
-                              }}
-                            />
+                            {/* ... Image Component Code ... */}
                           </div>
                         )}
+
+                        {/* 2. POST TITLE AND DATE (THIS IS THE MISSING PART) */}
+                        <div class="flex flex-col pt-2">
+                          <h3 class="text-lg font-semibold text-black dark:text-white">
+                            {post.data.title}
+                          </h3>
+                          <p class="text-sm text-gray-500">
+                            {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                          </p>
+                        </div>
+                      </Link>
                     </li>
                   );
                 })
               )
             }
           </ul>
-        </section>
+      </section>
 
 
         <section class="animate space-y-6">
