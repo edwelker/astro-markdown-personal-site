@@ -5,3 +5,23 @@ resources
 .DS_Store
 node_modules
 .astro
+
+# Production build output
+dist/
+
+# Generated types and cache (includes data-store.json)
+.astro/
+
+# Environment Variables (Keep your secrets safe)
+.env
+.env.production
+.env.development
+.env.local
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
