@@ -15,26 +15,46 @@ export const HOME: Metadata = {
 
 export const BLOG: Metadata = {
   TITLE: "Blog",
-  DESCRIPTION: "Stuff I care about",
+  DESCRIPTION: "Blog: Stuff I care about, enough to write about it",
 };
 
 export const PROJECTS: Metadata = {
   TITLE: "Projects",
   DESCRIPTION:
-    "Stuff I did",
+    "Projects: Stuff I did",
 };
 
 export const SOCIALS: Socials = [
   {
-    NAME: "LinkedIn",
-    HREF: "https://www.linkedin.com/in/edwardwelker/",
+    NAME: "Instagram",
+    HREF: "https://instagram.com/edwelker",
   },
   {
     NAME: "GitHub",
     HREF: "https://github.com/edwelker",
   },
   {
-    NAME: "Website",
-    HREF: "https://eddiewelker.com",
+    NAME: "LinkedIn",
+    HREF: "https://www.linkedin.com/in/edwardwelker/",
+  },
+  {
+    NAME: "Spotify",
+    HREF: "https://open.spotify.com/user/edwelker", // Copied your link exactly
+  },
+  {
+    NAME: "Strava",
+    HREF: "https://www.strava.com/athletes/43444098",
+  },
+  {
+    NAME: "Trakt",
+    HREF: "https://trakt.tv/users/edwelker",
+  },
+  {
+    NAME: "Last.fm",
+    HREF: "https://www.last.fm/user/edwelker",
+  },
+  {
+    NAME: "Flickr",
+    HREF: "https://www.flickr.com/photos/ed_welker/",
   },
 ];

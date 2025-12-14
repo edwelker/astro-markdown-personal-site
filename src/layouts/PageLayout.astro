@@ -1,0 +1,18 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <Container>
+    <div class="animate font-semibold text-black dark:text-white">
+      <h1 class="text-3xl mb-6">{frontmatter.title}</h1>
+    </div>
+
+    <article class="space-y-4 prose prose-neutral dark:prose-invert max-w-none">
+      <slot />
+    </article>
+  </Container>
+</Layout>

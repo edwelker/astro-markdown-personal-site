@@ -7,6 +7,7 @@ showComments: false
 weight: 10
 link: ""
 target: "_blank"
+layout: ../layouts/PageLayout.astro
 ---
 Part programmer, cellist, biker, and photographer, I live in the suburbs of Maryland. Weee! I work at the [NCBI at NIH](http://www.ncbi.nlm.nih.gov "National Center for Biotechnology Information"), and pass the rest of the time reading, rooting for the Red Sox, and riding my bike.
 
