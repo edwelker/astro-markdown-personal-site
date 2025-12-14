@@ -76,16 +76,15 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
 
                 {/* Description */}
                 <p class="text-sm text-gray-600 dark:text-gray-400">
-                    {item.description}
-                </p>
+                  {item.description}
 
-            {/* Personal Thought / Highlight */}
-            {item.thought && (
-              <div
-                class="mt-2 text-sm text-gray-600 dark:text-gray-400"
-                set:html={item.thought}
-              />
-            )}
+                  {/* Append the em dash and thought if the thought exists */}
+                  {item.thought && (
+                    <span class="text-sm italic ml-1">
+                      — <span set:html={item.thought} />
+                    </span>
+                  )}
+                </p>
               </li>
             ))}
           </ul>
