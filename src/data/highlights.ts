@@ -43,7 +43,7 @@ export const highlights: Highlight[] = [
     description: "Photos from 718 Erie Canal Tour, 2024",
     date: "2024-12-13",
     url: "https://photos.google.com/share/AF1QipNPjKyC4iaTnLBhj0g-CTrnpXxxGMBf-09YYA-BZ7iWPmA6AyE_odwwHE5TrL__uQ?key=bXNXUGNGMEFveHlSX0lNazhiZmQ2X1FfclRQUGFR",
-    tought: "<a href='https://718outdoors.com/'>Joe's 718 Outdoors</a> 2024 Erie Canal Tour",
+    thought: "<a href='https://718outdoors.com/'>Joe's 718 Outdoors</a> 2024 Erie Canal Tour",
   },
   {
     title: "718 2023 GAP/C&O",
