@@ -24,81 +24,90 @@ Working with more than a few new-hires over the last few weeks, I've noticed tha
 
 Pull-style XSLTs reach into the source document and pull out the data they need to transform. The pull-style is similar to template systems like those found in Rails or Django, or inserting PHP commands between HTML elements. For example, given the trivial input:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <books>
-    <book>
-        <title>The Scheme Programming Language</title>
-        <author>R. Kent Dybvig</author>
-    </book>
-    <book>
-        <title>Essentials of Programming Languages</title>
-        <author>Daniel P. Friedman</author>
-    </book>
-    <book>
-        <title>An Introduction to Information Theory</title>
-        <author>John R. Pierce</author>
-    </book>
+  <book>
+    <title>The Scheme Programming Language</title>
+    <author>R. Kent Dybvig</author>
+  </book>
+  <book>
+    <title>Essentials of Programming Languages</title>
+    <author>Daniel P. Friedman</author>
+  </book>
+  <book>
+    <title>An Introduction to Information Theory</title>
+    <author>John R. Pierce</author>
+  </book>
 </books>
 ```
 
 an XSLT novice will produce a stylesheet like the following (note lines 11 and 12 which reach into the source and grab the data):
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-    <xsl:template match="/">
-        <html>
-            <head>
-                <title>books</title>
-            </head>
-            <body>
-                <dl>
-                    <xsl:for-each select="books/book">
-                        <dt><xsl:value-of select="title"/></dt>
-                        <dd><xsl:value-of select="author"/></dd>
-                    </xsl:for-each>
-                </dl>
-            </body>
-        </html>
-    </xsl:template>
+  <xsl:template match="/">
+    <html>
+      <head>
+        <title>books</title>
+      </head>
+      <body>
+        <dl>
+          <xsl:for-each select="books/book">
+            <dt>
+              <xsl:value-of select="title"/>
+            </dt>
+            <dd>
+              <xsl:value-of select="author"/>
+            </dd>
+          </xsl:for-each>
+        </dl>
+      </body>
+    </html>
+  </xsl:template>
 </xsl:stylesheet>
 ```
 
 which transforms into:
 
-```
+```xml
 <html>
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <title>books</title>
-   </head>
-   <body>
+    </head>
+    <body>
       <dl>
-         <dt>The Scheme Programming Language</dt>
-         <dd>R. Kent Dybvig</dd>
-         <dt>Essentials of Programming Languages</dt>
-         <dd>Daniel P. Friedman</dd>
-         <dt>An Introduction to Information Theory</dt>
-         <dd>John R. Pierce</dd>
+        <dt>The Scheme Programming Language</dt>
+        <dd>R. Kent Dybvig</dd>
+        <dt>Essentials of Programming Languages</dt>
+        <dd>Daniel P. Friedman</dd>
+        <dt>An Introduction to Information Theory</dt>
+        <dd>John R. Pierce</dd>
       </dl>
-   </body>
-</html>
+    </body>
+  </html>
 ```
 
 The real power of XSLT, however, is defining templates for the elements found within the source document. These are push-style XSLTs. They have two main advantages. First, push-style gracefully handles complex source structures, including recursively nested elements. It would be near impossible to handle the following source document using pull-style,
 
-```
+```xml
 <pre lang="xml">
-<div><div><div>a</div></div></div>
+  <div>
+    <div>
+      <div>a</div>
+    </div>
+  </div>
 ```
 
 if you didn't know how deep the recursive divs would go. A push-style solution, though, is incredibly simple.
 
-```
+```xml
 <pre lang="xml">
-<template match="div">
-     * <apply-templates></apply-templates> *
+  <template match="div">
+    * <apply-templates>
+  </apply-templates> *
 </template>
 ```
 
@@ -112,41 +121,40 @@ In addition to handling complex source structures, push-style allows code reuse.
 
 Given the input,
 
-```
+```xml
 <images>
-    <image>
-        <url>http://www.filmjunkie.com/drinks/blixa/blixa.jpg</url>
-        <alt>Blixa!</alt>
-    </image>
+  <image>
+    <url>http://www.filmjunkie.com/drinks/blixa/blixa.jpg</url>
+    <alt>Blixa!</alt>
+  </image>
 </images>
 ```
 
 and the XSLTs,
 
-```
-    <xsl:import href="imageformat.xsl"/>
- 
-    <xsl:template match="image">
-        <div class="wrapper">
-            <xsl:apply-imports/>
-        </div>
-    </xsl:template>
+```xml
+<xsl:import href="imageformat.xsl"/>
+<xsl:template match="image">
+  <div class="wrapper">
+    <xsl:apply-imports/>
+  </div>
+</xsl:template>
 ```
 
 and the rule in "imageformat.xsl" (the template being extended in this case),
 
-```
-    <xsl:template match="image">
-        <img src="{url}" alt="{alt_text}"/>
-    </xsl:template>
+```xml
+<xsl:template match="image">
+  <img src="{url}" alt="{alt_text}"/>
+</xsl:template>
 ```
 
 the processor will apply the higher-precedence template first, and then apply the imported (and lower-precedence) template to yield the following output.
 
-```
+```xml
 <div class="wrapper">
-    <img src="http://www.filmjunkie.com/drinks/blixa/blixa.jpg" alt="Blixa!"/>
-<div>
+  <img src="http://www.filmjunkie.com/drinks/blixa/blixa.jpg" alt="Blixa!"/>
+  <div>
 ```
 
 Push-style XSLTs are not the most obvious thing to pick up unless you've been exposed to a functional programming language like Lisp or Scheme. However, considering their great value, they should be among the first disciplines studied when learning XSLT.

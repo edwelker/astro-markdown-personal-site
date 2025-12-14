@@ -31,15 +31,13 @@ You can find a number of simple usage examples on the [W3C's WCAG Techniques pag
 
 I recently discovered something new about the `<label>` element (new to me). I hadn't realized that you can associate **multiple labels** to one form element. This is useful because it allows you to associate even more information with a form element. With it, I could write something like this:
 
-```
+```xml
 <label for="box">1. </label>
-
 <input type="checkbox" id="box"/>
-
-<label for="box">This is some text with a 
+<label for="box">This is some text with a
 ```
 
-```
+```xml
 <abbr title="full title name">shrt. title</abbr> other stuff inside.</label>
 ```
 

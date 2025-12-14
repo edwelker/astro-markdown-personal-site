@@ -95,10 +95,10 @@ Keeping selector specificity as similar as possible makes it easy to use classes
 
 HTML:
 
-```
+```xml
 <div>Default (black) box</div>
-
-<div>Green box</div><div> Red box</div>
+<div>Green box</div>
+<div> Red box</div>
 ```
 
 CSS:

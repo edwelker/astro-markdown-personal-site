@@ -45,19 +45,22 @@ secret <graphic> Error: variable secret is not bound
 </graphic></graphic>
 ```
 
-```
-<graphic><graphic>//the Javascript version of the same function
-</graphic></graphic>
+```xml
+<graphic>
+  <graphic>//the Javascript version of the same function
+</graphic>
+</graphic>
 ```
 
-```
-<graphic><graphic>var shhh = false;
+```xml
+<graphic>
+  <graphic>var shhh = false;
 var tell = (function(){
  var secret = 0;
  shhh = function(message) { secret = message; }
  return function() { console.info(secret); }
 })();
-
 shhh("harry likes sally");
-console.info("tell: " + tell() );</graphic></graphic>
+console.info("tell: " + tell() );</graphic>
+</graphic>
 ```
