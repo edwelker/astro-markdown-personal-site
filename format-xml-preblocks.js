@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-// Adjust directory if needed
-const CONTENT_DIR = './src/content';
+// Adjust this to your specific content folder
+const CONTENT_DIR = './src/content/blog';
 
 function walk(dir) {
   if (!fs.existsSync(dir)) return;
@@ -18,79 +18,87 @@ function walk(dir) {
 }
 
 function processFile(filePath) {
-  const content = fs.readFileSync(filePath, 'utf8');
+  let content = fs.readFileSync(filePath, 'utf8');
 
-  // Regex to find <pre lang="xml">...content...</pre>
-  // [\s\S]*? matches any character (including newlines) non-greedily
-  const regex = /<pre lang="xml">([\s\S]*?)<\/pre>/g;
+  // Find <pre lang="xml">...stuff...</pre>
+  const regex = /<pre\s+lang=["']?xml["']?\s*>([\s\S]*?)<\/pre>/gi;
+
+  if (!regex.test(content)) return;
 
   let hasChanges = false;
 
-  const newContent = content.replace(regex, (match, xmlContent) => {
+  const newContent = content.replace(regex, (match, innerContent) => {
+    console.log(`\n🧹 Cleaning XML in: ${path.basename(filePath)}`);
+
+    // Step 1: Strip ALL HTML tags inside the block (<span...>, </div>, etc)
+    let clean = innerContent.replace(/<[^>]+>/g, '');
+
+    // Step 2: Unescape common HTML entities
+    clean = clean
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&amp;/g, '&')
+      .replace(/\\"/g, '"'); // Fix escaped quotes from your snippet
+
+    // Step 3: Format the now-clean XML
+    const formatted = prettifyXml(clean);
     hasChanges = true;
-    const formatted = prettifyXml(xmlContent);
+
+    // Return clean standard Markdown code block
     return `<pre lang="xml">\n${formatted}\n</pre>`;
   });
 
-  if (hasChanges && newContent !== content) {
+  if (hasChanges) {
     fs.writeFileSync(filePath, newContent, 'utf8');
-    console.log(`✅ Formatted XML in: ${filePath}`);
+    console.log(`✅ FIXED: ${filePath}`);
   }
 }
 
-// A lightweight, zero-dependency XML pretty printer
 function prettifyXml(xml) {
-  // 1. Remove existing newlines/whitespace between tags to normalize
-  let clean = xml.replace(/>\s*</g, '><').trim();
-
-  // 2. Insert newlines between tags
-  // This puts every tag on its own line temporarily
+  // Normalize whitespace
+  let clean = xml.replace(/\r?\n|\r/g, '').trim();
   clean = clean.replace(/>\s*</g, '>\n<');
 
   const lines = clean.split('\n');
   let indentLevel = 0;
-  const indentStr = '  '; // 2 spaces
+  const indentStr = '  ';
 
-  const formattedLines = lines.map((line) => {
+  return lines.map((line) => {
     const trimmed = line.trim();
+    if (!trimmed) return '';
+
     let currentIndent = indentLevel;
 
-    // DETECT TAG TYPES
+    // Detect Types
     const isClosing = trimmed.startsWith('</');
-    // Matches <tag> but not </tag>, <?xml>, or <tag />
     const isOpening = trimmed.startsWith('<') &&
                       !isClosing &&
                       !trimmed.startsWith('<?') &&
                       !trimmed.startsWith('<!') &&
                       !trimmed.endsWith('/>') &&
-                      !trimmed.endsWith('?>'); // Handles the ?? typo in your prompt
+                      !trimmed.includes('??>');
 
-    // If it's a closing tag, we decrease indent BEFORE printing
     if (isClosing) {
       indentLevel--;
       currentIndent = indentLevel;
     }
 
-    // Special Handling:
-    // If a line has both opening and closing (e.g. <name>Value</name>),
-    // we effectively "open" then "close" on the same line, so net change is 0.
-    // However, our `isOpening` check above is naive.
-    // Let's refine: If it opens, we assume indent++, UNLESS it also closes.
-    const hasImmediateClosing = trimmed.match(/<[^>]+>.*<\/[^>]+>/);
+    // Check for one-liners like <name>Value</name>
+    // We look for a closing tag matching the opening tag name
+    const tagMatch = trimmed.match(/^<([^\s>]+)/);
+    const tagName = tagMatch ? tagMatch[1] : null;
+    const isOneLiner = tagName && trimmed.includes(`</${tagName}>`);
 
-    if (isOpening && !hasImmediateClosing) {
+    if (isOpening && !isOneLiner) {
       indentLevel++;
     }
 
-    // Protection against negative indents (malformed XML)
     if (currentIndent < 0) currentIndent = 0;
 
     return indentStr.repeat(currentIndent) + trimmed;
-  });
-
-  return formattedLines.join('\n');
+  }).join('\n');
 }
 
-console.log("🧹 Scanning and formatting XML blocks...");
+console.log(`🚀 Scrubbing highlighted HTML from ${CONTENT_DIR}...`);
 walk(CONTENT_DIR);
-console.log("Done.");
