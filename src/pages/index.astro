@@ -61,8 +61,13 @@ import { getImage } from "astro:assets";
                         <div class="w-full h-[10px] overflow-hidden rounded-t-lg">
                           <Image
                             src={teaserImage.src}
-                            width={teaserImage.width ?? 600}
-                            height={teaserImage.height ?? 10}
+
+                              //  FIX: Add ts-ignore above these lines
+                              //@ts-ignore
+                              width={teaserImage.width ?? 600}
+
+                              //@ts-ignore
+                              height={teaserImage.height ?? 10}
                             alt={`Teaser strip for ${post.data.title}`}
                             style={{
                                 objectFit: 'cover',

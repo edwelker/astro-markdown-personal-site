@@ -18,12 +18,15 @@ const highlights = await getAllHighlights();
             <h3 class="font-semibold text-black dark:text-white">
               <a
                 href={item.url}
-                target={item.isExternal ? "_blank" : "_self"}
-                rel={item.isExternal ? "noopener noreferrer" : ""}
+                // Line 21
+                target={item.url?.startsWith("http") ? "_blank" : "_self"}
+
+                // Line 22
+                rel={item.url?.startsWith("http") ? "noopener noreferrer" : ""}
                 class="hover:underline"
               >
                 {item.title}
-                {item.isExternal && <span class="text-xs ml-1 opacity-70">↗</span>}
+                {item.url?.startsWith("http") && <span class="text-xs ml-1 opacity-70">↗</span>}
               </a>
             </h3>
             <p class="text-sm text-black/60 dark:text-white/60 mt-1">

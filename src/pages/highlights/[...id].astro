@@ -44,27 +44,6 @@ const { Content, headings } = await render(project);
       <h1 class="text-3xl font-semibold text-black dark:text-white">
         {project.data.title}
       </h1>
-      {
-        (project.data.demoURL || project.data.repoURL) && (
-          <nav class="flex gap-1">
-            {project.data.demoURL && (
-              <Link href={project.data.demoURL} external>
-                demo
-              </Link>
-            )}
-            {(project.data.url) && (
-              <p class="mt-4 text-sm">
-                <Link
-                  href={project.data.url}
-                  external={isExternal}
-                >
-                  {isExternal ? "View External Link" : "View Project"}
-                </Link>
-              </p>
-            )}
-          </nav>
-        )
-      }
     </div>
     <TableOfContents headings={headings} />
     <article class="animate">
