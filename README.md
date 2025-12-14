@@ -2,13 +2,11 @@
 
 This is the repository for my personal site, eddiewelker.com.
 
-### The Migration History (The Road to Zero-JS)
+### History
 
-This site has been on quite the journey.
-
-1.  **WordPress (The Origin):** What I could at the time
-2.  **Hugo (The Static Phase):** Templating was impossible because each had their own individual config format.
-3.  **Astro (The Final Form):** This current version is built on Astro. Standardized markdown and configuration.
+1.  **WordPress (The Origin):** What I could do at the time, the exported from WP
+2.  **Hugo (The Static Phase):** Templating was terrible because each had their own individual config format, so I couldn't switch templates easily.
+3.  **Astro (The Final Form):** This current version is built on Astro. Standardized markdown schema and configuration.
 
 ***
 
