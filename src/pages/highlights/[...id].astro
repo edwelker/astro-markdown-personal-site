@@ -51,11 +51,15 @@ const { Content, headings } = await render(project);
                 demo
               </Link>
             )}
-            {project.data.demoURL && project.data.repoURL && <span>/</span>}
-            {project.data.repoURL && (
-              <Link href={project.data.repoURL} external>
-                repo
-              </Link>
+            {(project.data.url) && (
+              <p class="mt-4 text-sm">
+                <Link
+                  href={project.data.url}
+                  external={isExternal}
+                >
+                  {isExternal ? "View External Link" : "View Project"}
+                </Link>
+              </p>
             )}
           </nav>
         )

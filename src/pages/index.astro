@@ -40,7 +40,7 @@ import { getImage } from "astro:assets";
                 blog.map(async (post) => {
 
                   // 1. Get image source (Make sure 'coverImage' matches your frontmatter field name)
-                  const imageSrc = post.data.coverImage;
+                  const imageSrc = post.data.heroImage;
 
                   // 2. Process the image for the teaser strip
                   const teaserImage = imageSrc

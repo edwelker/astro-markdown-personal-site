@@ -46,7 +46,7 @@ const ICONS = {
   }
 };
 
-const iconData = ICONS[name];
+const iconData = ICONS[name as keyof typeof ICONS];
 ---
 
 {iconData ? (
