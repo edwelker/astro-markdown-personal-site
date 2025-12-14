@@ -5,6 +5,7 @@ import { getAllHighlights } from "@lib/highlights"; // Import the helper
 import { SITE } from "@consts";
 
 const highlights = await getAllHighlights();
+import Link from "@components/Link.astro";
 ---
 
 <Layout title={`Highlights | ${SITE.TITLE}`} description="Curated photos and code.">
