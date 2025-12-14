@@ -7,9 +7,19 @@ tags: ["All-City", "Gravel", "Touring", "Shimano GRX", "C&O Canal"]
 
 Though [All City ceased this year](https://theradavist.com/all-city-cycles-closing), my All City Dusty Rose Space Horse is still my favorite current bike. I've done three tours of the GAP/C&O, one of the Erie Canal, and many shorter adventures on it.  It fits me like a glove.
 
-{{< figure src="https://live.staticflickr.com/65535/54697029505_a51a3c4d1a_c.jpg" link="https://flickr.com/photos/ed_welker/54697029505/" title="On the water, summer 2025" >}}
+<figure>
+  <a href="https://flickr.com/photos/ed_welker/54697029505/" target="_blank">
+    <img src="https://live.staticflickr.com/65535/54697029505_a51a3c4d1a_c.jpg" alt="On the water, summer 2025" />
+  </a>
+  <figcaption>On the water, summer 2025</figcaption>
+</figure>
 
-{{< figure src="https://live.staticflickr.com/65535/54198132135_ba053c18c5_b.jpg" link="https://flickr.com/photos/ed_welker/54198132135/" title="Loaded for camping, 2024" >}}
+<figure>
+  <a href="https://flickr.com/photos/ed_welker/54198132135/" target="_blank">
+    <img src="https://live.staticflickr.com/65535/54198132135_ba053c18c5_b.jpg" alt="Loaded for camping, 2024" />
+  </a>
+  <figcaption>Loaded for camping, 2024</figcaption>
+</figure>
 
 ---
 
@@ -64,4 +74,9 @@ There are a few specific tweaks I made to this build to get the fit and gearing 
     * Brake Housing: Shimano Hydro
     * Shift Housing: Jagwire LEX-SL Black
 
-{{< figure src="https://live.staticflickr.com/65535/54542368037_d912326138_b.jpg" link="https://flickr.com/photos/ed_welker/54542368037/" title="Post C&O, mile 0" >}}
+<figure>
+  <a href="https://flickr.com/photos/ed_welker/54542368037/" target="_blank">
+    <img src="https://live.staticflickr.com/65535/54542368037_d912326138_b.jpg" alt="Post C&O, mile 0" />
+  </a>
+  <figcaption>Post C&O, mile 0</figcaption>
+</figure>

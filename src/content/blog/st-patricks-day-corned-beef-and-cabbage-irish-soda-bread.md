@@ -18,9 +18,9 @@ tags:
     - 'irish soda bread'
     - 'St. Patrick''s Day'
 noSummary: true
-featuredImage: https://live.staticflickr.com/65535/52425587443_640596352e_b_d.jpg
+cover: https://live.staticflickr.com/65535/52425587443_640596352e_b_d.jpg
 ---
-# Corned Beef and Cabbage
+## Corned Beef and Cabbage
 
 - Fresh parsley
 - mustard Seed
@@ -51,7 +51,7 @@ Alt (kosher salt, 2 tbsp, added at the corned beef stage)
 
 ![soda bread](https://live.staticflickr.com/65535/32852496747_04f1e7ef92_b_d.jpg)
 
-# Irish soda bread
+## Irish soda bread
 
 - 2 cups all purpose flour
 - 2 cups whole wheat flour
