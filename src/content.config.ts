@@ -21,12 +21,8 @@ const blog = defineCollection({
     featuredImage: z.string().optional(),
     featuredImageAlt: z.string().optional(),
 
-      layout: z.string().optional(),
+    layout: z.string().optional(),
   }),
-
-  default: {
-     layout: './layouts/PostLayout.astro',
-  },
 });
 
 const highlights = defineCollection({

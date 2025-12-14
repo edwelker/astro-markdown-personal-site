@@ -39,7 +39,6 @@ export const SOCIALS: Socials = [
   },
   {
     NAME: 'RSS',
-    ICON: 'Rss', // Icon name MUST match the key you added to Icon.astro
     HREF: '/rss.xml', // Relative path to your feed endpoint
   },
   {
