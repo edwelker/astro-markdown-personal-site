@@ -1,4 +1,17 @@
-# .github/workflows/rebuild.yml (Snippet)
+# .github/workflows/rebuild.yml
+
+# 1. ADD NAME (Shows up in the Actions tab)
+name: Manual and Scheduled Rebuild
+
+# 2. ADD TRIGGERS (Defines WHEN the workflow runs)
+on:
+  # Allows manual triggering via the GitHub Actions UI ("Run workflow" button)
+  workflow_dispatch:
+
+  # Optional: Keep or delete this if you don't want a schedule
+  schedule:
+    # Runs daily at 00:00 UTC (Adjust this if you need a specific time)
+    - cron: '0 0 * * *'
 
 jobs:
   build:
@@ -14,7 +27,7 @@ jobs:
         with:
           node-version: '20'
 
-      # Step 3: Install project dependencies (to use 'fetch' if needed, though we used native fetch)
+      # Step 3: Install project dependencies
       - name: Install dependencies
         run: npm install
 
@@ -22,7 +35,6 @@ jobs:
       - name: Fetch Flickr Photos
         run: npm run fetch:flickr
         env:
-          # Pass the secret API key to the script
           FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
 
       # Step 5: Trigger Cloudflare Pages Build Hook
