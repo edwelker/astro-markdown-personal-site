@@ -11,8 +11,8 @@ export interface Highlight {
 
 export const highlights: Highlight[] = [
   {
-    title: "Personal Website",
-    description: "This site. Work in progress, but Wordpress to Hugo to Astro/Typescript.",
+    title: "Personal Website Github Repo",
+    description: "This site's github. Work in progress, but Wordpress to Hugo to Astro/Typescript.",
     url: "https://github.com/edwelker/website/tree/astro",
     date: "2025-12-05", // Update to current if you want
     thought: "Wordpress to Hugo to Astro. Advantages/disadvantages later."

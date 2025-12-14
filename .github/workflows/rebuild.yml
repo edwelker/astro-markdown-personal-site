@@ -1,0 +1,18 @@
+# .github/workflows/rebuild.yml
+name: Daily Rebuild
+
+on:
+  schedule:
+    # Runs every day at midnight (00:00 UTC)
+    - cron: '0 0 * * *'
+  # This allows you to manually run the workflow from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages Build Hook
+        run: |
+          # The URL is now securely retrieved from your GitHub Secrets
+          curl -X POST "${{ secrets.CLOUDFLARE_BUILD_HOOK }}"
