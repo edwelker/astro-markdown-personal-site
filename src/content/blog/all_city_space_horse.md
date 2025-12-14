@@ -1,7 +1,7 @@
 ---
 title: "My All-City Space Horse Setup"
 date: 2025-12-05T17:30:00-05:00
-tags: ["All-City", "Gravel", "Touring", "Shimano GRX", "C&O Canal", "Bicycles, Builds"]
+tags: ["All-City", "bikes"]
 ---
 
 Though [All City ceased this year](https://theradavist.com/all-city-cycles-closing), my All City Dusty Rose Space Horse is still my favorite current bike. I've done three tours of the GAP/C&O, one of the Erie Canal, and many shorter adventures on it.  It fits me like a glove.
