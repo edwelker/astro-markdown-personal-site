@@ -56,11 +56,12 @@ import { getImage } from "astro:assets";
 
                   // 3. RETURN the fully rendered list item with the link, image, and text
                   return (
-                    <li class="w-full">
+                    <li
+                        class="p-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-150 flex flex-col"
+                    >
                       <Link
                         href={`/blog/${post.slug}`}
                         aria-label={post.data.title}
-                        class="p-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-150 flex flex-col"
                       >
                         {/* 1. IMAGE STRIP */}
                         {teaserImage && (
