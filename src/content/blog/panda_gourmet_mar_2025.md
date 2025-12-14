@@ -2,9 +2,6 @@
 title: ''
 date: '2025-03-30T12:53:35-05:00'
 draft: true
-    - cooking
-    - food
-    - recipes
 tags:
     - chinese
     - celery
@@ -15,6 +12,9 @@ tags:
     - food
     - "sesame oil"
     - "szechuan peppercorn oil"
+    - cooking
+    - food
+    - recipes
 ---
 ## Dry Braised Chicken
 
