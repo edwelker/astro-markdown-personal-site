@@ -20,6 +20,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"highlights">;
 
 const project = Astro.props;
+const isExternal = project.data.url?.startsWith("http");
 const { Content, headings } = await render(project);
 ---
 

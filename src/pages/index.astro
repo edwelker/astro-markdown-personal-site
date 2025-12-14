@@ -5,7 +5,6 @@ import { SITE, HOME, SOCIALS } from "@consts";
 import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
 import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
 import { getAllHighlights } from "@lib/highlights";
 
 const blog = (await getCollection("blog"))
@@ -62,8 +61,8 @@ import { getImage } from "astro:assets";
                         <div class="w-full h-[10px] overflow-hidden rounded-t-lg">
                           <Image
                             src={teaserImage.src}
-                            width={teaserImage.width}
-                            height={teaserImage.height}
+                            width={teaserImage.width ?? 600}
+                            height={teaserImage.height ?? 10}
                             alt={`Teaser strip for ${post.data.title}`}
                             style={{
                                 objectFit: 'cover',
