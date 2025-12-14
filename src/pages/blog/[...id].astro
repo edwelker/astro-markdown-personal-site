@@ -58,7 +58,10 @@ const { Content, headings } = await render(post);
 
       <Content />
 
-      <PostNavigation prevPost={prevPost} nextPost={nextPost} />
+      <PostNavigation
+        prevPost={prevPost}
+        nextPost={nextPost}
+      />
 
       <BackToPrevious href="/blog" />
 
