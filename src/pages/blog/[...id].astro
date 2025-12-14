@@ -9,92 +9,62 @@ import PostNavigation from "@components/PostNavigation.astro";
 import TableOfContents from "@components/TableOfContents.astro";
 import Giscus from "@components/Giscus.astro";
 
+type Post = CollectionEntry<"blog">;
+type Props = { post: Post; prevPost?: Post; nextPost?: Post };
+
 export async function getStaticPaths() {
-  const posts = (await getCollection("blog"))
+
+  // 1. Fetch, filter, and sort all posts in one trusted operation.
+  const allPosts = (await getCollection("blog"))
     .filter((post) => !post.data.draft)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-  return posts.map((post) => ({
-    params: { id: post.id },
-    props: post,
-  }));
-}
-type Props = CollectionEntry<"blog">;
 
-const posts = (await getCollection("blog"))
-  .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  // 2. Generate the paths, injecting next/prev posts as props
+  return allPosts.map((post, index) => {
+    // Determine the next and previous post for navigation
+    const prevPost = allPosts[index - 1] || undefined;
+    const nextPost = allPosts[index + 1] || undefined;
 
-function getNextPost() {
-  let postIndex;
-  for (const post of posts) {
-    if (post.id === Astro.params.id) {
-      postIndex = posts.indexOf(post);
-      return posts[postIndex + 1];
-    }
-  }
+    return {
+      // 🎯 FIX: Use post.slug for the clean URL parameter 'id'
+      params: { id: post.slug },
+      props: {
+        post: post,
+        prevPost: prevPost,
+        nextPost: nextPost
+      } as Props,
+    };
+  });
 }
 
-function getPrevPost() {
-  let postIndex;
-  for (const post of posts) {
-    if (post.id === Astro.params.id) {
-      postIndex = posts.indexOf(post);
-      return posts[postIndex - 1];
-    }
-  }
-}
-
-const nextPost = getNextPost();
-const prevPost = getPrevPost();
-
-const post = Astro.props;
+// Destructure all data from props, including injected navigation posts
+const { post, prevPost, nextPost } = Astro.props;
 const { Content, headings } = await render(post);
+
+// Your old helper functions (getNextPost and getPrevPost) are now deleted
+// because the navigation data is passed directly via props.
 ---
 
 <Layout title={post.data.title} description={post.data.description ?? ''}>
   <Container>
-    <div class="animate">
-      <BackToPrevious href="/blog">Back to blog</BackToPrevious>
-    </div>
-    <div class="my-10 space-y-1">
-      <div class="animate flex items-center gap-1.5">
-        <div class="font-base text-sm">
-          <FormattedDate date={post.data.date} />
-        </div>
-        &bull;
-        {post.body && (
-          <div class="font-base text-sm">
-            {readingTime(post.body)}
-          </div>
-        )}
-      </div>
-      <h1 class="animate text-3xl font-semibold text-black dark:text-white">
-        {post.data.title}
-      </h1>
-      {
-        post.data.tags && post.data.tags?.length > 0 ? (
-          <div class="animate flex gap-2 pt-1">
-            {post.data.tags.map((tag) => (
-              <a
-                href={`/tags/${tag}`}
-                class="rounded-sm border border-black/15 px-2 py-1 text-sm transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
-              >
-                {tag}
-              </a>
-            ))}
-          </div>
-        ) : null
-      }
-    </div>
-    {headings.length > 0 && <TableOfContents headings={headings} />}
-    <article class="animate">
+    <main class="prose dark:prose-invert mx-auto py-8">
+
+      <h1 class="text-3xl font-bold">{post.data.title}</h1>
+        <p class="text-sm text-gray-500">
+            Published: <FormattedDate date={post.data.date} />
+            &bull; Read time: {readingTime(Content.compiledContent ?? "")} min
+        </p>
+
+      <TableOfContents headings={headings} />
+
       <Content />
-      <div class="mt-24">
-        <PostNavigation prevPost={prevPost} nextPost={nextPost} />
-      </div>
-      <div class="mt-24">
-        <Giscus />
-      </div>
-    </article>
+
+      <PostNavigation prevPost={prevPost} nextPost={nextPost} />
+
+      <BackToPrevious />
+
+      <Giscus />
+
+    </main>
   </Container>
 </Layout>
