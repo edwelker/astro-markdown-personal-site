@@ -16,13 +16,17 @@ const highlights = await getAllHighlights();
         {highlights.map((item) => (
           <div class="border border-black/15 dark:border-white/20 p-4 rounded-sm hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
             <h3 class="font-semibold text-black dark:text-white">
-              <a href={item.url}
-                target={item.url?.startsWith("http") ? "_blank" : "_self"}
-                external={item.url?.startsWith("http")}
-                target={item.url?.startsWith("http") ? "_blank" : "_self"}
-                rel={item.url?.startsWith("http") ? "noopener noreferrer" : ""} >
+                {/* The Link component handles the 'external' prop */}
+                <Link
+                  href={item.url}
+                  external={item.url?.startsWith("http")}
+                  aria-label={item.title}
+                  class="font-medium"
+                >
                   {item.title}
-              </a>
+                </Link>
+                {/* Arrow for external links */}
+                {item.url?.startsWith("http") && <span class="text-xs text-gray-500">↗</span>}
             </h3>
             <p class="text-sm text-black/60 dark:text-white/60 mt-1">
               {item.description}
