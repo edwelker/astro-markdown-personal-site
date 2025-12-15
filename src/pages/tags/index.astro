@@ -5,7 +5,7 @@ import Container from "@components/Container.astro";
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 
-// Optimization: Calculate counts once (O(n)) instead of filtering for every tag
+// 1. Calculate counts
 const tagCounts = posts.reduce((acc, post) => {
   (post.data.tags || []).forEach((tag) => {
     acc[tag] = (acc[tag] || 0) + 1;
@@ -14,28 +14,40 @@ const tagCounts = posts.reduce((acc, post) => {
 }, {} as Record<string, number>);
 
 const tags = Object.keys(tagCounts).sort();
+
+// 2. Find Min/Max for sizing logic
+const counts = Object.values(tagCounts);
+const minCount = Math.min(...counts);
+const maxCount = Math.max(...counts);
+
+// Function to determine font size class based on popularity
+function getSizeClass(count: number) {
+  if (count === minCount) return "text-xs opacity-60"; // Rare tags
+  if (count === maxCount) return "text-3xl font-bold text-indigo-600"; // Top tags
+
+  // Linear interpolation for the rest
+  const percent = (count - minCount) / (maxCount - minCount);
+  if (percent < 0.25) return "text-sm opacity-80";
+  if (percent < 0.5) return "text-base font-medium";
+  if (percent < 0.75) return "text-lg font-semibold";
+  return "text-xl font-bold";
+}
 ---
 
-<Layout title="Tags" description="List of tags used.">
+<Layout title="Topics" description="Tag Cloud">
   <Container>
-    <div class="space-y-10">
-      <h1 class="animate font-semibold text-2xl">All Tags</h1>
-      <div class="animate flex flex-wrap gap-2">
-        {
-          tags.map((tag) => (
-            <a
-              href={`/tags/${tag}`}
-              class="flex items-center gap-1.5 rounded-sm border border-black/15 px-2 py-1 text-sm transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white group"
-            >
-              {tag}
-              {/* I separated the count slightly for better readability */}
-              <span class="text-xs text-gray-500 group-hover:text-black dark:text-gray-400 dark:group-hover:text-white transition-colors">
-                {tagCounts[tag]}
-              </span>
-            </a>
-          ))
-        }
-      </div>
+    <h1 class="font-semibold text-2xl mb-8">Topics</h1>
+
+    {/* Tag Cloud Layout: Centered, wrapping, aligned by baseline */}
+    <div class="flex flex-wrap items-baseline justify-center gap-x-6 gap-y-3 text-center">
+      {tags.map((tag) => (
+        <a
+          href={`/tags/${tag}`}
+          class={`transition-colors hover:text-indigo-500 dark:hover:text-indigo-400 ${getSizeClass(tagCounts[tag])}`}
+        >
+          {tag}
+        </a>
+      ))}
     </div>
   </Container>
 </Layout>
