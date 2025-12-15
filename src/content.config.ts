@@ -22,7 +22,6 @@ const blog = defineCollection({
     featuredImageAlt: z.string().optional(),
 
     layout: z.string().optional(),
-    tags: z.array(z.string()).optional(),
   }),
 });
 
