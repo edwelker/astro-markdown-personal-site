@@ -1,0 +1,19 @@
+---
+// src/components/Analytics.astro
+// No props needed here unless you want to pass the ID dynamically later
+const GA_MEASUREMENT_ID = 'G-19CWWGK0FL';
+---
+
+{/* GA4 SCRIPT SETUP FOR PARTYTOWN */}
+<script
+  async
+  type="text/partytown"
+  src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+></script>
+
+<script type="text/partytown" define:vars={{ GA_MEASUREMENT_ID }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', GA_MEASUREMENT_ID);
+</script>

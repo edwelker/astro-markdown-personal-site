@@ -3,6 +3,7 @@ import Head from "@components/Head.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Pagefind from "@components/PageFind.astro";
+import Analytics from "@components/Analytics.astro";
 
 import "@fontsource/inter";
 import '@fontsource/inter/400.css';
@@ -11,30 +12,22 @@ import '@fontsource/inter/700.css';
 type Props = {
   title: string;
   description: string;
+  image?: string;
 };
 
 import { SITE } from "@consts";
 
-const { title, description } = Astro.props;
+const { title, description, image } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-      <Head title={`${title} | ${SITE.TITLE}`} description={description} />
-    {/* GA4 SCRIPT SETUP FOR PARTYTOWN */}
-    <script
-      async
-      type="text/partytown"
-      src="https://www.googletagmanager.com/gtag/js?id=G-19CWWGK0FL"
-    ></script>
+    {/* Pass the image prop down to Head */}
+    <Head title={`${title} | ${SITE.TITLE}`} description={description} image={image} />
 
-    <script type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-19CWWGK0FL');
-    </script>
+    {/* 3. Add Analytics here */}
+    <Analytics />
   </head>
   <body>
     <noscript>
