@@ -2,8 +2,7 @@
 title: 'Uploaded Photos'
 date: '2008-03-18T22:56:47-05:00'
 slug: 2008/03/18/uploaded-photos
-    - photos
-tags: []
+tags: ["photos"]
 ---
 [![](http://farm3.static.flickr.com/2327/2344026927_f9d790229f_m.jpg)](http://www.flickr.com/people/ed_welker)My new resolution: learn how to take better photographs, simply to reduce the time I spend editing them!
 

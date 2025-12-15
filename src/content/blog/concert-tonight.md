@@ -2,13 +2,7 @@
 title: 'Concert Tonight'
 date: '2007-10-20T14:44:25-05:00'
 slug: 2007/10/20/concert-tonight
-    - Boston
-    - 'classical music'
-    - 'red sox'
-tags:
-    - 'columbia orchestra'
-    - 'horn concerto'
-    - tchaikovsky
+tags: ["Boston", "classical music", "columbia orchestra", "horn concerto", "red sox", "tchaikovsky"]
 ---
 I've got a concert tongiht. [Check out the Columbia Orchestra site for details](http://columbiaorchestra.org/). Tchaikovsky 4, along with Strauss' first Horn Concerto, and a Brandenburg. Should be pretty good, especially since I've practiced a fair amount for this.
 

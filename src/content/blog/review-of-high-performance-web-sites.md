@@ -2,16 +2,7 @@
 title: 'Review of High Performance Web Sites'
 date: '2007-11-19T00:27:28-05:00'
 slug: 2007/11/19/review-of-high-performance-web-sites
-    - books
-    - firefox
-tags:
-    - firebug
-    - 'high performance web sites'
-    - 'load time'
-    - performance
-    - speed
-    - 'web site'
-    - yslow
+tags: ["books", "firebug", "firefox", "high performance web sites", "load time", "performance", "speed", "web site", "yslow"]
 ---
 When I came across [![High Performance Web Sites Cover](http://www.oreilly.com/catalog/covers/9780596529307_cat.gif "High Performance Web Sites Cover")](http://www.oreilly.com/catalog/9780596529307/)[High Performance Web Sites; Essential Knowledge for Frontend Engineers](http://www.oreilly.com/catalog/9780596529307/) on Amazon, I was excited. I've been actively using the [Yslow plugin](http://developer.yahoo.com/yslow/) for [Firebug](http://www.getfirebug.com/), and was interested in finding out more. At the day job I can't implement each of the 14 rules myself, however the plugin is useful none-the-less. It's terrific to have a checklist to work off of when entering QA mode, that way you're sure not to forget anything.
 

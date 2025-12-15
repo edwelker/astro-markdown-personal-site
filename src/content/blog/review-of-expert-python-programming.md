@@ -2,14 +2,7 @@
 title: 'Review of "Expert Python Programming"'
 date: '2009-01-25T13:02:24-05:00'
 slug: 2009/01/25/review-of-expert-python-programming
-    - books
-    - programming
-    - python
-tags:
-    - book
-    - programming
-    - python
-    - review
+tags: ["book", "books", "programming", "python", "review"]
 ---
 [![Expert Python Programming](/expertpythonprogramming.jpg "Expert Python Programming")](http://www.packtpub.com/expert-python-programming/book)
 

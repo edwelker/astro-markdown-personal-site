@@ -2,10 +2,7 @@
 title: 'Random February Thoughts'
 date: '2008-03-01T13:02:29-05:00'
 slug: 2008/03/01/random-february-thoughts
-    - 'classical music'
-    - xslt
-tags:
-    - 'columbia orchestra'
+tags: ["classical music", "columbia orchestra", "xslt"]
 ---
 In an effort to inspire me to write something else, I am throwing a few thoughts out from the last month.
 

@@ -2,31 +2,7 @@
 title: 'Big release day on the webbernet'
 date: '2008-03-05T23:06:37-05:00'
 slug: 2008/03/05/big-release-day-on-the-webbernet
-    - firefox
-    - ie
-    - ie8
-    - javascript
-    - microformats
-    - microsoft
-    - standards
-    - web
-tags:
-    - acid2
-    - beta
-    - contacts
-    - css
-    - 'fire eagle'
-    - 'geo tagging'
-    - gmail
-    - google
-    - html
-    - openAIM
-    - 'operator plugin'
-    - release
-    - software
-    - whitepapers
-    - 'wia aria'
-    - yahoo
+tags: ["acid2", "beta", "contacts", "css", "fire eagle", "firefox", "geo tagging", "gmail", "google", "html", "ie", "ie8", "javascript", "microformats", "microsoft", "openAIM", "operator plugin", "release", "software", "standards", "web", "whitepapers", "wia aria", "yahoo"]
 ---
 So I guess it's simply the time of year. Many big releases today... software, APIs, and more!
 

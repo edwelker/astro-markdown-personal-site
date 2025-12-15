@@ -2,19 +2,7 @@
 title: 'catching up'
 date: '2007-10-03T22:16:00-05:00'
 slug: 2007/10/03/catching-up
-    - baseball
-    - bethesda
-    - Boston
-    - 'classical music'
-    - 'red sox'
-    - xslt
-tags:
-    - 'Advanced DOM Scripting'
-    - kensington
-    - moving
-    - 'random thoughts'
-    - 'riding my bike'
-    - tchaikovsky
+tags: ["Advanced DOM Scripting", "Boston", "baseball", "bethesda", "classical music", "kensington", "moving", "random thoughts", "red sox", "riding my bike", "tchaikovsky", "xslt"]
 ---
 This is my appropriately named "catching up" post. As most know, I've moved over the last month. Despite my early action, I still had to do a lot of work at the end of the month. C'est la vie, that's what moving is. Aside that, I've also been focused on various work related things (css, xslt, and the "portal" system), as well as the end of baseball's regular season and the beginning of the post season.
 

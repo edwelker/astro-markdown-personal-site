@@ -2,12 +2,7 @@
 title: Playoffs
 date: '2007-10-02T19:07:46-05:00'
 slug: 2007/10/02/playoffs
-    - baseball
-    - 'red sox'
-tags:
-    - alcs
-    - angels
-    - fenway
+tags: ["alcs", "angels", "baseball", "fenway", "red sox"]
 ---
 The Red Sox start the playoffs tomorrow at Fenway against the Angels. I will be rooting for them (as always), but with added urgency since I have the chance to go to Game 2 of the ALCS, when they advance. 🙂
 

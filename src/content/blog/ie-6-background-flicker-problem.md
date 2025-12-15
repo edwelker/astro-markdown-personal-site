@@ -2,13 +2,7 @@
 title: 'IE 6 background flicker problem revisited'
 date: '2007-08-21T14:20:56-05:00'
 slug: 2007/08/21/ie-6-background-flicker-problem
-    - ie
-    - microsoft
-tags:
-    - 'background image'
-    - flicker
-    - 'internet explorer'
-    - 'server settings'
+tags: ["background image", "flicker", "ie", "internet explorer", "microsoft", "server settings"]
 ---
 So I fell into the (now famous to me) Internet Explorer 6 background-image flicker problem. Oh, fun times. There have been a few different solutions presented, ranging from [javascript](http://evil.che.lu/2006/9/25/no-more-ie6-background-flicker) to [server settings](http://dean.edwards.name/my/flicker.html) (or my favorite \[sarcasm\], to put the background-image on a copy of itself so you don't see the flicker). The problem is that I was using a pre-SP1 IE, so the javascript solution wouldn't work, and I did not have access to the server.
 

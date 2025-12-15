@@ -2,11 +2,7 @@
 title: 'Horror Movies, Final installment'
 date: '2008-11-11T12:47:43-05:00'
 slug: 2008/11/11/horror-movies-final-installment
-    - movies
-tags:
-    - halloween
-    - movies
-    - scary
+tags: ["halloween", "movies", "scary"]
 ---
 The final installment... a little late.
 

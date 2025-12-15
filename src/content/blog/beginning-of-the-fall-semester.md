@@ -2,12 +2,7 @@
 title: 'Beginning of the fall semester'
 date: '2007-08-26T21:28:12-05:00'
 slug: 2007/08/26/beginning-of-the-fall-semester
-    - 'east hampton'
-tags:
-    - 'columbia orchestra'
-    - fall
-    - 'fall semester'
-    - summer
+tags: ["columbia orchestra", "east hampton", "fall", "fall semester", "summer"]
 ---
 Tomorrow is the start of a new [Columbia Orchestra](http://www.columbiaorchestra.org) season. It's the first rehearsal. I could not be less prepared either. For the first time I can remember, I am starting a new semester and nothing in my life is changing. I don't have a new place to live, any new classes, any new books/clothes/shoes for school, or even any new school.
 

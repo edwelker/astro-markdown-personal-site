@@ -2,19 +2,7 @@
 title: ''
 date: '2025-03-30T12:53:35-05:00'
 draft: true
-tags:
-    - chinese
-    - celery
-    - chicken
-    - pepper
-    - garlic
-    - tofu
-    - food
-    - "sesame oil"
-    - "szechuan peppercorn oil"
-    - cooking
-    - food
-    - recipes
+tags: ["celery", "chicken", "chinese", "cooking", "food", "garlic", "pepper", "recipes", "sesame oil", "szechuan peppercorn oil", "tofu"]
 ---
 ## Dry Braised Chicken
 

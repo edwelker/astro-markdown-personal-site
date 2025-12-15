@@ -2,11 +2,7 @@
 title: 'Next-to-last Horror Movies'
 date: '2008-10-30T00:56:47-05:00'
 slug: 2008/10/30/next-to-last-horror-movies
-    - movies
-tags:
-    - halloween
-    - movies
-    - scary
+tags: ["halloween", "movies", "scary"]
 ---
 Latest installment...
 

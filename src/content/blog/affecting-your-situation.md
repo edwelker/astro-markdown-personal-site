@@ -2,12 +2,7 @@
 title: 'Affecting your situation'
 date: '2008-12-18T01:17:38-05:00'
 slug: 2008/12/18/affecting-your-situation
-    - cello
-    - 'classical music'
-tags:
-    - 'classical music'
-    - Mahler
-    - 'New York Philharmonic'
+tags: ["Mahler", "New York Philharmonic", "cello", "classical music"]
 ---
 I don't typically link to other blogs/articles, nor do I mention classical music particularly often, but I found this article and blog entry so interesting and thought-provoking that they deserve a re-post.
 

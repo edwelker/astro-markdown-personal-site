@@ -2,12 +2,7 @@
 title: 'PHP and Me'
 date: '2008-04-01T23:02:38-05:00'
 slug: 2008/04/01/php-and-me
-    - programming
-    - xslt
-tags:
-    - php
-    - 'programming language'
-    - scheme
+tags: ["php", "programming", "programming language", "scheme", "xslt"]
 ---
 I just finished writing a not-so-simple, not-so-complex PHP script. First, lemme say that I had a good time with it, since it isn't either XSLT or Portal (my workplace's homebrew) code. It's kinda refreshing to look outside of my multi-month project. Exciting, in fact... despite how insignificant (in the grand scheme of things) it is.
 

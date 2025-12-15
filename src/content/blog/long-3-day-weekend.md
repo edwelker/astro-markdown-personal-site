@@ -2,12 +2,7 @@
 title: 'Long 3 day weekend'
 date: '2007-11-13T23:53:17-05:00'
 slug: 2007/11/13/long-3-day-weekend
-    - 'east hampton'
-tags:
-    - Amagansett
-    - 'Farmers Market'
-    - 'Long Island'
-    - 'new york'
+tags: ["Amagansett", "Farmers Market", "Long Island", "east hampton", "new york"]
 ---
 So I return from East Hampton. 800 miles to empty out the freezer (and then de-ice it with only a metal spatula).  Alright, so I've had some better trips. At least the [Amagansett Farmer's Market](http://flickr.com/photos/ed_welker/499972493/) was good. And the surf looked good (if not near-frozen). I won't go into details, but my weekend consisted of:
 
