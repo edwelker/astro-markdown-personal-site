@@ -4,23 +4,33 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
-const tags = [...new Set(posts.flatMap((post) => post.data.tags || []))].sort();
+
+// Optimization: Calculate counts once (O(n)) instead of filtering for every tag
+const tagCounts = posts.reduce((acc, post) => {
+  (post.data.tags || []).forEach((tag) => {
+    acc[tag] = (acc[tag] || 0) + 1;
+  });
+  return acc;
+}, {} as Record<string, number>);
+
+const tags = Object.keys(tagCounts).sort();
 ---
 
 <Layout title="Tags" description="List of tags used.">
   <Container>
     <div class="space-y-10">
-      <h1 class="animate font-semibold">All Tags</h1>
+      <h1 class="animate font-semibold text-2xl">All Tags</h1>
       <div class="animate flex flex-wrap gap-2">
         {
           tags.map((tag) => (
             <a
               href={`/tags/${tag}`}
-              class="rounded-sm border border-black/15 px-2 py-1 text-sm transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
+              class="flex items-center gap-1.5 rounded-sm border border-black/15 px-2 py-1 text-sm transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white group"
             >
-              {tag}{" "}
-              <span class="text-sm text-gray-600">
-                ({posts.filter((post) => post.data.tags?.includes(tag)).length})
+              {tag}
+              {/* I separated the count slightly for better readability */}
+              <span class="text-xs text-gray-500 group-hover:text-black dark:text-gray-400 dark:group-hover:text-white transition-colors">
+                {tagCounts[tag]}
               </span>
             </a>
           ))

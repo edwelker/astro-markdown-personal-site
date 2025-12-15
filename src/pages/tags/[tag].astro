@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+import BackToPrevious from "@components/BackToPrevious.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+
+  // Get unique tags
+  const tags = [...new Set(posts.flatMap((post) => post.data.tags || []))];
+
+  return tags.map((tag) => {
+    // Filter posts for this tag
+    const taggedPosts = posts.filter((post) => post.data.tags?.includes(tag));
+
+    // Sort by date, most recent first (Moved here for build-time performance)
+    taggedPosts.sort(
+      (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+    );
+
+    return {
+      params: { tag }, // CHANGED: 'id' -> 'tag' to match the filename [tag].astro
+      props: { posts: taggedPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Layout title={`Tag: ${tag}`} description={`Posts with the tag: ${tag}`}>
+  <Container>
+    <div class="space-y-10" data-pagefind-ignore>
+      <BackToPrevious href="/tags">All tags</BackToPrevious>
+
+      <h1 class="animate font-semibold text-3xl text-black dark:text-white capitalize">
+        #{tag}
+      </h1>
+
+      <ul class="animate flex flex-col gap-4">
+        {posts.map((post) => <ArrowCard entry={post} />)}
+      </ul>
+    </div>
+  </Container>
+</Layout>
