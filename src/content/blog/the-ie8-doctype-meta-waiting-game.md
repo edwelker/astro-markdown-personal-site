@@ -2,7 +2,7 @@
 title: 'The IE8 doctype meta waiting game'
 date: '2008-01-26T20:16:26-05:00'
 slug: 2008/01/26/the-ie8-doctype-meta-waiting-game
-tags: ["civil discourse", "default behavior", "doctype", "ie", "ie8", "meta", "microsoft", "proposal", "standards", "web", "web developer"]
+tags: ["civil discourse", "default behavior", "internet explorer", "meta", "microsoft", "proposal", "web", "web developer", "web standards"]
 ---
 The first time I played Yahtzee was... only about a month ago. I won 3 of my first 4 games. It was a fun game. I wonder how that game would be if I played against... oh, let's say... Microsoft. Probably... not so much.
 

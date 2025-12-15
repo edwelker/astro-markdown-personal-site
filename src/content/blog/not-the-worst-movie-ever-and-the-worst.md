@@ -2,7 +2,7 @@
 title: 'Not the worst movie ever, and the worst'
 date: '2007-10-23T23:14:27-05:00'
 slug: 2007/10/23/not-the-worst-movie-ever-and-the-worst
-tags: ["halloween", "movies", "rob zombie", "snakes on a plane", "terrible movie"]
+tags: ["film", "halloween"]
 ---
 I know the title isn't English... but I'm a little out of it after what I just watched.
 

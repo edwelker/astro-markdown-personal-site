@@ -2,7 +2,7 @@
 title: 'Review of "Learning Website Development with Django"'
 date: '2008-07-07T23:09:03-05:00'
 slug: 2008/07/07/review-of-learning-website-development-with-django
-tags: ["application", "application framework", "ayman hourieh", "book", "books", "development", "django", "programming", "python", "web", "website"]
+tags: ["application", "ayman hourieh", "design", "development", "django", "programming", "python", "reading", "web"]
 ---
 [![Cover, Learning Website Development with Django](/learningwebsitedjango.jpg "Cover, Learning Website Development with Django")](http://www.packtpub.com/django-website-development-tutorial/book)Over the past few weeks, I've been playing around with Django. Because of that, I've been looking at a few different books on the subject. I first started out with the [Django Book](http://www.djangobook.com/en/1.0/), which took me a few days to read. I can't say I absorbed it all, but I got the general idea. Then I decided to look into other books and found [*Learning Website Development with Django*](http://www.packtpub.com/django-website-development-tutorial/book), by [Ayman Hourieh](http://aymanh.com/).  I started right away.
 

@@ -2,7 +2,7 @@
 title: 'I was going to write tonight…'
 date: '2008-02-21T00:05:05-05:00'
 slug: 2008/02/21/i-was-going-to-write-tonight
-tags: ["photos"]
+tags: ["photography"]
 ---
 but I got distracted uploading a boat-load of photos. [Look at them instead.](http://flickr.com/photos/ed_welker/)
 

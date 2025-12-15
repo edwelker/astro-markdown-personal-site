@@ -2,7 +2,7 @@
 title: 'Snapshot of right now'
 date: '2008-10-08T00:39:48-05:00'
 slug: 2008/10/08/snapshot-of-right-now
-tags: ["personal"]
+tags: ["life"]
 ---
 Oct. 8, 2009 -- 12:32am
 

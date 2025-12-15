@@ -2,7 +2,7 @@
 title: 'XSLT Class'
 date: '2007-10-23T22:07:13-05:00'
 slug: 2007/10/23/xslt-class
-tags: ["beginning xslt", "doug tidwell", "functional", "functional programming language", "jeni tennison", "mastering xml transformations", "mulberry technologies", "wendell piez", "xml", "xslt", "xslt 1.0", "xslt class"]
+tags: ["functional programming", "mulberry technologies", "xslt"]
 ---
 Last Monday through last Wednesday I attended [Mulberry Technologies' XSLT course](http://mulberrytech.com/). I had a fun time, and learned a bunch.
 

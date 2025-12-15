@@ -2,7 +2,7 @@
 title: 'Url Fairy Tales'
 date: '2009-03-31T11:23:47-05:00'
 slug: 2009/03/31/url-fairy-tales
-tags: ["email", "fairy tales", "urls", "work"]
+tags: ["career", "email", "fairy tales", "urls"]
 ---
 On Mar 31, 2009, at 11:45 AM, Edward Welker wrote:
 

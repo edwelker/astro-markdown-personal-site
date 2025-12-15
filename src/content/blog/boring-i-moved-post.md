@@ -2,7 +2,7 @@
 title: 'Boring "I moved" post'
 date: '2009-09-09T20:07:12-05:00'
 slug: 2009/09/09/boring-i-moved-post
-tags: ["moving", "personal"]
+tags: ["life", "moving"]
 ---
 Summer was ending so I decided to move. Ok, not really, it was simply time.
 

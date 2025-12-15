@@ -2,7 +2,7 @@
 title: 'More October Horror Movies'
 date: '2008-10-26T15:07:47-05:00'
 slug: 2008/10/26/more-october-horror-movies
-tags: ["halloween", "movies", "scary"]
+tags: ["film", "halloween"]
 ---
 Continuing the reviews of my house's October horror movie film-fest:
 
