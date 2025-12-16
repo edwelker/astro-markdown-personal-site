@@ -1,4 +1,11 @@
 # This redirects file works with cloudflare pages in order to redirect from old links to new ones.
+#
+# Here's stuff I found that Google had indexed
+/2008/12/27/my-xslt-toolbox-copy-and-copy-of/ blog/2008/12/27/xslt-copy-copy-of/ 301
+/2008/10/25/review-of-object-oriented-javascript/ /blog/2008/10/25/object-oriented-javascript-review/ 301
+/2009/01/08/my-xslt-toolbox-5-favorite-xslt-books/ /blog/2009/01/08/top-5-xslt-books/ 301
+/2009/09/24/review-of-learning-jquery-1.3/ /blog/2009/09/24/review-of-learning-jquery-1-3/ 301
+
 # Blog Archives
 /2007/10/20/concert-tonight /blog/2007/10/20/concert-tonight/ 301
 /2008/02/10/writing-scheme-in-javascript-i /blog/2008/02/10/writing-scheme-in-javascript-i/ 301
