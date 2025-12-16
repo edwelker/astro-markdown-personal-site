@@ -1,6 +1,7 @@
 ---
 title: "My All-City Space Horse Setup"
 date: 2025-12-05T17:30:00-05:00
+slug: 2025/12/05/all_city_space_horse
 coverImage: "https://live.staticflickr.com/65535/54542368037_d912326138_b.jpg"
 tags: ["cycling"]
 ---
