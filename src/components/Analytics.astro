@@ -1,6 +1,5 @@
 ---
 // src/components/Analytics.astro
-// No props needed here unless you want to pass the ID dynamically later
 const GA_MEASUREMENT_ID = 'G-19CWWGK0FL';
 ---
 
@@ -13,7 +12,6 @@ const GA_MEASUREMENT_ID = 'G-19CWWGK0FL';
 ></script>
 
 <script type="text/partytown" define:vars={{ GA_MEASUREMENT_ID }}>
-  is:inline
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
