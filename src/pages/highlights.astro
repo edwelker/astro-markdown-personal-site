@@ -1,46 +1,53 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import Link from "@components/Link.astro"; 
+import Link from "@components/Link.astro";
 import { getAllHighlights } from '../lib/highlights';
 
 const highlights = await getAllHighlights();
 ---
 
 <PageLayout frontmatter={{ title: "Highlights", description: "My cycling and project highlights" }}>
-  
-  {/* We removed the <h1> and the top <div> section here because PageLayout 
-      already renders the main Title based on the frontmatter above. */}
 
-  <ul class="flex flex-col gap-4">
+  {/* FIXES:
+      1. 'list-none': Removes the prose bullets.
+      2. 'p-0': Removes the automatic indentation.
+      3. 'not-prose': Tells Tailwind Typography to ignore this section completely.
+  */}
+  <ul class="flex flex-col gap-2 list-none p-0 not-prose">
     {highlights.map((item) => (
-      <li class="flex flex-col gap-1">
-        <div class="flex items-baseline gap-2">
-          
-          {/* Using the Link component to match homepage behavior */}
-          <Link
-            href={item.url}
-            external={item.url.startsWith("http")}
-            aria-label={item.title}
-          >
-            {item.title}
-          </Link>
-          
-          {/* Explicit arrow if the Link component doesn't add it automatically */}
-          {item.url.startsWith("http") && <span class="text-xs text-gray-500">↗</span>}
+      <li class="relative">
+        <div class="group p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+          <div class="flex flex-col gap-1">
+
+            {/* Title Row */}
+            <div class="flex items-baseline gap-2">
+              <Link
+                href={item.url}
+                external={item.url.startsWith("http")}
+                aria-label={item.title}
+                class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2"
+              >
+                {item.title}
+              </Link>
+
+              {/* Arrow for external links */}
+              {item.url.startsWith("http") && <span class="text-xs text-neutral-400">↗</span>}
+            </div>
+
+            {/* Description and Thought */}
+            <p class="text-sm text-neutral-600 dark:text-neutral-400">
+              {item.description}
+
+              {item.thought && (
+                <span class="text-neutral-500">
+                   — <span class="italic" set:html={item.thought} />
+                </span>
+              )}
+            </p>
+          </div>
         </div>
-
-        {/* Description and Thought */}
-        <p class="text-sm text-gray-600 dark:text-gray-400">
-          {item.description}
-
-          {item.thought && (
-            <span class="text-sm italic ml-1">
-              — <span set:html={item.thought} />
-            </span>
-          )}
-        </p>
       </li>
     ))}
   </ul>
-  
+
 </PageLayout>
