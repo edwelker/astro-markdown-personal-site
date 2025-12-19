@@ -9,6 +9,11 @@ import robotsTxt from 'astro-robots-txt';
 // https://astro.build/config
 export default defineConfig({
   site: "https://eddiewelker.com",
+  build: {
+    // This forces Astro to put CSS directly into <style> tags
+    // instead of creating a separate .css file.
+    inlineStylesheets: 'always'
+  },
   integrations: [
       sitemap(),
       mdx(),
