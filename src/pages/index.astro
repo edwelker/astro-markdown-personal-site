@@ -18,6 +18,7 @@ const blog = (await getCollection("blog"))
 const recentHighlights = (await getAllHighlights()).slice(0, 5);
 
 import FlickrGallery from '@components/FlickrGallery.astro';
+import MusicStats from "@components/MusicStats.astro";
 ---
 
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -109,6 +110,14 @@ import FlickrGallery from '@components/FlickrGallery.astro';
           </ul>
         </section>
 
+        <section>
+            <FlickrGallery />
+        </section>
+
+        <section class="animate mt-16 space-y-4">
+          <MusicStats />
+        </section>
+
         <section class="animate space-y-4">
           <h2 class="font-semibold text-black dark:text-white">
             Let's Connect
@@ -137,9 +146,6 @@ import FlickrGallery from '@components/FlickrGallery.astro';
             </ul>
         </section>
 
-        <section>
-            <FlickrGallery />
-        </section>
       </div>
     </aside>
   </Container>
