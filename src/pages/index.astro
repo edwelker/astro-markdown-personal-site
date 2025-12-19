@@ -5,6 +5,8 @@ import { SITE, HOME, SOCIALS } from "@consts";
 import Link from "@components/Link.astro";
 import { getCollection } from "astro:content";
 import { getAllHighlights } from "@lib/highlights";
+import FlickrGallery from '@components/FlickrGallery.astro';
+import MusicStats from "@components/MusicStats.astro";
 
 // DELETE THIS LINE IF YOU ARE NOT USING IT:
 // import ArrowCard from "@components/ArrowCard.astro";
@@ -16,9 +18,6 @@ const blog = (await getCollection("blog"))
 
 // Fetch and slice the top 5
 const recentHighlights = (await getAllHighlights()).slice(0, 5);
-
-import FlickrGallery from '@components/FlickrGallery.astro';
-import MusicStats from "@components/MusicStats.astro";
 ---
 
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -34,41 +33,46 @@ import MusicStats from "@components/MusicStats.astro";
           </article>
         </section>
 
+        {/* --- BLOG POSTS SECTION --- */}
         <section class="animate space-y-6">
-            <div class="flex flex-wrap gap-y-2 items-center justify-between">
-              <h5 class="font-semibold text-black dark:text-white">
-                Posts
-              </h5>
-              <Link href="/blog/">
-                See all posts
-              </Link>
-            </div>
-          <ul class="not-prose flex flex-col gap-4">
-            {
-              // We can now use a simple map function since there are no promises (await) inside
-              blog.map((post) => (
-                <li>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    aria-label={post.data.title}
-                  >
-                    {/* POST TITLE AND DATE */}
-                    <div class="flex flex-col">
-                      <h3 class="font-medium text-black dark:text-white">
-                        {post.data.title}
-                      </h3>
-                      <p class="text-sm text-gray-500">
-                        {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                      </p>
-                    </div>
-                  </Link>
-                </li>
-              ))
-            }
+          <div class="flex flex-wrap gap-y-2 items-center justify-between">
+            <h5 class="font-semibold text-black dark:text-white">
+              Posts
+            </h5>
+            <Link href="/blog/">
+              See all posts
+            </Link>
+          </div>
+
+          <ul class="not-prose flex flex-col gap-2">
+            {blog.map((post) => (
+              <li>
+                {/* STRUCTURAL FIX:
+                   1. We use a <div> (not an <a>) for the wrapper to handle the hover background.
+                   2. We put 'group' on this wrapper so the child Link knows when to underline.
+                */}
+                <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                  <div class="flex flex-col gap-1">
+                    {/* The Title IS the Link now */}
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2"
+                    >
+                      {post.data.title}
+                    </Link>
+
+                    {/* Date is outside the Link, so no underlines ever */}
+                    <p class="text-sm text-neutral-500">
+                      {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                    </p>
+                  </div>
+                </div>
+              </li>
+            ))}
           </ul>
         </section>
 
-
+        {/* --- HIGHLIGHTS SECTION --- */}
         <section class="animate space-y-6">
           <div class="flex flex-wrap gap-y-2 items-center justify-between">
             <h5 class="font-semibold text-black dark:text-white">
@@ -79,32 +83,34 @@ import MusicStats from "@components/MusicStats.astro";
             </Link>
           </div>
 
-          <ul class="flex flex-col gap-4">
+          <ul class="flex flex-col gap-2">
             {recentHighlights.map((item) => (
-              <li class="flex flex-col gap-1">
-                <div class="flex items-baseline gap-2">
-                    <Link
-                      href={item.url}
-                      external={item.url.startsWith("http")}
-                      aria-label={item.title}
-                    >
-                    {item.title}
-                    </Link>
-                    {/* Arrow for external links */}
-                    {item.url.startsWith("http") && <span class="text-xs text-gray-500">↗</span>}
+              <li class="relative">
+                <div class="group p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                  <div class="flex flex-col gap-1">
+
+                    <div class="flex items-baseline gap-2">
+                      <Link
+                        href={item.url}
+                        external={item.url.startsWith("http")}
+                        aria-label={item.title}
+                        class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2"
+                      >
+                        {item.title}
+                      </Link>
+                      {item.url.startsWith("http") && <span class="text-xs text-neutral-400">↗</span>}
+                    </div>
+
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                      {item.description}
+                      {item.thought && (
+                        <span class="text-neutral-500">
+                           — <span class="italic" set:html={item.thought} />
+                        </span>
+                      )}
+                    </p>
+                  </div>
                 </div>
-
-                {/* Description */}
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                  {item.description}
-
-                  {/* Append the em dash and thought if the thought exists */}
-                  {item.thought && (
-                    <span class="text-sm italic ml-1">
-                      — <span set:html={item.thought} />
-                    </span>
-                  )}
-                </p>
               </li>
             ))}
           </ul>
