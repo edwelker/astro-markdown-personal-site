@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run fetch:flickr && astro check && astro build",
+    "build": "npm run fetch && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "fetch" : "npm run fetch:flickr && npm run fetch:lastfm"
     "fetch:flickr": "node scripts/fetch-flickr.js"
+    "fetch:lastfm": "node scripts/fetch-lastfm.mjs"
   },
   "engines": {
     "node": ">=20.3.0"
