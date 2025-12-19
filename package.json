@@ -8,8 +8,8 @@
     "build": "npm run fetch && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fetch" : "npm run fetch:flickr && npm run fetch:lastfm"
-    "fetch:flickr": "node scripts/fetch-flickr.js"
+    "fetch": "npm run fetch:flickr && npm run fetch:lastfm",
+    "fetch:flickr": "node scripts/fetch-flickr.js",
     "fetch:lastfm": "node scripts/fetch-lastfm.mjs"
   },
   "engines": {
