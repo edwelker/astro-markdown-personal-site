@@ -1,0 +1,46 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Link from "@components/Link.astro"; 
+import { getAllHighlights } from '../lib/highlights';
+
+const highlights = await getAllHighlights();
+---
+
+<PageLayout frontmatter={{ title: "Highlights", description: "My cycling and project highlights" }}>
+  
+  {/* We removed the <h1> and the top <div> section here because PageLayout 
+      already renders the main Title based on the frontmatter above. */}
+
+  <ul class="flex flex-col gap-4">
+    {highlights.map((item) => (
+      <li class="flex flex-col gap-1">
+        <div class="flex items-baseline gap-2">
+          
+          {/* Using the Link component to match homepage behavior */}
+          <Link
+            href={item.url}
+            external={item.url.startsWith("http")}
+            aria-label={item.title}
+          >
+            {item.title}
+          </Link>
+          
+          {/* Explicit arrow if the Link component doesn't add it automatically */}
+          {item.url.startsWith("http") && <span class="text-xs text-gray-500">↗</span>}
+        </div>
+
+        {/* Description and Thought */}
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          {item.description}
+
+          {item.thought && (
+            <span class="text-sm italic ml-1">
+              — <span set:html={item.thought} />
+            </span>
+          )}
+        </p>
+      </li>
+    ))}
+  </ul>
+  
+</PageLayout>
