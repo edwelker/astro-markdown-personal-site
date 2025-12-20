@@ -20,8 +20,7 @@ export const BLOG: Metadata = {
 
 export const PROJECTS: Metadata = {
   TITLE: "Highlights",
-  DESCRIPTION:
-    "A curated list of my cycling achievements, technical projects, and other creative highlights.",
+  DESCRIPTION: "A curated list of my cycling achievements, technical projects, and other creative highlights.",
 };
 
 export const HIGHLIGHTS = {
@@ -30,40 +29,13 @@ export const HIGHLIGHTS = {
 };
 
 export const SOCIALS: Socials = [
-  {
-    NAME: "Instagram",
-    HREF: "https://instagram.com/edwelker",
-  },
-  {
-    NAME: "GitHub",
-    HREF: "https://github.com/edwelker",
-  },
-  {
-    NAME: "LinkedIn",
-    HREF: "https://www.linkedin.com/in/edwardwelker/",
-  },
-  {
-    NAME: 'RSS',
-    HREF: '/rss.xml', // Relative path to your feed endpoint
-  },
-  {
-    NAME: "Spotify",
-    HREF: "https://open.spotify.com/user/edwelker", // Copied your link exactly
-  },
-  {
-    NAME: "Strava",
-    HREF: "https://www.strava.com/athletes/43444098",
-  },
-  {
-    NAME: "Trakt",
-    HREF: "https://trakt.tv/users/edwelker",
-  },
-  {
-    NAME: "Last.fm",
-    HREF: "https://www.last.fm/user/edwelker",
-  },
-  {
-    NAME: "Flickr",
-    HREF: "https://www.flickr.com/photos/ed_welker/",
-  },
+  { NAME: "Instagram", HREF: "https://instagram.com/edwelker" },
+  { NAME: "GitHub", HREF: "https://github.com/edwelker" },
+  { NAME: "LinkedIn", HREF: "https://www.linkedin.com/in/edwardwelker/" },
+  { NAME: 'RSS', HREF: '/rss.xml' },
+  { NAME: "Spotify", HREF: "https://open.spotify.com/user/edwelker" },
+  { NAME: "Strava", HREF: "https://www.strava.com/athletes/43444098" },
+  { NAME: "Trakt", HREF: "https://trakt.tv/users/edwelker" },
+  { NAME: "Last.fm", HREF: "https://www.last.fm/user/edwelker" },
+  { NAME: "Flickr", HREF: "https://www.flickr.com/photos/ed_welker/" },
 ];

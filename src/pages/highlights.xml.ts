@@ -1,22 +1,25 @@
 import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
+import highlightsData from '../data/highlights.json';
 
 export async function GET(context: any) {
-  const highlights = await getCollection('highlights');
-
-  const sortedHighlights = highlights.sort(
-    (a, b) => (b.data.pubDate?.valueOf() || 0) - (a.data.pubDate?.valueOf() || 0)
-  );
+  // Sort by date: latest first
+  const sortedHighlights = highlightsData
+    .filter(item => !item.draft)
+    .sort((a, b) => {
+      const aDate = new Date(a.pubDate).valueOf();
+      const bDate = new Date(b.pubDate).valueOf();
+      return bDate - aDate;
+    });
 
   return rss({
     title: 'Eddie Welker - Highlights',
     description: 'Recent cycling tours, music milestones, and projects.',
-    site: context.site,
+    site: context.site || 'https://eddiewelker.com',
     items: sortedHighlights.map((item) => ({
-      title: item.data.title,
-      pubDate: item.data.pubDate,
-      description: item.data.description,
-      link: `/highlights/${item.slug}/`,
+      title: item.title,
+      pubDate: new Date(item.pubDate),
+      description: item.description,
+      link: `/highlights/${item.slug || item.id}/`,
     })),
   });
 }

@@ -25,13 +25,4 @@ const blog = defineCollection({
   }),
 });
 
-const highlights = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    pubDate: z.coerce.date(),
-    draft: z.boolean().optional(),
-  }),
-});
-
-export const collections = { blog, highlights };
+export const collections = { blog };
