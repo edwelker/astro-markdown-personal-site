@@ -27,8 +27,16 @@ const mapAlbum = (data) => (data?.topalbums?.album || []).map(a => ({
   artist: a.artist.name,
   url: a.url,
   plays: a.playcount,
-  // Try to get extra large image (3), fall back to large (2)
   image: a.image[3]['#text'] || a.image[2]['#text'] || ''
+}));
+
+// NEW: Mapper for Tracks
+const mapTrack = (data) => (data?.toptracks?.track || []).map(t => ({
+  name: t.name,
+  artist: t.artist.name,
+  url: t.url,
+  plays: t.playcount,
+  image: t.image?.[1]['#text'] || ''
 }));
 
 async function fetchMusic() {
@@ -40,31 +48,35 @@ async function fetchMusic() {
     const [
       userRes,
       // Week
-      weekArt, weekAlb,
+      weekArt, weekAlb, weekTrk,
       // Month
-      monthArt, monthAlb,
+      monthArt, monthAlb, monthTrk,
       // Year
-      yearArt, yearAlb,
+      yearArt, yearAlb, yearTrk,
       // All Time
-      allTimeArt, allTimeAlb
+      allTimeArt, allTimeAlb, allTimeTrk
     ] = await Promise.all([
       fetch(getUrl('user.getinfo')),
 
-      // 7 Days (Fetch 10 of each)
+      // 7 Days
       fetch(getUrl('user.gettopartists', '7day', 10)),
-      fetch(getUrl('user.gettopalbums', '7day', 6)), // 6 albums for a nice grid
+      fetch(getUrl('user.gettopalbums', '7day', 6)),
+      fetch(getUrl('user.gettoptracks', '7day', 10)),
 
-      // 1 Month (Fetch 10 of each)
+      // 1 Month
       fetch(getUrl('user.gettopartists', '1month', 10)),
       fetch(getUrl('user.gettopalbums', '1month', 6)),
+      fetch(getUrl('user.gettoptracks', '1month', 10)),
 
-      // 12 Months (Fetch 20 artists, 12 albums)
+      // 12 Months
       fetch(getUrl('user.gettopartists', '12month', 20)),
       fetch(getUrl('user.gettopalbums', '12month', 12)),
+      fetch(getUrl('user.gettoptracks', '12month', 10)),
 
-      // Overall (Fetch 20 artists, 12 albums)
+      // Overall
       fetch(getUrl('user.gettopartists', 'overall', 20)),
       fetch(getUrl('user.gettopalbums', 'overall', 12)),
+      fetch(getUrl('user.gettoptracks', 'overall', 10)),
     ]);
 
     const output = {
@@ -73,19 +85,23 @@ async function fetchMusic() {
       },
       week: {
         artists: mapArtist(await weekArt.json()),
-        albums: mapAlbum(await weekAlb.json())
+        albums: mapAlbum(await weekAlb.json()),
+        tracks: mapTrack(await weekTrk.json())
       },
       month: {
         artists: mapArtist(await monthArt.json()),
-        albums: mapAlbum(await monthAlb.json())
+        albums: mapAlbum(await monthAlb.json()),
+        tracks: mapTrack(await monthTrk.json())
       },
       year: {
         artists: mapArtist(await yearArt.json()),
-        albums: mapAlbum(await yearAlb.json())
+        albums: mapAlbum(await yearAlb.json()),
+        tracks: mapTrack(await yearTrk.json())
       },
       allTime: {
         artists: mapArtist(await allTimeArt.json()),
-        albums: mapAlbum(await allTimeAlb.json())
+        albums: mapAlbum(await allTimeAlb.json()),
+        tracks: mapTrack(await allTimeTrk.json())
       }
     };
 

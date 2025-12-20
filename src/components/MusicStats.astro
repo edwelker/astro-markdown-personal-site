@@ -2,7 +2,6 @@
 import Link from "@components/Link.astro";
 import musicData from '../data/music.json';
 
-// Define the shape of the data for TypeScript
 interface Item {
   name: string;
   url: string;
@@ -11,7 +10,6 @@ interface Item {
   plays?: string | number;
 }
 
-// 1. Destructure the NEW keys (week, month) directly from musicData
 const {
   user = { scrobbles: 0 },
   week = { artists: [], albums: [] },
@@ -41,7 +39,6 @@ const {
       <div class="space-y-3">
         <h5 class="text-xs font-medium text-black dark:text-white">Top Albums</h5>
         <ul class="space-y-2">
-          {/* 2. Use 'week.albums' instead of 'albums.weekly' */}
           {week.albums.slice(0, 3).map((alb: Item, i: number) => (
             <li class="flex items-center gap-3 group">
               <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
@@ -89,7 +86,6 @@ const {
       <div class="space-y-3">
         <h5 class="text-xs font-medium text-black dark:text-white">Top Albums</h5>
         <ul class="space-y-2">
-          {/* 3. Use 'month.albums' instead of 'albums.monthly' */}
           {month.albums.slice(0, 3).map((alb: Item, i: number) => (
             <li class="flex items-center gap-3 group">
               <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
