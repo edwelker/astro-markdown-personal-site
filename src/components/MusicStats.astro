@@ -1,11 +1,21 @@
 ---
+import Link from "@components/Link.astro";
 import musicData from '../data/music.json';
 
-// Use default empty objects
+// Define the shape of the data for TypeScript
+interface Item {
+  name: string;
+  url: string;
+  image?: string;
+  artist?: string;
+  plays?: string | number;
+}
+
+// 1. Destructure the NEW keys (week, month) directly from musicData
 const {
   user = { scrobbles: 0 },
-  artists = { weekly: [], monthly: [] },
-  albums = { weekly: [], monthly: [] }
+  week = { artists: [], albums: [] },
+  month = { artists: [], albums: [] }
 } = musicData || {};
 ---
 
@@ -31,7 +41,8 @@ const {
       <div class="space-y-3">
         <h5 class="text-xs font-medium text-black dark:text-white">Top Albums</h5>
         <ul class="space-y-2">
-          {albums.weekly.slice(0, 3).map((alb, i) => (
+          {/* 2. Use 'week.albums' instead of 'albums.weekly' */}
+          {week.albums.slice(0, 3).map((alb: Item, i: number) => (
             <li class="flex items-center gap-3 group">
               <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
               {alb.image ? (
@@ -55,7 +66,7 @@ const {
       <div class="space-y-3">
         <h5 class="text-xs font-medium text-black dark:text-white">Top Artists</h5>
         <ul class="space-y-1">
-          {artists.weekly.slice(0, 5).map((art, i) => (
+          {week.artists.slice(0, 5).map((art: Item, i: number) => (
             <li class="flex items-baseline gap-3 group">
               <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
               <div class="flex-1 min-w-0 overflow-hidden">
@@ -78,7 +89,8 @@ const {
       <div class="space-y-3">
         <h5 class="text-xs font-medium text-black dark:text-white">Top Albums</h5>
         <ul class="space-y-2">
-          {albums.monthly.slice(0, 3).map((alb, i) => (
+          {/* 3. Use 'month.albums' instead of 'albums.monthly' */}
+          {month.albums.slice(0, 3).map((alb: Item, i: number) => (
             <li class="flex items-center gap-3 group">
               <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
               {alb.image ? (
@@ -102,7 +114,7 @@ const {
       <div class="space-y-3">
         <h5 class="text-xs font-medium text-black dark:text-white">Top Artists</h5>
         <ul class="space-y-1">
-          {artists.monthly.slice(0, 5).map((art, i) => (
+          {month.artists.slice(0, 5).map((art: Item, i: number) => (
             <li class="flex items-baseline gap-3 group">
               <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
               <div class="flex-1 min-w-0 overflow-hidden">
@@ -120,9 +132,8 @@ const {
   </div>
 
   <div class="text-right border-t border-black/10 dark:border-white/10 pt-4">
-    <a href={`https://last.fm/user/${import.meta.env.LASTFM_USERNAME}`} target="_blank" class="text-[10px] text-neutral-500 hover:text-black dark:hover:text-white uppercase tracking-wider transition-colors">
-      View Profile ↗
-    </a>
+    <Link href="/music" class="text-[10px] text-neutral-500 hover:text-black dark:hover:text-white uppercase tracking-wider transition-colors">
+      View Full Stats ↗
+    </Link>
   </div>
 </div>
-
