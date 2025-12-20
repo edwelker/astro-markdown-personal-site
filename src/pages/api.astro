@@ -1,14 +1,18 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
+import { SITE } from "@consts";
+
+const pageTitle = "Open Data & Architecture";
+const pageDescription = "Technical overview of the site's data pipelines and public endpoints.";
 ---
 
-<PageLayout title="Open Data" description="Technical overview of the site's data pipelines">
+<PageLayout title={pageTitle} description={pageDescription}>
   <Container>
     <div class="space-y-10">
       <section>
         <h1 class="text-3xl font-semibold text-black dark:text-white">
-          Open Data & Architecture
+          {pageTitle}
         </h1>
         <p class="mt-4 text-neutral-600 dark:text-neutral-400 max-w-2xl">
           This site operates as a decoupled data engine. Instead of a traditional database, it uses a custom build-pipeline where external data is fetched via third-party APIs and served as static assets.
