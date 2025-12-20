@@ -1,7 +1,14 @@
 ---
 import cyclingDataRaw from "../data/cycling.json";
 
-// Define exactly what the data should look like
+interface RecentRide {
+  name: string;
+  date: string;
+  distance: string;
+  elevation: string;
+  id: number;
+}
+
 interface CyclingData {
   year: {
     distance: string;
@@ -13,19 +20,10 @@ interface CyclingData {
     distance: number;
     count: number;
   };
-  recent: Array<{
-    name: string;
-    date: string;
-    distance: string;
-    elevation: string;
-    id: number;
-  }>;
+  recent: RecentRide[];
 }
 
-// Cast the imported JSON to our interface
 const cyclingData = cyclingDataRaw as CyclingData;
-
-// Destructure with a guaranteed structure
 const { year, month, recent } = cyclingData;
 
 const hasRides = year && year.count > 0;
