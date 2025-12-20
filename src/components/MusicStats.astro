@@ -1,109 +1,128 @@
 ---
-import Link from "@components/Link.astro";
-import musicData from "../data/music.json";
+import musicData from '../data/music.json';
 
-type Item = {
-  name: string;
-  url: string;
-  image: string;
-  artist?: string;
-  plays?: string | number
-};
-
-const { week, month } = musicData;
+// Use default empty objects
+const {
+  user = { scrobbles: 0 },
+  artists = { weekly: [], monthly: [] },
+  albums = { weekly: [], monthly: [] }
+} = musicData || {};
 ---
 
-<div class="space-y-8">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+<div class="space-y-6">
 
-    {/* --- COLUMN 1: THIS WEEK --- */}
-    <div class="space-y-4">
-      <h3 class="font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/10 pb-2">
-        This Week
-      </h3>
-
-      {/* Weekly Albums (Top 3) */}
-      <div class="grid grid-cols-3 gap-3">
-        {week.albums.slice(0, 3).map((alb: Item) => (
-          <a href={alb.url} target="_blank" class="group block space-y-1" title={`${alb.name} by ${alb.artist}`}>
-            {alb.image ? (
-                <img
-                  src={alb.image}
-                  alt={alb.name}
-                  class="rounded-sm w-full transition-transform duration-300 group-hover:scale-105 border border-neutral-200 dark:border-neutral-800"
-                  loading="lazy"
-                />
-            ) : (
-                <div class="aspect-square rounded-sm bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-xs text-neutral-400 p-1 text-center">
-                    No Cover
-                </div>
-            )}
-          </a>
-        ))}
-      </div>
-
-      {/* Weekly Artists (Top 5) */}
-      <ul class="space-y-1">
-        {week.artists.slice(0, 5).map((art: Item, i: number) => (
-          <li class="flex justify-between text-sm group">
-            <div class="flex items-center gap-2 truncate min-w-0">
-               <span class="text-neutral-300 font-mono text-xs w-3 text-right shrink-0">{i + 1}</span>
-               <a href={art.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
-                 {art.name}
-               </a>
-            </div>
-            <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{art.plays}</span>
-          </li>
-        ))}
-      </ul>
+  {/* Header */}
+  <div class="flex justify-between items-end pb-4 border-b border-black/10 dark:border-white/10">
+    <div class="flex items-center gap-2">
+      <h3 class="font-semibold text-black dark:text-white">Recent Music</h3>
     </div>
-
-    {/* --- COLUMN 2: THIS MONTH --- */}
-    <div class="space-y-4">
-      <h3 class="font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/10 pb-2">
-        This Month
-      </h3>
-
-      {/* Monthly Albums (Top 3) */}
-      <div class="grid grid-cols-3 gap-3">
-        {month.albums.slice(0, 3).map((alb: Item) => (
-          <a href={alb.url} target="_blank" class="group block space-y-1" title={`${alb.name} by ${alb.artist}`}>
-            {alb.image ? (
-                <img
-                  src={alb.image}
-                  alt={alb.name}
-                  class="rounded-sm w-full transition-transform duration-300 group-hover:scale-105 border border-neutral-200 dark:border-neutral-800"
-                  loading="lazy"
-                />
-            ) : (
-                <div class="aspect-square rounded-sm bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-xs text-neutral-400 p-1 text-center">
-                    No Cover
-                </div>
-            )}
-          </a>
-        ))}
-      </div>
-
-      {/* Monthly Artists (Top 5) */}
-      <ul class="space-y-1">
-        {month.artists.slice(0, 5).map((art: Item, i: number) => (
-          <li class="flex justify-between text-sm group">
-            <div class="flex items-center gap-2 truncate min-w-0">
-               <span class="text-neutral-300 font-mono text-xs w-3 text-right shrink-0">{i + 1}</span>
-               <a href={art.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
-                 {art.name}
-               </a>
-            </div>
-            <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{art.plays}</span>
-          </li>
-        ))}
-      </ul>
+    <div class="text-xs font-mono text-neutral-500">
+      {user.scrobbles.toLocaleString()} lifetime scrobbles
     </div>
   </div>
 
-  <div class="flex justify-end">
-    <Link href="/music" class="text-sm">
-        View Full Music Stats →
-    </Link>
+  <div class="grid md:grid-cols-2 gap-8 md:gap-8 md:divide-x divide-black/10 dark:divide-white/10">
+
+    {/* COLUMN 1: WEEKLY */}
+    <div class="space-y-6 md:pr-4">
+      <h4 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold">Last 7 Days</h4>
+
+      {/* Weekly Albums */}
+      <div class="space-y-3">
+        <h5 class="text-xs font-medium text-black dark:text-white">Top Albums</h5>
+        <ul class="space-y-2">
+          {albums.weekly.slice(0, 3).map((alb, i) => (
+            <li class="flex items-center gap-3 group">
+              <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
+              {alb.image ? (
+                <img src={alb.image} alt={alb.name} class="w-8 h-8 rounded border border-black/10 dark:border-white/10 object-cover" />
+              ) : (
+                <div class="w-8 h-8 rounded border border-black/10 dark:border-white/10 bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center text-[10px] text-neutral-500">CD</div>
+              )}
+              <div class="flex-1 min-w-0 overflow-hidden">
+                <a href={alb.url} target="_blank" class="block text-sm truncate text-neutral-700 dark:text-neutral-300 group-hover:text-black dark:group-hover:text-white group-hover:underline decoration-1 underline-offset-2 transition-colors">
+                  {alb.name}
+                </a>
+                <div class="text-xs text-neutral-500 truncate">{alb.artist}</div>
+              </div>
+              <span class="text-xs font-mono text-neutral-400">{alb.plays}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Weekly Artists */}
+      <div class="space-y-3">
+        <h5 class="text-xs font-medium text-black dark:text-white">Top Artists</h5>
+        <ul class="space-y-1">
+          {artists.weekly.slice(0, 5).map((art, i) => (
+            <li class="flex items-baseline gap-3 group">
+              <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
+              <div class="flex-1 min-w-0 overflow-hidden">
+                <a href={art.url} target="_blank" class="block text-sm truncate text-neutral-700 dark:text-neutral-300 group-hover:text-black dark:group-hover:text-white group-hover:underline decoration-1 underline-offset-2 transition-colors">
+                  {art.name}
+                </a>
+              </div>
+              <span class="text-xs font-mono text-neutral-400">{art.plays}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    {/* COLUMN 2: MONTHLY */}
+    <div class="space-y-6 md:pl-4">
+      <h4 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold">Last 30 Days</h4>
+
+      {/* Monthly Albums */}
+      <div class="space-y-3">
+        <h5 class="text-xs font-medium text-black dark:text-white">Top Albums</h5>
+        <ul class="space-y-2">
+          {albums.monthly.slice(0, 3).map((alb, i) => (
+            <li class="flex items-center gap-3 group">
+              <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
+              {alb.image ? (
+                <img src={alb.image} alt={alb.name} class="w-8 h-8 rounded border border-black/10 dark:border-white/10 object-cover" />
+              ) : (
+                <div class="w-8 h-8 rounded border border-black/10 dark:border-white/10 bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center text-[10px] text-neutral-500">CD</div>
+              )}
+              <div class="flex-1 min-w-0 overflow-hidden">
+                <a href={alb.url} target="_blank" class="block text-sm truncate text-neutral-700 dark:text-neutral-300 group-hover:text-black dark:group-hover:text-white group-hover:underline decoration-1 underline-offset-2 transition-colors">
+                  {alb.name}
+                </a>
+                <div class="text-xs text-neutral-500 truncate">{alb.artist}</div>
+              </div>
+              <span class="text-xs font-mono text-neutral-400">{alb.plays}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Monthly Artists */}
+      <div class="space-y-3">
+        <h5 class="text-xs font-medium text-black dark:text-white">Top Artists</h5>
+        <ul class="space-y-1">
+          {artists.monthly.slice(0, 5).map((art, i) => (
+            <li class="flex items-baseline gap-3 group">
+              <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
+              <div class="flex-1 min-w-0 overflow-hidden">
+                <a href={art.url} target="_blank" class="block text-sm truncate text-neutral-700 dark:text-neutral-300 group-hover:text-black dark:group-hover:text-white group-hover:underline decoration-1 underline-offset-2 transition-colors">
+                  {art.name}
+                </a>
+              </div>
+              <span class="text-xs font-mono text-neutral-400">{art.plays}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="text-right border-t border-black/10 dark:border-white/10 pt-4">
+    <a href={`https://last.fm/user/${import.meta.env.LASTFM_USERNAME}`} target="_blank" class="text-[10px] text-neutral-500 hover:text-black dark:hover:text-white uppercase tracking-wider transition-colors">
+      View Profile ↗
+    </a>
   </div>
 </div>
+
