@@ -14,6 +14,9 @@ export default defineConfig({
     // instead of creating a separate .css file.
     inlineStylesheets: 'always'
   },
+  redirects: {
+    '/dashboard': '/dash',
+  },
   integrations: [
       sitemap(),
       mdx(),

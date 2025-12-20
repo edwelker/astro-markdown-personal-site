@@ -2,7 +2,6 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 
-// Define your personal links here for easy management
 const links = [
   {
     category: "Monitoring",
@@ -17,7 +16,7 @@ const links = [
     items: [
       { name: "Cloudflare Pages", url: "https://dash.cloudflare.com/" },
       { name: "GitHub Actions", url: "https://github.com/edwelker/website/actions" },
-      { name: "GitHub Repo", url: "https://github.com/edwelker/website" }
+      { name: "GitHub Repo (Site)", url: "https://github.com/edwelker/website" }
     ]
   }
 ];
@@ -36,6 +35,48 @@ const links = [
       </section>
 
       <div class="grid gap-12">
+        {/* Profile README Section */}
+        <section class="space-y-4">
+          <h5 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold border-b border-black/5 dark:border-white/5 pb-2">
+            Profile README Automation
+          </h5>
+          <div class="p-4 rounded-xl border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.02]">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <a href="https://github.com/edwelker/edwelker" target="_blank" class="font-medium text-black dark:text-white hover:underline decoration-1 underline-offset-2 text-lg">
+                  edwelker/edwelker
+                </a>
+                <p class="text-xs text-neutral-500 mt-1">Self-updating GitHub Profile via GitHub Actions.</p>
+              </div>
+              <span class="text-xs text-neutral-400">↗</span>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <p class="text-xs font-mono text-neutral-400 uppercase tracking-tighter mb-1">Logic</p>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                  A scheduled GitHub Action runs hourly to fetch the latest content from this site. It parses the RSS feeds and injects them into the README.md markers using a two-step sync to avoid commit conflicts.
+                </p>
+              </div>
+
+              <div>
+                <p class="text-xs font-mono text-neutral-400 uppercase tracking-tighter mb-1">Required Endpoints</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+                    <code class="text-[11px] bg-black/5 dark:bg-white/10 px-1 rounded text-orange-600 dark:text-orange-400">/rss.xml</code>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+                    <code class="text-[11px] bg-black/5 dark:bg-white/10 px-1 rounded text-orange-600 dark:text-orange-400">/highlights.xml</code>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Standard Categories */}
         {links.map((group) => (
           <section class="space-y-4">
             <h5 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold border-b border-black/5 dark:border-white/5 pb-2">
