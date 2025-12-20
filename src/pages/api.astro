@@ -1,0 +1,66 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+---
+
+<PageLayout title="Open Data" description="Technical overview of the site's data pipelines">
+  <Container>
+    <div class="space-y-10">
+      <section>
+        <h1 class="text-3xl font-semibold text-black dark:text-white">
+          Open Data & Architecture
+        </h1>
+        <p class="mt-4 text-neutral-600 dark:text-neutral-400">
+          This site operates as a small-scale data engine. Instead of a traditional database, it uses a decoupled architecture where external life-data is fetched at build-time and served as static JSON.
+        </p>
+      </section>
+
+      <div class="grid gap-8">
+        {/* Architecture Section */}
+        <section class="space-y-4">
+          <h2 class="text-sm font-mono uppercase tracking-widest text-neutral-500">The Stack</h2>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-start gap-3">
+              <span class="text-orange-500 font-mono">01.</span>
+              <span><strong>Astro</strong> for static site generation with zero client-side JavaScript.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-orange-500 font-mono">02.</span>
+              <span><strong>Node.js</strong> scripts to interface with Strava, Flickr, and Last.fm APIs.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-orange-500 font-mono">03.</span>
+              <span><strong>GitHub Actions</strong> on a daily cron job to trigger data refreshes and rebuilds.</span>
+            </li>
+          </ul>
+        </section>
+
+        {/* Data Endpoints */}
+        <section class="space-y-4 pt-4 border-t border-black/5 dark:border-white/5">
+          <h2 class="text-sm font-mono uppercase tracking-widest text-neutral-500">Available Endpoints</h2>
+
+          <div class="space-y-6">
+            <div class="group">
+              <a href="/data/lastfm.json" class="flex items-center justify-between p-3 -mx-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                <div>
+                  <code class="text-orange-500">/data/lastfm.json</code>
+                  <p class="text-xs text-neutral-500 mt-1">Recent listening history, top artists, and weekly scrobble counts.</p>
+                </div>
+                <span class="text-xs font-mono text-neutral-400">JSON</span>
+              </a>
+            </div>
+
+            <div class="group">
+              <a href="/data/flickr-photos.json" class="flex items-center justify-between p-3 -mx-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                <div>
+                  <code class="text-orange-500">/data/flickr-photos.json</code>
+                  <p class="text-xs text-neutral-500 mt-1">Metadata for the 10 most recently uploaded public photos.</p>
+                </div>
+                <span class="text-xs font-mono text-neutral-400">JSON</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="p-4 bg-black/5 dark:bg-white/5 rounded-sm border-l-2 border-orange-500">
+          <p class="text-xs leading-relaxed text-neutral-600 dark:text

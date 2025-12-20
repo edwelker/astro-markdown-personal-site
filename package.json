@@ -8,7 +8,7 @@
     "build": "npm run fetch && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fetch": "npm run fetch:flickr && npm run fetch:lastfm && npm run fetch:strava",
+    "fetch": "npm run fetch:flickr && npm run fetch:lastfm && npm run fetch:strava && mkdir -p public/data && cp src/data/flickr-photos.json public/data/ && cp src/data/lastfm.json public/data/",
     "fetch:flickr": "node scripts/fetch-flickr.js",
     "fetch:lastfm": "node scripts/fetch-lastfm.mjs",
     "fetch:strava": "node scripts/fetch-strava.mjs"

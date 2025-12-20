@@ -1,29 +1,59 @@
 ---
 import Container from "@components/Container.astro";
-import Icon from "@components/Icon.astro"; // Changed import
+import Icon from "@components/Icon.astro";
 import { SITE, SOCIALS } from "@consts";
+
+// This will be calculated every time the site builds in GitHub Actions
+const buildTime = new Date().toLocaleString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: '2-digit',
+  timeZoneName: 'short'
+});
 ---
 
-<footer class="mt-auto py-8">
+<footer class="mt-auto py-12 border-t border-black/5 dark:border-white/5">
   <Container>
-    <div class="flex flex-col items-center gap-4">
-      <div class="flex flex-wrap justify-center gap-4">
+    <div class="flex flex-col items-center gap-6">
+
+      {/* Social Icons */}
+      <div class="flex flex-wrap justify-center gap-6">
         {SOCIALS.map((social) => (
           <a
             href={social.HREF}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={social.NAME}
-            class="text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white transition-colors"
+            class="text-black/40 hover:text-black dark:text-white/40 dark:hover:text-white transition-colors"
           >
             <Icon name={social.NAME} class="h-5 w-5 fill-current" />
           </a>
         ))}
       </div>
 
-      <div class="text-sm text-black/50 dark:text-white/50 text-center">
-        &copy; {new Date().getFullYear()} {SITE.TITLE}. All rights reserved.
+      {/* Technical Metadata */}
+      <div class="flex flex-col items-center gap-2">
+        <div class="text-[10px] font-mono text-black/40 dark:text-white/40 uppercase tracking-[0.2em]">
+          Built via GitHub Actions • {buildTime}
+        </div>
+
+        <div class="flex gap-4">
+          <a href="/data/lastfm.json" class="text-[10px] font-mono text-black/30 hover:text-black dark:text-white/30 dark:hover:text-white transition-colors underline underline-offset-4 decoration-black/10">
+            Music Data (JSON)
+          </a>
+          <a href="/data/flickr-photos.json" class="text-[10px] font-mono text-black/30 hover:text-black dark:text-white/30 dark:hover:text-white transition-colors underline underline-offset-4 decoration-black/10">
+            Photo Data (JSON)
+          </a>
+        </div>
       </div>
+
+      {/* Copyright */}
+      <div class="text-[11px] text-black/30 dark:text-white/30 text-center uppercase tracking-widest">
+        &copy; {new Date().getFullYear()} {SITE.TITLE}
+      </div>
+
     </div>
   </Container>
 </footer>
