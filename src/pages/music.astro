@@ -14,10 +14,10 @@ const description = "A detailed look at my music rotation.";
 
 <Layout title={title} description={description}>
   <Container>
-    <div class="animate">
+    <div class="animate pt-4">
       <BackToPrevious href="/" />
 
-      <header class="mb-16 mt-8">
+      <header class="mb-20 mt-8">
         <h1 class="font-semibold text-2xl text-black dark:text-white mb-2">Music Stats</h1>
         <p class="text-neutral-500 text-sm">
           Lifetime Scrobbles: <span class="text-black dark:text-white font-mono">{user.scrobbles.toLocaleString()}</span>
@@ -36,8 +36,14 @@ const description = "A detailed look at my music rotation.";
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Albums</h3>
               <div class="grid grid-cols-3 gap-3">
                 {week.albums.map((album: Item) => (
-                   <a href={album.url} target="_blank" class="group block space-y-1" title={`${album.name} by ${album.artist}`}>
-                    <img src={album.image} alt={album.name} class="rounded-sm w-full grayscale group-hover:grayscale-0 transition-all duration-300 border border-neutral-200 dark:border-neutral-800" />
+                   <a href={album.url} target="_blank" class="group block space-y-1 relative" title={`${album.name} by ${album.artist}`}>
+                    {album.image ? (
+                        <img src={album.image} alt={album.name} class="rounded-sm w-full transition-transform duration-300 border border-neutral-200 dark:border-neutral-800" />
+                    ) : (
+                        <div class="aspect-square rounded-sm bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex flex-col items-center justify-center p-2 text-center">
+                            <span class="text-[10px] font-bold text-neutral-500 line-clamp-2">{album.name}</span>
+                        </div>
+                    )}
                   </a>
                 ))}
               </div>
@@ -47,11 +53,13 @@ const description = "A detailed look at my music rotation.";
               <ul class="space-y-1">
                 {week.artists.map((artist: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
-                     <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
-                       <span class="mr-3 text-neutral-300 font-mono text-xs">{i + 1}</span>
-                       {artist.name}
-                     </a>
-                     <span class="text-xs font-mono text-neutral-400">{artist.plays}</span>
+                     <div class="flex items-center gap-2 truncate min-w-0">
+                        <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+                        <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                            {artist.name}
+                        </a>
+                     </div>
+                     <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
                   </li>
                 ))}
               </ul>
@@ -70,8 +78,14 @@ const description = "A detailed look at my music rotation.";
                <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Albums</h3>
                <div class="grid grid-cols-3 gap-3">
                 {month.albums.map((album: Item) => (
-                   <a href={album.url} target="_blank" class="group block space-y-1" title={`${album.name} by ${album.artist}`}>
-                    <img src={album.image} alt={album.name} class="rounded-sm w-full grayscale group-hover:grayscale-0 transition-all duration-300 border border-neutral-200 dark:border-neutral-800" />
+                   <a href={album.url} target="_blank" class="group block space-y-1 relative" title={`${album.name} by ${album.artist}`}>
+                    {album.image ? (
+                        <img src={album.image} alt={album.name} class="rounded-sm w-full transition-transform duration-300 border border-neutral-200 dark:border-neutral-800" />
+                    ) : (
+                        <div class="aspect-square rounded-sm bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex flex-col items-center justify-center p-2 text-center">
+                            <span class="text-[10px] font-bold text-neutral-500 line-clamp-2">{album.name}</span>
+                        </div>
+                    )}
                   </a>
                 ))}
               </div>
@@ -81,11 +95,13 @@ const description = "A detailed look at my music rotation.";
               <ul class="space-y-1">
                 {month.artists.map((artist: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
-                     <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
-                       <span class="mr-3 text-neutral-300 font-mono text-xs">{i + 1}</span>
-                       {artist.name}
-                     </a>
-                     <span class="text-xs font-mono text-neutral-400">{artist.plays}</span>
+                     <div class="flex items-center gap-2 truncate min-w-0">
+                        <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+                        <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                            {artist.name}
+                        </a>
+                     </div>
+                     <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
                   </li>
                 ))}
               </ul>
@@ -103,13 +119,19 @@ const description = "A detailed look at my music rotation.";
           <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 mb-8">
             {year.albums.map((album: Item) => (
               <a href={album.url} target="_blank" class="group block space-y-2">
-                <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative">
-                  <img
-                    src={album.image}
-                    alt={album.name}
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
-                    loading="lazy"
-                  />
+                <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative bg-neutral-50 dark:bg-neutral-900">
+                  {album.image ? (
+                      <img
+                        src={album.image}
+                        alt={album.name}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                  ) : (
+                      <div class="w-full h-full flex items-center justify-center p-2 text-center">
+                         <span class="text-xs font-bold text-neutral-500">{album.name}</span>
+                      </div>
+                  )}
                 </div>
                 <div>
                   <div class="text-xs font-medium text-black dark:text-white truncate group-hover:underline decoration-1 underline-offset-2">
@@ -123,16 +145,17 @@ const description = "A detailed look at my music rotation.";
             ))}
           </div>
 
-          {/* Columns-2 ensures 1-10 are on left, 11-20 on right */}
           <div class="columns-1 sm:columns-2 gap-12 space-y-2">
             {year.artists.map((artist: Item, i: number) => (
               <div class="break-inside-avoid">
                 <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
-                  <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
-                    <span class="mr-3 text-neutral-300 font-mono text-xs w-4 inline-block text-right">{i + 1}</span>
-                    {artist.name}
-                  </a>
-                  <span class="text-xs font-mono text-neutral-400">{artist.plays}</span>
+                  <div class="flex items-center gap-2 truncate min-w-0">
+                    <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+                    <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                        {artist.name}
+                    </a>
+                  </div>
+                  <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
                 </div>
               </div>
             ))}
@@ -149,13 +172,19 @@ const description = "A detailed look at my music rotation.";
           <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 mb-8">
             {allTime.albums.map((album: Item) => (
               <a href={album.url} target="_blank" class="group block space-y-2">
-                <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative">
-                  <img
-                    src={album.image}
-                    alt={album.name}
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
-                    loading="lazy"
-                  />
+                <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative bg-neutral-50 dark:bg-neutral-900">
+                   {album.image ? (
+                      <img
+                        src={album.image}
+                        alt={album.name}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                   ) : (
+                      <div class="w-full h-full flex items-center justify-center p-2 text-center">
+                         <span class="text-xs font-bold text-neutral-500">{album.name}</span>
+                      </div>
+                   )}
                 </div>
                 <div>
                   <div class="text-xs font-medium text-black dark:text-white truncate group-hover:underline decoration-1 underline-offset-2">
@@ -173,11 +202,13 @@ const description = "A detailed look at my music rotation.";
              {allTime.artists.map((artist: Item, i: number) => (
               <div class="break-inside-avoid">
                 <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
-                  <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
-                    <span class="mr-3 text-neutral-300 font-mono text-xs w-4 inline-block text-right">{i + 1}</span>
-                    {artist.name}
-                  </a>
-                  <span class="text-xs font-mono text-neutral-400">{artist.plays}</span>
+                  <div class="flex items-center gap-2 truncate min-w-0">
+                    <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+                    <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                        {artist.name}
+                    </a>
+                  </div>
+                  <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
                 </div>
               </div>
             ))}

@@ -1,7 +1,7 @@
 ---
+import Link from "@components/Link.astro";
 import musicData from "../data/music.json";
 
-// Define the type for items to satisfy TypeScript
 type Item = {
   name: string;
   url: string;
@@ -10,78 +10,100 @@ type Item = {
   plays?: string | number
 };
 
-// Destructure from the NEW data shape (week, month, etc.)
 const { week, month } = musicData;
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+<div class="space-y-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
 
-  {/* --- COLUMN 1: THIS WEEK --- */}
-  <div class="space-y-4">
-    <h3 class="font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/10 pb-2">
-      This Week
-    </h3>
+    {/* --- COLUMN 1: THIS WEEK --- */}
+    <div class="space-y-4">
+      <h3 class="font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/10 pb-2">
+        This Week
+      </h3>
 
-    {/* Weekly Albums (Top 3) */}
-    <div class="grid grid-cols-3 gap-3">
-      {week.albums.slice(0, 3).map((alb: Item) => (
-        <a href={alb.url} target="_blank" class="group block space-y-1" title={`${alb.name} by ${alb.artist}`}>
-          <img
-            src={alb.image}
-            alt={alb.name}
-            class="rounded-sm w-full grayscale group-hover:grayscale-0 transition-all duration-300 border border-neutral-200 dark:border-neutral-800"
-            loading="lazy"
-          />
-        </a>
-      ))}
+      {/* Weekly Albums (Top 3) */}
+      <div class="grid grid-cols-3 gap-3">
+        {week.albums.slice(0, 3).map((alb: Item) => (
+          <a href={alb.url} target="_blank" class="group block space-y-1" title={`${alb.name} by ${alb.artist}`}>
+            {alb.image ? (
+                <img
+                  src={alb.image}
+                  alt={alb.name}
+                  class="rounded-sm w-full transition-transform duration-300 group-hover:scale-105 border border-neutral-200 dark:border-neutral-800"
+                  loading="lazy"
+                />
+            ) : (
+                <div class="aspect-square rounded-sm bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-xs text-neutral-400 p-1 text-center">
+                    No Cover
+                </div>
+            )}
+          </a>
+        ))}
+      </div>
+
+      {/* Weekly Artists (Top 5) */}
+      <ul class="space-y-1">
+        {week.artists.slice(0, 5).map((art: Item, i: number) => (
+          <li class="flex justify-between text-sm group">
+            <div class="flex items-center gap-2 truncate min-w-0">
+               <span class="text-neutral-300 font-mono text-xs w-3 text-right shrink-0">{i + 1}</span>
+               <a href={art.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                 {art.name}
+               </a>
+            </div>
+            <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{art.plays}</span>
+          </li>
+        ))}
+      </ul>
     </div>
 
-    {/* Weekly Artists (Top 5) */}
-    <ul class="space-y-1">
-      {week.artists.slice(0, 5).map((art: Item, i: number) => (
-        <li class="flex justify-between text-sm group">
-          <a href={art.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
-            <span class="mr-2 text-neutral-300 font-mono text-xs">{i + 1}</span>
-            {art.name}
+    {/* --- COLUMN 2: THIS MONTH --- */}
+    <div class="space-y-4">
+      <h3 class="font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/10 pb-2">
+        This Month
+      </h3>
+
+      {/* Monthly Albums (Top 3) */}
+      <div class="grid grid-cols-3 gap-3">
+        {month.albums.slice(0, 3).map((alb: Item) => (
+          <a href={alb.url} target="_blank" class="group block space-y-1" title={`${alb.name} by ${alb.artist}`}>
+            {alb.image ? (
+                <img
+                  src={alb.image}
+                  alt={alb.name}
+                  class="rounded-sm w-full transition-transform duration-300 group-hover:scale-105 border border-neutral-200 dark:border-neutral-800"
+                  loading="lazy"
+                />
+            ) : (
+                <div class="aspect-square rounded-sm bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-xs text-neutral-400 p-1 text-center">
+                    No Cover
+                </div>
+            )}
           </a>
-          <span class="text-xs font-mono text-neutral-400">{art.plays}</span>
-        </li>
-      ))}
-    </ul>
-  </div>
+        ))}
+      </div>
 
-  {/* --- COLUMN 2: THIS MONTH --- */}
-  <div class="space-y-4">
-    <h3 class="font-semibold text-black dark:text-white border-b border-black/10 dark:border-white/10 pb-2">
-      This Month
-    </h3>
-
-    {/* Monthly Albums (Top 3) */}
-    <div class="grid grid-cols-3 gap-3">
-      {month.albums.slice(0, 3).map((alb: Item) => (
-        <a href={alb.url} target="_blank" class="group block space-y-1" title={`${alb.name} by ${alb.artist}`}>
-          <img
-            src={alb.image}
-            alt={alb.name}
-            class="rounded-sm w-full grayscale group-hover:grayscale-0 transition-all duration-300 border border-neutral-200 dark:border-neutral-800"
-            loading="lazy"
-          />
-        </a>
-      ))}
+      {/* Monthly Artists (Top 5) */}
+      <ul class="space-y-1">
+        {month.artists.slice(0, 5).map((art: Item, i: number) => (
+          <li class="flex justify-between text-sm group">
+            <div class="flex items-center gap-2 truncate min-w-0">
+               <span class="text-neutral-300 font-mono text-xs w-3 text-right shrink-0">{i + 1}</span>
+               <a href={art.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                 {art.name}
+               </a>
+            </div>
+            <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{art.plays}</span>
+          </li>
+        ))}
+      </ul>
     </div>
-
-    {/* Monthly Artists (Top 5) */}
-    <ul class="space-y-1">
-      {month.artists.slice(0, 5).map((art: Item, i: number) => (
-        <li class="flex justify-between text-sm group">
-          <a href={art.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
-            <span class="mr-2 text-neutral-300 font-mono text-xs">{i + 1}</span>
-            {art.name}
-          </a>
-          <span class="text-xs font-mono text-neutral-400">{art.plays}</span>
-        </li>
-      ))}
-    </ul>
   </div>
 
+  <div class="flex justify-end">
+    <Link href="/music" class="text-sm">
+        View Full Music Stats →
+    </Link>
+  </div>
 </div>
