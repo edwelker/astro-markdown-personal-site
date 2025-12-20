@@ -1,8 +1,7 @@
 import rss from '@astrojs/rss';
-import { highlights, type Highlight } from '../data/highlights';
+import { highlights } from '../data/highlights';
 
 export async function GET(context: any) {
-  // Sort the highlights by date: latest first
   const sortedHighlights = [...highlights].sort((a, b) => {
     return new Date(b.date).valueOf() - new Date(a.date).valueOf();
   });
@@ -11,11 +10,13 @@ export async function GET(context: any) {
     title: 'Eddie Welker - Highlights',
     description: 'Significant milestones in cycling, music, and software.',
     site: context.site || 'https://eddiewelker.com',
-    items: sortedHighlights.map((item: Highlight) => ({
+    items: sortedHighlights.map((item) => ({
       title: item.title,
       pubDate: new Date(item.date),
       description: item.description,
       link: item.url,
+      // You can inject the 'thought' field into the description if desired
+      content: item.thought ? `<div>${item.thought}</div>` : ""
     })),
   });
 }
