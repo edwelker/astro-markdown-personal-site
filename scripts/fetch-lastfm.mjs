@@ -7,14 +7,13 @@ const USERNAME = process.env.LASTFM_USERNAME;
 const OUT_FILE = path.join(process.cwd(), 'src', 'data', 'music.json');
 const BASE_URL = "http://ws.audioscrobbler.com/2.0/";
 
-// Helper to construct URL
 const getUrl = (method, period = '', limit = 10) => {
   let url = `${BASE_URL}?method=${method}&user=${USERNAME}&api_key=${API_KEY}&format=json&limit=${limit}`;
   if (period) url += `&period=${period}`;
   return url;
 };
 
-// --- DATA MAPPERS ---
+// Mappers
 const mapArtist = (data) => (data?.topartists?.artist || []).map(a => ({
   name: a.name,
   url: a.url,
@@ -30,7 +29,6 @@ const mapAlbum = (data) => (data?.topalbums?.album || []).map(a => ({
   image: a.image[3]['#text'] || a.image[2]['#text'] || ''
 }));
 
-// NEW: Mapper for Tracks
 const mapTrack = (data) => (data?.toptracks?.track || []).map(t => ({
   name: t.name,
   artist: t.artist.name,
@@ -41,19 +39,14 @@ const mapTrack = (data) => (data?.toptracks?.track || []).map(t => ({
 
 async function fetchMusic() {
   if (!API_KEY || !USERNAME) return console.warn("⚠️ No Last.fm keys found.");
-
   console.log(`🎵 Fetching Last.fm data for ${USERNAME}...`);
 
   try {
     const [
       userRes,
-      // Week
       weekArt, weekAlb, weekTrk,
-      // Month
       monthArt, monthAlb, monthTrk,
-      // Year
       yearArt, yearAlb, yearTrk,
-      // All Time
       allTimeArt, allTimeAlb, allTimeTrk
     ] = await Promise.all([
       fetch(getUrl('user.getinfo')),
@@ -80,29 +73,11 @@ async function fetchMusic() {
     ]);
 
     const output = {
-      user: {
-        scrobbles: parseInt((await userRes.json()).user?.playcount || 0)
-      },
-      week: {
-        artists: mapArtist(await weekArt.json()),
-        albums: mapAlbum(await weekAlb.json()),
-        tracks: mapTrack(await weekTrk.json())
-      },
-      month: {
-        artists: mapArtist(await monthArt.json()),
-        albums: mapAlbum(await monthAlb.json()),
-        tracks: mapTrack(await monthTrk.json())
-      },
-      year: {
-        artists: mapArtist(await yearArt.json()),
-        albums: mapAlbum(await yearAlb.json()),
-        tracks: mapTrack(await yearTrk.json())
-      },
-      allTime: {
-        artists: mapArtist(await allTimeArt.json()),
-        albums: mapAlbum(await allTimeAlb.json()),
-        tracks: mapTrack(await allTimeTrk.json())
-      }
+      user: { scrobbles: parseInt((await userRes.json()).user?.playcount || 0) },
+      week: { artists: mapArtist(await weekArt.json()), albums: mapAlbum(await weekAlb.json()), tracks: mapTrack(await weekTrk.json()) },
+      month: { artists: mapArtist(await monthArt.json()), albums: mapAlbum(await monthAlb.json()), tracks: mapTrack(await monthTrk.json()) },
+      year: { artists: mapArtist(await yearArt.json()), albums: mapAlbum(await yearAlb.json()), tracks: mapTrack(await yearTrk.json()) },
+      allTime: { artists: mapArtist(await allTimeArt.json()), albums: mapAlbum(await allTimeAlb.json()), tracks: mapTrack(await allTimeTrk.json()) }
     };
 
     await fs.writeFile(OUT_FILE, JSON.stringify(output, null, 2));

@@ -14,229 +14,318 @@ const description = "A detailed look at my music rotation.";
 
 <Layout title={title} description={description}>
   <Container>
-    <div class="animate pt-4">
+    <div class="animate">
       <BackToPrevious href="/" />
 
-      {/* LAYOUT FIX:
-         'flex-col' + 'gap-14' prevents the header from collapsing onto the content.
-         This creates a hard physical gap between the two sections.
+      {/* ROBUST SPACER:
+        This physical div guarantees spacing regardless of CSS positioning or margin collapse.
       */}
-      <div class="flex flex-col gap-14 mt-8">
+      <div class="h-24 md:h-32 w-full block"></div>
 
-        <header>
-          <h1 class="font-semibold text-2xl text-black dark:text-white mb-2">Music Stats</h1>
-          <p class="text-neutral-500 text-sm">
-            Lifetime Scrobbles: <span class="text-black dark:text-white font-mono">{user.scrobbles.toLocaleString()}</span>
-          </p>
-        </header>
+      <header class="mb-16">
+        <h1 class="font-semibold text-2xl text-black dark:text-white mb-2">Music Stats</h1>
+        <p class="text-neutral-500 text-sm">
+          Lifetime Scrobbles: <span class="text-black dark:text-white font-mono">{user.scrobbles.toLocaleString()}</span>
+        </p>
+      </header>
 
-        <div class="space-y-24">
+      <div class="space-y-32 pb-20">
 
-          {/* --- 7 DAY --- */}
-          <section class="space-y-6">
-            <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
-              Last 7 Days
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-              <div>
-                <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Albums</h3>
-                <div class="grid grid-cols-3 gap-3">
-                  {week.albums.map((album: Item) => (
-                    <a href={album.url} target="_blank" class="group block space-y-1 relative" title={`${album.name} by ${album.artist}`}>
-                      {album.image ? (
-                          <img src={album.image} alt={album.name} class="rounded-sm w-full transition-transform duration-300 border border-neutral-200 dark:border-neutral-800" />
-                      ) : (
-                          /* FALLBACK: Simple Disc Icon */
-                          <div class="aspect-square rounded-sm bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center">
-                              <div class="w-1/2 h-1/2 rounded-full border-2 border-neutral-300 dark:border-neutral-600 flex items-center justify-center">
-                                <div class="w-1/3 h-1/3 rounded-full bg-neutral-300 dark:bg-neutral-600"></div>
-                              </div>
-                          </div>
-                      )}
-                    </a>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
-                <ul class="space-y-1">
-                  {week.artists.map((artist: Item, i: number) => (
-                    <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
-                      <div class="flex items-center gap-2 truncate min-w-0">
-                          <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
-                          <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
-                              {artist.name}
-                          </a>
-                      </div>
-                      <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </section>
+        {/* --- 7 DAY --- */}
+        <section class="space-y-6">
+          <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
+            Last 7 Days
+          </h2>
 
-
-          {/* --- 30 DAY --- */}
-          <section class="space-y-6">
-            <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
-              Last 30 Days
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-              <div>
-                <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Albums</h3>
-                <div class="grid grid-cols-3 gap-3">
-                  {month.albums.map((album: Item) => (
-                    <a href={album.url} target="_blank" class="group block space-y-1 relative" title={`${album.name} by ${album.artist}`}>
-                      {album.image ? (
-                          <img src={album.image} alt={album.name} class="rounded-sm w-full transition-transform duration-300 border border-neutral-200 dark:border-neutral-800" />
-                      ) : (
-                          <div class="aspect-square rounded-sm bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center">
-                              <div class="w-1/2 h-1/2 rounded-full border-2 border-neutral-300 dark:border-neutral-600 flex items-center justify-center">
-                                <div class="w-1/3 h-1/3 rounded-full bg-neutral-300 dark:bg-neutral-600"></div>
-                              </div>
-                          </div>
-                      )}
-                    </a>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
-                <ul class="space-y-1">
-                  {month.artists.map((artist: Item, i: number) => (
-                    <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
-                      <div class="flex items-center gap-2 truncate min-w-0">
-                          <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
-                          <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
-                              {artist.name}
-                          </a>
-                      </div>
-                      <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </section>
-
-
-          {/* --- 1 YEAR --- */}
-          <section class="space-y-6">
-            <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
-              Last 12 Months
-            </h2>
-
-            <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 mb-8">
-              {year.albums.map((album: Item) => (
-                <a href={album.url} target="_blank" class="group block space-y-2">
-                  <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative bg-neutral-50 dark:bg-neutral-900">
+          {/* Albums */}
+          <div>
+            <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Albums</h3>
+            <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+               {week.albums.map((album: Item) => (
+                  <a href={album.url} target="_blank" class="group block space-y-1 relative" title={`${album.name} by ${album.artist}`}>
                     {album.image ? (
-                        <img
-                          src={album.image}
-                          alt={album.name}
-                          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          loading="lazy"
-                        />
+                        <img src={album.image} alt={album.name} class="rounded-sm w-full transition-transform duration-300 border border-neutral-200 dark:border-neutral-800" />
                     ) : (
-                        <div class="w-full h-full flex items-center justify-center">
-                           <div class="w-1/2 h-1/2 rounded-full border-2 border-neutral-300 dark:border-neutral-600 flex items-center justify-center">
+                        <div class="aspect-square rounded-sm bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center">
+                            <div class="w-1/2 h-1/2 rounded-full border-2 border-neutral-300 dark:border-neutral-600 flex items-center justify-center">
                                 <div class="w-1/3 h-1/3 rounded-full bg-neutral-300 dark:bg-neutral-600"></div>
                             </div>
                         </div>
                     )}
-                  </div>
-                  <div>
-                    <div class="text-xs font-medium text-black dark:text-white truncate group-hover:underline decoration-1 underline-offset-2">
-                      {album.name}
-                    </div>
-                    <div class="text-[10px] text-neutral-500 truncate">
-                      {album.artist}
-                    </div>
-                  </div>
-                </a>
-              ))}
+                  </a>
+                ))}
             </div>
-
-            <div class="columns-1 sm:columns-2 gap-12 space-y-2">
-              {year.artists.map((artist: Item, i: number) => (
-                <div class="break-inside-avoid">
-                  <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
-                    <div class="flex items-center gap-2 truncate min-w-0">
-                      <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
-                      <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
-                          {artist.name}
-                      </a>
-                    </div>
-                    <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-
-          {/* --- ALL TIME --- */}
-          <section class="space-y-6">
-            <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
-              All Time
-            </h2>
-
-            <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 mb-8">
-              {allTime.albums.map((album: Item) => (
-                <a href={album.url} target="_blank" class="group block space-y-2">
-                  <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative bg-neutral-50 dark:bg-neutral-900">
-                    {album.image ? (
-                        <img
-                          src={album.image}
-                          alt={album.name}
-                          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          loading="lazy"
-                        />
-                    ) : (
-                        <div class="w-full h-full flex items-center justify-center">
-                           <div class="w-1/2 h-1/2 rounded-full border-2 border-neutral-300 dark:border-neutral-600 flex items-center justify-center">
-                                <div class="w-1/3 h-1/3 rounded-full bg-neutral-300 dark:bg-neutral-600"></div>
-                            </div>
-                        </div>
-                    )}
-                  </div>
-                  <div>
-                    <div class="text-xs font-medium text-black dark:text-white truncate group-hover:underline decoration-1 underline-offset-2">
-                      {album.name}
-                    </div>
-                    <div class="text-[10px] text-neutral-500 truncate">
-                      {album.artist}
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
-
-            <div class="columns-1 sm:columns-2 gap-12 space-y-2">
-              {allTime.artists.map((artist: Item, i: number) => (
-                <div class="break-inside-avoid">
-                  <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
-                    <div class="flex items-center gap-2 truncate min-w-0">
-                      <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
-                      <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
-                          {artist.name}
-                      </a>
-                    </div>
-                    <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <div class="text-center pt-8">
-            <a href={`https://last.fm/user/ed_welker`} target="_blank" class="text-xs text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
-              View full profile on Last.fm ↗
-            </a>
           </div>
 
+          {/* Artists & Tracks */}
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 pt-4">
+            <div>
+              <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
+              <ul class="space-y-1">
+                {week.artists.map((artist: Item, i: number) => (
+                  <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
+                     <div class="flex items-center gap-2 truncate min-w-0">
+                        <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+                        <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                            {artist.name}
+                        </a>
+                     </div>
+                     <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+             <div>
+              <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Songs</h3>
+              <ul class="space-y-1">
+                {week.tracks.map((track: Item, i: number) => (
+                  <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
+                     <div class="flex items-center gap-2 truncate min-w-0">
+                        <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+                        <a href={track.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                            {track.name}
+                        </a>
+                        <span class="text-xs text-neutral-400 truncate hidden sm:inline">- {track.artist}</span>
+                     </div>
+                     <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{track.plays}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+
+        {/* --- 30 DAY --- */}
+        <section class="space-y-6">
+          <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
+            Last 30 Days
+          </h2>
+
+          <div>
+            <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Albums</h3>
+            <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+               {month.albums.map((album: Item) => (
+                  <a href={album.url} target="_blank" class="group block space-y-1 relative" title={`${album.name} by ${album.artist}`}>
+                    {album.image ? (
+                        <img src={album.image} alt={album.name} class="rounded-sm w-full transition-transform duration-300 border border-neutral-200 dark:border-neutral-800" />
+                    ) : (
+                        <div class="aspect-square rounded-sm bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center">
+                            <div class="w-1/2 h-1/2 rounded-full border-2 border-neutral-300 dark:border-neutral-600 flex items-center justify-center">
+                                <div class="w-1/3 h-1/3 rounded-full bg-neutral-300 dark:bg-neutral-600"></div>
+                            </div>
+                        </div>
+                    )}
+                  </a>
+                ))}
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 pt-4">
+            <div>
+              <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
+              <ul class="space-y-1">
+                {month.artists.map((artist: Item, i: number) => (
+                  <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
+                     <div class="flex items-center gap-2 truncate min-w-0">
+                        <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+                        <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                            {artist.name}
+                        </a>
+                     </div>
+                     <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+             <div>
+              <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Songs</h3>
+              <ul class="space-y-1">
+                {month.tracks.map((track: Item, i: number) => (
+                  <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
+                     <div class="flex items-center gap-2 truncate min-w-0">
+                        <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+                        <a href={track.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                            {track.name}
+                        </a>
+                        <span class="text-xs text-neutral-400 truncate hidden sm:inline">- {track.artist}</span>
+                     </div>
+                     <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{track.plays}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+
+        {/* --- 1 YEAR --- */}
+        <section class="space-y-6">
+          <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
+            Last 12 Months
+          </h2>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 mb-8">
+            {year.albums.map((album: Item) => (
+              <a href={album.url} target="_blank" class="group block space-y-2">
+                <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative bg-neutral-50 dark:bg-neutral-900">
+                  {album.image ? (
+                      <img
+                        src={album.image}
+                        alt={album.name}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                  ) : (
+                      <div class="w-full h-full flex items-center justify-center p-2 text-center">
+                         <div class="w-1/2 h-1/2 rounded-full border-2 border-neutral-300 dark:border-neutral-600 flex items-center justify-center">
+                            <div class="w-1/3 h-1/3 rounded-full bg-neutral-300 dark:bg-neutral-600"></div>
+                        </div>
+                      </div>
+                  )}
+                </div>
+                <div>
+                  <div class="text-xs font-medium text-black dark:text-white truncate group-hover:underline decoration-1 underline-offset-2">
+                    {album.name}
+                  </div>
+                  <div class="text-[10px] text-neutral-500 truncate">
+                    {album.artist}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 pt-4">
+             <div>
+              <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
+               <div class="columns-1 gap-8 space-y-1">
+                {year.artists.map((artist: Item, i: number) => (
+                  <div class="break-inside-avoid">
+                    <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
+                      <div class="flex items-center gap-2 truncate min-w-0">
+                        <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+                        <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                            {artist.name}
+                        </a>
+                      </div>
+                      <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Songs</h3>
+               <div class="columns-1 gap-8 space-y-1">
+                {year.tracks.map((track: Item, i: number) => (
+                  <div class="break-inside-avoid">
+                    <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
+                      <div class="flex items-center gap-2 truncate min-w-0">
+                        <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+                        <a href={track.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                            {track.name}
+                        </a>
+                        <span class="text-xs text-neutral-400 truncate hidden sm:inline">- {track.artist}</span>
+                      </div>
+                      <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{track.plays}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* --- ALL TIME --- */}
+        <section class="space-y-6">
+          <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
+            All Time
+          </h2>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 mb-8">
+            {allTime.albums.map((album: Item) => (
+              <a href={album.url} target="_blank" class="group block space-y-2">
+                <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative bg-neutral-50 dark:bg-neutral-900">
+                  {album.image ? (
+                      <img
+                        src={album.image}
+                        alt={album.name}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                  ) : (
+                      <div class="w-full h-full flex items-center justify-center p-2 text-center">
+                         <div class="w-1/2 h-1/2 rounded-full border-2 border-neutral-300 dark:border-neutral-600 flex items-center justify-center">
+                            <div class="w-1/3 h-1/3 rounded-full bg-neutral-300 dark:bg-neutral-600"></div>
+                        </div>
+                      </div>
+                  )}
+                </div>
+                <div>
+                  <div class="text-xs font-medium text-black dark:text-white truncate group-hover:underline decoration-1 underline-offset-2">
+                    {album.name}
+                  </div>
+                  <div class="text-[10px] text-neutral-500 truncate">
+                    {album.artist}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 pt-4">
+             {/* All Time Artists */}
+             <div>
+              <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
+               <div class="columns-1 gap-8 space-y-1">
+                {allTime.artists.map((artist: Item, i: number) => (
+                  <div class="break-inside-avoid">
+                    <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
+                      <div class="flex items-center gap-2 truncate min-w-0">
+                        <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+                        <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                            {artist.name}
+                        </a>
+                      </div>
+                      <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* All Time Tracks */}
+            <div>
+              <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Songs</h3>
+               <div class="columns-1 gap-8 space-y-1">
+                {allTime.tracks.map((track: Item, i: number) => (
+                  <div class="break-inside-avoid">
+                    <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
+                      <div class="flex items-center gap-2 truncate min-w-0">
+                        <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+                        <a href={track.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
+                            {track.name}
+                        </a>
+                        <span class="text-xs text-neutral-400 truncate hidden sm:inline">- {track.artist}</span>
+                      </div>
+                      <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{track.plays}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="text-center pt-8">
+           <a href={`https://last.fm/user/ed_welker`} target="_blank" class="text-xs text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
+             View full profile on Last.fm ↗
+           </a>
         </div>
+
       </div>
     </div>
   </Container>
