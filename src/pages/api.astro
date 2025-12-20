@@ -3,35 +3,37 @@ import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
 
 const title = "Open Data";
-const description = "Technical overview of the site's data pipelines.";
+const description = "Technical overview of the site's data pipelines, automation, and performance metrics.";
 ---
 
 <PageLayout frontmatter={{ title, description }}>
-  <div class="space-y-10">
+  <div class="space-y-12">
+    {/* Intro Section */}
     <section>
-      <p class="mt-4 text-neutral-600 dark:text-neutral-400 max-w-2xl">
-        This site operates as a decoupled data engine. Instead of a traditional database, it uses a custom build-pipeline where external data is fetched via third-party APIs and served as static assets.
+      <p class="text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
+        This site operates as a decoupled data engine. Instead of a traditional database, it uses a custom build-pipeline where external life-data is fetched via third-party APIs and served as static assets.
       </p>
     </section>
 
     <div class="grid gap-12">
+      {/* The Pipeline Breakdown */}
       <section class="space-y-4">
         <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500 font-bold">The Pipeline</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="p-4 border border-black/5 dark:border-white/5 rounded-lg">
-            <h3 class="text-sm font-semibold mb-2">01. Ingestion</h3>
+            <h3 class="text-sm font-semibold mb-2 text-black dark:text-white">01. Ingestion</h3>
             <p class="text-xs text-neutral-500 leading-relaxed">
               Node.js scripts fetch and normalize data from Strava, Flickr, and Last.fm APIs during the build process.
             </p>
           </div>
           <div class="p-4 border border-black/5 dark:border-white/5 rounded-lg">
-            <h3 class="text-sm font-semibold mb-2">02. Automation</h3>
+            <h3 class="text-sm font-semibold mb-2 text-black dark:text-white">02. Automation</h3>
             <p class="text-xs text-neutral-500 leading-relaxed">
               GitHub Actions triggers a daily cron job at midnight to refresh the data and rebuild the static site.
             </p>
           </div>
           <div class="p-4 border border-black/5 dark:border-white/5 rounded-lg">
-            <h3 class="text-sm font-semibold mb-2">03. Deployment</h3>
+            <h3 class="text-sm font-semibold mb-2 text-black dark:text-white">03. Deployment</h3>
             <p class="text-xs text-neutral-500 leading-relaxed">
               Astro generates a zero-JS frontend, serving the finalized data both as UI components and raw JSON endpoints.
             </p>
@@ -39,8 +41,10 @@ const description = "Technical overview of the site's data pipelines.";
         </div>
       </section>
 
+      {/* Available Endpoints */}
       <section class="space-y-4">
         <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500 font-bold">Public Endpoints</h2>
+
         <div class="space-y-2">
           <div class="group">
             <a href="/data/music.json" class="flex items-center justify-between p-4 -mx-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
@@ -51,6 +55,7 @@ const description = "Technical overview of the site's data pipelines.";
               <div class="text-[10px] font-mono py-1 px-2 bg-black/5 dark:bg-white/10 rounded uppercase">JSON</div>
             </a>
           </div>
+
           <div class="group">
             <a href="/data/flickr-photos.json" class="flex items-center justify-between p-4 -mx-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
               <div>
@@ -63,12 +68,33 @@ const description = "Technical overview of the site's data pipelines.";
         </div>
       </section>
 
-      <section class="bg-neutral-100 dark:bg-neutral-900 p-6 rounded-lg">
-        <h3 class="text-xs font-mono uppercase tracking-widest text-neutral-500 mb-2">Data Privacy</h3>
-        <p class="text-xs leading-relaxed text-neutral-600 dark:text-neutral-400 italic">
-          Note: Strava data is ingested for high-level statistics but raw activity data is excluded from public endpoints for privacy.
-        </p>
+      {/* System Integrity & Performance */}
+      <section class="space-y-4 pt-4 border-t border-black/5 dark:border-white/5">
+        <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500 font-bold">System Integrity</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="https://github.com/edwelker/website/actions" target="_blank" class="p-4 border border-black/5 dark:border-white/5 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors group">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-semibold text-black dark:text-white">Build History</span>
+              <span class="text-[10px] font-mono text-neutral-400 group-hover:text-orange-500">GitHub Actions ↗</span>
+            </div>
+            <p class="text-xs text-neutral-500 mt-2 leading-relaxed">
+              Review the automated deployment logs and daily cron job execution history.
+            </p>
+          </a>
+
+          <a href="https://pagespeed.web.dev/report?url=https://edwelker.com" target="_blank" class="p-4 border border-black/5 dark:border-white/5 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors group">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-semibold text-black dark:text-white">Performance Audit</span>
+              <span class="text-[10px] font-mono text-neutral-400 group-hover:text-orange-500">Lighthouse ↗</span>
+            </div>
+            <p class="text-xs text-neutral-500 mt-2 leading-relaxed">
+              This site is architected for zero-JS delivery, consistently maintaining 100/100 performance marks.
+            </p>
+          </a>
+        </div>
       </section>
+
     </div>
   </div>
 </PageLayout>
