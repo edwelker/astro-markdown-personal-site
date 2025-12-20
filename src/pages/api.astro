@@ -46,6 +46,28 @@ const description = "Technical overview of the site's data pipelines, automation
         <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500 font-bold">Public Endpoints</h2>
 
         <div class="space-y-2">
+          {/* Highlights RSS */}
+          <div class="group">
+            <a href="/highlights.xml" class="flex items-center justify-between p-4 -mx-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
+              <div>
+                <code class="text-orange-600 dark:text-orange-400 font-mono text-sm">/highlights.xml</code>
+                <p class="text-xs text-neutral-500 mt-1">RSS feed of professional and personal milestones.</p>
+              </div>
+              <div class="text-[10px] font-mono py-1 px-2 bg-black/5 dark:bg-white/10 rounded uppercase">XML</div>
+            </a>
+          </div>
+
+          {/* Highlights JSON */}
+          <div class="group">
+            <a href="/data/highlights.json" class="flex items-center justify-between p-4 -mx-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
+              <div>
+                <code class="text-orange-600 dark:text-orange-400 font-mono text-sm">/data/highlights.json</code>
+                <p class="text-xs text-neutral-500 mt-1">Raw structured data from the highlights collection.</p>
+              </div>
+              <div class="text-[10px] font-mono py-1 px-2 bg-black/5 dark:bg-white/10 rounded uppercase">JSON</div>
+            </a>
+          </div>
+
           <div class="group">
             <a href="/data/music.json" class="flex items-center justify-between p-4 -mx-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
               <div>
@@ -94,7 +116,6 @@ const description = "Technical overview of the site's data pipelines, automation
           </a>
         </div>
       </section>
-
     </div>
   </div>
 </PageLayout>
