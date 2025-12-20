@@ -24,6 +24,11 @@ export const PROJECTS: Metadata = {
     "A curated list of my cycling achievements, technical projects, and other creative highlights.",
 };
 
+export const HIGHLIGHTS = {
+  TITLE: "Recent Highlights",
+  DESCRIPTION: "Projects, work, or things I'm proud of",
+};
+
 export const SOCIALS: Socials = [
   {
     NAME: "Instagram",

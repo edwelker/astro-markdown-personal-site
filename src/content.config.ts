@@ -25,21 +25,13 @@ const blog = defineCollection({
   }),
 });
 
-/* i now use just a config file to define these, easier than *.md files */
-// const highlights = defineCollection({
-//   // Removed custom loader, relying on Astro's default for src/content/highlights
-//   schema: z.object({
-//     title: z.string(),
-//     description: z.string(),
-//     // Changed to z.string() to fix the error in highlights.ts if you still use strings there.
-//     // However, if you are using 'z.coerce.date()' in blog, let's keep it here for consistency:
-//     date: z.coerce.date(),
-//     draft: z.boolean().optional(),
-//     url: z.string().optional(),
-//     tags: z.array(z.string()).optional(),
-//     featuredImage: z.string().optional(),
-//     featuredImageAlt: z.string().optional(),
-//   }),
-// });
+const highlights = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    draft: z.boolean().optional(),
+  }),
+});
 
-export const collections = { blog }; // highlights };
+export const collections = { blog, highlights };

@@ -5,7 +5,7 @@ export async function GET(context: any) {
   const highlights = await getCollection('highlights');
 
   const sortedHighlights = highlights.sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    (a, b) => (b.data.pubDate?.valueOf() || 0) - (a.data.pubDate?.valueOf() || 0)
   );
 
   return rss({
