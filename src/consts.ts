@@ -10,18 +10,18 @@ export const SITE: Site = {
 
 export const HOME: Metadata = {
   TITLE: "Home",
-  DESCRIPTION: "eddiewelker.com home",
+  DESCRIPTION: "Programmer, Cyclist, Cellist, Photographer, Cook, Woodworker. Senior Software Architect building big, important things and leading teams.",
 };
 
 export const BLOG: Metadata = {
   TITLE: "Blog",
-  DESCRIPTION: "Blog: Stuff I care about, enough to write about it",
+  DESCRIPTION: "A collection of articles on software engineering, XSLT, Python, food, cycling, and the intersection of technology and hobby.",
 };
 
 export const PROJECTS: Metadata = {
-  TITLE: "Projects",
+  TITLE: "Highlights",
   DESCRIPTION:
-    "Projects: Stuff I did",
+    "A curated list of my cycling achievements, technical projects, and other creative highlights.",
 };
 
 export const SOCIALS: Socials = [

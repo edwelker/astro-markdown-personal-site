@@ -1,18 +1,13 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
+import PageLayout from "@layouts/PageLayout.astro";
 import Link from "@components/Link.astro";
-import { getAllHighlights } from '../lib/highlights';
+import { HIGHLIGHTS } from "@consts";
+import { getAllHighlights } from "@lib/highlights";
 
 const highlights = await getAllHighlights();
 ---
 
-<PageLayout frontmatter={{ title: "Highlights", description: "My cycling and project highlights" }}>
-
-  {/* FIXES:
-      1. 'list-none': Removes the prose bullets.
-      2. 'p-0': Removes the automatic indentation.
-      3. 'not-prose': Tells Tailwind Typography to ignore this section completely.
-  */}
+<PageLayout title={HIGHLIGHTS.TITLE} description={HIGHLIGHTS.DESCRIPTION}>
   <ul class="flex flex-col gap-2 list-none p-0 not-prose">
     {highlights.map((item) => (
       <li class="relative">
@@ -30,7 +25,6 @@ const highlights = await getAllHighlights();
                 {item.title}
               </Link>
 
-              {/* Arrow for external links */}
               {item.url.startsWith("http") && <span class="text-xs text-neutral-400">↗</span>}
             </div>
 
@@ -49,5 +43,4 @@ const highlights = await getAllHighlights();
       </li>
     ))}
   </ul>
-
 </PageLayout>

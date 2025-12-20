@@ -1,19 +1,18 @@
 ---
 title: "About"
+description: "Senior Software Architect, cellist, and cyclist. I lead teams building big things, play obscure 20th-century Russian music, and ride my many bikes."
 date: '2007-08-15T20:40:50-05:00'
 menu: "topnav"
 showDate: false
 showComments: false
 weight: 10
-link: ""
-target: "_blank"
 layout: ../layouts/PageLayout.astro
 ---
 Part programmer, cellist, biker, and photographer, I live in the suburbs of Maryland, spend time on Long Island, and ride bikes wherever I can.
 
 I am a Senior Software Engineer with over 15 years of experience, and I am exceptional at what I do. I am a natural leader skilled at guiding teams through big organizational changes. I'm good at [Python](https://www.python.org/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [Django](https://www.djangoproject.com/), Data, and more!
 
-I love riding my bicycles, and I own too many of them. I've done 3 straight yearly tours of the [GAP](https://gaptrail.org/)/[C&O](https://www.nps.gov/choh/index.htm), the [Erie Canal](https://eriecanalway.org/), and a bunch of other shorter tours. Riding is one of the things that brings me great joy. That and my cat Sophie.
+I love riding my bicycles, and I own too many of them. I've done 3 straight yearly tours of the [GAP](https://gaptrail.org/)/[C&O](https://www.nps.gov/choh/index.htm), the [Erie Canal](https://eriecanalway.org/), and a bunch of other shorter tours. Riding is one of the things that brings me great joy. Especially on my [All-City Space Horse](/blog/2025/12/05/all_city_space_horse/). That and my cat Sophie.
 
 I’ve played the cello since fourth grade. I love music (of almost all genres) and enjoy listening to, playing, and reading about music history. My favorite cellist has always been [Mstislav Rostropovich](https://en.wikipedia.org/wiki/Mstislav_Rostropovich), and I am especially fond of 20th-century Russian composers like [Prokofiev](https://en.wikipedia.org/wiki/Sergei_Prokofiev), [Shostakovich](https://en.wikipedia.org/wiki/Dmitri_Shostakovich), and [Miaskovsky](https://en.wikipedia.org/wiki/Nikolai_Myaskovsky). I used to be principal cellist of the [Columbia Orchestra](https://columbiaorchestra.org/), and a member of the [University of Maryland](https://music.umd.edu/) and [Greater Baltimore Youth Orchestras](https://bsomusic.org/education-community/young-musicians/baltimore-symphony-youth-orchestras/).
 
