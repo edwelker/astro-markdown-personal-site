@@ -45,30 +45,38 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
           </div>
 
           <ul class="not-prose flex flex-col gap-2">
-            {blog.map((post) => (
-              <li>
-                {/* STRUCTURAL FIX:
-                   1. We use a <div> (not an <a>) for the wrapper to handle the hover background.
-                   2. We put 'group' on this wrapper so the child Link knows when to underline.
-                */}
-                <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                  <div class="flex flex-col gap-1">
-                    {/* The Title IS the Link now */}
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2"
-                    >
-                      {post.data.title}
-                    </Link>
+            {blog.map((post) => {
+              // --- LOGIC: Check if slug already has a date structure ---
+              let href = "";
+              if (post.slug.match(/^\d{4}\//)) {
+                  href = `/blog/${post.slug}/`;
+              } else {
+                  const year = post.data.date.getFullYear();
+                  const month = String(post.data.date.getMonth() + 1).padStart(2, '0');
+                  const day = String(post.data.date.getDate()).padStart(2, '0');
+                  href = `/blog/${year}/${month}/${day}/${post.slug}/`;
+              }
+              // -------------------------------------------------------
 
-                    {/* Date is outside the Link, so no underlines ever */}
-                    <p class="text-sm text-neutral-500">
-                      {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                    </p>
+              return (
+                <li>
+                  <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <div class="flex flex-col gap-1">
+                      <Link
+                        href={href}
+                        class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2"
+                      >
+                        {post.data.title}
+                      </Link>
+
+                      <p class="text-sm text-neutral-500">
+                        {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ul>
         </section>
 

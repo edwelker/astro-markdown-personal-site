@@ -13,35 +13,40 @@ type Post = CollectionEntry<"blog">;
 type Props = { post: Post; prevPost?: Post; nextPost?: Post };
 
 export async function getStaticPaths() {
-
-  // 1. Fetch, filter, and sort all posts in one trusted operation.
   const allPosts = (await getCollection("blog"))
     .filter((post) => !post.data.draft)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-  // 2. Generate the paths, injecting next/prev posts as props
   return allPosts.map((post, index) => {
-    // Determine the next and previous post for navigation
     const prevPost = allPosts[index - 1] || undefined;
     const nextPost = allPosts[index + 1] || undefined;
 
+    // --- LOGIC: Check if slug already has a date structure ---
+    let customPath = post.slug;
+
+    // If the slug DOES NOT start with 4 digits and a slash (e.g. "2025/"), add the date.
+    if (!post.slug.match(/^\d{4}\//)) {
+        const date = new Date(post.data.date);
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        customPath = `${year}/${month}/${day}/${post.slug}`;
+    }
+    // -------------------------------------------------------
+
     return {
-      params: { id: post.slug },
+      params: { id: customPath },
       props: {
-        post: post,
-        prevPost: prevPost,
-        nextPost: nextPost
+        post,
+        prevPost,
+        nextPost
       } as Props,
     };
   });
 }
 
-// Destructure all data from props, including injected navigation posts
 const { post, prevPost, nextPost } = Astro.props;
 const { Content, headings } = await render(post);
-
-// Your old helper functions (getNextPost and getPrevPost) are now deleted
-// because the navigation data is passed directly via props.
 ---
 
 <Layout title={post.data.title} description={post.data.description ?? ''}>
@@ -60,7 +65,6 @@ const { Content, headings } = await render(post);
                 />
             </figure>
         )}
-
 
         <p class="text-sm text-gray-500">
             Published: <FormattedDate date={post.data.date} />
