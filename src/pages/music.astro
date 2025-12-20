@@ -4,10 +4,9 @@ import Container from "@components/Container.astro";
 import BackToPrevious from "@components/BackToPrevious.astro";
 import musicData from "../data/music.json";
 
-// Define simplified types for the JSON data
 type Item = { name: string; url: string; image: string; artist?: string; plays?: string | number };
 
-const { user, artists, albums } = musicData;
+const { user, week, month, year, allTime } = musicData;
 
 const title = "Listening Habits";
 const description = "A detailed look at my music rotation.";
@@ -18,70 +17,38 @@ const description = "A detailed look at my music rotation.";
     <div class="animate">
       <BackToPrevious href="/" />
 
-      <header class="mb-12 mt-8">
+      <header class="mb-16 mt-8">
         <h1 class="font-semibold text-2xl text-black dark:text-white mb-2">Music Stats</h1>
         <p class="text-neutral-500 text-sm">
           Lifetime Scrobbles: <span class="text-black dark:text-white font-mono">{user.scrobbles.toLocaleString()}</span>
         </p>
       </header>
 
-      <div class="space-y-20">
+      <div class="space-y-24">
 
-        {/* --- PART 1: CURRENT ROTATION (Weekly & Monthly) --- */}
-        <section class="space-y-8">
-          <h2 class="text-lg font-bold text-black dark:text-white border-b border-black/10 dark:border-white/10 pb-2">
-            Current Rotation
+        {/* --- 7 DAY --- */}
+        <section class="space-y-6">
+          <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
+            Last 7 Days
           </h2>
-
-          <div class="grid md:grid-cols-2 gap-12">
-            {/* WEEKLY STATS */}
-            <div class="space-y-6">
-              <h3 class="font-semibold text-neutral-800 dark:text-neutral-200">This Week</h3>
-
-              {/* Weekly Albums */}
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div>
+              <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Albums</h3>
               <div class="grid grid-cols-3 gap-3">
-                {albums.weekly.slice(0, 3).map((album: Item) => (
-                  <a href={album.url} target="_blank" class="group block space-y-1">
+                {week.albums.map((album: Item) => (
+                   <a href={album.url} target="_blank" class="group block space-y-1" title={`${album.name} by ${album.artist}`}>
                     <img src={album.image} alt={album.name} class="rounded-sm w-full grayscale group-hover:grayscale-0 transition-all duration-300 border border-neutral-200 dark:border-neutral-800" />
-                    <p class="text-[10px] leading-tight text-neutral-500 truncate">{album.name}</p>
                   </a>
                 ))}
               </div>
-
-              {/* Weekly Artists */}
-              <ul class="space-y-1">
-                {artists.weekly.map((artist: Item, i: number) => (
-                  <li class="flex justify-between text-sm group">
-                     <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
-                       <span class="mr-2 text-neutral-400 font-mono text-xs">{i + 1}</span>
-                       {artist.name}
-                     </a>
-                     <span class="text-xs font-mono text-neutral-400">{artist.plays}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
-
-            {/* MONTHLY STATS */}
-            <div class="space-y-6">
-              <h3 class="font-semibold text-neutral-800 dark:text-neutral-200">This Month</h3>
-
-              {/* Monthly Albums */}
-              <div class="grid grid-cols-3 gap-3">
-                {albums.monthly.slice(0, 3).map((album: Item) => (
-                  <a href={album.url} target="_blank" class="group block space-y-1">
-                    <img src={album.image} alt={album.name} class="rounded-sm w-full grayscale group-hover:grayscale-0 transition-all duration-300 border border-neutral-200 dark:border-neutral-800" />
-                    <p class="text-[10px] leading-tight text-neutral-500 truncate">{album.name}</p>
-                  </a>
-                ))}
-              </div>
-
-              {/* Monthly Artists */}
+            <div>
+              <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
               <ul class="space-y-1">
-                {artists.monthly.map((artist: Item, i: number) => (
-                  <li class="flex justify-between text-sm group">
+                {week.artists.map((artist: Item, i: number) => (
+                  <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
                      <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
-                       <span class="mr-2 text-neutral-400 font-mono text-xs">{i + 1}</span>
+                       <span class="mr-3 text-neutral-300 font-mono text-xs">{i + 1}</span>
                        {artist.name}
                      </a>
                      <span class="text-xs font-mono text-neutral-400">{artist.plays}</span>
@@ -93,57 +60,127 @@ const description = "A detailed look at my music rotation.";
         </section>
 
 
-        {/* --- PART 2: THE LONG HAUL (Yearly & All Time) --- */}
-        <section class="space-y-8">
-           <h2 class="text-lg font-bold text-black dark:text-white border-b border-black/10 dark:border-white/10 pb-2">
-            The Long Haul
+        {/* --- 30 DAY --- */}
+        <section class="space-y-6">
+          <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
+            Last 30 Days
           </h2>
-
-          <div class="space-y-8">
-            {/* YEARLY ALBUMS (Expanded Grid) */}
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12">
             <div>
-              <h3 class="font-semibold text-neutral-800 dark:text-neutral-200 mb-4">Top Albums (Year)</h3>
-              <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
-                {albums.yearly.map((album: Item) => (
-                  <a href={album.url} target="_blank" class="group block space-y-2">
-                    <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative">
-                      <img
-                        src={album.image}
-                        alt={album.name}
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div>
-                      <div class="text-xs font-medium text-black dark:text-white truncate group-hover:underline decoration-1 underline-offset-2">
-                        {album.name}
-                      </div>
-                      <div class="text-[10px] text-neutral-500 truncate">
-                        {album.artist}
-                      </div>
-                    </div>
+               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Albums</h3>
+               <div class="grid grid-cols-3 gap-3">
+                {month.albums.map((album: Item) => (
+                   <a href={album.url} target="_blank" class="group block space-y-1" title={`${album.name} by ${album.artist}`}>
+                    <img src={album.image} alt={album.name} class="rounded-sm w-full grayscale group-hover:grayscale-0 transition-all duration-300 border border-neutral-200 dark:border-neutral-800" />
                   </a>
                 ))}
               </div>
             </div>
-
-            {/* ALL TIME ARTISTS (Columns) */}
             <div>
-              <h3 class="font-semibold text-neutral-800 dark:text-neutral-200 mb-4">Top Artists (All-Time)</h3>
-              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
-                {artists.allTime.map((artist: Item, index: number) => (
-                  <li class="flex items-baseline justify-between group border-b border-neutral-100 dark:border-neutral-800 pb-1 last:border-0">
-                    <a href={artist.url} target="_blank" class="flex items-center gap-2 truncate text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
-                      <span class="text-xs font-mono text-neutral-400 w-5">{index + 1}.</span>
-                      <span class="truncate group-hover:underline decoration-1 underline-offset-2">{artist.name}</span>
-                    </a>
-                    <span class="text-xs font-mono text-neutral-400 shrink-0">
-                      {parseInt(artist.plays as string).toLocaleString()}
-                    </span>
+              <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
+              <ul class="space-y-1">
+                {month.artists.map((artist: Item, i: number) => (
+                  <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
+                     <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
+                       <span class="mr-3 text-neutral-300 font-mono text-xs">{i + 1}</span>
+                       {artist.name}
+                     </a>
+                     <span class="text-xs font-mono text-neutral-400">{artist.plays}</span>
                   </li>
                 ))}
               </ul>
             </div>
+          </div>
+        </section>
+
+
+        {/* --- 1 YEAR --- */}
+        <section class="space-y-6">
+          <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
+            Last 12 Months
+          </h2>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 mb-8">
+            {year.albums.map((album: Item) => (
+              <a href={album.url} target="_blank" class="group block space-y-2">
+                <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative">
+                  <img
+                    src={album.image}
+                    alt={album.name}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <div class="text-xs font-medium text-black dark:text-white truncate group-hover:underline decoration-1 underline-offset-2">
+                    {album.name}
+                  </div>
+                  <div class="text-[10px] text-neutral-500 truncate">
+                    {album.artist}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* Columns-2 ensures 1-10 are on left, 11-20 on right */}
+          <div class="columns-1 sm:columns-2 gap-12 space-y-2">
+            {year.artists.map((artist: Item, i: number) => (
+              <div class="break-inside-avoid">
+                <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
+                  <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
+                    <span class="mr-3 text-neutral-300 font-mono text-xs w-4 inline-block text-right">{i + 1}</span>
+                    {artist.name}
+                  </a>
+                  <span class="text-xs font-mono text-neutral-400">{artist.plays}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+
+        {/* --- ALL TIME --- */}
+        <section class="space-y-6">
+          <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
+            All Time
+          </h2>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 mb-8">
+            {allTime.albums.map((album: Item) => (
+              <a href={album.url} target="_blank" class="group block space-y-2">
+                <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative">
+                  <img
+                    src={album.image}
+                    alt={album.name}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <div class="text-xs font-medium text-black dark:text-white truncate group-hover:underline decoration-1 underline-offset-2">
+                    {album.name}
+                  </div>
+                  <div class="text-[10px] text-neutral-500 truncate">
+                    {album.artist}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div class="columns-1 sm:columns-2 gap-12 space-y-2">
+             {allTime.artists.map((artist: Item, i: number) => (
+              <div class="break-inside-avoid">
+                <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
+                  <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
+                    <span class="mr-3 text-neutral-300 font-mono text-xs w-4 inline-block text-right">{i + 1}</span>
+                    {artist.name}
+                  </a>
+                  <span class="text-xs font-mono text-neutral-400">{artist.plays}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
