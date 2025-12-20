@@ -52,11 +52,12 @@ async function fetchStravaData() {
       if (page > 10) keepFetching = false;
     }
 
-    // --- CALCULATION LOGIC (Inclusive of all rides) ---
     const currentMonth = NOW.getMonth();
     let ytdDist = 0, ytdElev = 0, ytdCount = 0;
     let monthDist = 0, monthCount = 0;
+    const weeklyMiles = new Array(52).fill(0);
 
+    // 1. Calculate Totals (Inclusive of all cycling)
     allActivities.forEach(ride => {
       const cyclingSports = ['Ride', 'MountainBikeRide', 'GravelRide', 'EBikeRide', 'VirtualRide'];
       const isCycling = cyclingSports.includes(ride.sport_type) || cyclingSports.includes(ride.type);
@@ -74,18 +75,25 @@ async function fetchStravaData() {
           monthDist += miles;
           monthCount++;
         }
+
+        const startOfYear = new Date(YEAR, 0, 1);
+        const diffInMs = rideDate - startOfYear;
+        const weekIndex = Math.floor(diffInMs / (1000 * 60 * 60 * 24 * 7));
+        if (weekIndex >= 0 && weekIndex < 52) {
+          weeklyMiles[weekIndex] += miles;
+        }
       }
     });
 
-    // --- DISPLAY FILTER (Outdoor only for the Recent list) ---
-    const recentOutdoorRides = allActivities
+    // 2. Filter Recent List (Strictly outdoor/significant rides)
+    const recentDisplayRides = allActivities
       .filter(a => {
-        const cyclingSports = ['Ride', 'MountainBikeRide', 'GravelRide', 'EBikeRide'];
-        const isOutdoor = cyclingSports.includes(a.sport_type) || cyclingSports.includes(a.type);
+        const outdoorSports = ['Ride', 'MountainBikeRide', 'GravelRide', 'EBikeRide'];
+        const isOutdoorType = outdoorSports.includes(a.sport_type) || outdoorSports.includes(a.type);
         const isVirtual = a.sport_type === 'VirtualRide' || a.type === 'VirtualRide';
         const isTrainer = a.trainer === true;
         const isVisible = a.visibility !== 'only_me';
-        return isOutdoor && !isVirtual && !isTrainer && isVisible;
+        return isOutdoorType && !isVirtual && !isTrainer && isVisible;
       })
       .filter(a => (a.distance * 0.000621371) > MIN_MILES)
       .slice(0, 3)
@@ -108,11 +116,12 @@ async function fetchStravaData() {
         distance: Math.round(monthDist),
         count: monthCount
       },
-      recent: recentOutdoorRides
+      recent: recentDisplayRides,
+      chart: weeklyMiles.map(m => Math.round(m))
     };
 
     await fs.writeFile(OUT_FILE, JSON.stringify(output, null, 2));
-    console.log(`✅ Success: ${ytdCount} total rides processed.`);
+    console.log(`✅ Success: Aggregated ${ytdCount} rides.`);
 
   } catch (err) {
     console.error("❌ Error:", err.message);
