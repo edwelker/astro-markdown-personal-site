@@ -8,10 +8,10 @@ on:
   # Allows manual triggering via the GitHub Actions UI ("Run workflow" button)
   workflow_dispatch:
 
-  # Runs daily at 00:00 UTC (or your preferred schedule)
-  schedule:
-    - cron: '0 0 * * *'
-
+schedule:
+    # Runs at 03:00 and 15:00 UTC every day
+    - cron: '0 3,15 * * *'
+    
 jobs:
   # This job only exists to ping Cloudflare to start a build
   trigger:
