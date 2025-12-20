@@ -1,0 +1,119 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import BackToPrevious from "@components/BackToPrevious.astro";
+import musicData from "../data/music.json";
+
+const { user, recent, artists, albums, tracks } = musicData;
+
+const title = "Listening Habits";
+const description = "A detailed look at what I've been listening to.";
+---
+
+<Layout title={title} description={description}>
+  <Container>
+    <BackToPrevious href="/" />
+
+    <header class="mb-12">
+      <h1 class="text-3xl font-bold mb-4">Music Stats</h1>
+      <p class="text-neutral-600 dark:text-neutral-400">
+        <span class="font-semibold text-black dark:text-white">{user.scrobbles.toLocaleString()}</span> lifetime scrobbles.
+        Data from <a href={`https://last.fm/user/ed_welker`} class="underline decoration-neutral-500 hover:decoration-black dark:hover:decoration-white transition-colors">Last.fm</a>.
+      </p>
+    </header>
+
+    <div class="space-y-16">
+
+      {/* SECTION 1: TOP ALBUMS (PAST YEAR) - GRID VIEW */}
+      <section>
+        <h2 class="text-xl font-semibold mb-6 flex items-center gap-2">
+          <span>💿</span> Top Albums (Last 12 Months)
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          {albums.yearly.map((album) => (
+            <a href={album.url} target="_blank" rel="noreferrer" class="group relative aspect-square bg-neutral-100 dark:bg-neutral-800 rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-700">
+              <img
+                src={album.image}
+                alt={album.name}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3">
+                <p class="text-white text-sm font-bold truncate">{album.name}</p>
+                <p class="text-white/80 text-xs truncate">{album.artist}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* SECTION 2: RECENT TRACKS - LIST VIEW */}
+      <section>
+        <h2 class="text-xl font-semibold mb-6 flex items-center gap-2">
+          <span>🎧</span> Recently Played
+        </h2>
+        <ul class="flex flex-col gap-2">
+          {recent.map((track) => (
+            <li class="flex items-center gap-4 p-2 rounded-lg hover:bg-neutral-50 dark:hover:bg-white/5 transition-colors">
+              <img
+                src={track.image}
+                alt="Art"
+                class="w-12 h-12 rounded bg-neutral-200 object-cover"
+              />
+              <div class="flex-1 min-w-0">
+                <a href={track.url} target="_blank" class="block font-medium truncate hover:underline text-black dark:text-white">
+                  {track.name}
+                </a>
+                <p class="text-sm text-neutral-500 truncate">{track.artist}</p>
+              </div>
+              {track.nowPlaying ? (
+                <span class="text-xs font-bold text-green-600 dark:text-green-400 animate-pulse uppercase tracking-wider">
+                  Now Playing
+                </span>
+              ) : (
+                <span class="text-xs text-neutral-400 tabular-nums">
+                    {track.date}
+                </span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        {/* SECTION 3: TOP ARTISTS (ALL TIME) */}
+        <section>
+          <h2 class="text-xl font-semibold mb-6">🏆 Top Artists (All Time)</h2>
+          <ol class="list-decimal list-inside space-y-2 text-neutral-700 dark:text-neutral-300">
+            {artists.allTime.map((artist) => (
+              <li class="p-2 rounded hover:bg-neutral-50 dark:hover:bg-white/5">
+                <a href={artist.url} target="_blank" class="hover:underline">
+                    <span class="font-medium">{artist.name}</span>
+                </a>
+                <span class="text-sm text-neutral-500 ml-2">({parseInt(artist.plays).toLocaleString()} plays)</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* SECTION 4: CURRENT OBSESSIONS (MONTH) */}
+        <section>
+          <h2 class="text-xl font-semibold mb-6">🔥 Top Tracks (This Month)</h2>
+           <ul class="space-y-2">
+            {tracks.monthly.map((track, index) => (
+              <li class="flex items-center gap-3 p-2 rounded hover:bg-neutral-50 dark:hover:bg-white/5">
+                <span class="text-neutral-400 font-mono w-4 text-right">{index + 1}</span>
+                <img src={track.image} class="w-8 h-8 rounded bg-neutral-200" alt="" />
+                <div class="flex-1 min-w-0">
+                  <div class="font-medium truncate text-black dark:text-white">{track.name}</div>
+                  <div class="text-xs text-neutral-500 truncate">{track.artist}</div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
+
+    </div>
+  </Container>
+</Layout>
