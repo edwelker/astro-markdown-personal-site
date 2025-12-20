@@ -8,7 +8,7 @@ on:
   # Allows manual triggering via the GitHub Actions UI ("Run workflow" button)
   workflow_dispatch:
 
-schedule:
+  schedule:
     # Runs at 03:00 and 15:00 UTC every day
     - cron: '0 3,15 * * *'
     
