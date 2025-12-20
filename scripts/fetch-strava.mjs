@@ -35,77 +35,58 @@ async function fetchStravaData() {
     let page = 1;
     let keepFetching = true;
 
-    console.log(`--- Starting Paginated Fetch for ${YEAR} ---`);
-
     while (keepFetching) {
-      console.log(`Fetching page ${page}...`);
       const res = await fetch(
         `https://www.strava.com/api/v3/athlete/activities?page=${page}&per_page=100`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
-
       const activities = await res.json();
-
-      if (!res.ok || activities.length === 0) {
-        keepFetching = false;
-        break;
-      }
+      if (!res.ok || activities.length === 0) { keepFetching = false; break; }
 
       for (const activity of activities) {
         const rideDate = new Date(activity.start_date);
-
-        // If we hit a ride from last year, we can stop fetching entirely
-        if (rideDate.getFullYear() < YEAR) {
-          keepFetching = false;
-          break;
-        }
-
-        // Only add if it belongs to the current year
-        if (rideDate.getFullYear() === YEAR) {
-          allActivities.push(activity);
-        }
+        if (rideDate.getFullYear() < YEAR) { keepFetching = false; break; }
+        if (rideDate.getFullYear() === YEAR) allActivities.push(activity);
       }
-
       page++;
-      // Safety break to prevent infinite loops
       if (page > 10) keepFetching = false;
     }
 
-    console.log(`Total current year activities found: ${allActivities.length}`);
-
-    // --- FILTERING ---
-    const cleanRides = allActivities.filter(a => {
-      const cyclingSports = ['Ride', 'MountainBikeRide', 'GravelRide', 'EBikeRide'];
-      const isCycling = cyclingSports.includes(a.sport_type) || cyclingSports.includes(a.type);
-      const isVirtual = a.sport_type === 'VirtualRide' || a.type === 'VirtualRide';
-      const isTrainer = a.trainer === true;
-      const isVisible = a.visibility !== 'only_me';
-
-      return isCycling && !isVirtual && !isTrainer && isVisible;
-    });
-
+    // --- CALCULATION LOGIC (Inclusive of all rides) ---
     const currentMonth = NOW.getMonth();
-    const monthName = NOW.toLocaleDateString('en-US', { month: 'long' });
-
     let ytdDist = 0, ytdElev = 0, ytdCount = 0;
     let monthDist = 0, monthCount = 0;
 
-    cleanRides.forEach(ride => {
-      const miles = ride.distance * 0.000621371;
-      const feet = ride.total_elevation_gain * 3.28084;
-      const rideDate = new Date(ride.start_date);
+    allActivities.forEach(ride => {
+      const cyclingSports = ['Ride', 'MountainBikeRide', 'GravelRide', 'EBikeRide', 'VirtualRide'];
+      const isCycling = cyclingSports.includes(ride.sport_type) || cyclingSports.includes(ride.type);
 
-      ytdDist += miles;
-      ytdElev += feet;
-      ytdCount++;
+      if (isCycling) {
+        const miles = ride.distance * 0.000621371;
+        const feet = ride.total_elevation_gain * 3.28084;
+        const rideDate = new Date(ride.start_date);
 
-      if (rideDate.getMonth() === currentMonth) {
-        monthDist += miles;
-        monthCount++;
+        ytdDist += miles;
+        ytdElev += feet;
+        ytdCount++;
+
+        if (rideDate.getMonth() === currentMonth) {
+          monthDist += miles;
+          monthCount++;
+        }
       }
     });
 
-    const recent = cleanRides
+    // --- DISPLAY FILTER (Outdoor only for the Recent list) ---
+    const recentOutdoorRides = allActivities
+      .filter(a => {
+        const cyclingSports = ['Ride', 'MountainBikeRide', 'GravelRide', 'EBikeRide'];
+        const isOutdoor = cyclingSports.includes(a.sport_type) || cyclingSports.includes(a.type);
+        const isVirtual = a.sport_type === 'VirtualRide' || a.type === 'VirtualRide';
+        const isTrainer = a.trainer === true;
+        const isVisible = a.visibility !== 'only_me';
+        return isOutdoor && !isVirtual && !isTrainer && isVisible;
+      })
       .filter(a => (a.distance * 0.000621371) > MIN_MILES)
       .slice(0, 3)
       .map(a => ({
@@ -123,15 +104,15 @@ async function fetchStravaData() {
         count: ytdCount
       },
       month: {
-        name: monthName,
+        name: NOW.toLocaleDateString('en-US', { month: 'long' }),
         distance: Math.round(monthDist),
         count: monthCount
       },
-      recent
+      recent: recentOutdoorRides
     };
 
     await fs.writeFile(OUT_FILE, JSON.stringify(output, null, 2));
-    console.log(`✅ Success: ${ytdCount} rides YTD saved.`);
+    console.log(`✅ Success: ${ytdCount} total rides processed.`);
 
   } catch (err) {
     console.error("❌ Error:", err.message);
