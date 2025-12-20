@@ -1,11 +1,8 @@
-// src/data/highlights.ts
-
 export interface Highlight {
   title: string;
   description: string;
   url: string;
   date: string;
-  // This is the new field for your personal take
   thought?: string;
 }
 
@@ -14,8 +11,8 @@ export const highlights: Highlight[] = [
     title: "Personal Website Github Repo",
     description: "This site's github. Work in progress, but Wordpress to Hugo to Astro/Typescript.",
     url: "https://github.com/edwelker/website/tree/astro",
-    date: "2025-12-05", // Update to current if you want
-    thought: "Wordpress to Hugo to Astro. Advantages/disadvantages later."
+    date: "2025-12-20",
+    thought: "Migration from Wordpress through Hugo to Astro/Typescript for better performance and a different experience."
   },
   {
     title: "LivingByBike's MoCo Tour 2024",
@@ -49,6 +46,7 @@ export const highlights: Highlight[] = [
     title: "718 2023 GAP/C&O",
     description: "Photos from 718 GAP/C&O Tour, 2023",
     date: "2023-12-13",
-    url: "https://photos.google.com/share/AF1QipO2GSgLiAA6j3h05MbfFuHCH-Os1-i6rMw0cPHmU9RBCV2pJzlIeUykqw8Yqnmsxg?key=MnFESC13ejJvSU5QN1NYMDVwSjFOY1dyTzRjRFBR"
+    url: "https://photos.google.com/share/AF1QipO2GSgLiAA6j3h05MbfFuHCH-Os1-i6rMw0cPHmU9RBCV2pJzlIeUykqw8Yqnmsxg?key=MnFESC13ejJvSU5QN1NYMDVwSjFOY1dyTzRjRFBR",
+    thought: "The 2023 GAP/C&O tour with <a href='https://718outdoors.com/'>718 Outdoors</a>."
   },
 ];
