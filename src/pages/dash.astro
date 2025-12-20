@@ -1,0 +1,68 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+
+// Define your personal links here for easy management
+const links = [
+  {
+    category: "Monitoring",
+    items: [
+      { name: "Google Analytics", url: "https://analytics.google.com/" },
+      { name: "Search Console", url: "https://search.google.com/search-console" },
+      { name: "Ahrefs", url: "https://ahrefs.com/dashboard" }
+    ]
+  },
+  {
+    category: "Infrastructure",
+    items: [
+      { name: "Cloudflare Pages", url: "https://dash.cloudflare.com/" },
+      { name: "GitHub Actions", url: "https://github.com/edwelker/website/actions" },
+      { name: "GitHub Repo", url: "https://github.com/edwelker/website" }
+    ]
+  }
+];
+---
+
+<Layout title="Dashboard" description="Private Site Management">
+  <head slot="head">
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+
+  <Container>
+    <div class="space-y-12">
+      <section>
+        <h1 class="text-3xl font-bold text-black dark:text-white mb-2">Dashboard</h1>
+        <p class="text-neutral-500 text-sm">Private management links for edwelker.com</p>
+      </section>
+
+      <div class="grid gap-12">
+        {links.map((group) => (
+          <section class="space-y-4">
+            <h5 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold border-b border-black/5 dark:border-white/5 pb-2">
+              {group.category}
+            </h5>
+            <ul class="flex flex-col gap-2 p-0 list-none not-prose">
+              {group.items.map((item) => (
+                <li>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                  >
+                    <div class="flex justify-between items-center">
+                      <span class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">
+                        {item.name}
+                      </span>
+                      <span class="text-xs text-neutral-400">↗</span>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    </div>
+  </Container>
+</Layout>
