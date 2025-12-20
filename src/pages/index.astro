@@ -7,6 +7,7 @@ import { getCollection } from "astro:content";
 import { getAllHighlights } from "@lib/highlights";
 import FlickrGallery from '@components/FlickrGallery.astro';
 import MusicStats from "@components/MusicStats.astro";
+import CyclingStats from "@components/CyclingStats.astro";
 
 // DELETE THIS LINE IF YOU ARE NOT USING IT:
 // import ArrowCard from "@components/ArrowCard.astro";
@@ -131,6 +132,10 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
         <section class="animate mt-16 space-y-4">
           <MusicStats />
         </section>
+
+        <div class="mt-24 pt-12 border-t border-dashed border-black/10 dark:border-white/10">
+          <CyclingStats />
+        </div>
 
         <section class="animate space-y-4">
           <h2 class="font-semibold text-black dark:text-white">

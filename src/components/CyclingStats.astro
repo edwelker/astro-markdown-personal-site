@@ -1,0 +1,97 @@
+---
+import cyclingData from "../data/cycling.json";
+
+interface RecentRide {
+  name: string;
+  date: string;
+  distance: string;
+  elevation: string;
+  id: number;
+}
+
+const { year, month, recent } = cyclingData || {
+  year: { distance: "0", elevation: "0", count: 0 },
+  month: { distance: 0, count: 0 },
+  recent: []
+};
+
+const hasRides = year.count > 0;
+const currentYear = new Date().getFullYear();
+---
+
+<div class="space-y-6">
+  {/* Header */}
+  <div class="flex justify-between items-end pb-4 border-b border-black/10 dark:border-white/10">
+    <div class="flex items-center gap-2">
+      <h3 class="font-semibold text-black dark:text-white">Cycling</h3>
+    </div>
+    <div class="text-xs font-mono text-neutral-500">
+      {hasRides ? `${year.count} outdoor rides in ${currentYear}` : "Off-season / Winter Training"}
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {/* LEFT: TOTALS (Only show if there's data for the year) */}
+    <div class="space-y-6">
+      {hasRides ? (
+        <>
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-2">{currentYear} Progress</h4>
+            <div class="flex flex-col">
+              <span class="text-2xl font-mono text-black dark:text-white">
+                {year.distance}<span class="text-sm text-neutral-400 ml-1">mi</span>
+              </span>
+              <span class="text-sm text-neutral-500">{year.elevation} ft elevation gain</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-2">{month.name}</h4>
+            <div class="flex flex-col">
+              <span class="text-xl font-mono text-black dark:text-white">
+                {month.distance}<span class="text-xs text-neutral-400 ml-1">mi</span>
+              </span>
+              <span class="text-xs text-neutral-500">{month.count} rides this month</span>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div class="h-full flex flex-col justify-center py-4">
+          <p class="text-sm text-neutral-500 italic">No outdoor rides logged yet for {currentYear}.</p>
+          <p class="text-xs text-neutral-400 mt-2">Waiting for the spring thaw.</p>
+        </div>
+      )}
+    </div>
+
+    {/* RIGHT: RECENT RIDES (Always show if available) */}
+    <div>
+       <h4 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-3">Recent Activities</h4>
+       <ul class="space-y-3">
+         {recent.map((ride: RecentRide) => (
+           <li class="group">
+             <a href={`https://www.strava.com/activities/${ride.id}`} target="_blank" class="block">
+               <div class="flex justify-between items-baseline">
+                 <span class="text-sm text-neutral-800 dark:text-neutral-200 truncate group-hover:underline decoration-1 underline-offset-2">
+                   {ride.name}
+                 </span>
+                 <span class="text-[10px] font-mono text-neutral-400 shrink-0 ml-2">{ride.date}</span>
+               </div>
+               <div class="text-xs text-neutral-500 mt-0.5">
+                 {ride.distance} mi • {ride.elevation} ft
+               </div>
+             </a>
+           </li>
+         ))}
+         {recent.length === 0 && (
+           <li class="text-xs text-neutral-400 italic">No significant outdoor rides recorded lately.</li>
+         )}
+       </ul>
+    </div>
+  </div>
+
+  <div class="text-right border-t border-black/10 dark:border-white/10 pt-4">
+    <a href="https://www.strava.com/athletes/ed_welker" target="_blank" class="text-[10px] text-neutral-500 hover:text-black dark:hover:text-white uppercase tracking-wider transition-colors">
+      Follow on Strava ↗
+    </a>
+  </div>
+</div>
