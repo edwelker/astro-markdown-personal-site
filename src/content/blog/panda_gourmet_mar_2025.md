@@ -7,13 +7,13 @@ description: 'My notes and descriptions of dishes from Washington''s Panda Gourm
 
 I assert that the best Szechuan restaurant in the Baltimore/DC area is DC's [Panda Gourmet](https://www.pandagourmetfusions.com/), a restaurant in the bottom of a hotel.
 
-I was there recently, and decided that I would breakdown the dishes I ordered.
+I was there recently, and decided that I would break down the dishes I ordered.
 
 ## Dry Braised Chicken
 
 [![Dry Braised Chicken](https://live.staticflickr.com/65535/54419176606_965675fd03_c.jpg)](https://flickr.com/photos/ed_welker/54419176606)
 
-The flavor relied heavily on the oil, which was infused with cinnamon and ginger. There was a distinct sweetness, and I could tell a good amount of sugar was used, but it wasn't sweet, it was simply balanced, alongside the MSG..
+The flavor relied heavily on the oil, which was infused with cinnamon and ginger. There was a distinct sweetness, and I could tell a good amount of sugar was used, but it wasn't sweet; it was simply balanced, alongside the MSG.
 
 What was most surprising was what was missing. There was no garlic. No sesame seeds or peanuts. No scallions. I can't remember if previous versions contained these, but this was still delicious.
 
@@ -23,7 +23,7 @@ What was most surprising was what was missing. There was no garlic. No sesame se
 
 One of my favorite dishes because of how light and refreshing it is, especially as a side with the chicken.
 
-It was simply cucumber, crushed garlic, sesame oil, and salt. That’s it. It was bright, crunchy, and refreshing, and had a strong garlic kick...
+It was simply cucumber, crushed garlic, sesame oil, and salt. That’s it. It was bright, crunchy, and refreshing, and had a strong garlic kick.
 
 I tend to make mine pepper-based, but I can certainly learn something from theirs.
 
@@ -39,8 +39,8 @@ Interestingly, they used American celery rather than Chinese celery. American ce
 
 [![Dan Dan noodles](https://live.staticflickr.com/65535/54419563585_1c4b05a8cf_c.jpg)](https://flickr.com/photos/ed_welker/54419563585/)
 
-This is still my all-time favorite, and yet, I'm not sure what goes into it.  There was a pork topping, yui cai, some hot dried red pepper, and possibly some Szechuan Peppercorn oil..
+This is still my all-time favorite, and yet, I'm not sure what goes into it. There was a pork topping, ya cai, some hot dried red pepper, and possibly some Szechuan Peppercorn oil.
 
 I'll need to get more to figure it out fully.
 
-Note: that the first time I got this there, it was the most amazing thing I've ever had, and the whole dish was perfectly balanced.
+Note: The first time I got this there, it was the most amazing thing I've ever had, and the whole dish was perfectly balanced.
