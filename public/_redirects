@@ -1,12 +1,11 @@
-# This redirects file works with cloudflare pages in order to redirect from old links to new ones.
-#
-# Here's stuff I found that Google had indexed
+# for cloudflare
+
+# --- GOLD STANDARD (PRESERVED) ---
 /2008/12/27/my-xslt-toolbox-copy-and-copy-of/ /blog/2008/12/27/xslt-copy-copy-of/ 301
 /2008/10/25/review-of-object-oriented-javascript/ /blog/2008/10/25/object-oriented-javascript-review/ 301
 /2009/01/08/my-xslt-toolbox-5-favorite-xslt-books/ /blog/2009/01/08/top-5-xslt-books/ 301
 /2009/09/24/review-of-learning-jquery-1.3/ /blog/2009/09/24/review-of-learning-jquery-1-3/ 301
 
-# Blog Archives
 /2007/10/20/concert-tonight /blog/2007/10/20/concert-tonight/ 301
 /2008/02/10/writing-scheme-in-javascript-i /blog/2008/02/10/writing-scheme-in-javascript-i/ 301
 /2007/09/01/all-this-traffic /blog/2007/09/01/all-this-traffic/ 301
@@ -116,3 +115,18 @@
 /2007/09/01/minor-design-update /blog/2007/09/01/minor-design-update/ 301
 /2008/06/01/happy-regular-expressions-day /blog/2008/06/01/happy-regular-expressions-day/ 301
 /2008/10/08/snapshot-of-right-now /blog/2008/10/08/snapshot-of-right-now/ 301
+
+# --- NEW ADDITIONS FROM SEARCH CONSOLE (AUGMENTED) ---
+# Fixing discrepancies discovered via ls src/content/blog/
+/2011/04/06/high-performance                                    /blog/2011/04/06/high-performance-css-code-design 301
+/2008/11/25/push-style-xslt-vs-pull-style/about                 /blog/2008/11/25/push-style-xslt-vs-pull-style 301
+/2008/08/04/review-of-“web-form-design-filling-in-the-blanks”/   /blog/2008/08/04/review-of-web-form-design-filling-in-the-blanks 301
+/wp-content/uploads/2007/09/csscheatsheet.pdf                   /blog/2007/09/06/css-shorthand-cheat-sheet 301
+
+# Cleanup and Category Catch-alls
+/tags/css/page/2/                                               /blog 301
+/aboutme/                                                       /about 301
+/feed/atom/                                                     /rss.xml 301
+/feed/atom                                                      /rss.xml 301
+/category/* /blog 301
+/xmlrpc.php                                                     / 301
