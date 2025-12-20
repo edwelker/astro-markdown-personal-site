@@ -10,57 +10,72 @@ import Container from "@components/Container.astro";
         <h1 class="text-3xl font-semibold text-black dark:text-white">
           Open Data & Architecture
         </h1>
-        <p class="mt-4 text-neutral-600 dark:text-neutral-400">
-          This site operates as a small-scale data engine. Instead of a traditional database, it uses a decoupled architecture where external life-data is fetched at build-time and served as static JSON.
+        <p class="mt-4 text-neutral-600 dark:text-neutral-400 max-w-2xl">
+          This site operates as a decoupled data engine. Instead of a traditional database, it uses a custom build-pipeline where external data is fetched via third-party APIs and served as static assets.
         </p>
       </section>
 
-      <div class="grid gap-8">
-        {/* Architecture Section */}
+      <div class="grid gap-12">
+        {/* The Pipeline Breakdown */}
         <section class="space-y-4">
-          <h2 class="text-sm font-mono uppercase tracking-widest text-neutral-500">The Stack</h2>
-          <ul class="space-y-2 text-sm">
-            <li class="flex items-start gap-3">
-              <span class="text-orange-500 font-mono">01.</span>
-              <span><strong>Astro</strong> for static site generation with zero client-side JavaScript.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-orange-500 font-mono">02.</span>
-              <span><strong>Node.js</strong> scripts to interface with Strava, Flickr, and Last.fm APIs.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-orange-500 font-mono">03.</span>
-              <span><strong>GitHub Actions</strong> on a daily cron job to trigger data refreshes and rebuilds.</span>
-            </li>
-          </ul>
+          <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500 font-bold">The Pipeline</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-4 border border-black/5 dark:border-white/5 rounded-lg">
+              <h3 class="text-sm font-semibold mb-2">01. Ingestion</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">
+                Node.js scripts fetch and normalize data from Strava, Flickr, and Last.fm APIs during the build process.
+              </p>
+            </div>
+            <div class="p-4 border border-black/5 dark:border-white/5 rounded-lg">
+              <h3 class="text-sm font-semibold mb-2">02. Automation</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">
+                GitHub Actions triggers a daily cron job at midnight to refresh the data and rebuild the static site.
+              </p>
+            </div>
+            <div class="p-4 border border-black/5 dark:border-white/5 rounded-lg">
+              <h3 class="text-sm font-semibold mb-2">03. Deployment</h3>
+              <p class="text-xs text-neutral-500 leading-relaxed">
+                Astro generates a zero-JS frontend, serving the finalized data both as UI components and raw JSON endpoints.
+              </p>
+            </div>
+          </div>
         </section>
 
-        {/* Data Endpoints */}
-        <section class="space-y-4 pt-4 border-t border-black/5 dark:border-white/5">
-          <h2 class="text-sm font-mono uppercase tracking-widest text-neutral-500">Available Endpoints</h2>
+        {/* Available Endpoints */}
+        <section class="space-y-4">
+          <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500 font-bold">Public Endpoints</h2>
 
-          <div class="space-y-6">
+          <div class="space-y-2">
             <div class="group">
-              <a href="/data/lastfm.json" class="flex items-center justify-between p-3 -mx-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+              <a href="/data/music.json" class="flex items-center justify-between p-4 -mx-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
                 <div>
-                  <code class="text-orange-500">/data/lastfm.json</code>
-                  <p class="text-xs text-neutral-500 mt-1">Recent listening history, top artists, and weekly scrobble counts.</p>
+                  <code class="text-orange-600 dark:text-orange-400 font-mono text-sm">/data/music.json</code>
+                  <p class="text-xs text-neutral-500 mt-1">Listening history, top artists, and weekly scrobble counts via Last.fm.</p>
                 </div>
-                <span class="text-xs font-mono text-neutral-400">JSON</span>
+                <div class="text-[10px] font-mono py-1 px-2 bg-black/5 dark:bg-white/10 rounded uppercase">JSON</div>
               </a>
             </div>
 
             <div class="group">
-              <a href="/data/flickr-photos.json" class="flex items-center justify-between p-3 -mx-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+              <a href="/data/flickr-photos.json" class="flex items-center justify-between p-4 -mx-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
                 <div>
-                  <code class="text-orange-500">/data/flickr-photos.json</code>
-                  <p class="text-xs text-neutral-500 mt-1">Metadata for the 10 most recently uploaded public photos.</p>
+                  <code class="text-orange-600 dark:text-orange-400 font-mono text-sm">/data/flickr-photos.json</code>
+                  <p class="text-xs text-neutral-500 mt-1">Metadata for the 10 most recently uploaded public photographs.</p>
                 </div>
-                <span class="text-xs font-mono text-neutral-400">JSON</span>
+                <div class="text-[10px] font-mono py-1 px-2 bg-black/5 dark:bg-white/10 rounded uppercase">JSON</div>
               </a>
             </div>
           </div>
         </section>
 
-        <section class="p-4 bg-black/5 dark:bg-white/5 rounded-sm border-l-2 border-orange-500">
-          <p class="text-xs leading-relaxed text-neutral-600 dark:text
+        {/* Privacy Note */}
+        <section class="bg-neutral-100 dark:bg-neutral-900 p-6 rounded-lg">
+          <h3 class="text-xs font-mono uppercase tracking-widest text-neutral-500 mb-2">Data Privacy</h3>
+          <p class="text-xs leading-relaxed text-neutral-600 dark:text-neutral-400 italic">
+            Note: While Strava data is ingested to generate high-level cycling statistics and distance charts for this site, the raw activity data is intentionally excluded from public endpoints to maintain route and location privacy.
+          </p>
+        </section>
+      </div>
+    </div>
+  </Container>
+</PageLayout>
