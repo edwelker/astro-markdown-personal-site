@@ -1,10 +1,6 @@
-export function transformFlickrData(apiResponse) {
-  const rawPhotos = apiResponse?.photos?.photo ?? [];
-  return rawPhotos.map(p => ({
-    id: p.id,
-    title: p.title || 'Untitled',
-    src: p.url_m ?? p.url_l ?? '',
-    date: p.datetaken ?? '',
-    tags: p.tags ? p.tags.split(' ') : []
+export const transformFlickrData = (data) => {
+  const photos = data?.photos?.photo ?? [];
+  return photos.map(p => ({
+    id: p.id, title: p.title || 'Untitled', src: p.url_m ?? p.url_l ?? '', date: p.datetaken ?? '', tags: p.tags ? p.tags.split(' ') : []
   }));
-}
+};

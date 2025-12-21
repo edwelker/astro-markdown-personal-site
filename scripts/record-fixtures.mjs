@@ -1,26 +1,21 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs/promises';
+import path from 'node:path';
 
 const FIXTURE_DIR = './tests/fixtures';
 const DATA_DIR = './src/data';
 
-if (!fs.existsSync(FIXTURE_DIR)) {
-  fs.mkdirSync(FIXTURE_DIR, { recursive: true });
-}
-
-const sources = [
-  { file: 'flickr-photos.json', name: 'flickr-api-sample.json' },
-  { file: 'trakt.json', name: 'trakt-api-sample.json' }
-];
-
-sources.forEach(source => {
-  const sourcePath = path.join(DATA_DIR, source.file);
-  const targetPath = path.join(FIXTURE_DIR, source.name);
-
-  if (fs.existsSync(sourcePath)) {
-    fs.copyFileSync(sourcePath, targetPath);
-    console.log(`✅ Recorded fixture: ${source.name}`);
-  } else {
-    console.log(`⚠️ Skip: ${source.file} not found. Run 'npm run fetch' first.`);
+async function record() {
+  await fs.mkdir(FIXTURE_DIR, { recursive: true });
+  const files = ['flickr-photos.json', 'trakt.json', 'cycling.json', 'music.json'];
+  for (const file of files) {
+    const src = path.join(DATA_DIR, file);
+    const dest = path.join(FIXTURE_DIR, `sample-${file}`);
+    try {
+      await fs.copyFile(src, dest);
+      console.log(`📸 Recorded: ${file}`);
+    } catch {
+      console.warn(`⚠️ Skip: ${file} not found.`);
+    }
   }
-});
+}
+record();

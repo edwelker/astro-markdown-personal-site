@@ -32,7 +32,6 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
 
-  {/* Activity Sparkline */}
   {chart && chart.length > 0 && (
     <div class="group">
       <div class="flex items-end gap-[2px] h-10 w-full">
@@ -56,7 +55,6 @@ const currentYear = new Date().getFullYear();
   )}
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-    {/* Totals */}
     <div class="space-y-6">
       <div>
         <h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-3">Year to Date</h4>
@@ -78,11 +76,10 @@ const currentYear = new Date().getFullYear();
       </div>
     </div>
 
-    {/* Recent List */}
     <div>
       <h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-4">Recent Rides</h4>
       <ul class="space-y-4">
-        {recent && recent.map((ride: RecentRide) => (
+        {recent?.map((ride: RecentRide) => (
           <li class="group/ride">
             <a href={`https://www.strava.com/activities/${ride.id}`} target="_blank" class="block">
               <div class="flex justify-between items-baseline">

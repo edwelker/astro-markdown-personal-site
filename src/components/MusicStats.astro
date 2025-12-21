@@ -18,8 +18,6 @@ const {
 ---
 
 <div class="space-y-6">
-
-  {/* Header */}
   <div class="flex justify-between items-end pb-4 border-b border-black/10 dark:border-white/10">
     <div class="flex items-center gap-2">
       <h3 class="font-semibold text-black dark:text-white">Recent Music</h3>
@@ -30,16 +28,12 @@ const {
   </div>
 
   <div class="grid md:grid-cols-2 gap-8 md:gap-8 md:divide-x divide-black/10 dark:divide-white/10">
-
-    {/* COLUMN 1: WEEKLY */}
     <div class="space-y-6 md:pr-4">
       <h4 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold">Last 7 Days</h4>
-
-      {/* Weekly Albums */}
       <div class="space-y-3">
         <h5 class="text-xs font-medium text-black dark:text-white">Top Albums</h5>
         <ul class="space-y-2">
-          {week.albums.slice(0, 3).map((alb: Item, i: number) => (
+          {week?.albums?.slice(0, 3).map((alb: Item, i: number) => (
             <li class="flex items-center gap-3 group">
               <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
               {alb.image ? (
@@ -59,11 +53,10 @@ const {
         </ul>
       </div>
 
-      {/* Weekly Artists */}
       <div class="space-y-3">
         <h5 class="text-xs font-medium text-black dark:text-white">Top Artists</h5>
         <ul class="space-y-1">
-          {week.artists.slice(0, 5).map((art: Item, i: number) => (
+          {week?.artists?.slice(0, 5).map((art: Item, i: number) => (
             <li class="flex items-baseline gap-3 group">
               <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
               <div class="flex-1 min-w-0 overflow-hidden">
@@ -78,15 +71,12 @@ const {
       </div>
     </div>
 
-    {/* COLUMN 2: MONTHLY */}
     <div class="space-y-6 md:pl-4">
       <h4 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold">Last 30 Days</h4>
-
-      {/* Monthly Albums */}
       <div class="space-y-3">
         <h5 class="text-xs font-medium text-black dark:text-white">Top Albums</h5>
         <ul class="space-y-2">
-          {month.albums.slice(0, 3).map((alb: Item, i: number) => (
+          {month?.albums?.slice(0, 3).map((alb: Item, i: number) => (
             <li class="flex items-center gap-3 group">
               <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
               {alb.image ? (
@@ -106,11 +96,10 @@ const {
         </ul>
       </div>
 
-      {/* Monthly Artists */}
       <div class="space-y-3">
         <h5 class="text-xs font-medium text-black dark:text-white">Top Artists</h5>
         <ul class="space-y-1">
-          {month.artists.slice(0, 5).map((art: Item, i: number) => (
+          {month?.artists?.slice(0, 5).map((art: Item, i: number) => (
             <li class="flex items-baseline gap-3 group">
               <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
               <div class="flex-1 min-w-0 overflow-hidden">
@@ -124,7 +113,6 @@ const {
         </ul>
       </div>
     </div>
-
   </div>
 
   <div class="text-right border-t border-black/10 dark:border-white/10 pt-4">

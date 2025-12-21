@@ -4,7 +4,7 @@ export function calculateDecade(year) {
 
 export function deduplicate(items) {
   const seen = new Set();
-  return items.filter(item => {
+  return (items || []).filter(item => {
     const id = item.movie?.ids?.imdb || item.show?.ids?.imdb;
     if (!id || seen.has(id)) return false;
     seen.add(id);
@@ -12,12 +12,14 @@ export function deduplicate(items) {
   });
 }
 
-export function transformTraktData(data) {
-  const ratings = data?.allRatings ?? [];
+export const transformTraktData = (data) => {
+  const ratings = Array.isArray(data) ? data : (data?.allRatings || []);
   return ratings.map(item => ({
-    title: item.title || 'Unknown Title',
+    title: item.title || item.movie?.title || item.show?.title || 'Unknown',
     rating: item.rating ?? 0,
     poster: item.poster || '',
-    href: item.href || '/media'
+    href: item.href || (item.movie ? `https://imdb.com/title/${item.movie.ids?.imdb}` : ''),
+    year: item.year || item.movie?.year || item.show?.year,
+    director: item.director || 'Unknown'
   }));
-}
+};
