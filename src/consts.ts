@@ -4,7 +4,7 @@ export const SITE: Site = {
   TITLE: "eddiewelker.com",
   DESCRIPTION: "Eddie Welker's digital garden. A collection of thoughts on coding, biking, and making things.",
   EMAIL: "no-email-published@example.com",
-  NUM_POSTS_ON_HOMEPAGE: 5,
+  NUM_POSTS_ON_HOMEPAGE: 4,
   NUM_HIGHLIGHTS_ON_HOMEPAGE: 4,
 };
 
