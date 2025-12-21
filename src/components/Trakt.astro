@@ -23,7 +23,6 @@ interface DirectorInfo {
   id: number;
 }
 
-// Extract and cast data to satisfy TypeScript
 const { 
   allRatings = [] as RatingItem[], 
   genres = [] as [string, number][], 
@@ -48,7 +47,7 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
 ---
 
 <div class="space-y-16">
-  {/* History Graph */}
+  {/* The History Map - Linking to Local Decade Pages */}
   <section class="animate space-y-6">
     <div class="space-y-2">
       <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">The History Map</h2>
@@ -59,7 +58,7 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
     </div>
     <div class="flex items-end gap-2 h-20 pt-4">
       {sparkline.map((s) => (
-        <a href={`https://trakt.tv/users/${username}/history/movies/added?start_at=${s.decade}-01-01&end_at=${s.decade + 9}-12-31`} target="_blank" class="flex-1 flex flex-col items-center group relative h-full justify-end">
+        <a href={`/media/${s.decade}`} class="flex-1 flex flex-col items-center group relative h-full justify-end">
           <div class="w-full bg-orange-600/10 group-hover:bg-orange-600/40 transition-colors rounded-t-sm" style={`height: ${(s.volume / maxVol) * 100}%`}>
             <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-orange-600 border border-white dark:border-black shadow-sm" style={`bottom: ${((parseFloat(s.score) - 5) / 5) * 100}%`}></div>
           </div>
@@ -114,7 +113,7 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
     <section class="space-y-4">
       <div class="flex items-end justify-between border-b border-orange-600/20 pb-2">
         <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-orange-500 font-bold">The 9/10 Tier</h2>
-        <a href={`https://trakt.tv/users/${username}/ratings/all/9/added/asc`} target="_blank" class="text-[9px] font-mono uppercase text-neutral-400 hover:text-orange-500 font-bold">View ↗</a>
+        <a href={`https://trakt.tv/users/${username}/ratings/all/9/added/asc`} target="_blank" class="text-[9px] font-mono uppercase text-neutral-400 hover:text-orange-600 font-bold">View ↗</a>
       </div>
       <div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
         {nines.map((item) => (
@@ -130,7 +129,7 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
     <section class="space-y-4">
       <div class="flex items-end justify-between border-b border-black/10 pb-2">
         <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">The 8/10 Tier</h2>
-        <a href={`https://trakt.tv/users/${username}/ratings/all/8/added/asc`} target="_blank" class="text-[9px] font-mono uppercase text-neutral-400 hover:text-orange-500 font-bold">View ↗</a>
+        <a href={`https://trakt.tv/users/${username}/ratings/all/8/added/asc`} target="_blank" class="text-[9px] font-mono uppercase text-neutral-400 hover:text-orange-600 font-bold">View ↗</a>
       </div>
       <div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
         {eights.map((item) => (
@@ -161,7 +160,7 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
       <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">Top Directors</h2>
       <div class="flex flex-wrap gap-2">
         {directors.map(([name, directorInfo]) => (
-          <a href={`https://www.google.com/search?q=${encodeURIComponent(name as string)}+director`} target="_blank" class="px-2.5 py-1 rounded-full border border-black/10 dark:border-white/10 text-[10px] font-mono uppercase text-neutral-500 hover:border-orange-500 hover:text-orange-600 transition-colors font-bold">
+          <a href={`https://www.google.com/search?q=${encodeURIComponent(name)}+director`} target="_blank" class="px-2.5 py-1 rounded-full border border-black/10 dark:border-white/10 text-[10px] font-mono uppercase text-neutral-500 hover:border-orange-500 hover:text-orange-600 transition-colors font-bold">
             {name} <span class="text-orange-600 ml-1">{(directorInfo as DirectorInfo).count}</span>
           </a>
         ))}
@@ -217,7 +216,7 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
     </section>
   </div>
 
-  {/* Recent Watches */}
+  {/* Recent Watches Row */}
   <section class="animate space-y-4 pt-4 border-t border-black/10 dark:border-white/10">
     <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">Recent Watches</h2>
     <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-8">

@@ -14,8 +14,6 @@ async function downloadImage(url, filename) {
   });
 }
 
-const shuffle = (array) => array.sort(() => Math.random() - 0.5);
-
 async function fetchTraktRatings() {
   const CLIENT_ID = process.env.TRAKT_CLIENT_ID;
   const USERNAME = process.env.TRAKT_USERNAME;
@@ -33,6 +31,7 @@ async function fetchTraktRatings() {
     const movies = await mRes.json();
     const shows = await sRes.json();
     
+    // Deduplicate entire history by IMDB ID
     const uniqueMap = new Map();
     [...movies, ...shows].forEach(item => {
       const id = item.movie?.ids?.imdb || item.show?.ids?.imdb;
@@ -48,18 +47,8 @@ async function fetchTraktRatings() {
     const actorMap = {};
     const decadeStats = {};
 
-    // Filter and shuffle categories for enrichment
-    const tens = allRaw.filter(i => i.rating === 10);
-    const nines = shuffle(allRaw.filter(i => i.rating === 9)).slice(0, 10);
-    const eights = shuffle(allRaw.filter(i => i.rating === 8)).slice(0, 10);
-    const sixToSeven = shuffle(allRaw.filter(i => i.rating >= 6 && i.rating < 8)).slice(0, 10);
-    const fiveBelow = shuffle(allRaw.filter(i => i.rating < 6)).slice(0, 10);
-
-    const rawToEnrich = [...allRaw.slice(0, 20), ...tens, ...nines, ...eights, ...sixToSeven, ...fiveBelow];
-    const uniqueEnrichIds = Array.from(new Set(rawToEnrich.map(i => i.movie?.ids?.imdb || i.show?.ids?.imdb)));
-    const toEnrich = uniqueEnrichIds.map(id => uniqueMap.get(id));
-
-    const enriched = await Promise.all(toEnrich.map(async (item) => {
+    // Enrich every unique item in history
+    const enriched = await Promise.all(allRaw.map(async (item) => {
       const tmdbId = item.movie?.ids?.tmdb || item.show?.ids?.tmdb;
       const type = item.movie ? 'movie' : 'tv';
       let poster = null;
@@ -88,18 +77,7 @@ async function fetchTraktRatings() {
         }
       }
 
-      return {
-        title: item.movie?.title || item.show?.title,
-        year: item.movie?.year || item.show?.year,
-        rating: item.rating,
-        director,
-        directorId,
-        href: item.movie ? `https://www.imdb.com/title/${item.movie.ids.imdb}` : `https://www.imdb.com/title/${item.show.ids.imdb}`,
-        poster
-      };
-    }));
-
-    allRaw.forEach(item => {
+      // Update decade stats and genres during enrichment of full set
       const year = item.movie?.year || item.show?.year;
       if (year) {
         const decade = Math.floor(year / 10) * 10;
@@ -109,7 +87,18 @@ async function fetchTraktRatings() {
       }
       const itemGenres = item.movie?.genres || item.show?.genres || [];
       itemGenres.forEach(g => genreMap[g] = (genreMap[g] || 0) + 1);
-    });
+
+      return {
+        id: item.movie?.ids?.imdb || item.show?.ids?.imdb,
+        title: item.movie?.title || item.show?.title,
+        year,
+        rating: item.rating,
+        director,
+        directorId,
+        href: item.movie ? `https://www.imdb.com/title/${item.movie.ids.imdb}` : `https://www.imdb.com/title/${item.show.ids.imdb}`,
+        poster
+      };
+    }));
 
     const sparkline = Object.entries(decadeStats).map(([decade, val]) => ({
       decade: Number(decade),

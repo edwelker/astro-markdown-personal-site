@@ -1,0 +1,58 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import BackToPrevious from "@components/BackToPrevious.astro";
+import traktData from "../../data/trakt.json";
+
+export async function getStaticPaths() {
+  const { sparkline } = traktData;
+  return sparkline.map((s: any) => ({
+    params: { decade: s.decade.toString() },
+    props: { decade: s.decade },
+  }));
+}
+
+const { decade } = Astro.props;
+const { allRatings } = traktData;
+
+const decadeMovies = (allRatings as any[])
+  .filter((m) => Math.floor(m.year / 10) * 10 === decade)
+  .sort((a, b) => b.rating - a.rating);
+
+const title = `${decade}s Archive`;
+---
+
+<Layout title={title} description={`Cinematic history from the ${decade}s.`}>
+  <Container>
+    <div class="animate">
+      <BackToPrevious href="/media" />
+      <div class="h-24 w-full"></div>
+      
+      <header class="mb-12">
+        <h1 class="text-3xl font-black uppercase tracking-tighter text-black dark:text-white">
+          The {decade}s
+        </h1>
+        <p class="text-neutral-500 text-sm mt-2 font-mono">
+          {decadeMovies.length} items archived from this era.
+        </p>
+      </header>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        {decadeMovies.map((item) => (
+          <div class="space-y-3 group">
+            <a href={item.href} target="_blank" class="block aspect-[2/3] relative rounded-lg overflow-hidden bg-neutral-900 border border-black/5 dark:border-white/5 transition-transform hover:scale-[1.02]">
+              <img src={item.poster} alt={item.title} class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+              <div class="absolute bottom-2 right-2 bg-black/80 backdrop-blur-md px-2 py-1 rounded border border-white/10">
+                <span class="text-[10px] font-bold text-white">{item.rating} <span class="text-orange-500 font-normal">★</span></span>
+              </div>
+            </a>
+            <div class="px-0.5">
+              <p class="text-xs font-bold uppercase text-neutral-800 dark:text-neutral-200 leading-tight">{item.title}</p>
+              <p class="text-[10px] font-mono text-neutral-500 mt-1">{item.year}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Container>
+</Layout>
