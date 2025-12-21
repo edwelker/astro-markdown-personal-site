@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run fetch && astro check && astro build",
+    "build": "npm run clean && npm run test && npm run fetch && npm run validate && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "fetch": "npm run clean && npm run fetch:flickr && npm run fetch:lastfm && npm run fetch:strava && mkdir -p public/data && cp src/data/flickr-photos.json public/data/ && cp src/data/music.json public/data/ && npm run fetch:trakt",
@@ -13,7 +13,10 @@
     "fetch:lastfm": "node scripts/fetch-lastfm.mjs",
     "fetch:strava": "node scripts/fetch-strava.mjs",
     "fetch:trakt": "node scripts/fetch-trakt.cjs",
-    "clean": "rm -rf dist; rm -rf .astro"
+    "clean": "rm -rf dist; rm -rf .astro",
+    "test": "vitest run tests/",
+    "validate": "node tests/validate-data.cjs",
+    "test:all": "npm run test && npm run validate && astro check"
   },
   "engines": {
     "node": ">=20.3.0"
@@ -40,6 +43,7 @@
     "pagefind": "^1.4.0",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.14"
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "vitest": "^4.0.16"
   }
 }
