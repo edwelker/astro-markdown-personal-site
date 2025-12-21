@@ -6,7 +6,7 @@ const cyclingData = (cyclingDataRaw || {}) as CyclingData;
 const { year, month, recent, chart = [] } = cyclingData;
 const maxWeekly = Math.max(...(chart || [1]), 1);
 
-// Filter logic: 
+// Filter logic:
 // 1. Must have elevation (Outdoor only)
 // 2. Lowered distance threshold to 5mi to show more variety
 const filteredRides = (recent || [])
@@ -15,7 +15,7 @@ const filteredRides = (recent || [])
     const dist = parseFloat(r.distance);
     return elev > 0 && dist > 5;
   })
-  .slice(0, 5); 
+  .slice(0, 5);
 ---
 <div class="space-y-8">
   <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
@@ -41,7 +41,7 @@ const filteredRides = (recent || [])
       <div>
         <h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-3">Year to Date</h4>
         <div class="flex flex-col">
-          <span class="text-3xl font-mono text-black dark:text-white tracking-tighter">
+          <span class="text-3xl font-mono text-black dark:text-white">
             {year?.distance || 0}<span class="text-sm text-neutral-400 ml-1 font-sans">mi</span>
           </span>
           <span class="text-xs text-neutral-500 mt-1">{year?.elevation || 0} vertical feet</span>
@@ -50,8 +50,8 @@ const filteredRides = (recent || [])
       <div>
         <h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-3">{month?.name}</h4>
         <div class="flex flex-col">
-          <span class="text-xl font-mono text-black dark:text-white">
-            {month?.distance || 0}<span class="text-xs text-neutral-400 ml-1 font-sans">mi</span>
+          <span class="text-3xl font-mono text-black dark:text-white">
+            {month?.distance || 0}<span class="text-sm text-neutral-400 ml-1 font-sans">mi</span>
           </span>
         </div>
       </div>
