@@ -8,16 +8,13 @@ import { getAllHighlights } from "@lib/highlights";
 import FlickrGallery from '@components/FlickrGallery.astro';
 import MusicStats from "@components/MusicStats.astro";
 import CyclingStats from "@components/CyclingStats.astro";
-
-// DELETE THIS LINE IF YOU ARE NOT USING IT:
-// import ArrowCard from "@components/ArrowCard.astro";
+import MediaTeaser from "@components/MediaTeaser.astro";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
-// Fetch and slice the top 5
 const recentHighlights = (await getAllHighlights()).slice(0, 5);
 ---
 
@@ -27,14 +24,13 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
       <h1 class="font-extrabold text-3xl text-black dark:text-white">
         Eddie Welker
       </h1>
-      <div class="space-y-16">
+      <div class="space-y-12">
         <section>
           <article class="space-y-4">
             <p>Programmer, Cyclist, Cellist, Photographer, Cook, Woodworker, MD/NY, USA.</p>
           </article>
         </section>
 
-        {/* --- BLOG POSTS SECTION --- */}
         <section class="animate space-y-6">
           <div class="flex flex-wrap gap-y-2 items-center justify-between">
             <h5 class="font-semibold text-black dark:text-white">
@@ -47,7 +43,6 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
 
           <ul class="not-prose flex flex-col gap-2">
             {blog.map((post) => {
-              // --- LOGIC: Check if slug already has a date structure ---
               let href = "";
               if (post.slug.match(/^\d{4}\//)) {
                   href = `/blog/${post.slug}/`;
@@ -57,7 +52,6 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
                   const day = String(post.data.date.getDate()).padStart(2, '0');
                   href = `/blog/${year}/${month}/${day}/${post.slug}/`;
               }
-              // -------------------------------------------------------
 
               return (
                 <li>
@@ -81,7 +75,6 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
           </ul>
         </section>
 
-        {/* --- HIGHLIGHTS SECTION --- */}
         <section class="animate space-y-6">
           <div class="flex flex-wrap gap-y-2 items-center justify-between">
             <h5 class="font-semibold text-black dark:text-white">
@@ -97,7 +90,6 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
               <li class="relative">
                 <div class="group p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
                   <div class="flex flex-col gap-1">
-
                     <div class="flex items-baseline gap-2">
                       <Link
                         href={item.url}
@@ -129,13 +121,17 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
             <FlickrGallery />
         </section>
 
-        <section class="animate mt-16 space-y-4">
+        <section class="animate space-y-4">
           <MusicStats />
         </section>
 
-        <div class="mt-24 pt-12 border-t border-dashed border-black/10 dark:border-white/10">
+        <div class="pt-12 border-t border-dashed border-black/10 dark:border-white/10">
           <CyclingStats />
         </div>
+
+        <section>
+            <MediaTeaser />
+        </section>
 
         <section class="animate space-y-4">
           <h2 class="font-semibold text-black dark:text-white">
@@ -157,14 +153,12 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
                     >
                       {SOCIAL.NAME}
                     </Link>
-                    {/* Only show slash if NOT the last item */}
                     {index < SOCIALS.length - 1 && "/"}
                   </li>
                 ))
               }
             </ul>
         </section>
-
       </div>
     </aside>
   </Container>
