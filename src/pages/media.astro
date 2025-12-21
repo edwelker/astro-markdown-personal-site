@@ -1,13 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import FlickrGallery from '../components/FlickrGallery.astro';
 import Trakt from '../components/Trakt.astro';
 ---
 
-<Layout title="Media" description="A collection of my photography from Flickr and film history from Trakt.">
-  <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
-    <h1 class="text-3xl font-bold mb-8">Media</h1>
-    <FlickrGallery />
+<Layout title="Movies and TV" description="A log of my film and television history via Trakt.">
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold mb-8">Movies and TV</h1>
     <Trakt />
   </main>
 </Layout>
