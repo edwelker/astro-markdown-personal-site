@@ -10,7 +10,7 @@ export const highlights: Highlight[] = [
   {
     title: "Personal Website Github Repo",
     description: "This site's github. Work in progress, but Wordpress to Hugo to Astro/Typescript.",
-    url: "https://github.com/edwelker/website/tree/astro",
+    url: "https://github.com/edwelker/astro-markdown-personal-site/tree/astro",
     date: "2025-12-20",
     thought: "Migration from Wordpress through Hugo to Astro/Typescript for better performance and a different experience."
   },
