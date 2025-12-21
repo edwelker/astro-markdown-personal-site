@@ -15,10 +15,13 @@
     "fetch:trakt": "node scripts/fetch-trakt.cjs",
     "test": "vitest run tests/",
     "test:ui": "npx playwright test",
+    "test:all": "npm run test && npm run validate && npm run test:ui && astro check",
     "validate": "node tests/validate-data.cjs",
-    "build": "npm run clean && npm run fetch && astro build",
-    "build:full": "npm run test && npm run validate && npm run build && npm run test:ui && astro check",
+    "build": "npm run clean && npm run test && npm run validate && npm run fetch && astro build",
     "record": "node scripts/record-fixtures.mjs"
+  },
+  "engines": {
+    "node": ">=20.3.0"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
