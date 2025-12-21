@@ -10,23 +10,30 @@ interface Item {
   plays?: string | number; 
 }
 
-// Deep defensive initialization
-const user = musicData?.user || { scrobbles: 0 };
-const week = musicData?.week || { artists: [], albums: [] };
-const month = musicData?.month || { artists: [], albums: [] };
+// Ensure the root object exists
+const data = musicData || {};
 
-// Ensure arrays exist even if parent keys were present but null
-const weekAlbums = week.albums || [];
-const weekArtists = week.artists || [];
-const monthAlbums = month.albums || [];
-const monthArtists = month.artists || [];
+// Initialize sub-objects with fallbacks
+const user = data.user || { scrobbles: 0 };
+const week = data.week || { artists: [], albums: [] };
+const month = data.month || { artists: [], albums: [] };
+
+// Force every list to be an array so .map() never fails
+const weekAlbums = Array.isArray(week.albums) ? week.albums : [];
+const weekArtists = Array.isArray(week.artists) ? week.artists : [];
+const monthAlbums = Array.isArray(month.albums) ? month.albums : [];
+const monthArtists = Array.isArray(month.artists) ? month.artists : [];
 ---
 <div class="space-y-6">
   <div class="flex justify-between items-end pb-4 border-b border-black/10 dark:border-white/10">
-    <div class="flex items-center gap-2"><h3 class="font-semibold text-black dark:text-white">Recent Music</h3></div>
-    <div class="text-xs font-mono text-neutral-500">{(user.scrobbles || 0).toLocaleString()} lifetime scrobbles</div>
+    <div class="flex items-center gap-2">
+      <h3 class="font-semibold text-black dark:text-white">Recent Music</h3>
+    </div>
+    <div class="text-xs font-mono text-neutral-500">
+      {(user.scrobbles || 0).toLocaleString()} lifetime scrobbles
+    </div>
   </div>
-  
+
   <div class="grid md:grid-cols-2 gap-8 md:gap-8 md:divide-x divide-black/10 dark:divide-white/10">
     <div class="space-y-6 md:pr-4">
       <h4 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold">Last 7 Days</h4>
