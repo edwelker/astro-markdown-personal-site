@@ -1,36 +1,13 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/Container.astro";
-import BackToPrevious from "@components/BackToPrevious.astro";
-import Trakt from "@components/Trakt.astro";
-
-const title = "Movies & TV";
-const description = "A curated collection of film and television ratings.";
+import Layout from '../layouts/Layout.astro';
+import FlickrGallery from '../components/FlickrGallery.astro';
+import Trakt from '../components/Trakt.astro';
 ---
 
-<Layout title={title} description={description}>
-  <Container>
-    <div class="animate">
-      <BackToPrevious href="/" />
-      <div class="h-24 md:h-32 w-full block"></div>
-
-      <header class="mb-12">
-        <h1 class="text-3xl font-black tracking-tighter text-black dark:text-white uppercase leading-none">
-          Movies & TV
-        </h1>
-        <p class="text-neutral-500 text-sm mt-2 max-w-lg leading-relaxed">
-          A live-syncing archive of my cinematic history curated via Trakt.
-        </p>
-      </header>
-
-      <Trakt />
-      
-      <footer class="pt-24 pb-12 border-t border-black/10 dark:border-white/10 mt-20">
-        <div class="flex justify-between items-center text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
-          <span>Synced via Trakt API</span>
-          <span>Last Updated 2025-12-20</span>
-        </div>
-      </footer>
-    </div>
-  </Container>
+<Layout title="Media" description="A collection of my photography from Flickr and film history from Trakt.">
+  <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+    <h1 class="text-3xl font-bold mb-8">Media</h1>
+    <FlickrGallery />
+    <Trakt />
+  </main>
 </Layout>

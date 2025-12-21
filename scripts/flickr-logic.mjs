@@ -1,6 +1,5 @@
 export function transformFlickrData(apiResponse) {
   const rawPhotos = apiResponse?.photos?.photo || [];
-
   return rawPhotos.map(p => ({
     id: p.id,
     title: p.title || '',
