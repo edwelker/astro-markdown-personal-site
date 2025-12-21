@@ -10,19 +10,13 @@ interface Item {
   plays?: string | number; 
 }
 
-// Ensure the root object exists
 const data = musicData || {};
-
-// Initialize sub-objects with fallbacks
 const user = data.user || { scrobbles: 0 };
-const week = data.week || { artists: [], albums: [] };
-const month = data.month || { artists: [], albums: [] };
+const week = data.week || { artists: [], albums: [], tracks: [] };
+const month = data.month || { artists: [], albums: [], tracks: [] };
 
-// Force every list to be an array so .map() never fails
 const weekAlbums = Array.isArray(week.albums) ? week.albums : [];
-const weekArtists = Array.isArray(week.artists) ? week.artists : [];
 const monthAlbums = Array.isArray(month.albums) ? month.albums : [];
-const monthArtists = Array.isArray(month.artists) ? month.artists : [];
 ---
 <div class="space-y-6">
   <div class="flex justify-between items-end pb-4 border-b border-black/10 dark:border-white/10">

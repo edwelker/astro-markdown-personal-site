@@ -6,7 +6,13 @@ import musicData from "../data/music.json";
 
 type Item = { name: string; url: string; image: string; artist?: string; plays?: string | number };
 
-const { user, week, month, year, allTime } = musicData;
+const { 
+  user = { scrobbles: 0 }, 
+  week = { albums: [], artists: [], tracks: [] }, 
+  month = { albums: [], artists: [], tracks: [] }, 
+  year = { albums: [], artists: [], tracks: [] }, 
+  allTime = { albums: [], artists: [], tracks: [] } 
+} = musicData || {};
 
 const title = "Listening Habits";
 const description = "A detailed look at my music rotation.";
@@ -17,15 +23,12 @@ const description = "A detailed look at my music rotation.";
     <div class="animate">
       <BackToPrevious href="/" />
 
-      {/* ROBUST SPACER:
-        This physical div guarantees spacing regardless of CSS positioning or margin collapse.
-      */}
       <div class="h-24 md:h-32 w-full block"></div>
 
       <header class="mb-16">
         <h1 class="font-semibold text-2xl text-black dark:text-white mb-2">Music Stats</h1>
         <p class="text-neutral-500 text-sm">
-          Lifetime Scrobbles: <span class="text-black dark:text-white font-mono">{user.scrobbles.toLocaleString()}</span>
+          Lifetime Scrobbles: <span class="text-black dark:text-white font-mono">{(user.scrobbles || 0).toLocaleString()}</span>
         </p>
       </header>
 
@@ -37,11 +40,10 @@ const description = "A detailed look at my music rotation.";
             Last 7 Days
           </h2>
 
-          {/* Albums */}
           <div>
             <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Albums</h3>
             <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
-               {week.albums.map((album: Item) => (
+               {(week.albums || []).map((album: Item) => (
                   <a href={album.url} target="_blank" class="group block space-y-1 relative" title={`${album.name} by ${album.artist}`}>
                     {album.image ? (
                         <img src={album.image} alt={album.name} class="rounded-sm w-full transition-transform duration-300 border border-neutral-200 dark:border-neutral-800" />
@@ -57,12 +59,11 @@ const description = "A detailed look at my music rotation.";
             </div>
           </div>
 
-          {/* Artists & Tracks */}
           <div class="grid md:grid-cols-2 gap-8 md:gap-12 pt-4">
             <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
               <ul class="space-y-1">
-                {week.artists.map((artist: Item, i: number) => (
+                {(week.artists || []).map((artist: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
                      <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
@@ -78,7 +79,7 @@ const description = "A detailed look at my music rotation.";
              <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Songs</h3>
               <ul class="space-y-1">
-                {week.tracks.map((track: Item, i: number) => (
+                {(week.tracks || []).map((track: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
                      <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
@@ -94,7 +95,6 @@ const description = "A detailed look at my music rotation.";
             </div>
           </div>
         </section>
-
 
         {/* --- 30 DAY --- */}
         <section class="space-y-6">
@@ -105,7 +105,7 @@ const description = "A detailed look at my music rotation.";
           <div>
             <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Albums</h3>
             <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
-               {month.albums.map((album: Item) => (
+               {(month.albums || []).map((album: Item) => (
                   <a href={album.url} target="_blank" class="group block space-y-1 relative" title={`${album.name} by ${album.artist}`}>
                     {album.image ? (
                         <img src={album.image} alt={album.name} class="rounded-sm w-full transition-transform duration-300 border border-neutral-200 dark:border-neutral-800" />
@@ -125,7 +125,7 @@ const description = "A detailed look at my music rotation.";
             <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
               <ul class="space-y-1">
-                {month.artists.map((artist: Item, i: number) => (
+                {(month.artists || []).map((artist: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
                      <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
@@ -141,7 +141,7 @@ const description = "A detailed look at my music rotation.";
              <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Songs</h3>
               <ul class="space-y-1">
-                {month.tracks.map((track: Item, i: number) => (
+                {(month.tracks || []).map((track: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
                      <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
@@ -158,7 +158,6 @@ const description = "A detailed look at my music rotation.";
           </div>
         </section>
 
-
         {/* --- 1 YEAR --- */}
         <section class="space-y-6">
           <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
@@ -166,7 +165,7 @@ const description = "A detailed look at my music rotation.";
           </h2>
 
           <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 mb-8">
-            {year.albums.map((album: Item) => (
+            {(year.albums || []).map((album: Item) => (
               <a href={album.url} target="_blank" class="group block space-y-2">
                 <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative bg-neutral-50 dark:bg-neutral-900">
                   {album.image ? (
@@ -200,7 +199,7 @@ const description = "A detailed look at my music rotation.";
              <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
                <div class="columns-1 gap-8 space-y-1">
-                {year.artists.map((artist: Item, i: number) => (
+                {(year.artists || []).map((artist: Item, i: number) => (
                   <div class="break-inside-avoid">
                     <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
                       <div class="flex items-center gap-2 truncate min-w-0">
@@ -219,7 +218,7 @@ const description = "A detailed look at my music rotation.";
             <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Songs</h3>
                <div class="columns-1 gap-8 space-y-1">
-                {year.tracks.map((track: Item, i: number) => (
+                {(year.tracks || []).map((track: Item, i: number) => (
                   <div class="break-inside-avoid">
                     <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
                       <div class="flex items-center gap-2 truncate min-w-0">
@@ -238,7 +237,6 @@ const description = "A detailed look at my music rotation.";
           </div>
         </section>
 
-
         {/* --- ALL TIME --- */}
         <section class="space-y-6">
           <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
@@ -246,7 +244,7 @@ const description = "A detailed look at my music rotation.";
           </h2>
 
           <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 mb-8">
-            {allTime.albums.map((album: Item) => (
+            {(allTime.albums || []).map((album: Item) => (
               <a href={album.url} target="_blank" class="group block space-y-2">
                 <div class="aspect-square overflow-hidden rounded border border-neutral-200 dark:border-neutral-800 relative bg-neutral-50 dark:bg-neutral-900">
                   {album.image ? (
@@ -277,11 +275,10 @@ const description = "A detailed look at my music rotation.";
           </div>
 
           <div class="grid md:grid-cols-2 gap-8 md:gap-12 pt-4">
-             {/* All Time Artists */}
              <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
                <div class="columns-1 gap-8 space-y-1">
-                {allTime.artists.map((artist: Item, i: number) => (
+                {(allTime.artists || []).map((artist: Item, i: number) => (
                   <div class="break-inside-avoid">
                     <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
                       <div class="flex items-center gap-2 truncate min-w-0">
@@ -297,11 +294,10 @@ const description = "A detailed look at my music rotation.";
               </div>
             </div>
 
-            {/* All Time Tracks */}
             <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Songs</h3>
                <div class="columns-1 gap-8 space-y-1">
-                {allTime.tracks.map((track: Item, i: number) => (
+                {(allTime.tracks || []).map((track: Item, i: number) => (
                   <div class="break-inside-avoid">
                     <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
                       <div class="flex items-center gap-2 truncate min-w-0">
