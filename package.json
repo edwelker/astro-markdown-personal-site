@@ -5,13 +5,14 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run fetch && npm run test && astro build",
+    "build": "npm run fetch && npm run mvdata && npm run test && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "fetch": "node scripts/flickr-fetch.mjs && node scripts/trakt-fetch.mjs && node scripts/cycling-fetch.mjs && node scripts/music-fetch.mjs",
     "test": "vitest run",
     "test:ui": "npx playwright test",
-    "clean": "rm -rf dist .astro src/data/*.json"
+    "clean": "rm -rf dist .astro src/data/*.json",
+    "mvdata": "cp src/data/*.json public/data"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
