@@ -1,8 +1,3 @@
-/**
- * transformFlickrData
- * Pure function to map raw API responses to UI objects.
- * Separated from network/IO for Vitest reliability.
- */
 export function transformFlickrData(apiResponse) {
   const rawPhotos = apiResponse?.photos?.photo ?? [];
   return rawPhotos.map(p => ({
