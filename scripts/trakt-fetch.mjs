@@ -6,29 +6,29 @@ async function run() {
   // Ensure we handle both old nested and new flat formats during cache loading
   const flatExisting = Array.isArray(existing.allRatings) ? existing.allRatings : (existing.allRatings?.allRatings || []);
   const cache = new Map(flatExisting.map(r => [r.id, r]));
-  
-  const headers = { 
-    'Content-Type': 'application/json', 
-    'trakt-api-version': '2', 
-    'trakt-api-key': process.env.TRAKT_CLIENT_ID 
+
+  const headers = {
+    'Content-Type': 'application/json',
+    'trakt-api-version': '2',
+    'trakt-api-key': process.env.TRAKT_CLIENT_ID
   };
 
   try {
     const [mRes, sRes] = await Promise.all([
-      fetch(`https://api.trakt.tv/users/${process.env.TRAKT_USERNAME}/ratings/movies?limit=100&extended=full`, { headers }),
-      fetch(`https://api.trakt.tv/users/${process.env.TRAKT_USERNAME}/ratings/shows?limit=100&extended=full`, { headers })
+      fetch(`https://api.trakt.tv/users/${process.env.TRAKT_USERNAME}/ratings/movies?limit=500&extended=full`, { headers }),
+      fetch(`https://api.trakt.tv/users/${process.env.TRAKT_USERNAME}/ratings/shows?limit=500&extended=full`, { headers })
     ]);
-    
+
     const raw = [...await mRes.json(), ...await sRes.json()];
-    
+
     const enriched = await Promise.all(raw.map(async (item) => {
       const imdbId = item.movie?.ids?.imdb || item.show?.ids?.imdb;
       if (cache.has(imdbId) && cache.get(imdbId).poster) return { ...item, ...cache.get(imdbId) };
-      
+
       const tmdbId = item.movie?.ids?.tmdb || item.show?.ids?.tmdb;
       const type = item.movie ? 'movie' : 'tv';
       let poster = null, director = "Unknown";
-      
+
       if (tmdbId && process.env.TMDB_API_KEY) {
         const [tRes, cRes] = await Promise.all([
           fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}?api_key=${process.env.TMDB_API_KEY}`),
@@ -43,7 +43,7 @@ async function run() {
     }));
 
     const allRatings = transformTraktData(enriched);
-    
+
     // Aggregations
     const genreMap = {}, decadeStats = {}, directorMap = {};
     enriched.forEach(item => {
@@ -57,10 +57,10 @@ async function run() {
       (item.movie?.genres || item.show?.genres || []).forEach(g => genreMap[g] = (genreMap[g] || 0) + 1);
     });
 
-    const sparkline = Object.entries(decadeStats).map(([d, v]) => ({ 
-      decade: Number(d), 
-      score: (v.sum / v.count).toFixed(2), 
-      volume: v.count 
+    const sparkline = Object.entries(decadeStats).map(([d, v]) => ({
+      decade: Number(d),
+      score: (v.sum / v.count).toFixed(2),
+      volume: v.count
     })).sort((a,b) => a.decade - b.decade);
 
     // THE FIX: Single-level object write
