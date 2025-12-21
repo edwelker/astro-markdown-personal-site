@@ -3,9 +3,11 @@ import traktData from "../data/trakt.json";
 const recentlyRated = (traktData?.allRatings || []).slice(0, 8);
 ---
 <section class="animate space-y-4">
-  <div class="flex items-center justify-between">
-    <h5 class="font-semibold text-black dark:text-white">Recent Movies & TV</h5>
-    <a href="/media" class="text-[10px] text-neutral-500 uppercase font-mono hover:text-orange-500 transition-colors">movies and tv →</a>
+  <div class="flex items-center justify-between pb-4 border-b border-black/10 dark:border-white/10">
+    <h3 class="font-semibold text-black dark:text-white text-lg">Recent Movies & TV</h3>
+    <a href="/media" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
+      Full media stats<span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+    </a>
   </div>
   <div class="grid grid-cols-4 sm:grid-cols-8 gap-2">
     {recentlyRated.map((item) => (
