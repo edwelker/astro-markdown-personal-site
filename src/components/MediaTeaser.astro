@@ -6,7 +6,7 @@ const recentlyRated = (traktData?.allRatings || []).slice(0, 8);
 <section class="animate space-y-4">
   <div class="flex items-center justify-between">
     <h5 class="font-semibold text-black dark:text-white">Recent Movies & TV</h5>
-    <a href="/media" class="text-[10px] text-neutral-500 uppercase font-mono hover:text-orange-500 transition-colors">Archive →</a>
+    <a href="/media" class="text-[10px] text-neutral-500 uppercase font-mono hover:text-orange-500 transition-colors">movies and tv →</a>
   </div>
   <div class="grid grid-cols-4 sm:grid-cols-8 gap-2">
     {recentlyRated.map((item) => (
