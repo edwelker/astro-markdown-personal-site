@@ -27,7 +27,7 @@ test.describe('Flickr Gallery Placement', () => {
     await page.goto('/');
 
     // Act
-    const link = page.getByRole('link', { name: 'movies and tv' });
+    const link = page.getByRole('link', { name: /movies and tv/i });
 
     // Assert
     await expect(link).toBeVisible();
