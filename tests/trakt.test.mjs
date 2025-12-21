@@ -1,9 +1,10 @@
 import { describe, it, expect } from 'vitest';
+import data from '../src/data/trakt.json';
 
-describe('Trakt Data Integrity', () => {
-  it('should have a valid schema', async () => {
-    const data = await import('../src/data/trakt.json');
-    expect(data.allRatings).toBeDefined();
+describe('Trakt Final Output Validation', () => {
+  it('checks that allRatings is a flat Array (Fixes UI Bigness)', () => {
+    // If this fails, your fetcher is nesting { allRatings: { allRatings: [] } }
     expect(Array.isArray(data.allRatings)).toBe(true);
+    expect(data.allRatings[0]).toHaveProperty('title');
   });
 });

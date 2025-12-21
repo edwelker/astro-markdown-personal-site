@@ -3,22 +3,32 @@ import { transformTraktData } from './trakt-logic.mjs';
 
 async function run() {
   const existing = JSON.parse(await fs.readFile('src/data/trakt.json', 'utf-8').catch(() => '{"allRatings":[]}'));
-  const cache = new Map(existing.allRatings.map(r => [r.id, r]));
-  const headers = { 'Content-Type': 'application/json', 'trakt-api-version': '2', 'trakt-api-key': process.env.TRAKT_CLIENT_ID };
+  // Ensure we handle both old nested and new flat formats during cache loading
+  const flatExisting = Array.isArray(existing.allRatings) ? existing.allRatings : (existing.allRatings?.allRatings || []);
+  const cache = new Map(flatExisting.map(r => [r.id, r]));
+  
+  const headers = { 
+    'Content-Type': 'application/json', 
+    'trakt-api-version': '2', 
+    'trakt-api-key': process.env.TRAKT_CLIENT_ID 
+  };
 
   try {
     const [mRes, sRes] = await Promise.all([
       fetch(`https://api.trakt.tv/users/${process.env.TRAKT_USERNAME}/ratings/movies?limit=100&extended=full`, { headers }),
       fetch(`https://api.trakt.tv/users/${process.env.TRAKT_USERNAME}/ratings/shows?limit=100&extended=full`, { headers })
     ]);
+    
     const raw = [...await mRes.json(), ...await sRes.json()];
+    
     const enriched = await Promise.all(raw.map(async (item) => {
-      const id = item.movie?.ids?.imdb || item.show?.ids?.imdb;
-      if (cache.has(id) && cache.get(id).poster) return { ...item, ...cache.get(id) };
+      const imdbId = item.movie?.ids?.imdb || item.show?.ids?.imdb;
+      if (cache.has(imdbId) && cache.get(imdbId).poster) return { ...item, ...cache.get(imdbId) };
       
       const tmdbId = item.movie?.ids?.tmdb || item.show?.ids?.tmdb;
       const type = item.movie ? 'movie' : 'tv';
       let poster = null, director = "Unknown";
+      
       if (tmdbId && process.env.TMDB_API_KEY) {
         const [tRes, cRes] = await Promise.all([
           fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}?api_key=${process.env.TMDB_API_KEY}`),
@@ -32,7 +42,9 @@ async function run() {
       return { ...item, poster, director };
     }));
 
-    const clean = transformTraktData(enriched);
+    const allRatings = transformTraktData(enriched);
+    
+    // Aggregations
     const genreMap = {}, decadeStats = {}, directorMap = {};
     enriched.forEach(item => {
       const year = item.year || item.movie?.year || item.show?.year;
@@ -45,16 +57,23 @@ async function run() {
       (item.movie?.genres || item.show?.genres || []).forEach(g => genreMap[g] = (genreMap[g] || 0) + 1);
     });
 
-    const sparkline = Object.entries(decadeStats).map(([d, v]) => ({ decade: Number(d), score: (v.sum / v.count).toFixed(2), volume: v.count })).sort((a,b) => a.decade - b.decade);
+    const sparkline = Object.entries(decadeStats).map(([d, v]) => ({ 
+      decade: Number(d), 
+      score: (v.sum / v.count).toFixed(2), 
+      volume: v.count 
+    })).sort((a,b) => a.decade - b.decade);
 
+    // THE FIX: Single-level object write
     await fs.writeFile('src/data/trakt.json', JSON.stringify({
-      allRatings: clean,
+      allRatings,
       genres: Object.entries(genreMap).sort((a,b) => b[1] - a[1]).slice(0, 10),
       directors: Object.entries(directorMap).sort((a,b) => b[1] - a[1]).slice(0, 10),
       sparkline,
+      username: process.env.TRAKT_USERNAME || "ewelker",
       lastUpdated: new Date().toISOString()
     }, null, 2));
-    console.log('✅ Trakt: Incremental sync complete.');
-  } catch (e) { console.error('❌ Trakt Failed'); }
+
+    console.log('✅ Trakt: Fixed nesting and synced.');
+  } catch (e) { console.error('❌ Trakt Failed:', e); }
 }
 run();

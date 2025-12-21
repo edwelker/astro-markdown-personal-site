@@ -1,13 +1,18 @@
-export const transformMusicData = (userData, weekArt, weekAlb, monthArt, monthAlb) => {
-  const mapArtist = (data) => (data?.topartists?.artist || []).map(a => ({
-    name: a.name, url: a.url, plays: a.playcount
-  }));
-  const mapAlbum = (data) => (data?.topalbums?.album || []).map(a => ({
-    name: a.name, artist: a.artist?.name, url: a.url, plays: a.playcount, image: a.image?.[2]['#text'] || ''
-  }));
-  return {
-    user: { scrobbles: parseInt(userData?.user?.playcount || 0) },
-    week: { artists: mapArtist(weekArt), albums: mapAlbum(weekAlb) },
-    month: { artists: mapArtist(monthArt), albums: mapAlbum(monthAlb) }
+export function transformMusicData(info, weekArtists, weekAlbums, monthArtists, monthAlbums) {
+  const getItems = (data) => {
+    const list = data?.topartists?.artist || data?.topalbums?.album || [];
+    return list.map(item => ({
+      name: item.name,
+      url: item.url,
+      artist: item.artist?.name || undefined,
+      plays: item.playcount,
+      image: item.image?.find(i => i.size === 'extralarge')?.['#text'] || ""
+    }));
   };
-};
+
+  return {
+    user: { scrobbles: parseInt(info?.user?.playcount || 0) },
+    week: { artists: getItems(weekArtists), albums: getItems(weekAlbums) },
+    month: { artists: getItems(monthArtists), albums: getItems(monthAlbums) }
+  };
+}

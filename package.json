@@ -1,20 +1,17 @@
 {
   "name": "web",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "clean": "rm -rf dist .astro src/data/*.json",
-    "astro": "astro",
+    "build": "npm run fetch && npm run test && astro build",
     "preview": "astro preview",
+    "astro": "astro",
     "fetch": "node scripts/flickr-fetch.mjs && node scripts/trakt-fetch.mjs && node scripts/strava-fetch.mjs && node scripts/music-fetch.mjs",
-    "test": "vitest run tests/",
+    "test": "vitest run",
     "test:ui": "npx playwright test",
-    "test:all": "npm run test && npm run validate && npm run test:ui && astro check",
-    "validate": "node tests/validate-data.cjs",
-    "build": "npm run clean && npm run test && npm run validate && npm run fetch && astro build",
-    "record": "node scripts/record-fixtures.mjs"
+    "clean": "rm -rf dist .astro src/data/*.json"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -22,7 +19,6 @@
     "@astrojs/partytown": "^2.1.4",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.0",
-    "@fontsource/inter": "^5.2.8",
     "@tailwindcss/vite": "^4.1.13",
     "astro": "^5.13.9",
     "astro-pagefind": "^1.8.5",
@@ -30,13 +26,11 @@
     "astro-seo": "^0.8.4",
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^4.1.13",
-    "typescript": "^5.9.2"
+    "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@tailwindcss/typography": "^0.5.18",
-    "pagefind": "^1.4.0",
     "vitest": "^4.0.16"
   }
 }

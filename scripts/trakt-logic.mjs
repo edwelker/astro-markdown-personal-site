@@ -1,22 +1,12 @@
-export function calculateDecade(year) { return Math.floor(year / 10) * 10; }
-export function deduplicate(items) {
-  const seen = new Set();
-  return (items || []).filter(item => {
-    const id = item.movie?.ids?.imdb || item.show?.ids?.imdb;
-    if (!id || seen.has(id)) return false;
-    seen.add(id);
-    return true;
-  });
-}
-export const transformTraktData = (data) => {
-  const ratings = Array.isArray(data) ? data : (data?.allRatings || []);
-  return ratings.map(item => ({
-    title: item.title || item.movie?.title || item.show?.title || 'Unknown',
-    rating: item.rating ?? 0,
-    poster: item.poster || '',
-    href: item.href || (item.movie ? `https://imdb.com/title/${item.movie.ids?.imdb}` : ''),
-    id: item.movie?.ids?.imdb || item.show?.ids?.imdb,
-    year: item.year || item.movie?.year || item.show?.year,
-    director: item.director || 'Unknown'
+export function transformTraktData(rawRatings) {
+  return (rawRatings || []).map(item => ({
+    id: item.movie?.ids?.trakt || item.show?.ids?.trakt || item.id,
+    title: item.movie?.title || item.show?.title || item.title,
+    year: item.movie?.year || item.show?.year || item.year,
+    rating: item.rating,
+    type: item.movie ? 'movie' : 'show',
+    href: item.href || `https://trakt.tv/${item.movie ? 'movies' : 'shows'}/${item.movie?.ids?.slug || item.show?.ids?.slug || ''}`,
+    poster: item.poster || "", 
+    director: item.director || "Unknown"
   }));
-};
+}
