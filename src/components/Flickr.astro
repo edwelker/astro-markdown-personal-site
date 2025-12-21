@@ -1,0 +1,59 @@
+---
+import data from '../data/flickr-photos.json';
+
+const allPhotos = data || [];
+
+// 14 photos creates a perfect flush rectangle with two 2x2 Heros
+const photosToShow = allPhotos.slice(0, 14);
+const hasPhotos = photosToShow.length > 0;
+---
+
+{hasPhotos ? (
+  <section class="my-16 animate" data-testid="flickr-section">
+    <div class="flex justify-between items-baseline mb-4 border-b border-black/10 dark:border-white/10 pb-2">
+      <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">Photo Archive</h2>
+      <a href="https://www.flickr.com/photos/ed_welker/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
+        Flickr <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+      </a>
+    </div>
+
+    {/* Strictly controlled 4-column grid */}
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 auto-rows-[120px] md:auto-rows-[160px]">
+      {photosToShow.map((photo, i) => {
+        // Hero 1: Top Left (index 0)
+        // Hero 2: Bottom Right (index 13)
+        const isTopHero = i === 0;
+        const isBottomHero = i === 13;
+
+        let spanClass = "col-span-1 row-span-1";
+        if (isTopHero) spanClass = "col-span-2 row-span-2";
+        if (isBottomHero) spanClass = "col-span-2 row-span-2 md:col-start-3 md:row-start-3";
+
+        return (
+          <div class={`${spanClass} group relative overflow-hidden bg-neutral-100 dark:bg-neutral-900 border border-black/5 dark:border-white/5`}>
+            <a
+              href={`https://www.flickr.com/photos/ed_welker/${photo.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full h-full"
+            >
+              <img
+                src={photo.src}
+                alt={photo.title || 'Flickr photo'}
+                loading="lazy"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
+              />
+              <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-white/70 font-mono text-[9px] uppercase tracking-wider truncate block">
+                  {photo.title !== 'Untitled' ? photo.title : `IMG_${photo.id.slice(-4)}`}
+                </span>
+              </div>
+            </a>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+) : (
+  <div data-flickr-empty style="display: none;" data-testid="flickr-empty-marker" />
+)}

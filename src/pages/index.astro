@@ -5,7 +5,7 @@ import { SITE, HOME, SOCIALS } from "@consts";
 import Link from "@components/Link.astro";
 import { getCollection } from "astro:content";
 import { getAllHighlights } from "@lib/highlights";
-import FlickrGallery from '@components/FlickrGallery.astro';
+import Flickr from '@components/Flickr.astro';
 import MusicStats from "@components/MusicStats.astro";
 import CyclingStats from "@components/CyclingStats.astro";
 import MediaTeaser from "@components/MediaTeaser.astro";
@@ -118,7 +118,7 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
         </section>
 
         <section>
-            <FlickrGallery />
+            <Flickr />
         </section>
 
         <section class="animate space-y-4">
