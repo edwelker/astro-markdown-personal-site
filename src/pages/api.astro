@@ -4,9 +4,8 @@ import Container from "@components/Container.astro";
 import BackToPrevious from "@components/BackToPrevious.astro";
 
 const title = "API Endpoints";
-const description = "Raw data feeds for photos, cinematic history, and reading highlights.";
+const description = "Raw data feeds for photos, music, cycling, and media tracking.";
 
-// Get current date for documentation freshness
 const lastUpdated = new Date().toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
@@ -14,6 +13,10 @@ const lastUpdated = new Date().toLocaleDateString('en-US', {
 });
 
 const endpoints = [
+  { name: "Flickr Photos", url: "/data/flickr-photos.json", type: "JSON" },
+  { name: "Music Stats", url: "/data/music.json", type: "JSON" },
+  { name: "Cycling Stats", url: "/data/cycling.json", type: "JSON" },
+  { name: "Trakt Media", url: "/data/trakt.json", type: "JSON" },
   { name: "Highlights JSON", url: "/data/highlights.json", type: "JSON" },
   { name: "Highlights XML", url: "/highlights.xml", type: "XML" },
   { name: "Site RSS Feed", url: "/rss.xml", type: "RSS" }
@@ -23,24 +26,30 @@ const endpoints = [
 <Layout title={title} description={description}>
   <Container>
     <div class="animate">
-      <BackToPrevious href="/" />
-      <div class="h-24 md:h-32 w-full block"></div>
+      <div class="relative pt-12 pb-8">
+        <BackToPrevious href="/" />
+      </div>
 
-      <header class="mb-12">
+      <header class="relative mb-12">
         <h1 class="text-3xl font-black tracking-tighter text-black dark:text-white uppercase leading-none">
-          API
+          API Endpoints
         </h1>
-        <p class="text-neutral-500 text-sm mt-2 max-w-lg leading-relaxed">
-          Public data endpoints powering the various sections of this site. Last documented on <span class="text-black dark:text-white font-mono font-bold">{lastUpdated}</span>.
-        </p>
+        <div class="mt-4 space-y-4 max-w-lg text-neutral-500 text-sm leading-relaxed">
+          <p>
+            Public data endpoints powering the various sections of this site. Last documented on <span class="text-black dark:text-white font-mono font-bold">{lastUpdated}</span>.
+          </p>
+          <p>
+            This is a static site generated at build time. During the build process, custom scripts pull data from various third-party services (Strava, Flickr, Last.fm, Trakt) and format it on the server side before posting.
+          </p>
+        </div>
       </header>
 
       <section class="space-y-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {endpoints.map(endpoint => (
-            <a href={endpoint.url} class="group block p-4 rounded-lg border border-black/10 dark:border-white/10 hover:border-orange-500 transition-colors">
+            <a href={endpoint.url} class="group block p-4 rounded-lg border border-black/10 dark:border-white/10 hover:border-black dark:hover:border-white transition-colors">
               <div class="flex justify-between items-center">
-                <span class="text-sm font-bold uppercase tracking-tight text-neutral-800 dark:text-neutral-200 group-hover:text-orange-600">
+                <span class="text-sm font-bold uppercase tracking-tight text-neutral-800 dark:text-neutral-200">
                   {endpoint.name}
                 </span>
                 <span class="text-[10px] font-mono px-2 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-500">
@@ -57,8 +66,8 @@ const endpoints = [
       
       <footer class="pt-24 pb-12 border-t border-black/10 dark:border-white/10 mt-20">
         <div class="flex justify-between items-center text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
-          <span>Astro 5.0 Endpoints</span>
-          <span>Verified via Integrity Suite</span>
+          <span></span>
+          <span></span>
         </div>
       </footer>
     </div>
