@@ -2,30 +2,33 @@ import fs from 'fs';
 import path from 'path';
 import { transformFlickrData } from './flickr-logic.mjs';
 
-const FLICKR_API_KEY = process.env.FLICKR_API_KEY;
-const FLICKR_USER_ID = '72923429@N00';
-const PHOTO_COUNT = 10;
-const OUTPUT_FILE = path.resolve('src/data/flickr-photos.json');
+async function runFetcher() {
+  // Ensure the API key is present before trying to fetch
+  if (!process.env.FLICKR_API_KEY) {
+    console.error('Error: FLICKR_API_KEY is not defined.');
+    return;
+  }
 
-const url = `https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=${FLICKR_API_KEY}&user_id=${FLICKR_USER_ID}&per_page=${PHOTO_COUNT}&format=json&nojsoncallback=1&extras=url_m,url_l,date_taken,tags`;
-
-async function fetchFlickrPhotos() {
-  if (!FLICKR_API_KEY) return console.error("Missing FLICKR_API_KEY");
+  const url = `https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=${process.env.FLICKR_API_KEY}&user_id=72923429@N00&format=json&nojsoncallback=1&extras=url_m,url_l,date_taken,tags`;
 
   try {
+    // Action 1: Network request (Side Effect)
     const response = await fetch(url);
-    const data = await response.json();
-    if (data.stat !== 'ok') return console.error('Flickr Error:', data.message);
+    const rawData = await response.json();
 
-    // ACT: The side-effect-free transformation
-    const photos = transformFlickrData(data);
+    // Action 2: Data Cleaning (Pure Logic - tested in isolation)
+    const cleanData = transformFlickrData(rawData);
 
-    fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
-    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(photos, null, 2));
-    console.log(`Saved ${photos.length} photos.`);
+    // Action 3: Disk I/O (Side Effect)
+    const outputPath = path.resolve('src/data/flickr-photos.json');
+    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+    fs.writeFileSync(outputPath, JSON.stringify(cleanData, null, 2));
+    
+    console.log(`Successfully synced ${cleanData.length} photos.`);
   } catch (error) {
-    console.error('Fetch Error:', error);
+    // Fail gracefully: Log the error so the build continues.
+    console.error('Flickr Sync Failed:', error.message);
   }
 }
 
-fetchFlickrPhotos();
+runFetcher();

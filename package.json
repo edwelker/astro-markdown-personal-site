@@ -17,7 +17,8 @@
     "test": "vitest run tests/",
     "validate": "node tests/validate-data.cjs",
     "test:all": "npm run test && npm run validate && npm run build && npm run test:links && astro check",
-    "test:links": "npx playwright test"
+    "test:links": "npx playwright test",
+    "test:record": "node scripts/record-fixtures.mjs"
   },
   "engines": {
     "node": ">=20.3.0"

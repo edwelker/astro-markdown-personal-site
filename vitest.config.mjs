@@ -5,5 +5,7 @@ export default defineConfig({
     // Only run unit tests, ignore browser specs
     exclude: ['**/node_modules/**', '**/dist/**', '**/*.spec.mjs'],
     include: ['tests/*.test.mjs'],
+    globals: true,
+    environment: 'node',
   },
 });
