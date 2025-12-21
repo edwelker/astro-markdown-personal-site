@@ -1,10 +1,10 @@
 import { describe, it, expect } from 'vitest';
 import { transformTraktData } from '../scripts/trakt-logic.mjs';
 import { transformMusicData } from '../scripts/music-logic.mjs';
-import { transformStravaData } from '../scripts/strava-logic.mjs';
+import { transformStravaData } from '../scripts/cycling-logic.mjs';
 
 describe('ETL Logic Manifest', () => {
-  
+
   describe('Trakt Integrity', () => {
     it('1. Schema Enforcement: correctly maps complex nested Trakt IDs', () => {
       const mock = [{ movie: { title: 'Test', ids: { trakt: 123 } }, rating: 10 }];
@@ -45,7 +45,7 @@ describe('ETL Logic Manifest', () => {
       // Note: This ride is 2020, but Strava transform is hardcoded to 2025 comparison
       const oldRide = [{ start_date: '2020-01-01T00:00:00Z', distance: 1000 }];
       const res = transformStravaData(oldRide);
-      expect(res.year.distance).toBe("0"); 
+      expect(res.year.distance).toBe("0");
     });
   });
 });
