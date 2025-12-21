@@ -6,10 +6,9 @@ const delay = (ms) => new Promise(res => setTimeout(res, ms));
 async function run() {
   const dataPath = 'src/data/trakt.json';
   const existing = JSON.parse(await fs.readFile(dataPath, 'utf-8').catch(() => '{"allRatings":[]}'));
-  
   const flatExisting = Array.isArray(existing.allRatings) ? existing.allRatings : (existing.allRatings?.allRatings || []);
   
-  // FIX: Map by imdbId to ensure cache lookup works
+  // Use imdbId for cache key to prevent redundant TMDB hits
   const cache = new Map(flatExisting.map(r => [r.imdbId, r]));
 
   const headers = {
@@ -19,21 +18,18 @@ async function run() {
   };
 
   try {
-    console.log('📡 Fetching from Trakt...');
+    console.log('📡 Fetching 1000 items from Trakt...');
     const [mRes, sRes] = await Promise.all([
-      fetch(`https://api.trakt.tv/users/${process.env.TRAKT_USERNAME}/ratings/movies?limit=500&extended=full`, { headers }),
-      fetch(`https://api.trakt.tv/users/${process.env.TRAKT_USERNAME}/ratings/shows?limit=500&extended=full`, { headers })
+      fetch(`https://api.trakt.tv/users/${process.env.TRAKT_USERNAME}/ratings/movies?limit=1000&extended=full`, { headers }),
+      fetch(`https://api.trakt.tv/users/${process.env.TRAKT_USERNAME}/ratings/shows?limit=1000&extended=full`, { headers })
     ]);
 
     const raw = [...await mRes.json(), ...await sRes.json()];
     const enriched = [];
 
-    console.log(`🎬 Processing ${raw.length} items...`);
-
     for (const item of raw) {
       const imdbId = item.movie?.ids?.imdb || item.show?.ids?.imdb;
       
-      // Check cache first
       if (imdbId && cache.has(imdbId) && cache.get(imdbId).poster) {
         enriched.push({ ...item, ...cache.get(imdbId) });
         continue;
@@ -45,8 +41,7 @@ async function run() {
 
       if (tmdbId && process.env.TMDB_API_KEY) {
         try {
-          // Small delay to prevent TMDB 429 Rate Limiting
-          await delay(50); 
+          await delay(100); // 100ms throttle for TMDB
           const [tRes, cRes] = await Promise.all([
             fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}?api_key=${process.env.TMDB_API_KEY}`),
             fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}/credits?api_key=${process.env.TMDB_API_KEY}`)
@@ -58,15 +53,15 @@ async function run() {
           poster = tData.poster_path ? `https://image.tmdb.org/t/p/w500${tData.poster_path}` : null;
           director = cData.crew?.find(c => c.job === 'Director')?.name || "Unknown";
         } catch (err) {
-          console.warn(`⚠️ TMDB failed for ${tmdbId}:`, err.message);
+          console.warn(`⚠️ TMDB failed: ${tmdbId}`);
         }
       }
       enriched.push({ ...item, poster, director });
     }
 
     const allRatings = transformTraktData(enriched);
-
     const genreMap = {}, decadeStats = {}, directorMap = {};
+
     enriched.forEach(item => {
       const year = item.year || item.movie?.year || item.show?.year;
       if (year) {
@@ -83,22 +78,20 @@ async function run() {
       });
     });
 
-    const sparkline = Object.entries(decadeStats).map(([d, v]) => ({
-      decade: Number(d),
-      score: (v.sum / v.count).toFixed(2),
-      volume: v.count
-    })).sort((a,b) => a.decade - b.decade);
-
     await fs.writeFile(dataPath, JSON.stringify({
       allRatings,
       genres: Object.entries(genreMap).sort((a,b) => b[1] - a[1]).slice(0, 10),
       directors: Object.entries(directorMap).sort((a,b) => b[1] - a[1]).slice(0, 10),
-      sparkline,
+      sparkline: Object.entries(decadeStats).map(([d, v]) => ({
+        decade: Number(d),
+        score: (v.sum / v.count).toFixed(2),
+        volume: v.count
+      })).sort((a,b) => a.decade - b.decade),
       username: process.env.TRAKT_USERNAME || "ewelker",
       lastUpdated: new Date().toISOString()
     }, null, 2));
 
-    console.log('✅ Trakt: Data synced and cached via IMDB ID.');
+    console.log(`✅ Trakt: Sync complete (${allRatings.length} items).`);
   } catch (e) { 
     console.error('❌ Trakt Failed:', e); 
   }
