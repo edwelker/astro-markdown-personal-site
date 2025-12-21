@@ -12,235 +12,34 @@ interface RatingItem {
   poster: string;
 }
 
-interface SparklineDecade {
-  decade: number;
-  score: string;
-  volume: number;
-}
-
-interface DirectorInfo {
-  count: number;
-  id: number;
-}
-
 const { 
   allRatings = [] as RatingItem[], 
   genres = [] as [string, number][], 
-  directors = [] as [string, DirectorInfo][], 
-  sparkline = [] as SparklineDecade[], 
-  username = "" 
+  directors = [] as [string, any][], 
+  sparkline = [], 
+  username = "ewelker" 
 } = traktData || {};
 
 const tens = allRatings.filter(r => r.rating === 10);
-const nines = allRatings.filter(r => r.rating === 9);
-const eights = allRatings.filter(r => r.rating === 8);
-const midQuality = allRatings.filter(r => r.rating >= 6 && r.rating < 8);
-const lowQuality = allRatings.filter(r => r.rating < 6);
+const nines = allRatings.filter(r => r.rating === 9).slice(0, 12);
 const recentlyRated = allRatings.slice(0, 10);
-
-const topDirectorData = directors?.[0];
-const topDirectorName = topDirectorData ? topDirectorData[0] : "";
-const topDirectorId = topDirectorData ? (topDirectorData[1] as DirectorInfo).id : null;
+const topDirectorName = directors?.[0]?.[0] || "";
 const directorSpotlight = allRatings.filter(m => m.director === topDirectorName && m.rating >= 9);
-
-const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
 ---
-
 <div class="space-y-16">
-  <section class="animate space-y-6">
-    <div class="space-y-2">
-      <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">The History Map</h2>
-      <div class="text-xs text-neutral-500 leading-relaxed max-w-xl space-y-2">
-        <p>This graph visualizes cinematic quality versus consumption volume. The orange bars represent items watched per decade; the floating dots represent the average quality.</p>
-        <p class="font-mono text-[10px]">Note: A high dot signifies higher average ratings for that decade despite more movies rated.</p>
-      </div>
-    </div>
-    <div class="flex items-end gap-2 h-20 pt-4">
-      {sparkline.map((s) => (
-        <a href={`/media/${s.decade}`} class="flex-1 flex flex-col items-center group relative h-full justify-end">
-          <div class="w-full bg-orange-600/10 group-hover:bg-orange-600/40 transition-colors rounded-t-sm" style={`height: ${(s.volume / maxVol) * 100}%`}>
-            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-orange-600 border border-white dark:border-black shadow-sm" style={`bottom: ${((parseFloat(s.score) - 5) / 5) * 100}%`}></div>
-          </div>
-          <span class="text-[9px] font-mono text-neutral-500 mt-2">{s.decade}s</span>
-        </a>
-      ))}
-    </div>
-  </section>
-
   <section class="animate space-y-4">
-    <div class="flex items-end justify-between border-b border-black/10 dark:border-white/10 pb-2">
-      <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-orange-600 font-bold">The 10/10 Collection ({tens.length})</h2>
-      <a href={`https://trakt.tv/users/${username}/ratings/all/10/added/asc`} target="_blank" class="text-[9px] font-mono uppercase text-neutral-400 hover:text-orange-600 font-bold">Full Set ↗</a>
+    <div class="flex items-end justify-between border-b border-black/10 pb-2">
+      <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-orange-600 font-bold">10/10 Collection ({tens.length})</h2>
     </div>
     <div class="flex gap-4 overflow-x-auto pb-4 snap-x no-scrollbar">
       {tens.map((item) => (
-        <div class="min-w-[150px] sm:min-w-[180px] space-y-2 snap-start">
-          <a href={item.href} target="_blank" class="block aspect-[2/3] w-full relative rounded-lg overflow-hidden bg-neutral-900 border border-black/5 dark:border-white/5 transition-transform hover:scale-[1.02]">
-            <img src={item.poster} alt={item.title} class="absolute inset-0 h-full w-full object-cover block" loading="lazy" />
+        <div class="min-w-[150px] space-y-2 snap-start">
+          <a href={item.href} target="_blank" class="block aspect-[2/3] rounded-lg overflow-hidden bg-neutral-900 transition-transform hover:scale-105">
+            <img src={item.poster} alt={item.title} class="w-full h-full object-cover" />
           </a>
-          <p class="text-[12px] font-bold uppercase truncate text-neutral-800 dark:text-neutral-200 leading-tight">{item.title}</p>
+          <p class="text-[12px] font-bold uppercase truncate text-neutral-800 dark:text-neutral-200">{item.title}</p>
         </div>
       ))}
     </div>
   </section>
-
-  {topDirectorName && (
-    <section class="animate space-y-3">
-      <div class="flex items-end justify-between border-b border-black/5 dark:border-white/5 pb-1">
-        <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-orange-600 font-bold">Director Spotlight: {topDirectorName}</h2>
-        {topDirectorId && (
-          <a href={`https://www.themoviedb.org/person/${topDirectorId}`} target="_blank" class="text-[9px] font-mono uppercase text-neutral-400 hover:text-orange-600 font-bold">Credits ↗</a>
-        )}
-      </div>
-      <div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
-        {directorSpotlight.map((item) => (
-          <div class="min-w-[120px] space-y-1">
-            <a href={item.href} target="_blank" class="block aspect-[2/3] rounded overflow-hidden border border-black/5 dark:border-white/5 bg-neutral-900 transition-transform hover:scale-105">
-              <img src={item.poster} class="w-full h-full object-cover" loading="lazy" />
-            </a>
-            <p class="text-[10px] font-bold uppercase truncate text-neutral-500">{item.title}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  )}
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate">
-    <section class="space-y-4">
-      <div class="flex items-end justify-between border-b border-orange-600/20 pb-2">
-        <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-orange-500 font-bold">The 9/10 Tier</h2>
-        <a href={`https://trakt.tv/users/${username}/ratings/all/9/added/asc`} target="_blank" class="text-[9px] font-mono uppercase text-neutral-400 hover:text-orange-500 font-bold">View ↗</a>
-      </div>
-      <div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
-        {nines.map((item) => (
-          <div class="min-w-[110px] space-y-1">
-            <a href={item.href} target="_blank" class="block aspect-[2/3] rounded overflow-hidden bg-neutral-900 border border-white/5 transition-transform hover:scale-105">
-              <img src={item.poster} class="w-full h-full object-cover" loading="lazy" />
-            </a>
-            <p class="text-[10px] font-bold uppercase truncate text-neutral-500">{item.title}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-    <section class="space-y-4">
-      <div class="flex items-end justify-between border-b border-black/10 pb-2">
-        <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">The 8/10 Tier</h2>
-        <a href={`https://trakt.tv/users/${username}/ratings/all/8/added/asc`} target="_blank" class="text-[9px] font-mono uppercase text-neutral-400 hover:text-orange-600 font-bold">View ↗</a>
-      </div>
-      <div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
-        {eights.map((item) => (
-          <div class="min-w-[110px] space-y-1">
-            <a href={item.href} target="_blank" class="block aspect-[2/3] rounded overflow-hidden bg-neutral-900 border border-white/5 transition-transform hover:scale-105">
-              <img src={item.poster} class="w-full h-full object-cover" loading="lazy" />
-            </a>
-            <p class="text-[10px] font-bold uppercase truncate text-neutral-500">{item.title}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate">
-    <section class="space-y-4">
-      <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">Top Genres</h2>
-      <div class="flex flex-wrap gap-2">
-        {genres.map((g) => {
-          const name = g[0] as string;
-          const count = g[1] as number;
-          return (
-            <a href={`https://trakt.tv/users/${username}/history/movies/added?genres=${name.toLowerCase()}`} target="_blank" class="px-2.5 py-1 rounded-full border border-black/10 dark:border-white/10 text-[10px] font-mono uppercase text-neutral-500 hover:border-orange-500 hover:text-orange-600 transition-colors font-bold">
-              {name} <span class="text-orange-600 ml-1">{count}</span>
-            </a>
-          );
-        })}
-      </div>
-    </section>
-    <section class="space-y-4">
-      <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">Top Directors</h2>
-      <div class="flex flex-wrap gap-2">
-        {directors.map((d) => {
-          const name = d[0] as string;
-          const info = d[1] as DirectorInfo;
-          return (
-            <a href={`https://www.google.com/search?q=${encodeURIComponent(name)}+director`} target="_blank" class="px-2.5 py-1 rounded-full border border-black/10 dark:border-white/10 text-[10px] font-mono uppercase text-neutral-500 hover:border-orange-500 hover:text-orange-600 transition-colors font-bold">
-              {name} <span class="text-orange-600 ml-1">{info.count}</span>
-            </a>
-          );
-        })}
-      </div>
-    </section>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate">
-    <section class="space-y-4">
-      <div class="border-b border-black/10 pb-1">
-        <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">6.0 - 7.9 range</h2>
-        <div class="flex gap-2 mt-1">
-          <a href={`https://trakt.tv/users/${username}/ratings/all/7/added/asc`} target="_blank" class="text-[9px] font-mono text-neutral-400 hover:text-orange-500 font-bold">7s</a>
-          <span class="text-[9px] text-neutral-200">/</span>
-          <a href={`https://trakt.tv/users/${username}/ratings/all/6/added/asc`} target="_blank" class="text-[9px] font-mono text-neutral-400 hover:text-orange-500 font-bold">6s</a>
-        </div>
-      </div>
-      <div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
-        {midQuality.map((item) => (
-          <div class="min-w-[80px] space-y-1">
-            <a href={item.href} target="_blank" class="block aspect-[2/3] rounded overflow-hidden bg-neutral-900 border border-white/5 transition-transform hover:scale-105">
-              <img src={item.poster} class="w-full h-full object-cover grayscale opacity-50 hover:opacity-100 hover:grayscale-0 transition-all" />
-            </a>
-            <p class="text-[9px] font-bold uppercase truncate text-neutral-500">{item.title}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-    <section class="space-y-4">
-      <div class="border-b border-black/10 pb-1">
-        <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">5.0 and below</h2>
-        <div class="flex gap-2 mt-1">
-          <a href={`https://trakt.tv/users/${username}/ratings/all/5/added/asc`} target="_blank" class="text-[9px] font-mono text-neutral-400 hover:text-orange-500 font-bold">5s</a>
-          <span class="text-[9px] text-neutral-200">/</span>
-          <a href={`https://trakt.tv/users/${username}/ratings/all/4/added/asc`} target="_blank" class="text-[9px] font-mono text-neutral-400 hover:text-orange-500 font-bold">4s</a>
-          <span class="text-[9px] text-neutral-200">/</span>
-          <a href={`https://trakt.tv/users/${username}/ratings/all/3/added/asc`} target="_blank" class="text-[9px] font-mono text-neutral-400 hover:text-orange-500 font-bold">3s</a>
-          <span class="text-[9px] text-neutral-200">/</span>
-          <a href={`https://trakt.tv/users/${username}/ratings/all/2/added/asc`} target="_blank" class="text-[9px] font-mono text-neutral-400 hover:text-orange-500 font-bold">2s</a>
-        </div>
-      </div>
-      <div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
-        {lowQuality.map((item) => (
-          <div class="min-w-[80px] space-y-1">
-            <a href={item.href} target="_blank" class="block aspect-[2/3] rounded overflow-hidden bg-neutral-900 border border-white/5 transition-transform hover:scale-105">
-              <img src={item.poster} class="w-full h-full object-cover grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all" />
-            </a>
-            <p class="text-[9px] font-bold uppercase truncate text-neutral-700">{item.title}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  </div>
-
-  <section class="animate space-y-4 pt-4 border-t border-black/10 dark:border-white/10">
-    <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">Recent Watches</h2>
-    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-8">
-      {recentlyRated.map((item) => (
-        <div class="space-y-3 group">
-          <a href={item.href} target="_blank" class="block aspect-[2/3] w-full relative rounded-lg overflow-hidden bg-neutral-900 border border-black/5 dark:border-white/5 transition-transform hover:scale-[1.02]">
-            <img src={item.poster} alt={item.title} class="absolute inset-0 h-full w-full object-cover block m-0 p-0" loading="lazy" />
-            <div class="absolute bottom-2 right-2 flex items-center gap-1 bg-black/80 backdrop-blur-md px-2 py-1 rounded border border-white/10 z-10">
-               <span class="text-[11px] font-bold text-white leading-none">{item.rating} <span class="text-orange-500 font-normal">★</span></span>
-            </div>
-          </a>
-          <div class="px-0.5 leading-tight">
-            <p class="text-[14px] font-bold uppercase text-neutral-800 dark:text-neutral-200 leading-tight">{item.title}</p>
-            <p class="text-[12px] font-mono text-neutral-500 mt-1">{item.year}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </section>
-
-  <div class="text-center pt-8">
-     <a href={`https://trakt.tv/users/${username}`} target="_blank" class="text-[10px] font-mono uppercase tracking-widest text-neutral-400 hover:text-orange-500 transition-colors font-bold">
-       View full profile on Trakt.tv ↗
-     </a>
-  </div>
 </div>

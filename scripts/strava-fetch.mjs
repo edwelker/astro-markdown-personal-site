@@ -6,47 +6,39 @@ async function getAccessToken() {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      client_id: process.env.STRAVA_CLIENT_ID,
-      client_secret: process.env.STRAVA_CLIENT_SECRET,
-      refresh_token: process.env.STRAVA_REFRESH_TOKEN,
-      grant_type: 'refresh_token',
-    }),
+      client_id: process.env.STRAVA_CLIENT_ID, client_secret: process.env.STRAVA_CLIENT_SECRET,
+      refresh_token: process.env.STRAVA_REFRESH_TOKEN, grant_type: 'refresh_token'
+    })
   });
   const data = await res.json();
-  if (!res.ok) throw new Error(`auth failed: ${data.message}`);
   return data.access_token;
 }
 
 async function run() {
-  const year = new Date().getFullYear();
   try {
+    const existing = JSON.parse(await fs.readFile('src/data/cycling.json', 'utf-8').catch(() => '{}'));
+    const lastId = existing.recent?.[0]?.id;
     const token = await getAccessToken();
-    let allActivities = [];
-    let page = 1;
-    let keepFetching = true;
+    let newItems = [], page = 1, found = false;
 
-    while (keepFetching) {
-      console.log(`fetching strava page ${page}...`);
-      const res = await fetch(`https://www.strava.com/api/v3/athlete/activities?page=${page}&per_page=100`, {
+    while (page <= 5 && !found) {
+      const res = await fetch(`https://www.strava.com/api/v3/athlete/activities?page=${page}&per_page=50`, {
         headers: { Authorization: `Bearer ${token}` }
       });
-      const activities = await res.json();
-      if (!res.ok || activities.length === 0) break;
-
-      for (const activity of activities) {
-        const rideDate = new Date(activity.start_date);
-        if (rideDate.getFullYear() < year) { keepFetching = false; break; }
-        if (rideDate.getFullYear() === year) allActivities.push(activity);
+      const list = await res.json();
+      if (!res.ok || !list.length) break;
+      for (const a of list) {
+        if (a.id === lastId) { found = true; break; }
+        newItems.push(a);
       }
       page++;
-      if (page > 10) break;
     }
 
-    const cleanData = transformStravaData(allActivities);
-    await fs.writeFile('src/data/cycling.json', JSON.stringify(cleanData, null, 2));
-    console.log(`✅ strava: synced ${allActivities.length} rides.`);
-  } catch (e) {
-    console.error('❌ strava failed:', e.message);
-  }
+    if (newItems.length === 0 && lastId) return console.log('⏩ Strava: Up to date.');
+    const fullSet = [...newItems, ...(existing._raw || [])];
+    const clean = transformStravaData(fullSet);
+    await fs.writeFile('src/data/cycling.json', JSON.stringify(clean, null, 2));
+    console.log(`✅ Strava: Added ${newItems.length} rides.`);
+  } catch (e) { console.error('❌ Strava Failed'); }
 }
 run();

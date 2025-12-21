@@ -2,7 +2,6 @@
 import traktData from "../data/trakt.json";
 const recentlyRated = (traktData?.allRatings || []).slice(0, 8);
 ---
-
 <section class="animate space-y-4">
   <div class="flex items-center justify-between">
     <h5 class="font-semibold text-black dark:text-white">Recent Movies & TV</h5>
@@ -11,11 +10,7 @@ const recentlyRated = (traktData?.allRatings || []).slice(0, 8);
   <div class="grid grid-cols-4 sm:grid-cols-8 gap-2">
     {recentlyRated.map((item) => (
       <a href={item.href} target="_blank" class="group relative aspect-[2/3] overflow-hidden rounded-md border border-black/10 dark:border-white/10 bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-transform hover:scale-105">
-        <img 
-          src={item.poster} 
-          alt={item.title} 
-          class="absolute inset-0 h-full w-full object-cover block m-0 p-0" 
-        />
+        <img src={item.poster} alt={item.title} class="absolute inset-0 h-full w-full object-cover block m-0 p-0" />
         <div class="absolute bottom-1 right-1 rounded bg-black/70 backdrop-blur-md px-1 py-0.5 text-[8px] font-bold text-white z-10 border border-white/10">
           {item.rating}
         </div>

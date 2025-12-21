@@ -1,7 +1,4 @@
-export function calculateDecade(year) {
-  return Math.floor(year / 10) * 10;
-}
-
+export function calculateDecade(year) { return Math.floor(year / 10) * 10; }
 export function deduplicate(items) {
   const seen = new Set();
   return (items || []).filter(item => {
@@ -11,7 +8,6 @@ export function deduplicate(items) {
     return true;
   });
 }
-
 export const transformTraktData = (data) => {
   const ratings = Array.isArray(data) ? data : (data?.allRatings || []);
   return ratings.map(item => ({
@@ -19,6 +15,7 @@ export const transformTraktData = (data) => {
     rating: item.rating ?? 0,
     poster: item.poster || '',
     href: item.href || (item.movie ? `https://imdb.com/title/${item.movie.ids?.imdb}` : ''),
+    id: item.movie?.ids?.imdb || item.show?.ids?.imdb,
     year: item.year || item.movie?.year || item.show?.year,
     director: item.director || 'Unknown'
   }));
