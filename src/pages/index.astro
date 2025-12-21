@@ -34,50 +34,6 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
         <section class="animate space-y-6">
           <div class="flex flex-wrap gap-y-2 items-center justify-between">
             <h5 class="font-semibold text-black dark:text-white">
-              Posts
-            </h5>
-            <Link href="/blog/">
-              See all posts
-            </Link>
-          </div>
-
-          <ul class="not-prose flex flex-col gap-2">
-            {blog.map((post) => {
-              let href = "";
-              if (post.slug.match(/^\d{4}\//)) {
-                  href = `/blog/${post.slug}/`;
-              } else {
-                  const year = post.data.date.getFullYear();
-                  const month = String(post.data.date.getMonth() + 1).padStart(2, '0');
-                  const day = String(post.data.date.getDate()).padStart(2, '0');
-                  href = `/blog/${year}/${month}/${day}/${post.slug}/`;
-              }
-
-              return (
-                <li>
-                  <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                    <div class="flex flex-col gap-1">
-                      <Link
-                        href={href}
-                        class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2"
-                      >
-                        {post.data.title}
-                      </Link>
-
-                      <p class="text-sm text-neutral-500">
-                        {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                      </p>
-                    </div>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-
-        <section class="animate space-y-6">
-          <div class="flex flex-wrap gap-y-2 items-center justify-between">
-            <h5 class="font-semibold text-black dark:text-white">
               Highlights
             </h5>
             <Link href="/highlights">
@@ -133,6 +89,49 @@ const recentHighlights = (await getAllHighlights()).slice(0, 5);
             <MediaTeaser />
         </section>
 
+        <section class="animate space-y-6">
+          <div class="flex flex-wrap gap-y-2 items-center justify-between">
+            <h5 class="font-semibold text-black dark:text-white">
+              Posts
+            </h5>
+            <Link href="/blog/">
+              See all posts
+            </Link>
+          </div>
+
+          <ul class="not-prose flex flex-col gap-2">
+            {blog.map((post) => {
+              let href = "";
+              if (post.slug.match(/^\d{4}\//)) {
+                  href = `/blog/${post.slug}/`;
+              } else {
+                  const year = post.data.date.getFullYear();
+                  const month = String(post.data.date.getMonth() + 1).padStart(2, '0');
+                  const day = String(post.data.date.getDate()).padStart(2, '0');
+                  href = `/blog/${year}/${month}/${day}/${post.slug}/`;
+              }
+
+              return (
+                <li>
+                  <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                    <div class="flex flex-col gap-1">
+                      <Link
+                        href={href}
+                        class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2"
+                      >
+                        {post.data.title}
+                      </Link>
+
+                      <p class="text-sm text-neutral-500">
+                        {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
         <section class="animate space-y-4">
           <h2 class="font-semibold text-black dark:text-white">
             Let's Connect

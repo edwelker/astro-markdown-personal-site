@@ -5,27 +5,76 @@ interface CyclingData { year: { distance: string; elevation: string; count: numb
 const cyclingData = (cyclingDataRaw || {}) as CyclingData;
 const { year, month, recent, chart = [] } = cyclingData;
 const maxWeekly = Math.max(...(chart || [1]), 1);
+
+// Filter logic: 
+// 1. Must have elevation (Outdoor only)
+// 2. Lowered distance threshold to 5mi to show more variety
+const filteredRides = (recent || [])
+  .filter(r => {
+    const elev = parseInt(r.elevation.replace(/,/g, ''));
+    const dist = parseFloat(r.distance);
+    return elev > 0 && dist > 5;
+  })
+  .slice(0, 5); 
 ---
 <div class="space-y-8">
-  <div class="flex justify-between items-end pb-4 border-b border-black/10 dark:border-white/10"><h3 class="font-semibold text-black dark:text-white text-lg">Cycling</h3><div class="text-xs font-mono text-neutral-500 uppercase tracking-tight">{year?.count || 0} rides in 2025</div></div>
+  <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
+    <h3 class="font-semibold text-black dark:text-white text-lg">Cycling</h3>
+    <a href="https://www.strava.com/athletes/2065363" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group text-right">
+      {year?.count || 0} rides on strava <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+    </a>
+  </div>
+
   {chart && chart.length > 0 && (
     <div class="group">
       <div class="flex items-end gap-[2px] h-10 w-full">
         {chart.map((m: number) => <div class="flex-1 bg-neutral-200 dark:bg-neutral-800 rounded-t-[1px] transition-all duration-300 group-hover:opacity-40 hover:!opacity-100 hover:bg-orange-500" style={`height: ${Math.max((m/maxWeekly)*100, 4)}%`} title={`${m} miles`} />)}
       </div>
-      <div class="flex justify-between mt-2 text-[10px] font-mono text-neutral-400 uppercase tracking-widest border-t border-black/5 dark:border-white/5 pt-1"><span>Jan</span><span>Jun</span><span>Dec</span></div>
+      <div class="flex justify-between mt-2 text-[10px] font-mono text-neutral-400 uppercase tracking-widest border-t border-black/10 dark:border-white/10 pt-1">
+        <span>Jan</span><span>Jun</span><span>Dec</span>
+      </div>
     </div>
   )}
+
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
     <div class="space-y-6">
-      <div><h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-3">Year to Date</h4><div class="flex flex-col"><span class="text-3xl font-mono text-black dark:text-white tracking-tighter">{year?.distance || 0}<span class="text-sm text-neutral-400 ml-1 font-sans">mi</span></span><span class="text-xs text-neutral-500 mt-1">{year?.elevation || 0} vertical feet</span></div></div>
-      <div><h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-3">{month?.name}</h4><div class="flex flex-col"><span class="text-xl font-mono text-black dark:text-white">{month?.distance || 0}<span class="text-xs text-neutral-400 ml-1 font-sans">mi</span></span></div></div>
+      <div>
+        <h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-3">Year to Date</h4>
+        <div class="flex flex-col">
+          <span class="text-3xl font-mono text-black dark:text-white tracking-tighter">
+            {year?.distance || 0}<span class="text-sm text-neutral-400 ml-1 font-sans">mi</span>
+          </span>
+          <span class="text-xs text-neutral-500 mt-1">{year?.elevation || 0} vertical feet</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-3">{month?.name}</h4>
+        <div class="flex flex-col">
+          <span class="text-xl font-mono text-black dark:text-white">
+            {month?.distance || 0}<span class="text-xs text-neutral-400 ml-1 font-sans">mi</span>
+          </span>
+        </div>
+      </div>
     </div>
     <div>
       <h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-4">Recent Rides</h4>
-      <ul class="space-y-4">
-        {recent?.map((r: RecentRide) => <li class="group/ride"><a href={`https://www.strava.com/activities/${r.id}`} target="_blank" class="block"><div class="flex justify-between items-baseline"><span class="text-sm text-neutral-800 dark:text-neutral-200 truncate group-hover/ride:text-orange-500 transition-colors">{r.name}</span><span class="text-[9px] font-mono text-neutral-400 shrink-0 ml-4">{r.date}</span></div><div class="text-[11px] text-neutral-500 font-mono mt-0.5">{r.distance}mi / {r.elevation}ft</div></a></li>)}
-      </ul>
+      {filteredRides.length > 0 ? (
+        <ul class="space-y-4">
+          {filteredRides.map((r: RecentRide) => (
+            <li class="group/ride">
+              <a href={`https://www.strava.com/activities/${r.id}`} target="_blank" class="block">
+                <div class="flex justify-between items-baseline">
+                  <span class="text-sm text-neutral-800 dark:text-neutral-200 truncate group-hover/ride:text-orange-500 transition-colors">{r.name}</span>
+                  <span class="text-[9px] font-mono text-neutral-400 shrink-0 ml-4">{r.date}</span>
+                </div>
+                <div class="text-[11px] text-neutral-500 font-mono mt-0.5">{r.distance}mi / {r.elevation}ft</div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div class="text-xs font-mono text-neutral-400 italic">No recent outdoor rides found.</div>
+      )}
     </div>
   </div>
 </div>
