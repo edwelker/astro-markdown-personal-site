@@ -19,7 +19,7 @@ Though [All City ceased this year](https://theradavist.com/all-city-cycles-closi
   <a href="https://flickr.com/photos/ed_welker/54198132135/" target="_blank">
     <img src="https://live.staticflickr.com/65535/54198132135_ba053c18c5_b.jpg" alt="Loaded for camping, 2024" />
   </a>
-  <figcaption>Loaded for camping, 2024</figcaption>
+  <figcaption>Loaded for camping at the start of the GAP/C&O, 2024</figcaption>
 </figure>
 
 ---
