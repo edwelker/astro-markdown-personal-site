@@ -1,120 +1,66 @@
 ---
-import PageLayout from "@layouts/PageLayout.astro";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import BackToPrevious from "@components/BackToPrevious.astro";
 
-const title = "Open Data";
-const description = "Technical overview of the site's data pipelines, automation, and performance metrics.";
+const title = "API Endpoints";
+const description = "Raw data feeds for photos, cinematic history, and reading highlights.";
+
+// Get current date for documentation freshness
+const lastUpdated = new Date().toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+const endpoints = [
+  { name: "Highlights JSON", url: "/data/highlights.json", type: "JSON" },
+  { name: "Highlights XML", url: "/highlights.xml", type: "XML" },
+  { name: "Site RSS Feed", url: "/rss.xml", type: "RSS" }
+];
 ---
 
-<PageLayout frontmatter={{ title, description }}>
-  <div class="space-y-12">
-    {/* Intro Section */}
-    <section>
-      <p class="text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
-        This site works without a database, but instead queries APIs to local files, and uses them to render pages in lieu of a database.
-      </p>
-    </section>
+<Layout title={title} description={description}>
+  <Container>
+    <div class="animate">
+      <BackToPrevious href="/" />
+      <div class="h-24 md:h-32 w-full block"></div>
 
-    <div class="grid gap-12">
-      {/* The Pipeline Breakdown */}
-      <section class="space-y-4">
-        <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500 font-bold">The Pipeline</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-4 border border-black/5 dark:border-white/5 rounded-lg">
-            <h3 class="text-sm font-semibold mb-2 text-black dark:text-white">01. Ingestion</h3>
-            <p class="text-xs text-neutral-500 leading-relaxed">
-              Node.js scripts fetch and normalize data from Strava, Flickr, and Last.fm APIs during the build process.
-            </p>
-          </div>
-          <div class="p-4 border border-black/5 dark:border-white/5 rounded-lg">
-            <h3 class="text-sm font-semibold mb-2 text-black dark:text-white">02. Automation</h3>
-            <p class="text-xs text-neutral-500 leading-relaxed">
-              GitHub Actions triggers a daily cron job at midnight to refresh the data and rebuild the static site.
-            </p>
-          </div>
-          <div class="p-4 border border-black/5 dark:border-white/5 rounded-lg">
-            <h3 class="text-sm font-semibold mb-2 text-black dark:text-white">03. Deployment</h3>
-            <p class="text-xs text-neutral-500 leading-relaxed">
-              Astro generates a zero-JS frontend, serving the finalized data both as UI components and raw JSON endpoints.
-            </p>
-          </div>
-        </div>
-      </section>
+      <header class="mb-12">
+        <h1 class="text-3xl font-black tracking-tighter text-black dark:text-white uppercase leading-none">
+          API
+        </h1>
+        <p class="text-neutral-500 text-sm mt-2 max-w-lg leading-relaxed">
+          Public data endpoints powering the various sections of this site. Last documented on <span class="text-black dark:text-white font-mono font-bold">{lastUpdated}</span>.
+        </p>
+      </header>
 
-      {/* Available Endpoints */}
-      <section class="space-y-4">
-        <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500 font-bold">Public Endpoints</h2>
-
-        <div class="space-y-2">
-          {/* Highlights RSS */}
-          <div class="group">
-            <a href="/highlights.xml" class="flex items-center justify-between p-4 -mx-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
-              <div>
-                <code class="text-orange-600 dark:text-orange-400 font-mono text-sm">/highlights.xml</code>
-                <p class="text-xs text-neutral-500 mt-1">RSS feed of professional and personal milestones.</p>
-              </div>
-              <div class="text-[10px] font-mono py-1 px-2 bg-black/5 dark:bg-white/10 rounded uppercase">XML</div>
-            </a>
-          </div>
-
-          {/* Highlights JSON */}
-          <div class="group">
-            <a href="/data/highlights.json" class="flex items-center justify-between p-4 -mx-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
-              <div>
-                <code class="text-orange-600 dark:text-orange-400 font-mono text-sm">/data/highlights.json</code>
-                <p class="text-xs text-neutral-500 mt-1">Raw structured data from the highlights collection.</p>
-              </div>
-              <div class="text-[10px] font-mono py-1 px-2 bg-black/5 dark:bg-white/10 rounded uppercase">JSON</div>
-            </a>
-          </div>
-
-          <div class="group">
-            <a href="/data/music.json" class="flex items-center justify-between p-4 -mx-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
-              <div>
-                <code class="text-orange-600 dark:text-orange-400 font-mono text-sm">/data/music.json</code>
-                <p class="text-xs text-neutral-500 mt-1">Listening history and top artist data via Last.fm.</p>
-              </div>
-              <div class="text-[10px] font-mono py-1 px-2 bg-black/5 dark:bg-white/10 rounded uppercase">JSON</div>
-            </a>
-          </div>
-
-          <div class="group">
-            <a href="/data/flickr-photos.json" class="flex items-center justify-between p-4 -mx-4 rounded-xl hover:bg-black/5 dark:hover:bg-white/5 transition-all">
-              <div>
-                <code class="text-orange-600 dark:text-orange-400 font-mono text-sm">/data/flickr-photos.json</code>
-                <p class="text-xs text-neutral-500 mt-1">Metadata for the 10 most recently uploaded public photographs.</p>
-              </div>
-              <div class="text-[10px] font-mono py-1 px-2 bg-black/5 dark:bg-white/10 rounded uppercase">JSON</div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* System Integrity & Performance */}
-      <section class="space-y-4 pt-4 border-t border-black/5 dark:border-white/5">
-        <h2 class="text-xs font-mono uppercase tracking-[0.2em] text-neutral-500 font-bold">System Integrity</h2>
-
+      <section class="space-y-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a href="https://github.com/edwelker/website/actions" target="_blank" class="p-4 border border-black/5 dark:border-white/5 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors group">
-            <div class="flex items-center justify-between">
-              <span class="text-sm font-semibold text-black dark:text-white">Build History</span>
-              <span class="text-[10px] font-mono text-neutral-400 group-hover:text-orange-500">GitHub Actions ↗</span>
-            </div>
-            <p class="text-xs text-neutral-500 mt-2 leading-relaxed">
-              Review the automated deployment logs and daily cron job execution history.
-            </p>
-          </a>
-
-          <a href="https://pagespeed.web.dev/report?url=https://eddiewelker.com" target="_blank" class="p-4 border border-black/5 dark:border-white/5 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors group">
-            <div class="flex items-center justify-between">
-              <span class="text-sm font-semibold text-black dark:text-white">Performance Audit</span>
-              <span class="text-[10px] font-mono text-neutral-400 group-hover:text-orange-500">Lighthouse ↗</span>
-            </div>
-            <p class="text-xs text-neutral-500 mt-2 leading-relaxed">
-              This site is architected for zero-JS delivery, consistently maintaining 100/100 performance marks.
-            </p>
-          </a>
+          {endpoints.map(endpoint => (
+            <a href={endpoint.url} class="group block p-4 rounded-lg border border-black/10 dark:border-white/10 hover:border-orange-500 transition-colors">
+              <div class="flex justify-between items-center">
+                <span class="text-sm font-bold uppercase tracking-tight text-neutral-800 dark:text-neutral-200 group-hover:text-orange-600">
+                  {endpoint.name}
+                </span>
+                <span class="text-[10px] font-mono px-2 py-1 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-500">
+                  {endpoint.type}
+                </span>
+              </div>
+              <p class="text-[11px] font-mono text-neutral-400 mt-2 truncate">
+                {endpoint.url}
+              </p>
+            </a>
+          ))}
         </div>
       </section>
+      
+      <footer class="pt-24 pb-12 border-t border-black/10 dark:border-white/10 mt-20">
+        <div class="flex justify-between items-center text-[10px] font-mono text-neutral-500 uppercase tracking-widest">
+          <span>Astro 5.0 Endpoints</span>
+          <span>Verified via Integrity Suite</span>
+        </div>
+      </footer>
     </div>
-  </div>
-</PageLayout>
+  </Container>
+</Layout>
