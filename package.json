@@ -16,7 +16,8 @@
     "clean": "rm -rf dist; rm -rf .astro",
     "test": "vitest run tests/",
     "validate": "node tests/validate-data.cjs",
-    "test:all": "npm run test && npm run validate && astro check"
+    "test:all": "npm run test && npm run validate && npm run test:links && astro check",
+    "test:links": "npx playwright test"
   },
   "engines": {
     "node": ">=20.3.0"
@@ -39,6 +40,7 @@
     "typescript": "^5.9.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
     "@tailwindcss/typography": "^0.5.18",
     "pagefind": "^1.4.0",
     "prettier": "^3.6.2",
