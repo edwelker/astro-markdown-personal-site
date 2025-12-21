@@ -47,7 +47,6 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
 ---
 
 <div class="space-y-16">
-  {/* The History Map - Linking to Local Decade Pages */}
   <section class="animate space-y-6">
     <div class="space-y-2">
       <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">The History Map</h2>
@@ -68,7 +67,6 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
     </div>
   </section>
 
-  {/* Essentials: 10/10 Row */}
   <section class="animate space-y-4">
     <div class="flex items-end justify-between border-b border-black/10 dark:border-white/10 pb-2">
       <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-orange-600 font-bold">The 10/10 Collection ({tens.length})</h2>
@@ -86,7 +84,6 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
     </div>
   </section>
 
-  {/* Director Spotlight */}
   {topDirectorName && (
     <section class="animate space-y-3">
       <div class="flex items-end justify-between border-b border-black/5 dark:border-white/5 pb-1">
@@ -108,12 +105,11 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
     </section>
   )}
 
-  {/* Top Tiers: 9s and 8s */}
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate">
     <section class="space-y-4">
       <div class="flex items-end justify-between border-b border-orange-600/20 pb-2">
         <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-orange-500 font-bold">The 9/10 Tier</h2>
-        <a href={`https://trakt.tv/users/${username}/ratings/all/9/added/asc`} target="_blank" class="text-[9px] font-mono uppercase text-neutral-400 hover:text-orange-600 font-bold">View ↗</a>
+        <a href={`https://trakt.tv/users/${username}/ratings/all/9/added/asc`} target="_blank" class="text-[9px] font-mono uppercase text-neutral-400 hover:text-orange-500 font-bold">View ↗</a>
       </div>
       <div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
         {nines.map((item) => (
@@ -144,31 +140,37 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
     </section>
   </div>
 
-  {/* Stats Grid */}
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate">
     <section class="space-y-4">
       <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">Top Genres</h2>
       <div class="flex flex-wrap gap-2">
-        {genres.map(([name, count]) => (
-          <a href={`https://trakt.tv/users/${username}/history/movies/added?genres=${name}`} target="_blank" class="px-2.5 py-1 rounded-full border border-black/10 dark:border-white/10 text-[10px] font-mono uppercase text-neutral-500 hover:border-orange-500 hover:text-orange-600 transition-colors font-bold">
-            {name} <span class="text-orange-600 ml-1">{count}</span>
-          </a>
-        ))}
+        {genres.map((g) => {
+          const name = g[0] as string;
+          const count = g[1] as number;
+          return (
+            <a href={`https://trakt.tv/users/${username}/history/movies/added?genres=${name.toLowerCase()}`} target="_blank" class="px-2.5 py-1 rounded-full border border-black/10 dark:border-white/10 text-[10px] font-mono uppercase text-neutral-500 hover:border-orange-500 hover:text-orange-600 transition-colors font-bold">
+              {name} <span class="text-orange-600 ml-1">{count}</span>
+            </a>
+          );
+        })}
       </div>
     </section>
     <section class="space-y-4">
       <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">Top Directors</h2>
       <div class="flex flex-wrap gap-2">
-        {directors.map(([name, directorInfo]) => (
-          <a href={`https://www.google.com/search?q=${encodeURIComponent(name)}+director`} target="_blank" class="px-2.5 py-1 rounded-full border border-black/10 dark:border-white/10 text-[10px] font-mono uppercase text-neutral-500 hover:border-orange-500 hover:text-orange-600 transition-colors font-bold">
-            {name} <span class="text-orange-600 ml-1">{(directorInfo as DirectorInfo).count}</span>
-          </a>
-        ))}
+        {directors.map((d) => {
+          const name = d[0] as string;
+          const info = d[1] as DirectorInfo;
+          return (
+            <a href={`https://www.google.com/search?q=${encodeURIComponent(name)}+director`} target="_blank" class="px-2.5 py-1 rounded-full border border-black/10 dark:border-white/10 text-[10px] font-mono uppercase text-neutral-500 hover:border-orange-500 hover:text-orange-600 transition-colors font-bold">
+              {name} <span class="text-orange-600 ml-1">{info.count}</span>
+            </a>
+          );
+        })}
       </div>
     </section>
   </div>
 
-  {/* Lower Quality Ranges */}
   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate">
     <section class="space-y-4">
       <div class="border-b border-black/10 pb-1">
@@ -216,7 +218,6 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
     </section>
   </div>
 
-  {/* Recent Watches Row */}
   <section class="animate space-y-4 pt-4 border-t border-black/10 dark:border-white/10">
     <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">Recent Watches</h2>
     <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-8">
