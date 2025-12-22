@@ -26,8 +26,8 @@ test.describe('Content Integrity', () => {
 
   test('Media teaser count on home', async ({ page }) => {
     await page.goto('/');
-    // Uses specific data-testid to avoid section collisions
-    const mediaItems = page.locator('[data-testid="media-section"] a[target="_blank"]');
+    const mediaSection = page.locator('[data-testid="media-section"]');
+    const mediaItems = mediaSection.locator('a[target="_blank"]');
     await expect(mediaItems).toHaveCount(8);
   });
 });
