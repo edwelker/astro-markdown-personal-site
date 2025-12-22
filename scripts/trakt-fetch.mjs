@@ -1,14 +1,60 @@
 import fs from 'node:fs/promises';
 import { transformTraktData } from './trakt-logic.mjs';
 
-const delay = (ms) => new Promise(res => setTimeout(res, ms));
+const CONCURRENCY_LIMIT = 5; // Total of 10 TMDB requests in flight at once
+
+async function enrichItem(item, cache) {
+  const imdbId = item.movie?.ids?.imdb || item.show?.ids?.imdb;
+  
+  if (imdbId && cache.has(imdbId) && cache.get(imdbId).poster) {
+    return { ...item, ...cache.get(imdbId) };
+  }
+
+  const tmdbId = item.movie?.ids?.tmdb || item.show?.ids?.tmdb;
+  const type = item.movie ? 'movie' : 'tv';
+  let poster = null, director = "Unknown";
+
+  if (tmdbId && process.env.TMDB_API_KEY) {
+    try {
+      const [tRes, cRes] = await Promise.all([
+        fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}?api_key=${process.env.TMDB_API_KEY}`),
+        fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}/credits?api_key=${process.env.TMDB_API_KEY}`)
+      ]);
+      
+      const tData = await tRes.json();
+      const cData = await cRes.json();
+      
+      poster = tData.poster_path ? `https://image.tmdb.org/t/p/w500${tData.poster_path}` : null;
+      director = cData.crew?.find(c => c.job === 'Director')?.name || "Unknown";
+    } catch (err) {
+      console.warn(`⚠️ TMDB failed: ${tmdbId}`);
+    }
+  }
+  return { ...item, poster, director };
+}
+
+async function mapConcurrent(items, limit, fn) {
+  const results = [];
+  const executing = new Set();
+  for (const item of items) {
+    const p = Promise.resolve().then(() => fn(item)).then(res => {
+      executing.delete(p);
+      return res;
+    });
+    executing.add(p);
+    results.push(p);
+    if (executing.size >= limit) {
+      await Promise.race(executing);
+    }
+  }
+  return Promise.all(results);
+}
 
 async function run() {
   const dataPath = 'src/data/trakt.json';
-  const existing = JSON.parse(await fs.readFile(dataPath, 'utf-8').catch(() => '{"allRatings":[]}'));
+  const existingRaw = await fs.readFile(dataPath, 'utf-8').catch(() => '{"allRatings":[]}');
+  const existing = JSON.parse(existingRaw);
   const flatExisting = Array.isArray(existing.allRatings) ? existing.allRatings : (existing.allRatings?.allRatings || []);
-  
-  // Use imdbId for cache key to prevent redundant TMDB hits
   const cache = new Map(flatExisting.map(r => [r.imdbId, r]));
 
   const headers = {
@@ -18,46 +64,16 @@ async function run() {
   };
 
   try {
-    console.log('📡 Fetching 1000 items from Trakt...');
+    console.log('📡 Fetching Trakt data...');
     const [mRes, sRes] = await Promise.all([
       fetch(`https://api.trakt.tv/users/${process.env.TRAKT_USERNAME}/ratings/movies?limit=1000&extended=full`, { headers }),
       fetch(`https://api.trakt.tv/users/${process.env.TRAKT_USERNAME}/ratings/shows?limit=1000&extended=full`, { headers })
     ]);
 
     const raw = [...await mRes.json(), ...await sRes.json()];
-    const enriched = [];
-
-    for (const item of raw) {
-      const imdbId = item.movie?.ids?.imdb || item.show?.ids?.imdb;
-      
-      if (imdbId && cache.has(imdbId) && cache.get(imdbId).poster) {
-        enriched.push({ ...item, ...cache.get(imdbId) });
-        continue;
-      }
-
-      const tmdbId = item.movie?.ids?.tmdb || item.show?.ids?.tmdb;
-      const type = item.movie ? 'movie' : 'tv';
-      let poster = null, director = "Unknown";
-
-      if (tmdbId && process.env.TMDB_API_KEY) {
-        try {
-          await delay(100); // 100ms throttle for TMDB
-          const [tRes, cRes] = await Promise.all([
-            fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}?api_key=${process.env.TMDB_API_KEY}`),
-            fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}/credits?api_key=${process.env.TMDB_API_KEY}`)
-          ]);
-          
-          const tData = await tRes.json();
-          const cData = await cRes.json();
-          
-          poster = tData.poster_path ? `https://image.tmdb.org/t/p/w500${tData.poster_path}` : null;
-          director = cData.crew?.find(c => c.job === 'Director')?.name || "Unknown";
-        } catch (err) {
-          console.warn(`⚠️ TMDB failed: ${tmdbId}`);
-        }
-      }
-      enriched.push({ ...item, poster, director });
-    }
+    
+    console.log(`🚀 Enriching ${raw.length} items (Concurrency: ${CONCURRENCY_LIMIT})...`);
+    const enriched = await mapConcurrent(raw, CONCURRENCY_LIMIT, (item) => enrichItem(item, cache));
 
     const allRatings = transformTraktData(enriched);
     const genreMap = {}, decadeStats = {}, directorMap = {};
@@ -91,7 +107,7 @@ async function run() {
       lastUpdated: new Date().toISOString()
     }, null, 2));
 
-    console.log(`✅ Trakt: Sync complete (${allRatings.length} items).`);
+    console.log(`✅ Trakt: Sync complete.`);
   } catch (e) { 
     console.error('❌ Trakt Failed:', e); 
   }
