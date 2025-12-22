@@ -4,20 +4,19 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import { BLOG } from "@consts";
+import { getPostHref } from "@lib/blog";
 
 const data = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
-  .sort((a, b) => (b.data.pubDate ?? b.data.date).valueOf() - (a.data.pubDate ?? a.data.date).valueOf());
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 type Acc = {
   [year: string]: CollectionEntry<"blog">[];
 };
 
 const posts = data.reduce((acc: Acc, post) => {
-  const year = post.data.date.getFullYear().toString();
-  if (!acc[year]) {
-    acc[year] = [];
-  }
+  const year = post.data.date.getUTCFullYear().toString();
+  if (!acc[year]) acc[year] = [];
   acc[year].push(post);
   return acc;
 }, {});
@@ -30,36 +29,31 @@ const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
     <aside data-pagefind-ignore>
       <div class="space-y-10">
         <div class="space-y-8">
-          {
-            years.map((year) => (
-              <section class="animate space-y-4">
-                <div class="font-semibold text-black dark:text-white border-b border-black/5 dark:border-white/5 pb-2">
-                  {year}
-                </div>
-                <div>
-                  <ul class="not-prose flex flex-col gap-2">
-                    {posts[year].map((post) => (
-                      <li>
-                        <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                          <div class="flex flex-col gap-1">
-                            <Link
-                              href={`/blog/${post.slug}`}
-                              class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2"
-                            >
-                              {post.data.title}
-                            </Link>
-                            <p class="text-sm text-neutral-500">
-                              {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                            </p>
-                          </div>
+          {years.map((year) => (
+            <section class="animate space-y-4">
+              <div class="font-semibold text-black dark:text-white border-b border-black/5 dark:border-white/5 pb-2">
+                {year}
+              </div>
+              <div>
+                <ul class="not-prose flex flex-col gap-2">
+                  {posts[year].map((post) => (
+                    <li>
+                      <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                        <div class="flex flex-col gap-1">
+                          <Link href={getPostHref(post.id, post.data.date)} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">
+                            {post.data.title}
+                          </Link>
+                          <p class="text-sm text-neutral-500">
+                            {post.data.date.getUTCFullYear()}-{String(post.data.date.getUTCMonth() + 1).padStart(2, '0')}-{String(post.data.date.getUTCDate()).padStart(2, '0')}
+                          </p>
                         </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </section>
-            ))
-          }
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+          ))}
         </div>
       </div>
     </aside>

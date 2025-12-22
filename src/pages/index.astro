@@ -5,6 +5,7 @@ import { SITE, HOME, SOCIALS } from "@consts";
 import Link from "@components/Link.astro";
 import { getCollection } from "astro:content";
 import { getAllHighlights } from "@lib/highlights";
+import { getPostHref } from "@lib/blog";
 import Flickr from '@components/Flickr.astro';
 import MusicStats from "@components/MusicStats.astro";
 import CyclingStats from "@components/CyclingStats.astro";
@@ -75,32 +76,16 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
             </Link>
           </div>
           <ul class="not-prose flex flex-col gap-2">
-            {blog.map((post) => {
-              let href = post.slug.match(/^\d{4}\//) ? `/blog/${post.slug}/` : `/blog/${post.data.date.getFullYear()}/${String(post.data.date.getMonth() + 1).padStart(2, '0')}/${String(post.data.date.getDate()).padStart(2, '0')}/${post.slug}/`;
-              return (
-                <li>
-                  <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                    <div class="flex flex-col gap-1">
-                      <Link href={href} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">{post.data.title}</Link>
-                      <p class="text-sm text-neutral-500">{post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</p>
-                    </div>
+            {blog.map((post) => (
+              <li>
+                <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                  <div class="flex flex-col gap-1">
+                    <Link href={getPostHref(post.id, post.data.date)} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">{post.data.title}</Link>
+                    <p class="text-sm text-neutral-500">
+                      {post.data.date.getUTCFullYear()}-{String(post.data.date.getUTCMonth() + 1).padStart(2, '0')}-{String(post.data.date.getUTCDate()).padStart(2, '0')}
+                    </p>
                   </div>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-
-        <section class="animate space-y-4">
-          <div class="pb-4 border-b border-black/10 dark:border-white/10">
-            <h3 class="font-semibold text-black dark:text-white text-lg">Let's Connect</h3>
-          </div>
-          <article><p>Email is best. Else find me below.</p></article>
-          <ul class="not-prose flex flex-wrap gap-2 text-xs">
-            {SOCIALS.map((SOCIAL, index) => (
-              <li class="flex gap-x-2 text-nowrap">
-                <Link href={SOCIAL.HREF} external aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}>{SOCIAL.NAME}</Link>
-                {index < SOCIALS.length - 1 && "/"}
+                </div>
               </li>
             ))}
           </ul>

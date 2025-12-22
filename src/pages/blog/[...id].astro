@@ -8,6 +8,8 @@ import BackToPrevious from "@components/BackToPrevious.astro";
 import PostNavigation from "@components/PostNavigation.astro";
 import TableOfContents from "@components/TableOfContents.astro";
 import Giscus from "@components/Giscus.astro";
+import BlogSchema from "@components/BlogSchema.astro";
+import { getPostHref } from "@lib/blog";
 
 type Post = CollectionEntry<"blog">;
 type Props = { post: Post; prevPost?: Post; nextPost?: Post };
@@ -18,72 +20,48 @@ export async function getStaticPaths() {
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
   return allPosts.map((post, index) => {
-    const prevPost = allPosts[index - 1] || undefined;
-    const nextPost = allPosts[index + 1] || undefined;
+    // Note: in a descending sort, index - 1 is actually the NEWER post
+    // and index + 1 is the OLDER post.
+    const nextPost = allPosts[index - 1] || undefined;
+    const prevPost = allPosts[index + 1] || undefined;
+    
+    const fullPath = getPostHref(post.id, post.data.date);
+    const id = fullPath.replace(/^\/blog\//, "").replace(/\/$/, "");
 
-    // --- LOGIC: Check if slug already has a date structure ---
-    let customPath = post.slug;
-
-    // If the slug DOES NOT start with 4 digits and a slash (e.g. "2025/"), add the date.
-    if (!post.slug.match(/^\d{4}\//)) {
-        const date = new Date(post.data.date);
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-        customPath = `${year}/${month}/${day}/${post.slug}`;
-    }
-    // -------------------------------------------------------
-
-    return {
-      params: { id: customPath },
-      props: {
-        post,
-        prevPost,
-        nextPost
-      } as Props,
-    };
+    return { params: { id }, props: { post, prevPost, nextPost } as Props };
   });
 }
 
 const { post, prevPost, nextPost } = Astro.props;
 const { Content, headings } = await render(post);
+const seoDescription = post.data.description || 
+  post.body?.replace(/[#*`\[\]]/g, '').trim().slice(0, 155) + '...';
+
+// Resolve navigation HREFs using the shared utility
+const prevHref = prevPost ? getPostHref(prevPost.id, prevPost.data.date) : undefined;
+const nextHref = nextPost ? getPostHref(nextPost.id, nextPost.data.date) : undefined;
 ---
 
-<Layout title={post.data.title} description={post.data.description ?? ''}>
+<Layout title={post.data.title} description={seoDescription}>
+  <BlogSchema post={post} slot="head" />
   <Container>
     <main class="prose dark:prose-invert mx-auto py-8">
-
-        <h1 class="text-3xl font-bold">{post.data.title}</h1>
-
-        {post.data.featuredImage && (
-            <figure class="my-6">
-                <img
-                    src={post.data.featuredImage}
-                    alt={post.data.featuredImageAlt || `Featured image for ${post.data.title}`}
-                    loading="lazy"
-                    class="w-full h-auto rounded-lg shadow-lg"
-                />
-            </figure>
-        )}
-
-        <p class="text-sm text-gray-500">
-            Published: <FormattedDate date={post.data.date} />
-            &bull; Read time: {readingTime(post.body ?? "")} min
-        </p>
-
+      <h1 class="text-3xl font-bold">{post.data.title}</h1>
+      <div class="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 mb-8">
+        <FormattedDate date={post.data.date} />
+        <span>&bull;</span>
+        <span>{readingTime(post.body ?? "")} min read</span>
+      </div>
       <TableOfContents headings={headings} />
-
       <Content />
-
-      <PostNavigation
-        prevPost={prevPost}
-        nextPost={nextPost}
-      />
-
-      <BackToPrevious href="/blog" />
-
-      <Giscus />
-
+      <div class="mt-24">
+        <PostNavigation 
+          prevPost={prevPost ? { ...prevPost, href: prevHref } : undefined} 
+          nextPost={nextPost ? { ...nextPost, href: nextHref } : undefined} 
+        />
+      </div>
+      <div class="mt-8"><BackToPrevious href="/blog">Back to blog</BackToPrevious></div>
+      <div class="mt-24"><Giscus /></div>
     </main>
   </Container>
 </Layout>
