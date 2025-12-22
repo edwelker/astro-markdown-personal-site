@@ -4,18 +4,13 @@ export default defineConfig({
   testDir: './tests',
   testMatch: '**/*.spec.mjs',
   fullyParallel: true,
-  workers: '100%',
+  forbidOnly: !!process.env.CI,
+  retries: 1,
+  workers: '50%',
   reporter: 'line',
   use: {
     baseURL: 'http://localhost:4321',
     trace: 'on-first-retry',
-  },
-  webServer: {
-    command: 'npm run preview',
-    url: 'http://localhost:4321',
-    reuseExistingServer: true,
-    stdout: 'ignore',
-    stderr: 'pipe',
   },
   projects: [
     {
@@ -23,4 +18,10 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
   ],
+  webServer: {
+    command: 'npm run dev',
+    url: 'http://localhost:4321',
+    reuseExistingServer: !process.env.CI,
+    timeout: 120 * 1000,
+  },
 });

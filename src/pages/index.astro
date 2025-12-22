@@ -32,7 +32,7 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
           </article>
         </section>
 
-        <section class="animate space-y-6">
+        <section class="animate space-y-6" data-testid="highlights-section">
           <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
             <h3 class="font-semibold text-black dark:text-white text-lg">Highlights</h3>
             <Link href="/highlights" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
@@ -63,12 +63,12 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
           </ul>
         </section>
 
-        <section><Flickr /></section>
-        <section class="animate"><MusicStats /></section>
-        <section class="animate"><CyclingStats /></section>
-        <section class="animate"><MediaTeaser /></section>
+        <section data-testid="flickr-section"><Flickr /></section>
+        <section class="animate" data-testid="music-section"><MusicStats /></section>
+        <section class="animate" data-testid="cycling-section"><CyclingStats /></section>
+        <section class="animate" data-testid="media-section"><MediaTeaser /></section>
 
-        <section class="animate space-y-6">
+        <section class="animate space-y-6" data-testid="posts-section">
           <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
             <h3 class="font-semibold text-black dark:text-white text-lg">Posts</h3>
             <Link href="/blog/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
