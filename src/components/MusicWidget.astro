@@ -1,0 +1,23 @@
+---
+import musicData from "../data/music.json";
+const { week = { albums: [] } } = musicData || {};
+const topAlbum = week.albums?.[0];
+---
+<div class="space-y-4">
+  <div class="flex justify-between items-center">
+    <h2 class="font-bold text-black dark:text-white">Music Rotation</h2>
+    <a href="/music" class="text-xs text-neutral-500 hover:text-black dark:hover:text-white transition-colors no-underline">View all stats ↗</a>
+  </div>
+  {topAlbum ? (
+    <div class="flex gap-4 items-center bg-neutral-50 dark:bg-neutral-900 p-3 rounded-md border border-neutral-200 dark:border-neutral-800">
+      <img src={topAlbum.image} alt={topAlbum.name} class="w-16 h-16 rounded shadow-sm" />
+      <div class="min-w-0">
+        <div class="text-xs font-bold text-neutral-500 uppercase tracking-tighter mb-1">Top This Fortnight</div>
+        <div class="text-sm font-bold text-black dark:text-white truncate">{topAlbum.name}</div>
+        <div class="text-xs text-neutral-500 truncate">{topAlbum.artist}</div>
+      </div>
+    </div>
+  ) : (
+    <p class="text-sm text-neutral-500 italic">No recent data available.</p>
+  )}
+</div>

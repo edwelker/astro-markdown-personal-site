@@ -8,21 +8,17 @@ import musicData from "../data/music.json";
 
 const { 
   user = { scrobbles: 0 }, 
-  week = { albums: [], artists: [], tracks: [] }, // Label as 2 Weeks
-  month = { albums: [], artists: [], tracks: [] }, // Label as 3 Months
+  week = { albums: [], artists: [], tracks: [] },
+  month = { albums: [], artists: [], tracks: [] },
   year = { albums: [], artists: [], tracks: [] }, 
   allTime = { albums: [], artists: [], tracks: [] } 
 } = musicData || {};
-
-const title = "Listening Habits";
-const description = "A detailed look at my music rotation.";
 ---
 
-<Layout title={title} description={description}>
+<Layout title="Listening Habits" description="A detailed look at my music rotation.">
   <Container>
     <div class="animate">
       <BackToPrevious href="/" />
-
       <div class="h-24 md:h-32 w-full block"></div>
 
       <header class="mb-12 flex justify-between items-end">
@@ -38,7 +34,6 @@ const description = "A detailed look at my music rotation.";
       </header>
 
       <div class="space-y-20 pb-20">
-
         <section class="space-y-8">
           <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">Last 2 Weeks</h2>
           <div class="space-y-12">
@@ -88,7 +83,6 @@ const description = "A detailed look at my music rotation.";
              View full profile on Last.fm ↗
            </a>
         </div>
-
       </div>
     </div>
   </Container>
