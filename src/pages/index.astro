@@ -9,6 +9,7 @@ import Flickr from '@components/Flickr.astro';
 import MusicStats from "@components/MusicStats.astro";
 import CyclingStats from "@components/CyclingStats.astro";
 import MediaTeaser from "@components/MediaTeaser.astro";
+import HighlightSchema from "@components/HighlightSchema.astro";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -19,13 +20,14 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
 ---
 
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <HighlightSchema items={recentHighlights} slot="head" />
   <Container>
     <aside data-pagefind-ignore>
       <h1 class="font-extrabold text-3xl text-black dark:text-white">Eddie Welker</h1>
       <div class="space-y-12 mt-4">
         <section>
           <article class="space-y-4">
-            <p>Programmer, Cyclist, Cellist, Photographer, Cook, Woodworker, MD/NY, USA.</p>
+            <p>Programmer, Cyclist, Cellist, Photographer, Cook, Woodworker, Laurel, MD, USA.</p>
           </article>
         </section>
 
@@ -61,11 +63,8 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
         </section>
 
         <section><Flickr /></section>
-
         <section class="animate"><MusicStats /></section>
-
         <section class="animate"><CyclingStats /></section>
-
         <section class="animate"><MediaTeaser /></section>
 
         <section class="animate space-y-6">

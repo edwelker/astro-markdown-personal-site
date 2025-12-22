@@ -3,39 +3,28 @@ import PageLayout from "@layouts/PageLayout.astro";
 import Link from "@components/Link.astro";
 import { HIGHLIGHTS } from "@consts";
 import { getAllHighlights } from "@lib/highlights";
+import HighlightSchema from "@components/HighlightSchema.astro";
 
 const highlights = await getAllHighlights();
 ---
 
 <PageLayout title={HIGHLIGHTS.TITLE} description={HIGHLIGHTS.DESCRIPTION}>
+  <HighlightSchema items={highlights} slot="head" />
   <ul class="flex flex-col gap-2 list-none p-0 not-prose">
     {highlights.map((item) => (
       <li class="relative">
         <div class="group p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
           <div class="flex flex-col gap-1">
-
-            {/* Title Row */}
             <div class="flex items-baseline gap-2">
-              <Link
-                href={item.url}
-                external={item.url.startsWith("http")}
-                aria-label={item.title}
-                class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2"
-              >
+              <Link href={item.url} external={item.url.startsWith("http")} aria-label={item.title} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">
                 {item.title}
               </Link>
-
               {item.url.startsWith("http") && <span class="text-xs text-neutral-400">↗</span>}
             </div>
-
-            {/* Description and Thought */}
             <p class="text-sm text-neutral-600 dark:text-neutral-400">
               {item.description}
-
               {item.thought && (
-                <span class="text-neutral-500">
-                   — <span class="italic" set:html={item.thought} />
-                </span>
+                <span class="text-neutral-500"> — <span class="italic" set:html={item.thought} /></span>
               )}
             </p>
           </div>

@@ -24,14 +24,13 @@ const { title, description, image } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
-    {/* Pass the image prop down to Head */}
     <Head title={`${SITE.TITLE}: ${title}`} description={description} image={image} />
-
-    {/* 3. Add Analytics here */}
     <Analytics />
+    
+    <slot name="head" />
 
-<Schema
-    item={{
+    <Schema
+      item={{
         "@context": "https://schema.org",
         "@type": "Person",
         "@id": "https://eddiewelker.com/#person",
@@ -42,60 +41,59 @@ const { title, description, image } = Astro.props;
         image: "https://github.com/edwelker.png",
         jobTitle: "Principal Software Engineer",
         worksFor: {
-            "@type": "Organization",
-            name: "Freelance"
+          "@type": "Organization",
+          name: "Freelance"
         },
         address: {
-            "@type": "PostalAddress",
-            addressLocality: "North Laurel",
-            addressRegion: "MD",
-            addressCountry: "US",
-            postalCode: "20723"
+          "@type": "PostalAddress",
+          addressLocality: "North Laurel",
+          addressRegion: "MD",
+          addressCountry: "US",
+          postalCode: "20723"
         },
         sameAs: [
-            "https://github.com/edwelker",
-            "https://www.linkedin.com/in/edwardwelker/",
-            "https://instagram.com/edwelker",
-            "https://www.strava.com/athletes/43444098",
-            "https://trakt.tv/users/edwelker",
-            "https://www.last.fm/user/edwelker",
-            "https://www.flickr.com/photos/ed_welker/",
-            "https://open.spotify.com/user/edwelker"
+          "https://github.com/edwelker",
+          "https://www.linkedin.com/in/edwardwelker/",
+          "https://instagram.com/edwelker",
+          "https://www.strava.com/athletes/43444098",
+          "https://trakt.tv/users/edwelker",
+          "https://www.last.fm/user/edwelker",
+          "https://www.flickr.com/photos/ed_welker/",
+          "https://open.spotify.com/user/edwelker"
         ],
         knowsAbout: [
-            {
-                "@type": "Thing",
-                name: "Software Engineering",
-                sameAs: "https://en.wikipedia.org/wiki/Software_engineering"
-            },
-            {
-                "@type": "Thing",
-                name: "Systems Architecture",
-                sameAs: "https://en.wikipedia.org/wiki/Systems_architecture"
-            },
-            {
-                "@type": "Thing",
-                name: "Cloud Computing",
-                sameAs: "https://en.wikipedia.org/wiki/Cloud_computing"
-            },
-            {
-                "@type": "Thing",
-                name: "Python",
-                sameAs: "https://en.wikipedia.org/wiki/Python_(programming_language)"
-            },
-            {
-                "@type": "Thing",
-                name: "Django",
-                sameAs: "https://en.wikipedia.org/wiki/Django_(web_framework)"
-            },
-            "DevOps",
-            "Cycling",
-            "Bikepacking",
-            "Photography"
+          {
+            "@type": "Thing",
+            name: "Software Engineering",
+            sameAs: "https://en.wikipedia.org/wiki/Software_engineering"
+          },
+          {
+            "@type": "Thing",
+            name: "Systems Architecture",
+            sameAs: "https://en.wikipedia.org/wiki/Systems_architecture"
+          },
+          {
+            "@type": "Thing",
+            name: "Cloud Computing",
+            sameAs: "https://en.wikipedia.org/wiki/Cloud_computing"
+          },
+          {
+            "@type": "Thing",
+            name: "Python",
+            sameAs: "https://en.wikipedia.org/wiki/Python_(programming_language)"
+          },
+          {
+            "@type": "Thing",
+            name: "Django",
+            sameAs: "https://en.wikipedia.org/wiki/Django_(web_framework)"
+          },
+          "DevOps",
+          "Cycling",
+          "Bikepacking",
+          "Photography"
         ]
-    }}
-/>
-
+      }}
+    />
   </head>
   <body>
     <noscript>
