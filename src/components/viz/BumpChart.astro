@@ -1,0 +1,48 @@
+---
+interface Props {
+  data: { date: string; ranks: Record<string, number> }[];
+  keys: string[];
+}
+
+const { data, keys } = Astro.props;
+
+const H = 300;
+const W = 800;
+const PAD_X = 50;
+const PAD_Y = 20;
+
+const xStep = (W - (PAD_X * 2)) / (data.length - 1);
+const yStep = (H - (PAD_Y * 2)) / (keys.length + 2);
+const colors = ['#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4'];
+
+const lines = keys.map((artist, kIdx) => {
+  const points = data.map((d, i) => {
+    const rank = d.ranks[artist] || (keys.length + 5);
+    const x = PAD_X + (i * xStep);
+    const y = PAD_Y + (rank * yStep);
+    return `${x},${y}`;
+  });
+  return { color: colors[kIdx % colors.length], d: points.join(' ') };
+});
+---
+
+<svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto bg-neutral-50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800">
+  {data.map((_, i) => (
+    <line x1={PAD_X + (i * xStep)} y1={PAD_Y} x2={PAD_X + (i * xStep)} y2={H - PAD_Y} stroke="currentColor" class="text-neutral-200 dark:text-neutral-800" stroke-dasharray="4" />
+  ))}
+  {lines.map(l => (
+    <polyline fill="none" stroke={l.color} stroke-width="3" points={l.d} stroke-linejoin="round" stroke-linecap="round" />
+  ))}
+  {keys.map((artist, kIdx) => (
+    data.map((d, i) => {
+       const rank = d.ranks[artist];
+       if(!rank || rank > keys.length) return null;
+       const x = PAD_X + (i * xStep);
+       const y = PAD_Y + (rank * yStep);
+       return <circle cx={x} cy={y} r="4" fill={colors[kIdx % colors.length]} stroke="white" stroke-width="2" />
+    })
+  ))}
+  {data.map((d, i) => (
+    <text x={PAD_X + (i * xStep)} y={H - 5} text-anchor="middle" class="text-[10px] fill-neutral-400 font-mono">{d.date}</text>
+  ))}
+</svg>

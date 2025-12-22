@@ -2,10 +2,13 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import BackToPrevious from "@components/BackToPrevious.astro";
+import DensityChart from "@components/viz/DensityChart.astro";
+
+import historyRaw from "../data/music_history.json";
 import musicData from "../data/music.json";
 
+// Standard Data
 type Item = { name: string; url: string; image: string; artist?: string; plays?: string | number };
-
 const { 
   user = { scrobbles: 0 }, 
   week = { albums: [], artists: [], tracks: [] }, 
@@ -34,6 +37,19 @@ const description = "A detailed look at my music rotation.";
 
       <div class="space-y-32 pb-20">
 
+        {/* --- NEW VIZ SECTION --- */}
+        <section class="border-b border-neutral-200 dark:border-neutral-800 pb-16">
+            <h2 class="font-bold text-xl mb-2">The "True Spin" Index</h2>
+            <p class="mb-8 text-sm text-neutral-600 dark:text-neutral-400 max-w-prose">
+                Normalizing listen counts by album length. 
+                <span class="font-semibold text-black dark:text-white">High Density</span> means I listen to the full album. 
+                <span class="font-semibold text-black dark:text-white">Low Density</span> means I likely only listen to one or two singles.
+            </p>
+            
+            <DensityChart history={historyRaw} />
+        </section>
+
+
         {/* --- 7 DAY --- */}
         <section class="space-y-6">
           <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">
@@ -58,8 +74,8 @@ const description = "A detailed look at my music rotation.";
                 ))}
             </div>
           </div>
-
-          <div class="grid md:grid-cols-2 gap-8 md:gap-12 pt-4">
+          
+           <div class="grid md:grid-cols-2 gap-8 md:gap-12 pt-4">
             <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
               <ul class="space-y-1">

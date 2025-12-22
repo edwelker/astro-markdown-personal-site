@@ -1,0 +1,39 @@
+---
+interface Props {
+  lines: { name: string; points: number[] }[];
+}
+const { lines } = Astro.props;
+
+const H = 300;
+const W = 600;
+const MAX_Y = Math.max(...lines.flatMap(l => l.points));
+const MAX_X = 90; 
+
+const colors = ['#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231'];
+
+const svgLines = lines.map((l, i) => {
+  const poly = l.points.map((val, day) => {
+     const x = (day / MAX_X) * W;
+     const y = H - ((val / MAX_Y) * H);
+     return `${x},${y}`;
+  }).join(' ');
+  return { color: colors[i % colors.length], d: poly, name: l.name };
+});
+---
+<div class="relative">
+    <svg viewBox={`0 0 ${W} ${H}`} class="w-full h-auto overflow-visible bg-neutral-50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800">
+      <line x1="0" y1={H} x2={W} y2={H} stroke="currentColor" class="text-neutral-300" />
+      <line x1="0" y1="0" x2="0" y2={H} stroke="currentColor" class="text-neutral-300" />
+      {svgLines.map(l => (
+        <polyline fill="none" stroke={l.color} stroke-width="2" points={l.d} />
+      ))}
+    </svg>
+    <div class="flex flex-wrap gap-4 mt-2 justify-center">
+      {svgLines.map(l => (
+        <div class="flex items-center gap-1 text-xs">
+          <span class="w-2 h-2 rounded-full" style={`background-color:${l.color}`}></span>
+          <span class="text-neutral-500">{l.name}</span>
+        </div>
+      ))}
+    </div>
+</div>

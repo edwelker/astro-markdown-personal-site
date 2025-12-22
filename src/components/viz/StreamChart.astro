@@ -1,0 +1,50 @@
+---
+interface Props {
+  data: { date: string; values: number[] }[];
+  keys: string[];
+}
+const { data, keys } = Astro.props;
+
+const H = 300;
+const W = 800;
+const colors = ['#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6'];
+
+const maxStack = Math.max(...data.map(d => d.values.reduce((a,b)=>a+b, 0)));
+const X_STEP = W / (data.length - 1);
+
+let currentFloor = new Array(data.length).fill(0);
+
+const layers = keys.map((key, kIdx) => {
+  const ceiling = data.map((d, i) => {
+     const val = d.values[kIdx];
+     const h = (val / maxStack) * (H * 0.9); 
+     return currentFloor[i] + h;
+  });
+  
+  const floorPoints = currentFloor.map((y, i) => `${i * X_STEP},${H - y}`).join(' ');
+  const ceilingPoints = ceiling.map((y, i) => `${i * X_STEP},${H - y}`).reverse().join(' ');
+  
+  currentFloor = ceiling;
+
+  return {
+     d: `${floorPoints} ${ceilingPoints}`,
+     color: colors[kIdx % colors.length],
+     name: key
+  };
+});
+---
+<div class="relative">
+  <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" class="w-full h-64 bg-neutral-50 dark:bg-neutral-900/50 rounded-lg border border-neutral-200 dark:border-neutral-800">
+    {layers.map(l => (
+      <polygon points={l.d} fill={l.color} opacity="0.8" />
+    ))}
+  </svg>
+  <div class="flex flex-wrap gap-2 mt-2 justify-center">
+      {layers.slice(0, 6).map(l => (
+        <div class="flex items-center gap-1 text-[10px]">
+          <span class="w-2 h-2 rounded-full" style={`background-color:${l.color}`}></span>
+          <span class="text-neutral-500">{l.name}</span>
+        </div>
+      ))}
+  </div>
+</div>

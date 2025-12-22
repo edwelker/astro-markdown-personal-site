@@ -1,0 +1,244 @@
+---
+import { scaleSqrt, max, min } from 'd3';
+
+interface Props {
+  history: { a: string; b: string; n: string; d: number }[];
+}
+const { history } = Astro.props;
+
+// --- 1. Calculate Time Frame ---
+// Find earliest and latest timestamps to give context
+const timestamps = history.map(h => h.d);
+const minDate = new Date(Math.min(...timestamps) * 1000);
+const maxDate = new Date(Math.max(...timestamps) * 1000);
+const dateRange = `${minDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })} - ${maxDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`;
+
+// --- 2. ETL ---
+const albumMap = new Map();
+history.forEach(t => {
+  const key = `${t.a}||${t.b}`;
+  if (!albumMap.has(key)) albumMap.set(key, { artist: t.a, album: t.b, scrobbles: 0, tracks: new Set() });
+  const entry = albumMap.get(key);
+  entry.scrobbles += 1;
+  entry.tracks.add(t.n);
+});
+
+const rawData = Array.from(albumMap.values())
+  .map(a => ({
+    name: a.album,
+    artist: a.artist,
+    trackCount: a.tracks.size,
+    totalPlays: a.scrobbles,
+    density: a.scrobbles / a.tracks.size,
+    score: (a.scrobbles / a.tracks.size) * Math.log(a.scrobbles)
+  }))
+  .filter(a => a.trackCount >= 5 && a.totalPlays > 20)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 150);
+
+const chartData = JSON.stringify(rawData);
+---
+
+<div class="space-y-12">
+  
+  {/* Description Header with Date Range */}
+  <div class="max-w-prose">
+    <div class="flex items-baseline justify-between mb-3">
+        <h3 class="font-bold text-xl text-black dark:text-white">The "True Spin" Index</h3>
+        <span class="font-mono text-xs text-neutral-500 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">{dateRange}</span>
+    </div>
+    <p class="text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+       Standard play counts are biased toward long albums. This chart normalizes your listening history by dividing total plays by the unique track count.
+       <span class="text-black dark:text-white font-medium"> High Density</span> albums are looped front-to-back. 
+       <span class="text-black dark:text-white font-medium"> Low Density</span> albums (like Classical or Soundtracks) often have high play counts but low completion rates.
+    </p>
+  </div>
+
+  {/* The Chart */}
+  <div 
+    id="density-chart-container" 
+    data-chart={chartData}
+    class="relative w-full aspect-[16/9] bg-neutral-50 dark:bg-neutral-900/50 rounded-xl border border-neutral-200 dark:border-neutral-800 shadow-sm"
+  >
+    <div id="viz-tooltip" class="absolute hidden pointer-events-none z-50 bg-black/90 text-white text-[10px] p-2.5 rounded-lg shadow-xl border border-white/10 top-0 left-0 transition-transform duration-75 max-w-[200px]">
+        <div class="font-bold leading-tight mb-0.5" id="tt-name"></div>
+        <div class="text-neutral-400 truncate" id="tt-artist"></div>
+        <div class="mt-2 pt-2 border-t border-white/10 font-mono text-neutral-300" id="tt-stats"></div>
+    </div>
+  </div>
+
+  {/* The Lists */}
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+      
+      {/* List A: High Density */}
+      <div>
+         <div class="flex items-baseline justify-between border-b-2 border-black dark:border-white pb-2 mb-4">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-black dark:text-white">Highest Density</h4>
+            <span class="text-[10px] font-mono text-neutral-500 uppercase">The Loopers</span>
+         </div>
+         <ul class="space-y-3">
+             {rawData.slice(0, 10).map((d, i) => (
+                 <li class="grid grid-cols-[auto_1fr_auto] gap-x-3 text-sm items-baseline group">
+                    <span class="font-mono text-neutral-300 text-xs w-3 text-right">{i + 1}</span>
+                    <div class="min-w-0">
+                        <div class="font-medium text-neutral-700 dark:text-neutral-200 leading-tight group-hover:text-black dark:group-hover:text-white transition-colors">
+                            {d.name}
+                        </div>
+                        <div class="text-xs text-neutral-500 truncate mt-0.5">{d.artist}</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-mono text-black dark:text-white font-bold">{d.density.toFixed(1)} <span class="text-[9px] font-normal text-neutral-400">spins/trk</span></div>
+                        <div class="text-[9px] text-neutral-400">{d.trackCount} trks</div>
+                    </div>
+                 </li>
+             ))}
+         </ul>
+      </div>
+
+      {/* List B: Low Density */}
+      <div>
+         <div class="flex items-baseline justify-between border-b-2 border-black dark:border-white pb-2 mb-4">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-black dark:text-white">Low Density</h4>
+            <span class="text-[10px] font-mono text-neutral-500 uppercase">The Epics</span>
+         </div>
+         <ul class="space-y-3">
+             {rawData.sort((a,b) => a.density - b.density).slice(0, 10).map((d,i) => (
+                 <li class="grid grid-cols-[auto_1fr_auto] gap-x-3 text-sm items-baseline group">
+                    <span class="font-mono text-neutral-300 text-xs w-3 text-right">{i + 1}</span>
+                    <div class="min-w-0">
+                        <div class="font-medium text-neutral-700 dark:text-neutral-200 leading-tight group-hover:text-black dark:group-hover:text-white transition-colors">
+                            {d.name}
+                        </div>
+                        <div class="text-xs text-neutral-500 truncate mt-0.5">{d.artist}</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-mono text-neutral-500">{d.density.toFixed(1)} <span class="text-[9px] font-normal text-neutral-400">spins/trk</span></div>
+                        <div class="text-[9px] text-neutral-400">{d.trackCount} trks</div>
+                    </div>
+                 </li>
+             ))}
+         </ul>
+      </div>
+  </div>
+</div>
+
+<script>
+  import * as d3 from "d3";
+
+  const container = document.getElementById("density-chart-container");
+  const data = JSON.parse(container.dataset.chart);
+  const tooltip = document.getElementById("viz-tooltip");
+  
+  const { width, height } = container.getBoundingClientRect();
+  const margin = { top: 20, right: 30, bottom: 45, left: 50 };
+  const w = width - margin.left - margin.right;
+  const h = height - margin.top - margin.bottom;
+
+  d3.select(container).selectAll("svg").remove();
+  const svg = d3.select(container)
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  // --- ZOOMED SCALES ---
+  // 1. Find min/max of dataset
+  const minTracks = d3.min(data, d => d.trackCount) || 5;
+  const maxTracks = d3.max(data, d => d.trackCount) || 20;
+  const minDensity = d3.min(data, d => d.density) || 0;
+  const maxDensity = d3.max(data, d => d.density) || 5;
+
+  // 2. Set Domain start slightly below min to add "padding" but avoid 0
+  const xDomainStart = Math.max(0, minTracks - 2); 
+  const yDomainStart = Math.max(0, minDensity - 0.5);
+
+  const x = d3.scaleSqrt().domain([xDomainStart, maxTracks]).range([0, w]).nice();
+  const y = d3.scaleSqrt().domain([yDomainStart, maxDensity]).range([h, 0]).nice();
+  
+  const r = d3.scaleSqrt()
+    .domain([0, d3.max(data, d => d.totalPlays) || 100])
+    .range([3, 12]);
+
+  const color = d3.scaleOrdinal(d3.schemeTableau10);
+
+  // Axes
+  svg.append("g")
+    .attr("transform", `translate(0,${h})`)
+    .call(d3.axisBottom(x).ticks(6).tickSize(-h).tickPadding(12))
+    .attr("class", "text-neutral-400 font-mono text-[10px]")
+    .call(g => g.select(".domain").remove())
+    .call(g => g.selectAll(".tick line").attr("stroke-opacity", 0.1).attr("stroke", "currentColor"));
+
+  svg.append("g")
+    .call(d3.axisLeft(y).ticks(5).tickSize(-w).tickPadding(12))
+    .attr("class", "text-neutral-400 font-mono text-[10px]")
+    .call(g => g.select(".domain").remove())
+    .call(g => g.selectAll(".tick line").attr("stroke-opacity", 0.1).attr("stroke", "currentColor"));
+
+  // Axis Labels
+  svg.append("text")
+    .attr("x", w / 2)
+    .attr("y", h + 35)
+    .attr("text-anchor", "middle")
+    .attr("class", "fill-neutral-500 text-[9px] font-bold tracking-widest uppercase")
+    .text("Album Length (Unique Tracks)");
+
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", -35)
+    .attr("x", -h / 2)
+    .attr("text-anchor", "middle")
+    .attr("class", "fill-neutral-500 text-[9px] font-bold tracking-widest uppercase")
+    .text("Estimated Full Spins");
+
+  const highlight = svg.append("circle")
+    .attr("fill", "none")
+    .attr("stroke", "currentColor")
+    .attr("stroke-width", 2)
+    .attr("opacity", 0)
+    .attr("class", "text-black dark:text-white");
+
+  svg.append("g")
+    .selectAll("circle")
+    .data(data)
+    .join("circle")
+    .attr("cx", d => x(d.trackCount))
+    .attr("cy", d => y(d.density))
+    .attr("r", d => r(d.totalPlays))
+    .attr("fill", (d, i) => color(i % 10))
+    .attr("opacity", 0.7)
+    .attr("stroke", "white")
+    .attr("stroke-width", 0.5)
+    .attr("class", "dark:stroke-black");
+
+  // Interaction
+  const delaunay = d3.Delaunay.from(data, d => x(d.trackCount), d => y(d.density));
+  
+  svg.append("rect")
+    .attr("width", w)
+    .attr("height", h)
+    .attr("fill", "transparent")
+    .on("mousemove", (event) => {
+      const [mx, my] = d3.pointer(event);
+      const index = delaunay.find(mx, my);
+      if (index === null) return;
+      const d = data[index];
+
+      highlight
+        .attr("cx", x(d.trackCount))
+        .attr("cy", y(d.density))
+        .attr("r", r(d.totalPlays) + 4)
+        .attr("opacity", 1);
+      
+      tooltip.style.display = "block";
+      tooltip.style.transform = `translate(${mx + margin.left + 20}px, ${my + margin.top}px)`;
+      document.getElementById("tt-name").textContent = d.name;
+      document.getElementById("tt-artist").textContent = d.artist;
+      document.getElementById("tt-stats").textContent = `${d.trackCount} trks | ${d.density.toFixed(2)} spins/trk`;
+    })
+    .on("mouseleave", () => {
+      highlight.attr("opacity", 0);
+      tooltip.style.display = "none";
+    });
+</script>
