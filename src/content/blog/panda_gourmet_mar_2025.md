@@ -1,6 +1,7 @@
 ---
 title: 'Dishes of Panda Gourmet'
 date: 2025-03-30T12:53:35-05:00
+slug: 2025/03/30/panda_gourmet_mar_2025
 tags: ["chinese", "cooking", "restaurants", "dc"]
 description: 'My notes and descriptions of dishes from Washington''s Panda Gourmet'
 ---
