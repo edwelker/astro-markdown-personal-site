@@ -1,0 +1,26 @@
+---
+interface Props {
+  title: string;
+  items: any[];
+  limit: number;
+  showArtist?: boolean;
+}
+
+const { title, items = [], limit, showArtist = false } = Astro.props;
+---
+<div>
+  <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-3">{title}</h3>
+  <ul class="space-y-1">
+    {items.slice(0, limit).map((item: any, i: number) => (
+      <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0 break-inside-avoid">
+          <div class="flex items-center gap-2 truncate min-w-0">
+            <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
+            <div class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">
+              <a href={item.url} target="_blank" class="no-underline">{item.name}</a>{showArtist && <span class="text-xs text-neutral-400 ml-1">- {item.artist}</span>}
+            </div>
+          </div>
+          <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2 tabular-nums">{item.plays}</span>
+      </li>
+    ))}
+  </ul>
+</div>
