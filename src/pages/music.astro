@@ -42,8 +42,8 @@ const description = "A detailed look at my music rotation.";
 
           <div>
             <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Albums</h3>
-            <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
-               {(week.albums || []).map((album: Item) => (
+            <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+               {(week.albums || []).slice(0, 5).map((album: Item) => (
                   <a href={album.url} target="_blank" class="group block space-y-1 relative" title={`${album.name} by ${album.artist}`}>
                     {album.image ? (
                         <img src={album.image} alt={album.name} class="rounded-sm w-full transition-transform duration-300 border border-neutral-200 dark:border-neutral-800" />
@@ -63,7 +63,7 @@ const description = "A detailed look at my music rotation.";
             <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
               <ul class="space-y-1">
-                {(week.artists || []).map((artist: Item, i: number) => (
+                {(week.artists || []).slice(0, 5).map((artist: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
                       <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
@@ -79,7 +79,7 @@ const description = "A detailed look at my music rotation.";
              <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Songs</h3>
               <ul class="space-y-1">
-                {(week.tracks || []).map((track: Item, i: number) => (
+                {(week.tracks || []).slice(0, 5).map((track: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
                       <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
@@ -104,8 +104,8 @@ const description = "A detailed look at my music rotation.";
 
           <div>
             <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Albums</h3>
-            <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
-               {(month.albums || []).map((album: Item) => (
+            <div class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+               {(month.albums || []).slice(0, 5).map((album: Item) => (
                   <a href={album.url} target="_blank" class="group block space-y-1 relative" title={`${album.name} by ${album.artist}`}>
                     {album.image ? (
                         <img src={album.image} alt={album.name} class="rounded-sm w-full transition-transform duration-300 border border-neutral-200 dark:border-neutral-800" />
@@ -125,7 +125,7 @@ const description = "A detailed look at my music rotation.";
             <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
               <ul class="space-y-1">
-                {(month.artists || []).map((artist: Item, i: number) => (
+                {(month.artists || []).slice(0, 5).map((artist: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
                       <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
@@ -141,7 +141,7 @@ const description = "A detailed look at my music rotation.";
              <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Songs</h3>
               <ul class="space-y-1">
-                {(month.tracks || []).map((track: Item, i: number) => (
+                {(month.tracks || []).slice(0, 5).map((track: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
                       <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
