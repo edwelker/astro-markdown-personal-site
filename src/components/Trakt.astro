@@ -34,8 +34,16 @@ const {
 const tens = allRatings.filter(r => r.rating === 10);
 const nines = allRatings.filter(r => r.rating === 9);
 const eights = allRatings.filter(r => r.rating === 8);
-const midQuality = allRatings.filter(r => r.rating >= 6 && r.rating < 8);
-const lowQuality = allRatings.filter(r => r.rating < 6);
+
+// Reversed: Show oldest items first to avoid visual duplication with "Recent Watches"
+const midQuality = allRatings
+  .filter(r => r.rating >= 6 && r.rating < 8)
+  .reverse();
+
+const lowQuality = allRatings
+  .filter(r => r.rating < 6)
+  .reverse();
+
 const recentlyRated = allRatings.slice(0, 10);
 
 const topDirectorData = directors?.[0];
@@ -177,7 +185,7 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
         {midQuality.slice(0, 15).map((item) => (
           <div class="min-w-[80px] space-y-1">
             <a href={item.href} target="_blank" class="block aspect-[2/3] rounded overflow-hidden bg-neutral-900 border border-white/5 transition-transform hover:scale-105">
-              <img src={item.poster} class="w-full h-full object-cover opacity-50 hover:opacity-100 transition-all" />
+              <img src={item.poster} class="w-full h-full object-cover transition-all" />
             </a>
             <p class="text-[9px] font-bold uppercase truncate text-neutral-500">{item.title}</p>
           </div>
@@ -199,7 +207,7 @@ const maxVol = Math.max(...sparkline.map(s => s.volume), 1);
         {lowQuality.slice(0, 15).map((item) => (
           <div class="min-w-[80px] space-y-1">
             <a href={item.href} target="_blank" class="block aspect-[2/3] rounded overflow-hidden bg-neutral-900 border border-white/5 transition-transform hover:scale-105">
-              <img src={item.poster} class="w-full h-full object-cover opacity-40 hover:opacity-100 transition-all" />
+              <img src={item.poster} class="w-full h-full object-cover transition-all" />
             </a>
             <p class="text-[9px] font-bold uppercase truncate text-neutral-700">{item.title}</p>
           </div>
