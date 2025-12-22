@@ -1,0 +1,49 @@
+---
+interface Props {
+  data: { name: string; plays: string | number; url: string }[];
+  title: string;
+}
+
+const { data, title } = Astro.props;
+
+// 1. Normalize data: Find the max plays to calculate percentage width
+const cleanData = data.slice(0, 10).map(item => ({
+  ...item,
+  plays: Number(item.plays)
+}));
+const maxPlays = Math.max(...cleanData.map(d => d.plays));
+---
+
+<div class="space-y-4 py-6">
+  <h3 class="font-semibold text-black dark:text-white text-lg">{title}</h3>
+  
+  <div class="flex flex-col gap-2">
+    {cleanData.map((artist, i) => {
+      const width = `${(artist.plays / maxPlays) * 100}%`;
+      return (
+        <div class="group flex items-center gap-3 text-xs">
+          {/* Rank */}
+          <span class="w-4 text-right font-mono text-neutral-400 shrink-0">{i + 1}</span>
+          
+          {/* Label + Bar Container */}
+          <div class="flex-1 space-y-1">
+            <div class="flex justify-between items-baseline">
+               <a href={artist.url} target="_blank" class="font-medium text-black dark:text-white hover:underline decoration-1 underline-offset-2 truncate">
+                 {artist.name}
+               </a>
+               <span class="font-mono text-neutral-500">{artist.plays.toLocaleString()}</span>
+            </div>
+            
+            {/* The Bar */}
+            <div class="w-full bg-neutral-100 dark:bg-neutral-800 rounded-full h-1.5 overflow-hidden">
+              <div 
+                class="bg-black dark:bg-white h-full rounded-full transition-all duration-500 ease-out group-hover:bg-neutral-600 dark:group-hover:bg-neutral-300"
+                style={{ width }}
+              ></div>
+            </div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>

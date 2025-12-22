@@ -65,13 +65,13 @@ const description = "A detailed look at my music rotation.";
               <ul class="space-y-1">
                 {(week.artists || []).map((artist: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
-                     <div class="flex items-center gap-2 truncate min-w-0">
+                      <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
                         <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
                             {artist.name}
                         </a>
-                     </div>
-                     <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
+                      </div>
+                      <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
                   </li>
                 ))}
               </ul>
@@ -81,14 +81,14 @@ const description = "A detailed look at my music rotation.";
               <ul class="space-y-1">
                 {(week.tracks || []).map((track: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
-                     <div class="flex items-center gap-2 truncate min-w-0">
+                      <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
                         <a href={track.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
                             {track.name}
                         </a>
                         <span class="text-xs text-neutral-400 truncate hidden sm:inline">- {track.artist}</span>
-                     </div>
-                     <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{track.plays}</span>
+                      </div>
+                      <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{track.plays}</span>
                   </li>
                 ))}
               </ul>
@@ -127,13 +127,13 @@ const description = "A detailed look at my music rotation.";
               <ul class="space-y-1">
                 {(month.artists || []).map((artist: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
-                     <div class="flex items-center gap-2 truncate min-w-0">
+                      <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
                         <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
                             {artist.name}
                         </a>
-                     </div>
-                     <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
+                      </div>
+                      <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
                   </li>
                 ))}
               </ul>
@@ -143,14 +143,14 @@ const description = "A detailed look at my music rotation.";
               <ul class="space-y-1">
                 {(month.tracks || []).map((track: Item, i: number) => (
                   <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
-                     <div class="flex items-center gap-2 truncate min-w-0">
+                      <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
                         <a href={track.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
                             {track.name}
                         </a>
                         <span class="text-xs text-neutral-400 truncate hidden sm:inline">- {track.artist}</span>
-                     </div>
-                     <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{track.plays}</span>
+                      </div>
+                      <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{track.plays}</span>
                   </li>
                 ))}
               </ul>
@@ -196,12 +196,11 @@ const description = "A detailed look at my music rotation.";
           </div>
 
           <div class="grid md:grid-cols-2 gap-8 md:gap-12 pt-4">
-             <div>
+            <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
-               <div class="columns-1 gap-8 space-y-1">
+              <ul class="space-y-1">
                 {(year.artists || []).map((artist: Item, i: number) => (
-                  <div class="break-inside-avoid">
-                    <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
+                  <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
                       <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
                         <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
@@ -209,13 +208,11 @@ const description = "A detailed look at my music rotation.";
                         </a>
                       </div>
                       <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
-                    </div>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
-
-            <div>
+             <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Songs</h3>
                <div class="columns-1 gap-8 space-y-1">
                 {(year.tracks || []).map((track: Item, i: number) => (
@@ -275,12 +272,11 @@ const description = "A detailed look at my music rotation.";
           </div>
 
           <div class="grid md:grid-cols-2 gap-8 md:gap-12 pt-4">
-             <div>
+            <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Artists</h3>
-               <div class="columns-1 gap-8 space-y-1">
+              <ul class="space-y-1">
                 {(allTime.artists || []).map((artist: Item, i: number) => (
-                  <div class="break-inside-avoid">
-                    <div class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1">
+                  <li class="flex justify-between text-sm group border-b border-neutral-100 dark:border-neutral-800/50 pb-1 last:border-0">
                       <div class="flex items-center gap-2 truncate min-w-0">
                         <span class="text-neutral-300 font-mono text-xs w-4 text-right shrink-0">{i + 1}</span>
                         <a href={artist.url} target="_blank" class="truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors group-hover:underline decoration-1 underline-offset-2">
@@ -288,12 +284,10 @@ const description = "A detailed look at my music rotation.";
                         </a>
                       </div>
                       <span class="text-xs font-mono text-neutral-400 shrink-0 ml-2">{artist.plays}</span>
-                    </div>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
-
             <div>
               <h3 class="text-sm font-semibold text-neutral-500 uppercase tracking-wider mb-4">Top Songs</h3>
                <div class="columns-1 gap-8 space-y-1">
