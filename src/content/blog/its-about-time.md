@@ -1,7 +1,7 @@
 ---
 title: "it's about time"
 date: '2008-03-27T20:19:37-05:00'
-slug: 2008/03/27/its-about-time
+slug: "2008/03/27/its-about-time"
 tags: ["life", "programming", "time", "web"]
 ---
 I have no time for anything!
