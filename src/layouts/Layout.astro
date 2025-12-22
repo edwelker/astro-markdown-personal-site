@@ -4,6 +4,7 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Pagefind from "@components/PageFind.astro";
 import Analytics from "@components/Analytics.astro";
+import { Schema } from "astro-seo-schema";
 
 import "@fontsource/inter";
 import '@fontsource/inter/400.css';
@@ -42,14 +43,14 @@ const { title, description, image } = Astro.props;
         jobTitle: "Principal Software Engineer",
         worksFor: {
             "@type": "Organization",
-            name: "Freelance" 
+            name: "Freelance"
         },
         address: {
             "@type": "PostalAddress",
             addressLocality: "North Laurel",
             addressRegion: "MD",
             addressCountry: "US",
-            postalCode: "20723" 
+            postalCode: "20723"
         },
         sameAs: [
             "https://github.com/edwelker",
@@ -59,7 +60,7 @@ const { title, description, image } = Astro.props;
             "https://trakt.tv/users/edwelker",
             "https://www.last.fm/user/edwelker",
             "https://www.flickr.com/photos/ed_welker/",
-            "https://open.spotify.com/user/edwelker" 
+            "https://open.spotify.com/user/edwelker"
         ],
         knowsAbout: [
             {
