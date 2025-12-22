@@ -1,7 +1,7 @@
 ---
 title: 'My new look on old characters'
 date: '2007-08-30T23:23:14-05:00'
-slug: 2007/08/30/18
+slug: '2007/08/30/my-new-look-on-old-characters'
 tags: ["characters", "typography"]
 ---
 I don't know much about typography. I find the subject absolutely interesting, especially from a historical perspective, but I think I am slightly intimidated by it too. It has thousands of years of history, and more than a few books I have read tell me that "the rules in use today were perfected hundreds of years ago." I imagine a disciple of Gutenburg, wearing funny little shoes, leaning over and whispering, "yea, hundreds of years... don't mess it up!" into my ear.
