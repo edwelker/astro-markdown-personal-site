@@ -29,3 +29,9 @@ create.sh
 public/posters/*.*
 public/data/*.json
 src/data/*.json
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/

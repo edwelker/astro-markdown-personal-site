@@ -10,10 +10,12 @@
     "astro": "astro",
     "fetch": "node scripts/flickr-fetch.mjs && node scripts/trakt-fetch.mjs && node scripts/cycling-fetch.mjs && node scripts/music-fetch.mjs",
     "test": "vitest run",
-    "test:ui": "npx playwright test",
+    "test:ui": "npx playwright test --reporter=list",
+    "test:update": "npx playwright test --update-snapshots --reporter=list",
     "test:all": "npm run test && npm run test:ui",
     "clean": "rm -rf dist .astro src/data/*.json",
-    "mvdata": "mkdir -p public/data; cp src/data/*.json public/data"
+    "mvdata": "mkdir -p public/data; cp src/data/*.json public/data",
+    "postinstall": "npx playwright install --with-deps"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
