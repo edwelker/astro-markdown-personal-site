@@ -5,11 +5,11 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run fetch && npm run mvdata && astro build && (test -n \"$CI\" || npm run test:build)",
+    "build": "npm run fetch && npm run mvdata && astro build && npm run test:artifacts",
     "preview": "astro preview",
-    "astro": "astro",
     "fetch": "node scripts/flickr-fetch.mjs && node scripts/trakt-fetch.mjs && node scripts/cycling-fetch.mjs && node scripts/music-fetch.mjs",
     "test": "vitest run",
+    "test:artifacts": "vitest run tests/artifacts.test.ts",
     "test:local": "vitest run && npx playwright test --config=playwright.config.local.mjs",
     "test:build": "npx playwright test --config=playwright.config.build.mjs",
     "test:update": "npx playwright test --config=playwright.config.local.mjs --update-snapshots",
