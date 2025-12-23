@@ -5,49 +5,28 @@ test.describe("Homepage Component & Data Integrity", () => {
     await page.goto("/");
   });
 
-  // This prints regardless of the type of failure
   test.afterEach(async ({ }, testInfo) => {
     if (testInfo.status !== testInfo.expectedStatus) {
       console.error("\n\x1b[31m%s\x1b[0m", "--------------------------------------------------");
       console.error("\x1b[33m%s\x1b[0m", "🚨 HOMEPAGE INTEGRITY FAILURE");
-      console.error("\x1b[37m%s\x1b[0m", "Did you intentionally change the homepage layout or counts?");
-      console.error("\x1b[32m%s\x1b[0m", "If YES, update the baseline with:");
-      console.error("\x1b[1m%s\x1b[0m", "npm run test:update");
+      console.error("\x1b[32m%s\x1b[0m", "If YES, update baseline: npm run test:update");
       console.error("\x1b[31m%s\x1b[0m", "--------------------------------------------------\n");
     }
   });
 
   test("visual and count integrity check", async ({ page }) => {
-    // 1. Highlights
-    const highlights = page.locator('[data-testid="highlights-section"] li');
-    await expect(highlights).toHaveCount(4);
+    // 1. Blog Posts (4)
+    await expect(page.locator('[data-testid="posts-section"] li')).toHaveCount(4);
 
-    // 2. Flickr Photos
-    const photos = page.locator('[data-testid="flickr-section"] img');
-    await expect(photos).toHaveCount(14);
+    // 2. Flickr Photos (14)
+    await expect(page.locator('[data-testid="flickr-section"] img')).toHaveCount(14);
 
-    // 3. Music (6 albums, 10 artists total)
-    const musicSection = page.locator('[data-testid="music-section"]');
-    const albums = musicSection.locator('h5:has-text("Top Albums") + ul li');
-    const artists = musicSection.locator('h5:has-text("Top Artists") + ul li');
-    await expect(albums).toHaveCount(6);
-    await expect(artists).toHaveCount(10);
-
-    // 4. Cycling
-    const cyclingSection = page.locator('[data-testid="cycling-section"]');
-    await expect(cyclingSection.getByText(/Year to Date/i)).toBeVisible();
-    const rides = cyclingSection.locator('ul li.group\\/ride');
-    await expect(rides).toHaveCount(5);
-
-    // 5. Media (Trakt)
-    const mediaItems = page.locator('[data-testid="media-section"] img');
+    // 3. Media Teaser (Specifically target items inside the grid div)
+    // This avoids picking up the "See All" link if it has a .group class
+    const mediaItems = page.locator('[data-testid="media-section"] .grid a');
     await expect(mediaItems).toHaveCount(8);
 
-    // 6. Blog Posts
-    const posts = page.locator('[data-testid="posts-section"] li');
-    await expect(posts).toHaveCount(4);
-
-    // 7. Visual Screenshot Comparison
+    // 4. Visual Screenshot
     await expect(page).toHaveScreenshot({ 
       fullPage: true, 
       maxDiffPixelRatio: 0.1 

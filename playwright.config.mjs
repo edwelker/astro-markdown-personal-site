@@ -2,13 +2,11 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  // Includes both .mjs and .ts test files
   testMatch: '**/*.spec.{mjs,ts}',
-  fullyParallel: true,
+  fullyParallel: false, // Switching to serial to avoid race conditions during build/fetch
   forbidOnly: !!process.env.CI,
-  retries: 1,
-  workers: '50%',
-  // List reporter shows names even when parallel
+  retries: 0,
+  workers: 1, // Single worker to ensure stability while we debug
   reporter: 'list',
   use: {
     baseURL: 'http://localhost:4321',
@@ -25,5 +23,7 @@ export default defineConfig({
     url: 'http://localhost:4321',
     reuseExistingServer: !process.env.CI,
     timeout: 180 * 1000,
+    stdout: 'pipe',
+    stderr: 'pipe',
   },
 });
