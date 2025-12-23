@@ -13,21 +13,3 @@ It uses the [Astro Micro](https://github.com/trevortylerlee/astro-micro) theme, 
 ***
 
 ## Info for me
-
-### Test Architecture
-
-```mermaid
-graph TD
-    subgraph Local [Local Dev]
-        LT[Vitest: Logic & Data]
-        LP[Playwright: UI & Counts]
-    end
-
-    subgraph Build [Build Step]
-        AB[Astro Build]
-        VA[Vitest: File Artifacts]
-        BB[Playwright: 404 & Links]
-    end
-
-    Local --> AB
-    AB --> Build
