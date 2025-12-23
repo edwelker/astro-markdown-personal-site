@@ -1,18 +1,32 @@
-# Website
+# Website: Astro version
 
-## Test Architecture
+This is the repository for my personal site, eddiewelker.com.
+
+It uses the [Astro Micro](https://github.com/trevortylerlee/astro-micro) theme, as well as the [Inter](https://github.com/rsms/inter/) font.
+
+### History
+
+1.  **WordPress (The Origin):** What I could do at the time, the exported from WP
+2.  **Hugo (The Static Phase):** Templating was terrible because each had their own individual config format, so I couldn't switch templates easily.
+3.  **Astro (The Final Form):** This current version is built on Astro. Standardized markdown schema and configuration.
+
+***
+
+## Info for me
+
+### Test Architecture
 
 ```mermaid
 graph TD
-    subgraph Local [Local Development]
-        LT[Vitest: Unit Tests]
+    subgraph Local [Local Dev]
+        LT[Vitest: Logic & Data]
         LP[Playwright: UI & Counts]
     end
 
-    subgraph Build [Full Build Process]
+    subgraph Build [Build Step]
         AB[Astro Build]
-        BA[Vitest: Artifact Check]
-        BB[Playwright: 404 & Crawler]
+        VA[Vitest: File Artifacts]
+        BB[Playwright: 404 & Links]
     end
 
     Local --> AB
