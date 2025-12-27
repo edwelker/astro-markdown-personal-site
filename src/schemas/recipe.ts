@@ -5,7 +5,7 @@ export const RecipeSchema = z.object({
   slug: z.string().optional(),
   description: z.string(),
   date: z.date(),
-  coverPhoto: z.string().url().or(z.string().startsWith('/')),
+  coverPhoto: z.string().url().or(z.string().startsWith('/')).optional(),
   prepTime: z.string().optional(),
   cookTime: z.string().optional(),
   totalTime: z.string().optional(),
