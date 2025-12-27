@@ -17,19 +17,10 @@ describe("Build Artifact Integrity", () => {
     expect(fs.existsSync(path.join(distPath, "robots.txt"))).toBe(true);
   });
 
-  it("should have generated music.json", () => {
-    expect(fs.existsSync(path.join(distPath, "data/music.json"))).toBe(true);
-  });
-
-  it("should have generated trakt.json", () => {
-    expect(fs.existsSync(path.join(distPath, "data/trakt.json"))).toBe(true);
-  });
-
-  it("should have generated cycling.json", () => {
-    expect(fs.existsSync(path.join(distPath, "data/cycling.json"))).toBe(true);
-  });
-
-  it("should have generated flickr-photos.json", () => {
-    expect(fs.existsSync(path.join(distPath, "data/flickr-photos.json"))).toBe(true);
-  });
+  const dataFiles = ["music.json", "trakt.json", "cycling.json", "flickr-photos.json"];
+  for (const file of dataFiles) {
+    it(`should have generated ${file}`, () => {
+      expect(fs.existsSync(path.join(distPath, "data", file))).toBe(true);
+    });
+  }
 });
