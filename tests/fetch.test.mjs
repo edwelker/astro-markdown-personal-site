@@ -6,7 +6,7 @@ global.fetch = vi.fn();
 
 describe('Cycling Fetch Logic', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
   });
 
   describe('getStravaAccessToken', () => {
@@ -48,15 +48,15 @@ describe('Cycling Fetch Logic', () => {
         .mockResolvedValueOnce({
           ok: true,
           json: async () => [
-            { id: 1, start_date: `${currentYear}-01-01T00:00:00Z` },
-            { id: 2, start_date: `${currentYear}-02-01T00:00:00Z` },
+            { id: 1, start_date: `${currentYear}-06-01T00:00:00Z` },
+            { id: 2, start_date: `${currentYear}-07-01T00:00:00Z` },
           ],
         })
         .mockResolvedValueOnce({
           ok: true,
           json: async () => [
-            { id: 3, start_date: `${currentYear}-03-01T00:00:00Z` },
-            { id: 4, start_date: `${currentYear - 1}-12-31T00:00:00Z` }, // Should stop pagination here
+            { id: 3, start_date: `${currentYear}-08-01T00:00:00Z` },
+            { id: 4, start_date: `${currentYear - 1}-06-01T00:00:00Z` }, // Should stop pagination here
           ],
         });
         
@@ -71,7 +71,7 @@ describe('Cycling Fetch Logic', () => {
       global.fetch
         .mockResolvedValueOnce({
           ok: true,
-          json: async () => [{ id: 1, start_date: `${new Date().getFullYear()}-01-01T00:00:00Z` }],
+          json: async () => [{ id: 1, start_date: `${new Date().getFullYear()}-06-01T00:00:00Z` }],
         })
         .mockResolvedValueOnce({
           ok: true,
