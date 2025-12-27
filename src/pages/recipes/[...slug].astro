@@ -14,11 +14,18 @@ export async function getStaticPaths() {
     .filter((recipe) => !recipe.data.draft)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
+  if (allRecipes.length === 0) {
+    console.warn("No recipes found for static paths generation!");
+  }
+
   return allRecipes.map((recipe, index) => {
     const nextPost = allRecipes[index - 1] || undefined;
     const prevPost = allRecipes[index + 1] || undefined;
     
-    return { params: { slug: recipe.slug }, props: { recipe, prevPost, nextPost } as Props };
+    return { 
+      params: { slug: recipe.slug }, 
+      props: { recipe, prevPost, nextPost } as Props 
+    };
   });
 }
 
