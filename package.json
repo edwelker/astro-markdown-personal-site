@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run fetch && npm run mvdata && astro build && npm run test:artifacts",
+    "build": "npm run fetch && npm run mvdata && npm test && astro build && npm run test:artifacts && npm run test:build",
     "preview": "astro preview",
     "fetch": "node scripts/run-all.mjs",
     "test": "vitest run",
