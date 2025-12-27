@@ -1,52 +1,69 @@
-import fs from 'node:fs/promises';
+import { runETL } from './lib-etl.mjs';
 import { transformStravaData } from './cycling-logic.mjs';
 
-async function getAccessToken() {
+export async function getStravaAccessToken({ clientId, clientSecret, refreshToken }) {
+  if (!clientId || !clientSecret || !refreshToken) {
+    throw new Error('STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, and STRAVA_REFRESH_TOKEN must be set');
+  }
   const res = await fetch('https://www.strava.com/oauth/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      client_id: process.env.STRAVA_CLIENT_ID,
-      client_secret: process.env.STRAVA_CLIENT_SECRET,
-      refresh_token: process.env.STRAVA_REFRESH_TOKEN,
+      client_id: clientId,
+      client_secret: clientSecret,
+      refresh_token: refreshToken,
       grant_type: 'refresh_token'
     })
   });
+  if (!res.ok) throw new Error(`Strava auth failed: HTTP ${res.status}`);
   const data = await res.json();
   return data.access_token;
 }
 
-async function run() {
-  try {
-    const token = await getAccessToken();
-    const YEAR = new Date().getFullYear();
-    let allActivities = [];
-    let page = 1;
-    let keepFetching = true;
+export async function fetchCyclingData({ token }) {
+  const YEAR = new Date().getFullYear();
+  let allActivities = [];
+  let page = 1;
+  let keepFetching = true;
 
-    while (keepFetching) {
-      const res = await fetch(`https://www.strava.com/api/v3/athlete/activities?page=${page}&per_page=100`, {
-        headers: { Authorization: `Bearer ${token}` }
-      });
-      const list = await res.json();
-      if (!res.ok || list.length === 0) break;
+  while (keepFetching) {
+    const res = await fetch(`https://www.strava.com/api/v3/athlete/activities?page=${page}&per_page=100`, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    if (!res.ok) throw new Error(`Strava activities fetch failed: HTTP ${res.status}`);
+    const list = await res.json();
+    if (list.length === 0) break;
 
-      for (const a of list) {
-        const rideYear = new Date(a.start_date).getFullYear();
-        if (rideYear < YEAR) {
-          keepFetching = false;
-          break;
-        }
-        allActivities.push(a);
+    for (const a of list) {
+      const rideYear = new Date(a.start_date).getFullYear();
+      if (rideYear < YEAR) {
+        keepFetching = false;
+        break;
       }
-      page++;
+      allActivities.push(a);
     }
-
-    const clean = transformStravaData(allActivities);
-    await fs.writeFile('src/data/cycling.json', JSON.stringify(clean, null, 2));
-    console.log(`✅ Strava: Processed ${allActivities.length} rides for YTD.`);
-  } catch (e) {
-    console.error('❌ Strava Failed:', e.message);
+    page++;
   }
+  return allActivities;
 }
-run();
+
+export async function run() {
+  await runETL({
+    name: 'Strava',
+    fetcher: async () => {
+      const token = await getStravaAccessToken({
+        clientId: process.env.STRAVA_CLIENT_ID,
+        clientSecret: process.env.STRAVA_CLIENT_SECRET,
+        refreshToken: process.env.STRAVA_REFRESH_TOKEN,
+      });
+      return fetchCyclingData({ token });
+    },
+    transform: transformStravaData,
+    outFile: 'src/data/cycling.json'
+  });
+}
+
+// This allows the script to be run directly, or imported by a parallel runner.
+if (process.argv[1] === new URL(import.meta.url).pathname) {
+  run();
+}
