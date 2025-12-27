@@ -1,7 +1,7 @@
 ---
 title: 'Game 7: I think Kenny Lofton was out at second'
 date: '2007-10-22T00:23:29-05:00'
-slug: 2007/10/22/game-7-i-think-kenny-lofton-was-out-at-second
+slug: '2007/10/22/game-7-i-think-kenny-lofton-was-out-at-second'
 tags: ["baseball", "red sox", "replay", "second base"]
 ---
 From the views that you will see on all of the replays, you will see Kenny Lofton's hand getting to the bag before Pedroia's tag touches him. That I will give you. However, from my view point, the point at which the Indians left fielder was out was AFTER that... when his hands both came up off the bag, and I could see no part of him touching second base. His hands shot over the base, and because he doesn't weigh 300 pounds, his chest was not touching the bag.

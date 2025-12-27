@@ -1,7 +1,7 @@
 ---
 title: 'Using the label element for form accessibility'
 date: '2008-03-09T23:24:38-05:00'
-slug: 2008/03/09/using-the-label-element-for-form-accessibility
+slug: '2008/03/09/using-the-label-element-for-form-accessibility'
 tags: ["bug", "css", "element", "firefox", "form", "html", "ux", "web"]
 ---
 I've always been a fan of the `<label>` element. It's an incredibly simple way to make a form more accessible. It does two things:

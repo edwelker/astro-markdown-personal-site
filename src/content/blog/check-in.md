@@ -1,7 +1,7 @@
 ---
-title: Check-in
+title: 'Check-in'
 date: '2009-08-03T21:42:19-05:00'
-slug: 2009/08/03/check-in
+slug: '2009/08/03/check-in'
 tags: ["cycling", "design", "life", "photography", "programming", "pubmed", "reading", "summer"]
 ---
 Not a technical post, but a personal update. I promised over a week ago. [![Air Me](http://farm4.static.flickr.com/3494/3753939045_227dd6b275_m.jpg)](http://www.flickr.com/photos/ed_welker/3753939045/ "Air Me by eddie.welker, on Flickr")

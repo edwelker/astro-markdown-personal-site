@@ -1,7 +1,7 @@
 ---
 title: 'Clean room!'
 date: '2008-07-17T23:58:16-05:00'
-slug: 2008/07/17/clean-room
+slug: '2008/07/17/clean-room'
 tags: ["desk", "photography", "reading"]
 ---
 Last weekend, I FINALLY had a chance to clean my room, and I'm pleased with the results. Really, though, this post is just an excuse to do one of those "this is my desk, this is my bookshelf" posts that everyone seems to do. 🙂

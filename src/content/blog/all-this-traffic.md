@@ -1,7 +1,7 @@
 ---
 title: '...all this traffic.'
 date: '2007-09-01T09:52:07-05:00'
-slug: 2007/09/01/all-this-traffic
+slug: '2007/09/01/all-this-traffic'
 tags: ["life", "moving"]
 ---
 [...all this traffic.](http://www.flickr.com/photos/ed_welker/1291955348/)

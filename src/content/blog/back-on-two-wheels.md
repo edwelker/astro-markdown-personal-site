@@ -1,7 +1,7 @@
 ---
 title: 'Back on two wheels'
 date: '2008-01-08T19:04:57-05:00'
-slug: 2008/01/08/back-on-two-wheels
+slug: '2008/01/08/back-on-two-wheels'
 tags: ["cycling", "maryland", "new year"]
 ---
 I rode my bike to work today. It was the first time I had done that in an excruciatingly long time.[![LeMond](http://farm2.static.flickr.com/1249/532591704_41e00e0652_m.jpg "LeMond")](http://farm2.static.flickr.com/1249/532591704_41e00e0652_b.jpg "LeMond fixie") Everything in the world came up between. The weather over the last few days, however, has been so nice that I couldn't resist any longer. So last night I put a new tube in the front wheel, and took the Lemond bike that wouldn't kill me (39 x 17 lower fixed-gear ratio, shown to the left) rather than the one (my fav. Bianchi, 42 x 15) that was ready-to-go, but may have killed me.

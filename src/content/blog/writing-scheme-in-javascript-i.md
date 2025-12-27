@@ -1,10 +1,10 @@
 ---
 title: 'Writing Scheme in Javascript I'
 date: '2008-02-10T13:04:16-05:00'
-slug: 2008/02/10/writing-scheme-in-javascript-i
+slug: '2008/02/10/writing-scheme-in-javascript-i'
 tags: ["global scope", "javascript", "scheme"]
 ---
-This is an interesting little function that I ran across in Kent Dybvig's *[The Scheme Programming Language](http://www.scheme.com/tspl3/start.html#./start:h9).* I thought I would give it a go in javascript. I wrote it out, and ran into two problems. First, I wasn't returning anything from the anonymous-self-executing function, so it was being garbage collected, and the call to tell() would give an undefined (secret didn't exist anymore). The second was that I initially declared secret without the *var* which gave it global scope. Took me a little while to figure these out, but since I haven't looked at any javascript in months, I don't feel so bad.  
+This is an interesting little function that I ran across in Kent Dybvig's *[The Scheme Programming Language](http://www.scheme.com/tspl3/start.html#./start:h9).* I thought I would give it a go in javascript. I wrote it out, and ran into two problems. First, I wasn't returning anything from the anonymous-self-executing function, so it was being garbage collected, and the call to tell() would give an undefined (secret didn't exist anymore). The second was that I initially declared secret without the *var* which gave it global scope. Took me a little while to figure these out, but since I haven't looked at any javascript in months, I don't feel so bad.
 ``
 
 ```

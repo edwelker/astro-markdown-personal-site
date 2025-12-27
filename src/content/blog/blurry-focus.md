@@ -1,7 +1,7 @@
 ---
 title: 'blurry focus'
 date: '2007-09-12T21:23:12-05:00'
-slug: 2007/09/12/blurry-focus
+slug: '2007/09/12/blurry-focus'
 tags: ["constraints", "css", "display table", "internet explorer", "microsoft", "table attributes"]
 ---
 I've been working on the same project for about 4 weeks now. 4 weeks straight. It's the re-design of certain parts of [a big site](http://www.ncbi.nlm.nih.gov/sites/entrez/) using CSS. Sounds like nothing, but the constraints of the re-design are that it must function almost exactly like the old. Therein lies the difficulty.

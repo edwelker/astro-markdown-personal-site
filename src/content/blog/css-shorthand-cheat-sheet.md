@@ -1,7 +1,7 @@
 ---
 title: 'CSS Shorthand Cheat Sheet'
 date: '2007-09-06T23:37:56-05:00'
-slug: 2007/09/06/css-shorthand-cheat-sheet
+slug: '2007/09/06/css-shorthand-cheat-sheet'
 tags: ["cheat sheet", "cheat sheets", "css", "design", "shorthand", "typography"]
 ---
 If there is one thing that I'm a sucker for, it's cheat sheets. I love letting my eyes fall upon a single page and navigate right to what I'm looking for. It takes the whole "open book, locate index, look up word, find page, find where on page" process out and beats it with a big stick.

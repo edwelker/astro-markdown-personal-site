@@ -1,7 +1,7 @@
 ---
-title: "Bikes: All-City Space Horse"
+title: 'Bikes: All-City Space Horse'
 date: 2025-12-05T17:30:00-05:00
-slug: 2025/12/05/all_city_space_horse
+slug: '2025/12/05/all_city_space_horse'
 coverImage: "https://live.staticflickr.com/65535/54542368037_d912326138_b.jpg"
 tags: ["cycling"]
 ---
@@ -57,7 +57,7 @@ Though [All City ceased this year](https://theradavist.com/all-city-cycles-closi
 | | Front Rack | [Tubus Tara Titan](https://www.tubus.com/en/products/front-carriers/tubus-product/tara-edelstahl) |
 | | Fenders | Portland Design Works |
 | | Bottle Cages | Arundel Looney Bin, Widefoot Liter cage |
-| | Lights | [SON Edelux II headlight](https://nabendynamo.de/en/products/headlights/edelux-2/), [B&M Secuzed Taillight](https://www.rivbike.com/products/xfhz66816) | 
+| | Lights | [SON Edelux II headlight](https://nabendynamo.de/en/products/headlights/edelux-2/), [B&M Secuzed Taillight](https://www.rivbike.com/products/xfhz66816) |
 | | Stem bags | Two [Needle and Axe stembags](https://www.needleandaxe.com/store-1) which are my absolute fav |
 
 ---

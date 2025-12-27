@@ -1,7 +1,7 @@
 ---
 title: 'Another design tweak'
 date: '2007-12-18T21:06:19-05:00'
-slug: 2007/12/18/another-design-tweak
+slug: '2007/12/18/another-design-tweak'
 tags: ["css", "design", "firefox", "internet explorer", "mac", "mac pc", "opera", "pc", "pseudo attributes"]
 ---
 As you might have noticed, I've been a bit pre-occupied recently. And likely will be so in the future. So a design for this site has once again been placed on the back burner. I am good for a tweak-ing, however.

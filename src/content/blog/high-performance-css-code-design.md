@@ -1,7 +1,7 @@
 ---
 title: 'High Performance CSS code design'
 date: '2011-04-06T00:44:25-05:00'
-slug: 2011/04/06/high-performance-css-code-design
+slug: '2011/04/06/high-performance-css-code-design'
 tags: ["css", "design", "programming", "refactoring"]
 ---
 In the last few years much emphasis has been placed on web performance issues. Browser vendors have optimized JavaScript engines, JavaScript libraries have been honed, and content delivery has been improved. Unfortunately, CSS has received less attention. Developers have been advised how to optimally transfer CSS files, and instructed to use CSS shorthand, but very little has targeted CSS code itself.
@@ -47,7 +47,7 @@ Location-based selectors are easy to spot. The pattern is a long list of selecto
 .sidebar .nav .box .body p {...}
 ```
 
-Because each selector chain starts with a location-based selector, none of them are reusable. What if we add a new group of pages that use the same .box structure but need to be placed in the content, header, or footer? A novice would add more comma separated selector chains, but that amounts to copying code.  
+Because each selector chain starts with a location-based selector, none of them are reusable. What if we add a new group of pages that use the same .box structure but need to be placed in the content, header, or footer? A novice would add more comma separated selector chains, but that amounts to copying code.
 
 ```
 .sidebar .nav .box, .content .nav .box, .header .nav .box, .footer .nav .box {...}

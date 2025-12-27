@@ -1,7 +1,7 @@
 ---
 title: 'Review of "Prototype-Based Programming"'
+slug: '2009/01/29/review-of-prototype-based-programming'
 date: '2009-01-29T20:14:56-05:00'
-slug: 2009/01/29/review-of-prototype-based-programming
 tags: ["javascript", "programming", "reading", "reviews"]
 ---
 ![Prototype-Based Programming](/prototypebasedprogramming.png "Prototype-Based Programming")

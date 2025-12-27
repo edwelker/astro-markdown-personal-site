@@ -1,7 +1,7 @@
 ---
 title: 'catching up'
 date: '2007-10-03T22:16:00-05:00'
-slug: 2007/10/03/catching-up
+slug: '2007/10/03/catching-up'
 tags: ["baseball", "classical music", "cycling", "javascript", "life", "maryland", "moving", "red sox", "xslt"]
 ---
 This is my appropriately named "catching up" post. As most know, I've moved over the last month. Despite my early action, I still had to do a lot of work at the end of the month. C'est la vie, that's what moving is. Aside that, I've also been focused on various work related things (css, xslt, and the "portal" system), as well as the end of baseball's regular season and the beginning of the post season.

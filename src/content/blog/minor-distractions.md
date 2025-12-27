@@ -1,7 +1,7 @@
 ---
 title: 'Minor distractions'
 date: '2007-12-05T20:04:45-05:00'
-slug: 2007/12/05/minor-distractions
+slug: '2007/12/05/minor-distractions'
 tags: ["email standards project", "internet explorer", "microformats", "podcasts", "reading", "rss"]
 ---
 In an effort to keep my mind occupied elsewhere, here are a couple of distractions to share.

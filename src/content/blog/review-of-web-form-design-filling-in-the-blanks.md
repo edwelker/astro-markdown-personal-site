@@ -1,7 +1,7 @@
 ---
 title: 'Review of "Web Form Design, Filling in the Blanks"'
+slug: '2008/08/04/review-of-web-form-design-filling-in-the-blanks'
 date: '2008-08-04T21:33:45-05:00'
-slug: 2008/08/04/review-of-web-form-design-filling-in-the-blanks
 tags: ["design", "luke wroblewski", "reading", "ux"]
 ---
 > "Forms suck. If you don't believe me, try to find people who like filling them in.";

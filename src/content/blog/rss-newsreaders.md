@@ -1,7 +1,7 @@
 ---
 title: 'RSS newsreaders'
 date: '2007-10-03T23:46:54-05:00'
-slug: 2007/10/03/rss-newsreaders
+slug: '2007/10/03/rss-newsreaders'
 tags: ["feeddemon", "firefox", "poor", "rss", "rss newsreader", "sage", "vienna"]
 ---
 I am a big fan of Sage, the RSS newsreader plugin for Firefox. In my move, I have tried a few other apps that I thought would be a little better at handling the on-again, off-again nature of me checking my favorite feeds.

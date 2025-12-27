@@ -1,7 +1,7 @@
 ---
 title: 'Horror Movies, Final installment'
 date: '2008-11-11T12:47:43-05:00'
-slug: 2008/11/11/horror-movies-final-installment
+slug: '2008/11/11/horror-movies-final-installment'
 tags: ["film", "halloween"]
 ---
 The final installment... a little late.

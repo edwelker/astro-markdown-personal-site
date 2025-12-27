@@ -1,7 +1,7 @@
 ---
 title: 'Thought for the day'
 date: '2007-09-18T18:55:50-05:00'
-slug: 2007/09/18/thought-for-the-day
+slug: '2007/09/18/thought-for-the-day'
 tags: ["design", "ux"]
 ---
 My thought for the day is this:

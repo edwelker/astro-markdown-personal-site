@@ -1,7 +1,7 @@
 ---
 title: 'Jean Edward Welker'
 date: '2007-12-17T22:23:47-05:00'
-slug: 2007/12/17/jean-edward-welker
+slug: '2007/12/17/jean-edward-welker'
 tags: ["life"]
 ---
 Washington Post -- Obituaries

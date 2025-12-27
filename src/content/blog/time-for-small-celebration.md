@@ -1,7 +1,7 @@
 ---
 title: 'Time for small celebration!'
 date: '2007-11-08T21:48:35-05:00'
-slug: 2007/11/08/time-for-small-celebration
+slug: '2007/11/08/time-for-small-celebration'
 tags: ["pubmed"]
 ---
 Indeed, it is time for a small party... my last 2 to 3 months of work has gone live!

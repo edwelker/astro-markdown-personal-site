@@ -1,7 +1,7 @@
 ---
 title: 'Review of "Object-Oriented JavaScript"'
+slug: '2008/10/25/object-oriented-javascript-review'
 date: '2008-10-25T22:02:16-05:00'
-slug: 2008/10/25/object-oriented-javascript-review
 tags: ["javascript", "programming", "reading", "reviews"]
 ---
 [![Object Oriented JavaScript](/objectorientedjavascript.jpg "Object Oriented JavaScript")](http://www.packtpub.com/object-oriented-javascript-applications-libraries/book)

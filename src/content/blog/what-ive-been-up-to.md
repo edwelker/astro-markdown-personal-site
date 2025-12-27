@@ -1,7 +1,7 @@
 ---
-title: "what I've been up to"
+title: 'what I''ve been up to'
 date: '2008-01-16T13:44:14-05:00'
-slug: "2008/01/16/what-ive-been-up-to"
+slug: '2008/01/16/what-ive-been-up-to'
 tags: ["career", "design", "firefox", "twitter"]
 ---
 Though I doubt it will mean anything to anyone... I threw this diagram together Monday night. It's [](/myncbiwireframesv1.pdf "NCBI Application design")[my application design](/ncbibaseapp_designv1.pdf "my application design") for a default NCBI application. I'm pretty excited about it. Not too fancy, but a nice start.

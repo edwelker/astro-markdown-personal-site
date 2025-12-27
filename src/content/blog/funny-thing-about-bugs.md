@@ -1,7 +1,7 @@
 ---
 title: 'Funny thing about bugs…'
 date: '2008-09-18T21:17:12-05:00'
-slug: 2008/09/18/funny-thing-about-bugs
+slug: '2008/09/18/funny-thing-about-bugs'
 tags: ["programming", "xslt"]
 ---
 They just keep popping up.

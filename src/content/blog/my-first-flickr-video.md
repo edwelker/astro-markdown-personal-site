@@ -1,7 +1,7 @@
 ---
 title: 'My first flickr video'
 date: '2008-04-27T00:45:36-05:00'
-slug: 2008/04/27/my-first-flickr-video
+slug: '2008/04/27/my-first-flickr-video'
 tags: ["leon redbone", "leonredbone", "music", "photography", "youtube"]
 ---
 I'm pretty happy with Flickr's new video service... I took this video back at the beginning of Feb, and tried to upload it to YouTube, where it was promptly rejected for being in the wrong format. I didn't want to bother converting it, so I just forgot about it for a while. Flickr, on the otherhand, instantly uploaded and converted the file for me. All I had to do was pick the file. Since I've been ridiculously busy, I can't beat the convenience factor with a stick! So enjoy!
