@@ -111,6 +111,7 @@ export async function run() {
 }
 
 // This allows the script to be run directly, or imported by a parallel runner.
+/* v8 ignore next 3 */
 if (process.argv[1] === new URL(import.meta.url).pathname) {
   run();
 }
