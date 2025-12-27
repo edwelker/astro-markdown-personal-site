@@ -16,7 +16,7 @@ recipeIngredient:
   - "1 1/2 teaspoons baking powder"
   - "1/2 teaspoon baking soda"
   - "1/2 teaspoon salt"
-  - "1 cup cranberries, chopped"
+  - "2 cup cranberries, chopped (yes, this is double what the standard recipe calls for)"
   - "1/2 cup chopped walnuts or pecans (optional)"
   - "Grated zest of 1 orange"
   - "2 tablespoons butter, melted"
@@ -35,4 +35,4 @@ draft: false
 
 ## About This Recipe
 
-This recipe is a classic from the Fannie Farmer cookbook. It's a wonderfully moist and flavorful quick bread, with the tartness of cranberries balanced by the sweetness of orange. It's perfect for a holiday brunch or as a snack with a cup of tea.
+This recipe is a classic from the Fannie Farmer cookbook. My only change is to add more cranberries, which really works to my taste.
