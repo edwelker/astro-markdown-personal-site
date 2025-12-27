@@ -2,6 +2,7 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
+    exclude: ['**/*.spec.ts', '**/*.spec.mjs'],
     // reporters: ['default', 'html'],
     coverage: {
       provider: 'v8',
