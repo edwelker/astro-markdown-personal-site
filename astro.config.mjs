@@ -10,8 +10,8 @@ import robotsTxt from 'astro-robots-txt';
 export default defineConfig({
   site: "https://eddiewelker.com",
   build: {
-      //always, never, auto
-    inlineStylesheets: 'always'
+    // Force Astro to link stylesheets as external files
+    inlineStylesheets: 'never',
   },
   redirects: {
     '/dashboard': '/dash',
@@ -40,6 +40,12 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      // Prevent Vite from inlining assets (including CSS) as base64
+      assetsInlineLimit: 0,
+      // Ensure CSS is split into separate files
+      cssCodeSplit: true,
+    },
   },
   markdown: {
     shikiConfig: {
