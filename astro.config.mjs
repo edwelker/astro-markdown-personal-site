@@ -17,7 +17,9 @@ export default defineConfig({
     '/dashboard': '/dash',
   },
   integrations: [
-      sitemap(),
+      sitemap({
+          filter : (page) => !page.includes("/dash")
+      }),
       mdx(),
       pagefind(),
       partytown({
@@ -31,7 +33,7 @@ export default defineConfig({
           userAgent: '*',
           allow: '/',
           // Optional: Block things you don't want indexed
-          disallow: ['/admin/', '/private/'],
+          disallow: ['/dash/', '/dashboard/'],
         },
       ],
     }),
