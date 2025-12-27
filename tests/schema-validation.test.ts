@@ -4,9 +4,10 @@ import path from "node:path";
 import matter from "gray-matter";
 import { z } from "astro/zod";
 import { BlogSchema } from "../src/schemas/blog";
+import { glob } from "glob";
 
 const BLOG_PATH = path.resolve(process.cwd(), "src/content/blog");
-const files = fs.readdirSync(BLOG_PATH).filter(f => f.endsWith(".md"));
+const files = glob.sync("**/*.md", { cwd: BLOG_PATH });
 
 // Mock the image helper function required by the schema factory
 const mockImage = () => z.any();

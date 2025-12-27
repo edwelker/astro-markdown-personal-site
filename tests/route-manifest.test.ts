@@ -3,10 +3,11 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { getPostHref } from "../src/lib/blog";
+import { glob } from "glob";
 
 const BLOG_PATH = path.resolve(process.cwd(), "src/content/blog");
 const PUBLIC_PATH = path.resolve(process.cwd(), "public");
-const files = fs.readdirSync(BLOG_PATH).filter(f => f.endsWith(".md") || f.endsWith(".mdx"));
+const files = glob.sync("**/*.{md,mdx}", { cwd: BLOG_PATH });
 
 describe("Astro Master Route Manifest", () => {
   it("verifies the integrity of the entire generated routing table", () => {
@@ -14,7 +15,7 @@ describe("Astro Master Route Manifest", () => {
       const { data } = matter(fs.readFileSync(path.join(BLOG_PATH, file), "utf-8"));
       if (data.draft) return null;
 
-      const fullPath = getPostHref(file, new Date(data.date));
+      const fullPath = getPostHref({ data });
       const routeParam = fullPath.replace(/^\/blog\//, "").replace(/\/$/, "");
       
       return {

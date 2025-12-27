@@ -19,6 +19,12 @@ export const BLOG: Metadata = {
   DESCRIPTION: "A collection of articles on software engineering, XSLT, Python, food, cycling, and the intersection of technology and hobby.",
 };
 
+export const RECIPES: Metadata = {
+  TITLE: "Recipes",
+  DESCRIPTION: "A collection of recipes by Eddie Welker.",
+};
+
+
 export const PROJECTS: Metadata = {
   TITLE: "Highlights",
   DESCRIPTION: "A curated list of my cycling achievements, technical projects, and other creative highlights.",

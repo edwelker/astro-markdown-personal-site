@@ -3,15 +3,14 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
-import { BLOG } from "@consts";
-import { getPostHref } from "@lib/blog";
+import { RECIPES } from "@consts";
 
-const data = (await getCollection("blog"))
-  .filter((post) => !post.data.draft)
+const data = (await getCollection("recipes"))
+  .filter((recipe) => !recipe.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 type Acc = {
-  [year: string]: CollectionEntry<"blog">[];
+  [year: string]: CollectionEntry<"recipes">[];
 };
 
 const posts = data.reduce((acc: Acc, post) => {
@@ -24,7 +23,7 @@ const posts = data.reduce((acc: Acc, post) => {
 const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
 ---
 
-<Layout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
+<Layout title={RECIPES.TITLE} description={RECIPES.DESCRIPTION}>
   <Container>
     <aside data-pagefind-ignore>
       <div class="space-y-10">
@@ -40,7 +39,7 @@ const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
                     <li>
                       <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
                         <div class="flex flex-col gap-1">
-                          <Link href={getPostHref(post)} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">
+                          <Link href={`/recipes/${post.data.slug}/`} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">
                             {post.data.title}
                           </Link>
                           <p class="text-sm text-neutral-500">

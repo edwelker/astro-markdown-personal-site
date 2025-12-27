@@ -1,7 +1,7 @@
 ---
 title: '95% done moving'
 date: '2007-09-25T23:11:03-05:00'
-slug: 2007/09/25/95-done-moving
+slug: "2007/09/25/95-done-moving"
 tags: ["life", "moving", "papi", "red sox"]
 ---
 I moved most of the large items this weekend. I still have a few odds and ends (less than one car-full) left at the house. One more trip, and then one trip to wash the carpets, and I should be fully vacated from the old location, and fully "in" the new. Of course, everything remains in boxes, and finding anything is near impossible (and dangerous if you've got to walk over things), but I'm workin' on it.

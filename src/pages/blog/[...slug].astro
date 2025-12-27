@@ -26,10 +26,7 @@ export async function getStaticPaths() {
     const nextPost = allPosts[index - 1] || undefined;
     const prevPost = allPosts[index + 1] || undefined;
     
-    const fullPath = getPostHref(post.id, post.data.date);
-    const id = fullPath.replace(/^\/blog\//, "").replace(/\/$/, "");
-
-    return { params: { id }, props: { post, prevPost, nextPost } as Props };
+    return { params: { slug: post.slug }, props: { post, prevPost, nextPost } as Props };
   });
 }
 
@@ -41,8 +38,8 @@ const seoDescription = post.data.description ||
   (post.body ? post.body.replace(/[#*`\[\]]/g, '').trim().slice(0, 155) + '...' : '');
 
 // Resolve navigation HREFs using the shared utility
-const prevHref = prevPost ? getPostHref(prevPost.id, prevPost.data.date) : undefined;
-const nextHref = nextPost ? getPostHref(nextPost.id, nextPost.data.date) : undefined;
+const prevHref = prevPost ? getPostHref(prevPost) : undefined;
+const nextHref = nextPost ? getPostHref(nextPost) : undefined;
 
 // Debug log to check if coverImage is being retrieved
 if (post.data.coverImage) {

@@ -10,9 +10,9 @@ describe("Feed Content Integrity", () => {
   it("verifies Blog RSS links match UTC routing", () => {
     const raw = fs.readFileSync(path.join(BLOG_PATH, "wing-contest-at-quarry-house.md"), "utf-8");
     const { data } = matter(raw);
-    const href = getPostHref("wing-contest-at-quarry-house.md", new Date(data.date));
+    const href = getPostHref({ data });
     
-    expect(href).toBe("/blog/2013/05/16/wing-contest-at-quarry-house/");
+    expect(href).toBe("/blog/2013/05/15/wing-contest-at-quarry-house/");
   });
 
   it("checks for existence of highlights source data", () => {

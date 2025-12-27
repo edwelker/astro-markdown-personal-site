@@ -1,10 +1,15 @@
 import { defineCollection } from "astro:content";
-import { glob } from 'astro/loaders';
-import { BlogSchema } from "./src/schemas/blog";
+import { BlogSchema } from "@schemas/blog";
+import { RecipeSchema } from "@schemas/recipe";
 
 const blog = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/blog" }),
+  type: 'content',
   schema: BlogSchema,
 });
 
-export const collections = { blog };
+const recipes = defineCollection({
+  type: 'content',
+  schema: RecipeSchema,
+});
+
+export const collections = { blog, recipes };

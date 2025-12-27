@@ -3,8 +3,8 @@ import { getPostHref } from "@lib/blog";
 
 const { prevPost, nextPost } = Astro.props;
 
-const prevHref = prevPost?.id ? getPostHref(prevPost.id, prevPost.data.date) : null;
-const nextHref = nextPost?.id ? getPostHref(nextPost.id, nextPost.data.date) : null;
+const prevHref = prevPost?.href ?? (prevPost?.data.slug ? getPostHref(prevPost.data.slug) : null);
+const nextHref = nextPost?.href ?? (nextPost?.data.slug ? getPostHref(nextPost.data.slug) : null);
 ---
 
 <div class="grid grid-cols-2 gap-1.5 sm:gap-3">

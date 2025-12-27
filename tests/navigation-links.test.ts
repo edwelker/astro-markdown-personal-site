@@ -3,13 +3,16 @@ import { getPostHref } from "../src/lib/blog";
 
 describe("Post Navigation Links", () => {
   it("generates UTC-consistent links for previous/next navigation", () => {
-    // Testing the specific "danger date" known to shift in local time
-    const id = "wing-contest-at-quarry-house.md";
-    const date = new Date("2013-05-16T00:00:00Z");
+    // This test ensures that the getPostHref function correctly uses the canonical slug
+    const post = {
+      data: {
+        slug: "2013/05/15/wing-contest-at-quarry-house",
+      }
+    };
     
-    const href = getPostHref(id, date);
+    const href = getPostHref(post);
     
-    // Ensure it points to the 16th, matching the route
-    expect(href).toBe("/blog/2013/05/16/wing-contest-at-quarry-house/");
+    // Ensure it points to the 15th, matching the route
+    expect(href).toBe("/blog/2013/05/15/wing-contest-at-quarry-house/");
   });
 });

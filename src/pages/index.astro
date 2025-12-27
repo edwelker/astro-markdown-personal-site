@@ -17,6 +17,11 @@ const blog = (await getCollection("blog"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
+const recipes = (await getCollection("recipes"))
+  .filter((recipe) => !recipe.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+
 const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS_ON_HOMEPAGE);
 ---
 
@@ -80,9 +85,32 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
               <li>
                 <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
                   <div class="flex flex-col gap-1">
-                    <Link href={getPostHref(post.id, post.data.date)} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">{post.data.title}</Link>
+                    <Link href={getPostHref(post)} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">{post.data.title}</Link>
                     <p class="text-sm text-neutral-500">
                       {post.data.date.getUTCFullYear()}-{String(post.data.date.getUTCMonth() + 1).padStart(2, '0')}-{String(post.data.date.getUTCDate()).padStart(2, '0')}
+                    </p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="animate space-y-6" data-testid="recipes-section">
+          <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
+            <h3 class="font-semibold text-black dark:text-white text-lg">Recipes</h3>
+            <Link href="/recipes/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
+              See All Recipes <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+            </Link>
+          </div>
+          <ul class="not-prose flex flex-col gap-2">
+            {recipes.map((recipe) => (
+              <li>
+                <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                  <div class="flex flex-col gap-1">
+                    <Link href={`/recipes/${recipe.slug}/`} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">{recipe.data.title}</Link>
+                    <p class="text-sm text-neutral-500">
+                      {recipe.data.date.getUTCFullYear()}-{String(recipe.data.date.getUTCMonth() + 1).padStart(2, '0')}-{String(recipe.data.date.getUTCDate()).padStart(2, '0')}
                     </p>
                   </div>
                 </div>
