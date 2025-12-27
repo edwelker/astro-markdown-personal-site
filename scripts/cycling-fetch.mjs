@@ -32,19 +32,26 @@ export async function fetchCyclingData({ token }) {
     if (!res.ok) {
       throw new Error(`Strava activities fetch failed: HTTP ${res.status}`);
     }
-    
+
     const list = await res.json();
     if (list.length === 0) {
-      break;
+      break; // Exit while loop if no more activities
     }
 
+    let foundOldActivity = false;
     for (const a of list) {
       const rideYear = new Date(a.start_date).getFullYear();
       if (rideYear < YEAR) {
-        return allActivities;
+        foundOldActivity = true;
+        break; // Exit for loop
       }
       allActivities.push(a);
     }
+
+    if (foundOldActivity) {
+      break; // Exit while loop
+    }
+
     page++;
   }
   return allActivities;
