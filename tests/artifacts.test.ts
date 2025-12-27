@@ -8,32 +8,55 @@ const distExists = fs.existsSync(distPath);
 // Only run these tests if the build output exists
 describe.skipIf(!distExists)("Build Artifact Integrity", () => {
 
-  it("should have generated a valid RSS feed", () => {
-    const rssPath = path.join(distPath, "rss.xml");
-    expect(fs.existsSync(rssPath)).toBe(true);
-    
-    const content = fs.readFileSync(rssPath, "utf-8");
-    expect(content.trim().startsWith("<?xml")).toBe(true);
-    expect(content).toContain("<rss");
-    expect(content).toContain("<channel>");
+  describe("Core SEO Artifacts", () => {
+    it("should have generated a valid RSS feed", () => {
+      const rssPath = path.join(distPath, "rss.xml");
+      expect(fs.existsSync(rssPath)).toBe(true);
+      
+      const content = fs.readFileSync(rssPath, "utf-8");
+      expect(content.trim().startsWith("<?xml")).toBe(true);
+      expect(content).toContain("<rss");
+      expect(content).toContain("<channel>");
+    });
+
+    it("should have generated the Sitemap index", () => {
+      expect(fs.existsSync(path.join(distPath, "sitemap-index.xml"))).toBe(true);
+    });
+
+    it("should have generated robots.txt", () => {
+      expect(fs.existsSync(path.join(distPath, "robots.txt"))).toBe(true);
+    });
   });
 
-  it("should have generated the Sitemap index", () => {
-    expect(fs.existsSync(path.join(distPath, "sitemap-index.xml"))).toBe(true);
+  describe("Data Routes & API Artifacts", () => {
+    it("should have generated highlights.json", () => {
+      const filePath = path.join(distPath, "data", "highlights.json");
+      expect(fs.existsSync(filePath)).toBe(true);
+      const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      expect(Array.isArray(data)).toBe(true);
+    });
+
+    it("should have generated highlights.xml", () => {
+      const filePath = path.join(distPath, "highlights.xml");
+      expect(fs.existsSync(filePath)).toBe(true);
+      const content = fs.readFileSync(filePath, "utf-8");
+      expect(content).toContain("<item"); // RSS items
+    });
+
+    it("should have generated the API documentation page", () => {
+      const filePath = path.join(distPath, "api", "index.html");
+      expect(fs.existsSync(filePath)).toBe(true);
+    });
   });
 
-  it("should have generated robots.txt", () => {
-    expect(fs.existsSync(path.join(distPath, "robots.txt"))).toBe(true);
-  });
-
-  describe("Data Files Content", () => {
+  describe("JSON Data Integrity", () => {
     it("should have valid music.json", () => {
       const filePath = path.join(distPath, "data", "music.json");
       expect(fs.existsSync(filePath)).toBe(true);
       
       const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-      expect(typeof data).toBe("object");
-      // Ensure it's not just an empty object if it's supposed to have keys
+      expect(data).toHaveProperty("user");
+      expect(data).toHaveProperty("week");
       expect(Object.keys(data).length).toBeGreaterThan(0);
     });
 
@@ -45,7 +68,7 @@ describe.skipIf(!distExists)("Build Artifact Integrity", () => {
       expect(data).toHaveProperty("username");
       expect(data).toHaveProperty("allRatings");
       expect(Array.isArray(data.allRatings)).toBe(true);
-      expect(data).toHaveProperty("lastUpdated");
+      expect(data.allRatings.length).toBeGreaterThan(0);
     });
 
     it("should have valid cycling.json", () => {
@@ -53,8 +76,9 @@ describe.skipIf(!distExists)("Build Artifact Integrity", () => {
       expect(fs.existsSync(filePath)).toBe(true);
       
       const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-      // Cycling data is usually an array of activities or an object with stats
-      expect(data).toBeDefined();
+      expect(data).toHaveProperty("year");
+      expect(data).toHaveProperty("recent");
+      expect(Array.isArray(data.recent)).toBe(true);
     });
 
     it("should have valid flickr-photos.json", () => {
@@ -63,6 +87,7 @@ describe.skipIf(!distExists)("Build Artifact Integrity", () => {
       
       const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
       expect(Array.isArray(data)).toBe(true);
+      expect(data.length).toBeGreaterThan(0);
     });
   });
 });

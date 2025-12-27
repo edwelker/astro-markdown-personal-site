@@ -5,8 +5,8 @@ import path from 'node:path';
 const distDir = path.join(process.cwd(), 'dist');
 const distExists = fs.existsSync(distDir);
 
-describe.skipIf(!distExists)('Sitemap Integrity', () => {
-  it('should verify all sitemap URLs exist as files', () => {
+describe.skipIf(!distExists)('Sitemap & Page Integrity', () => {
+  it('should verify all sitemap URLs exist as valid HTML files', () => {
     // Find sitemap files
     let sitemapFiles: string[] = [];
     
@@ -38,10 +38,6 @@ describe.skipIf(!distExists)('Sitemap Integrity', () => {
       const urlObj = new URL(url);
       const pathname = decodeURIComponent(urlObj.pathname);
       
-      // Construct expected file path
-      // Astro default: /foo/ -> dist/foo/index.html
-      // File output: /foo.html -> dist/foo.html
-      
       let possiblePaths: string[] = [];
       
       if (pathname === '/' || pathname === '') {
@@ -49,17 +45,31 @@ describe.skipIf(!distExists)('Sitemap Integrity', () => {
       } else if (pathname.endsWith('/')) {
         possiblePaths.push(path.join(distDir, pathname, 'index.html'));
       } else if (path.extname(pathname)) {
-        // Has extension (e.g. .png, .xml), direct map
         possiblePaths.push(path.join(distDir, pathname));
       } else {
-        // No extension, no trailing slash. Could be /foo -> /foo/index.html or /foo.html
         possiblePaths.push(path.join(distDir, pathname, 'index.html'));
         possiblePaths.push(path.join(distDir, `${pathname}.html`));
       }
 
-      const exists = possiblePaths.some(p => fs.existsSync(p));
+      const actualPath = possiblePaths.find(p => fs.existsSync(p));
       
-      expect(exists, `Route ${pathname} (from ${url}) should exist on disk. Checked: ${possiblePaths.join(', ')}`).toBe(true);
+      // 1. Existence Check
+      expect(actualPath, `Route ${pathname} (from ${url}) should exist on disk.`).toBeDefined();
+
+      if (actualPath && actualPath.endsWith('.html')) {
+        const stats = fs.statSync(actualPath);
+        const content = fs.readFileSync(actualPath, 'utf-8');
+
+        // 2. Size Check (Ensure pages aren't empty/truncated)
+        expect(stats.size, `Page ${pathname} is suspiciously small (${stats.size} bytes)`).toBeGreaterThan(500);
+
+        // 3. Content Smoke Test (Ensure basic HTML structure is present)
+        // We check for doctype as a reliable indicator of an HTML build artifact.
+        // We avoid checking for <title> or </html> here as some pages (like redirects 
+        // or minimal archives) might have unusual head/body structures that 
+        // cause false positives in simple string matching.
+        expect(content, `Page ${pathname} is missing doctype`).toContain('<!DOCTYPE html>');
+      }
     });
   });
 });
