@@ -46,7 +46,7 @@ const ldJson = {
   },
   "datePublished": data.date.toISOString().split('T')[0],
   "description": data.description,
-  "image": new URL(data.coverPhoto, Astro.site).href,
+  "image": data.coverPhoto ? new URL(data.coverPhoto, Astro.site).href : undefined,
   "prepTime": data.prepTime,
   "cookTime": data.cookTime,
   "totalTime": data.totalTime,
@@ -68,7 +68,9 @@ const ldJson = {
         <span>&bull;</span>
         <span>{readingTime(recipe.body ?? "")}</span>
       </div>
-      <img src={data.coverPhoto} alt={data.title} class="w-full rounded-lg mb-4" />
+      {data.coverPhoto && (
+        <img src={data.coverPhoto} alt={data.title} class="w-full rounded-lg mb-4" />
+      )}
       
       <h2>Ingredients</h2>
       <ul>

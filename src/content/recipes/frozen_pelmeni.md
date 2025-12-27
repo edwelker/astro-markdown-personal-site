@@ -7,6 +7,7 @@ recipeYield: "1 serving"
 recipeCategory: "Main Dish"
 recipeCuisine: "Russian"
 keywords: ["pelmeni", "dumplings", "comfort food", "quick meal", "frozen"]
+coverPhoto: "https://live.staticflickr.com/65535/53392335470_f1343cbb87_c.jpg"
 recipeIngredient:
   - "15 frozen pelmeni (per person)"
   - "Water or stock/broth"
