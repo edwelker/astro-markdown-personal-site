@@ -1,11 +1,12 @@
 import type { Metadata, Site, Socials } from "@types";
 
-export const SITE: Site = {
+export const SITE = {
   TITLE: "eddiewelker.com",
   DESCRIPTION: "Eddie Welker's digital things. Coding, biking, and making things.",
   EMAIL: "no-email-published@example.com",
   NUM_POSTS_ON_HOMEPAGE: 4,
   NUM_HIGHLIGHTS_ON_HOMEPAGE: 4,
+  NUM_RECIPES_ON_HOMEPAGE: 4,
 };
 
 // todo, all of this crap needs to be streamlined, and made less yuck
@@ -21,7 +22,7 @@ export const BLOG: Metadata = {
 
 export const RECIPES: Metadata = {
   TITLE: "Recipes",
-  DESCRIPTION: "A collection of recipes by Eddie Welker.",
+  DESCRIPTION: "A collection of my recipes.",
 };
 
 

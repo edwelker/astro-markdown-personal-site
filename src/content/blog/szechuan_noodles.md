@@ -3,6 +3,7 @@ title: "My Szechuan Noodles"
 date: '2025-09-01T05:04:28-05:00'
 slug: "2025/09/01/szechuan_noodles"
 tags: ["cooking", "life"]
+draft: true
 ---
 
 My base recipe for Szechuan noodles (noods).
