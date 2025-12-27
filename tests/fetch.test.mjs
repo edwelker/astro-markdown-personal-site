@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { getStravaAccessToken, fetchCyclingData } from '../scripts/cycling-fetch.mjs';
+import { fetchMusicData } from '../scripts/music-fetch.mjs';
 
 // Mock the global fetch function
 global.fetch = vi.fn();
@@ -86,5 +87,37 @@ describe('Cycling Fetch Logic', () => {
       global.fetch.mockResolvedValueOnce({ ok: false, status: 500 });
       await expect(fetchCyclingData({ token: 'test_token' })).rejects.toThrow('Strava activities fetch failed: HTTP 500');
     });
+  });
+});
+
+describe('Music Fetch Logic', () => {
+  beforeEach(() => {
+    vi.resetAllMocks();
+  });
+
+  it('should throw an error if required credentials are not provided', async () => {
+    await expect(fetchMusicData({})).rejects.toThrow('LASTFM_USERNAME and LASTFM_API_KEY must be set');
+  });
+
+  it('should construct correct URLs and fetch data', async () => {
+    // There are 13 API calls in total for music
+    global.fetch.mockResolvedValue({
+      ok: true,
+      json: async () => ({})
+    });
+
+    await fetchMusicData({ username: 'testuser', apiKey: 'testkey' });
+
+    expect(global.fetch).toHaveBeenCalledTimes(13);
+    const firstUrl = global.fetch.mock.calls[0][0];
+    const lastUrl = global.fetch.mock.calls[12][0];
+
+    expect(firstUrl).toContain('method=user.getinfo&user=testuser&api_key=testkey');
+    expect(lastUrl).toContain('method=user.gettoptracks&period=overall&limit=40');
+  });
+
+  it('should throw an error on a failed fetch', async () => {
+    global.fetch.mockResolvedValueOnce({ ok: false, status: 503 });
+    await expect(fetchMusicData({ username: 'testuser', apiKey: 'testkey' })).rejects.toThrow('HTTP 503');
   });
 });

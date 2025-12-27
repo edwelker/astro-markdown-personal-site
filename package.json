@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "fetch": "node scripts/run-all.mjs",
     "test": "vitest run",
+    "test:cov": "vitest run --coverage",
     "test:artifacts": "vitest run tests/artifacts.test.ts",
     "test:local": "vitest run && npx playwright test --config=playwright.config.local.mjs",
     "test:build": "npx playwright test --config=playwright.config.build.mjs",
