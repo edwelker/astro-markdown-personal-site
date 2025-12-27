@@ -22,23 +22,26 @@ export async function getStravaAccessToken({ clientId, clientSecret, refreshToke
 
 export async function fetchCyclingData({ token }) {
   const YEAR = new Date().getFullYear();
-  let allActivities = [];
+  const allActivities = [];
   let page = 1;
-  let keepFetching = true;
 
-  while (keepFetching) {
+  while (true) {
     const res = await fetch(`https://www.strava.com/api/v3/athlete/activities?page=${page}&per_page=100`, {
       headers: { Authorization: `Bearer ${token}` }
     });
-    if (!res.ok) throw new Error(`Strava activities fetch failed: HTTP ${res.status}`);
+    if (!res.ok) {
+      throw new Error(`Strava activities fetch failed: HTTP ${res.status}`);
+    }
+    
     const list = await res.json();
-    if (list.length === 0) break;
+    if (list.length === 0) {
+      break;
+    }
 
     for (const a of list) {
       const rideYear = new Date(a.start_date).getFullYear();
       if (rideYear < YEAR) {
-        keepFetching = false;
-        break;
+        return allActivities;
       }
       allActivities.push(a);
     }
