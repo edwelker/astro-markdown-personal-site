@@ -1,7 +1,7 @@
 ---
-title: 'Wing contest at Quarry House'
+title: "Wing contest at Quarry House"
 date: '2013-05-15T23:50:58-05:00'
-slug: 2013/05/15/wing-contest-at-quarry-house
+slug: "2013/05/15/wing-contest-at-quarry-house"
 coverImage: https://live.staticflickr.com/2746/4461565840_02fda45cb2_b_d.jpg
 tags: ["cooking"]
 ---

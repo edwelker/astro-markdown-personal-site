@@ -1,7 +1,7 @@
 ---
-title: 'October Horror Movies'
+title: "October Horror Movies"
 date: '2008-10-16T01:02:30-05:00'
-slug: 2008/10/16/october-horror-movies
+slug: "2008/10/16/october-horror-movies"
 tags: ["film", "halloween"]
 ---
 My roommates and I have decided to try to watch a horror/thriller every night of October. Unfortunately, the Red Sox and a few other distractions have prevented watching one *every* night, but here's what we've got so far:

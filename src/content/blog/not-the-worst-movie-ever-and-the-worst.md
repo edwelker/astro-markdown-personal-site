@@ -1,7 +1,7 @@
 ---
-title: 'Not the worst movie ever, and the worst'
+title: "Not the worst movie ever, and the worst"
 date: '2007-10-23T23:14:27-05:00'
-slug: 2007/10/23/not-the-worst-movie-ever-and-the-worst
+slug: "2007/10/23/not-the-worst-movie-ever-and-the-worst"
 tags: ["film", "halloween"]
 ---
 I know the title isn't English... but I'm a little out of it after what I just watched.
