@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { getStravaAccessToken, fetchCyclingData } from '../scripts/cycling-fetch.mjs';
 import { fetchMusicData } from '../scripts/music-fetch.mjs';
+import { fetchFlickrData } from '../scripts/flickr-fetch.mjs';
 
 // Mock the global fetch function
 global.fetch = vi.fn();
@@ -119,5 +120,30 @@ describe('Music Fetch Logic', () => {
   it('should throw an error on a failed fetch', async () => {
     global.fetch.mockResolvedValueOnce({ ok: false, status: 503 });
     await expect(fetchMusicData({ username: 'testuser', apiKey: 'testkey' })).rejects.toThrow('HTTP 503');
+  });
+});
+
+describe('Flickr Fetch Logic', () => {
+  beforeEach(() => {
+    vi.resetAllMocks();
+  });
+
+  it('should fetch flickr data successfully', async () => {
+    const mockFlickrResponse = { photos: { photo: [{ id: '1' }] } };
+    global.fetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => mockFlickrResponse,
+    });
+
+    const data = await fetchFlickrData();
+
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+    expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining('flickr.com'));
+    expect(data).toEqual(mockFlickrResponse);
+  });
+
+  it('should throw an error on a failed fetch', async () => {
+    global.fetch.mockResolvedValueOnce({ ok: false, status: 500 });
+    await expect(fetchFlickrData()).rejects.toThrow('HTTP 500');
   });
 });
