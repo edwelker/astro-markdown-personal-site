@@ -6,13 +6,13 @@ export const transformStravaData = (activities) => {
   
   // Totals use all cycling types
   const cycling = activities.filter(a => ['Ride', 'GravelRide', 'MountainBikeRide', 'VirtualRide', 'EBikeRide'].includes(a.sport_type || a.type));
+  const cyclingThisYear = cycling.filter(a => new Date(a.start_date).getFullYear() === year);
   
   let ytdDist = 0, ytdElev = 0, monthDist = 0;
   const weeklyMiles = new Array(52).fill(0);
 
-  cycling.forEach(ride => {
+  cyclingThisYear.forEach(ride => {
     const d = new Date(ride.start_date);
-    if (d.getFullYear() !== year) return;
     
     const miles = ride.distance * 0.000621371;
     const feet = ride.total_elevation_gain * 3.28084;
@@ -27,7 +27,7 @@ export const transformStravaData = (activities) => {
   });
 
   // Recent List: Strict filter for outdoor, non-trainer, non-virtual rides
-  const recentRides = cycling
+  const recentRides = cyclingThisYear
     .filter(a => {
       const isVirtual = a.sport_type === 'VirtualRide' || a.type === 'VirtualRide';
       const isTrainer = a.trainer === true;
@@ -48,7 +48,7 @@ export const transformStravaData = (activities) => {
     year: {
       distance: Math.round(ytdDist).toLocaleString(),
       elevation: Math.round(ytdElev).toLocaleString(),
-      count: cycling.length
+      count: cyclingThisYear.length
     },
     month: {
       name: now.toLocaleDateString('en-US', { month: 'long' }),
