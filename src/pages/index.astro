@@ -11,6 +11,7 @@ import MusicStats from "@components/MusicStats.astro";
 import CyclingStats from "@components/CyclingStats.astro";
 import MediaTeaser from "@components/MediaTeaser.astro";
 import HighlightSchema from "@components/HighlightSchema.astro";
+import RecipeCard from "@components/RecipeCard.astro";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -103,20 +104,18 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
               See All Recipes <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
             </Link>
           </div>
-          <ul class="not-prose flex flex-col gap-2">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {recipes.map((recipe) => (
-              <li>
-                <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                  <div class="flex flex-col gap-1">
-                    <Link href={`/recipes/${recipe.slug}/`} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">{recipe.data.title}</Link>
-                    <p class="text-sm text-neutral-500">
-                      {recipe.data.date.getUTCFullYear()}-{String(recipe.data.date.getUTCMonth() + 1).padStart(2, '0')}-{String(recipe.data.date.getUTCDate()).padStart(2, '0')}
-                    </p>
-                  </div>
-                </div>
-              </li>
+              <RecipeCard 
+                recipe={recipe} 
+                showMetadata={false} 
+                showDescription={false}
+                titleClass="text-base"
+                underlineOnHover={true}
+              />
             ))}
-          </ul>
+          </div>
         </section>
       </div>
     </aside>

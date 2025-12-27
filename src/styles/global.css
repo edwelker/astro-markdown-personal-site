@@ -39,19 +39,6 @@
     text-decoration-color: currentColor; /* Matches the text color */
   }
 
-  /* 2. VISITED STATE:
-     Since we can't use 'dotted', we change the color.
-     This sets the link text to a slightly muted color
-     and the underline to a distinct 'visited' color (e.g., purple or dim gray).
-  */
-  main a:visited {
-    /* Optional: Dim the text slightly so it recedes visually */
-    color: #6b7280; /* Tailwind gray-500 */
-
-    /* Change the underline color to indicate "used" */
-    text-decoration-color: #a855f7; /* Tailwind purple-500 */
-  }
-
   /* 3. PREVENT NAV/BUTTONS FROM UNDERLINING
      Sometimes buttons inside <main> (like "See all posts") get caught.
      You can exclude them by class if needed.

@@ -2,7 +2,6 @@
 title: "Onion-dill rice"
 description: "A flavorful rice dish with browned onions, red peppers, garlic, and fresh dill. Great as a side or a light main."
 date: 2011-08-03T21:39:41-05:00
-coverPhoto: "https://placehold.co/600x400?text=Onion+Dill+Rice"
 prepTime: "PT15M"
 cookTime: "PT25M"
 totalTime: "PT40M"

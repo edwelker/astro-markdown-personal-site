@@ -1,60 +1,28 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
-import Link from "@components/Link.astro";
 import { RECIPES } from "@consts";
+import RecipeCard from "@components/RecipeCard.astro";
 
-const data = (await getCollection("recipes"))
+const recipes = (await getCollection("recipes"))
   .filter((recipe) => !recipe.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-
-type Acc = {
-  [year: string]: CollectionEntry<"recipes">[];
-};
-
-const posts = data.reduce((acc: Acc, post) => {
-  const year = post.data.date.getUTCFullYear().toString();
-  if (!acc[year]) acc[year] = [];
-  acc[year].push(post);
-  return acc;
-}, {});
-
-const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
 ---
 
 <Layout title={RECIPES.TITLE} description={RECIPES.DESCRIPTION}>
   <Container>
-    <aside data-pagefind-ignore>
-      <div class="space-y-10">
-        <div class="space-y-8">
-          {years.map((year) => (
-            <section class="animate space-y-4">
-              <div class="font-semibold text-black dark:text-white border-b border-black/5 dark:border-white/5 pb-2">
-                {year}
-              </div>
-              <div>
-                <ul class="not-prose flex flex-col gap-2">
-                  {posts[year].map((post) => (
-                    <li>
-                      <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                        <div class="flex flex-col gap-1">
-                          <Link href={`/recipes/${post.slug}/`} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">
-                            {post.data.title}
-                          </Link>
-                          <p class="text-sm text-neutral-500">
-                            {post.data.date.getUTCFullYear()}-{String(post.data.date.getUTCMonth() + 1).padStart(2, '0')}-{String(post.data.date.getUTCDate()).padStart(2, '0')}
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </section>
-          ))}
-        </div>
+    <div class="animate space-y-8">
+      <div class="space-y-4">
+        <h1 class="font-semibold text-3xl text-black dark:text-white">Recipes</h1>
+        <p class="text-neutral-500">{RECIPES.DESCRIPTION}</p>
       </div>
-    </aside>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10">
+        {recipes.map((recipe) => (
+          <RecipeCard recipe={recipe} underlineOnHover={true} />
+        ))}
+      </div>
+    </div>
   </Container>
 </Layout>

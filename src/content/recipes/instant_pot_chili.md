@@ -7,6 +7,7 @@ recipeYield: "6 servings"
 recipeCategory: "Main Dish"
 recipeCuisine: "American"
 keywords: ["chili", "instant pot", "pinto beans", "turkey", "masa harina"]
+coverPhoto: "https://live.staticflickr.com/65535/54959162585_e3e7e32263_c.jpg"
 recipeIngredient:
   - "1 1/2 cups dried pinto beans"
   - "2 tbsp vegetable oil"

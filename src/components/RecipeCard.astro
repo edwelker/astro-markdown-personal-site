@@ -1,0 +1,77 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  recipe: CollectionEntry<"recipes">;
+  showMetadata?: boolean;
+  showDescription?: boolean;
+  titleClass?: string;
+  underlineOnHover?: boolean;
+}
+
+const { 
+  recipe, 
+  showMetadata = true, 
+  showDescription = true, 
+  titleClass = "text-lg",
+  underlineOnHover = false
+} = Astro.props;
+
+function formatTime(pt: string | undefined) {
+  if (!pt) return null;
+  return pt.replace('PT', '').toLowerCase();
+}
+---
+
+<a 
+  href={`/recipes/${recipe.slug}/`}
+  class={`group block space-y-3 text-black dark:text-white ${underlineOnHover ? '' : 'no-underline'}`}
+>
+  <div class="aspect-[3/2] w-full overflow-hidden rounded-lg border border-black/10 dark:border-white/10 bg-neutral-100 dark:bg-neutral-900 relative">
+    {recipe.data.coverPhoto ? (
+      <img 
+        src={recipe.data.coverPhoto} 
+        alt={recipe.data.title}
+        class="absolute inset-0 h-full w-full object-cover"
+        loading="lazy"
+      />
+    ) : (
+      <div class="flex flex-col h-full w-full items-center justify-center text-neutral-400 bg-neutral-50 dark:bg-neutral-800 gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-40">
+          <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+          <path d="M7 2v20"/>
+          <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
+        </svg>
+        {recipe.data.recipeCategory && (
+          <span class="text-xs font-mono uppercase tracking-widest opacity-60">{recipe.data.recipeCategory}</span>
+        )}
+      </div>
+    )}
+  </div>
+  
+  <div class="space-y-1 transition-transform duration-300 group-hover:scale-[1.02] origin-top-left">
+    <h2 class={`font-medium leading-tight ${titleClass} ${underlineOnHover ? 'group-hover:underline decoration-1 underline-offset-2' : ''}`}>
+      {recipe.data.title}
+    </h2>
+    
+    {showMetadata && (
+      <div class="flex flex-wrap gap-3 text-xs text-neutral-500 font-mono uppercase tracking-wide">
+        {recipe.data.totalTime && (
+          <span>{formatTime(recipe.data.totalTime)}</span>
+        )}
+        {recipe.data.totalTime && recipe.data.recipeYield && (
+          <span>&bull;</span>
+        )}
+        {recipe.data.recipeYield && (
+          <span>{recipe.data.recipeYield}</span>
+        )}
+      </div>
+    )}
+
+    {showDescription && recipe.data.description && (
+      <p class="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2 pt-1">
+        {recipe.data.description}
+      </p>
+    )}
+  </div>
+</a>

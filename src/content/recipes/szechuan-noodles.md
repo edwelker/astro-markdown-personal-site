@@ -2,7 +2,6 @@
 title: "My Szechuan Noodles"
 description: "My base recipe for Szechuan noodles (noods)."
 date: 2025-09-01T05:04:28-05:00
-coverPhoto: "https://placehold.co/600x400?text=Szechuan+Noodles"
 prepTime: "PT10M"
 cookTime: "PT10M"
 totalTime: "PT20M"
@@ -10,6 +9,7 @@ recipeYield: "1 serving"
 recipeCategory: "Main Course"
 recipeCuisine: "Chinese"
 keywords: ["noodles", "szechuan", "spicy", "vegetarian"]
+coverPhoto: "https://live.staticflickr.com/65535/55002956669_21698bfb4d_c.jpg"
 recipeIngredient:
   - "⅓ teaspoon mushroom or other MSG powder (chicken, etc.)"
   - "Chili oil"
