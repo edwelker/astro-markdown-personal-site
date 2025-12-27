@@ -39,7 +39,7 @@ const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
                     <li>
                       <div class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
                         <div class="flex flex-col gap-1">
-                          <Link href={`/recipes/${post.data.slug}/`} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">
+                          <Link href={`/recipes/${post.slug}/`} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">
                             {post.data.title}
                           </Link>
                           <p class="text-sm text-neutral-500">

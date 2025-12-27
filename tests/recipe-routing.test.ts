@@ -24,6 +24,12 @@ describe('Recipe Routing', () => {
     const slugs = validRecipes.map(r => r.slug);
     expect(slugs).toContain('szechuan-noodles');
     expect(slugs).toContain('onion-dill-rice');
+
+    // Verify URL construction logic matches what we expect in components
+    validRecipes.forEach(r => {
+        const url = `/recipes/${r.slug}/`;
+        expect(url).not.toContain('undefined');
+    });
   });
 
   it('should have valid dates for sorting', () => {
