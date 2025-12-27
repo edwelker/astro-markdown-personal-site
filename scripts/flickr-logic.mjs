@@ -10,7 +10,7 @@ export const transformFlickrData = (data) => {
       title: p.title || 'Untitled', 
       src: p.url_m ?? p.url_l ?? '', 
       date: p.datetaken ?? '', 
-      tags: p.tags ? p.tags.split(' ') : [],
+      tags: p.tags ? p.tags.split(' ').filter(Boolean) : [],
       aspect: width / height,
       isLandscape: width > height,
       isPortrait: height > width
