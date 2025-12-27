@@ -1,0 +1,31 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  coverImage: string | ImageMetadata;
+  alt?: string;
+  title: string;
+}
+
+const { coverImage, alt, title } = Astro.props;
+const imageAlt = alt || `Cover image for ${title}`;
+---
+
+<figure class="my-6">
+  {typeof coverImage === 'string' ? (
+    <img
+      src={coverImage}
+      alt={imageAlt}
+      loading="lazy"
+      class="w-full h-auto rounded-lg shadow-lg"
+    />
+  ) : (
+    <Image
+      src={coverImage}
+      alt={imageAlt}
+      loading="lazy"
+      class="w-full h-auto rounded-lg shadow-lg"
+    />
+  )}
+</figure>

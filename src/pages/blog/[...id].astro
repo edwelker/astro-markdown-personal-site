@@ -10,6 +10,7 @@ import TableOfContents from "@components/TableOfContents.astro";
 import Giscus from "@components/Giscus.astro";
 import BlogSchema from "@components/BlogSchema.astro";
 import { getPostHref } from "@lib/blog";
+import BlogFeaturedImage from "@components/BlogFeaturedImage.astro";
 
 type Post = CollectionEntry<"blog">;
 type Props = { post: Post; prevPost?: Post; nextPost?: Post };
@@ -34,12 +35,19 @@ export async function getStaticPaths() {
 
 const { post, prevPost, nextPost } = Astro.props;
 const { Content, headings } = await render(post);
+
+// Safely generate description from body if not provided in frontmatter
 const seoDescription = post.data.description || 
-  post.body?.replace(/[#*`\[\]]/g, '').trim().slice(0, 155) + '...';
+  (post.body ? post.body.replace(/[#*`\[\]]/g, '').trim().slice(0, 155) + '...' : '');
 
 // Resolve navigation HREFs using the shared utility
 const prevHref = prevPost ? getPostHref(prevPost.id, prevPost.data.date) : undefined;
 const nextHref = nextPost ? getPostHref(nextPost.id, nextPost.data.date) : undefined;
+
+// Debug log to check if coverImage is being retrieved
+if (post.data.coverImage) {
+  console.log(`[Blog] Rendering coverImage for ${post.data.title}:`, post.data.coverImage);
+}
 ---
 
 <Layout title={post.data.title} description={seoDescription}>
@@ -52,6 +60,13 @@ const nextHref = nextPost ? getPostHref(nextPost.id, nextPost.data.date) : undef
         <span>&bull;</span>
         <span>{readingTime(post.body ?? "")} min read</span>
       </div>
+      {post.data.coverImage && (
+        <BlogFeaturedImage 
+          coverImage={post.data.coverImage} 
+          alt={post.data.coverImageAlt}
+          title={post.data.title}
+        />
+      )}
       <TableOfContents headings={headings} />
       <Content />
       <div class="mt-24">

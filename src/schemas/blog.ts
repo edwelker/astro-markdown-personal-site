@@ -1,6 +1,6 @@
-import { z } from "zod";
+import { z } from "astro/zod";
 
-export const BlogSchema = z.object({
+export const BlogSchema = ({ image }) => z.object({
   title: z.string(),
   slug: z.string().regex(/^\d{4}\/\d{2}\/\d{2}\//, {
     message: "Slug must be hardcoded in YYYY/MM/DD/slug format to prevent UTC drift."
@@ -13,10 +13,13 @@ export const BlogSchema = z.object({
   description: z.string().optional(),
   draft: z.boolean().optional(),
   tags: z.array(z.string()).optional(),
-  featuredImage: z.string().optional(),
-  featuredImageAlt: z.string().optional(),
+  
+  // Strictly use coverImage
+  coverImage: z.union([image(), z.string()]).optional(),
+  coverImageAlt: z.string().optional(),
+  
   layout: z.string().optional(),
   ignore_links: z.array(z.string()).optional(),
 });
 
-export type BlogFrontmatter = z.infer<typeof BlogSchema>;
+export type BlogFrontmatter = z.infer<ReturnType<typeof BlogSchema>>;

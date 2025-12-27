@@ -2,10 +2,16 @@ import { describe, it, expect } from "vitest";
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { z } from "astro/zod";
 import { BlogSchema } from "../src/schemas/blog";
 
 const BLOG_PATH = path.resolve(process.cwd(), "src/content/blog");
 const files = fs.readdirSync(BLOG_PATH).filter(f => f.endsWith(".md") || f.endsWith(".mdx"));
+
+// Mock the image helper function required by the schema factory
+const mockImage = () => z.any();
+// Instantiate the schema
+const schema = BlogSchema({ image: mockImage });
 
 describe("Strict Master Blog Schema Audit", () => {
   it.each(files)("Audit: %s", (file) => {
@@ -30,7 +36,7 @@ describe("Strict Master Blog Schema Audit", () => {
     if (data.draft === true) return;
 
     // Validate against the Zod schema
-    const result = BlogSchema.safeParse(data);
+    const result = schema.safeParse(data);
     
     if (!result.success) {
       const errorDetails = result.error.issues.map(i => `${i.path.join('.')}: ${i.message}`).join(", ");
