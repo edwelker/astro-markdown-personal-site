@@ -1,7 +1,14 @@
 export const transformStravaData = (activities) => {
-  if (!Array.isArray(activities)) return { year: { distance: "0", elevation: "0", count: 0 }, month: { name: "", distance: 0 }, recent: [], chart: [] };
-  
   const now = new Date();
+  if (!Array.isArray(activities)) {
+    return {
+      year: { distance: '0', elevation: '0', count: 0 },
+      month: { name: now.toLocaleDateString('en-US', { month: 'long' }), distance: 0 },
+      recent: [],
+      chart: Array(52).fill(0)
+    };
+  }
+
   const year = now.getFullYear();
   
   // Totals use all cycling types
