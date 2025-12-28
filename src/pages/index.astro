@@ -105,13 +105,13 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
             </Link>
           </div>
           
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {recipes.map((recipe) => (
               <RecipeCard 
                 recipe={recipe} 
                 showMetadata={false} 
                 showDescription={false}
-                titleClass="text-base"
+                titleClass="text-sm"
                 underlineOnHover={true}
               />
             ))}
