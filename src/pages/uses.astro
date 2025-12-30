@@ -1,0 +1,179 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+
+const title = "Uses";
+const description = "A list of hardware, software, and gear I use.";
+---
+
+<Layout title={title} description={description}>
+  <Container>
+    <div class="animate" data-pagefind-body>
+      <h1 class="font-semibold text-2xl mb-6">Uses</h1>
+      <div class="prose prose-neutral dark:prose-invert">
+        <p>
+          Inspired by <a href="https://uses.tech">uses.tech</a>, here is a list of the hardware, software, and gear I use.
+        </p>
+
+        <h2>Computers</h2>
+
+        <h3>Hardware</h3>
+        <ul>
+          <li><a href="https://support.apple.com/kb/SP794?locale=en_US">2019 Macbook Pro</a> (32GB RAM)</li>
+          <li><a href="https://www.apple.com/mac-mini/">Mac Mini</a> with two monitors</li>
+          <li><a href="https://support.apple.com/kb/SP848?locale=en_US">iPhone 13 Pro Max</a></li>
+        </ul>
+
+        <h3>Software</h3>
+
+        <h4>Languages</h4>
+        <ul>
+          <li><a href="https://go.dev/">Go</a></li>
+          <li><a href="https://nodejs.org/">Node.js</a></li>
+          <li><a href="https://github.com/nvm-sh/nvm">nvm</a></li>
+          <li><a href="https://www.python.org/">Python</a></li>
+          <li><a href="https://rvm.io/">rvm</a></li>
+        </ul>
+
+        <h4>Command Line</h4>
+        <ul>
+          <li><a href="https://beyondgrep.com/">ack</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">I just can't stop using the 'ag' shortcut</span></li>
+          <li><a href="https://www.harding.motd.ca/autossh/">autossh</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Monitor and restart SSH sessions</span></li>
+          <li><a href="https://www.gnu.org/software/bash/">Bash</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">I use this vanilla, for portability</span></li>
+          <li><a href="https://github.com/scop/bash-completion">bash-completion</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Programmable completion for Bash</span></li>
+          <li><a href="https://github.com/sharkdp/bat">bat</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">File viewer with syntax highlighting</span></li>
+          <li><a href="https://github.com/Homebrew/homebrew-cask">cask</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Manage macOS applications with Homebrew</span></li>
+          <li><a href="https://github.com/TomWright/dasel">dasel</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Query and update data structures</span></li>
+          <li><a href="https://github.com/pkolaczk/fclones">fclones</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Efficient duplicate file finder</span></li>
+          <li><a href="https://github.com/sharkdp/fd">fd</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">User-friendly alternative to find</span></li>
+          <li><a href="https://github.com/junegunn/fzf">fzf</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Command-line fuzzy finder</span></li>
+          <li><a href="https://github.com/pstadler/gauth">gauth</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Two-factor authentication code generator</span></li>
+          <li><a href="https://git-scm.com/">Git</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Distributed version control system</span></li>
+          <li><a href="https://github.com/dandavison/delta">git-delta</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Syntax-highlighting pager for git (Rust)</span></li>
+          <li><a href="https://www.gnu.org/software/sed/">gnu-sed</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Stream editor for filtering text</span></li>
+          <li><a href="https://irssi.org/">irssi</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Terminal based IRC client</span></li>
+          <li><a href="https://stedolan.github.io/jq/">jq</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Command-line JSON processor</span></li>
+          <li><a href="http://software.schmorp.de/pkg/libev.html">libev</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">High-performance event loop</span></li>
+          <li><a href="https://mosh.org/">mosh</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Mobile shell that survives disconnects</span></li>
+          <li><a href="https://github.com/OpenSC/OpenSC">opensc</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Tools and libraries for smart cards</span></li>
+          <li><a href="http://psmisc.sourceforge.net/">pstree</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Display running processes as a tree</span></li>
+          <li><a href="https://github.com/BurntSushi/ripgrep">ripgrep</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Fast text search tool (Written in Rust)</span></li>
+          <li><a href="https://github.com/libfuse/sshfs">sshfs</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Mount remote filesystems via SSH</span></li>
+          <li><a href="https://github.com/tmux/tmux">tmux</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Terminal multiplexer</span></li>
+          <li><a href="https://github.com/dduan/tre">tre</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Tree command with git awareness (Rust)</span></li>
+          <li><a href="http://mama.indstate.edu/users/ice/tree/">tree</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Recursive directory listing command</span></li>
+          <li><a href="https://github.com/universal-ctags/ctags">universal-ctags</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Generate tag files for source code</span></li>
+          <li><a href="https://www.vim.org/">Vim</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Highly configurable text editor</span></li>
+          <li><a href="https://gitlab.com/procps-ng/procps">watch</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Execute a program periodically</span></li>
+          <li><a href="https://www.gnu.org/software/wget/">wget</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Retrieving files using HTTP, HTTPS, FTP</span></li>
+        </ul>
+
+        <h4>Graphical</h4>
+        <ul>
+          <li><a href="https://apphousekitchen.com/">AlDente</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Charge limiter for MacBook batteries</span></li>
+          <li><a href="https://www.alfredapp.com/">Alfred</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Application launcher and productivity app</span></li>
+          <li><a href="https://freemacsoft.net/appcleaner/">AppCleaner</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Uninstall apps and related files</span></li>
+          <li><a href="https://www.backblaze.com/">Backblaze</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Cloud backup service</span></li>
+          <li><a href="https://github.com/kyleneideck/BackgroundMusic">Background Music</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Audio utility to pause music automatically</span></li>
+          <li><a href="https://caffeine.en.softonic.com/mac">Caffeine</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Prevents Mac from going to sleep</span></li>
+          <li><a href="https://coteditor.com/">CotEditor</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Lightweight plain-text editor</span></li>
+          <li><a href="https://www.titanium-software.fr/en/deeper.html">Deeper</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Personalization utility for macOS</span></li>
+          <li><a href="https://discord.com/">Discord</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Voice, video and text communication</span></li>
+          <li><a href="https://github.com/Mortennn/Dozer">Dozer</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Hide menu bar icons</span></li>
+          <li><a href="https://justgetflux.com/">f.lux</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Adjusts display color temperature</span></li>
+          <li><a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a></li>
+          <li><a href="https://www.google.com/chrome/">Google Chrome</a></li>
+          <li><a href="https://github.com/dwarvesf/hidden">Hidden Bar</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Hide menu bar items</span></li>
+          <li><a href="https://iterm2.com/">iTerm2</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Terminal emulator for macOS</span></li>
+          <li><a href="https://karabiner-elements.pqrs.org/">Karabiner-Elements</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Keyboard customization</span></li>
+          <li><a href="https://www.last.fm/">Last.fm</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Music recommendation and scrobbling</span></li>
+          <li><a href="https://macdown.uranusjr.com/">MacDown</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Open source Markdown editor</span></li>
+          <li><a href="https://macvim.org/">MacVim</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Vim text editor for macOS</span></li>
+          <li><a href="https://ingmarstein.github.io/Monolingual/">Monolingual</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Remove unnecessary language resources</span></li>
+          <li><a href="https://mullvad.net/">Mullvad VPN</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Privacy-focused VPN service</span></li>
+          <li><a href="https://picard.musicbrainz.org/">MusicBrainz Picard</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Cross-platform music tagger</span></li>
+          <li><a href="https://www.titanium-software.fr/en/onyx.html">OnyX</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Multifunction utility for macOS</span></li>
+          <li><a href="https://www.plex.tv/">Plex</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Client-server media player system</span></li>
+          <li><a href="https://github.com/SokoloffA/radiola">Radiola</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Internet radio player</span></li>
+          <li><a href="https://matthewpalmer.net/rocket/">Rocket</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Emoji picker for macOS</span></li>
+          <li><a href="https://selfcontrolapp.com/">SelfControl</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Block distracting websites</span></li>
+          <li><a href="https://slack.com/">Slack</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Business communication platform</span></li>
+          <li><a href="https://www.spotify.com/">Spotify</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Digital music service</span></li>
+          <li><a href="https://swinsian.com/">Swinsian</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Advanced music player for macOS</span></li>
+          <li><a href="http://www.texts.io/">Texts</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">All-in-one messaging app</span></li>
+          <li><a href="https://www.dejal.com/timeout/">Time Out</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Break reminder tool</span></li>
+          <li><a href="https://www.vienna-rss.com/">Vienna</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">RSS/Atom reader</span></li>
+          <li><a href="https://www.videolan.org/vlc/">VLC</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Portable multimedia player</span></li>
+          <li><a href="https://manytricks.com/witch/">Witch</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Window switcher</span></li>
+          <li><a href="https://www.zettlr.com/">Zettlr</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Markdown editor for academic writing</span></li>
+        </ul>
+
+        <h4>Web</h4>
+        <ul>
+          <li><a href="https://gemini.google.com/">Google Gemini</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">AI assistant</span></li>
+          <li><a href="https://intervals.icu/">Intervals.icu</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Cycling training analysis</span></li>
+          <li><a href="https://wandrer.earth/">Wandrer.Earth</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Game to explore the world</span> and <a href="https://www.openstreetmap.org/">OpenStreetMap</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Collaborative project to create a free editable map</span></li>
+          <li><a href="https://www.wunderground.com/">Weather Underground</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Weather forecasting</span></li>
+        </ul>
+
+        <h4>Fonts</h4>
+        <ul>
+          <li><a href="https://github.com/slavfox/Cozette">Cozette</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Bitmap programming font</span></li>
+          <li><a href="https://dejavu-fonts.github.io/">DejaVu</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Font family</span></li>
+          <li><a href="https://damieng.com/fonts/envy-code-r/">Envy Code R</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Coding font</span></li>
+          <li><a href="https://github.com/tonsky/FiraCode">Fira Code</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Monospaced font with ligatures</span></li>
+          <li><a href="https://fonts.google.com/specimen/Inconsolata">Inconsolata</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Monospaced font</span></li>
+          <li><a href="https://fonts.google.com/specimen/Roboto">Roboto</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Sans-serif typeface</span></li>
+          <li><a href="https://fonts.google.com/specimen/Source+Code+Pro">Source Code Pro</a> <span class="text-xs text-neutral-500 dark:text-neutral-400">Monospaced font</span></li>
+        </ul>
+
+        <h2>Cameras and Lenses</h2>
+        <ul>
+          <li><a href="https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d780.html">Nikon D780</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Nikon_D700">Nikon D700</a></li>
+          <li>Nikon 50mm 1.4 G</li>
+          <li>Nikon 50mm 1.8</li>
+          <li>Nikon 28-300mm</li>
+          <li>Nikon 85mm 1.4 D</li>
+          <li>Nikon 35-70mm</li>
+        </ul>
+
+        <h2>Streaming Devices</h2>
+        <ul>
+          <li><a href="https://onntv.com/">Google Onn</a></li>
+        </ul>
+
+        <h2>Cycling</h2>
+        <p>I have too many bikes...</p>
+        <ul>
+            <li><a href="/blog/2025/12/05/all_city_space_horse/">All City Space Horse, already described here</a></li>
+          <li><a href="https://www.bassibikes.com/shop/frames/rachel/">Bassi Rachel</a></li>
+          <li><a href="https://surlybikes.com/bikes/ogre">Surly Ogre</a></li>
+          <li><a href="https://crustbikes.com/collections/frames/products/evasion">Crust Evasion</a></li>
+          <li><a href="http://gunnarbikes.com/">Gunnar MTB</a></li>
+          <li><a href="https://surlybikes.com/collections/bridge-club">Surly Bridge Club</a></li>
+          <li><a href="https://surlybikes.com/bikes/wednesday">Surly Wednesday</a></li>
+          <li><a href="https://surlybikes.com/">Surly Moonlander</a></li>
+          <li><a href="https://us.zwift.com/pages/zwift-hub-one">Zwift Hub</a> for indoor riding</li>
+          <li><a href="https://www.garmin.com/en-US/p/798946/">Garmin 840 Solar</a></li>
+          <li><a href="https://arkel.ca/">Arkel Panniers</a></li>
+        </ul>
+
+        <h2>Cooking</h2>
+        <ul>
+          <li><a href="https://instantpot.com/">Instant Pot</a></li>
+          <li><a href="https://www.johnboos.com/">Boos Maple Cutting Board</a></li>
+          <li><a href="https://abangdun.com/products/induction-wok-cooktop-induction-burner-1700w-85v120v-electric-wok-curved-surface-electronic-cooker-concave-stoves">Abangdun Wok Induction Cooktop 1700</a> (I really like its constant heating)</li>
+          <li>Stainless Steel Chinese Cleavers (size 3 (fav) and 2)</li>
+        </ul>
+
+        <h3>Coffee</h3>
+        <ul>
+          <li><a href="https://aeropress.com/">AeroPress</a></li>
+          <li><a href="https://fellowproducts.com/products/prismo">Fellow Prismo</a></li>
+          <li><a href="https://www.oxo.com/adjustable-temperature-pour-over-kettle.html">OXO Gooseneck Kettle</a></li>
+        </ul>
+      </div>
+    </div>
+  </Container>
+</Layout>
