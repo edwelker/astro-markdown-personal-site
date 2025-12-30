@@ -1,6 +1,7 @@
 ---
 import Container from "@components/Container.astro";
 import Icon from "@components/Icon.astro";
+import SiteLinks from "@components/SiteLinks.astro";
 import { SITE, SOCIALS } from "@consts";
 
 // Calculate the build time in EST and UTC
@@ -45,6 +46,9 @@ const buildTimestamp = `${estTime} (${utcTime})`;
         ))}
       </div>
 
+      {/* Site Links */}
+      <SiteLinks />
+
       {/* Technical Metadata & API Links */}
       <div class="flex flex-col items-center gap-4">
         <div class="flex flex-col items-center gap-1">
@@ -53,15 +57,6 @@ const buildTimestamp = `${estTime} (${utcTime})`;
           </div>
           <a href="/api" class="text-[10px] font-mono text-orange-600/60 hover:text-orange-600 dark:text-orange-400/60 dark:hover:text-orange-400 uppercase tracking-[0.2em] transition-colors">
             View Site Architecture & API ↗
-          </a>
-        </div>
-
-        <div class="flex gap-4">
-          <a href="/data/music.json" class="text-[10px] font-mono text-black/30 hover:text-black dark:text-white/30 dark:hover:text-white transition-colors underline underline-offset-4 decoration-black/10">
-            Music JSON
-          </a>
-          <a href="/data/flickr-photos.json" class="text-[10px] font-mono text-black/30 hover:text-black dark:text-white/30 dark:hover:text-white transition-colors underline underline-offset-4 decoration-black/10">
-            Photo JSON
           </a>
         </div>
       </div>

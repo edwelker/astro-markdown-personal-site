@@ -40,6 +40,7 @@ export const SOCIALS: Socials = [
   { NAME: "Instagram", HREF: "https://instagram.com/edwelker" },
   { NAME: "GitHub", HREF: "https://github.com/edwelker" },
   { NAME: "LinkedIn", HREF: "https://www.linkedin.com/in/edwardwelker/" },
+  { NAME: "Bluesky", HREF: "https://bsky.app/profile/edwelker.bsky.social" },
   { NAME: 'RSS', HREF: '/rss.xml' },
   { NAME: "Spotify", HREF: "https://open.spotify.com/user/edwelker" },
   { NAME: "Strava", HREF: "https://www.strava.com/athletes/43444098" },
