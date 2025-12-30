@@ -18,7 +18,7 @@ recipeIngredient:
   - "3 tbsp chili powder (or just improvise)"
   - "1 tbsp dried oregano"
   - "2 tsp cumin powder"
-  - "2 tsp cocoa powder (totally optional :'
+  - "2 tsp cocoa powder (totally optional)"
   - "1 tsp salt"
   - "1/2 tsp black pepper"
   - "1/4 tsp cayenne pepper"
