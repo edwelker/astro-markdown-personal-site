@@ -24,6 +24,7 @@ recipeIngredient:
   - "1/4 tsp cayenne pepper"
   - "4 cups water"
   - "15 oz diced tomatoes"
+  - "1 small can of corn (or frozen - I love the texture)"
   - "1/4 cup masa harina (or crushed corn tortillas)"
 recipeInstructions:
   - "Note: Most ingredients and spices are optional and can be adjusted to taste."
