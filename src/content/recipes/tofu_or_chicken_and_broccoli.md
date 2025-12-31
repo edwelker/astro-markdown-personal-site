@@ -7,7 +7,6 @@ recipeYield: "3-4 servings"
 recipeCategory: "Main Dish"
 recipeCuisine: "Chinese-American"
 keywords: ["broccoli", "stir fry", "tofu", "chicken", "instant pot", "healthy"]
-coverPhoto: ""
 aggregateRating:
   ratingValue: "5"
   reviewCount: "1"
