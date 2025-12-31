@@ -10,6 +10,11 @@ recipeCategory: "Main Course"
 recipeCuisine: "Chinese"
 keywords: ["noodles", "szechuan", "spicy", "vegetarian"]
 coverPhoto: "https://live.staticflickr.com/65535/55002956669_21698bfb4d_c.jpg"
+nutrition:
+  calories: "500 calories"
+aggregateRating:
+  ratingValue: "5"
+  reviewCount: "1"
 recipeIngredient:
   - "⅓ teaspoon mushroom or other MSG powder (chicken, etc.)"
   - "Chili oil"

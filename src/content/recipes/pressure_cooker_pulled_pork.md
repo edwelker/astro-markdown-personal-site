@@ -7,6 +7,11 @@ recipeYield: "12 servings"
 recipeCategory: "Main Dish"
 recipeCuisine: "American"
 keywords: ["pulled pork", "pressure cooker", "pork shoulder", "boston butt", "meal prep"]
+nutrition:
+  calories: "600 calories"
+aggregateRating:
+  ratingValue: "5"
+  reviewCount: "1"
 recipeIngredient:
   - "8 lb Boston butt (pork shoulder)"
   - "1 head garlic, smashed"

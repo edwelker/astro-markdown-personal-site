@@ -8,6 +8,11 @@ recipeCategory: "Main Dish"
 recipeCuisine: "American"
 keywords: ["chili", "instant pot", "pinto beans", "turkey", "masa harina"]
 coverPhoto: "https://live.staticflickr.com/65535/54959162585_e3e7e32263_c.jpg"
+nutrition:
+  calories: "400 calories"
+aggregateRating:
+  ratingValue: "5"
+  reviewCount: "1"
 recipeIngredient:
   - "1 1/2 cups dried pinto beans (or any other beans, pre-soaked/cooked)"
   - "2 tbsp vegetable oil"

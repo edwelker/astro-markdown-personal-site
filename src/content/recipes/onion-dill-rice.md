@@ -9,6 +9,11 @@ recipeYield: "3 servings"
 recipeCategory: "Side Dish"
 recipeCuisine: "American"
 keywords: ["rice", "dill", "onion", "peppers", "vegetarian"]
+nutrition:
+  calories: "300 calories"
+aggregateRating:
+  ratingValue: "5"
+  reviewCount: "1"
 recipeIngredient:
   - "3/4 cup rice"
   - "1 onion, chopped"

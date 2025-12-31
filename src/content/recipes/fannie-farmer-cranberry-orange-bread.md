@@ -10,6 +10,11 @@ recipeYield: "1 loaf"
 recipeCategory: "Bread"
 recipeCuisine: "American"
 keywords: ["cranberry", "orange", "bread", "quick bread", "Fannie Farmer"]
+nutrition:
+  calories: "250 calories"
+aggregateRating:
+  ratingValue: "5"
+  reviewCount: "1"
 recipeIngredient:
   - "2 cups all-purpose flour"
   - "1 cup sugar"

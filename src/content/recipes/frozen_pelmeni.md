@@ -8,6 +8,11 @@ recipeCategory: "Main Dish"
 recipeCuisine: "Russian"
 keywords: ["pelmeni", "dumplings", "comfort food", "quick meal", "frozen"]
 coverPhoto: "https://live.staticflickr.com/65535/53392335470_f1343cbb87_c.jpg"
+nutrition:
+  calories: "400 calories"
+aggregateRating:
+  ratingValue: "5"
+  reviewCount: "1"
 recipeIngredient:
   - "15 frozen pelmeni (per person)"
   - "Water or stock/broth"
