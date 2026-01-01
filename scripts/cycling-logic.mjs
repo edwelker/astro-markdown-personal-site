@@ -120,6 +120,8 @@ export const transformStravaData = (activities) => {
   // If current month has 0 distance, show previous month
   if (Math.round(monthDist) === 0) {
       const prevDate = new Date(now);
+      // Set to 1st of month to avoid rollover issues (e.g. Mar 31 -> Feb 28/29)
+      prevDate.setDate(1); 
       prevDate.setMonth(prevDate.getMonth() - 1);
       displayMonthName = prevDate.toLocaleDateString('en-US', { month: 'long', timeZone: TIMEZONE });
       displayMonthDist = prevMonthDist;
