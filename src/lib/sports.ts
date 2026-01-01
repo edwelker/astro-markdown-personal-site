@@ -18,7 +18,11 @@ export const MY_TEAMS = [
 
 const LEAGUES = [
     { league: 'MLB', name: 'MLB Trade Rumors', url: 'https://www.mlbtraderumors.com/feed' },
-    { league: 'NBA', name: 'Hoops Rumors', url: 'https://www.hoopsrumors.com/feed' }
+    { league: 'MLB', name: 'FanGraphs', url: 'https://blogs.fangraphs.com/feed/' },
+    { league: 'MLB', name: 'CBS Sports', url: 'https://www.cbssports.com/rss/headlines/mlb/' },
+    { league: 'NBA', name: 'Hoops Rumors', url: 'https://www.hoopsrumors.com/feed' },
+    { league: 'NBA', name: 'RealGM', url: 'https://basketball.realgm.com/rss/wiretap/0/0.xml' },
+    { league: 'NBA', name: 'CBS Sports', url: 'https://www.cbssports.com/rss/headlines/nba/' }
 ] as const;
 
 async function fetchAndParse(url: string, source: string, league: 'MLB' | 'NBA'): Promise<SportsNewsItem[]> {

@@ -5,10 +5,13 @@ import tailwindcss from "@tailwindcss/vite";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from 'astro-robots-txt';
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://eddiewelker.com",
+  output: "hybrid",
+  adapter: cloudflare(),
   build: {
     // Force Astro to link stylesheets as external files
     inlineStylesheets: 'never',

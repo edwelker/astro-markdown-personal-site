@@ -1,4 +1,6 @@
 ---
+export const prerender = false;
+
 import { getMyTeamsNews, getAllLeagueNews, MY_TEAMS } from '../lib/sports';
 import Layout from '../layouts/Layout.astro';
 
@@ -36,6 +38,20 @@ const tabs = [
     { id: 'mlb', label: 'MLB' },
     { id: 'nba', label: 'NBA' }
 ];
+
+function formatRelativeTime(date: Date) {
+    const now = new Date();
+    const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+    const diffInDays = Math.floor(diffInSeconds / 86400);
+
+    if (diffInDays === 0) {
+        return 'Today';
+    } else if (diffInDays === 1) {
+        return 'Yesterday';
+    } else {
+        return `${diffInDays} days ago`;
+    }
+}
 ---
 
 <Layout title="Sports Feed">
@@ -71,11 +87,11 @@ const tabs = [
                         {team.items.map((item) => (
                             <li class="group">
                                 <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
-                                    <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
+                                    <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
                                         {item.title}
                                     </h3>
                                     <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                                        <span>{item.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' })}</span>
+                                        <span>{formatRelativeTime(item.date)}</span>
                                     </div>
                                 </a>
                             </li>
@@ -92,15 +108,15 @@ const tabs = [
                     <li class="group">
                         <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
                             <div class="flex items-baseline justify-between gap-4">
-                                <h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
+                                <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
                                     {item.title}
                                 </h3>
                                 <span class="shrink-0 text-[10px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
-                                    {item.league}
+                                    {item.league} • {item.source}
                                 </span>
                             </div>
                             <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                                <span>{item.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' })}</span>
+                                <span>{formatRelativeTime(item.date)}</span>
                             </div>
                         </a>
                     </li>
@@ -115,12 +131,15 @@ const tabs = [
                     <li class="group">
                         <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
                             <div class="flex items-baseline justify-between gap-4">
-                                <h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
+                                <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
                                     {item.title}
                                 </h3>
+                                <span class="shrink-0 text-[10px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
+                                    {item.source}
+                                </span>
                             </div>
                             <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                                <span>{item.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' })}</span>
+                                <span>{formatRelativeTime(item.date)}</span>
                             </div>
                         </a>
                     </li>
@@ -135,12 +154,15 @@ const tabs = [
                     <li class="group">
                         <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
                             <div class="flex items-baseline justify-between gap-4">
-                                <h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
+                                <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
                                     {item.title}
                                 </h3>
+                                <span class="shrink-0 text-[10px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
+                                    {item.source}
+                                </span>
                             </div>
                             <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                                <span>{item.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' })}</span>
+                                <span>{formatRelativeTime(item.date)}</span>
                             </div>
                         </a>
                     </li>
