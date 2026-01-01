@@ -10,7 +10,7 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: "https://eddiewelker.com",
-  output: "hybrid",
+  output: "static",
   adapter: cloudflare(),
   build: {
     // Force Astro to link stylesheets as external files
