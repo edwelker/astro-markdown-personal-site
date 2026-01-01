@@ -7,28 +7,46 @@ import Layout from '../layouts/Layout.astro';
 // Initialize data containers
 let myTeamsNews = [];
 let allLeagueNews = [];
+let fetchError = null;
+
+// Helper to timeout fetches so the worker doesn't hang indefinitely
+const fetchWithTimeout = (promise, ms = 8000) => {
+    const timeout = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error(`Request timed out after ${ms}ms`)), ms)
+    );
+    return Promise.race([promise, timeout]);
+};
 
 try {
-    // Fetch data in parallel with error handling for each request
-    // This prevents the entire page from crashing (500) if one feed fails
     console.log('[Sports] Starting data fetch...');
     const startTime = Date.now();
 
-    [myTeamsNews, allLeagueNews] = await Promise.all([
-        getMyTeamsNews().catch(err => {
-            console.error('[Sports] Error fetching team news:', err);
-            return [];
-        }),
-        getAllLeagueNews().catch(err => {
-            console.error('[Sports] Error fetching league news:', err);
-            return [];
-        })
-    ]);
+    // Wrap the entire fetch operation
+    const results = await fetchWithTimeout(
+        Promise.all([
+            getMyTeamsNews().catch(err => {
+                console.error('[Sports] Error fetching team news:', err);
+                return [];
+            }),
+            getAllLeagueNews().catch(err => {
+                console.error('[Sports] Error fetching league news:', err);
+                return [];
+            })
+        ]), 
+        9000 // 9 second timeout (Cloudflare workers have limits)
+    );
+
+    [myTeamsNews, allLeagueNews] = results;
 
     console.log(`[Sports] Data fetch completed in ${Date.now() - startTime}ms`);
+    console.log(`[Sports] Items fetched: Teams=${myTeamsNews?.length}, League=${allLeagueNews?.length}`);
+
 } catch (error) {
-    console.error('[Sports] Critical error in sports page:', error);
-    // Fallback to empty arrays is already handled by initialization
+    console.error('[Sports] Critical error during data fetch:', error);
+    fetchError = error;
+    // Fallback to empty arrays
+    myTeamsNews = [];
+    allLeagueNews = [];
 }
 
 const PRIMARY_TEAMS = new Set(['Red Sox', 'Knicks', 'Celtics']);
@@ -37,23 +55,35 @@ const DAYS_SECONDARY = 10;
 const now = new Date();
 const msPerDay = 24 * 60 * 60 * 1000;
 
-// Group and filter news by team
-const teamData = MY_TEAMS.map(team => {
-    const allItems = myTeamsNews.filter(i => i.source === team.name);
-    const days = PRIMARY_TEAMS.has(team.name) ? DAYS_PRIMARY : DAYS_SECONDARY;
-    const cutoff = new Date(now.getTime() - (days * msPerDay));
-    
-    // Ensure item.date is a Date object before comparison and is valid
-    const items = allItems.filter(item => {
-        const d = new Date(item.date);
-        return !isNaN(d.getTime()) && d >= cutoff;
-    });
-    
-    return {
-        ...team,
-        items
-    };
-}).filter(t => t.items.length > 0);
+let teamData = [];
+
+try {
+    if (!MY_TEAMS || !Array.isArray(MY_TEAMS)) {
+        throw new Error('MY_TEAMS configuration is missing or invalid');
+    }
+
+    // Group and filter news by team
+    teamData = MY_TEAMS.map(team => {
+        const allItems = Array.isArray(myTeamsNews) ? myTeamsNews.filter(i => i.source === team.name) : [];
+        const days = PRIMARY_TEAMS.has(team.name) ? DAYS_PRIMARY : DAYS_SECONDARY;
+        const cutoff = new Date(now.getTime() - (days * msPerDay));
+        
+        // Ensure item.date is a Date object before comparison and is valid
+        const items = allItems.filter(item => {
+            if (!item || !item.date) return false;
+            const d = new Date(item.date);
+            return !isNaN(d.getTime()) && d >= cutoff;
+        });
+        
+        return {
+            ...team,
+            items
+        };
+    }).filter(t => t.items.length > 0);
+} catch (e) {
+    console.error('[Sports] Error processing team data:', e);
+    // teamData remains []
+}
 
 const lastUpdated = new Date().toLocaleString('en-US', { 
     timeZone: 'America/New_York',
@@ -69,6 +99,7 @@ const tabs = [
 ];
 
 function formatRelativeTime(dateInput) {
+    if (!dateInput) return '';
     const date = new Date(dateInput);
     // Safety check for invalid dates
     if (isNaN(date.getTime())) return '';
@@ -94,6 +125,13 @@ function formatRelativeTime(dateInput) {
         <span class="text-xs text-neutral-500 font-mono">Updated: {lastUpdated}</span>
     </div>
 
+    {fetchError && (
+        <div class="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-sm text-red-600 dark:text-red-400">
+            <p class="font-bold">Unable to load some sports data.</p>
+            <p>Please try refreshing the page in a few moments.</p>
+        </div>
+    )}
+
     <div class="space-y-6">
         <!-- Tabs Navigation -->
         <div class="flex gap-6 border-b border-neutral-200 dark:border-neutral-800 pb-1 overflow-x-auto">
@@ -109,7 +147,7 @@ function formatRelativeTime(dateInput) {
 
         <!-- My Teams Panel -->
         <div data-panel="my-teams" class="space-y-12 animate-in fade-in duration-300">
-            {teamData.length === 0 && <p class="text-neutral-500 italic">No recent news found for your teams.</p>}
+            {teamData.length === 0 && !fetchError && <p class="text-neutral-500 italic">No recent news found for your teams.</p>}
             
             {teamData.map(team => (
                 <div class="space-y-4">
@@ -137,7 +175,7 @@ function formatRelativeTime(dateInput) {
         <!-- All News Panel -->
         <div data-panel="all" class="space-y-8 hidden animate-in fade-in duration-300">
              <ul class="space-y-6">
-                {allLeagueNews.map((item) => (
+                {allLeagueNews && allLeagueNews.map((item) => (
                     <li class="group">
                         <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
                             <div class="flex items-baseline justify-between gap-4">
@@ -160,7 +198,7 @@ function formatRelativeTime(dateInput) {
         <!-- MLB Panel -->
         <div data-panel="mlb" class="space-y-8 hidden animate-in fade-in duration-300">
              <ul class="space-y-6">
-                {allLeagueNews.filter(i => i.league === 'MLB').map((item) => (
+                {allLeagueNews && allLeagueNews.filter(i => i.league === 'MLB').map((item) => (
                     <li class="group">
                         <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
                             <div class="flex items-baseline justify-between gap-4">
@@ -183,7 +221,7 @@ function formatRelativeTime(dateInput) {
         <!-- NBA Panel -->
         <div data-panel="nba" class="space-y-8 hidden animate-in fade-in duration-300">
              <ul class="space-y-6">
-                {allLeagueNews.filter(i => i.league === 'NBA').map((item) => (
+                {allLeagueNews && allLeagueNews.filter(i => i.league === 'NBA').map((item) => (
                     <li class="group">
                         <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
                             <div class="flex items-baseline justify-between gap-4">

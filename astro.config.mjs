@@ -43,6 +43,11 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        "node:path/posix": "path-browserify",
+      },
+    },
     build: {
       // Prevent Vite from inlining assets (including CSS) as base64
       assetsInlineLimit: 0,
