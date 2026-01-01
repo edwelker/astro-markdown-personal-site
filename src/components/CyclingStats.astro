@@ -5,6 +5,7 @@ interface CyclingData { year: { distance: string; elevation: string; count: numb
 const cyclingData = (cyclingDataRaw || {}) as CyclingData;
 const { year, month, recent, chart = [] } = cyclingData;
 const maxWeekly = Math.max(...(chart || [1]), 1);
+const currentYear = new Date().getFullYear();
 
 // Filter logic:
 // 1. Must have elevation (Outdoor only)
@@ -21,7 +22,7 @@ const filteredRides = (recent || [])
   <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
     <h3 class="font-semibold text-black dark:text-white text-lg">Cycling</h3>
     <a href="https://www.strava.com/athletes/2065363" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group text-right">
-      {year?.count || 0} rides on strava <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+      {year?.count || 0} rides in {currentYear} <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
     </a>
   </div>
 
