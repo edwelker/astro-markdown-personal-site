@@ -53,11 +53,17 @@ const data = rawData.map((row: any) => {
       net = baseRaw; 
     }
   }
+
+  let city = getVal('City');
+  // Clean up MD city names (remove parens)
+  if (region === 'md' && city) {
+    city = city.replace(/\s*\(.*?\)/g, '').trim();
+  }
   
   return {
     Station: getVal('Station'),
     Address: getVal('Address'),
-    City: getVal('City'),
+    City: city,
     Zip: getVal('Zip'),
     Base: baseRaw,
     Discount: discountRaw,
@@ -100,9 +106,9 @@ const data = rawData.map((row: any) => {
               <th class="px-2 py-3 select-none">Station</th>
               <th class="px-2 py-3 select-none">Address</th>
               <th class="px-2 py-3 cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="City" data-label="City">City ↕</th>
-              <th class="px-2 py-3 cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Zip" data-label="Zip">Zip ↕</th>
+              <th class="hidden sm:table-cell px-2 py-3 cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Zip" data-label="Zip">Zip ↕</th>
               <th class="px-2 py-3 text-right cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Base" data-label="Price">Price ↕</th>
-              <th class="px-2 py-3 text-right select-none">Discount</th>
+              <th class="hidden sm:table-cell px-2 py-3 text-right select-none">Discount</th>
               <th class="px-2 py-3 text-right cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Net" data-label="Net">Net ↑</th>
             </tr>
           </thead>
@@ -121,9 +127,9 @@ const data = rawData.map((row: any) => {
                   </a>
                 </td>
                 <td class="px-2 py-3">{row.City}</td>
-                <td class="px-2 py-3">{row.Zip}</td>
+                <td class="hidden sm:table-cell px-2 py-3">{row.Zip}</td>
                 <td class="px-2 py-3 text-right">{formatPrice(row.Base)}</td>
-                <td class="px-2 py-3 text-right">{formatPrice(row.Discount)}</td>
+                <td class="hidden sm:table-cell px-2 py-3 text-right">{formatPrice(row.Discount)}</td>
                 <td class="px-2 py-3 text-right font-bold">{formatPrice(row.Net)}</td>
               </tr>
             ))}
@@ -167,9 +173,9 @@ const data = rawData.map((row: any) => {
           </a>
         </td>
         <td class="px-2 py-3">${row.City || ''}</td>
-        <td class="px-2 py-3">${row.Zip || ''}</td>
+        <td class="hidden sm:table-cell px-2 py-3">${row.Zip || ''}</td>
         <td class="px-2 py-3 text-right">${formatPrice(row.Base)}</td>
-        <td class="px-2 py-3 text-right">${formatPrice(row.Discount)}</td>
+        <td class="hidden sm:table-cell px-2 py-3 text-right">${formatPrice(row.Discount)}</td>
         <td class="px-2 py-3 text-right font-bold">${formatPrice(row.Net)}</td>
       </tr>
     `).join('');
