@@ -71,20 +71,6 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
 
         <section data-testid="flickr-section"><Flickr /></section>
 
-        <section class="animate" data-testid="instagram-section">
-          <div class="flex flex-col sm:flex-row justify-between items-center gap-4 p-4 rounded-lg border border-black/10 dark:border-white/10 bg-neutral-50 dark:bg-white/5">
-            <div class="flex items-center gap-3">
-              <div class="flex flex-col">
-                <h3 class="font-semibold text-black dark:text-white">Instagram</h3>
-                <p class="text-sm text-neutral-600 dark:text-neutral-400">Follow my latest photos and stories.</p>
-              </div>
-            </div>
-            <Link href="https://instagram.com/edwelker" external class="text-sm font-medium px-4 py-2 rounded bg-white dark:bg-neutral-800 border border-black/10 dark:border-white/10 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
-              Follow @edwelker
-            </Link>
-          </div>
-        </section>
-
         <section class="animate" data-testid="music-section"><MusicStats /></section>
         <section class="animate" data-testid="cycling-section"><CyclingStats /></section>
         <section class="animate" data-testid="media-section"><MediaTeaser /></section>
