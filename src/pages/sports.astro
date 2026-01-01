@@ -53,11 +53,12 @@ try {
     allLeagueNews = [];
 }
 
-const PRIMARY_TEAMS = new Set(['Red Sox', 'Knicks', 'Celtics']);
-const DAYS_PRIMARY = 5;
-const DAYS_SECONDARY = 10;
-const now = new Date();
-const msPerDay = 24 * 60 * 60 * 1000;
+const TEAM_COUNTS = {
+    'Red Sox': 10,
+    'Knicks': 6,
+    'Celtics': 6
+};
+const DEFAULT_COUNT = 5;
 
 let teamData = [];
 
@@ -69,15 +70,18 @@ try {
     // Group and filter news by team
     teamData = MY_TEAMS.map(team => {
         const allItems = Array.isArray(myTeamsNews) ? myTeamsNews.filter(i => i.source === team.name) : [];
-        const days = PRIMARY_TEAMS.has(team.name) ? DAYS_PRIMARY : DAYS_SECONDARY;
-        const cutoff = new Date(now.getTime() - (days * msPerDay));
+        
+        // Sort by date descending
+        allItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+        const limit = TEAM_COUNTS[team.name] || DEFAULT_COUNT;
         
         // Ensure item.date is a Date object before comparison and is valid
         const items = allItems.filter(item => {
             if (!item || !item.date) return false;
             const d = new Date(item.date);
-            return !isNaN(d.getTime()) && d >= cutoff;
-        });
+            return !isNaN(d.getTime());
+        }).slice(0, limit);
         
         return {
             ...team,
@@ -131,10 +135,19 @@ function decodeHtmlEntities(str) {
               .replace(/&lt;/g, '<')
               .replace(/&gt;/g, '>');
 }
+
+function getSourceDomain(url) {
+    try {
+        const domain = new URL(url).hostname;
+        return domain.replace('www.', '');
+    } catch (e) {
+        return '';
+    }
+}
 ---
 
 <Layout title="Sports Feed">
-  <div class="max-w-3xl mx-auto px-4 py-8">
+  <div class="max-w-2xl mx-auto px-4 py-8">
     <div class="flex justify-between items-end mb-8">
         <div>
             <h1 class="text-3xl font-bold text-black dark:text-white">Sports Feed</h1>
@@ -186,6 +199,8 @@ function decodeHtmlEntities(str) {
                                     </h3>
                                     <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
                                         <span>{formatRelativeTime(item.date)}</span>
+                                        <span class="text-neutral-300 dark:text-neutral-700">•</span>
+                                        <span class="text-neutral-400">{getSourceDomain(item.link)}</span>
                                     </div>
                                 </a>
                             </li>
