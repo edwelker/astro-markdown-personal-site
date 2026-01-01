@@ -4,8 +4,32 @@ export const prerender = false;
 import { getMyTeamsNews, getAllLeagueNews, MY_TEAMS } from '../lib/sports';
 import Layout from '../layouts/Layout.astro';
 
-const myTeamsNews = await getMyTeamsNews();
-const allLeagueNews = await getAllLeagueNews();
+// Initialize data containers
+let myTeamsNews = [];
+let allLeagueNews = [];
+
+try {
+    // Fetch data in parallel with error handling for each request
+    // This prevents the entire page from crashing (500) if one feed fails
+    console.log('[Sports] Starting data fetch...');
+    const startTime = Date.now();
+
+    [myTeamsNews, allLeagueNews] = await Promise.all([
+        getMyTeamsNews().catch(err => {
+            console.error('[Sports] Error fetching team news:', err);
+            return [];
+        }),
+        getAllLeagueNews().catch(err => {
+            console.error('[Sports] Error fetching league news:', err);
+            return [];
+        })
+    ]);
+
+    console.log(`[Sports] Data fetch completed in ${Date.now() - startTime}ms`);
+} catch (error) {
+    console.error('[Sports] Critical error in sports page:', error);
+    // Fallback to empty arrays is already handled by initialization
+}
 
 const PRIMARY_TEAMS = new Set(['Red Sox', 'Knicks', 'Celtics']);
 const DAYS_PRIMARY = 5;
@@ -18,7 +42,12 @@ const teamData = MY_TEAMS.map(team => {
     const allItems = myTeamsNews.filter(i => i.source === team.name);
     const days = PRIMARY_TEAMS.has(team.name) ? DAYS_PRIMARY : DAYS_SECONDARY;
     const cutoff = new Date(now.getTime() - (days * msPerDay));
-    const items = allItems.filter(item => item.date >= cutoff);
+    
+    // Ensure item.date is a Date object before comparison and is valid
+    const items = allItems.filter(item => {
+        const d = new Date(item.date);
+        return !isNaN(d.getTime()) && d >= cutoff;
+    });
     
     return {
         ...team,
@@ -39,7 +68,11 @@ const tabs = [
     { id: 'nba', label: 'NBA' }
 ];
 
-function formatRelativeTime(date: Date) {
+function formatRelativeTime(dateInput) {
+    const date = new Date(dateInput);
+    // Safety check for invalid dates
+    if (isNaN(date.getTime())) return '';
+
     const now = new Date();
     const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
     const diffInDays = Math.floor(diffInSeconds / 86400);
