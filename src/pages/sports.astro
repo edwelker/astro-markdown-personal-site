@@ -15,7 +15,7 @@ let fetchError = null;
 
 // Helper to timeout fetches so the worker doesn't hang indefinitely
 const fetchWithTimeout = (promise, ms = 8000) => {
-    const timeout = new Promise((_, reject) => 
+    const timeout = new Promise((_, reject) =>
         setTimeout(() => reject(new Error(`Request timed out after ${ms}ms`)), ms)
     );
     return Promise.race([promise, timeout]);
@@ -36,7 +36,7 @@ try {
                 console.error('[Sports] Error fetching league news:', err);
                 return [];
             })
-        ]), 
+        ]),
         9000 // 9 second timeout (Cloudflare workers have limits)
     );
 
@@ -55,10 +55,10 @@ try {
 
 const TEAM_COUNTS = {
     'Red Sox': 10,
-    'Knicks': 6,
-    'Celtics': 6
+    'Knicks': 5,
+    'Celtics': 5
 };
-const DEFAULT_COUNT = 5;
+const DEFAULT_COUNT = 4;
 
 let teamData = [];
 
@@ -70,19 +70,19 @@ try {
     // Group and filter news by team
     teamData = MY_TEAMS.map(team => {
         const allItems = Array.isArray(myTeamsNews) ? myTeamsNews.filter(i => i.source === team.name) : [];
-        
+
         // Sort by date descending
         allItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
         const limit = TEAM_COUNTS[team.name] || DEFAULT_COUNT;
-        
+
         // Ensure item.date is a Date object before comparison and is valid
         const items = allItems.filter(item => {
             if (!item || !item.date) return false;
             const d = new Date(item.date);
             return !isNaN(d.getTime());
         }).slice(0, limit);
-        
+
         return {
             ...team,
             items
@@ -94,7 +94,7 @@ try {
 }
 
 const now = new Date();
-const lastUpdated = now.toLocaleString('en-US', { 
+const lastUpdated = now.toLocaleString('en-US', {
     timeZone: 'America/New_York',
     dateStyle: 'medium',
     timeStyle: 'short'
@@ -172,7 +172,7 @@ function getSourceDomain(url) {
         <!-- Tabs Navigation -->
         <div class="flex gap-6 border-b border-neutral-200 dark:border-neutral-800 pb-1 overflow-x-auto">
             {tabs.map(tab => (
-                <button 
+                <button
                     data-tab={tab.id}
                     class={`pb-2 px-1 text-sm uppercase tracking-wider transition-colors whitespace-nowrap ${tab.id === 'my-teams' ? 'border-b-2 border-blue-500 text-black dark:text-white font-bold' : 'text-neutral-500 hover:text-black dark:hover:text-white border-b-2 border-transparent'}`}
                 >
@@ -188,7 +188,7 @@ function getSourceDomain(url) {
                 <div class="flex flex-wrap gap-3 text-sm">
                     <span class="text-neutral-500">Jump to:</span>
                     {teamData.map(team => (
-                        <a 
+                        <a
                             href={`#${team.name.toLowerCase().replace(/\s+/g, '-')}`}
                             class="text-blue-600 dark:text-blue-400 hover:underline"
                         >
@@ -199,7 +199,7 @@ function getSourceDomain(url) {
             )}
 
             {teamData.length === 0 && !fetchError && <p class="text-neutral-500 italic">No recent news found for your teams.</p>}
-            
+
             {teamData.map(team => (
                 <div id={team.name.toLowerCase().replace(/\s+/g, '-')} class="space-y-4 scroll-mt-4">
                     <h2 class="text-xl font-bold text-black dark:text-white border-b border-neutral-200 dark:border-neutral-800 pb-2">
@@ -207,17 +207,17 @@ function getSourceDomain(url) {
                     </h2>
                     <ul class="space-y-4">
                         {team.items.map((item) => (
-                            <li class="group">
-                                <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-fit">
+                            <li>
+                                <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-fit group">
                                     <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
                                         {decodeHtmlEntities(item.title)}
                                     </h3>
-                                    <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                                        <span>{formatRelativeTime(item.date)}</span>
-                                        <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                                        <span class="text-neutral-400">{getSourceDomain(item.link)}</span>
-                                    </div>
                                 </a>
+                                <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
+                                    <span>{formatRelativeTime(item.date)}</span>
+                                    <span class="text-neutral-300 dark:text-neutral-700">•</span>
+                                    <span class="text-neutral-400">{getSourceDomain(item.link)}</span>
+                                </div>
                             </li>
                         ))}
                     </ul>
@@ -229,8 +229,8 @@ function getSourceDomain(url) {
         <div data-panel="all" class="space-y-8 hidden animate-in fade-in duration-300">
              <ul class="space-y-6">
                 {allLeagueNews && allLeagueNews.map((item) => (
-                    <li class="group">
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-fit">
+                    <li>
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-fit group">
                             <div class="flex items-baseline justify-between gap-4">
                                 <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
                                     {decodeHtmlEntities(item.title)}
@@ -239,10 +239,10 @@ function getSourceDomain(url) {
                                     {item.league} • {item.source}
                                 </span>
                             </div>
-                            <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                                <span>{formatRelativeTime(item.date)}</span>
-                            </div>
                         </a>
+                        <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
+                            <span>{formatRelativeTime(item.date)}</span>
+                        </div>
                     </li>
                 ))}
             </ul>
@@ -252,8 +252,8 @@ function getSourceDomain(url) {
         <div data-panel="mlb" class="space-y-8 hidden animate-in fade-in duration-300">
              <ul class="space-y-6">
                 {allLeagueNews && allLeagueNews.filter(i => i.league === 'MLB').map((item) => (
-                    <li class="group">
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-fit">
+                    <li>
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-fit group">
                             <div class="flex items-baseline justify-between gap-4">
                                 <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
                                     {decodeHtmlEntities(item.title)}
@@ -262,10 +262,10 @@ function getSourceDomain(url) {
                                     {item.source}
                                 </span>
                             </div>
-                            <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                                <span>{formatRelativeTime(item.date)}</span>
-                            </div>
                         </a>
+                        <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
+                            <span>{formatRelativeTime(item.date)}</span>
+                        </div>
                     </li>
                 ))}
             </ul>
@@ -275,8 +275,8 @@ function getSourceDomain(url) {
         <div data-panel="nba" class="space-y-8 hidden animate-in fade-in duration-300">
              <ul class="space-y-6">
                 {allLeagueNews && allLeagueNews.filter(i => i.league === 'NBA').map((item) => (
-                    <li class="group">
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-fit">
+                    <li>
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-fit group">
                             <div class="flex items-baseline justify-between gap-4">
                                 <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
                                     {decodeHtmlEntities(item.title)}
@@ -285,10 +285,10 @@ function getSourceDomain(url) {
                                     {item.source}
                                 </span>
                             </div>
-                            <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                                <span>{formatRelativeTime(item.date)}</span>
-                            </div>
                         </a>
+                        <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
+                            <span>{formatRelativeTime(item.date)}</span>
+                        </div>
                     </li>
                 ))}
             </ul>
@@ -306,7 +306,7 @@ function getSourceDomain(url) {
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const target = (tab as HTMLElement).dataset.tab;
-        
+
         // Update tabs
         tabs.forEach(t => {
             if ((t as HTMLElement).dataset.tab === target) {
@@ -333,11 +333,11 @@ function getSourceDomain(url) {
     const updateLastUpdated = () => {
         const el = document.getElementById('last-updated');
         if (!el || !el.dataset.timestamp) return;
-        
+
         const ts = new Date(el.dataset.timestamp);
         const now = new Date();
         const diff = Math.floor((now.getTime() - ts.getTime()) / 1000);
-        
+
         let text = '';
         if (diff < 60) {
             text = 'Just now';
@@ -348,7 +348,7 @@ function getSourceDomain(url) {
         } else {
             text = ts.toLocaleDateString();
         }
-        
+
         el.textContent = `Updated: ${text}`;
     };
 
