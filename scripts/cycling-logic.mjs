@@ -22,21 +22,15 @@ export const transformStravaData = (activities) => {
 
   const { year: currentYear, month: currentMonth } = getDateParts(now);
 
-  if (!Array.isArray(activities)) {
-    return {
-      year: { distance: '0', elevation: '0', count: 0 },
-      month: { name: now.toLocaleDateString('en-US', { month: 'long', timeZone: TIMEZONE }), distance: 0 },
-      recent: [],
-      chart: Array(52).fill(0)
-    };
-  }
+  // Normalize input to ensure it's an array
+  const safeActivities = Array.isArray(activities) ? activities : [];
 
   // Totals use all cycling types, including indoor/virtual
   const CYCLING_TYPES = new Set([
-    'Ride', 'GravelRide', 'MountainBikeRide', 'VirtualRide', 'EBikeRide', 'Handcycle', 'Velomobile'
+    'Ride', 'GravelRide', 'MountainBikeRide', 'VirtualRide', 'EBikeRide', 'Handcycle', 'Velomobile', 'Unicycle', 'Wheelchair'
   ]);
   
-  const cycling = activities.filter(a => CYCLING_TYPES.has(a.sport_type || a.type));
+  const cycling = safeActivities.filter(a => CYCLING_TYPES.has(a.sport_type || a.type));
   
   let ytdDist = 0, ytdElev = 0, monthDist = 0;
   let prevMonthDist = 0;

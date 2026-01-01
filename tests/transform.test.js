@@ -24,6 +24,27 @@ describe('Data Transformation Logic', () => {
       vi.useRealTimers();
     });
 
+    it('Cycling: falls back to previous month if current month has 0 distance', () => {
+      // Set date to Jan 1st, 2026
+      vi.useFakeTimers().setSystemTime(new Date('2026-01-01T12:00:00Z'));
+      
+      const mock = [
+        // Ride in Dec 2025
+        { sport_type: 'Ride', start_date: '2025-12-15T12:00:00Z', distance: 16093.4, total_elevation_gain: 100, visibility: 'public' }
+      ];
+      
+      const res = transformStravaData(mock);
+      
+      // Year stats (2026) should be 0
+      expect(res.year.distance).toBe("0");
+      
+      // Month stats should show December (fallback)
+      expect(res.month.name).toBe("December");
+      expect(res.month.distance).toBe(10); // 10 miles from Dec ride
+      
+      vi.useRealTimers();
+    });
+
     it('Flickr: validates aspect ratio calculation', () => {
       const mock = { photos: { photo: [{ width_m: "1000", height_m: "500", id: "1" }] } };
       const res = transformFlickrData(mock);

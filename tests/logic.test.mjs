@@ -10,15 +10,16 @@ vi.setSystemTime(MOCK_DATE);
 
 describe('Cycling Logic: transformStravaData', () => {
   it('should return default structure for empty or invalid input', () => {
+    // With 0 distance in August, it falls back to July
     expect(transformStravaData([])).toEqual({
       year: { distance: '0', elevation: '0', count: 0 },
-      month: { name: 'August', distance: 0 },
+      month: { name: 'July', distance: 0 },
       recent: [],
       chart: Array(52).fill(0)
     });
     expect(transformStravaData(null)).toEqual({
       year: { distance: '0', elevation: '0', count: 0 },
-      month: { name: 'August', distance: 0 },
+      month: { name: 'July', distance: 0 },
       recent: [],
       chart: Array(52).fill(0)
     });
@@ -68,7 +69,7 @@ describe('Cycling Logic: transformStravaData', () => {
         sport_type: 'Ride',
         visibility: 'only_me',
       },
-      // Last year's ride (should be ignored)
+      // Last year's ride (should be ignored for totals, but included in recent if fetched)
       {
         id: 5,
         name: 'Old Ride',
@@ -88,7 +89,8 @@ describe('Cycling Logic: transformStravaData', () => {
     expect(result.month.name).toBe('August');
     expect(result.month.distance).toBe(40);
     
-    expect(result.recent).toHaveLength(2);
+    // Recent list now includes previous year rides if they are fetched
+    expect(result.recent).toHaveLength(3);
     expect(result.recent[0]).toEqual({
       id: 1,
       name: 'Morning Ride',
@@ -102,6 +104,13 @@ describe('Cycling Logic: transformStravaData', () => {
       date: 'Jan 15',
       distance: '20.0',
       elevation: '500',
+    });
+    expect(result.recent[2]).toEqual({
+      id: 5,
+      name: 'Old Ride',
+      date: 'Dec 25',
+      distance: '10.0',
+      elevation: '328',
     });
 
     expect(result.chart[2]).toBe(20); 

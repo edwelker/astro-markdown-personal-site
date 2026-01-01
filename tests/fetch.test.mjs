@@ -44,7 +44,7 @@ describe('Cycling Fetch Logic', () => {
   });
 
   describe('fetchCyclingData', () => {
-    it('should fetch and paginate through all activities for the current year', async () => {
+    it('should fetch and paginate through activities (15 months window)', async () => {
       const currentYear = new Date().getFullYear();
       global.fetch
         .mockResolvedValueOnce({
@@ -58,15 +58,23 @@ describe('Cycling Fetch Logic', () => {
           ok: true,
           json: async () => [
             { id: 3, start_date: `${currentYear}-08-01T00:00:00Z` },
-            { id: 4, start_date: `${currentYear - 1}-06-01T00:00:00Z` }, // Should stop pagination here
+            { id: 4, start_date: `${currentYear - 1}-06-01T00:00:00Z` }, 
+          ],
+        })
+        .mockResolvedValueOnce({
+          ok: true,
+          json: async () => [
+             // Older than 15 months (approx 2 years ago)
+            { id: 5, start_date: `${currentYear - 2}-06-01T00:00:00Z` },
           ],
         });
         
       const activities = await fetchCyclingData({ token: 'test_token' });
       
-      expect(global.fetch).toHaveBeenCalledTimes(2);
-      expect(activities).toHaveLength(3);
-      expect(activities.map(a => a.id)).toEqual([1, 2, 3]);
+      expect(global.fetch).toHaveBeenCalledTimes(3);
+      // It should include id 1, 2, 3, 4. id 5 is excluded by date check.
+      expect(activities).toHaveLength(4);
+      expect(activities.map(a => a.id)).toEqual([1, 2, 3, 4]);
     });
 
     it('should stop fetching if an empty list is returned', async () => {
