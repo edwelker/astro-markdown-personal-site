@@ -23,7 +23,7 @@ const LEAGUES = [
 
 async function fetchAndParse(url: string, source: string, league: 'MLB' | 'NBA'): Promise<SportsNewsItem[]> {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, { cache: 'no-store' });
     if (!response.ok) return [];
     const text = await response.text();
     
