@@ -93,7 +93,8 @@ try {
     // teamData remains []
 }
 
-const lastUpdated = new Date().toLocaleString('en-US', { 
+const now = new Date();
+const lastUpdated = now.toLocaleString('en-US', { 
     timeZone: 'America/New_York',
     dateStyle: 'medium',
     timeStyle: 'short'

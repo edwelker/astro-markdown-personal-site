@@ -14,7 +14,7 @@ const links = [
   {
     category: "Infrastructure",
     items: [
-      { name: "Cloudflare Pages", url: "https://dash.cloudflare.com/" },
+      { name: "Cloudflare Pages", url: "https://dash.cloudflare.com/8123990e7d6c560ed116c9af48d7d668/pages/view/website/" },
       { name: "GitHub Actions", url: "https://github.com/edwelker/website/actions" },
       { name: "GitHub Repo (Site)", url: "https://github.com/edwelker/website" }
     ]
@@ -103,6 +103,21 @@ const links = [
             </ul>
           </section>
         ))}
+
+        {/* Debugging Section */}
+        <section class="space-y-4">
+          <h5 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold border-b border-black/5 dark:border-white/5 pb-2">
+            Debugging
+          </h5>
+          <div class="p-4 rounded-xl border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.02]">
+             <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
+                To view real-time logs from the Cloudflare Worker (SSR pages):
+             </p>
+             <code class="block text-xs font-mono bg-black/5 dark:bg-white/10 p-2 rounded select-all">
+                npx wrangler pages deployment tail
+             </code>
+          </div>
+        </section>
       </div>
     </div>
   </Container>
