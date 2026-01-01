@@ -21,11 +21,16 @@ export async function getStravaAccessToken({ clientId, clientSecret, refreshToke
 }
 
 export async function fetchCyclingData({ token }) {
-  const YEAR = new Date().getFullYear();
+  const now = new Date();
+  // Fetch 15 months of history to ensure we have context for the start of the year
+  // and plenty of buffer for previous month calculations
+  const cutoffDate = new Date(now.getFullYear(), now.getMonth() - 15, now.getDate());
+  
   const allActivities = [];
   let page = 1;
+  let keepFetching = true;
 
-  while (true) {
+  while (keepFetching) {
     const res = await fetch(`https://www.strava.com/api/v3/athlete/activities?page=${page}&per_page=100`, {
       headers: { Authorization: `Bearer ${token}` }
     });
@@ -38,20 +43,16 @@ export async function fetchCyclingData({ token }) {
       break; // Exit while loop if no more activities
     }
 
-    let foundOldActivity = false;
     for (const a of list) {
-      const rideYear = new Date(a.start_date).getFullYear();
-      if (rideYear < YEAR) {
-        foundOldActivity = true;
-        break; // Exit for loop
+      const rideDate = new Date(a.start_date);
+      
+      if (rideDate >= cutoffDate) {
+        allActivities.push(a);
+      } else {
+        keepFetching = false;
+        break;
       }
-      allActivities.push(a);
     }
-
-    if (foundOldActivity) {
-      break; // Exit while loop
-    }
-
     page++;
   }
   return allActivities;
