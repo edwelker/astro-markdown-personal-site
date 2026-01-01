@@ -89,5 +89,18 @@ describe.skipIf(!distExists)("Build Artifact Integrity", () => {
       expect(Array.isArray(data)).toBe(true);
       expect(data.length).toBeGreaterThan(0);
     });
+
+    it("should have valid gas.json", () => {
+      const filePath = path.join(distPath, "data", "gas.json");
+      expect(fs.existsSync(filePath)).toBe(true);
+      
+      const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      expect(data).toHaveProperty("md");
+      expect(data).toHaveProperty("ny");
+      expect(data).toHaveProperty("ma");
+      expect(Array.isArray(data.md)).toBe(true);
+      expect(Array.isArray(data.ny)).toBe(true);
+      expect(Array.isArray(data.ma)).toBe(true);
+    });
   });
 });

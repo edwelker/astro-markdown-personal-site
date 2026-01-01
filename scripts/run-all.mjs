@@ -2,6 +2,7 @@ import { run as runCycling } from './cycling-fetch.mjs';
 import { run as runMusic } from './music-fetch.mjs';
 import { run as runTrakt } from './trakt-fetch.mjs';
 import { run as runFlickr } from './flickr-fetch.mjs';
+import { run as runGas } from './gas-fetch.mjs';
 
 async function runAll() {
   console.log('🔥 Starting all data fetch scripts...');
@@ -11,7 +12,8 @@ async function runAll() {
     runCycling(),
     runMusic(),
     runTrakt(),
-    runFlickr()
+    runFlickr(),
+    runGas()
   ]);
   
   const duration = (Date.now() - start) / 1000;

@@ -16,7 +16,7 @@ I love riding my bicycles, and I own too many of them. I've done 3 straight year
 
 I’ve played the cello since fourth grade. I love music (of almost all genres) and enjoy listening to, playing, and reading about music history. My favorite cellist has always been [Mstislav Rostropovich](https://en.wikipedia.org/wiki/Mstislav_Rostropovich), and I am especially fond of 20th-century Russian composers like [Prokofiev](https://en.wikipedia.org/wiki/Sergei_Prokofiev), [Shostakovich](https://en.wikipedia.org/wiki/Dmitri_Shostakovich), and [Miaskovsky](https://en.wikipedia.org/wiki/Nikolai_Myaskovsky). I used to be principal cellist of the [Columbia Orchestra](https://columbiaorchestra.org/), and a member of the [University of Maryland](https://music.umd.edu/) and [Greater Baltimore Youth Orchestras](https://bsomusic.org/education-community/young-musicians/baltimore-symphony-youth-orchestras/).
 
-[![Me in front of the Lincoln Center fountain](http://farm3.static.flickr.com/2399/2109275877_a5f83c80a0_m.jpg)](http://www.flickr.com/photos/ed_welker/2109275877/ "Me in front of the Lincoln Center fountain by eddie.welker, on Flickr")
+[![Me in front of the Lincoln Center fountain](https://farm3.static.flickr.com/2399/2109275877_a5f83c80a0_m.jpg)](https://www.flickr.com/photos/ed_welker/2109275877/ "Me in front of the Lincoln Center fountain by eddie.welker, on Flickr")
 
 I am also a bit of a foodie. I enjoy cooking and have been known to spend time pickling or hunting down the best ingredients for a recipe.
 

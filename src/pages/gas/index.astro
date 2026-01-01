@@ -1,0 +1,29 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import Link from "@components/Link.astro";
+
+const title = "Gas Prices";
+const description = "Local gas prices for MD, NY, and MA.";
+---
+
+<Layout title={title} description={description}>
+  <Container>
+    <div class="animate" data-pagefind-body>
+      <h1 class="font-semibold text-2xl mb-6">Gas Prices</h1>
+      <div class="prose prose-neutral dark:prose-invert">
+        <p>
+          Automated gas price tracking for my frequent locations. Data updated daily.
+        </p>
+        <ul>
+          <li><Link href="/gas/md">Maryland (Columbia/EC/Severn)</Link></li>
+          <li><Link href="/gas/ny">New York (Long Island East End)</Link></li>
+          <li><Link href="/gas/ma">Massachusetts (Western I-91 Corridor)</Link></li>
+        </ul>
+        <p class="text-sm text-neutral-500 mt-8">
+          Data is sourced from <Link href="https://github.com/edwelker/find_cheap_local_gas">edwelker/find_cheap_local_gas</Link>, which scrapes and updates prices daily.
+        </p>
+      </div>
+    </div>
+  </Container>
+</Layout>
