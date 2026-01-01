@@ -4,6 +4,10 @@ export const prerender = false;
 import { getMyTeamsNews, getAllLeagueNews, MY_TEAMS } from '../lib/sports';
 import Layout from '../layouts/Layout.astro';
 
+// Cache the response for 15 minutes (900 seconds) at the edge (Cloudflare) and in the browser.
+// This prevents the Worker from running on every request, significantly reducing usage if scraped.
+Astro.response.headers.set('Cache-Control', 'public, max-age=900, s-maxage=900');
+
 // Initialize data containers
 let myTeamsNews = [];
 let allLeagueNews = [];
@@ -116,13 +120,32 @@ function formatRelativeTime(dateInput) {
         return `${diffInDays} days ago`;
     }
 }
+
+function decodeHtmlEntities(str) {
+    if (!str) return "";
+    return str.replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(dec))
+              .replace(/&#x([0-9a-fA-F]+);/g, (match, hex) => String.fromCharCode(parseInt(hex, 16)))
+              .replace(/&quot;/g, '"')
+              .replace(/&apos;/g, "'")
+              .replace(/&amp;/g, '&')
+              .replace(/&lt;/g, '<')
+              .replace(/&gt;/g, '>');
+}
 ---
 
 <Layout title="Sports Feed">
   <div class="max-w-3xl mx-auto px-4 py-8">
-    <div class="flex justify-between items-baseline mb-8">
-        <h1 class="text-3xl font-bold text-black dark:text-white">Sports Feed</h1>
-        <span class="text-xs text-neutral-500 font-mono">Updated: {lastUpdated}</span>
+    <div class="flex justify-between items-end mb-8">
+        <div>
+            <h1 class="text-3xl font-bold text-black dark:text-white">Sports Feed</h1>
+            <div class="text-xs text-neutral-400 mt-1 space-x-2">
+                <span>Sources:</span>
+                <a href="https://www.mlb.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors">MLB</a>
+                <a href="https://www.nba.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors">NBA</a>
+                <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors">ESPN</a>
+            </div>
+        </div>
+        <span class="text-xs text-neutral-500 font-mono mb-1">Updated: {lastUpdated}</span>
     </div>
 
     {fetchError && (
@@ -138,7 +161,7 @@ function formatRelativeTime(dateInput) {
             {tabs.map(tab => (
                 <button 
                     data-tab={tab.id}
-                    class={`pb-2 px-1 text-sm uppercase tracking-wider transition-colors whitespace-nowrap ${tab.id === 'my-teams' ? 'border-b-2 border-orange-500 text-black dark:text-white font-bold' : 'text-neutral-500 hover:text-black dark:hover:text-white border-b-2 border-transparent'}`}
+                    class={`pb-2 px-1 text-sm uppercase tracking-wider transition-colors whitespace-nowrap ${tab.id === 'my-teams' ? 'border-b-2 border-blue-500 text-black dark:text-white font-bold' : 'text-neutral-500 hover:text-black dark:hover:text-white border-b-2 border-transparent'}`}
                 >
                     {tab.label}
                 </button>
@@ -158,8 +181,8 @@ function formatRelativeTime(dateInput) {
                         {team.items.map((item) => (
                             <li class="group">
                                 <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
-                                    <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
-                                        {item.title}
+                                    <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
+                                        {decodeHtmlEntities(item.title)}
                                     </h3>
                                     <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
                                         <span>{formatRelativeTime(item.date)}</span>
@@ -179,8 +202,8 @@ function formatRelativeTime(dateInput) {
                     <li class="group">
                         <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
                             <div class="flex items-baseline justify-between gap-4">
-                                <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
-                                    {item.title}
+                                <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
+                                    {decodeHtmlEntities(item.title)}
                                 </h3>
                                 <span class="shrink-0 text-[10px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
                                     {item.league} • {item.source}
@@ -202,8 +225,8 @@ function formatRelativeTime(dateInput) {
                     <li class="group">
                         <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
                             <div class="flex items-baseline justify-between gap-4">
-                                <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
-                                    {item.title}
+                                <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
+                                    {decodeHtmlEntities(item.title)}
                                 </h3>
                                 <span class="shrink-0 text-[10px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
                                     {item.source}
@@ -225,8 +248,8 @@ function formatRelativeTime(dateInput) {
                     <li class="group">
                         <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
                             <div class="flex items-baseline justify-between gap-4">
-                                <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
-                                    {item.title}
+                                <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
+                                    {decodeHtmlEntities(item.title)}
                                 </h3>
                                 <span class="shrink-0 text-[10px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
                                     {item.source}
@@ -256,10 +279,10 @@ function formatRelativeTime(dateInput) {
         // Update tabs
         tabs.forEach(t => {
             if ((t as HTMLElement).dataset.tab === target) {
-                t.classList.add('border-orange-500', 'text-black', 'dark:text-white', 'font-bold');
+                t.classList.add('border-blue-500', 'text-black', 'dark:text-white', 'font-bold');
                 t.classList.remove('text-neutral-500', 'border-transparent');
             } else {
-                t.classList.remove('border-orange-500', 'text-black', 'dark:text-white', 'font-bold');
+                t.classList.remove('border-blue-500', 'text-black', 'dark:text-white', 'font-bold');
                 t.classList.add('text-neutral-500', 'border-transparent');
             }
         });
