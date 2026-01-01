@@ -113,10 +113,9 @@ export const transformStravaData = (activities, currentDate = new Date()) => {
 
   // If current month has 0 distance, show previous month
   if (Math.round(monthDist) === 0) {
-      const prevDate = new Date(now);
-      // Set to 1st of month to avoid rollover issues (e.g. Mar 31 -> Feb 28/29)
-      prevDate.setDate(1); 
-      prevDate.setMonth(prevDate.getMonth() - 1);
+      // Use the calculated previous month/year to ensure consistency with NY time
+      // Pick the 15th of the month to be safe from timezone rollovers when formatting
+      const prevDate = new Date(Date.UTC(prevMonthYear, prevMonthIndex, 15));
       displayMonthName = prevDate.toLocaleDateString('en-US', { month: 'long', timeZone: TIMEZONE });
       displayMonthDist = prevMonthDist;
   }

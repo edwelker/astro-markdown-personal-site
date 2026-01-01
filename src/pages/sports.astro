@@ -1,0 +1,185 @@
+---
+import { getMyTeamsNews, getAllLeagueNews, MY_TEAMS } from '../lib/sports';
+import Layout from '../layouts/Layout.astro';
+
+const myTeamsNews = await getMyTeamsNews();
+const allLeagueNews = await getAllLeagueNews();
+
+const PRIMARY_TEAMS = new Set(['Red Sox', 'Knicks', 'Celtics']);
+const DAYS_PRIMARY = 5;
+const DAYS_SECONDARY = 10;
+const now = new Date();
+const msPerDay = 24 * 60 * 60 * 1000;
+
+// Group and filter news by team
+const teamData = MY_TEAMS.map(team => {
+    const allItems = myTeamsNews.filter(i => i.source === team.name);
+    const days = PRIMARY_TEAMS.has(team.name) ? DAYS_PRIMARY : DAYS_SECONDARY;
+    const cutoff = new Date(now.getTime() - (days * msPerDay));
+    const items = allItems.filter(item => item.date >= cutoff);
+    
+    return {
+        ...team,
+        items
+    };
+}).filter(t => t.items.length > 0);
+
+const lastUpdated = new Date().toLocaleString('en-US', { 
+    timeZone: 'America/New_York',
+    dateStyle: 'medium',
+    timeStyle: 'short'
+});
+
+const tabs = [
+    { id: 'my-teams', label: 'My Teams' },
+    { id: 'all', label: 'All News' },
+    { id: 'mlb', label: 'MLB' },
+    { id: 'nba', label: 'NBA' }
+];
+---
+
+<Layout title="Sports Feed">
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <div class="flex justify-between items-baseline mb-8">
+        <h1 class="text-3xl font-bold text-black dark:text-white">Sports Feed</h1>
+        <span class="text-xs text-neutral-500 font-mono">Updated: {lastUpdated}</span>
+    </div>
+
+    <div class="space-y-6">
+        <!-- Tabs Navigation -->
+        <div class="flex gap-6 border-b border-neutral-200 dark:border-neutral-800 pb-1 overflow-x-auto">
+            {tabs.map(tab => (
+                <button 
+                    data-tab={tab.id}
+                    class={`pb-2 px-1 text-sm uppercase tracking-wider transition-colors whitespace-nowrap ${tab.id === 'my-teams' ? 'border-b-2 border-orange-500 text-black dark:text-white font-bold' : 'text-neutral-500 hover:text-black dark:hover:text-white border-b-2 border-transparent'}`}
+                >
+                    {tab.label}
+                </button>
+            ))}
+        </div>
+
+        <!-- My Teams Panel -->
+        <div data-panel="my-teams" class="space-y-12 animate-in fade-in duration-300">
+            {teamData.length === 0 && <p class="text-neutral-500 italic">No recent news found for your teams.</p>}
+            
+            {teamData.map(team => (
+                <div class="space-y-4">
+                    <h2 class="text-xl font-bold text-black dark:text-white border-b border-neutral-200 dark:border-neutral-800 pb-2">
+                        {team.name} <span class="text-sm font-normal text-neutral-500 ml-2">{team.league}</span>
+                    </h2>
+                    <ul class="space-y-4">
+                        {team.items.map((item) => (
+                            <li class="group">
+                                <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
+                                    <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
+                                        {item.title}
+                                    </h3>
+                                    <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
+                                        <span>{item.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' })}</span>
+                                    </div>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
+
+        <!-- All News Panel -->
+        <div data-panel="all" class="space-y-8 hidden animate-in fade-in duration-300">
+             <ul class="space-y-6">
+                {allLeagueNews.map((item) => (
+                    <li class="group">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
+                            <div class="flex items-baseline justify-between gap-4">
+                                <h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
+                                    {item.title}
+                                </h3>
+                                <span class="shrink-0 text-[10px] font-mono uppercase tracking-wider text-neutral-400 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">
+                                    {item.league}
+                                </span>
+                            </div>
+                            <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
+                                <span>{item.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' })}</span>
+                            </div>
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
+
+        <!-- MLB Panel -->
+        <div data-panel="mlb" class="space-y-8 hidden animate-in fade-in duration-300">
+             <ul class="space-y-6">
+                {allLeagueNews.filter(i => i.league === 'MLB').map((item) => (
+                    <li class="group">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
+                            <div class="flex items-baseline justify-between gap-4">
+                                <h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
+                                    {item.title}
+                                </h3>
+                            </div>
+                            <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
+                                <span>{item.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' })}</span>
+                            </div>
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
+
+        <!-- NBA Panel -->
+        <div data-panel="nba" class="space-y-8 hidden animate-in fade-in duration-300">
+             <ul class="space-y-6">
+                {allLeagueNews.filter(i => i.league === 'NBA').map((item) => (
+                    <li class="group">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
+                            <div class="flex items-baseline justify-between gap-4">
+                                <h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-orange-500 transition-colors leading-tight">
+                                    {item.title}
+                                </h3>
+                            </div>
+                            <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
+                                <span>{item.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' })}</span>
+                            </div>
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('[data-tab]');
+    const panels = document.querySelectorAll('[data-panel]');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = (tab as HTMLElement).dataset.tab;
+        
+        // Update tabs
+        tabs.forEach(t => {
+            if ((t as HTMLElement).dataset.tab === target) {
+                t.classList.add('border-orange-500', 'text-black', 'dark:text-white', 'font-bold');
+                t.classList.remove('text-neutral-500', 'border-transparent');
+            } else {
+                t.classList.remove('border-orange-500', 'text-black', 'dark:text-white', 'font-bold');
+                t.classList.add('text-neutral-500', 'border-transparent');
+            }
+        });
+
+        // Update panels
+        panels.forEach(p => {
+            if ((p as HTMLElement).dataset.panel === target) {
+                p.classList.remove('hidden');
+            } else {
+                p.classList.add('hidden');
+            }
+        });
+      });
+    });
+  });
+</script>

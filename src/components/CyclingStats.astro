@@ -5,7 +5,7 @@ interface CyclingData { year: { distance: string; elevation: string; count: numb
 const cyclingData = (cyclingDataRaw || {}) as CyclingData;
 const { year, month, recent, chart = [] } = cyclingData;
 const maxWeekly = Math.max(...(chart || [1]), 1);
-const currentYear = new Date().getFullYear();
+const currentYear = new Date().toLocaleDateString('en-US', { year: 'numeric', timeZone: 'America/New_York' });
 
 // Filter logic:
 // 1. Must have elevation (Outdoor only)
