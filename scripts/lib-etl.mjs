@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { existsSync } from 'node:fs';
 
 /**
  * A generic concurrent map utility.
@@ -48,13 +49,38 @@ export async function writeFile(filePath, data) {
  * @param {any} [options.defaultData={}] The default data to write on failure.
  */
 export async function runETL({ name, fetcher, transform, outFile, defaultData = {} }) {
+  const cacheDir = path.join('src', 'data', 'cache');
+  const cacheFile = path.join(cacheDir, path.basename(outFile));
+
   try {
+    console.log(`⏳ ${name}: Fetching data...`);
     const rawData = await fetcher();
     const cleanData = transform(rawData);
+    
+    // Write to output file
     await writeFile(outFile, cleanData);
+    
+    // Write to cache file (latest good version)
+    await writeFile(cacheFile, cleanData);
+    
     console.log(`✅ ${name}: Success`);
   } catch (error) {
     console.error(`❌ ${name} Failed: ${error.message}.`);
+    
+    // Try to load from cache
+    try {
+      if (existsSync(cacheFile)) {
+        console.log(`⚠️ ${name}: Falling back to cached data from ${cacheFile}`);
+        const cachedData = await fs.readFile(cacheFile, 'utf-8');
+        await writeFile(outFile, JSON.parse(cachedData));
+        return;
+      }
+    } catch (cacheError) {
+      console.error(`❌ ${name}: Failed to load cache: ${cacheError.message}`);
+    }
+
+    // Fallback to default data if cache fails or doesn't exist
+    console.log(`⚠️ ${name}: Falling back to default data`);
     await writeFile(outFile, defaultData);
   }
 }
