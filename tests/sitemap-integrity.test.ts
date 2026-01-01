@@ -34,10 +34,15 @@ describe.skipIf(!distExists)('Sitemap & Page Integrity', () => {
 
     expect(urls.length, 'Sitemap should contain URLs').toBeGreaterThan(0);
 
+    // Define routes that are server-side rendered and won't exist as static files
+    const ssrRoutes = new Set(['/sports/', '/sports']);
+
     urls.forEach(url => {
       const urlObj = new URL(url);
       const pathname = decodeURIComponent(urlObj.pathname);
       
+      if (ssrRoutes.has(pathname)) return;
+
       let possiblePaths: string[] = [];
       
       if (pathname === '/' || pathname === '') {

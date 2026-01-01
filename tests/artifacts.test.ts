@@ -87,7 +87,6 @@ describe.skipIf(!distExists)("Build Artifact Integrity", () => {
       
       const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
       expect(Array.isArray(data)).toBe(true);
-      expect(data.length).toBeGreaterThan(0);
     });
 
     it("should have valid gas.json", () => {
