@@ -153,12 +153,11 @@ function getSourceDomain(url) {
             <h1 class="text-3xl font-bold text-black dark:text-white">Sports Feed</h1>
             <div class="text-xs text-neutral-400 mt-1 space-x-2">
                 <span>Sources:</span>
-                <a href="https://www.mlb.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors">MLB</a>
-                <a href="https://www.nba.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors">NBA</a>
-                <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors">ESPN</a>
+                <a href="https://www.mlbtraderumors.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors">MLB Trade Rumors</a>
+                <a href="https://www.hoopsrumors.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors">Hoops Rumors</a>
             </div>
         </div>
-        <span class="text-xs text-neutral-500 font-mono mb-1">Updated: {lastUpdated}</span>
+        <span id="last-updated" data-timestamp={now.toISOString()} class="text-xs text-neutral-500 font-mono mb-1">Updated: {lastUpdated}</span>
     </div>
 
     {fetchError && (
@@ -183,17 +182,32 @@ function getSourceDomain(url) {
 
         <!-- My Teams Panel -->
         <div data-panel="my-teams" class="space-y-12 animate-in fade-in duration-300">
+            {/* Jump Links */}
+            {teamData.length > 0 && (
+                <div class="flex flex-wrap gap-3 text-sm">
+                    <span class="text-neutral-500">Jump to:</span>
+                    {teamData.map(team => (
+                        <a 
+                            href={`#${team.name.toLowerCase().replace(/\s+/g, '-')}`}
+                            class="text-blue-600 dark:text-blue-400 hover:underline"
+                        >
+                            {team.name}
+                        </a>
+                    ))}
+                </div>
+            )}
+
             {teamData.length === 0 && !fetchError && <p class="text-neutral-500 italic">No recent news found for your teams.</p>}
             
             {teamData.map(team => (
-                <div class="space-y-4">
+                <div id={team.name.toLowerCase().replace(/\s+/g, '-')} class="space-y-4 scroll-mt-4">
                     <h2 class="text-xl font-bold text-black dark:text-white border-b border-neutral-200 dark:border-neutral-800 pb-2">
                         {team.name} <span class="text-sm font-normal text-neutral-500 ml-2">{team.league}</span>
                     </h2>
                     <ul class="space-y-4">
                         {team.items.map((item) => (
                             <li class="group">
-                                <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
+                                <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-fit">
                                     <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
                                         {decodeHtmlEntities(item.title)}
                                     </h3>
@@ -215,7 +229,7 @@ function getSourceDomain(url) {
              <ul class="space-y-6">
                 {allLeagueNews && allLeagueNews.map((item) => (
                     <li class="group">
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-fit">
                             <div class="flex items-baseline justify-between gap-4">
                                 <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
                                     {decodeHtmlEntities(item.title)}
@@ -238,7 +252,7 @@ function getSourceDomain(url) {
              <ul class="space-y-6">
                 {allLeagueNews && allLeagueNews.filter(i => i.league === 'MLB').map((item) => (
                     <li class="group">
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-fit">
                             <div class="flex items-baseline justify-between gap-4">
                                 <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
                                     {decodeHtmlEntities(item.title)}
@@ -261,7 +275,7 @@ function getSourceDomain(url) {
              <ul class="space-y-6">
                 {allLeagueNews && allLeagueNews.filter(i => i.league === 'NBA').map((item) => (
                     <li class="group">
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-fit">
                             <div class="flex items-baseline justify-between gap-4">
                                 <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
                                     {decodeHtmlEntities(item.title)}
@@ -287,6 +301,7 @@ function getSourceDomain(url) {
     const tabs = document.querySelectorAll('[data-tab]');
     const panels = document.querySelectorAll('[data-panel]');
 
+    // Handle Tabs
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const target = (tab as HTMLElement).dataset.tab;
@@ -312,5 +327,32 @@ function getSourceDomain(url) {
         });
       });
     });
+
+    // Handle Relative Time Update for Caching
+    const updateLastUpdated = () => {
+        const el = document.getElementById('last-updated');
+        if (!el || !el.dataset.timestamp) return;
+        
+        const ts = new Date(el.dataset.timestamp);
+        const now = new Date();
+        const diff = Math.floor((now.getTime() - ts.getTime()) / 1000);
+        
+        let text = '';
+        if (diff < 60) {
+            text = 'Just now';
+        } else if (diff < 3600) {
+            text = `${Math.floor(diff / 60)}m ago`;
+        } else if (diff < 86400) {
+            text = `${Math.floor(diff / 3600)}h ago`;
+        } else {
+            text = ts.toLocaleDateString();
+        }
+        
+        el.textContent = `Updated: ${text}`;
+    };
+
+    updateLastUpdated();
+    // Update every minute
+    setInterval(updateLastUpdated, 60000);
   });
 </script>
