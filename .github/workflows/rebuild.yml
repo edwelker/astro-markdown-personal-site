@@ -1,24 +1,59 @@
 # .github/workflows/rebuild.yml
 
-# Name of the workflow as it appears in GitHub Actions
-name: Scheduled Cloudflare Rebuild Trigger
+name: Update Data Cache
 
-# Triggers for this workflow
 on:
-  # Allows manual triggering via the GitHub Actions UI ("Run workflow" button)
-  workflow_dispatch:
-
+  workflow_dispatch: # Allows manual triggering from GitHub UI
   schedule:
-  # 3 AM EST is 08:00 UTC
-  # 3 PM EST is 20:00 UTC
-    - cron: '0 8,20 * * *'
-    
+    # Run every 6 hours (4 times a day)
+    - cron: '0 */6 * * *'
+
 jobs:
-  # This job only exists to ping Cloudflare to start a build
-  trigger:
+  update-cache:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      # Step 1: Trigger Cloudflare Pages Build Hook
-      - name: Trigger Cloudflare Pages Build
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Fetch Data
+        run: npm run fetch
+        env:
+          FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          LASTFM_USERNAME: ${{ secrets.LASTFM_USERNAME }}
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          TRAKT_CLIENT_ID: ${{ secrets.TRAKT_CLIENT_ID }}
+          TRAKT_USERNAME: ${{ secrets.TRAKT_USERNAME }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+
+      - name: Commit and Push Cache
         run: |
-          curl -X POST "${{ secrets.CLOUDFLARE_BUILD_HOOK }}"
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          
+          # Ensure directory exists to prevent git add failure if it wasn't created
+          mkdir -p src/data/cache
+          
+          # Add the cache directory contents
+          git add src/data/cache
+          
+          # Check if there are staged changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update data cache"
+            git push
+          fi

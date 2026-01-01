@@ -4,10 +4,28 @@ import path from "node:path";
 import matter from "gray-matter";
 import { z } from "astro/zod";
 import { BlogSchema } from "../src/schemas/blog";
-import { glob } from "glob";
 
 const BLOG_PATH = path.resolve(process.cwd(), "src/content/blog");
-const files = glob.sync("**/*.{md,mdx}", { cwd: BLOG_PATH });
+
+function getFilesRecursively(dir: string, baseDir: string = dir): string[] {
+  let results: string[] = [];
+  if (!fs.existsSync(dir)) return [];
+  const list = fs.readdirSync(dir);
+  for (const file of list) {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getFilesRecursively(fullPath, baseDir));
+    } else {
+      if (file.endsWith('.md') || file.endsWith('.mdx')) {
+        results.push(path.relative(baseDir, fullPath));
+      }
+    }
+  }
+  return results;
+}
+
+const files = getFilesRecursively(BLOG_PATH);
 
 // Mock the image helper function required by the schema factory
 const mockImage = () => z.any();

@@ -1,8 +1,12 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { mapConcurrent, writeFile, runETL } from '../scripts/lib-etl.mjs';
 import fs from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 
 vi.mock('node:fs/promises');
+vi.mock('node:fs', () => ({
+  existsSync: vi.fn()
+}));
 
 describe('lib-etl', () => {
   beforeEach(() => {
@@ -43,12 +47,16 @@ describe('lib-etl', () => {
       expect(fetcher).toHaveBeenCalled();
       expect(transform).toHaveBeenCalledWith({ raw: 'data' });
       expect(fs.writeFile).toHaveBeenCalledWith(expect.stringContaining('out.json'), JSON.stringify({ clean: 'data' }, null, 2));
-      expect(consoleLogSpy).toHaveBeenCalledWith(expect.stringContaining('Success'));
+      expect(consoleLogSpy).toHaveBeenCalledWith(expect.stringContaining('✅ Test: Wrote data to out.json'));
     });
 
     it('should handle errors and write default data', async () => {
       const fetcher = vi.fn().mockRejectedValue(new Error('Fetch failed'));
       const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleLogSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+      
+      // Mock existsSync to return false so it falls back to default data
+      vi.mocked(existsSync).mockReturnValue(false);
 
       await runETL({
         name: 'Test',
@@ -58,7 +66,7 @@ describe('lib-etl', () => {
         defaultData: { default: 'data' }
       });
 
-      expect(consoleErrorSpy).toHaveBeenCalledWith(expect.stringContaining('Failed'));
+      expect(consoleErrorSpy).toHaveBeenCalledWith(expect.stringContaining('❌ Test: Fetch failed'));
       expect(fs.writeFile).toHaveBeenCalledWith(expect.stringContaining('out.json'), JSON.stringify({ default: 'data' }, null, 2));
     });
   });

@@ -3,11 +3,29 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { getPostHref } from "../src/lib/blog";
-import { glob } from "glob";
 
 const BLOG_PATH = path.resolve(process.cwd(), "src/content/blog");
 const PUBLIC_PATH = path.resolve(process.cwd(), "public");
-const files = glob.sync("**/*.{md,mdx}", { cwd: BLOG_PATH });
+
+function getFilesRecursively(dir: string, baseDir: string = dir): string[] {
+  let results: string[] = [];
+  if (!fs.existsSync(dir)) return [];
+  const list = fs.readdirSync(dir);
+  for (const file of list) {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getFilesRecursively(fullPath, baseDir));
+    } else {
+      if (file.endsWith('.md') || file.endsWith('.mdx')) {
+        results.push(path.relative(baseDir, fullPath));
+      }
+    }
+  }
+  return results;
+}
+
+const files = getFilesRecursively(BLOG_PATH);
 
 describe("Astro Master Route Manifest", () => {
   it("verifies the integrity of the entire generated routing table", () => {

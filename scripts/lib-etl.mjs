@@ -49,38 +49,45 @@ export async function writeFile(filePath, data) {
  * @param {any} [options.defaultData={}] The default data to write on failure.
  */
 export async function runETL({ name, fetcher, transform, outFile, defaultData = {} }) {
+  // Define cache location: src/data/cache/[filename]
   const cacheDir = path.join('src', 'data', 'cache');
-  const cacheFile = path.join(cacheDir, path.basename(outFile));
+  const fileName = path.basename(outFile);
+  const cacheFile = path.join(cacheDir, fileName);
+
+  let data;
+  let source = 'fetch';
 
   try {
-    console.log(`⏳ ${name}: Fetching data...`);
+    console.log(`⏳ ${name}: Fetching fresh data...`);
     const rawData = await fetcher();
-    const cleanData = transform(rawData);
+    data = transform(rawData);
     
-    // Write to output file
-    await writeFile(outFile, cleanData);
-    
-    // Write to cache file (latest good version)
-    await writeFile(cacheFile, cleanData);
-    
-    console.log(`✅ ${name}: Success`);
+    // If fetch succeeds, update the cache file (the "latest" working version)
+    // This file should be committed to the repo by the GitHub Action
+    console.log(`💾 ${name}: Updating cache at ${cacheFile}`);
+    await writeFile(cacheFile, data);
   } catch (error) {
-    console.error(`❌ ${name} Failed: ${error.message}.`);
+    console.error(`❌ ${name}: Fetch failed (${error.message})`);
+    source = 'cache';
     
-    // Try to load from cache
+    // Try to load from cache (last good data fetch)
     try {
       if (existsSync(cacheFile)) {
         console.log(`⚠️ ${name}: Falling back to cached data from ${cacheFile}`);
-        const cachedData = await fs.readFile(cacheFile, 'utf-8');
-        await writeFile(outFile, JSON.parse(cachedData));
-        return;
+        const cachedContent = await fs.readFile(cacheFile, 'utf-8');
+        data = JSON.parse(cachedContent);
+      } else {
+        throw new Error('Cache file not found');
       }
     } catch (cacheError) {
-      console.error(`❌ ${name}: Failed to load cache: ${cacheError.message}`);
+      console.error(`❌ ${name}: Cache load failed (${cacheError.message})`);
+      source = 'default';
+      console.log(`⚠️ ${name}: Falling back to default data`);
+      data = defaultData;
     }
-
-    // Fallback to default data if cache fails or doesn't exist
-    console.log(`⚠️ ${name}: Falling back to default data`);
-    await writeFile(outFile, defaultData);
   }
+
+  // Write the result (from fetch, cache, or default) to the build artifact location
+  await writeFile(outFile, data);
+  console.log(`✅ ${name}: Wrote data to ${outFile} (Source: ${source})`);
 }

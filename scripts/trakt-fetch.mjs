@@ -93,19 +93,22 @@ export function transformAndAggregateTraktData(enriched, { username }) {
 }
 
 export async function run() {
-  const dataPath = 'src/data/trakt.json';
+  const outFile = 'src/data/trakt.json';
+  // Use the committed cache file to seed the enrichment process
+  const cacheFile = 'src/data/cache/trakt.json';
+
   await runETL({
     name: 'Trakt',
     fetcher: () => fetchAndEnrichTraktData({
       clientId: process.env.TRAKT_CLIENT_ID,
       username: process.env.TRAKT_USERNAME,
       tmdbApiKey: process.env.TMDB_API_KEY,
-      dataPath
+      dataPath: cacheFile
     }),
     transform: (data) => transformAndAggregateTraktData(data, { 
       username: process.env.TRAKT_USERNAME 
     }),
-    outFile: dataPath,
+    outFile: outFile,
     defaultData: { allRatings: [], genres: [], directors: [], sparkline: [], username: "ewelker", lastUpdated: "never" }
   });
 }

@@ -45,21 +45,23 @@ describe('Data Transformation Logic', () => {
   });
 
   describe('Fetched Data Schema Validation', () => {
-    const cycling = getData('strava.json');
-    const flickr = getData('flickr.json');
+    const cycling = getData('cycling.json');
+    const flickr = getData('flickr-photos.json');
     const music = getData('music.json');
     const trakt = getData('trakt.json');
 
     it('validates cycling data if present', () => {
-      if (!cycling) return console.warn('Skipping: strava.json not found');
+      if (!cycling) return console.warn('Skipping: cycling.json not found');
       expect(cycling).toHaveProperty('year');
       expect(Array.isArray(cycling.chart)).toBe(true);
     });
 
     it('validates flickr data if present', () => {
-      if (!flickr) return console.warn('Skipping: flickr.json not found');
+      if (!flickr) return console.warn('Skipping: flickr-photos.json not found');
       expect(Array.isArray(flickr)).toBe(true);
-      expect(flickr[0]).toHaveProperty('isPortrait');
+      if (flickr.length > 0) {
+        expect(flickr[0]).toHaveProperty('isPortrait');
+      }
     });
 
     it('validates music data if present', () => {
@@ -70,7 +72,9 @@ describe('Data Transformation Logic', () => {
     it('validates trakt data if present', () => {
       if (!trakt) return console.warn('Skipping: trakt.json not found');
       expect(Array.isArray(trakt.allRatings)).toBe(true);
-      expect(trakt.allRatings[0]).toHaveProperty('imdbId');
+      if (trakt.allRatings.length > 0) {
+        expect(trakt.allRatings[0]).toHaveProperty('imdbId');
+      }
     });
   });
 });

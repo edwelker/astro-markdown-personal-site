@@ -6,11 +6,27 @@ import { getPostHref } from "../src/lib/blog";
 
 const BLOG_PATH = path.resolve(process.cwd(), "src/content/blog");
 
-import { glob } from "glob";
+function getFilesRecursively(dir: string, baseDir: string = dir): string[] {
+  let results: string[] = [];
+  if (!fs.existsSync(dir)) return [];
+  const list = fs.readdirSync(dir);
+  for (const file of list) {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getFilesRecursively(fullPath, baseDir));
+    } else {
+      if (file.endsWith('.md') || file.endsWith('.mdx')) {
+        results.push(path.relative(baseDir, fullPath));
+      }
+    }
+  }
+  return results;
+}
 
 describe("RSS Feed Content Integrity", () => {
   it("ensures RSS item links match our UTC routing engine", () => {
-    const files = glob.sync("**/*.{md,mdx}", { cwd: BLOG_PATH });
+    const files = getFilesRecursively(BLOG_PATH);
     
     files.forEach(file => {
       const { data } = matter(fs.readFileSync(path.join(BLOG_PATH, file), "utf-8"));

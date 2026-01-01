@@ -8,6 +8,8 @@ async function runAll() {
   console.log('🔥 Starting all data fetch scripts...');
   const start = Date.now();
   
+  // Run all fetchers concurrently
+  // Each fetcher uses runETL which handles caching/fallback internally
   await Promise.all([
     runCycling(),
     runMusic(),
