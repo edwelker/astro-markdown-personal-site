@@ -1,6 +1,6 @@
-export const transformStravaData = (activities) => {
+export const transformStravaData = (activities, currentDate = new Date()) => {
   const TIMEZONE = 'America/New_York';
-  const now = new Date();
+  const now = currentDate;
 
   // Helper to get date parts in specific timezone
   const formatter = new Intl.DateTimeFormat('en-US', {
