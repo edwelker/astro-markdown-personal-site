@@ -146,7 +146,7 @@ const data = rawData.map((row: any) => {
                 <td class="px-2 py-3">{row.City}</td>
                 <td class="hidden sm:table-cell px-2 py-3">{row.Zip}</td>
                 <td class="px-2 py-3 text-right">{formatPrice(row.Base)}</td>
-                <td class="hidden sm:table-cell px-2 py-3 text-right">{formatPrice(row.Discount)}</td>
+                <td class="hidden sm:table-cell px-2 py-3 text-right">{row.Discount}</td>
                 <td class="px-2 py-3 text-right font-bold">{formatPrice(row.Net)}</td>
                 <td class="px-2 py-3 text-right text-neutral-400 italic">—</td>
               </tr>
@@ -358,7 +358,7 @@ const data = rawData.map((row: any) => {
         <td class="px-2 py-3">${row.City || ''}</td>
         <td class="hidden sm:table-cell px-2 py-3">${row.Zip || ''}</td>
         <td class="px-2 py-3 text-right">${formatPrice(row.Base)}</td>
-        <td class="hidden sm:table-cell px-2 py-3 text-right">${formatPrice(row.Discount)}</td>
+        <td class="hidden sm:table-cell px-2 py-3 text-right">${row.Discount || ''}</td>
         <td class="px-2 py-3 text-right font-bold">${formatPrice(row.Net)}</td>
         <td class="px-2 py-3 text-right ${d ? '' : 'text-neutral-400 italic'}">${displayStr}</td>
       </tr>
