@@ -115,10 +115,7 @@ const data = rawData.map((row: any) => {
         <table class="w-full text-xs sm:text-sm text-left whitespace-nowrap">
           <thead class="text-neutral-500 uppercase bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-400">
             <tr>
-              <th class="px-2 py-3 select-none">Station</th>
-              <th class="px-2 py-3 select-none">Address</th>
-              <th class="px-2 py-3 cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="City" data-label="City">City ↕</th>
-              <th class="hidden sm:table-cell px-2 py-3 cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Zip" data-label="Zip">Zip ↕</th>
+              <th class="px-2 py-3 cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Station" data-label="Station / Location">Station / Location ↕</th>
               <th class="px-2 py-3 text-right cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Base" data-label="Price">Price ↕</th>
               <th class="hidden sm:table-cell px-2 py-3 text-right select-none">Discount</th>
               <th class="px-2 py-3 text-right cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Net" data-label="Net">Net ↑</th>
@@ -126,31 +123,31 @@ const data = rawData.map((row: any) => {
             </tr>
           </thead>
           <tbody id="gas-table-body">
-            {data.map((row) => (
-              <tr 
-                class="border-b border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
-                data-lat={row.lat}
-                data-lng={row.lng}
-              >
-                <td class="px-2 py-3 font-medium">{row.Station}</td>
-                <td class="px-2 py-3">
-                  <a 
-                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${row.Address}, ${row.City} ${row.Zip}`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="hover:underline"
-                  >
-                    {row.Address}
-                  </a>
-                </td>
-                <td class="px-2 py-3">{row.City}</td>
-                <td class="hidden sm:table-cell px-2 py-3">{row.Zip}</td>
-                <td class="px-2 py-3 text-right">{formatPrice(row.Base)}</td>
-                <td class="hidden sm:table-cell px-2 py-3 text-right">{row.Discount}</td>
-                <td class="px-2 py-3 text-right font-bold">{formatPrice(row.Net)}</td>
-                <td class="px-2 py-3 text-right text-neutral-400 italic">—</td>
-              </tr>
-            ))}
+            {data.map((row) => {
+              const streetRaw = (row.Address || "").split(',')[0].replace(/^\d+\S*\s+/, "");
+              const street = streetRaw.toLowerCase().split(/\s+/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+              const city = (row.City || '').split('/')[0].trim();
+              const displayLocation = `${street}, ${city}`;
+              const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${row.Address}, ${row.City} ${row.Zip}`)}`;
+              
+              return (
+                <tr 
+                  class="border-b border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
+                  data-lat={row.lat}
+                  data-lng={row.lng}
+                >
+                  <td class="px-2 py-3 font-medium">
+                    <a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="hover:underline block">
+                      <strong>{row.Station || ''}</strong>: <span class="text-[10px] sm:text-xs text-neutral-600 dark:text-neutral-400">{displayLocation}</span>
+                    </a>
+                  </td>
+                  <td class="px-2 py-3 text-right">{formatPrice(row.Base)}</td>
+                  <td class="hidden sm:table-cell px-2 py-3 text-right">{row.Discount}</td>
+                  <td class="px-2 py-3 text-right font-bold">{formatPrice(row.Net)}</td>
+                  <td class="px-2 py-3 text-right text-neutral-400 italic">—</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -338,25 +335,24 @@ const data = rawData.map((row: any) => {
     tableBody.innerHTML = data.map(row => {
       const d = distances[row.Address];
       const displayStr = d ? `${Math.round(d.duration / 60)}m (${d.distance.toFixed(1)}mi)` : '—';
+      
+      const streetRaw = (row.Address || "").split(',')[0].replace(/^\d+\S*\s+/, "");
+      const street = streetRaw.toLowerCase().split(/\s+/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+      const city = (row.City || '').split('/')[0].trim();
+      const displayLocation = `<strong>${row.Station || ''}</strong>: <span class="text-[10px] sm:text-xs text-neutral-600 dark:text-neutral-400">${street}, ${city}</span>`;
+      const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${row.Address}, ${row.City} ${row.Zip}`)}`;
+
       return `
       <tr 
         class="border-b border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
         data-lat="${row.lat || ''}"
         data-lng="${row.lng || ''}"
       >
-        <td class="px-2 py-3 font-medium">${row.Station || ''}</td>
-        <td class="px-2 py-3">
-          <a 
-            href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent((row.Address || '') + ', ' + (row.City || '') + ' ' + (row.Zip || ''))}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:underline"
-          >
-            ${row.Address || ''}
+        <td class="px-2 py-3 font-medium">
+          <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="hover:underline block">
+            ${displayLocation}
           </a>
         </td>
-        <td class="px-2 py-3">${row.City || ''}</td>
-        <td class="hidden sm:table-cell px-2 py-3">${row.Zip || ''}</td>
         <td class="px-2 py-3 text-right">${formatPrice(row.Base)}</td>
         <td class="hidden sm:table-cell px-2 py-3 text-right">${row.Discount || ''}</td>
         <td class="px-2 py-3 text-right font-bold">${formatPrice(row.Net)}</td>
