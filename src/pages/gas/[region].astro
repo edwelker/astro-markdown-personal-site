@@ -112,14 +112,14 @@ const data = rawData.map((row: any) => {
       </div>
       
       <div class="overflow-x-auto">
-        <table class="w-full text-xs sm:text-sm text-left whitespace-nowrap">
+        <table class="w-full text-xs sm:text-sm text-left">
           <thead class="text-neutral-500 uppercase bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-400">
             <tr>
-              <th class="px-2 py-3 cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Station" data-label="Station / Location">Station / Location ↕</th>
-              <th class="px-2 py-3 text-right cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Base" data-label="Price">Price ↕</th>
-              <th class="hidden sm:table-cell px-2 py-3 text-right select-none">Discount</th>
-              <th class="px-2 py-3 text-right cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Net" data-label="Net">Net ↑</th>
-              <th class="px-2 py-3 text-right cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Time" data-label="Time">Time ↕</th>
+              <th class="w-full px-2 py-3 cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Station" data-label="Station / Location">Station / Location ↕</th>
+              <th class="px-2 py-3 text-right whitespace-nowrap cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Base" data-label="Price">Price ↕</th>
+              <th class="hidden sm:table-cell px-2 py-3 text-right whitespace-nowrap select-none">Discount</th>
+              <th class="px-2 py-3 text-right whitespace-nowrap cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Net" data-label="Net">Net ↑</th>
+              <th class="px-2 py-3 text-right whitespace-nowrap cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Time" data-label="Time">Time ↕</th>
             </tr>
           </thead>
           <tbody id="gas-table-body">
@@ -141,10 +141,10 @@ const data = rawData.map((row: any) => {
                       <strong>{row.Station || ''}</strong>: <span class="text-[10px] sm:text-xs text-neutral-600 dark:text-neutral-400">{displayLocation}</span>
                     </a>
                   </td>
-                  <td class="px-2 py-3 text-right">{formatPrice(row.Base)}</td>
-                  <td class="hidden sm:table-cell px-2 py-3 text-right">{row.Discount}</td>
-                  <td class="px-2 py-3 text-right font-bold">{formatPrice(row.Net)}</td>
-                  <td class="px-2 py-3 text-right text-neutral-400 italic">—</td>
+                  <td class="px-2 py-3 text-right whitespace-nowrap">{formatPrice(row.Base)}</td>
+                  <td class="hidden sm:table-cell px-2 py-3 text-right whitespace-nowrap">{row.Discount}</td>
+                  <td class="px-2 py-3 text-right whitespace-nowrap font-bold">{formatPrice(row.Net)}</td>
+                  <td class="px-2 py-3 text-right whitespace-nowrap text-neutral-400 italic">—</td>
                 </tr>
               );
             })}
@@ -353,10 +353,10 @@ const data = rawData.map((row: any) => {
             ${displayLocation}
           </a>
         </td>
-        <td class="px-2 py-3 text-right">${formatPrice(row.Base)}</td>
-        <td class="hidden sm:table-cell px-2 py-3 text-right">${row.Discount || ''}</td>
-        <td class="px-2 py-3 text-right font-bold">${formatPrice(row.Net)}</td>
-        <td class="px-2 py-3 text-right ${d ? '' : 'text-neutral-400 italic'}">${displayStr}</td>
+        <td class="px-2 py-3 text-right whitespace-nowrap">${formatPrice(row.Base)}</td>
+        <td class="hidden sm:table-cell px-2 py-3 text-right whitespace-nowrap">${row.Discount || ''}</td>
+        <td class="px-2 py-3 text-right whitespace-nowrap font-bold">${formatPrice(row.Net)}</td>
+        <td class="px-2 py-3 text-right whitespace-nowrap ${d ? '' : 'text-neutral-400 italic'}">${displayStr}</td>
       </tr>
     `}).join('');
   }
