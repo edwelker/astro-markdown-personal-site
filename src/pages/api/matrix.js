@@ -1,14 +1,15 @@
 export const prerender = false;
 
 export async function POST({ request }) {
-  console.log("Local API Matrix endpoint hit");
+  console.log("API Matrix endpoint hit");
   
-  // Vite loads variables from .env into import.meta.env during development
-  const apiKey = import.meta.env.ORS_API_KEY;
+  // Access environment variables using the standard process.env
+  // This works locally (via .env) and on Cloudflare (via secrets/env vars)
+  const apiKey = process.env.ORS_API_KEY;
 
   if (!apiKey) {
-    console.error("ORS_API_KEY is missing in .env");
-    return new Response(JSON.stringify({ message: "ORS_API_KEY not set in .env" }), { 
+    console.error("ORS_API_KEY is missing from environment");
+    return new Response(JSON.stringify({ message: "ORS_API_KEY not found in environment" }), { 
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });
@@ -40,7 +41,7 @@ export async function POST({ request }) {
       headers: { 'Content-Type': 'application/json' }
     });
   } catch (e) {
-    console.error("Error in local matrix proxy:", e);
+    console.error("Error in matrix proxy:", e);
     return new Response(JSON.stringify({ message: e.message }), { 
       status: 500,
       headers: { 'Content-Type': 'application/json' }
