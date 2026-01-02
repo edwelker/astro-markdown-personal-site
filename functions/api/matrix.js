@@ -1,7 +1,7 @@
 export async function onRequestPost(context) {
   const { request, env } = context;
   
-  // In Cloudflare Pages Functions, env contains the environment variables
+  // In native Cloudflare Pages Functions, env contains the environment variables
   const apiKey = env.ORS_API_KEY;
 
   if (!apiKey) {

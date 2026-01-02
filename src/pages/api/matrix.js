@@ -1,15 +1,19 @@
 export const prerender = false;
 
-export async function POST({ request }) {
+export async function POST({ request, locals }) {
   console.log("API Matrix endpoint hit");
   
-  // Access environment variables using the standard process.env
-  // This works locally (via .env) and on Cloudflare (via secrets/env vars)
-  const apiKey = process.env.ORS_API_KEY;
+  // In Astro's Cloudflare adapter:
+  // 1. locals.runtime.env contains runtime secrets/vars on Cloudflare
+  // 2. import.meta.env contains variables from .env during local development
+  const apiKey = locals?.runtime?.env?.ORS_API_KEY || import.meta.env.ORS_API_KEY;
 
   if (!apiKey) {
     console.error("ORS_API_KEY is missing from environment");
-    return new Response(JSON.stringify({ message: "ORS_API_KEY not found in environment" }), { 
+    return new Response(JSON.stringify({ 
+      message: "ORS_API_KEY not found in environment",
+      context: locals?.runtime ? "production" : "development"
+    }), { 
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });
