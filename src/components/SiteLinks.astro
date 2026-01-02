@@ -1,24 +1,39 @@
 ---
-const links = [
+const mainLinks = [
   { href: "/about", label: "About" },
-  { href: "/blog", label: "Archive" },
-  { href: "/gas", label: "Gas" },
+  { href: "/blog", label: "Blog" },
   { href: "/highlights", label: "Highlights" },
   { href: "/media", label: "Media" },
   { href: "/music", label: "Music" },
   { href: "/recipes", label: "Recipes" },
+];
+
+const secondaryLinks = [
+  { href: "/gas", label: "Gas" },
   { href: "/sports", label: "Sports" },
   { href: "/uses", label: "Uses" },
 ];
 ---
 
-<nav class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-medium text-black/60 dark:text-white/60">
-  {links.map((link) => (
-    <a 
-      href={link.href} 
-      class="hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
-    >
-      {link.label}
-    </a>
-  ))}
-</nav>
+<div class="flex flex-col items-center gap-y-3">
+  <nav class="flex flex-wrap justify-center gap-x-6 text-sm font-medium text-black/60 dark:text-white/60">
+    {mainLinks.map((link) => (
+      <a 
+        href={link.href} 
+        class="hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
+      >
+        {link.label}
+      </a>
+    ))}
+  </nav>
+  <nav class="flex flex-wrap justify-center gap-x-6 text-sm font-medium text-black/60 dark:text-white/60">
+    {secondaryLinks.map((link) => (
+      <a 
+        href={link.href} 
+        class="hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
+      >
+        {link.label}
+      </a>
+    ))}
+  </nav>
+</div>
