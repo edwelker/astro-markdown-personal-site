@@ -3,20 +3,35 @@
     {
       "City": "Columbia (Town Center)",
       "Zip": "21044",
+      "Station": "Exxon",
+      "Address": "10141 Little Patuxent Pkwy, 21044",
+      "Base": "3.49",
+      "Net": "3.46",
+      "Discount": "Exxon",
+      "Lat": "39.2181995",
+      "Long": "-76.8577067"
+    },
+    {
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
       "Station": "Sunoco",
       "Address": "6440 Freetown Rd, 21044",
       "Base": "3.29",
       "Net": "3.26",
-      "Discount": "Sunoco"
+      "Discount": "Sunoco",
+      "Lat": "39.1950229",
+      "Long": "-76.8817831"
     },
     {
       "City": "Columbia (Town Center)",
       "Zip": "21044",
       "Station": "Exxon",
-      "Address": "Unknown Address, 21044",
+      "Address": "10611 Little Patuxent Pkwy, 21044",
       "Base": "3.49",
       "Net": "3.46",
-      "Discount": "Exxon"
+      "Discount": "Exxon",
+      "Lat": "39.213332",
+      "Long": "-76.8709132"
     },
     {
       "City": "Columbia (East)",
@@ -25,7 +40,9 @@
       "Address": "6425 Dobbin Center Way, 21045",
       "Base": "2.57",
       "Net": "2.57",
-      "Discount": "-"
+      "Discount": "-",
+      "Lat": "39.1968235",
+      "Long": "-76.8216821"
     },
     {
       "City": "Columbia (East)",
@@ -34,20 +51,48 @@
       "Address": "5901 Stevens Forest Rd, 21045",
       "Base": "2.67",
       "Net": "2.64",
+<<<<<<< Updated upstream
       "Discount": "7-Eleven"
     },
     {
       "City": "Columbia (East)",
       "Zip": "21045",
-      "Station": "Mobil",
-      "Address": "6251 Columbia Crossing Cir, 21045",
-      "Base": "2.89",
-      "Net": "2.86",
-      "Discount": "Mobil"
+||||||| Stash base
+      "Discount": "7-Eleven"
     },
     {
       "City": "Columbia (East)",
       "Zip": "21045",
+      "Station": "7-Eleven",
+      "Address": "Unknown Address, 21045",
+      "Base": "2.68",
+      "Net": "2.65",
+      "Discount": "7-Eleven"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+=======
+      "Discount": "7-Eleven",
+      "Lat": "39.210533",
+      "Long": "-76.847772"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+>>>>>>> Stashed changes
+      "Station": "Mobil",
+      "Address": "6251 Columbia Crossing Cir, 21045",
+      "Base": "2.89",
+      "Net": "2.86",
+      "Discount": "Mobil",
+      "Lat": "39.1995215",
+      "Long": "-76.8147128"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+<<<<<<< Updated upstream
       "Station": "Shell",
       "Address": "7248 Cradlerock Way, 21045",
       "Base": "2.99",
@@ -62,24 +107,57 @@
       "Base": "2.99",
       "Net": "2.96",
       "Discount": "Exxon"
+||||||| Stash base
+      "Station": "Exxon",
+      "Address": "Unknown Address, 21045",
+      "Base": "2.99",
+      "Net": "2.96",
+      "Discount": "Exxon"
+=======
+      "Station": "7-Eleven",
+      "Address": "8251 Snowden River Pkwy, 21045",
+      "Base": "2.98",
+      "Net": "2.95",
+      "Discount": "7-Eleven",
+      "Lat": "39.2090716",
+      "Long": "-76.8034905"
+>>>>>>> Stashed changes
     },
     {
       "City": "Columbia (East)",
       "Zip": "21045",
+<<<<<<< Updated upstream
       "Station": "7-Eleven",
       "Address": "Unknown Address, 21045",
       "Base": "2.68",
       "Net": "2.65",
       "Discount": "7-Eleven"
+||||||| Stash base
+      "Station": "Shell",
+      "Address": "7248 Cradlerock Way, 21045",
+      "Base": "2.99",
+      "Net": "2.94",
+      "Discount": "Shell"
+=======
+      "Station": "Shell",
+      "Address": "7248 Cradlerock Way, 21045",
+      "Base": "2.99",
+      "Net": "2.94",
+      "Discount": "Shell",
+      "Lat": "39.1862523",
+      "Long": "-76.8457193"
+>>>>>>> Stashed changes
     },
     {
       "City": "Columbia (East)",
       "Zip": "21045",
       "Station": "Exxon",
-      "Address": "7100 Minstrel Way, 21045",
+      "Address": "6004 Foreland Gart, 21045",
       "Base": "2.99",
       "Net": "2.96",
-      "Discount": "Exxon"
+      "Discount": "Exxon",
+      "Lat": "",
+      "Long": ""
     },
     {
       "City": "Columbia (Guilford)",
@@ -88,34 +166,9 @@
       "Address": "6300 Stevens Forest, 21046",
       "Base": "2.69",
       "Net": "2.66",
-      "Discount": "Exxon"
-    },
-    {
-      "City": "Columbia (Guilford)",
-      "Zip": "21046",
-      "Station": "Shell",
-      "Address": "Unknown Address, 21046",
-      "Base": "2.89",
-      "Net": "2.84",
-      "Discount": "Shell"
-    },
-    {
-      "City": "Columbia (Guilford)",
-      "Zip": "21046",
-      "Station": "Exxon",
-      "Address": "7201 Eden Brook Dr, 21046",
-      "Base": "2.99",
-      "Net": "2.96",
-      "Discount": "Exxon"
-    },
-    {
-      "City": "Columbia (Guilford)",
-      "Zip": "21046",
-      "Station": "Royal Farms",
-      "Address": "7084 Minstrel Way, 21046",
-      "Base": "2.99",
-      "Net": "2.89",
-      "Discount": "Royal Farms"
+      "Discount": "Exxon",
+      "Lat": "39.1973061",
+      "Long": "-76.8530941"
     },
     {
       "City": "Ellicott City (Central)",
@@ -124,16 +177,43 @@
       "Address": "9320 Baltimore National Pike, 21042",
       "Base": "2.71",
       "Net": "2.68",
+<<<<<<< Updated upstream
       "Discount": "Mobil"
     },
     {
       "City": "Ellicott City (Central)",
       "Zip": "21042",
+||||||| Stash base
+      "Discount": "Mobil"
+    },
+    {
+      "City": "Ellicott City (Central)",
+      "Zip": "21042",
+      "Station": "Dash-In",
+      "Address": "9075 Baltimore National Pike, 21042",
+      "Base": "2.74",
+      "Net": "2.74",
+      "Discount": "-"
+    },
+    {
+      "City": "Ellicott City (Central)",
+      "Zip": "21042",
+=======
+      "Discount": "Mobil",
+      "Lat": "39.2779163",
+      "Long": "-76.8325436"
+    },
+    {
+      "City": "Ellicott City (Central)",
+      "Zip": "21042",
+>>>>>>> Stashed changes
       "Station": "Sunoco",
       "Address": "9395 Baltimore National Pike, 21042",
       "Base": "2.75",
       "Net": "2.72",
-      "Discount": "Sunoco"
+      "Discount": "Sunoco",
+      "Lat": "39.2772371",
+      "Long": "-76.8350415"
     },
     {
       "City": "Ellicott City (Central)",
@@ -166,21 +246,15 @@
       "City": "Ellicott City (Central)",
       "Zip": "21042",
       "Station": "Sunoco",
-      "Address": "Unknown Address, 21042",
+      "Address": "10214 Baltimore National Pke, 21042",
       "Base": "2.79",
       "Net": "2.76",
-      "Discount": "Sunoco"
+      "Discount": "Sunoco",
+      "Lat": "",
+      "Long": ""
     },
     {
-      "City": "Ellicott City (Central)",
-      "Zip": "21042",
-      "Station": "Exxon",
-      "Address": "10193 Baltimore National Pike, 21042",
-      "Base": "2.81",
-      "Net": "2.78",
-      "Discount": "Exxon"
-    },
-    {
+<<<<<<< Updated upstream
       "City": "Ellicott City (North)",
       "Zip": "21043",
       "Station": "Exxon",
@@ -188,8 +262,59 @@
       "Base": "2.69",
       "Net": "2.66",
       "Discount": "Exxon"
+||||||| Stash base
+      "City": "Ellicott City (Central)",
+      "Zip": "21042",
+      "Station": "Carroll Motor Fuels",
+      "Address": "9109 BALTIMORE NATIONAL PIKE, 21042",
+      "Base": "2.91",
+      "Net": "2.91",
+      "Discount": "-"
     },
     {
+      "City": "Ellicott City (Central)",
+      "Zip": "21042",
+      "Station": "Shell",
+      "Address": "4755 Dorsey Hall Dr, 21042",
+      "Base": "2.99",
+      "Net": "2.94",
+      "Discount": "Shell"
+=======
+      "City": "Ellicott City (Central)",
+      "Zip": "21042",
+      "Station": "Carroll Motor Fuels",
+      "Address": "9109 BALTIMORE NATIONAL PIKE, 21042",
+      "Base": "2.91",
+      "Net": "2.91",
+      "Discount": "-",
+      "Lat": "39.2771741",
+      "Long": "-76.8262007"
+    },
+    {
+      "City": "Ellicott City (Central)",
+      "Zip": "21042",
+      "Station": "Dash-In",
+      "Address": "9075 Baltimore National Pike, 21042",
+      "Base": "2.99",
+      "Net": "2.99",
+      "Discount": "-",
+      "Lat": "39.2762251",
+      "Long": "-76.8250029"
+    },
+    {
+      "City": "Ellicott City (Central)",
+      "Zip": "21042",
+      "Station": "Shell",
+      "Address": "4755 Dorsey Hall Dr, 21042",
+      "Base": "2.99",
+      "Net": "2.94",
+      "Discount": "Shell",
+      "Lat": "39.2423537",
+      "Long": "-76.8403131"
+>>>>>>> Stashed changes
+    },
+    {
+<<<<<<< Updated upstream
       "City": "Ellicott City (North)",
       "Zip": "21043",
       "Station": "Mobil",
@@ -228,11 +353,124 @@
     {
       "City": "Ellicott City (North)",
       "Zip": "21043",
+||||||| Stash base
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+      "Station": "Carroll Motor Fuels",
+      "Address": "8720 Baltimore National Pike, 21043",
+      "Base": "2.63",
+      "Net": "2.63",
+      "Discount": "-"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+      "Station": "Sunoco",
+      "Address": "8411 Baltimore National Pike, 21043",
+      "Base": "2.63",
+      "Net": "2.6",
+      "Discount": "Sunoco"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+      "Station": "Carroll Motor Fuels",
+      "Address": "4132 Old Columbia Pike, 21043",
+      "Base": "2.91",
+      "Net": "2.91",
+      "Discount": "-"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+      "Station": "Exxon",
+      "Address": "4235 Montgomery Rd, 21043",
+      "Base": "2.69",
+      "Net": "2.66",
+      "Discount": "Exxon"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+      "Station": "Dash In",
+      "Address": "4205 Montgomery Rd, 21043",
+      "Base": "2.74",
+      "Net": "2.74",
+      "Discount": "-"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+      "Station": "Mobil",
+      "Address": "4398 Montgomery Rd, 21043",
+      "Base": "2.74",
+      "Net": "2.71",
+      "Discount": "Mobil"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+=======
+      "City": "Ellicott City (Central)",
+      "Zip": "21042",
+      "Station": "Exxon",
+      "Address": "10193 Baltimore National Pike, 21042",
+      "Base": "2.99",
+      "Net": "2.96",
+      "Discount": "Exxon",
+      "Lat": "39.2793591",
+      "Long": "-76.8636316"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+      "Station": "Mobil",
+      "Address": "4398 Montgomery Rd, 21043",
+      "Base": "2.74",
+      "Net": "2.71",
+      "Discount": "Mobil",
+      "Lat": "39.2520755",
+      "Long": "-76.8165282"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+      "Station": "Dash In",
+      "Address": "4205 Montgomery Rd, 21043",
+      "Base": "2.74",
+      "Net": "2.74",
+      "Discount": "-",
+      "Lat": "39.2561283",
+      "Long": "-76.8190081"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+>>>>>>> Stashed changes
       "Station": "Shell",
       "Address": "64 Frederick Rd, 21043",
       "Base": "2.93",
       "Net": "2.88",
-      "Discount": "Shell"
+      "Discount": "Shell",
+      "Lat": "39.2654947",
+      "Long": "-76.7906258"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+      "Station": "Carroll Motor Fuels",
+<<<<<<< Updated upstream
+      "Address": "8720 Baltimore National Pike, 21043",
+||||||| Stash base
+      "Address": "8300 Baltimore National Pike, 21043",
+=======
+      "Address": "4132 Old Columbia Pike, 21043",
+>>>>>>> Stashed changes
+      "Base": "2.91",
+      "Net": "2.91",
+      "Discount": "-",
+      "Lat": "39.2565046",
+      "Long": "-76.8197592"
     },
     {
       "City": "Ellicott City (North)",
@@ -241,7 +479,20 @@
       "Address": "8720 Baltimore National Pike, 21043",
       "Base": "2.91",
       "Net": "2.91",
-      "Discount": "-"
+      "Discount": "-",
+      "Lat": "39.2808054",
+      "Long": "-76.8147058"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+      "Station": "Exxon",
+      "Address": "4235 Montgomery Rd, 21043",
+      "Base": "2.93",
+      "Net": "2.9",
+      "Discount": "Exxon",
+      "Lat": "39.2554156",
+      "Long": "-76.8184372"
     },
     {
       "City": "Ellicott City (North)",
@@ -250,7 +501,20 @@
       "Address": "8505 Baltimore National Pike, 21043",
       "Base": "2.93",
       "Net": "2.88",
-      "Discount": "BP"
+      "Discount": "BP",
+      "Lat": "39.2842309",
+      "Long": "-76.8075056"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+      "Station": "Sunoco",
+      "Address": "8411 Baltimore National Pike, 21043",
+      "Base": "2.63",
+      "Net": "2.6",
+      "Discount": "Sunoco",
+      "Lat": "39.2865722",
+      "Long": "-76.8033853"
     },
     {
       "City": "Ellicott City (North)",
@@ -259,7 +523,9 @@
       "Address": "3095 Rogers Ave, 21043",
       "Base": "2.97",
       "Net": "2.92",
-      "Discount": "High's"
+      "Discount": "High's",
+      "Lat": "39.2874075",
+      "Long": "-76.8091156"
     },
     {
       "City": "Ellicott City (North)",
@@ -268,11 +534,14 @@
       "Address": "8850 Centre Park Dr, 21043",
       "Base": "3.05",
       "Net": "3.02",
-      "Discount": "Exxon"
+      "Discount": "Exxon",
+      "Lat": "39.2279074",
+      "Long": "-76.8127674"
     },
     {
       "City": "Ellicott City (North)",
       "Zip": "21043",
+<<<<<<< Updated upstream
       "Station": "Carroll Motor Fuels",
       "Address": "8300 Baltimore National Pike, 21043",
       "Base": "2.91",
@@ -287,6 +556,21 @@
       "Base": "3.05",
       "Net": "3.0",
       "Discount": "Shell"
+||||||| Stash base
+      "Station": "Shell",
+      "Address": "5651 Waterloo Rd, 21043",
+      "Base": "3.05",
+      "Net": "3.0",
+      "Discount": "Shell"
+=======
+      "Station": "Carroll Motor Fuels",
+      "Address": "8300 Baltimore National Pike, 21043",
+      "Base": "2.91",
+      "Net": "2.91",
+      "Discount": "-",
+      "Lat": "39.2895052",
+      "Long": "-76.7997418"
+>>>>>>> Stashed changes
     },
     {
       "City": "Scaggsville / Laurel",
@@ -295,7 +579,9 @@
       "Address": "9651 Washington Blvd, 20723",
       "Base": "2.79",
       "Net": "2.76",
-      "Discount": "7-Eleven"
+      "Discount": "7-Eleven",
+      "Lat": "39.1206298",
+      "Long": "-76.8266406"
     },
     {
       "City": "Scaggsville / Laurel",
@@ -304,16 +590,9 @@
       "Address": "9250 Washington Blvd, 20723",
       "Base": "2.79",
       "Net": "2.79",
-      "Discount": "-"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
-      "Station": "Shell",
-      "Address": "9280 All Saints Rd, 20723",
-      "Base": "2.84",
-      "Net": "2.79",
-      "Discount": "Shell"
+      "Discount": "-",
+      "Lat": "39.1292665",
+      "Long": "-76.8201441"
     },
     {
       "City": "Scaggsville / Laurel",
@@ -322,7 +601,20 @@
       "Address": "9275 All Saints Rd, 20723",
       "Base": "2.84",
       "Net": "2.81",
-      "Discount": "Exxon"
+      "Discount": "Exxon",
+      "Lat": "39.1189484",
+      "Long": "-76.8513125"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Shell",
+      "Address": "9280 All Saints Rd, 20723",
+      "Base": "2.84",
+      "Net": "2.79",
+      "Discount": "Shell",
+      "Lat": "39.1195226",
+      "Long": "-76.8519516"
     },
     {
       "City": "Scaggsville / Laurel",
@@ -331,6 +623,7 @@
       "Address": "8850 Gorman Rd, 20723",
       "Base": "2.99",
       "Net": "2.96",
+<<<<<<< Updated upstream
       "Discount": "Exxon"
     },
     {
@@ -345,11 +638,57 @@
     {
       "City": "Severn",
       "Zip": "21144",
+||||||| Stash base
+      "Discount": "Exxon"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Exxon",
+      "Address": "7500 Montpelier Rd, 20723",
+      "Base": "3.39",
+      "Net": "3.36",
+      "Discount": "Exxon"
+    },
+    {
+      "City": "Severn",
+      "Zip": "21144",
+      "Station": "Exxon",
+      "Address": "805 Reece Rd, 21144",
+      "Base": "2.69",
+      "Net": "2.66",
+      "Discount": "Exxon"
+    },
+    {
+      "City": "Severn",
+      "Zip": "21144",
+=======
+      "Discount": "Exxon",
+      "Lat": "39.1315805",
+      "Long": "-76.8205188"
+    },
+    {
+      "City": "Severn",
+      "Zip": "21144",
+>>>>>>> Stashed changes
       "Station": "7-Eleven",
       "Address": "500 Donaldson Ave, 21144",
       "Base": "2.97",
       "Net": "2.94",
-      "Discount": "7-Eleven"
+      "Discount": "7-Eleven",
+      "Lat": "39.136636",
+      "Long": "-76.659232"
+    },
+    {
+      "City": "Severn",
+      "Zip": "21144",
+      "Station": "Royal Farms",
+      "Address": "7843 Telegraph Rd, 21144",
+      "Base": "2.99",
+      "Net": "2.89",
+      "Discount": "Royal Farms",
+      "Lat": "39.1373727",
+      "Long": "-76.684828"
     },
     {
       "City": "Severn",
@@ -376,16 +715,39 @@
       "Address": "8272 Quarterfield Rd, 21144",
       "Base": "2.99",
       "Net": "2.96",
+<<<<<<< Updated upstream
       "Discount": "Sunoco"
     },
     {
+||||||| Stash base
+      "Discount": "Sunoco"
+    },
+    {
+      "City": "Severn",
+      "Zip": "21144",
+      "Station": "Royal Farms",
+      "Address": "7843 Telegraph Rd, 21144",
+      "Base": "2.59",
+      "Net": "2.49",
+      "Discount": "Royal Farms"
+    },
+    {
+=======
+      "Discount": "Sunoco",
+      "Lat": "39.1165734",
+      "Long": "-76.681597"
+    },
+    {
+>>>>>>> Stashed changes
       "City": "Hanover (Arundel Mills)",
       "Zip": "21076",
       "Station": "Exxon",
       "Address": "7898 Ridge Rd, 21076",
       "Base": "2.94",
       "Net": "2.91",
-      "Discount": "Exxon"
+      "Discount": "Exxon",
+      "Lat": "39.1344773",
+      "Long": "-76.7347419"
     },
     {
       "City": "Hanover (Arundel Mills)",
@@ -393,6 +755,7 @@
       "Station": "Shell",
       "Address": "2631 Old Annapolis Rd, 21076",
       "Base": "2.99",
+<<<<<<< Updated upstream
       "Net": "2.94",
       "Discount": "Shell"
     },
@@ -404,15 +767,79 @@
       "Base": "2.99",
       "Net": "2.89",
       "Discount": "Royal Farms"
+||||||| Stash base
+      "Net": "2.96",
+      "Discount": "7-Eleven"
     },
     {
       "City": "Hanover (Arundel Mills)",
       "Zip": "21076",
+      "Station": "Royal Farms",
+      "Address": "7910 Shipley Homestead Dr, 21076",
+      "Base": "2.99",
+      "Net": "2.89",
+      "Discount": "Royal Farms"
+=======
+      "Net": "2.96",
+      "Discount": "7-Eleven",
+      "Lat": "39.1599143",
+      "Long": "-76.6836798"
+>>>>>>> Stashed changes
+    },
+    {
+      "City": "Hanover (Arundel Mills)",
+      "Zip": "21076",
+<<<<<<< Updated upstream
+||||||| Stash base
+      "Station": "Shell",
+      "Address": "2631 Old Annapolis Rd, 21076",
+      "Base": "2.99",
+      "Net": "2.94",
+      "Discount": "Shell"
+    },
+    {
+      "City": "Hanover (Arundel Mills)",
+      "Zip": "21076",
+      "Station": "CITGO",
+      "Address": "1401 Dorsey Rd, 21076",
+      "Base": "2.99",
+      "Net": "2.99",
+      "Discount": "-"
+    },
+    {
+      "City": "Hanover (Arundel Mills)",
+      "Zip": "21076",
+=======
+      "Station": "Shell",
+      "Address": "2631 Old Annapolis Rd, 21076",
+      "Base": "2.99",
+      "Net": "2.94",
+      "Discount": "Shell",
+      "Lat": "39.2041164",
+      "Long": "-76.6417554"
+    },
+    {
+      "City": "Hanover (Arundel Mills)",
+      "Zip": "21076",
+      "Station": "Royal Farms",
+      "Address": "7910 Shipley Homestead Dr, 21076",
+      "Base": "2.99",
+      "Net": "2.89",
+      "Discount": "Royal Farms",
+      "Lat": "39.1325985",
+      "Long": "-76.7399104"
+    },
+    {
+      "City": "Hanover (Arundel Mills)",
+      "Zip": "21076",
+>>>>>>> Stashed changes
       "Station": "Wawa",
-      "Address": "7710 Milest, 21076",
+      "Address": "7710 Milestone Pkwy, 21076",
       "Base": "3.03",
       "Net": "3.03",
-      "Discount": "Wawa"
+      "Discount": "Wawa",
+      "Lat": "39.154105",
+      "Long": "-76.744585"
     },
     {
       "City": "Hanover (Arundel Mills)",
@@ -428,9 +855,21 @@
       "Zip": "21076",
       "Station": "Shell",
       "Address": "1356 Dorsey Rd, 21076",
+<<<<<<< Updated upstream
       "Base": "3.19",
       "Net": "3.14",
       "Discount": "Shell"
+||||||| Stash base
+      "Base": "3.14",
+      "Net": "3.09",
+      "Discount": "Shell"
+=======
+      "Base": "3.19",
+      "Net": "3.14",
+      "Discount": "Shell",
+      "Lat": "39.1588425",
+      "Long": "-76.7114914"
+>>>>>>> Stashed changes
     },
     {
       "City": "Hanover (Arundel Mills)",
@@ -439,7 +878,20 @@
       "Address": "7043 Arundel Mills Cir, 21076",
       "Base": "3.29",
       "Net": "3.26",
-      "Discount": "Exxon"
+      "Discount": "Exxon",
+      "Lat": "39.1539236",
+      "Long": "-76.7222726"
+    },
+    {
+      "City": "Hanover (Arundel Mills)",
+      "Zip": "21076",
+      "Station": "CITGO",
+      "Address": "1401 Dorsey Rd, 21076",
+      "Base": "2.99",
+      "Net": "2.99",
+      "Discount": "-",
+      "Lat": "39.160101",
+      "Long": "-76.715098"
     },
     {
       "City": "Hanover (Arundel Mills)",
@@ -457,34 +909,14 @@
       "Address": "7879 Pocomoke Dr, 20794",
       "Base": "2.79",
       "Net": "2.74",
+<<<<<<< Updated upstream
       "Discount": "BP"
     },
     {
       "City": "Jessup",
       "Zip": "20794",
-      "Station": "Shell",
-      "Address": "2753 Annapolis Rd, 20794",
-      "Base": "2.99",
-      "Net": "2.94",
-      "Discount": "Shell"
-    },
-    {
-      "City": "Jessup",
-      "Zip": "20794",
-      "Station": "Shell",
-      "Address": "8755 Washington Blvd, 20794",
-      "Base": "2.99",
-      "Net": "2.94",
-      "Discount": "Shell"
-    },
-    {
-      "City": "Jessup",
-      "Zip": "20794",
-      "Station": "Royal Farms",
-      "Address": "8686 Washington Blvd, 20794",
-      "Base": "2.99",
-      "Net": "2.89",
-      "Discount": "Royal Farms"
+||||||| Stash base
+      "Discount": "BP"
     },
     {
       "City": "Jessup",
@@ -498,17 +930,144 @@
     {
       "City": "Jessup",
       "Zip": "20794",
+=======
+      "Discount": "BP",
+      "Lat": "39.1682121",
+      "Long": "-76.7831573"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
+>>>>>>> Stashed changes
+      "Station": "Shell",
+      "Address": "2753 Annapolis Rd, 20794",
+      "Base": "2.99",
+      "Net": "2.94",
+<<<<<<< Updated upstream
+      "Discount": "Shell"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
+||||||| Stash base
+      "Discount": "Shell"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
       "Station": "Royal Farms",
       "Address": "7136 Montevideo Rd, 20794",
       "Base": "2.99",
       "Net": "2.89",
       "Discount": "Royal Farms"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
+      "Station": "Royal Farms",
+      "Address": "8686 Washington Blvd, 20794",
+      "Base": "2.99",
+      "Net": "2.89",
+      "Discount": "Royal Farms"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
+=======
+      "Discount": "Shell",
+      "Lat": "39.1377885",
+      "Long": "-76.7521393"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
+      "Station": "Royal Farms",
+      "Address": "8686 Washington Blvd, 20794",
+      "Base": "2.99",
+      "Net": "2.89",
+      "Discount": "Royal Farms",
+      "Lat": "39.1457337",
+      "Long": "-76.8094061"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
+>>>>>>> Stashed changes
+      "Station": "Shell",
+      "Address": "8755 Washington Blvd, 20794",
+      "Base": "2.99",
+      "Net": "2.94",
+      "Discount": "Shell",
+      "Lat": "39.1447238",
+      "Long": "-76.8087484"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
+<<<<<<< Updated upstream
+      "Station": "Royal Farms",
+      "Address": "8686 Washington Blvd, 20794",
+      "Base": "2.99",
+      "Net": "2.89",
+      "Discount": "Royal Farms"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
+      "Station": "Sunoco",
+      "Address": "2739 Annapolis Rd, 20794",
+||||||| Stash base
+      "Station": "High's Dairy Store",
+      "Address": "2861 Jessup Rd, 20794",
+      "Base": "2.67",
+      "Net": "2.62",
+      "Discount": "High's"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
+      "Station": "BP",
+      "Address": "8810 Washington Blvd, 20794",
+      "Base": "2.69",
+      "Net": "2.64",
+      "Discount": "BP"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
+      "Station": "Exxon",
+      "Address": "7930 Washington Blvd, 20794",
+=======
+      "Station": "Sunoco",
+      "Address": "2739 Annapolis Rd, 20794",
+>>>>>>> Stashed changes
+      "Base": "2.89",
+      "Net": "2.86",
+<<<<<<< Updated upstream
+      "Discount": "Sunoco"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
+      "Station": "Royal Farms",
+      "Address": "7136 Montevideo Rd, 20794",
+      "Base": "2.99",
+      "Net": "2.89",
+      "Discount": "Royal Farms"
+||||||| Stash base
+      "Discount": "Exxon"
+=======
+      "Discount": "Sunoco",
+      "Lat": "39.1365014",
+      "Long": "-76.7506844"
+>>>>>>> Stashed changes
     }
   ],
   "ny": [
     {
       "City": "Riverhead",
       "Zip": "11901",
+<<<<<<< Updated upstream
       "Station": "Valero",
       "Address": "1356 OLD COUNTRY RD, 11901",
       "Base": "2.75",
@@ -532,6 +1091,66 @@
       "Base": "2.79",
       "Net": "2.74",
       "Discount": "Shell"
+||||||| Stash base
+      "Station": "Shell",
+      "Address": "1733 Old Country Rd, 11901",
+      "Base": "2.79",
+      "Net": "2.74",
+      "Discount": "Shell"
+=======
+      "Station": "Valero",
+      "Address": "1356 OLD COUNTRY RD, 11901",
+      "Base": "2.75",
+      "Net": "2.75",
+      "Discount": "-",
+      "Lat": "40.9283279",
+      "Long": "-72.6857992"
+>>>>>>> Stashed changes
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Mobil",
+      "Address": "1575 Old Country Rd, 11901",
+      "Base": "2.77",
+      "Net": "2.74",
+      "Discount": "Mobil",
+      "Lat": "40.9252206",
+      "Long": "-72.6951725"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+<<<<<<< Updated upstream
+||||||| Stash base
+      "Station": "Speedway",
+      "Address": "870 Old Country Rd, 11901",
+      "Base": "2.81",
+      "Net": "2.76",
+      "Discount": "Speedway"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+=======
+      "Station": "Speedway",
+      "Address": "870 Old Country Rd, 11901",
+      "Base": "2.81",
+      "Net": "2.76",
+      "Discount": "Speedway",
+      "Lat": "40.9346058",
+      "Long": "-72.6699464"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Shell",
+      "Address": "1733 Old Country Rd, 11901",
+      "Base": "2.79",
+      "Net": "2.74",
+      "Discount": "Shell",
+      "Lat": "40.9239801",
+      "Long": "-72.7023482"
     },
     {
       "City": "Riverhead",
@@ -540,24 +1159,58 @@
       "Address": "626 W Main St, 11901",
       "Base": "2.79",
       "Net": "2.74",
-      "Discount": "BP"
+      "Discount": "BP",
+      "Lat": "",
+      "Long": ""
     },
     {
       "City": "Riverhead",
       "Zip": "11901",
+>>>>>>> Stashed changes
       "Station": "OK Petroleum",
       "Address": "1212 E Main St, 11901",
       "Base": "2.89",
       "Net": "2.89",
+<<<<<<< Updated upstream
       "Discount": "-"
     },
     {
+||||||| Stash base
+      "Discount": "-"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Mobil",
+      "Address": "1575 Old Country Rd, 11901",
+      "Base": "2.69",
+      "Net": "2.66",
+      "Discount": "Mobil"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Mobil",
+      "Address": "415 E Main St, 11901",
+      "Base": "2.85",
+      "Net": "2.82",
+      "Discount": "Mobil"
+    },
+    {
+=======
+      "Discount": "-",
+      "Lat": "",
+      "Long": ""
+    },
+    {
+>>>>>>> Stashed changes
       "City": "Hampton Bays",
       "Zip": "11946",
       "Station": "Shell",
       "Address": "250 E Montauk Hwy, 11946",
       "Base": "2.99",
       "Net": "2.94",
+<<<<<<< Updated upstream
       "Discount": "Shell"
     },
     {
@@ -577,15 +1230,66 @@
       "Base": "2.79",
       "Net": "2.74",
       "Discount": "Shell"
+||||||| Stash base
+      "Discount": "Shell"
+    },
+    {
+      "City": "Hampton Bays",
+      "Zip": "11946",
+      "Station": "Mobil",
+      "Address": "239 W Montauk Hwy, 11946",
+      "Base": "2.75",
+      "Net": "2.72",
+      "Discount": "Mobil"
     },
     {
       "City": "Southampton",
       "Zip": "11968",
+      "Station": "Shell",
+      "Address": "Unknown Address, 11968",
+      "Base": "2.79",
+      "Net": "2.74",
+      "Discount": "Shell"
+=======
+      "Discount": "Shell",
+      "Lat": "40.8834616",
+      "Long": "-72.5046248"
+>>>>>>> Stashed changes
+    },
+    {
+      "City": "Southampton",
+      "Zip": "11968",
+<<<<<<< Updated upstream
+||||||| Stash base
+      "Station": "Speedway",
+      "Address": "Unknown Address, 11968",
+      "Base": "2.89",
+      "Net": "2.84",
+      "Discount": "Speedway"
+    },
+    {
+      "City": "Southampton",
+      "Zip": "11968",
+=======
+      "Station": "Speedway",
+      "Address": "Unknown Address, 11968",
+      "Base": "2.89",
+      "Net": "2.84",
+      "Discount": "Speedway",
+      "Lat": "39.7881233",
+      "Long": "-86.2407144"
+    },
+    {
+      "City": "Southampton",
+      "Zip": "11968",
+>>>>>>> Stashed changes
       "Station": "Gas Hampton",
       "Address": "Unknown Address, 11968",
       "Base": "2.89",
       "Net": "2.89",
-      "Discount": "-"
+      "Discount": "-",
+      "Lat": "",
+      "Long": ""
     },
     {
       "City": "Water Mill",
@@ -594,16 +1298,39 @@
       "Address": "1138 Montauk Hwy, 11976",
       "Base": "3.09",
       "Net": "3.04",
+<<<<<<< Updated upstream
       "Discount": "Speedway"
     },
     {
+||||||| Stash base
+      "Discount": "Speedway"
+    },
+    {
+      "City": "Water Mill",
+      "Zip": "11976",
+      "Station": "Shell",
+      "Address": "960 Montauk Hwy, 11976",
+      "Base": "2.99",
+      "Net": "2.94",
+      "Discount": "Shell"
+    },
+    {
+=======
+      "Discount": "Speedway",
+      "Lat": "40.9192162",
+      "Long": "-72.3436923"
+    },
+    {
+>>>>>>> Stashed changes
       "City": "Bridgehampton",
       "Zip": "11932",
       "Station": "Gulf",
       "Address": "2148 Montauk Hwy, 11932",
       "Base": "3.29",
       "Net": "3.29",
-      "Discount": "-"
+      "Discount": "-",
+      "Lat": "40.9335977",
+      "Long": "-72.3130303"
     },
     {
       "City": "Montauk",
@@ -612,7 +1339,9 @@
       "Address": "701 Montauk Hwy, 11954",
       "Base": "3.89",
       "Net": "3.86",
-      "Discount": "Mobil"
+      "Discount": "Mobil",
+      "Lat": "41.0338098",
+      "Long": "-71.9463966"
     }
   ],
   "ma": [
@@ -623,7 +1352,9 @@
       "Address": "2041 Memorial Dr, 01020",
       "Base": "2.49",
       "Net": "2.46",
-      "Discount": "Sunoco"
+      "Discount": "Sunoco",
+      "Lat": "42.2131424",
+      "Long": "-72.5723361"
     },
     {
       "City": "Chicopee",
@@ -632,7 +1363,42 @@
       "Address": "672 Memorial Dr, 01020",
       "Base": "2.55",
       "Net": "2.45",
-      "Discount": "Stop & Shop"
+      "Discount": "Stop & Shop",
+      "Lat": "42.1759775",
+      "Long": "-72.5763068"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "Big Y Express",
+      "Address": "1177 Granby Rd, 01020",
+      "Base": "2.72",
+      "Net": "2.67",
+      "Discount": "Big Y",
+      "Lat": "42.1739323",
+      "Long": "-72.5872689"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "CITGO",
+      "Address": "1875 Memorial Dr, 01020",
+      "Base": "2.89",
+      "Net": "2.89",
+      "Discount": "-",
+      "Lat": "42.2082465",
+      "Long": "-72.571413"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "CITGO",
+      "Address": "947 Burnett Rd, 01020",
+      "Base": "2.89",
+      "Net": "2.89",
+      "Discount": "-",
+      "Lat": "42.1753008",
+      "Long": "-72.5287525"
     },
     {
       "City": "Chicopee",
@@ -641,7 +1407,9 @@
       "Address": "37 Montcalm St, 01020",
       "Base": "2.65",
       "Net": "2.55",
-      "Discount": "Cumberland"
+      "Discount": "Cumberland",
+      "Lat": "42.2021333",
+      "Long": "-72.5807318"
     },
     {
       "City": "Chicopee",
@@ -650,11 +1418,14 @@
       "Address": "1061 Memorial Dr, 01020",
       "Base": "2.65",
       "Net": "2.55",
-      "Discount": "Cumberland"
+      "Discount": "Cumberland",
+      "Lat": "42.1870792",
+      "Long": "-72.5769006"
     },
     {
       "City": "Chicopee",
       "Zip": "01020",
+<<<<<<< Updated upstream
       "Station": "CITGO",
       "Address": "947 Burnett Rd, 01020",
       "Base": "2.89",
@@ -705,14 +1476,92 @@
       "Base": "2.69",
       "Net": "2.69",
       "Discount": "-"
+||||||| Stash base
+      "Station": "Gulf",
+      "Address": "646 Grattan St, 01020",
+      "Base": "2.69",
+      "Net": "2.69",
+      "Discount": "-"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "Pride",
+      "Address": "27 Montgomery St, 01020",
+      "Base": "2.77",
+      "Net": "2.67",
+      "Discount": "Pride"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "Big Y Express",
+      "Address": "1177 Granby Rd, 01020",
+      "Base": "2.78",
+      "Net": "2.73",
+      "Discount": "Big Y"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "CITGO",
+      "Address": "451 Grattan St, 01020",
+      "Base": "2.75",
+      "Net": "2.75",
+      "Discount": "-"
+=======
+      "Station": "Shell",
+      "Address": "197 Grove St, 01020",
+      "Base": "2.99",
+      "Net": "2.94",
+      "Discount": "Shell",
+      "Lat": "42.1536921",
+      "Long": "-72.5840072"
+>>>>>>> Stashed changes
     },
     {
       "City": "Chicopee",
       "Zip": "01020",
       "Station": "Sunoco",
+<<<<<<< Updated upstream
+||||||| Stash base
+      "Address": "560 East St, 01020",
+      "Base": "2.79",
+      "Net": "2.76",
+      "Discount": "Sunoco"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "Sunoco",
+=======
+      "Address": "560 East St, 01020",
+      "Base": "2.79",
+      "Net": "2.76",
+      "Discount": "Sunoco",
+      "Lat": "",
+      "Long": ""
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "Pride",
+      "Address": "27 Montgomery St, 01020",
+      "Base": "2.77",
+      "Net": "2.67",
+      "Discount": "Pride",
+      "Lat": "42.1612887",
+      "Long": "-72.5824657"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "Sunoco",
+>>>>>>> Stashed changes
       "Address": "500 Montgomery St, 01020",
       "Base": "2.89",
       "Net": "2.86",
+<<<<<<< Updated upstream
       "Discount": "Sunoco"
     },
     {
@@ -734,13 +1583,94 @@
       "Discount": "Pride"
     },
     {
+||||||| Stash base
+      "Discount": "Sunoco"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "Pride",
+      "Address": "363 Burnett Rd, 01020",
+      "Base": "3.05",
+      "Net": "2.95",
+      "Discount": "Pride"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "F.L. Roberts",
+      "Address": "2012 Memorial Dr, 01020",
+      "Base": "2.74",
+      "Net": "2.74",
+      "Discount": "-"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "CITGO",
+      "Address": "817 Front St, 01020",
+      "Base": "2.99",
+      "Net": "2.99",
+      "Discount": "-"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "Shell",
+      "Address": "197 Grove St, 01020",
+      "Base": "3.09",
+      "Net": "3.04",
+      "Discount": "Shell"
+    },
+    {
+=======
+      "Discount": "Sunoco",
+      "Lat": "42.1743862",
+      "Long": "-72.5869497"
+    },
+    {
+>>>>>>> Stashed changes
       "City": "Holyoke",
       "Zip": "01040",
+<<<<<<< Updated upstream
       "Station": "Racing Mart",
       "Address": "330 Main St, 01040",
       "Base": "2.58",
       "Net": "2.58",
       "Discount": "-"
+||||||| Stash base
+      "Station": "Stop and Shop",
+      "Address": "Unknown Address, 01040",
+      "Base": "2.67",
+      "Net": "2.67",
+      "Discount": "-"
+    },
+    {
+      "City": "Holyoke",
+      "Zip": "01040",
+      "Station": "Gulf",
+      "Address": "820 High St, 01040",
+      "Base": "2.64",
+      "Net": "2.64",
+      "Discount": "-"
+    },
+    {
+      "City": "Holyoke",
+      "Zip": "01040",
+      "Station": "City Gas",
+      "Address": "3 Brown Ave, 01040",
+      "Base": "2.67",
+      "Net": "2.67",
+      "Discount": "-"
+=======
+      "Station": "Racing Mart",
+      "Address": "330 Main St, 01040",
+      "Base": "2.58",
+      "Net": "2.58",
+      "Discount": "-",
+      "Lat": "42.2000394",
+      "Long": "-72.6061084"
+>>>>>>> Stashed changes
     },
     {
       "City": "Holyoke",
@@ -749,6 +1679,7 @@
       "Address": "225 Whiting Farms Rd, 01040",
       "Base": "2.85",
       "Net": "2.8",
+<<<<<<< Updated upstream
       "Discount": "Shell"
     },
     {
@@ -768,13 +1699,123 @@
       "Base": "3.04",
       "Net": "3.01",
       "Discount": "7-Eleven"
+||||||| Stash base
+      "Discount": "Shell"
     },
     {
+      "City": "Holyoke",
+      "Zip": "01040",
+      "Station": "Pride",
+      "Address": "1553 Dwight St, 01040",
+      "Base": "2.85",
+      "Net": "2.75",
+      "Discount": "Pride"
+    },
+    {
+      "City": "Easthampton",
+      "Zip": "01027",
+      "Station": "Pride",
+      "Address": "60 Union St, 01027",
+      "Base": "3.05",
+      "Net": "2.95",
+      "Discount": "Pride"
+    },
+    {
+      "City": "Easthampton",
+      "Zip": "01027",
+      "Station": "7-Eleven",
+      "Address": "97 Union St, 01027",
+      "Base": "3.04",
+      "Net": "3.01",
+      "Discount": "7-Eleven"
+=======
+      "Discount": "Shell",
+      "Lat": "42.1748898",
+      "Long": "-72.6408246"
+>>>>>>> Stashed changes
+    },
+    {
+<<<<<<< Updated upstream
+||||||| Stash base
+      "City": "Easthampton",
+      "Zip": "01027",
+      "Station": "Cumberland Farms",
+      "Address": "231 Northampton St, 01027",
+      "Base": "3.04",
+      "Net": "2.94",
+      "Discount": "Cumberland"
+    },
+    {
+      "City": "Easthampton",
+      "Zip": "01027",
+      "Station": "Gulf",
+      "Address": "317 Main St, 01027",
+      "Base": "3.09",
+      "Net": "3.09",
+      "Discount": "-"
+    },
+    {
+      "City": "Easthampton",
+      "Zip": "01027",
+      "Station": "F.L. Roberts",
+      "Address": "124 Northampton St, 01027",
+      "Base": "3.09",
+      "Net": "3.09",
+      "Discount": "-"
+    },
+    {
+=======
+      "City": "Easthampton",
+      "Zip": "01027",
+      "Station": "Cumberland Farms",
+      "Address": "231 Northampton St, 01027",
+      "Base": "3.04",
+      "Net": "2.94",
+      "Discount": "Cumberland",
+      "Lat": "42.2870731",
+      "Long": "-72.6626682"
+    },
+    {
+      "City": "Easthampton",
+      "Zip": "01027",
+      "Station": "7-Eleven",
+      "Address": "97 Union St, 01027",
+      "Base": "3.04",
+      "Net": "3.01",
+      "Discount": "7-Eleven",
+      "Lat": "42.2669407",
+      "Long": "-72.6696351"
+    },
+    {
+      "City": "Easthampton",
+      "Zip": "01027",
+      "Station": "F.L. Roberts",
+      "Address": "124 Northampton St, 01027",
+      "Base": "3.09",
+      "Net": "3.09",
+      "Discount": "-",
+      "Lat": "42.2789978",
+      "Long": "-72.6713843"
+    },
+    {
+      "City": "Easthampton",
+      "Zip": "01027",
+      "Station": "Pride",
+      "Address": "60 Union St, 01027",
+      "Base": "3.05",
+      "Net": "2.95",
+      "Discount": "Pride",
+      "Lat": "42.2681716",
+      "Long": "-72.6714491"
+    },
+    {
+>>>>>>> Stashed changes
       "City": "Northampton",
       "Zip": "01060",
-      "Station": "King Street Convenience",
-      "Address": "60 King St, 01060",
+      "Station": "Pride",
+      "Address": "375 King St, 01060",
       "Base": "2.89",
+<<<<<<< Updated upstream
       "Net": "2.89",
       "Discount": "-"
     },
@@ -786,10 +1827,56 @@
       "Base": "2.99",
       "Net": "2.94",
       "Discount": "Shell"
+||||||| Stash base
+      "Net": "2.89",
+      "Discount": "-"
     },
     {
       "City": "Northampton",
       "Zip": "01060",
+      "Station": "Cumberland Farms",
+      "Address": "134 King St, 01060",
+      "Base": "2.94",
+      "Net": "2.84",
+      "Discount": "Cumberland"
+    },
+    {
+      "City": "Northampton",
+      "Zip": "01060",
+      "Station": "Big Y Express",
+      "Address": "188 N King St, 01060",
+      "Base": "2.91",
+      "Net": "2.86",
+      "Discount": "Big Y"
+    },
+    {
+      "City": "Northampton",
+      "Zip": "01060",
+      "Station": "Mobil",
+      "Address": "15 Locust, 01060",
+      "Base": "2.95",
+      "Net": "2.92",
+      "Discount": "Mobil"
+    },
+    {
+      "City": "Northampton",
+      "Zip": "01060",
+      "Station": "Shell",
+      "Address": "506 Pleasant St, 01060",
+      "Base": "2.99",
+      "Net": "2.94",
+      "Discount": "Shell"
+=======
+      "Net": "2.79",
+      "Discount": "Pride",
+      "Lat": "42.3374852",
+      "Long": "-72.6366284"
+>>>>>>> Stashed changes
+    },
+    {
+      "City": "Northampton",
+      "Zip": "01060",
+<<<<<<< Updated upstream
       "Station": "Cumberland Farms",
       "Address": "134 King St, 01060",
       "Base": "2.94",
@@ -804,24 +1891,122 @@
       "Base": "2.95",
       "Net": "2.92",
       "Discount": "Mobil"
+||||||| Stash base
+      "Station": "Stop & Shop",
+      "Address": "228 King St, 01060",
+      "Base": "2.89",
+      "Net": "2.79",
+      "Discount": "Stop & Shop"
+=======
+      "Station": "Stop & Shop",
+      "Address": "228 King St, 01060",
+      "Base": "2.89",
+      "Net": "2.79",
+      "Discount": "Stop & Shop",
+      "Lat": "42.3290172",
+      "Long": "-72.6358623"
+>>>>>>> Stashed changes
     },
     {
       "City": "Northampton",
       "Zip": "01060",
-      "Station": "Pride",
-      "Address": "375 King St, 01060",
+      "Station": "Big Y Express",
+      "Address": "188 N King St, 01060",
       "Base": "2.91",
-      "Net": "2.81",
-      "Discount": "Pride"
+      "Net": "2.86",
+      "Discount": "Big Y",
+      "Lat": "42.3322993",
+      "Long": "-72.6348771"
     },
     {
+      "City": "Northampton",
+      "Zip": "01060",
+      "Station": "Sunoco",
+      "Address": "776 N King St, 01060",
+      "Base": "2.91",
+      "Net": "2.88",
+      "Discount": "Sunoco",
+      "Lat": "42.3622644",
+      "Long": "-72.6390352"
+    },
+    {
+<<<<<<< Updated upstream
+||||||| Stash base
+      "City": "Northampton",
+      "Zip": "01060",
+      "Station": "Racing Mart",
+      "Address": "54 Easthampton Rd, 01060",
+      "Base": "2.93",
+      "Net": "2.93",
+      "Discount": "-"
+    },
+    {
+=======
+      "City": "Northampton",
+      "Zip": "01060",
+      "Station": "Racing Mart",
+      "Address": "54 Easthampton Rd, 01060",
+      "Base": "2.99",
+      "Net": "2.99",
+      "Discount": "-",
+      "Lat": "42.3052292",
+      "Long": "-72.6491003"
+    },
+    {
+      "City": "Northampton",
+      "Zip": "01060",
+      "Station": "King Street Convenience",
+      "Address": "60 King St, 01060",
+      "Base": "2.89",
+      "Net": "2.89",
+      "Discount": "-",
+      "Lat": "42.3205763",
+      "Long": "-72.6313212"
+    },
+    {
+      "City": "Northampton",
+      "Zip": "01060",
+      "Station": "Shell",
+      "Address": "506 Pleasant St, 01060",
+      "Base": "2.99",
+      "Net": "2.94",
+      "Discount": "Shell",
+      "Lat": "",
+      "Long": ""
+    },
+    {
+      "City": "Northampton",
+      "Zip": "01060",
+      "Station": "Cumberland Farms",
+      "Address": "134 King St, 01060",
+      "Base": "2.94",
+      "Net": "2.84",
+      "Discount": "Cumberland",
+      "Lat": "42.3322993",
+      "Long": "-72.6348771"
+    },
+    {
+      "City": "Northampton",
+      "Zip": "01060",
+      "Station": "Mobil",
+      "Address": "15 Locust, 01060",
+      "Base": "2.95",
+      "Net": "2.92",
+      "Discount": "Mobil",
+      "Lat": "42.3316863",
+      "Long": "-72.6526156"
+    },
+    {
+>>>>>>> Stashed changes
       "City": "Hadley",
       "Zip": "01035",
       "Station": "Stop & Shop",
       "Address": "446 Russell St, 01035",
       "Base": "2.95",
       "Net": "2.85",
-      "Discount": "Stop & Shop"
+      "Discount": "Stop & Shop",
+      "Lat": "42.3646637",
+      "Long": "-72.5379721"
     },
     {
       "City": "Hadley",
@@ -830,7 +2015,9 @@
       "Address": "109 Russell St, 01035",
       "Base": "3.01",
       "Net": "2.91",
-      "Discount": "Cumberland"
+      "Discount": "Cumberland",
+      "Lat": "42.3414531",
+      "Long": "-72.5946062"
     },
     {
       "City": "Hadley",
@@ -839,7 +2026,9 @@
       "Address": "445 Russell St, 01035",
       "Base": "2.99",
       "Net": "2.89",
-      "Discount": "Pride"
+      "Discount": "Pride",
+      "Lat": "42.3632797",
+      "Long": "-72.5387719"
     },
     {
       "City": "Hadley",
@@ -848,7 +2037,9 @@
       "Address": "110 Russell St, 01035",
       "Base": "3.02",
       "Net": "2.99",
-      "Discount": "Mobil"
+      "Discount": "Mobil",
+      "Lat": "42.3424399",
+      "Long": "-72.595176"
     },
     {
       "City": "Hadley",
@@ -857,7 +2048,9 @@
       "Address": "25 Russell St, 01035",
       "Base": "3.03",
       "Net": "2.93",
-      "Discount": "Pride"
+      "Discount": "Pride",
+      "Lat": "42.33861",
+      "Long": "-72.60906"
     },
     {
       "City": "Hadley",
@@ -866,7 +2059,9 @@
       "Address": "73 Russell St, 01035",
       "Base": "3.03",
       "Net": "2.98",
-      "Discount": "Big Y"
+      "Discount": "Big Y",
+      "Lat": "42.3405615",
+      "Long": "-72.6018812"
     },
     {
       "City": "Amherst",
@@ -875,7 +2070,9 @@
       "Address": "468 West St, 01002",
       "Base": "2.99",
       "Net": "2.94",
-      "Discount": "Speedway"
+      "Discount": "Speedway",
+      "Lat": "",
+      "Long": ""
     },
     {
       "City": "Amherst",
@@ -884,16 +2081,39 @@
       "Address": "399 Northampton Rd, 01002",
       "Base": "3.04",
       "Net": "3.04",
+<<<<<<< Updated upstream
       "Discount": "-"
     },
     {
+||||||| Stash base
+      "Discount": "-"
+    },
+    {
+      "City": "Amherst",
+      "Zip": "01002",
+      "Station": "Cumberland Farms",
+      "Address": "389 College St, 01002",
+      "Base": "2.98",
+      "Net": "2.88",
+      "Discount": "Cumberland"
+    },
+    {
+=======
+      "Discount": "-",
+      "Lat": "42.3661824",
+      "Long": "-72.5351597"
+    },
+    {
+>>>>>>> Stashed changes
       "City": "South Deerfield",
       "Zip": "01373",
       "Station": "Cumberland Farms",
       "Address": "31 Elm St, 01373",
       "Base": "3.09",
       "Net": "2.99",
-      "Discount": "Cumberland"
+      "Discount": "Cumberland",
+      "Lat": "",
+      "Long": ""
     },
     {
       "City": "South Deerfield",
@@ -902,7 +2122,9 @@
       "Address": "1 Sunderland Rd, 01373",
       "Base": "3.1",
       "Net": "3.1",
-      "Discount": "-"
+      "Discount": "-",
+      "Lat": "42.4685118",
+      "Long": "-72.6135264"
     },
     {
       "City": "South Deerfield",
@@ -911,16 +2133,20 @@
       "Address": "1 Greenfield Rd, 01373",
       "Base": "3.1",
       "Net": "3.1",
-      "Discount": "-"
+      "Discount": "-",
+      "Lat": "42.4708672",
+      "Long": "-72.6158055"
     },
     {
       "City": "Greenfield",
       "Zip": "01301",
       "Station": "Planet",
-      "Address": "Unknown Address, 01301",
+      "Address": "109 Mohawk Trail, 01301",
       "Base": "2.77",
       "Net": "2.77",
-      "Discount": "-"
+      "Discount": "-",
+      "Lat": "42.5848575",
+      "Long": "-72.6166793"
     },
     {
       "City": "Greenfield",
@@ -929,16 +2155,9 @@
       "Address": "Unknown Address, 01301",
       "Base": "2.77",
       "Net": "2.74",
-      "Discount": "Mobil"
-    },
-    {
-      "City": "Greenfield",
-      "Zip": "01301",
-      "Station": "Shell",
-      "Address": "Unknown Address, 01301",
-      "Base": "2.77",
-      "Net": "2.72",
-      "Discount": "Shell"
+      "Discount": "Mobil",
+      "Lat": "7.0646384",
+      "Long": "38.4816551"
     },
     {
       "City": "Greenfield",
@@ -947,7 +2166,20 @@
       "Address": "488 Bernardston Rd, 01301",
       "Base": "2.79",
       "Net": "2.69",
-      "Discount": "Stop & Shop"
+      "Discount": "Stop & Shop",
+      "Lat": "42.6094682",
+      "Long": "-72.5869418"
+    },
+    {
+      "City": "Greenfield",
+      "Zip": "01301",
+      "Station": "Shell",
+      "Address": "Unknown Address, 01301",
+      "Base": "2.77",
+      "Net": "2.72",
+      "Discount": "Shell",
+      "Lat": "42.5857646",
+      "Long": "-72.6259618"
     },
     {
       "City": "Greenfield",
@@ -956,7 +2188,9 @@
       "Address": "63 Main St, 01301",
       "Base": "2.79",
       "Net": "2.79",
-      "Discount": "-"
+      "Discount": "-",
+      "Lat": "42.5871489",
+      "Long": "-72.6066369"
     },
     {
       "City": "Greenfield",
@@ -965,16 +2199,14 @@
       "Address": "Unknown Address, 01301",
       "Base": "2.85",
       "Net": "2.85",
+<<<<<<< Updated upstream
       "Discount": "-"
     },
     {
       "City": "Greenfield",
       "Zip": "01301",
-      "Station": "Speedway",
-      "Address": "245 Federal St, 01301",
-      "Base": "2.83",
-      "Net": "2.78",
-      "Discount": "Speedway"
+||||||| Stash base
+      "Discount": "-"
     },
     {
       "City": "Greenfield",
@@ -984,6 +2216,45 @@
       "Base": "2.84",
       "Net": "2.81",
       "Discount": "Sunoco"
+    },
+    {
+      "City": "Greenfield",
+      "Zip": "01301",
+=======
+      "Discount": "-",
+      "Lat": "32.8295183",
+      "Long": "-96.9442177"
+    },
+    {
+      "City": "Greenfield",
+      "Zip": "01301",
+>>>>>>> Stashed changes
+      "Station": "Speedway",
+      "Address": "245 Federal St, 01301",
+      "Base": "2.83",
+      "Net": "2.78",
+      "Discount": "Speedway",
+      "Lat": "42.5981415",
+      "Long": "-72.5957967"
+    },
+    {
+      "City": "Greenfield",
+      "Zip": "01301",
+      "Station": "Sunoco",
+      "Address": "416 Federal St, 01301",
+      "Base": "2.84",
+<<<<<<< Updated upstream
+      "Net": "2.81",
+      "Discount": "Sunoco"
+||||||| Stash base
+      "Net": "2.74",
+      "Discount": "Cumberland"
+=======
+      "Net": "2.81",
+      "Discount": "Sunoco",
+      "Lat": "42.6060538",
+      "Long": "-72.5895143"
+>>>>>>> Stashed changes
     }
   ]
 }
