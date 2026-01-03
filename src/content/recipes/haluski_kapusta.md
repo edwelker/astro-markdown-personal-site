@@ -44,5 +44,5 @@ draft: false
 ## Notes
 
 * For a quick version, just use a 1lb bag of egg noodles.
-* uthentic Variation (Bacon): Fry 4oz of chopped bacon first. Use the rendered fat instead of some butter to cook the onions/cabbage for better flavor.
+* Authentic Variation (Bacon or Kielbasa): Fry 4oz of chopped bacon first. Use the rendered fat instead of some butter to cook the onions/cabbage for better flavor.
 * Authentic Variation (Sauerkraut): Replace half the fresh cabbage with rinsed sauerkraut to add natural acidity and texture.
