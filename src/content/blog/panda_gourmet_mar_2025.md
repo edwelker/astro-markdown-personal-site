@@ -2,10 +2,10 @@
 title: 'Dishes of Panda Gourmet'
 date: 2025-03-30T12:53:35-05:00
 slug: 2025/03/30/panda_gourmet_mar_2025
+description: "My notes and descriptions of dishes from Washington's Panda Gourmet"
+coverImage: https://live.staticflickr.com/65535/54419176606_965675fd03_c.jpg
 tags: ["chinese", "cooking", "restaurants", "dc"]
-description: 'My notes and descriptions of dishes from Washington''s Panda Gourmet'
 ---
-
 I assert that the best Szechuan restaurant in the Baltimore/DC area is DC's [Panda Gourmet](https://www.pandagourmetfusions.com/), a restaurant in the bottom of a hotel.
 
 I was there recently, and decided that I would break down the dishes I ordered.
