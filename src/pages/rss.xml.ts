@@ -7,17 +7,31 @@ export async function GET(context) {
     return data.draft !== true;
   });
 
-  blog.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  const recipes = await getCollection('recipes', ({ data }) => {
+    return data.draft !== true;
+  });
+
+  const photos = await getCollection('photos', ({ data }) => {
+    return data.draft !== true;
+  });
+
+  const allItems = [
+    ...blog.map((post) => ({ ...post, type: 'blog' })),
+    ...recipes.map((recipe) => ({ ...recipe, type: 'recipes' })),
+    ...photos.map((photo) => ({ ...photo, type: 'photos' })),
+  ];
+
+  allItems.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
   return rss({
     title: SITE.TITLE,
     description: SITE.DESCRIPTION,
     site: context.site,
-    items: blog.map((post) => ({
-      title: post.data.title,
-      pubDate: post.data.date,
-      description: post.data.description || '',
-      link: `/blog/${post.slug}/`,
+    items: allItems.map((item) => ({
+      title: item.data.title,
+      pubDate: item.data.date,
+      description: item.data.description || '',
+      link: `/${item.type}/${item.slug}/`,
     })),
     customData: `<language>en-us</language>`,
   });
