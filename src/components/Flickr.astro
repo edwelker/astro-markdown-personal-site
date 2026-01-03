@@ -1,7 +1,7 @@
 ---
 import data from '../data/flickr-photos.json';
 const allPhotos = data || [];
-const photosToShow = allPhotos.slice(0, 14);
+const photosToShow = allPhotos.slice(0, 10);
 const hasPhotos = photosToShow.length > 0;
 ---
 
@@ -17,7 +17,7 @@ const hasPhotos = photosToShow.length > 0;
     <div class="grid grid-cols-2 md:grid-cols-4 gap-2 auto-rows-[120px] md:auto-rows-[160px]">
       {photosToShow.map((photo, i) => {
         const isTopHero = i === 0;
-        const isBottomHero = i === 13;
+        const isBottomHero = i === 9;
         let spanClass = "col-span-1 row-span-1";
         if (isTopHero) spanClass = "col-span-2 row-span-2";
         if (isBottomHero) spanClass = "col-span-2 row-span-2 md:col-start-3 md:row-start-3";
