@@ -21,7 +21,7 @@ const blog = (await getCollection("blog"))
 const recipes = (await getCollection("recipes"))
   .filter((recipe) => !recipe.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, SITE.NUM_RECIPES_ON_HOMEPAGE);
+  .slice(0, 6);
 
 const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS_ON_HOMEPAGE);
 ---
@@ -106,7 +106,7 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
             </Link>
           </div>
           
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {recipes.map((recipe) => (
               <RecipeCard 
                 recipe={recipe} 
