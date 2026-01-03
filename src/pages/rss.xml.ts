@@ -31,7 +31,7 @@ export async function GET(context) {
       title: item.data.title,
       pubDate: item.data.date,
       description: item.data.description || '',
-      link: `/${item.type}/${item.slug}/`,
+      link: item.type === 'blog' ? `/${item.slug}/` : `/${item.type}/${item.slug}/`,
     })),
     customData: `<language>en-us</language>`,
   });
