@@ -7,7 +7,7 @@ recipeYield: "12 servings"
 recipeCategory: "Main Dish"
 recipeCuisine: "American"
 keywords: ["pulled pork", "pressure cooker", "pork shoulder", "boston butt", "meal prep"]
-coverPhoto: "https://live.staticflickr.com/7350/27630884620_dab651b60c_c.jpg"
+coverPhoto: "https://live.staticflickr.com/7504/28597270213_6267af0b89_c.jpg"
 nutrition:
   calories: "600 calories"
 aggregateRating:
