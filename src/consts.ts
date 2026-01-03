@@ -5,8 +5,7 @@ export const SITE = {
   DESCRIPTION: "Eddie Welker's digital things. Coding, biking, and making things.",
   EMAIL: "no-email-published@example.com",
   NUM_POSTS_ON_HOMEPAGE: 4,
-  NUM_HIGHLIGHTS_ON_HOMEPAGE: 4,
-  NUM_RECIPES_ON_HOMEPAGE: 4,
+  NUM_HIGHLIGHTS_ON_HOMEPAGE: 3,
 };
 
 // todo, all of this crap needs to be streamlined, and made less yuck

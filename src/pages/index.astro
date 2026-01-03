@@ -45,9 +45,14 @@ function getPostImage(post) {
       <div class="space-y-12 mt-4">
         <section>
           <article class="space-y-4">
-            <p>Programmer, Cyclist, Cellist, Photographer, Cook, Woodworker, Laurel, MD, USA.</p>
+            <p>Programmer, Cyclist, Photographer, Cellist, Cook, Woodworker, Laurel, MD, USA.</p>
           </article>
         </section>
+
+
+        <section data-testid="flickr-section"><Flickr /></section>
+
+        <section class="animate" data-testid="cycling-section"><CyclingStats /></section>
 
         <section class="animate space-y-6" data-testid="highlights-section">
           <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
@@ -80,26 +85,23 @@ function getPostImage(post) {
           </ul>
         </section>
 
-        <section data-testid="flickr-section"><Flickr /></section>
 
         <section class="animate" data-testid="music-section"><MusicStats /></section>
-        <section class="animate" data-testid="cycling-section"><CyclingStats /></section>
-        <section class="animate" data-testid="media-section"><MediaTeaser /></section>
 
-        <section class="animate space-y-6" data-testid="posts-section">
+            <section class="animate space-y-6" data-testid="posts-section">
           <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
             <h3 class="font-semibold text-black dark:text-white text-lg">Blog</h3>
             <Link href="/blog/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
               Archives <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
             </Link>
           </div>
-          <ul class="flex flex-col gap-4">
+          <ul class="flex flex-col gap-2">
             {blog.map((post) => {
               const coverImage = getPostImage(post);
               return (
               <li>
                 <Link href={getPostHref(post)} class="group block no-underline">
-                  <div class="flex justify-between items-start gap-4">
+                  <div class="flex justify-between items-center gap-4">
                     <div class="flex flex-col gap-1">
                       <span class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2 leading-tight">
                         {post.data.title}
@@ -109,11 +111,11 @@ function getPostImage(post) {
                       </p>
                     </div>
                     {coverImage && (
-                      <div class="shrink-0 w-28 h-28 overflow-hidden rounded-md bg-neutral-100 dark:bg-neutral-800">
-                        <img 
-                          src={coverImage} 
-                          alt={post.data.title} 
-                          class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                      <div class="shrink-0 w-24 h-24 overflow-hidden rounded-md bg-neutral-100 dark:bg-neutral-800">
+                        <img
+                          src={coverImage}
+                          alt={post.data.title}
+                          class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
                     )}
@@ -131,12 +133,12 @@ function getPostImage(post) {
               See All Recipes <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
             </Link>
           </div>
-          
+
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {recipes.map((recipe) => (
-              <RecipeCard 
-                recipe={recipe} 
-                showMetadata={false} 
+              <RecipeCard
+                recipe={recipe}
+                showMetadata={false}
                 showDescription={false}
                 titleClass="text-sm"
                 underlineOnHover={true}
@@ -144,6 +146,8 @@ function getPostImage(post) {
             ))}
           </div>
         </section>
+
+        <section class="animate" data-testid="media-section"><MediaTeaser /></section>
       </div>
     </aside>
   </Container>
