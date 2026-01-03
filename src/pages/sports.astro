@@ -1,163 +1,15 @@
 ---
 export const prerender = false;
 
-import { getMyTeamsNews, getAllLeagueNews, MY_TEAMS } from '../lib/sports';
+import { getSportsPageData } from '../lib/sports-data';
 import Layout from '../layouts/Layout.astro';
+import TeamCard from '../components/sports/TeamCard.astro';
 
 // Cache the response for 15 minutes (900 seconds) at the edge (Cloudflare) and in the browser.
 // This prevents the Worker from running on every request, significantly reducing usage if scraped.
 Astro.response.headers.set('Cache-Control', 'public, max-age=900, s-maxage=900');
 
-// Initialize data containers
-let myTeamsNews = [];
-let allLeagueNews = [];
-let teamsExtraData = {};
-let fetchError = null;
-
-// Helper to timeout fetches so the worker doesn't hang indefinitely
-const fetchWithTimeout = (promise, ms = 8000) => {
-    const timeout = new Promise((_, reject) =>
-        setTimeout(() => reject(new Error(`Request timed out after ${ms}ms`)), ms)
-    );
-    return Promise.race([promise, timeout]);
-};
-
-const TEAM_IDS = {
-    'Red Sox': { id: '2', league: 'MLB' },
-    'Boston Red Sox': { id: '2', league: 'MLB' },
-    'Knicks': { id: '18', league: 'NBA' },
-    'New York Knicks': { id: '18', league: 'NBA' },
-    'Celtics': { id: '2', league: 'NBA' },
-    'Boston Celtics': { id: '2', league: 'NBA' },
-    'Orioles': { id: '1', league: 'MLB' },
-    'Baltimore Orioles': { id: '1', league: 'MLB' },
-    'Pistons': { id: '8', league: 'NBA' },
-    'Detroit Pistons': { id: '8', league: 'NBA' },
-    'Wizards': { id: '27', league: 'NBA' },
-    'Washington Wizards': { id: '27', league: 'NBA' },
-    'White Sox': { id: '4', league: 'MLB' },
-    'Chicago White Sox': { id: '4', league: 'MLB' }
-};
-
-async function getTeamData(teamName) {
-    const info = TEAM_IDS[teamName];
-    if (!info) return { schedule: [], record: '', rank: '', standingsLink: '' };
-    
-    const sport = info.league === 'MLB' ? 'baseball' : 'basketball';
-    const league = info.league.toLowerCase();
-    
-    try {
-        // Fetch schedule and team summary in parallel
-        const [scheduleRes, teamRes] = await Promise.all([
-            fetch(`https://site.api.espn.com/apis/site/v2/sports/${sport}/${league}/teams/${info.id}/schedule`),
-            fetch(`https://site.api.espn.com/apis/site/v2/sports/${sport}/${league}/teams/${info.id}`)
-        ]);
-
-        const scheduleData = scheduleRes.ok ? await scheduleRes.json() : {};
-        const teamData = teamRes.ok ? await teamRes.json() : {};
-        
-        // Process Schedule
-        const events = scheduleData.events || [];
-        const now = new Date();
-        
-        const schedule = events
-            .filter(e => new Date(e.date) > now)
-            .slice(0, 5)
-            .map(e => {
-                const gameDate = new Date(e.date);
-                const competition = e.competitions[0];
-                const homeTeam = competition.competitors.find(c => c.homeAway === 'home');
-                const awayTeam = competition.competitors.find(c => c.homeAway === 'away');
-                
-                const isHome = homeTeam.team.id === info.id;
-                const opponent = isHome ? awayTeam : homeTeam;
-                const opponentName = opponent.team.shortDisplayName || opponent.team.displayName;
-                const vsText = isHome ? `vs. ${opponentName}` : `@ ${opponentName}`;
-                
-                // Attempt to get opponent record
-                let opponentRecord = '';
-                if (opponent.records && opponent.records.length > 0) {
-                    opponentRecord = opponent.records[0].summary;
-                }
-                
-                return {
-                    date: gameDate,
-                    text: vsText,
-                    opponentRecord
-                };
-            });
-
-        // Process Team Info
-        const team = teamData.team || {};
-        const record = team.record?.items?.[0]?.summary || '';
-        const rank = team.standingSummary || '';
-        const standingsLink = team.links?.find(l => l.text === 'Standings' || l.title === 'Standings')?.href || '';
-
-        return {
-            schedule,
-            record,
-            rank,
-            standingsLink
-        };
-
-    } catch (e) {
-        console.error(`Error fetching data for ${teamName}`, e);
-        return { schedule: [], record: '', rank: '', standingsLink: '' };
-    }
-}
-
-async function fetchAllTeamData() {
-    if (!MY_TEAMS || !Array.isArray(MY_TEAMS)) return {};
-    const data = {};
-    await Promise.all(MY_TEAMS.map(async (team) => {
-        data[team.name] = await getTeamData(team.name);
-    }));
-    return data;
-}
-
-try {
-    console.log('[Sports] Starting data fetch...');
-    const startTime = Date.now();
-
-    // Wrap the entire fetch operation
-    const results = await fetchWithTimeout(
-        Promise.all([
-            getMyTeamsNews().catch(err => {
-                console.error('[Sports] Error fetching team news:', err);
-                return [];
-            }),
-            getAllLeagueNews().catch(err => {
-                console.error('[Sports] Error fetching league news:', err);
-                return [];
-            }),
-            fetchAllTeamData().catch(err => {
-                console.error('[Sports] Error fetching team data:', err);
-                return {};
-            })
-        ]),
-        9000 // 9 second timeout (Cloudflare workers have limits)
-    );
-
-    [myTeamsNews, allLeagueNews, teamsExtraData] = results;
-
-    console.log(`[Sports] Data fetch completed in ${Date.now() - startTime}ms`);
-    console.log(`[Sports] Items fetched: Teams=${myTeamsNews?.length}, League=${allLeagueNews?.length}`);
-
-} catch (error) {
-    console.error('[Sports] Critical error during data fetch:', error);
-    fetchError = error;
-    // Fallback to empty arrays
-    myTeamsNews = [];
-    allLeagueNews = [];
-    teamsExtraData = {};
-}
-
-const TEAM_COUNTS = {
-    'Red Sox': 10,
-    'Knicks': 6,
-    'Celtics': 6
-};
-const DEFAULT_COUNT = 4;
+const { teamData, allLeagueNews, fetchError } = await getSportsPageData();
 
 const TEAM_LOGOS = {
     'Red Sox': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/bos.png&w=40&h=40',
@@ -170,71 +22,20 @@ const TEAM_LOGOS = {
     'Baltimore Orioles': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/bal.png&w=40&h=40',
     'Pistons': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/det.png&w=40&h=40',
     'Detroit Pistons': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/det.png&w=40&h=40',
-    'Wizards': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/wsh.png&w=40&h=40',
-    'Washington Wizards': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/wsh.png&w=40&h=40',
     'White Sox': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/chw.png&w=40&h=40',
-    'Chicago White Sox': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/chw.png&w=40&h=40'
+    'Chicago White Sox': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/chw.png&w=40&h=40',
+    'Spurs': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/sas.png&w=40&h=40',
+    'San Antonio Spurs': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/sas.png&w=40&h=40',
+    'Bulls': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/chi.png&w=40&h=40',
+    'Chicago Bulls': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/chi.png&w=40&h=40',
+    'Wizards': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/wsh.png&w=40&h=40',
+    'Washington Wizards': 'https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/wsh.png&w=40&h=40'
 };
 
 const LEAGUE_ICONS = {
     'MLB': '⚾',
     'NBA': '🏀'
 };
-
-let teamData = [];
-
-try {
-    if (!MY_TEAMS || !Array.isArray(MY_TEAMS)) {
-        throw new Error('MY_TEAMS configuration is missing or invalid');
-    }
-
-    // Group and filter news by team
-    teamData = MY_TEAMS.map(team => {
-        const allItems = Array.isArray(myTeamsNews) ? myTeamsNews.filter(i => i.source === team.name) : [];
-
-        // Sort by date descending
-        allItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-        const limit = TEAM_COUNTS[team.name] || DEFAULT_COUNT;
-
-        // Ensure item.date is a Date object before comparison and is valid
-        const items = allItems.filter(item => {
-            if (!item || !item.date) return false;
-            const d = new Date(item.date);
-            return !isNaN(d.getTime());
-        }).slice(0, limit);
-
-        // Split into recent and older (7 days)
-        const sevenDaysAgo = new Date();
-        sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-
-        const recentItems = [];
-        const olderItems = [];
-
-        items.forEach(item => {
-            if (new Date(item.date) >= sevenDaysAgo) {
-                recentItems.push(item);
-            } else {
-                olderItems.push(item);
-            }
-        });
-
-        const extra = teamsExtraData[team.name] || { schedule: [], record: '', rank: '', standingsLink: '' };
-
-        return {
-            ...team,
-            recentItems,
-            olderItems,
-            schedule: extra.schedule,
-            record: extra.record,
-            rank: extra.rank,
-            standingsLink: extra.standingsLink
-        };
-    }).filter(t => (t.recentItems.length > 0 || t.olderItems.length > 0) || t.schedule.length > 0);
-} catch (e) {
-    console.error('[Sports] Error processing team data:', e);
-    // teamData remains []
-}
 
 const now = new Date();
 const lastUpdated = now.toLocaleString('en-US', {
@@ -267,15 +68,6 @@ function formatRelativeTime(dateInput) {
     } else {
         return `${diffInDays} days ago`;
     }
-}
-
-function formatGameDate(date) {
-    return date.toLocaleString('en-US', {
-        month: 'short',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: '2-digit'
-    });
 }
 
 function decodeHtmlEntities(str) {
@@ -337,11 +129,11 @@ function getSourceDomain(url) {
         <div data-panel="my-teams" class="space-y-12 animate-in fade-in duration-300">
             {/* Jump Links */}
             {teamData.length > 0 && (
-                <div class="flex flex-wrap gap-4 items-center">
+                <div class="flex flex-wrap gap-4 items-center justify-between w-full">
                     {teamData.map(team => (
                         <a
                             href={`#${team.name.toLowerCase().replace(/\s+/g, '-')}`}
-                            class="opacity-70 hover:opacity-100 transition-opacity"
+                            class="transition-transform hover:scale-110"
                             title={team.name}
                         >
                             {TEAM_LOGOS[team.name] ? (
@@ -357,95 +149,7 @@ function getSourceDomain(url) {
             {teamData.length === 0 && !fetchError && <p class="text-neutral-500 italic">No recent news found for your teams.</p>}
 
             {teamData.map(team => (
-                <div id={team.name.toLowerCase().replace(/\s+/g, '-')} class="space-y-4 scroll-mt-4">
-                    <h2 class="text-xl font-bold text-black dark:text-white border-b border-neutral-200 dark:border-neutral-800 pb-2 flex items-center flex-wrap">
-                        <div class="flex items-center mr-4">
-                            {TEAM_LOGOS[team.name] ? (
-                                <img src={TEAM_LOGOS[team.name]} class="w-6 h-6 mr-2" alt="" />
-                            ) : (
-                                <span class="mr-2">{team.league === 'MLB' ? '⚾' : '🏀'}</span>
-                            )}
-                            {team.name}
-                        </div>
-                        {team.record && (
-                            <span class="text-base font-normal text-neutral-500 flex items-center">
-                                <a href={team.standingsLink} target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-blue-600 transition-colors">
-                                    {team.record}
-                                </a>
-                                {team.rank && <span class="text-sm ml-2">({team.rank})</span>}
-                            </span>
-                        )}
-                    </h2>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- Left Column: News -->
-                        <div class="space-y-4">
-                            <ul class="space-y-4">
-                                {team.recentItems.map((item) => (
-                                    <li>
-                                        <a href={decodeHtmlEntities(item.link)} target="_blank" rel="noopener noreferrer" class="block w-full group">
-                                            <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
-                                                {decodeHtmlEntities(item.title)}
-                                            </h3>
-                                        </a>
-                                        <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                                            <span>{formatRelativeTime(item.date)}</span>
-                                            <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                                            <span class="text-neutral-400">{getSourceDomain(decodeHtmlEntities(item.link))}</span>
-                                        </div>
-                                    </li>
-                                ))}
-                            </ul>
-
-                            {team.olderItems.length > 0 && (
-                                <div>
-                                    <button class="toggle-older-news text-xs font-bold text-neutral-500 hover:text-blue-600 transition-colors focus:outline-none">
-                                        Show {team.olderItems.length} older articles...
-                                    </button>
-                                    <ul class="hidden space-y-4 mt-4">
-                                        {team.olderItems.map((item) => (
-                                            <li>
-                                                <a href={decodeHtmlEntities(item.link)} target="_blank" rel="noopener noreferrer" class="block w-full group">
-                                                    <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
-                                                        {decodeHtmlEntities(item.title)}
-                                                    </h3>
-                                                </a>
-                                                <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                                                    <span>{formatRelativeTime(item.date)}</span>
-                                                    <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                                                    <span class="text-neutral-400">{getSourceDomain(decodeHtmlEntities(item.link))}</span>
-                                                </div>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-
-                            {team.recentItems.length === 0 && team.olderItems.length === 0 && (
-                                <li class="text-sm text-neutral-500 italic list-none">No recent news.</li>
-                            )}
-                        </div>
-
-                        <!-- Right Column: Next Games -->
-                        <div class="text-right">
-                            <h3 class="font-bold mb-4 text-base text-black dark:text-white">Next games</h3>
-                            <ul class="space-y-4">
-                                {team.schedule.map(game => (
-                                    <li>
-                                        <div class="text-sm font-medium text-neutral-900 dark:text-neutral-100">
-                                            {game.text}
-                                            {game.opponentRecord && <span class="text-neutral-400 font-normal ml-1">({game.opponentRecord})</span>}
-                                        </div>
-                                        <div class="mt-1 text-xs text-neutral-500 font-mono">{formatGameDate(game.date)}</div>
-                                    </li>
-                                ))}
-                                {team.schedule.length === 0 && (
-                                    <li class="text-sm text-neutral-500 italic">No upcoming games found.</li>
-                                )}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <TeamCard team={team} logoUrl={TEAM_LOGOS[team.name]} />
             ))}
         </div>
 
@@ -548,18 +252,6 @@ function getSourceDomain(url) {
             }
         });
       });
-    });
-
-    // Handle Older News Toggles
-    document.querySelectorAll('.toggle-older-news').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const button = e.currentTarget;
-            const container = button.nextElementSibling;
-            if (container) {
-                container.classList.remove('hidden');
-                button.remove(); // Remove the button after showing
-            }
-        });
     });
 
     // Handle Relative Time Update for Caching
