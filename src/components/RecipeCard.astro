@@ -25,7 +25,7 @@ function formatTime(pt: string | undefined) {
 
 <a 
   href={`/recipes/${recipe.slug}/`}
-  class={`group block space-y-3 text-black dark:text-white ${underlineOnHover ? '' : 'no-underline'}`}
+  class="group block space-y-3 text-black dark:text-white no-underline"
 >
   <div class="aspect-[3/2] w-full overflow-hidden rounded-lg border border-black/10 dark:border-white/10 bg-neutral-100 dark:bg-neutral-900 relative">
     {recipe.data.coverPhoto ? (
@@ -40,7 +40,7 @@ function formatTime(pt: string | undefined) {
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-40">
           <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
           <path d="M7 2v20"/>
-          <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
+          <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.1 2 2 2h3Zm0 0v7"/>
         </svg>
         {recipe.data.recipeCategory && (
           <span class="text-xs font-mono uppercase tracking-widest opacity-60">{recipe.data.recipeCategory}</span>
