@@ -24,6 +24,17 @@ const recipes = (await getCollection("recipes"))
   .slice(0, 6);
 
 const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS_ON_HOMEPAGE);
+
+function getPostImage(post) {
+  if (post.data.coverImage) {
+    return post.data.coverImage.src || post.data.coverImage;
+  }
+  const markdownImage = post.body.match(/!\[[^\]]*\]\(([^)\s]+)/);
+  if (markdownImage) return markdownImage[1];
+  const htmlImage = post.body.match(/<img[^>]+src=["']([^"']+)["']/);
+  if (htmlImage) return htmlImage[1];
+  return undefined;
+}
 ---
 
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -83,7 +94,9 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
             </Link>
           </div>
           <ul class="flex flex-col gap-4">
-            {blog.map((post) => (
+            {blog.map((post) => {
+              const coverImage = getPostImage(post);
+              return (
               <li>
                 <Link href={getPostHref(post)} class="group block no-underline">
                   <div class="flex justify-between items-start gap-4">
@@ -95,10 +108,10 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
                         {post.data.date.getUTCFullYear()}-{String(post.data.date.getUTCMonth() + 1).padStart(2, '0')}-{String(post.data.date.getUTCDate()).padStart(2, '0')}
                       </p>
                     </div>
-                    {post.data.coverImage && (
+                    {coverImage && (
                       <div class="shrink-0 w-28 h-28 overflow-hidden rounded-md bg-neutral-100 dark:bg-neutral-800">
                         <img 
-                          src={post.data.coverImage.src || post.data.coverImage} 
+                          src={coverImage} 
                           alt={post.data.title} 
                           class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
                         />
@@ -107,7 +120,7 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
                   </div>
                 </Link>
               </li>
-            ))}
+            )})}
           </ul>
         </section>
 
