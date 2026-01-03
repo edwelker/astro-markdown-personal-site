@@ -6,8 +6,9 @@ import { z } from "astro/zod";
 import { BlogSchema } from "../src/schemas/blog";
 
 const BLOG_PATH = path.resolve(process.cwd(), "src/content/blog");
+const SRC_PATH = path.resolve(process.cwd(), "src");
 
-function getFilesRecursively(dir: string, baseDir: string = dir): string[] {
+function getFilesRecursively(dir: string, filter: (file: string) => boolean, baseDir: string = dir): string[] {
   let results: string[] = [];
   if (!fs.existsSync(dir)) return [];
   const list = fs.readdirSync(dir);
@@ -15,9 +16,9 @@ function getFilesRecursively(dir: string, baseDir: string = dir): string[] {
     const fullPath = path.join(dir, file);
     const stat = fs.statSync(fullPath);
     if (stat && stat.isDirectory()) {
-      results = results.concat(getFilesRecursively(fullPath, baseDir));
+      results = results.concat(getFilesRecursively(fullPath, filter, baseDir));
     } else {
-      if (file.endsWith('.md') || file.endsWith('.mdx')) {
+      if (filter(file)) {
         results.push(path.relative(baseDir, fullPath));
       }
     }
@@ -25,7 +26,8 @@ function getFilesRecursively(dir: string, baseDir: string = dir): string[] {
   return results;
 }
 
-const files = getFilesRecursively(BLOG_PATH);
+const blogFiles = getFilesRecursively(BLOG_PATH, (file) => file.endsWith('.md') || file.endsWith('.mdx'));
+const srcFiles = getFilesRecursively(SRC_PATH, (file) => /\.(astro|md|mdx|ts|tsx|js|jsx)$/.test(file));
 
 // Mock the image helper function required by the schema factory
 const mockImage = () => z.any();
@@ -33,7 +35,7 @@ const mockImage = () => z.any();
 const schema = BlogSchema({ image: mockImage });
 
 describe("Schema Compliance Audit", () => {
-  it.each(files)("validating frontmatter: %s", (file) => {
+  it.each(blogFiles)("validating frontmatter: %s", (file) => {
     const raw = fs.readFileSync(path.join(BLOG_PATH, file), "utf-8");
     const { data } = matter(raw);
     
@@ -45,5 +47,14 @@ describe("Schema Compliance Audit", () => {
     }
     
     expect(result.success, `File ${file} does not match the schema.`).toBe(true);
+  });
+});
+
+describe("Pagefind Safety Audit", () => {
+  it.each(srcFiles)("ensuring no data-pagefind-body in %s", (file) => {
+    const content = fs.readFileSync(path.join(SRC_PATH, file), "utf-8");
+    const forbidden = "data-pagefind-body";
+    
+    expect(content, `Found "${forbidden}" in ${file}. Pagefind should index the whole page by default.`).not.toContain(forbidden);
   });
 });
