@@ -1,17 +1,17 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
-import { SITE, HOME, SOCIALS } from "@consts";
-import Link from "@components/Link.astro";
+import { SITE, HOME } from "@consts";
 import { getCollection } from "astro:content";
 import { getAllHighlights } from "@lib/highlights";
-import { getPostHref } from "@lib/blog";
 import Flickr from '@components/Flickr.astro';
 import MusicStats from "@components/MusicStats.astro";
 import CyclingStats from "@components/CyclingStats.astro";
 import MediaTeaser from "@components/MediaTeaser.astro";
 import HighlightSchema from "@components/HighlightSchema.astro";
-import RecipeCard from "@components/RecipeCard.astro";
+import HighlightsList from "@components/HighlightsList.astro";
+import BlogList from "@components/BlogList.astro";
+import RecipesList from "@components/RecipesList.astro";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -24,17 +24,6 @@ const recipes = (await getCollection("recipes"))
   .slice(0, 6);
 
 const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS_ON_HOMEPAGE);
-
-function getPostImage(post) {
-  if (post.data.coverImage) {
-    return post.data.coverImage.src || post.data.coverImage;
-  }
-  const markdownImage = post.body.match(/!\[[^\]]*\]\(([^)\s]+)/);
-  if (markdownImage) return markdownImage[1];
-  const htmlImage = post.body.match(/<img[^>]+src=["']([^"']+)["']/);
-  if (htmlImage) return htmlImage[1];
-  return undefined;
-}
 ---
 
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -42,110 +31,24 @@ function getPostImage(post) {
   <Container>
     <aside data-pagefind-ignore>
       <h1 class="font-extrabold text-3xl text-black dark:text-white">Eddie Welker</h1>
-      <div class="space-y-12 mt-4">
+      <div class="space-y-16 mt-4">
         <section>
           <article class="space-y-4">
             <p>Programmer, Cyclist, Photographer, Cellist, Cook, Woodworker, Laurel, MD, USA.</p>
           </article>
         </section>
 
+        <HighlightsList items={recentHighlights} />
 
         <section data-testid="flickr-section"><Flickr /></section>
 
         <section class="animate" data-testid="cycling-section"><CyclingStats /></section>
 
-        <section class="animate space-y-6" data-testid="highlights-section">
-          <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
-            <h3 class="font-semibold text-black dark:text-white text-lg">Highlights</h3>
-            <Link href="/highlights" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
-              See All <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
-            </Link>
-          </div>
-          <ul class="flex flex-col gap-2">
-            {recentHighlights.map((item) => (
-              <li class="relative">
-                <div class="group p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                  <div class="flex flex-col gap-1">
-                    <div class="flex items-baseline gap-2">
-                      <Link href={item.url} external={item.url.startsWith("http")} aria-label={item.title} class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">
-                        {item.title}
-                      </Link>
-                      {item.url.startsWith("http") && <span class="text-xs text-neutral-400">↗</span>}
-                    </div>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400">
-                      {item.description}
-                      {item.thought && (
-                        <span class="text-neutral-500"> — <span class="italic" set:html={item.thought} /></span>
-                      )}
-                    </p>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-
         <section class="animate" data-testid="music-section"><MusicStats /></section>
 
-            <section class="animate space-y-6" data-testid="posts-section">
-          <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
-            <h3 class="font-semibold text-black dark:text-white text-lg">Blog</h3>
-            <Link href="/blog/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
-              Archives <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
-            </Link>
-          </div>
-          <ul class="flex flex-col gap-2">
-            {blog.map((post) => {
-              const coverImage = getPostImage(post);
-              return (
-              <li>
-                <Link href={getPostHref(post)} class="group block no-underline">
-                  <div class="flex justify-between items-center gap-4">
-                    <div class="flex flex-col gap-1">
-                      <span class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2 leading-tight">
-                        {post.data.title}
-                      </span>
-                      <p class="text-xs text-neutral-500">
-                        {post.data.date.getUTCFullYear()}-{String(post.data.date.getUTCMonth() + 1).padStart(2, '0')}-{String(post.data.date.getUTCDate()).padStart(2, '0')}
-                      </p>
-                    </div>
-                    {coverImage && (
-                      <div class="shrink-0 w-24 h-24 overflow-hidden rounded-md bg-neutral-100 dark:bg-neutral-800">
-                        <img
-                          src={coverImage}
-                          alt={post.data.title}
-                          class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                    )}
-                  </div>
-                </Link>
-              </li>
-            )})}
-          </ul>
-        </section>
+        <BlogList posts={blog} />
 
-        <section class="animate space-y-6" data-testid="recipes-section">
-          <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
-            <h3 class="font-semibold text-black dark:text-white text-lg">Recipes</h3>
-            <Link href="/recipes/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
-              See All Recipes <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
-            </Link>
-          </div>
-
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {recipes.map((recipe) => (
-              <RecipeCard
-                recipe={recipe}
-                showMetadata={false}
-                showDescription={false}
-                titleClass="text-sm"
-                underlineOnHover={true}
-              />
-            ))}
-          </div>
-        </section>
+        <RecipesList recipes={recipes} />
 
         <section class="animate" data-testid="media-section"><MediaTeaser /></section>
       </div>

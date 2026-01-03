@@ -1,0 +1,27 @@
+---
+import Link from "@components/Link.astro";
+import RecipeCard from "@components/RecipeCard.astro";
+
+const { recipes } = Astro.props;
+---
+
+<section class="animate space-y-6" data-testid="recipes-section">
+  <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
+    <h3 class="font-semibold text-black dark:text-white text-lg">Recipes</h3>
+    <Link href="/recipes/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
+      See All Recipes <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+    </Link>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+    {recipes.map((recipe) => (
+      <RecipeCard
+        recipe={recipe}
+        showMetadata={false}
+        showDescription={false}
+        titleClass="text-sm"
+        underlineOnHover={true}
+      />
+    ))}
+  </div>
+</section>
