@@ -38,8 +38,11 @@ recipeInstructions:
   - "Cook cabbage: Add the cabbage to the pan. Cook until wilted and starting to brown. If using garlic, caraway seeds, or marjoram, add it all in the last 5 minutes of cooking."
   - "Combine: Add the cooked noodles to the pan. Stir to combine. Add chicken broth if the mixture is too dry."
   - "Season and Serve: Season generously with salt and pepper. Serve immediately with a required acid component like sour cream, horseradish, or mustard to balance the flavors."
-  - "Authentic Variation (Bacon): Fry 4oz of chopped bacon first. Use the rendered fat instead of some butter to cook the onions/cabbage for better flavor."
-  - "Authentic Variation (Sauerkraut): Replace half the fresh cabbage with rinsed sauerkraut to add natural acidity and texture."
-  - "Simple Variation: Use a 1lb bag of egg noodles."
 draft: false
 ---
+
+## Notes
+
+* For a quick version, just use a 1lb bag of egg noodles.
+* uthentic Variation (Bacon): Fry 4oz of chopped bacon first. Use the rendered fat instead of some butter to cook the onions/cabbage for better flavor.
+* Authentic Variation (Sauerkraut): Replace half the fresh cabbage with rinsed sauerkraut to add natural acidity and texture.
