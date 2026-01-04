@@ -16,7 +16,7 @@ I remember writing 3.5 websites before I really got common code working the way 
 
 Alright, I admit that this post was far more stream-of-conciousness than actual post, but it was good for me. It wasn't intended to be a "I haven't written in a month, here's what I've been doing" post, but more a "I'm busy, I'll be back soon, but I don't know when" type post. So on that note...
 
-\[I think it's [Siouxsie](http://www.vamp.org/Siouxsie/Images/) that's making me intentionally ambiguous. \]
+\[I think it's [Siouxsie](https://www.vamp.org/Siouxsie/Images/) that's making me intentionally ambiguous. \]
 
 Ta ta!
 

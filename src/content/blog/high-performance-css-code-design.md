@@ -6,7 +6,7 @@ tags: ["css", "design", "programming", "refactoring"]
 ---
 In the last few years much emphasis has been placed on web performance issues. Browser vendors have optimized JavaScript engines, JavaScript libraries have been honed, and content delivery has been improved. Unfortunately, CSS has received less attention. Developers have been advised how to optimally transfer CSS files, and instructed to use CSS shorthand, but very little has targeted CSS code itself.
 
-[Ms. Nicole Sullivan](http://www.stubbornella.org/) is among those looking to improve CSS code. She has been promoting "[OOCSS](https://github.com/stubbornella/oocss)," or "[Object Oriented CSS](https://github.com/stubbornella/oocss)," her methodology for how to design and refactor CSS [1](#n1). She has collected a number of best practices for architecting a CSS framework. The benefits are simple: CSS will perform better, become more modular, as well as being grounded with a consistent API, making it easier to learn and use. This is accomplished by reducing the file size and complexity of our CSS.
+[Ms. Nicole Sullivan](https://www.stubbornella.org/) is among those looking to improve CSS code. She has been promoting "[OOCSS](https://github.com/stubbornella/oocss)," or "[Object Oriented CSS](https://github.com/stubbornella/oocss)," her methodology for how to design and refactor CSS [1](#n1). She has collected a number of best practices for architecting a CSS framework. The benefits are simple: CSS will perform better, become more modular, as well as being grounded with a consistent API, making it easier to learn and use. This is accomplished by reducing the file size and complexity of our CSS.
 
 While many of these techniques can be considered common practice for experienced CSS programmers, implementing them can be difficult. The art is in analyzing trade-offs and picking the optimal path. That said, these rules are not for everyone, or every site. It all boils down to deciding if the site's performance gain is greater than the time it takes to learn and use the techniques.
 
@@ -22,7 +22,7 @@ While many of these techniques can be considered common practice for experienced
 - Varying design (possibly "portfolio" or design sites)
 - Few performance concerns
 
-So how do we get started? We go hunting for bad code smells. In Chapter 3 of [*Refactoring: Improving the Design of Existing Code*](http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672), [Martin Fowler](http://martinfowler.com/) and [Kent Beck](http://twitter.com/kentbeck) coin the phrase "code smell," meaning "structures in the code that suggest the possibility of refactoring." Simply put, we go looking for chunks of code that our intuition tells us could be cleaned. In the chapter heading, Grandma Beck is quoted (then talking about child-rearing), "If it stinks, change it." We'll take a more formal approach to finding these code smells, going from easy to difficult. First, we'll sniff around the CSS selectors, and then move onto the CSS properties. Finally we'll look for visual design patterns that can direct the structure of our CSS.
+So how do we get started? We go hunting for bad code smells. In Chapter 3 of [*Refactoring: Improving the Design of Existing Code*](https://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672), [Martin Fowler](https://martinfowler.com/) and [Kent Beck](https://twitter.com/kentbeck) coin the phrase "code smell," meaning "structures in the code that suggest the possibility of refactoring." Simply put, we go looking for chunks of code that our intuition tells us could be cleaned. In the chapter heading, Grandma Beck is quoted (then talking about child-rearing), "If it stinks, change it." We'll take a more formal approach to finding these code smells, going from easy to difficult. First, we'll sniff around the CSS selectors, and then move onto the CSS properties. Finally we'll look for visual design patterns that can direct the structure of our CSS.
 
 Selectors
 ---------
@@ -139,7 +139,7 @@ Overuse of the float property is a code smell indicating repetition in placing i
 
 ### Font-size
 
-It's rare for sites to use multiple sizes of body text on one page, or site wide. Therefore most font-size properties are likely used to define header-like text sizes. [Ms. Sullivan does an excellent job pointing out](http://www.stubbornella.org/content/2010/07/01/top-5-mistakes-of-massive-css/), that of a finite number of font-sizes that can be used on a page, there are even fewer that a user can differentiate (for example the difference between 15px and 16px browser font sizes). Font-size therefore is usually a code smell for repeating headers.
+It's rare for sites to use multiple sizes of body text on one page, or site wide. Therefore most font-size properties are likely used to define header-like text sizes. [Ms. Sullivan does an excellent job pointing out](https://www.stubbornella.org/content/2010/07/01/top-5-mistakes-of-massive-css/), that of a finite number of font-sizes that can be used on a page, there are even fewer that a user can differentiate (for example the difference between 15px and 16px browser font sizes). Font-size therefore is usually a code smell for repeating headers.
 
 ### Mingling box model, visual formatting model, and presentational properties
 
@@ -178,7 +178,7 @@ Then start the tedious process of tearing out the previous code and replacing wi
 
 ### "Media Blocks"
 
-One pattern that Ms. Sullivan found frequently on the Facebook site is something she has coined a "Media Block," which [she defines](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) as "an image to the left, with descriptive content to the right." Simply put, this is just a compound object, which is slightly more abstract than the previous examples. She analyzes these media blocks in two steps. First define their constant functional properties (what they do), then identify the variables in the design (parts could fluctuate in certain conditions).
+One pattern that Ms. Sullivan found frequently on the Facebook site is something she has coined a "Media Block," which [she defines](https://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) as "an image to the left, with descriptive content to the right." Simply put, this is just a compound object, which is slightly more abstract than the previous examples. She analyzes these media blocks in two steps. First define their constant functional properties (what they do), then identify the variables in the design (parts could fluctuate in certain conditions).
 
 Not all sites will contain objects like these, but if yours does, identifying the patterns will help to reduce code duplication and promote code reuse.
 

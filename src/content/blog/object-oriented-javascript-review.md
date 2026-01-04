@@ -4,11 +4,11 @@ date: '2008-10-25T22:02:16-05:00'
 slug: 2008/10/25/object-oriented-javascript-review
 tags: ["javascript", "programming", "reading", "reviews"]
 ---
-[![Object Oriented JavaScript](/objectorientedjavascript.jpg "Object Oriented JavaScript")](http://www.packtpub.com/object-oriented-javascript-applications-libraries/book)
+[![Object Oriented JavaScript](/objectorientedjavascript.jpg "Object Oriented JavaScript")](https://www.packtpub.com/object-oriented-javascript-applications-libraries/book)
 
-I recently read [Object-Oriented JavaScript](http://www.packtpub.com/object-oriented-javascript-applications-libraries/book), by [Stoyan Stefanov](http://www.phpied.com/). In reviewing it, I found it was one of the most interesting books I've read in a while, for some good reasons and a few more curious reasons.
+I recently read [Object-Oriented JavaScript](https://www.packtpub.com/object-oriented-javascript-applications-libraries/book), by [Stoyan Stefanov](https://www.phpied.com/). In reviewing it, I found it was one of the most interesting books I've read in a while, for some good reasons and a few more curious reasons.
 
-Object-Oriented JavaScript was authored by Mr. Stefanov, who is a developer at Yahoo. It features an impressive number of reviewers (twelve), among them [Douglas Crockford](http://www.crockford.com/), the author of [*JavaScript: The Good Parts*](http://oreilly.com/catalog/9780596517748/), and [Ross Harmes](http://techfoolery.com/), author of [*JavaScript Design Patterns*](http://www.apress.com/book/view/159059908x), both of whom are Stefanov's Yahoo co-workers. In a reasonable 330 pages, it features eight chapters on JavaScript's History, Basic Syntax/Features, Functions, Objects, Prototypes, Inheritance, the DOM, and Patterns/Best Practices.
+Object-Oriented JavaScript was authored by Mr. Stefanov, who is a developer at Yahoo. It features an impressive number of reviewers (twelve), among them [Douglas Crockford](https://www.crockford.com/), the author of [*JavaScript: The Good Parts*](https://oreilly.com/catalog/9780596517748/), and [Ross Harmes](https://techfoolery.com/), author of [*JavaScript Design Patterns*](https://www.apress.com/book/view/159059908x), both of whom are Stefanov's Yahoo co-workers. In a reasonable 330 pages, it features eight chapters on JavaScript's History, Basic Syntax/Features, Functions, Objects, Prototypes, Inheritance, the DOM, and Patterns/Best Practices.
 
 Readers with little to no JavaScript knowledge will be able to read this book, but I'm uncertain how much they'll be able to glean from the meaty inner chapters (functions, objects, prototypes, and inheritance). Readers with moderate JavaScript understanding should be able to learn a great deal from this book. At the very least, advanced readers should be reminded of some of the language's quirkier parts, as well as benefiting from an organized chapter on inheritance techniques.
 

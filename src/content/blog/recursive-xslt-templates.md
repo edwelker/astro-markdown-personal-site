@@ -13,7 +13,7 @@ Let's say we have the following source document, short and sweet. We want to tak
 <comma>1,2,3,4,5,6,7,88,99,100</comma>
 ```
 
-The easy way to do this is to use the [EXSLT str:tokenize function](http://www.exslt.org/str/functions/tokenize/), which takes a string and some delimiters and splits the string based on those delimiters. All we do is add the xmlns:str and extension-element-prefixes attributes to our xsl:stylesheet declaration, and then call the str:tokenize function.
+The easy way to do this is to use the [EXSLT str:tokenize function](https://www.exslt.org/str/functions/tokenize/), which takes a string and some delimiters and splits the string based on those delimiters. All we do is add the xmlns:str and extension-element-prefixes attributes to our xsl:stylesheet declaration, and then call the str:tokenize function.
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -151,6 +151,6 @@ When applied to our source document, we get exactly what we wanted, each number 
 <value>100</value>
 ```
 
-So we accomplished what we were looking to accomplish by writing a recursive template, however our template only deals with commas. What if our list was separated by spaces instead of commas? We'd have to either write a new template that deals with spaces, or, better yet, modify our template to be more generic and handle many cases. I invite you to take a look at the [actual implementation of the str:tokenize function](http://www.exslt.org/str/functions/tokenize/str.tokenize.template.xsl). It isn't that much more complicated, but does contain a few interesting wrinkles.
+So we accomplished what we were looking to accomplish by writing a recursive template, however our template only deals with commas. What if our list was separated by spaces instead of commas? We'd have to either write a new template that deals with spaces, or, better yet, modify our template to be more generic and handle many cases. I invite you to take a look at the [actual implementation of the str:tokenize function](https://www.exslt.org/str/functions/tokenize/str.tokenize.template.xsl). It isn't that much more complicated, but does contain a few interesting wrinkles.
 
-If you're interested in the basics of recursion in general, I highly recommend [*The Little Schemer*](http://www.amazon.com/gp/product/0262560992?ie=UTF8&tag=eddwelsblo-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0262560992) which is the most outstanding book I've read on the subject.
+If you're interested in the basics of recursion in general, I highly recommend [*The Little Schemer*](https://www.amazon.com/gp/product/0262560992?ie=UTF8&tag=eddwelsblo-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0262560992) which is the most outstanding book I've read on the subject.

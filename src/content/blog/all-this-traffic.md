@@ -4,9 +4,9 @@ date: '2007-09-01T09:52:07-05:00'
 slug: 2007/09/01/all-this-traffic
 tags: ["life", "moving"]
 ---
-[...all this traffic.](http://www.flickr.com/photos/ed_welker/1291955348/)
+[...all this traffic.](https://www.flickr.com/photos/ed_welker/1291955348/)
 
-Originally uploaded by [ed\_welker](http://www.flickr.com/people/ed_welker/)
+Originally uploaded by [ed\_welker](https://www.flickr.com/people/ed_welker/)
 
 Getting away from all this traffic and signing the lease to my new place today. Woo hoo! Or at least I think woo hoo.
 

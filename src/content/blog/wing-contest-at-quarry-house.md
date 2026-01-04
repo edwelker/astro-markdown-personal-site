@@ -7,7 +7,7 @@ tags: ["cooking"]
 ---
 My first order of Quarry House wings was "medium." The waitress had told me that they ran one level hot, and the medium were actually hotter than an standard "hot." My nose was stuffed and my eyes were fully watered up at the end of twelve.
 
-We decided to set up a trip with Andrew, Rich, myself, and my sister. I realized that Aman loves hot food too, so I invited him as well. We formally decided to go the night that Young Frankenstein played at the [AFI](http://afi.com/silver/). The final group was myself, Simon, Andrew, Rich, Alissa, Cathy, Shveta, and Aman.
+We decided to set up a trip with Andrew, Rich, myself, and my sister. I realized that Aman loves hot food too, so I invited him as well. We formally decided to go the night that Young Frankenstein played at the [AFI](https://afi.com/silver/). The final group was myself, Simon, Andrew, Rich, Alissa, Cathy, Shveta, and Aman.
 
 The order came out, 9 wings each of the mild, medium, hot, and 4 alarm. As my sister said later, we probably should have started with the mild and worked our way up... but instead we each went to the 4 alarm. Lips started to burn, glasses (Rich's) came off, and instead of laughter, yelling, or anything positive, we all spent time making sure we were physically ok. When the burning stopped, we could taste a familiar sweet habanero flavor.
 

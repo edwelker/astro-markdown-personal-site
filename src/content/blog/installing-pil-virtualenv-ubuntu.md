@@ -30,12 +30,12 @@ Alright, now we seem to be done with the prerequisites. Start your virtualenv (o
 
 Download PIL and install. This will make sure to install PIL within your virtualenv's site-packages.
 
-`(myEnv)$ wget http://effbot.org/downloads/Imaging-1.1.7.tar.gz
+`(myEnv)$ wget https://effbot.org/downloads/Imaging-1.1.7.tar.gz
 (myEnv)$ tar zxvf Imaging-1.1.7.tar.gz
 (myEnv)$ cd Imaging-1.1.7
 (myEnv)$ python setup.py install`
 
-If you run into further problems (the "decoder jpeg not available" message again), you may have to resort to the [long directions](http://effbot.org/zone/pil-decoder-jpeg-not-available.htm) to get PIL and libjpeg to play happily together, but I hope not.
+If you run into further problems (the "decoder jpeg not available" message again), you may have to resort to the [long directions](https://effbot.org/zone/pil-decoder-jpeg-not-available.htm) to get PIL and libjpeg to play happily together, but I hope not.
 
 Now that you have everything installed, test it. Open up a python shell from within your virtualenv.
 

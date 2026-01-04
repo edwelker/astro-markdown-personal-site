@@ -4,7 +4,7 @@ date: '2007-11-13T23:53:17-05:00'
 slug: 2007/11/13/long-3-day-weekend
 tags: ["Farmers Market", "new york"]
 ---
-So I return from East Hampton. 800 miles to empty out the freezer (and then de-ice it with only a metal spatula).  Alright, so I've had some better trips. At least the [Amagansett Farmer's Market](http://flickr.com/photos/ed_welker/499972493/) was good. And the surf looked good (if not near-frozen). I won't go into details, but my weekend consisted of:
+So I return from East Hampton. 800 miles to empty out the freezer (and then de-ice it with only a metal spatula).  Alright, so I've had some better trips. At least the [Amagansett Farmer's Market](https://flickr.com/photos/ed_welker/499972493/) was good. And the surf looked good (if not near-frozen). I won't go into details, but my weekend consisted of:
 
 - 800 Miles of driving. That's a lot. Additionally, I got stuck in one traffic jam on the L.I.E., but made my orchestra rehearsal... by three minutes.
 - Cleaning out the fridge, bringing in the latter, insulating the skylight, closing windows, bringing in tools, and all of the other things we do to "close down" the house. Not sure why I did it all myself.

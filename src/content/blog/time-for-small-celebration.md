@@ -6,7 +6,7 @@ tags: ["pubmed"]
 ---
 Indeed, it is time for a small party... my last 2 to 3 months of work has gone live!
 
-[http://www.pubmed.gov](http://pubmed.gov)
+[https://www.pubmed.gov](https://pubmed.gov)
 
 Go take a look and see what's wrong with your foot. 🙂 Also, make sure to check out my favorite PubMed article. I'll give you the id... just search for that. It's: 17328369.
 

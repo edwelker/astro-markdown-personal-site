@@ -6,7 +6,7 @@ tags: ["life"]
 ---
 Washington Post -- Obituaries
 
-[Friday, December 14, 2007; Page B07](http://www.washingtonpost.com/wp-dyn/content/article/2007/12/13/AR2007121302030.html)
+[Friday, December 14, 2007; Page B07](https://www.washingtonpost.com/wp-dyn/content/article/2007/12/13/AR2007121302030.html)
 
 Jean Edward Welker -- NASA Physicist
 
@@ -28,9 +28,9 @@ Jean Edward Welker
 
 72, died at Washington Hospital Center on December 5, 2007 from heart failure. Beloved husband of the late Joan Mary (Minko), he is survived by his three children Edward, Catherine, and Tania. Dr. Welker, who spent 50 years working for the government, was a physicist for NASA in Greenbelt, MD. He received his doctorate in history from the University of Maryland. All are invited to graveside services Mon., December 10th at 10:30 am at Glenwood Cemetery, Great Rd. (Rte 111), Maynard, MA. Martin &amp; Doran Funeral Home.
 
-[Published in the Boston Globe on 12/9/2007.](http://www.legacy.com/bostonglobe/DeathNotices.asp?Page=Lifestory&PersonId=99306256)
+[Published in the Boston Globe on 12/9/2007.](https://www.legacy.com/bostonglobe/DeathNotices.asp?Page=Lifestory&PersonId=99306256)
 
 ------
 
 [Jean E. Welker,
-NASA Technical Reports Server  ](http://ntrs.nasa.gov/search.jsp?N=0&Ntk=all%7Call&Ntx=mode+matchall%7Cmode%20matchall&Ntt=welker%7Cjean)
+NASA Technical Reports Server  ](https://ntrs.nasa.gov/search.jsp?N=0&Ntk=all%7Call&Ntx=mode+matchall%7Cmode%20matchall&Ntt=welker%7Cjean)

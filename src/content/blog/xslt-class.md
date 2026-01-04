@@ -4,9 +4,9 @@ date: '2007-10-23T22:07:13-05:00'
 slug: 2007/10/23/xslt-class
 tags: ["functional programming", "mulberry technologies", "xslt"]
 ---
-Last Monday through last Wednesday I attended [Mulberry Technologies' XSLT course](http://mulberrytech.com/). I had a fun time, and learned a bunch.
+Last Monday through last Wednesday I attended [Mulberry Technologies' XSLT course](https://mulberrytech.com/). I had a fun time, and learned a bunch.
 
-To prepare, I looked through a few books. I looked through Jeni Tennison's *Beginning XSLT 2.0* book, but it wasn't for me. I didn't like how wordy it was... I got lost in the dialogue, and it distracted me from the points and the examples. On the otherhand, [Doug Tidwell](http://www.oreillynet.com/pub/au/749)'s book, *XSLT-Mastering XML Tranformations* was precisely what I was looking for. It was concise and organized very methodically. PLUS, it only cost me $7 with shipping from Amazon. Heh, gotta love that!
+To prepare, I looked through a few books. I looked through Jeni Tennison's *Beginning XSLT 2.0* book, but it wasn't for me. I didn't like how wordy it was... I got lost in the dialogue, and it distracted me from the points and the examples. On the otherhand, [Doug Tidwell](https://www.oreillynet.com/pub/au/749)'s book, *XSLT-Mastering XML Tranformations* was precisely what I was looking for. It was concise and organized very methodically. PLUS, it only cost me $7 with shipping from Amazon. Heh, gotta love that!
 
 \[note: because we only use 1.0 on the job, older books were better, as I didn't have to figure out what was a 2.0 feature and what was a 1.0 feature... and again, the books were cheaper\]
 

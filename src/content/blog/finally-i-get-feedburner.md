@@ -4,7 +4,7 @@ date: '2008-01-21T15:32:04-05:00'
 slug: 2008/01/21/finally-i-get-feedburner
 tags: ["del.icio.us", "feed", "feedburner", "meta", "photography", "rss"]
 ---
-So I have off for Martin Luther King day today. I found myself with a chunk of time, and decided once and for all, to make [feedburner](http://feedburner.com) work for me. Happily, I can now say that I did that, and can move on.
+So I have off for Martin Luther King day today. I found myself with a chunk of time, and decided once and for all, to make [feedburner](https://feedburner.com) work for me. Happily, I can now say that I did that, and can move on.
 
 You will notice the bright orange RSS logo on the side there... that now squishes my blog, del.icio.us links, and flickr images together for a nice big mess. Just the way I like it.
 

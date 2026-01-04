@@ -12,7 +12,7 @@ Because I am likely more standards-driven than most doing similar work, I wanted
 
 Nothing.
 
-Low and behold, Microsoft hasn't added that to IE. Of course not. Why would they? It's only been [in the recommendation since... you know, May 1998](http://www.w3.org/TR/1998/REC-CSS2-19980512/). At least! (I don't have the heart to look any further back).
+Low and behold, Microsoft hasn't added that to IE. Of course not. Why would they? It's only been [in the recommendation since... you know, May 1998](https://www.w3.org/TR/1998/REC-CSS2-19980512/). At least! (I don't have the heart to look any further back).
 
 I am not "new" as my sister would say... I know how it is. I hadn't expected it to be there, but the more work I had to do on an alternate table-based solution, the more it annoyed me. I keep hearing more and more about the CSS3 recommendation, adding more elements to HTML 5, and all of these other grand documents, which all currently amount to little-to-nothing. Maybe I am missing the point, but if 1998 is going to be ignored, why should 2008 be any different?
 

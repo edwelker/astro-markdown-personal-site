@@ -109,7 +109,7 @@ Given the input,
 <?xml version="1.0" ?>
 <images>
   <image>
-    <url>http://www.filmjunkie.com/drinks/blixa/blixa.jpg</url>
+    <url>https://www.filmjunkie.com/drinks/blixa/blixa.jpg</url>
     <alt>Blixa!</alt>
   </image>
 </images>
@@ -138,7 +138,7 @@ the processor will apply the higher-precedence template first, and then apply th
 
 ```xml
 <div class="wrapper">
-  <img src="http://www.filmjunkie.com/drinks/blixa/blixa.jpg" alt="Blixa!"/>
+  <img src="https://www.filmjunkie.com/drinks/blixa/blixa.jpg" alt="Blixa!"/>
   <div>
 ```
 

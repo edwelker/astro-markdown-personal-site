@@ -4,7 +4,7 @@ date: '2007-08-26T21:28:12-05:00'
 slug: 2007/08/26/beginning-of-the-fall-semester
 tags: ["classical music", "fall", "fall semester", "new york", "summer"]
 ---
-Tomorrow is the start of a new [Columbia Orchestra](http://www.columbiaorchestra.org) season. It's the first rehearsal. I could not be less prepared either. For the first time I can remember, I am starting a new semester and nothing in my life is changing. I don't have a new place to live, any new classes, any new books/clothes/shoes for school, or even any new school.
+Tomorrow is the start of a new [Columbia Orchestra](https://www.columbiaorchestra.org) season. It's the first rehearsal. I could not be less prepared either. For the first time I can remember, I am starting a new semester and nothing in my life is changing. I don't have a new place to live, any new classes, any new books/clothes/shoes for school, or even any new school.
 
 At this time last year I was about to return from East Hampton. I was moving into a new house, one I had never seen, and was about to start searching for a new job. It was exciting. From almost nowhere, I decided I was going to get a job writing webpages, or programming, or both. I wrote up a resume, replied to a few postings, and got a temp job. I was offered a regular position within a week-and-a-half and have been doin' it since.
 

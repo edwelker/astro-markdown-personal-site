@@ -103,7 +103,7 @@ Using this template, I can write a XSLT stylesheet that will copy the entire sou
   </stylesheet>
 ```
 
-So how do we add the profit made from each item and remove the unnecessary information? We use the fact that our xsl:match="@\*|node()" template has a very low priority. Determination of default XSLT priorities are an advanced topic I won't go into right now, but feel free to [explore the topic](http://www.w3.org/TR/xslt#conflict) if [you are interested](http://www.dpawson.co.uk/xsl/sect2/N7654.html#d11689e235). Our template is essentially given a priority of -.5. Templates such as xsl:template match="foo", however, are given a default priority of 0. Because templates matching element names are higher priority, we can easily figure out how to remove the "author" and "conductor" elements, just declare templates without outputs!
+So how do we add the profit made from each item and remove the unnecessary information? We use the fact that our xsl:match="@\*|node()" template has a very low priority. Determination of default XSLT priorities are an advanced topic I won't go into right now, but feel free to [explore the topic](https://www.w3.org/TR/xslt#conflict) if [you are interested](https://www.dpawson.co.uk/xsl/sect2/N7654.html#d11689e235). Our template is essentially given a priority of -.5. Templates such as xsl:template match="foo", however, are given a default priority of 0. Because templates matching element names are higher priority, we can easily figure out how to remove the "author" and "conductor" elements, just declare templates without outputs!
 
 ```xml
 <pre lang="xml">

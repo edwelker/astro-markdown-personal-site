@@ -8,7 +8,7 @@ On Mar 31, 2009, at 11:45 AM, Edward Welker wrote:
 
 >> Aaron wrote:  
 >> This may be one of the best URLs I have ever seen:  
->> http://www.ringling.com/FlashSubContent.aspx?id=11654&amp;parentID=320&amp;asset  
+>> https://www.ringling.com/FlashSubContent.aspx?id=11654&amp;parentID=320&amp;asset  
 >> FolderID=340  
 >>  
 >> Just looking at it, I can tell exactly what I can expect when I click  
