@@ -223,7 +223,13 @@ function getSourceDomain(url) {
 </Layout>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  let updateInterval;
+
+  function initSportsPage() {
+    // Clear any existing interval to prevent duplicates on page navigation
+    if (updateInterval) {
+      clearInterval(updateInterval);
+    }
     const tabs = document.querySelectorAll('[data-tab]');
     const panels = document.querySelectorAll('[data-panel]');
 
@@ -279,6 +285,7 @@ function getSourceDomain(url) {
 
     updateLastUpdated();
     // Update every minute
-    setInterval(updateLastUpdated, 60000);
-  });
+    updateInterval = setInterval(updateLastUpdated, 60000);
+  }
+  document.addEventListener('astro:page-load', initSportsPage);
 </script>
