@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { sortByNetPrice } from '../src/lib/gas-sort.ts';
+import { sortByNetPrice, sortGasData } from '../src/lib/gas-sort.ts';
 
 describe('Gas Sort - sortByNetPrice', () => {
   it('should sort by Net price ascending', () => {
@@ -30,5 +30,60 @@ describe('Gas Sort - sortByNetPrice', () => {
     const items = [];
     items.sort(sortByNetPrice);
     expect(items).toEqual([]);
+  });
+});
+
+describe('Gas Sort - sortGasData', () => {
+  const testData = () => [ // Use a function to get fresh data for each test
+    { Station: 'C Gas', Address: '3 Main St', Net: '3.60', Base: '3.70' },
+    { Station: 'A Gas', Address: '1 Main St', Net: '3.40', Base: '3.50' },
+    { Station: 'B Gas', Address: '2 Main St', Net: '3.50', Base: '3.60' },
+    { Station: 'D Gas', Address: '4 Main St', Net: null, Base: '3.80' },
+  ];
+
+  const distances = {
+    '1 Main St': { duration: 200 },
+    '2 Main St': { duration: 100 },
+    '3 Main St': { duration: 300 },
+    // 4 Main St has no distance
+  };
+
+  it('should sort by a text column (Station) ascending', () => {
+    const data = testData();
+    sortGasData(data, { sortCol: 'Station', sortAsc: true, distances: {} });
+    expect(data.map(i => i.Station)).toEqual(['A Gas', 'B Gas', 'C Gas', 'D Gas']);
+  });
+
+  it('should sort by a text column (Station) descending', () => {
+    const data = testData();
+    sortGasData(data, { sortCol: 'Station', sortAsc: false, distances: {} });
+    expect(data.map(i => i.Station)).toEqual(['D Gas', 'C Gas', 'B Gas', 'A Gas']);
+  });
+
+  it('should sort by a numeric column (Net) ascending, pushing invalid to the end', () => {
+    const data = testData();
+    sortGasData(data, { sortCol: 'Net', sortAsc: true, distances: {} });
+    expect(data.map(i => i.Station)).toEqual(['A Gas', 'B Gas', 'C Gas', 'D Gas']);
+  });
+
+  it('should use tie-breaker (Net price) when primary sort values are equal', () => {
+    const data = [
+      { Station: 'Z Gas', Address: '1', Net: '3.50', Base: '3.60' },
+      { Station: 'Y Gas', Address: '2', Net: '3.40', Base: '3.60' },
+    ];
+    sortGasData(data, { sortCol: 'Base', sortAsc: true, distances: {} });
+    expect(data.map(i => i.Station)).toEqual(['Y Gas', 'Z Gas']);
+  });
+  
+  it('should sort by time ascending, pushing stations without time to the end', () => {
+    const data = testData();
+    sortGasData(data, { sortCol: 'Time', sortAsc: true, distances });
+    expect(data.map(i => i.Address)).toEqual(['2 Main St', '1 Main St', '3 Main St', '4 Main St']);
+  });
+
+  it('should sort by time descending, pushing stations without time to the end', () => {
+    const data = testData();
+    sortGasData(data, { sortCol: 'Time', sortAsc: false, distances });
+    expect(data.map(i => i.Address)).toEqual(['3 Main St', '1 Main St', '2 Main St', '4 Main St']);
   });
 });

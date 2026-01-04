@@ -106,6 +106,7 @@ const data = normalizeGasData(rawData, region).sort(sortByNetPrice);
 <script>
   import { filterGasData } from '../../lib/gas-filter';
   import { calculateDistances } from '../../lib/gas-distance';
+  import { sortGasData } from '../../lib/gas-sort';
 
   function initGasPage() {
     const tableBody = document.getElementById('gas-table-body');
@@ -135,11 +136,6 @@ const data = normalizeGasData(rawData, region).sort(sortByNetPrice);
       return isNaN(num) ? String(val) : num.toFixed(2);
     }
 
-    function parseCurrency(val) {
-      if (typeof val !== 'string') return val;
-      const num = parseFloat(val.replace(/[^0-9.-]+/g,""));
-      return isNaN(num) ? undefined : num;
-    }
 
     async function calculateAllDistances() {
       console.log("UI: calculateAllDistances triggered");
@@ -208,34 +204,7 @@ const data = normalizeGasData(rawData, region).sort(sortByNetPrice);
 
       // Sort
       if (sortCol) {
-        filtered.sort((a, b) => {
-          let valA, valB;
-
-          if (sortCol === 'Time') {
-            valA = distances[a.Address]?.duration ?? Infinity;
-            valB = distances[b.Address]?.duration ?? Infinity;
-            if (valA === null) valA = Infinity;
-            if (valB === null) valB = Infinity;
-          } else if (['Base', 'Net', 'Discount'].includes(sortCol)) {
-            valA = parseCurrency(a[sortCol]);
-            valB = parseCurrency(b[sortCol]);
-
-            if (valA === undefined && valB === undefined) return 0;
-            if (valA === undefined) return 1;
-            if (valB === undefined) return -1;
-          } else {
-            valA = (a[sortCol] || "").toString().toLowerCase();
-            valB = (b[sortCol] || "").toString().toLowerCase();
-          }
-
-          if (valA < valB) return sortAsc ? -1 : 1;
-          if (valA > valB) return sortAsc ? 1 : -1;
-
-          // Tie-breaker: cheaper Net price first
-          const netA = parseCurrency(a.Net) ?? Infinity;
-          const netB = parseCurrency(b.Net) ?? Infinity;
-          return netA - netB;
-        });
+        sortGasData(filtered, { sortCol, sortAsc, distances });
       }
 
       // Update Headers
