@@ -31,9 +31,25 @@ def run_interactive_replace():
                     print(f"Could not read {filepath}: {e}")
                     continue
                 
-                # Regex to find http:// URLs
-                # Captures http:// followed by characters that are NOT whitespace, brackets, quotes, etc.
-                matches = [m for m in re.finditer(r'http://[^\s\)\}\]\>\"\'\n]+', content)]
+                # Identify code blocks to ignore
+                code_block_ranges = []
+                for m in re.finditer(r'```[\s\S]*?```', content):
+                    code_block_ranges.append(m.span())
+
+                # Find all http matches
+                all_matches = [m for m in re.finditer(r'http://[^\s\)\}\]\>\"\'\n]+', content)]
+                
+                # Filter out matches that are inside code blocks
+                matches = []
+                for m in all_matches:
+                    start, end = m.span()
+                    is_inside_code_block = False
+                    for cb_start, cb_end in code_block_ranges:
+                        if start >= cb_start and end <= cb_end:
+                            is_inside_code_block = True
+                            break
+                    if not is_inside_code_block:
+                        matches.append(m)
                 
                 if not matches:
                     continue

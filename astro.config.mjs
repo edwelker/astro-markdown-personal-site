@@ -17,7 +17,7 @@ export default defineConfig({
     inlineStylesheets: 'never',
   },
   redirects: {
-    '/dashboard': '/dash',
+    '/dashboard': '/dash/',
   },
   integrations: [
       sitemap({
