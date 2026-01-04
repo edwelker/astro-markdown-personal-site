@@ -19,3 +19,43 @@ export function readingTime(html: string) {
   const readingTimeMinutes = (wordCount / 200 + 1).toFixed();
   return `${readingTimeMinutes} min read`;
 }
+
+export function formatRelativeTime(dateInput: string | Date): string {
+    if (!dateInput) return '';
+    const date = new Date(dateInput);
+    // Safety check for invalid dates
+    if (isNaN(date.getTime())) return '';
+
+    const now = new Date();
+    const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+    const diffInDays = Math.floor(diffInSeconds / 86400);
+
+    if (diffInDays === 0) {
+        return 'Today';
+    } else if (diffInDays === 1) {
+        return 'Yesterday';
+    } else {
+        return `${diffInDays} days ago`;
+    }
+}
+
+export function decodeHtmlEntities(str: string | null | undefined): string {
+    if (!str) return "";
+    return str.replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(Number(dec)))
+              .replace(/&#x([0-9a-fA-F]+);/g, (match, hex) => String.fromCharCode(parseInt(hex, 16)))
+              .replace(/&quot;/g, '"')
+              .replace(/&apos;/g, "'")
+              .replace(/&amp;/g, '&')
+              .replace(/&lt;/g, '<')
+              .replace(/&gt;/g, '>');
+}
+
+export function getSourceDomain(url: string | null | undefined): string {
+    if (!url) return '';
+    try {
+        const domain = new URL(url).hostname;
+        return domain.replace('www.', '');
+    } catch (e) {
+        return '';
+    }
+}
