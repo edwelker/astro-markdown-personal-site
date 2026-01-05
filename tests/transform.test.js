@@ -19,7 +19,7 @@ describe('Data Transformation Logic', () => {
       vi.useFakeTimers().setSystemTime(new Date('2025-12-23'));
       const mock = [{ sport_type: 'Ride', start_date: '2025-12-01', distance: 16093.4, total_elevation_gain: 304.8, visibility: 'public' }];
       const res = transformStravaData(mock);
-      expect(res.year.distance).toBe("10");
+      expect(res.year.distance).toBe("10.0");
       expect(res.year.elevation).toBe("1,000");
       vi.useRealTimers();
     });
@@ -36,11 +36,11 @@ describe('Data Transformation Logic', () => {
       const res = transformStravaData(mock);
       
       // Year stats (2026) should be 0
-      expect(res.year.distance).toBe("0");
+      expect(res.year.distance).toBe("0.0");
       
       // Month stats should show December (fallback)
       expect(res.month.name).toBe("December");
-      expect(res.month.distance).toBe(10); // 10 miles from Dec ride
+      expect(res.month.distance).toBe("10.0"); // 10 miles from Dec ride
       
       vi.useRealTimers();
     });

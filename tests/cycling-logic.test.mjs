@@ -23,11 +23,11 @@ describe('Cycling Logic', () => {
 
     // Year stats (2025) should be empty
     expect(result.year.count).toBe(0);
-    expect(result.year.distance).toBe("0");
+    expect(result.year.distance).toBe("0.0");
 
     // Month stats should fall back to December
     expect(result.month.name).toBe('December');
-    expect(result.month.distance).toBe(10); // 10 miles
+    expect(result.month.distance).toBe("10.0"); // 10 miles
   });
 
   it('should show current month stats when rides exist in current year', () => {
@@ -48,8 +48,8 @@ describe('Cycling Logic', () => {
     const result = transformStravaData(activities, mockNow);
 
     expect(result.year.count).toBe(1);
-    expect(result.year.distance).toBe("10");
+    expect(result.year.distance).toBe("10.0");
     expect(result.month.name).toBe('January');
-    expect(result.month.distance).toBe(10);
+    expect(result.month.distance).toBe("10.0");
   });
 });
