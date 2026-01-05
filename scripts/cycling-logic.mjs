@@ -113,7 +113,7 @@ export const transformStravaData = (activities, currentDate = new Date()) => {
   let showMonth = true;
 
   // If current month has 0 distance, show previous month
-  if (Math.round(monthDist) === 0) {
+  if (monthDist === 0) {
       // Use the calculated previous month/year to ensure consistency with NY time
       // Pick the 15th of the month to be safe from timezone rollovers when formatting
       const prevDate = new Date(Date.UTC(prevMonthYear, prevMonthIndex, 15));
