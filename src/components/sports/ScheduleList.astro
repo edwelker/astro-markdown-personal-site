@@ -6,7 +6,8 @@ function formatGameDate(date) {
         month: 'short',
         day: 'numeric',
         hour: 'numeric',
-        minute: '2-digit'
+        minute: '2-digit',
+        timeZone: 'America/New_York'
     });
 }
 ---
@@ -42,7 +43,9 @@ function formatGameDate(date) {
                     )}
                 </div>
                 <div class="mt-1 text-xs text-neutral-500 font-mono">
-                    {formatGameDate(game.date)}
+                    <time datetime={new Date(game.date).toISOString()} class="game-time">
+                        {formatGameDate(game.date)}
+                    </time>
                     {game.tv && <span class="text-neutral-400"> • {game.tv}</span>}
                 </div>
             </li>
@@ -52,3 +55,24 @@ function formatGameDate(date) {
         )}
     </ul>
 </div>
+
+<script>
+    function updateTimes() {
+        const times = document.querySelectorAll('.game-time');
+        times.forEach(time => {
+            const datetime = time.getAttribute('datetime');
+            if (datetime) {
+                const date = new Date(datetime);
+                time.textContent = date.toLocaleString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    hour: 'numeric',
+                    minute: '2-digit'
+                });
+            }
+        });
+    }
+
+    updateTimes();
+    document.addEventListener('astro:page-load', updateTimes);
+</script>
