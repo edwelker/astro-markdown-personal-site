@@ -2,7 +2,7 @@ import { runETL } from './lib-etl.mjs';
 import { transformFlickrData } from './flickr-logic.mjs';
 
 export async function fetchFlickrData() {
-  const url = `https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=${process.env.FLICKR_API_KEY}&user_id=72923429@N00&format=json&nojsoncallback=1&extras=url_m,width_m,height_m,date_taken,tags`;
+  const url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${process.env.FLICKR_API_KEY}&user_id=72923429@N00&format=json&nojsoncallback=1&extras=url_m,width_m,height_m,date_taken,tags&sort=date-taken-desc`;
   const response = await fetch(url);
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   return response.json();
