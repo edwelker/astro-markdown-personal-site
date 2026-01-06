@@ -39,8 +39,8 @@ const monthArtists = Array.isArray(month.artists) ? month.artists : [];
           <ul class="space-y-1">
             {weekArtists.slice(0, 5).map((art: Item, i: number) => (
               <li class="flex justify-between items-center group">
-                <div class="flex items-center gap-2 truncate">
-                  <span class="text-[10px] font-mono text-neutral-400 w-3">{i + 1}</span>
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="text-[10px] font-mono text-neutral-400 w-3 shrink-0">{i + 1}</span>
                   <a href={art.url} target="_blank" class="text-sm truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">{art.name}</a>
                 </div>
                 <span class="text-xs font-mono text-neutral-400 ml-2">{art.plays}</span>
@@ -71,8 +71,8 @@ const monthArtists = Array.isArray(month.artists) ? month.artists : [];
           <ul class="space-y-1">
             {monthArtists.slice(0, 5).map((art: Item, i: number) => (
               <li class="flex justify-between items-center group">
-                <div class="flex items-center gap-2 truncate">
-                  <span class="text-[10px] font-mono text-neutral-400 w-3">{i + 1}</span>
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="text-[10px] font-mono text-neutral-400 w-3 shrink-0">{i + 1}</span>
                   <a href={art.url} target="_blank" class="text-sm truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">{art.name}</a>
                 </div>
                 <span class="text-xs font-mono text-neutral-400 ml-2">{art.plays}</span>
