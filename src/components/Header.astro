@@ -2,6 +2,7 @@
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import Icon from "@components/Icon.astro";
+import NavigationMenu from "@components/NavigationMenu.astro";
 import { SITE, SOCIALS } from "@consts";
 
 // Filter for only the specific header icons
@@ -42,7 +43,17 @@ const HEADER_SOCIALS = SOCIALS.filter(s =>
           <Icon name="Search" class="h-4 w-4" />
           &nbsp;Search
         </button>
+
+        <button
+          id="menu-btn"
+          aria-label="Menu"
+          class="ml-1 flex items-center rounded-sm border border-black/15 bg-neutral-100 px-2 py-1 text-xs transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:bg-neutral-900 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
+        >
+          Menu
+        </button>
       </nav>
     </div>
   </Container>
+
+  <NavigationMenu />
 </header>

@@ -1,0 +1,33 @@
+---
+import { mainLinks, secondaryLinks } from "../lib/nav-links";
+---
+
+<dialog id="menu-dialog" class="backdrop:bg-black/50 dark:backdrop:bg-black/80 bg-neutral-100 dark:bg-neutral-900 border border-black/10 dark:border-white/10 rounded-lg p-6 shadow-xl w-full max-w-sm m-auto open:animate-fade-in text-black dark:text-white">
+  <div class="flex flex-col gap-6">
+    <div class="flex justify-between items-center">
+      <span class="font-semibold text-lg">Navigation</span>
+      <button id="menu-close" class="p-1 hover:bg-black/5 dark:hover:bg-white/5 rounded" aria-label="Close Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    
+    <div class="flex flex-col gap-2">
+      {mainLinks.map(link => (
+        <a href={link.href} class="text-lg hover:text-black/70 dark:hover:text-white/70 transition-colors">{link.label}</a>
+      ))}
+    </div>
+
+    <div class="border-t border-black/10 dark:border-white/10"></div>
+
+    <div class="flex flex-col gap-2">
+      {secondaryLinks.map(link => (
+        <a href={link.href} class="text-sm text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors">{link.label}</a>
+      ))}
+    </div>
+  </div>
+</dialog>
+
+<script>
+  import { initMenuModal } from "../lib/menu-modal";
+  initMenuModal('menu-btn', 'menu-dialog', 'menu-close');
+</script>
