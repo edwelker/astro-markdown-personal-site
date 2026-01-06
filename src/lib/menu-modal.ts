@@ -21,5 +21,13 @@ export function initMenuModal(btnId: string, dialogId: string, closeId: string) 
         menuDialog.close();
       }
     });
+
+    // Close when clicking any link inside the menu
+    const links = menuDialog.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menuDialog.close();
+      });
+    });
   }
 }
