@@ -40,10 +40,10 @@
 /categories/recipes* /recipes/ 301
 /tags/recipes* /recipes/ 301
 
-# Catch-all for deleted taxonomies (Redirects to Home or Blog) 
+# Catch-all for deleted taxonomies (Redirects to Home or Blog)
 /category/* / 301
 /categories/* / 301
-# /tags/* /blog/ 301 I still have some tags, but reduced them.
+# tags is not here, some disappeared by my reducing the vocab, but they should 404.
 
 # Misc Assets
 /wp-content/uploads/2007/09/csscheatsheet.pdf /blog/2007/09/06/css-shorthand-cheat-sheet 301

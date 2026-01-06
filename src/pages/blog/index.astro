@@ -37,6 +37,12 @@ function getPostImage(post) {
 
 <Layout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
   <Container>
+    <div class="flex justify-between items-baseline mb-8">
+      <h1 class="font-semibold text-2xl text-black dark:text-white">Blog</h1>
+      <Link href="/tags/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-500 hover:text-black dark:hover:text-white transition-colors">
+        View all topics &rarr;
+      </Link>
+    </div>
     <aside data-pagefind-ignore>
       <div class="space-y-10">
         <div class="space-y-8">
