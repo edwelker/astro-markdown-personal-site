@@ -1,137 +1,59 @@
-# for cloudflare
+# --- SECTION 1: Specific Renames & Typo Fixes (Must be first) ---
+# These fix specific 404s found in your Google Search Console data where
+# the old URL text does not match the new URL text.
 
-# --- GOLD STANDARD (PRESERVED) ---
-/2008/12/27/my-xslt-toolbox-copy-and-copy-of/ /blog/2008/12/27/xslt-copy-copy-of/ 301
-/2008/10/25/review-of-object-oriented-javascript/ /blog/2008/10/25/object-oriented-javascript-review/ 301
-/2009/01/08/my-xslt-toolbox-5-favorite-xslt-books/ /blog/2009/01/08/top-5-xslt-books/ 301
-/2009/09/24/review-of-learning-jquery-1.3/ /blog/2009/09/24/review-of-learning-jquery-1-3/ 301
+# Fix "Dirty" URLs (dots and typos from GSC)
+/2007/09/01/*all-this-traffic* /blog/2007/09/01/all-this-traffic/ 301
+/2008/03/04/throwing-ie8-in-acid* /blog/2008/03/04/throwing-ie8-in-acid/ 301
+/2008/01/13/website-usability-annoyance-no* /blog/2008/01/13/website-usability-annoyance-no-1/ 301
 
-/2007/10/20/concert-tonight /blog/2007/10/20/concert-tonight/ 301
-/2008/02/10/writing-scheme-in-javascript-i /blog/2008/02/10/writing-scheme-in-javascript-i/ 301
-/2007/09/01/all-this-traffic /blog/2007/09/01/all-this-traffic/ 301
-/2007/10/22/game-7-i-think-kenny-lofton-was-out-at-second /blog/2007/10/22/game-7-i-think-kenny-lofton-was-out-at-second/ 301
-/2007/08/15/prelude /blog/2007/08/15/prelude/ 301
-/2007/10/25/firefox-for-mac-and-displaying-small-font-sizes /blog/2007/10/25/firefox-for-mac-and-displaying-small-font-sizes/ 301
-/2007/08/30/18 /blog/2007/08/30/18/ 301
-/2009/08/03/check-in /blog/2009/08/03/check-in/ 301
-/2008/03/27/its-about-time /blog/2008/03/27/its-about-time/ 301
-/2007/08/21/ie-6-background-flicker-problem /blog/2007/08/21/ie-6-background-flicker-problem/ 301
-/2009/01/09/sibelius-symphony-no-1 /blog/2009/01/09/sibelius-symphony-no-1/ 301
-/2008/08/04/review-of-web-form-design-filling-in-the-blanks /blog/2008/08/04/review-of-web-form-design-filling-in-the-blanks/ 301
-/2007/12/17/jean-edward-welker /blog/2007/12/17/jean-edward-welker/ 301
-/2013/05/15/wing-contest-at-quarry-house /blog/2013/05/15/wing-contest-at-quarry-house/ 301
-/2008/04/13/python /blog/2008/04/13/python/ 301
-/2008/03/04/throwing-ie8-in-acid /blog/2008/03/04/throwing-ie8-in-acid/ 301
-/2011/08/03/onion-dill-rice /recipes/onion-dill-rice/ 301
-/2008/07/15/le-tour /blog/2008/07/15/le-tour/ 301
-/2008/04/01/php-and-me /blog/2008/04/01/php-and-me/ 301
-/2008/05/23/getting-a-button-elements-value-attribute-not-innerhtml-in-ie /blog/2008/05/23/getting-a-button-elements-value-attribute-not-innerhtml-in-ie/ 301
-/2008/10/25/object-oriented-javascript-review /blog/2008/10/25/object-oriented-javascript-review/ 301
-/2007/09/18/thought-for-the-day /blog/2007/09/18/thought-for-the-day/ 301
-/2011/07/12/relatively-quick-pizza-from-scratch /recipes/relatively-quick-pizza-from-scratch/ 301
-/blog/2011/07/12/relatively-quick-pizza-from-scratch/ /recipes/relatively-quick-pizza-from-scratch/ 301
-/2009/01/08/top-5-xslt-books /blog/2009/01/08/top-5-xslt-books/ 301
-/2007/11/10/weekend /blog/2007/11/10/weekend/ 301
-/2009/09/09/boring-i-moved-post /blog/2009/09/09/boring-i-moved-post/ 301
-/2025/09/01/szechuan_noodles /recipes/szechuan-noodles/ 301
-/blog/2025/09/01/szechuan_noodles/ /recipes/szechuan-noodles/ 301
-/2008/07/07/review-of-learning-website-development-with-django /blog/2008/07/07/review-of-learning-website-development-with-django/ 301
-/2009/01/25/review-of-expert-python-programming /blog/2009/01/25/review-of-expert-python-programming/ 301
-/2007/08/17/4 /blog/2007/08/17/4/ 301
-/2008/09/03/django-10 /blog/2008/09/03/django-10/ 301
-/2009/09/24/review-of-learning-jquery-1-3 /blog/2009/09/24/review-of-learning-jquery-1-3/ 301
-/2007/11/19/review-of-high-performance-web-sites /blog/2007/11/19/review-of-high-performance-web-sites/ 301
-/2008/02/21/i-was-going-to-write-tonight /blog/2008/02/21/i-was-going-to-write-tonight/ 301
-/2007/10/02/playoffs /blog/2007/10/02/playoffs/ 301
-/2009/08/12/bad-chain-tool-bad /blog/2009/08/12/bad-chain-tool-bad/ 301
-/2007/08/26/red-sox-sweep-white-sox /blog/2007/08/26/red-sox-sweep-white-sox/ 301
-/2008/12/27/xslt-copy-copy-of /blog/2008/12/27/xslt-copy-copy-of/ 301
-/2007/08/20/moving-but-not-yet /blog/2007/08/20/moving-but-not-yet/ 301
-/2007/08/28/i-looked-i-purchased /blog/2007/08/28/i-looked-i-purchased/ 301
-/2011/04/06/high-performance-css-code-design /blog/2011/04/06/high-performance-css-code-design/ 301
-/2007/11/08/time-for-small-celebration /blog/2007/11/08/time-for-small-celebration/ 301
-/2007/12/28/cats-out-of-the-bag /blog/2007/12/28/cats-out-of-the-bag/ 301
-/2009/03/31/url-fairy-tales /blog/2009/03/31/url-fairy-tales/ 301
-/2007/10/23/not-the-worst-movie-ever-and-the-worst /blog/2007/10/23/not-the-worst-movie-ever-and-the-worst/ 301
-/2008/10/16/october-horror-movies /blog/2008/10/16/october-horror-movies/ 301
-/2007/10/23/xslt-class /blog/2007/10/23/xslt-class/ 301
-/2008/01/22/ie8-doctype-and-potentially-broken-default-behavior /blog/2008/01/22/ie8-doctype-and-potentially-broken-default-behavior/ 301
-/2014/03/16/st-patricks-day-corned-beef-and-cabbage-irish-soda-bread /blog/2014/03/16/st-patricks-day-corned-beef-and-cabbage-irish-soda-bread/ 301
-/2007/08/27/opera-9-and-decimal-em-lengths /blog/2007/08/27/opera-9-and-decimal-em-lengths/ 301
-/2008/01/20/twitter-inspires-similar-thoughts-when-broken /blog/2008/01/20/twitter-inspires-similar-thoughts-when-broken/ 301
-/2007/12/18/another-design-tweak /blog/2007/12/18/another-design-tweak/ 301
-/2007/08/20/internet-explorer-6-still-stinks /blog/2007/08/20/internet-explorer-6-still-stinks/ 301
-/2008/04/27/my-first-flickr-video /blog/2008/04/27/my-first-flickr-video/ 301
-/2007/11/16/photos /blog/2007/11/16/photos/ 301
-/2008/10/26/more-october-horror-movies /blog/2008/10/26/more-october-horror-movies/ 301
-/2007/10/18/class-over /blog/2007/10/18/class-over/ 301
-/2008/01/21/finally-i-get-feedburner /blog/2008/01/21/finally-i-get-feedburner/ 301
-/2007/08/20/being-different /blog/2007/08/20/being-different/ 301
-/2009/01/29/review-of-prototype-based-programming /blog/2009/01/29/review-of-prototype-based-programming/ 301
-/2007/09/06/css-shorthand-cheat-sheet /blog/2007/09/06/css-shorthand-cheat-sheet/ 301
-/2007/10/03/catching-up /blog/2007/10/03/catching-up/ 301
-/2007/09/25/95-done-moving /blog/2007/09/25/95-done-moving/ 301
-/2008/12/18/affecting-your-situation /blog/2008/12/18/affecting-your-situation/ 301
-/2008/06/20/down-to-three-bugs /blog/2008/06/20/down-to-three-bugs/ 301
-/2008/09/18/funny-thing-about-bugs /blog/2008/09/18/funny-thing-about-bugs/ 301
-/2008/04/04/86 /blog/2008/04/04/86/ 301
-/2007/12/31/thanks /blog/2007/12/31/thanks/ 301
-/2009/08/24/cutting-scheme-in-half /blog/2009/08/24/cutting-scheme-in-half/ 301
-/2008/11/11/horror-movies-final-installment /blog/2008/11/11/horror-movies-final-installment/ 301
-/2008/12/28/recursive-xslt-templates /blog/2008/12/28/recursive-xslt-templates/ 301
-/2008/03/09/using-the-label-element-for-form-accessibility /blog/2008/03/09/using-the-label-element-for-form-accessibility/ 301
-/2010/03/31/installing-pil-virtualenv-ubuntu /blog/2010/03/31/installing-pil-virtualenv-ubuntu/ 301
-/2007/09/12/blurry-focus /blog/2007/09/12/blurry-focus/ 301
-/2008/01/08/back-on-two-wheels /blog/2008/01/08/back-on-two-wheels/ 301
-/2007/12/18/editing-live /blog/2007/12/18/editing-live/ 301
-/2008/03/05/big-release-day-on-the-webbernet /blog/2008/03/05/big-release-day-on-the-webbernet/ 301
-/2008/03/04/microsoft-takes-giant-pr-step-with-ie8-default-behavior /blog/2008/03/04/microsoft-takes-giant-pr-step-with-ie8-default-behavior/ 301
-/2008/07/17/clean-room /blog/2008/07/17/clean-room/ 301
-/2008/01/16/what-ive-been-up-to /blog/2008/01/16/what-ive-been-up-to/ 301
-/2007/10/03/rss-newsreaders /blog/2007/10/03/rss-newsreaders/ 301
-/2007/10/10/problem-du-jour-firefox-fonts /blog/2007/10/10/problem-du-jour-firefox-fonts/ 301
-/2008/01/26/the-ie8-doctype-meta-waiting-game /blog/2008/01/26/the-ie8-doctype-meta-waiting-game/ 301
-/2008/11/25/push-style-xslt-vs-pull-style /blog/2008/11/25/push-style-xslt-vs-pull-style/ 301
-/2008/10/30/next-to-last-horror-movies /blog/2008/10/30/next-to-last-horror-movies/ 301
-/2007/10/30/i-just-killed-wordpress /blog/2007/10/30/i-just-killed-wordpress/ 301
-/2007/10/03/tbs-broadcasting-the-red-sox-playoff-game /blog/2007/10/03/tbs-broadcasting-the-red-sox-playoff-game/ 301
-/2007/11/13/long-3-day-weekend /blog/2007/11/13/long-3-day-weekend/ 301
-/2007/10/30/microformats-for-you-and-me /blog/2007/10/30/microformats-for-you-and-me/ 301
-/2008/07/04/july-4 /blog/2008/07/04/july-4/ 301
-/2007/12/30/random-thoughts /blog/2007/12/30/random-thoughts/ 301
-/2007/08/22/ie-flicker-thought-we-had-a-solution /blog/2007/08/22/ie-flicker-thought-we-had-a-solution/ 301
-/2008/01/08/update-to-some-random-thoughts /blog/2008/01/08/update-to-some-random-thoughts/ 301
-/2007/09/12/cool-september-air /blog/2007/09/12/cool-september-air/ 301
-/2007/12/19/wow /blog/2007/12/19/wow/ 301
-/2007/10/30/sweet-now-ill-never-have-to-join-facebook /blog/2007/10/30/sweet-now-ill-never-have-to-join-facebook/ 301
-/2008/03/18/uploaded-photos /blog/2008/03/18/uploaded-photos/ 301
-/2007/09/04/pushing-browsers /blog/2007/09/04/pushing-browsers/ 301
-/2008/03/01/random-february-thoughts /blog/2008/03/01/random-february-thoughts/ 301
-/2007/12/05/minor-distractions /blog/2007/12/05/minor-distractions/ 301
-/2007/08/22/extreme-early-review-of-advanced-dom-scripting /blog/2007/08/22/extreme-early-review-of-advanced-dom-scripting/ 301
-/2008/01/13/website-usability-annoyance-no-1 /blog/2008/01/13/website-usability-annoyance-no-1/ 301
-/2007/08/19/expression-engine /blog/2007/08/19/expression-engine/ 301
-/2007/08/22/oh-sweet-irony /blog/2007/08/22/oh-sweet-irony/ 301
-/2007/08/26/beginning-of-the-fall-semester /blog/2007/08/26/beginning-of-the-fall-semester/ 301
-/2007/10/12/whirlwind /blog/2007/10/12/whirlwind/ 301
-/2007/09/01/minor-design-update /blog/2007/09/01/minor-design-update/ 301
-/2008/06/01/happy-regular-expressions-day /blog/2008/06/01/happy-regular-expressions-day/ 301
-/2008/10/08/snapshot-of-right-now /blog/2008/10/08/snapshot-of-right-now/ 301
-/blog/2007/08/30/18/ /blog/2007/08/30/my-new-look-on-old-characters/ 301
-/blog/2007/08/17/4/ /blog/2007/08/17/blog-software/ 301
+# Fix Slug Mismatches (Old Title -> New Title)
+/2008/04/13/python-number-1* /blog/2008/04/13/python/ 301
+/2008/09/03/django-1.0* /blog/2008/09/03/django-10/ 301
+/2008/12/27/my-xslt-toolbox-copy-and-copy-of* /blog/2008/12/27/xslt-copy-copy-of/ 301
+/2008/10/25/review-of-object-oriented-javascript* /blog/2008/10/25/object-oriented-javascript-review/ 301
+/2009/01/08/my-xslt-toolbox-5-favorite-xslt-books* /blog/2009/01/08/top-5-xslt-books/ 301
+/2009/09/24/review-of-learning-jquery-1.3* /blog/2009/09/24/review-of-learning-jquery-1-3/ 301
+/2007/08/30/18* /blog/2007/08/30/my-new-look-on-old-characters/ 301
+/2007/08/17/4* /blog/2007/08/17/blog-software/ 301
 
-# --- NEW ADDITIONS FROM SEARCH CONSOLE (AUGMENTED) ---
-# Fixing discrepancies discovered via ls src/content/blog/
-/2011/04/06/high-performance                                    /blog/2011/04/06/high-performance-css-code-design 301
-/2008/11/25/push-style-xslt-vs-pull-style/about                 /blog/2008/11/25/push-style-xslt-vs-pull-style 301
-/2008/08/04/review-of-“web-form-design-filling-in-the-blanks”/   /blog/2008/08/04/review-of-web-form-design-filling-in-the-blanks 301
-/wp-content/uploads/2007/09/csscheatsheet.pdf                   /blog/2007/09/06/css-shorthand-cheat-sheet 301
+# Fix Smart Quotes
+/2008/08/04/review-of-*web-form-design-filling-in-the-blanks* /blog/2008/08/04/review-of-web-form-design-filling-in-the-blanks 301
 
-# Cleanup and Category Catch-alls
-/xmlrpc.php                                                     / 301
-/page/about/  /about  301
-/tags/css/page/2/                                               /blog 301
-/aboutme/                                                       /about 301
-/feed/atom/                                                     /rss.xml 301
-/feed/atom                                                      /rss.xml 301
-/category/* /blog 301
+# --- SECTION 2: Recipes (Moved to /recipes/ directory) ---
+# Added the "My Szechuan" variation found in GSC
+/2025/09/01/my-szechuan-noodles* /recipes/szechuan-noodles/ 301
+/2025/09/01/szechuan_noodles* /recipes/szechuan-noodles/ 301
+/blog/2025/09/01/szechuan_noodles* /recipes/szechuan-noodles/ 301
+/2011/08/03/onion-dill-rice* /recipes/onion-dill-rice/ 301
+/2011/07/12/relatively-quick-pizza-from-scratch* /recipes/relatively-quick-pizza-from-scratch/ 301
+/blog/2011/07/12/relatively-quick-pizza-from-scratch* /recipes/relatively-quick-pizza-from-scratch/ 301
+
+# --- SECTION 3: Structural Cleanup (Feeds, Categories, Pages) ---
+# Consolidates all RSS requests to the one true feed
+/feed/* /rss.xml 301
+/index.xml   /rss.xml 301
+
+# Redirects old WordPress pagination to the main blog index
+/page/* /blog/ 301
+/author/* /about/ 301
+/categories/recipes* /recipes/ 301
+/tags/recipes* /recipes/ 301
+
+# Catch-all for deleted taxonomies (Redirects to Home or Blog) 
+/category/* / 301
+/categories/* / 301
+# /tags/* /blog/ 301 I still have some tags, but reduced them.
+
+# Misc Assets
+/wp-content/uploads/2007/09/csscheatsheet.pdf /blog/2007/09/06/css-shorthand-cheat-sheet 301
+/xmlrpc.php    / 301
+/aboutme/      /about 301
+
+# --- SECTION 4: The Wildcards (Must be last) ---
+# These catch ANY remaining posts starting with a year.
+# They automatically fix the "Trailing Slash" issues.
+
+/200* /blog/200:splat 301
+/201* /blog/201:splat 301
+/202* /blog/202:splat 301
