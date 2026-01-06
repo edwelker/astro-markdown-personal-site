@@ -10,11 +10,31 @@ function formatGameDate(date) {
         timeZone: 'America/New_York'
     });
 }
+
+function formatPastGameDate(date) {
+    const d = new Date(date);
+    const now = new Date();
+    const yesterday = new Date(now);
+    yesterday.setDate(now.getDate() - 1);
+    
+    const isToday = d.getDate() === now.getDate() && 
+                    d.getMonth() === now.getMonth() && 
+                    d.getFullYear() === now.getFullYear();
+                    
+    const isYesterday = d.getDate() === yesterday.getDate() && 
+                        d.getMonth() === yesterday.getMonth() && 
+                        d.getFullYear() === yesterday.getFullYear();
+
+    if (isToday) return 'Today';
+    if (isYesterday) return 'Yesterday';
+    
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
 ---
 
 <div class="text-right">
     <div class="flex items-center justify-end mb-4 gap-2">
-        <h3 class="font-bold text-base text-black dark:text-white">Next games</h3>
+        <h3 class="font-bold text-base text-black dark:text-white">Schedule</h3>
         {scheduleLink && (
             <a href={scheduleLink} target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-blue-500 transition-colors" title="View Full Schedule">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -31,7 +51,7 @@ function formatGameDate(date) {
             <li>
                 <div class="text-sm font-medium text-neutral-900 dark:text-neutral-100 flex items-center justify-end">
                     {game.text}
-                    {game.opponentRecord && (
+                    {!game.completed && game.opponentRecord && (
                         <a 
                             href={game.standingsLink} 
                             target="_blank" 
@@ -43,10 +63,26 @@ function formatGameDate(date) {
                     )}
                 </div>
                 <div class="mt-1 text-xs text-neutral-500 font-mono">
-                    <time datetime={new Date(game.date).toISOString()} class="game-time">
-                        {formatGameDate(game.date)}
-                    </time>
-                    {game.tv && <span class="text-neutral-400"> • {game.tv}</span>}
+                    {game.completed ? (
+                        <>
+                            <span class="text-neutral-400 mr-1.5">{formatPastGameDate(game.date)}</span>
+                            <a 
+                                href={game.boxScoreLink} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class={`hover:underline font-bold ${game.isWin ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"}`}
+                            >
+                                {game.isWin ? 'W' : 'L'} {game.score}
+                            </a>
+                        </>
+                    ) : (
+                        <>
+                            <time datetime={new Date(game.date).toISOString()} class="game-time">
+                                {formatGameDate(game.date)}
+                            </time>
+                            {game.tv && <span class="text-neutral-400"> • {game.tv}</span>}
+                        </>
+                    )}
                 </div>
             </li>
         ))}

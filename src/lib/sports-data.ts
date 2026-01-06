@@ -29,7 +29,7 @@ const fetchWithTimeout = (promise: Promise<any>, ms = 8000) => {
     return Promise.race([promise, timeout]);
 };
 
-async function getLeagueRecords(sport: 'basketball' | 'baseball', league: 'nba' | 'mlb') {
+export async function getLeagueRecords(sport: 'basketball' | 'baseball', league: 'nba' | 'mlb') {
     try {
         const res = await fetch(`https://site.api.espn.com/apis/v2/sports/${sport}/${league}/standings`);
         if (!res.ok) return {};
@@ -61,7 +61,7 @@ async function getLeagueRecords(sport: 'basketball' | 'baseball', league: 'nba' 
     }
 }
 
-async function getTeamData(teamName: string, leagueRecords: Record<string, string>) {
+export async function getTeamData(teamName: string, leagueRecords: Record<string, string>) {
     const info = TEAM_IDS[teamName];
     if (!info) return { schedule: [], record: '', rank: '', standingsLink: '', scheduleLink: '' };
     
@@ -108,10 +108,57 @@ async function getTeamData(teamName: string, leagueRecords: Record<string, strin
         const events = scheduleData.events || [];
         const now = new Date();
         
+        // Recent games (last 2 days)
+        const twoDaysAgo = new Date(now);
+        twoDaysAgo.setDate(now.getDate() - 2);
+
+        const recentGames = events
+            .filter((e: any) => {
+                const gameDate = new Date(e.date);
+                return gameDate < now && gameDate >= twoDaysAgo && e.competitions?.[0]?.status?.type?.completed;
+            })
+            .sort((a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime())
+            .map((e: any) => {
+                const competition = e.competitions[0];
+                const homeTeam = competition.competitors.find((c: any) => c.homeAway === 'home');
+                const awayTeam = competition.competitors.find((c: any) => c.homeAway === 'away');
+                
+                const isHome = String(homeTeam.team.id) === String(info.id);
+                const myTeam = isHome ? homeTeam : awayTeam;
+                const opponent = isHome ? awayTeam : homeTeam;
+                const opponentName = opponent.team.shortDisplayName || opponent.team.displayName;
+                const vsText = isHome ? `vs. ${opponentName}` : `@ ${opponentName}`;
+                
+                const isWin = !!myTeam.winner;
+                
+                const getScoreVal = (s: any) => {
+                    if (s && typeof s === 'object') {
+                        return s.displayValue || s.value || '';
+                    }
+                    return s;
+                };
+
+                const score = `${getScoreVal(myTeam.score)}-${getScoreVal(opponent.score)}`;
+                
+                let boxScoreLink = '';
+                const link = e.links?.find((l: any) => l.rel?.includes('boxscore'));
+                if (link) boxScoreLink = link.href;
+                else boxScoreLink = `https://www.espn.com/${league}/boxscore/_/gameId/${e.id}`;
+
+                return {
+                    date: new Date(e.date),
+                    text: vsText,
+                    completed: true,
+                    isWin,
+                    score,
+                    boxScoreLink
+                };
+            });
+
         // Determine limit based on league
         const scheduleLimit = info.league === 'MLB' ? 4 : 5;
 
-        const schedule = events
+        const upcomingGames = events
             .filter((e: any) => new Date(e.date) > now)
             .slice(0, scheduleLimit)
             .map((e: any) => {
@@ -153,9 +200,12 @@ async function getTeamData(teamName: string, leagueRecords: Record<string, strin
                     text: vsText,
                     opponentRecord,
                     standingsLink,
-                    tv
+                    tv,
+                    completed: false
                 };
             });
+
+        const schedule = [...recentGames, ...upcomingGames];
 
         const team = teamData.team || {};
         const record = team.record?.items?.[0]?.summary || '';
