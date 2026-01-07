@@ -18,14 +18,14 @@ async function getPostImage(post) {
 
   // 2. Find image marked with id="listing-image" in Markdown body
   // Matches: <div ... id="listing-image" ...> ... ![alt](path) ...
-  const listingImageRegex = /<div[^>]*?id=["']listing-image["'][^>]*?>[\s\S]*?(?:!\[.*?\]\((.*?)\)|<img[^>]+src=["'](.*?)["'])/;
+  const listingImageRegex = /<div[^>]*?id=["']listing-image["'][^>]*?>[\s\S]*?(?:!\[.*?\]\(([^)\s]+)(?:[^\)]*)?\)|<img[^>]+src=["'](.*?)["'])/;
   const match = body.match(listingImageRegex);
   
   let imagePath = match ? (match[1] || match[2]) : null;
 
   // 3. Fallback to first image in post if needed
   if (!imagePath) {
-    const firstImageRegex = /(?:!\[.*?\]\((.*?)\)|<img[^>]+src=["'](.*?)["'])/;
+    const firstImageRegex = /(?:!\[.*?\]\(([^)\s]+)(?:[^\)]*)?\)|<img[^>]+src=["'](.*?)["'])/;
     const firstMatch = body.match(firstImageRegex);
     if (firstMatch) {
       imagePath = firstMatch[1] || firstMatch[2];
