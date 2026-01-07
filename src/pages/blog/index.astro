@@ -41,7 +41,7 @@ const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
                 {year}
               </div>
               <div>
-                <ul class="not-prose flex flex-col gap-2">
+                <ul class="not-prose flex flex-col gap-4">
                   {posts[year].map((post) => (
                     <BlogItem post={post} />
                   ))}
