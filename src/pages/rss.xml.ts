@@ -11,14 +11,9 @@ export async function GET(context) {
     return data.draft !== true;
   });
 
-  const photos = await getCollection('photos', ({ data }) => {
-    return data.draft !== true;
-  });
-
   const allItems = [
     ...blog.map((post) => ({ ...post, type: 'blog' })),
     ...recipes.map((recipe) => ({ ...recipe, type: 'recipes' })),
-    ...photos.map((photo) => ({ ...photo, type: 'photos' })),
   ];
 
   allItems.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
@@ -31,7 +26,8 @@ export async function GET(context) {
       title: item.data.title,
       pubDate: item.data.date,
       description: item.data.description || '',
-      link: item.type === 'blog' ? `/${item.slug}/` : `/${item.type}/${item.slug}/`,
+      // Fix: Blog posts are served at /blog/[slug], not /[slug]
+      link: item.type === 'blog' ? `/blog/${item.slug}/` : `/${item.type}/${item.slug}/`,
     })),
     customData: `<language>en-us</language>`,
   });

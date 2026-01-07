@@ -40,11 +40,6 @@ const seoDescription = post.data.description ||
 // Resolve navigation HREFs using the shared utility
 const prevHref = prevPost ? getPostHref(prevPost) : undefined;
 const nextHref = nextPost ? getPostHref(nextPost) : undefined;
-
-// Debug log to check if coverImage is being retrieved
-if (post.data.coverImage) {
-  console.log(`[Blog] Rendering coverImage for ${post.data.title}:`, post.data.coverImage);
-}
 ---
 
 <Layout title={post.data.title} description={seoDescription}>

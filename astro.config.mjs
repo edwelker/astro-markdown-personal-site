@@ -11,7 +11,9 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   site: "https://eddiewelker.com",
   output: "static",
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: "compile",
+  }),
   build: {
     // Force Astro to link stylesheets as external files
     inlineStylesheets: 'never',
