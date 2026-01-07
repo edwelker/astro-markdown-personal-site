@@ -5,9 +5,10 @@ draft: false
 description: "How I went from WordPress fatigue to Hugo frustration, and finally found a home with Astro, but we're not sailing through space yet!"
 slug: "2026/01/06/wordpress-to-hugo-to-astro"
 tags: ["Astro", "Hugo", "WordPress", "Migration", "CSS"]
+coverImage: "https://astro.build/assets/press/astro-icon-light-gradient.svg"
 ---
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg" class="float-right ml-8 mb-4 h-16 w-auto" alt="WordPress Logo">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg" class="float-right ml-6 mb-3 h-16 w-auto" alt="WordPress Logo">
 
 It started because of the complexity, honestly.
 
@@ -25,7 +26,7 @@ I'm *still* cleaning it—fixing broken images and dead links even tonight. But 
 
 ## The Hugo Detour
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hugo/hugo-original.svg" class="float-right ml-8 mb-4 h-16 w-auto" alt="Hugo Logo">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hugo/hugo-original.svg" class="float-right ml-6 mb-3 h-16 w-auto" alt="Hugo Logo">
 
 I looked around at alternatives, and chose  [Hugo](https://github.com/edwelker/astro-markdown-personal-site/tree/main). I was excited to learn some Go, and the promise of a static site generator that blazed fast appealed to me. I wanted a theme I could tear apart and extend.  I had considered Pelican, but felt like getting out of my Python wheelhouse (wheelhouse... get it?)
 
@@ -37,7 +38,7 @@ However, at least I stopped paying the $130/yr! I moved everything to Cloudflare
 
 ## Landing on Astro
 
-<img src="https://astro.build/assets/press/astro-icon-light-gradient.svg" class="float-right ml-8 mb-4 h-16 w-auto" alt="Astro Logo">
+<img src="https://astro.build/assets/press/astro-icon-light-gradient.svg" class="float-right ml-6 mb-3 h-16 w-auto" alt="Astro Logo">
 
 So I went searching again and found [Astro](https://github.com/edwelker/astro-markdown-personal-site/).
 
