@@ -3,8 +3,8 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
+import BlogItem from "@components/BlogItem.astro";
 import { BLOG } from "@consts";
-import { getPostHref } from "@lib/blog";
 
 const data = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -22,17 +22,6 @@ const posts = data.reduce((acc: Acc, post) => {
 }, {});
 
 const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
-
-function getPostImage(post) {
-  if (post.data.coverImage) {
-    return post.data.coverImage.src || post.data.coverImage;
-  }
-  const markdownImage = post.body.match(/!\[[^\]]*\]\(([^)\s]+)/);
-  if (markdownImage) return markdownImage[1];
-  const htmlImage = post.body.match(/<img[^>]+src=["']([^"']+)["']/);
-  if (htmlImage) return htmlImage[1];
-  return undefined;
-}
 ---
 
 <Layout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
@@ -53,33 +42,9 @@ function getPostImage(post) {
               </div>
               <div>
                 <ul class="not-prose flex flex-col gap-2">
-                  {posts[year].map((post) => {
-                    const coverImage = getPostImage(post);
-                    return (
-                    <li>
-                      <Link href={getPostHref(post)} class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors no-underline">
-                        <div class="flex justify-between items-start gap-4">
-                          <div class="flex flex-col gap-1">
-                            <span class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">
-                              {post.data.title}
-                            </span>
-                            <p class="text-sm text-neutral-500">
-                              {post.data.date.getUTCFullYear()}-{String(post.data.date.getUTCMonth() + 1).padStart(2, '0')}-{String(post.data.date.getUTCDate()).padStart(2, '0')}
-                            </p>
-                          </div>
-                          {coverImage && (
-                            <div class="shrink-0 w-24 h-24 overflow-hidden rounded-md bg-neutral-100 dark:bg-neutral-800">
-                              <img 
-                                src={coverImage} 
-                                alt={post.data.title} 
-                                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" 
-                              />
-                            </div>
-                          )}
-                        </div>
-                      </Link>
-                    </li>
-                  )})}
+                  {posts[year].map((post) => (
+                    <BlogItem post={post} />
+                  ))}
                 </ul>
               </div>
             </section>
