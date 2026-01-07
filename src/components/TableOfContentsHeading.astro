@@ -7,7 +7,7 @@ import Link from "./Link.astro";
 const { heading } = Astro.props;
 ---
 
-<li class="list-inside list-disc px-6 py-1.5 text-sm">
+<li class="list-inside list-disc px-2 py-0.5 text-sm">
   <Link href={"#" + heading.slug} underline>
     {heading.text}
   </Link>
