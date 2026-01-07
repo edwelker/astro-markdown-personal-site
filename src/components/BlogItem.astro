@@ -4,19 +4,57 @@ import { getPostHref } from "@lib/blog";
 
 const { post } = Astro.props;
 
-function getPostImage(post) {
-  const image = post.data.coverImage || post.data.coverPhoto || post.data.heroImage;
-  if (image) {
-    return image.src || image;
+// Import all images in the blog content directory to resolve relative paths
+const images = import.meta.glob('/src/content/blog/**/*.{jpeg,jpg,png,gif,svg}');
+
+async function getPostImage(post) {
+  const { data, body, id } = post;
+
+  // 1. Check frontmatter
+  const fmImage = data.coverImage || data.coverPhoto || data.heroImage;
+  if (fmImage) {
+    return fmImage.src || fmImage;
   }
-  const markdownImage = post.body.match(/!\[[^\]]*\]\(([^)\s]+)/);
-  if (markdownImage) return markdownImage[1];
-  const htmlImage = post.body.match(/<img[^>]+src=["']([^"']+)["']/);
-  if (htmlImage) return htmlImage[1];
+
+  // 2. Find image marked with id="listing-image" in Markdown body
+  // Matches: <div ... id="listing-image" ...> ... ![alt](path) ...
+  const listingImageRegex = /<div[^>]*?id=["']listing-image["'][^>]*?>[\s\S]*?(?:!\[.*?\]\((.*?)\)|<img[^>]+src=["'](.*?)["'])/;
+  const match = body.match(listingImageRegex);
+  
+  let imagePath = match ? (match[1] || match[2]) : null;
+
+  // 3. Fallback to first image in post if needed
+  if (!imagePath) {
+    const firstImageRegex = /(?:!\[.*?\]\((.*?)\)|<img[^>]+src=["'](.*?)["'])/;
+    const firstMatch = body.match(firstImageRegex);
+    if (firstMatch) {
+      imagePath = firstMatch[1] || firstMatch[2];
+    }
+  }
+
+  if (!imagePath) return undefined;
+
+  // 4. Resolve path to full URL
+  if (imagePath.startsWith('http') || imagePath.startsWith('/')) {
+    return imagePath;
+  }
+
+  // Resolve relative path (e.g. "./astro.png") relative to post file
+  const cleanPath = imagePath.replace(/^\.\//, '');
+  const postDir = id.substring(0, id.lastIndexOf('/'));
+  const fullPath = `/src/content/blog/${postDir ? postDir + '/' : ''}${cleanPath}`;
+
+  // 5. Load image via glob
+  const imageLoader = images[fullPath];
+  if (imageLoader) {
+    const mod = await imageLoader();
+    return mod.default.src;
+  }
+
   return undefined;
 }
 
-const coverImage = getPostImage(post);
+const coverImage = await getPostImage(post);
 ---
 
 <li>

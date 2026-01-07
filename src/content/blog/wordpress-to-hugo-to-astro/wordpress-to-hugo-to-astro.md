@@ -5,10 +5,14 @@ draft: false
 description: "How I went from WordPress fatigue to Hugo frustration, and finally found a home with Astro, but we're not sailing through space yet!"
 slug: "2026/01/06/wordpress-to-hugo-to-astro"
 tags: ["Astro", "Hugo", "WordPress", "Migration", "CSS"]
-coverImage: "https://astro.build/assets/press/astro-icon-light-gradient.svg"
 ---
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg" class="float-right ml-6 mb-3 h-16 w-auto" alt="WordPress Logo">
+<!-- [&_p]:contents removes the <p> wrapper Markdown adds to images, allowing the parent div to control layout. -->
+<div class="float-right ml-2 mb-2 [&_img]:h-16 [&_img]:w-auto [&_p]:contents">
+
+![WordPress Logo](./wordpress.svg)
+
+</div>
 
 It started because of the complexity, honestly.
 
@@ -22,11 +26,15 @@ In March 2024, I was done. I was getting out. I exported everything from the Wor
 
 That sounds simple, but the reality was a mess. I wrote a slew of python scripts to convert the database Markdown dumps to clean them and correct Markdown. I'd write a script scanning the content directory cleaning one small thing at a time, reviewing, committing, and modifying the script... in order to break as little as possible.
 
-I'm *still* cleaning it—fixing broken images and dead links even tonight. But at least the content is editable again, and safe in git.
+I'm *still* cleaning it, fixing broken images and dead links even tonight. But at least the content is editable again, and safe in git.
 
 ## The Hugo Detour
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hugo/hugo-original.svg" class="float-right ml-6 mb-3 h-16 w-auto" alt="Hugo Logo">
+<div class="float-right ml-2 mb-2 [&_img]:h-16 [&_img]:w-auto [&_p]:contents">
+
+![Hugo Logo](./hugo.svg)
+
+</div>
 
 I looked around at alternatives, and chose  [Hugo](https://github.com/edwelker/astro-markdown-personal-site/tree/main). I was excited to learn some Go, and the promise of a static site generator that blazed fast appealed to me. I wanted a theme I could tear apart and extend.  I had considered Pelican, but felt like getting out of my Python wheelhouse (wheelhouse... get it?)
 
@@ -38,15 +46,19 @@ However, at least I stopped paying the $130/yr! I moved everything to Cloudflare
 
 ## Landing on Astro
 
-<img src="https://astro.build/assets/press/astro-icon-light-gradient.svg" class="float-right ml-6 mb-3 h-16 w-auto" alt="Astro Logo">
+<div id="listing-image" class="float-right ml-2 mb-2 [&_img]:h-16 [&_img]:w-auto [&_p]:contents">
+
+![Astro Logo](./astro.png)
+
+</div>
 
 So I went searching again and found [Astro](https://github.com/edwelker/astro-markdown-personal-site/).
 
-It wasn't just the architecture. After wading through the muck of a messy content migration—ripgrepping and scripting until my eyes bled—the speed of Vite and the safety net of TypeScript felt like a lifeline.
+It wasn't just the architecture. After wading through the muck of a messy content migration, ripgrepping and scripting until my eyes bled, the speed of Vite and the safety net of TypeScript felt like a warm blanket.
 
 I also really appreciated the template system. It felt like the MVC frameworks I grew up on. It reminded me enough of Django to make me happy.
 
-TypeScript is... fine. It's more typing than Python, and it feels like it has more friction than the elegant languages I prefer, but it works. I hate the closing braces—it's not XSLT, but it's not Python whitespace either. And the testing? It feels bolted-on compared to pytest, but maybe that's just me.
+TypeScript is... fine. It's more typing than Python, and it feels like it has more friction than the elegant languages I prefer, but it works. I hate the closing braces, it's not XSLT, but it's not Python whitespace either. And the testing? It feels bolted-on compared to pytest, but maybe that's just me.
 
 ## The Tailwind Problem
 
@@ -60,4 +72,4 @@ Tailwind feels like the opposite. It feels gross. Cluttering my markup with a so
 
 Ripping it out is next on my list. I want a codebase that feels crafted, not just assembled from a kit.
 
-But for now? We’re live. It’s fast. It’s free. And I'm actually having fun pushing boundaries—like my [GasPrices](/gas/) page that pulls data into a readable repo, or my [SportsFeed](/sports/) that uses Cloudflare Workers to fetch data on-demand.
+But for now? We’re live. It’s fast. It’s free. And I'm actually having fun pushing boundaries, like my [GasPrices](/gas/) page that pulls data into a readable repo, or my [SportsFeed](/sports/) that uses Cloudflare Workers to fetch data on-demand.
