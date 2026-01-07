@@ -4,7 +4,7 @@ date: '2009-01-29T20:14:56-05:00'
 slug: 2009/01/29/review-of-prototype-based-programming
 tags: ["javascript", "programming", "reading", "reviews"]
 ---
-![Prototype-Based Programming](/prototypebasedprogramming.png "Prototype-Based Programming")
+![Prototype-Based Programming](./prototypebasedprogramming.png "Prototype-Based Programming")
 
 I ran across a mention of "Prototype-Based Programming" back when I was first learning JavaScript. I thought it would be an interesting read, but forgot to bookmark it, and forgot to look into it further. Once I finally remembered it, it proved hard to find (and an expensive gamble from Amazon), until I found it through NIH's interlibrary loan system.
 

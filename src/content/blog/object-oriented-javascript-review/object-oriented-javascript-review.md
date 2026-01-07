@@ -4,7 +4,7 @@ date: '2008-10-25T22:02:16-05:00'
 slug: 2008/10/25/object-oriented-javascript-review
 tags: ["javascript", "programming", "reading", "reviews"]
 ---
-[![Object Oriented JavaScript](/objectorientedjavascript.jpg "Object Oriented JavaScript")](https://www.packtpub.com/object-oriented-javascript-applications-libraries/book)
+[![Object Oriented JavaScript](./objectorientedjavascript.jpg "Object Oriented JavaScript")](https://www.packtpub.com/object-oriented-javascript-applications-libraries/book)
 
 I recently read [Object-Oriented JavaScript](https://www.packtpub.com/object-oriented-javascript-applications-libraries/book), by [Stoyan Stefanov](https://www.phpied.com/). In reviewing it, I found it was one of the most interesting books I've read in a while, for some good reasons and a few more curious reasons.
 

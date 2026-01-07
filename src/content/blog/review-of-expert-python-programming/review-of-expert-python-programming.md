@@ -4,7 +4,7 @@ date: '2009-01-25T13:02:24-05:00'
 slug: "2009/01/25/review-of-expert-python-programming"
 tags: ["programming", "python", "reading", "reviews"]
 ---
-[![Expert Python Programming](/expertpythonprogramming.jpg "Expert Python Programming")](https://www.packtpub.com/expert-python-programming/book)
+[![Expert Python Programming](./expertpythonprogramming.jpg "Expert Python Programming")](https://www.packtpub.com/expert-python-programming/book)
 
 Based on the title, [Expert Python Programming](https://www.packtpub.com/expert-python-programming/book), (by [Tarek Ziadé](https://tarekziade.wordpress.com/)) I had expected a book covering the Python language... syntax, advanced data structures, maybe some functional programming... stuff like that. This book surprised me. Rather, it contains a hodgepodge of information about the world of Python development, from setting up editors to distributed version control to application distribution. "Expert Python Programming" does contain some information on the Python language itself, but not as much as I would have hoped. While it does contain a good amount of useful information, overall, I'd have to say that it misses the target.
 

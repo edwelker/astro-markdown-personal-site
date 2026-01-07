@@ -8,7 +8,7 @@ If there is one thing that I'm a sucker for, it's cheat sheets. I love letting m
 
 So the other day I was working on some trivial CSS, and found myself having to look up the shorthand for 'list-style' for the millionth time. I don't know what in my childhood prevents me from remembering it, but... it must have been traumatic. Anyway, I looked over at my [CSS cheat sheet](https://www.ilovejackdaniels.com/cheat-sheets/css-cheat-sheet/), and it was absent. So I searched the webbernet for a cheat sheet. I found [Dustin Diaz's guide](https://www.dustindiaz.com/css-shorthand/), but that wasn't what I was looking for. It was filled with information, however I know the values-I work with them constantly. I just wanted to figure out the order and defaults... and put them on the wall.
 
-[So here is my CSS Shorthand Cheat Sheet](/csscheatsheet.pdf "CSS Shorthand Cheat Sheet").
+[So here is my CSS Shorthand Cheat Sheet](./csscheatsheet.pdf "CSS Shorthand Cheat Sheet").
 
 This cheat sheet contains all of the cases (that I can think of) where a CSS property has a shorthand notation. I've even added the obscure and rarely implemented *outline* and outline variations, as well as the Aural *pause* and *cue* properties (respecting accessibility). I even threw in the color shortcut (#abc) in for good measure. 🙂
 
