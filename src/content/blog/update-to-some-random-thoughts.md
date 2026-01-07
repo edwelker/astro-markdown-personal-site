@@ -4,7 +4,7 @@ date: '2008-01-08T19:19:16-05:00'
 slug: 2008/01/08/update-to-some-random-thoughts
 tags: ["life"]
 ---
-1\) I took a look at the book on [Processing](https://en.wikipedia.org/wiki/Processing_(programming_language)), and it does look quite nice. That being said, I'm not quite sure what I'd use it for. So it fell a bit on my list.
+1\) I took a look at the book on [Processing](https://en.wikipedia.org/wiki/Processing), and it does look quite nice. That being said, I'm not quite sure what I'd use it for. So it fell a bit on my list.
 
 2\) Letterman is still pretty much the same. I haven't seen Leno. Jon Stewart, however, looked TOTALLY crazy last night. It was really quite scary.
 
