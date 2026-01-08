@@ -22,6 +22,33 @@ export default defineConfig({
     '/dashboard': '/dash/',
   },
   integrations: [
+      {
+        name: 'custom-routes',
+        hooks: {
+          'astro:config:setup': ({ injectRoute }) => {
+            injectRoute({
+              pattern: '/blog/[...slug]',
+              entrypoint: './src/components/pages/BlogPost.page.astro'
+            });
+            injectRoute({
+              pattern: '/gas/[region]',
+              entrypoint: './src/components/pages/GasRegion.page.astro'
+            });
+            injectRoute({
+              pattern: '/tags/[tag]',
+              entrypoint: './src/components/pages/TagPage.page.astro'
+            });
+            injectRoute({
+              pattern: '/recipes/[...slug]',
+              entrypoint: './src/components/pages/RecipePost.page.astro'
+            });
+            injectRoute({
+              pattern: '/media/[decade]',
+              entrypoint: './src/components/pages/MediaDecade.page.astro'
+            });
+          }
+        }
+      },
       sitemap({
           filter : (page) => !page.includes("/dash")
       }),
