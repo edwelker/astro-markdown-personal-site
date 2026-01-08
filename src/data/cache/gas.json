@@ -91,17 +91,6 @@
     {
       "City": "Columbia (East)",
       "Zip": "21045",
-      "Station": "Shell",
-      "Address": "7248 Cradlerock Way, 21045",
-      "Base": "2.89",
-      "Net": "2.84",
-      "Discount": "Shell",
-      "Lat": "39.1862523",
-      "Long": "-76.8457193"
-    },
-    {
-      "City": "Columbia (East)",
-      "Zip": "21045",
       "Station": "Exxon",
       "Address": "7100 Minstrel Way, 21045",
       "Base": "2.89",
@@ -109,6 +98,17 @@
       "Discount": "Exxon",
       "Lat": "39.177736",
       "Long": "-76.84448"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+      "Station": "Shell",
+      "Address": "7248 Cradlerock Way, 21045",
+      "Base": "2.89",
+      "Net": "2.84",
+      "Discount": "Shell",
+      "Lat": "39.1862523",
+      "Long": "-76.8457193"
     },
     {
       "City": "Columbia (East)",
@@ -142,6 +142,17 @@
       "Discount": "Shell",
       "Lat": "39.1827983",
       "Long": "-76.8205935"
+    },
+    {
+      "City": "Columbia (Guilford)",
+      "Zip": "21046",
+      "Station": "Exxon",
+      "Address": "7201 Eden Brook Dr, 21046",
+      "Base": "2.99",
+      "Net": "2.96",
+      "Discount": "Exxon",
+      "Lat": "39.1698781",
+      "Long": "-76.8656991"
     },
     {
       "City": "Columbia (Guilford)",
@@ -245,17 +256,6 @@
     {
       "City": "Ellicott City (North)",
       "Zip": "21043",
-      "Station": "Carroll Motor Fuels",
-      "Address": "8720 Baltimore National Pike, 21043",
-      "Base": "2.83",
-      "Net": "2.83",
-      "Discount": "-",
-      "Lat": "39.2808054",
-      "Long": "-76.8147058"
-    },
-    {
-      "City": "Ellicott City (North)",
-      "Zip": "21043",
       "Station": "Exxon",
       "Address": "4235 Montgomery Rd, 21043",
       "Base": "2.83",
@@ -274,6 +274,17 @@
       "Discount": "High's",
       "Lat": "39.2874075",
       "Long": "-76.8091156"
+    },
+    {
+      "City": "Ellicott City (North)",
+      "Zip": "21043",
+      "Station": "Carroll Motor Fuels",
+      "Address": "8720 Baltimore National Pike, 21043",
+      "Base": "2.83",
+      "Net": "2.83",
+      "Discount": "-",
+      "Lat": "39.2808054",
+      "Long": "-76.8147058"
     },
     {
       "City": "Ellicott City (North)",
@@ -333,17 +344,6 @@
     {
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
-      "Station": "Exxon",
-      "Address": "9275 All Saints Rd, 20723",
-      "Base": "2.84",
-      "Net": "2.81",
-      "Discount": "Exxon",
-      "Lat": "39.1189484",
-      "Long": "-76.8513125"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
       "Station": "7-Eleven",
       "Address": "9651 Washington Blvd N, 20723",
       "Base": "2.84",
@@ -351,6 +351,28 @@
       "Discount": "7-Eleven",
       "Lat": "39.1180551",
       "Long": "-76.8297577"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Weis",
+      "Address": "9250 Washington Blvd N, 20723",
+      "Base": "2.84",
+      "Net": "2.84",
+      "Discount": "-",
+      "Lat": "39.1180551",
+      "Long": "-76.8297577"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Exxon",
+      "Address": "9275 All Saints Rd, 20723",
+      "Base": "2.84",
+      "Net": "2.81",
+      "Discount": "Exxon",
+      "Lat": "39.1189484",
+      "Long": "-76.8513125"
     },
     {
       "City": "Scaggsville / Laurel",
@@ -377,6 +399,17 @@
     {
       "City": "Severn",
       "Zip": "21144",
+      "Station": "Royal Farms",
+      "Address": "7843 Telegraph Rd, 21144",
+      "Base": "2.85",
+      "Net": "2.75",
+      "Discount": "Royal Farms",
+      "Lat": "39.1373727",
+      "Long": "-76.684828"
+    },
+    {
+      "City": "Severn",
+      "Zip": "21144",
       "Station": "7-Eleven",
       "Address": "500 Donaldson Ave, 21144",
       "Base": "2.86",
@@ -384,17 +417,6 @@
       "Discount": "7-Eleven",
       "Lat": "39.136636",
       "Long": "-76.659232"
-    },
-    {
-      "City": "Severn",
-      "Zip": "21144",
-      "Station": "Royal Farms",
-      "Address": "7843 Telegraph Rd, 21144",
-      "Base": "2.89",
-      "Net": "2.79",
-      "Discount": "Royal Farms",
-      "Lat": "39.1373727",
-      "Long": "-76.684828"
     },
     {
       "City": "Severn",
@@ -478,8 +500,8 @@
       "Zip": "21076",
       "Station": "Exxon",
       "Address": "7671 Arundel Mills Blvd, 21076",
-      "Base": "3.29",
-      "Net": "3.26",
+      "Base": "3.19",
+      "Net": "3.16",
       "Discount": "Exxon",
       "Lat": "39.15227",
       "Long": "-76.7312534"
@@ -532,23 +554,23 @@
       "City": "Jessup",
       "Zip": "20794",
       "Station": "BP",
+      "Address": "8810 Washington Blvd, 20794",
+      "Base": "2.89",
+      "Net": "2.84",
+      "Discount": "BP",
+      "Lat": "39.1445028",
+      "Long": "-76.8091941"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
+      "Station": "BP",
       "Address": "7879 Pocomoke Dr, 20794",
       "Base": "2.89",
       "Net": "2.84",
       "Discount": "BP",
       "Lat": "39.1682121",
       "Long": "-76.7831573"
-    },
-    {
-      "City": "Jessup",
-      "Zip": "20794",
-      "Station": "Royal Farms",
-      "Address": "2850 Jessup Rd, 20794",
-      "Base": "2.89",
-      "Net": "2.79",
-      "Discount": "Royal Farms",
-      "Lat": "39.1424361",
-      "Long": "-76.7613968"
     },
     {
       "City": "Jessup",
@@ -564,6 +586,17 @@
     {
       "City": "Jessup",
       "Zip": "20794",
+      "Station": "Royal Farms",
+      "Address": "2850 Jessup Rd, 20794",
+      "Base": "2.89",
+      "Net": "2.79",
+      "Discount": "Royal Farms",
+      "Lat": "39.1424361",
+      "Long": "-76.7613968"
+    },
+    {
+      "City": "Jessup",
+      "Zip": "20794",
       "Station": "Exxon",
       "Address": "7930 Washington Blvd, 20794",
       "Base": "2.93",
@@ -571,17 +604,6 @@
       "Discount": "Exxon",
       "Lat": "39.1711851",
       "Long": "-76.7868219"
-    },
-    {
-      "City": "Jessup",
-      "Zip": "20794",
-      "Station": "BP",
-      "Address": "8810 Washington Blvd, 20794",
-      "Base": "2.89",
-      "Net": "2.84",
-      "Discount": "BP",
-      "Lat": "39.1445028",
-      "Long": "-76.8091941"
     }
   ],
   "ny": [
@@ -654,6 +676,17 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
+      "Station": "Mobil",
+      "Address": "415 E Main St, 11901",
+      "Base": "2.79",
+      "Net": "2.76",
+      "Discount": "Mobil",
+      "Lat": "40.9182937",
+      "Long": "-72.6568979"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
       "Station": "76",
       "Address": "7 Peconic Ave, 11901",
       "Base": "2.85",
@@ -674,39 +707,6 @@
       "Long": "-72.6471547"
     },
     {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Mobil",
-      "Address": "415 E Main St, 11901",
-      "Base": "2.85",
-      "Net": "2.82",
-      "Discount": "Mobil",
-      "Lat": "40.9182937",
-      "Long": "-72.6568979"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Shell",
-      "Address": "9 Lake Ave, 11901",
-      "Base": "2.89",
-      "Net": "2.84",
-      "Discount": "Shell",
-      "Lat": "40.9142638",
-      "Long": "-72.6632928"
-    },
-    {
-      "City": "Hampton Bays",
-      "Zip": "11946",
-      "Station": "Shell",
-      "Address": "250 E Montauk Hwy, 11946",
-      "Base": "2.99",
-      "Net": "2.94",
-      "Discount": "Shell",
-      "Lat": "40.8834616",
-      "Long": "-72.5046248"
-    },
-    {
       "City": "Hampton Bays",
       "Zip": "11946",
       "Station": "Mobil",
@@ -718,15 +718,15 @@
       "Long": "-72.5490604"
     },
     {
-      "City": "Southampton",
-      "Zip": "11968",
+      "City": "Hampton Bays",
+      "Zip": "11946",
       "Station": "Shell",
-      "Address": "1630 CR-39, 11968",
-      "Base": "2.79",
-      "Net": "2.74",
+      "Address": "250 E Montauk Hwy, 11946",
+      "Base": "2.99",
+      "Net": "2.94",
       "Discount": "Shell",
-      "Lat": "40.8949342",
-      "Long": "-72.4534478"
+      "Lat": "40.8834616",
+      "Long": "-72.5046248"
     },
     {
       "City": "Southampton",
@@ -742,17 +742,6 @@
     {
       "City": "Southampton",
       "Zip": "11968",
-      "Station": "Gas Hampton",
-      "Address": "2000 CR-39, 11968",
-      "Base": "2.89",
-      "Net": "2.89",
-      "Discount": "-",
-      "Lat": "40.8949126",
-      "Long": "-72.4661039"
-    },
-    {
-      "City": "Southampton",
-      "Zip": "11968",
       "Station": "Speedway",
       "Address": "816 CR-39, 11968",
       "Base": "2.89",
@@ -762,15 +751,26 @@
       "Long": "-72.4251772"
     },
     {
-      "City": "Water Mill",
-      "Zip": "11976",
-      "Station": "Speedway",
-      "Address": "1138 Montauk Hwy, 11976",
-      "Base": "3.09",
-      "Net": "3.04",
-      "Discount": "Speedway",
-      "Lat": "40.9192162",
-      "Long": "-72.3436923"
+      "City": "Southampton",
+      "Zip": "11968",
+      "Station": "Shell",
+      "Address": "1630 CR-39, 11968",
+      "Base": "2.79",
+      "Net": "2.74",
+      "Discount": "Shell",
+      "Lat": "40.8949342",
+      "Long": "-72.4534478"
+    },
+    {
+      "City": "Southampton",
+      "Zip": "11968",
+      "Station": "Gas Hampton",
+      "Address": "2000 CR-39, 11968",
+      "Base": "2.89",
+      "Net": "2.89",
+      "Discount": "-",
+      "Lat": "40.8949126",
+      "Long": "-72.4661039"
     },
     {
       "City": "Water Mill",
@@ -782,9 +782,31 @@
       "Discount": "Shell",
       "Lat": "40.915432",
       "Long": "-72.3479645"
+    },
+    {
+      "City": "Water Mill",
+      "Zip": "11976",
+      "Station": "Speedway",
+      "Address": "1138 Montauk Hwy, 11976",
+      "Base": "3.09",
+      "Net": "3.04",
+      "Discount": "Speedway",
+      "Lat": "40.9192162",
+      "Long": "-72.3436923"
     }
   ],
   "ma": [
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "Gulf",
+      "Address": "646 Grattan Street, 01020",
+      "Base": "2.51",
+      "Net": "2.51",
+      "Discount": "-",
+      "Lat": "42.1730203",
+      "Long": "-72.5984727"
+    },
     {
       "City": "Chicopee",
       "Zip": "01020",
@@ -821,6 +843,17 @@
     {
       "City": "Chicopee",
       "Zip": "01020",
+      "Station": "Pride",
+      "Address": "27 Montgomery St, 01020",
+      "Base": "2.67",
+      "Net": "2.57",
+      "Discount": "Pride",
+      "Lat": "42.1612887",
+      "Long": "-72.5824657"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
       "Station": "Cumberland Farms",
       "Address": "1061 Memorial Dr, 01020",
       "Base": "2.59",
@@ -832,46 +865,35 @@
     {
       "City": "Chicopee",
       "Zip": "01020",
+      "Station": "F.L. Roberts",
+      "Address": "2012 Memorial Dr, 01020",
+      "Base": "2.69",
+      "Net": "2.69",
+      "Discount": "-",
+      "Lat": "42.210334",
+      "Long": "-72.5714232"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
       "Station": "Pride",
-      "Address": "27 Montgomery St, 01020",
-      "Base": "2.77",
-      "Net": "2.67",
+      "Address": "363 Burnett Rd, 01020",
+      "Base": "2.93",
+      "Net": "2.83",
       "Discount": "Pride",
-      "Lat": "42.1612887",
-      "Long": "-72.5824657"
-    },
-    {
-      "City": "Chicopee",
-      "Zip": "01020",
-      "Station": "Cumberland Farms",
-      "Address": "37 Montcalm St, 01020",
-      "Base": "2.62",
-      "Net": "2.52",
-      "Discount": "Cumberland",
-      "Lat": "42.2021333",
-      "Long": "-72.5807318"
-    },
-    {
-      "City": "Chicopee",
-      "Zip": "01020",
-      "Station": "BP",
-      "Address": "1423 Memorial Dr, 01020",
-      "Base": "2.55",
-      "Net": "2.5",
-      "Discount": "BP",
-      "Lat": "42.1960997",
-      "Long": "-72.5739353"
+      "Lat": "42.1661787",
+      "Long": "-72.5451161"
     },
     {
       "City": "Chicopee",
       "Zip": "01020",
       "Station": "CITGO",
-      "Address": "1875 Memorial Dr, 01020",
-      "Base": "2.89",
-      "Net": "2.89",
+      "Address": "817 Front St, 01020",
+      "Base": "2.99",
+      "Net": "2.99",
       "Discount": "-",
-      "Lat": "42.2082465",
-      "Long": "-72.571413"
+      "Lat": "42.1498779",
+      "Long": "-72.5862536"
     },
     {
       "City": "Chicopee",
@@ -888,6 +910,17 @@
       "City": "Chicopee",
       "Zip": "01020",
       "Station": "CITGO",
+      "Address": "1875 Memorial Dr, 01020",
+      "Base": "2.89",
+      "Net": "2.89",
+      "Discount": "-",
+      "Lat": "42.2082465",
+      "Long": "-72.571413"
+    },
+    {
+      "City": "Chicopee",
+      "Zip": "01020",
+      "Station": "CITGO",
       "Address": "947 Burnett Rd, 01020",
       "Base": "2.89",
       "Net": "2.89",
@@ -896,15 +929,15 @@
       "Long": "-72.5287525"
     },
     {
-      "City": "Chicopee",
-      "Zip": "01020",
-      "Station": "Pride",
-      "Address": "363 Burnett Rd, 01020",
-      "Base": "2.99",
-      "Net": "2.89",
-      "Discount": "Pride",
-      "Lat": "42.1661787",
-      "Long": "-72.5451161"
+      "City": "Holyoke",
+      "Zip": "01040",
+      "Station": "Racing Mart",
+      "Address": "330 Main St, 01040",
+      "Base": "2.56",
+      "Net": "2.56",
+      "Discount": "-",
+      "Lat": "42.2000394",
+      "Long": "-72.6061084"
     },
     {
       "City": "Holyoke",
@@ -920,17 +953,6 @@
     {
       "City": "Holyoke",
       "Zip": "01040",
-      "Station": "Gulf",
-      "Address": "820 High St, 01040",
-      "Base": "2.59",
-      "Net": "2.59",
-      "Discount": "-",
-      "Lat": "42.19763",
-      "Long": "-72.6164858"
-    },
-    {
-      "City": "Holyoke",
-      "Zip": "01040",
       "Station": "Stop and Shop",
       "Address": "2265 Northampton, 01040",
       "Base": "2.65",
@@ -942,6 +964,17 @@
     {
       "City": "Holyoke",
       "Zip": "01040",
+      "Station": "Gulf",
+      "Address": "820 High St, 01040",
+      "Base": "2.59",
+      "Net": "2.59",
+      "Discount": "-",
+      "Lat": "42.19763",
+      "Long": "-72.6164858"
+    },
+    {
+      "City": "Holyoke",
+      "Zip": "01040",
       "Station": "Shell",
       "Address": "225 Whiting Farms Rd, 01040",
       "Base": "2.85",
@@ -949,28 +982,6 @@
       "Discount": "Shell",
       "Lat": "42.1748898",
       "Long": "-72.6408246"
-    },
-    {
-      "City": "Holyoke",
-      "Zip": "01040",
-      "Station": "Pride",
-      "Address": "1553 Dwight St, 01040",
-      "Base": "2.79",
-      "Net": "2.69",
-      "Discount": "Pride",
-      "Lat": "42.21103",
-      "Long": "-72.6281361"
-    },
-    {
-      "City": "Holyoke",
-      "Zip": "01040",
-      "Station": "Shell",
-      "Address": "1530 Northampton St, 01040",
-      "Base": "2.99",
-      "Net": "2.94",
-      "Discount": "Shell",
-      "Lat": "42.211614",
-      "Long": "-72.6296123"
     },
     {
       "City": "Easthampton",
@@ -1008,13 +1019,13 @@
     {
       "City": "Northampton",
       "Zip": "01060",
-      "Station": "Sunoco",
-      "Address": "776 N King St, 01060",
+      "Station": "Cumberland Farms",
+      "Address": "134 King St, 01060",
       "Base": "2.89",
-      "Net": "2.86",
-      "Discount": "Sunoco",
-      "Lat": "42.3622644",
-      "Long": "-72.6390352"
+      "Net": "2.79",
+      "Discount": "Cumberland",
+      "Lat": "42.3248303",
+      "Long": "-72.6330713"
     },
     {
       "City": "Northampton",
@@ -1030,13 +1041,13 @@
     {
       "City": "Northampton",
       "Zip": "01060",
-      "Station": "Pride",
-      "Address": "375 King St, 01060",
+      "Station": "Sunoco",
+      "Address": "776 N King St, 01060",
       "Base": "2.89",
-      "Net": "2.79",
-      "Discount": "Pride",
-      "Lat": "42.3374852",
-      "Long": "-72.6366284"
+      "Net": "2.86",
+      "Discount": "Sunoco",
+      "Lat": "42.3622644",
+      "Long": "-72.6390352"
     },
     {
       "City": "Northampton",
@@ -1052,28 +1063,6 @@
     {
       "City": "Northampton",
       "Zip": "01060",
-      "Station": "Mobil",
-      "Address": "15 Locust, 01060",
-      "Base": "2.95",
-      "Net": "2.92",
-      "Discount": "Mobil",
-      "Lat": "42.3316863",
-      "Long": "-72.6526156"
-    },
-    {
-      "City": "Northampton",
-      "Zip": "01060",
-      "Station": "Shell",
-      "Address": "506 Pleasant St, 01060",
-      "Base": "2.99",
-      "Net": "2.94",
-      "Discount": "Shell",
-      "Lat": "42.3114138",
-      "Long": "-72.6238099"
-    },
-    {
-      "City": "Northampton",
-      "Zip": "01060",
       "Station": "Racing Mart",
       "Address": "54 Easthampton Rd, 01060",
       "Base": "2.99",
@@ -1083,15 +1072,26 @@
       "Long": "-72.6491003"
     },
     {
-      "City": "Hadley",
-      "Zip": "01035",
-      "Station": "Stop & Shop",
-      "Address": "446 Russell St, 01035",
-      "Base": "2.95",
-      "Net": "2.85",
-      "Discount": "Stop & Shop",
-      "Lat": "42.3646637",
-      "Long": "-72.5379721"
+      "City": "Northampton",
+      "Zip": "01060",
+      "Station": "Shell",
+      "Address": "506 Pleasant St, 01060",
+      "Base": "2.99",
+      "Net": "2.94",
+      "Discount": "Shell",
+      "Lat": "",
+      "Long": ""
+    },
+    {
+      "City": "Northampton",
+      "Zip": "01060",
+      "Station": "Pride",
+      "Address": "375 King St, 01060",
+      "Base": "2.89",
+      "Net": "2.79",
+      "Discount": "Pride",
+      "Lat": "42.3374852",
+      "Long": "-72.6366284"
     },
     {
       "City": "Hadley",
@@ -1103,6 +1103,17 @@
       "Discount": "Cumberland",
       "Lat": "42.3414531",
       "Long": "-72.5946062"
+    },
+    {
+      "City": "Hadley",
+      "Zip": "01035",
+      "Station": "Stop & Shop",
+      "Address": "446 Russell St, 01035",
+      "Base": "2.95",
+      "Net": "2.85",
+      "Discount": "Stop & Shop",
+      "Lat": "42.3646637",
+      "Long": "-72.5379721"
     },
     {
       "City": "Hadley",
@@ -1129,6 +1140,17 @@
     {
       "City": "Hadley",
       "Zip": "01035",
+      "Station": "Big Y Express",
+      "Address": "73 Russell St, 01035",
+      "Base": "3.02",
+      "Net": "2.97",
+      "Discount": "Big Y",
+      "Lat": "42.3405615",
+      "Long": "-72.6018812"
+    },
+    {
+      "City": "Hadley",
+      "Zip": "01035",
       "Station": "Pride",
       "Address": "25 Russell St, 01035",
       "Base": "3.03",
@@ -1138,15 +1160,15 @@
       "Long": "-72.60906"
     },
     {
-      "City": "Hadley",
-      "Zip": "01035",
-      "Station": "Big Y Express",
-      "Address": "73 Russell St, 01035",
-      "Base": "3.02",
-      "Net": "2.97",
-      "Discount": "Big Y",
-      "Lat": "42.3405615",
-      "Long": "-72.6018812"
+      "City": "Amherst",
+      "Zip": "01002",
+      "Station": "Cumberland Farms",
+      "Address": "389 College St, 01002",
+      "Base": "2.98",
+      "Net": "2.88",
+      "Discount": "Cumberland",
+      "Lat": "42.373216",
+      "Long": "-72.5193521"
     },
     {
       "City": "Amherst",
@@ -1171,26 +1193,15 @@
       "Long": "-72.5351597"
     },
     {
-      "City": "Amherst",
-      "Zip": "01002",
-      "Station": "Cumberland Farms",
-      "Address": "389 College St, 01002",
-      "Base": "2.98",
-      "Net": "2.88",
-      "Discount": "Cumberland",
-      "Lat": "42.373216",
-      "Long": "-72.5193521"
-    },
-    {
       "City": "South Deerfield",
       "Zip": "01373",
-      "Station": "Cumberland Farms",
-      "Address": "31 Elm St, 01373",
+      "Station": "Neighbors Convenience Store",
+      "Address": "242 Conway Rd, 01373",
       "Base": "3.09",
-      "Net": "2.99",
-      "Discount": "Cumberland",
-      "Lat": "42.4769319",
-      "Long": "-72.6127799"
+      "Net": "3.09",
+      "Discount": "-",
+      "Lat": "42.4973938",
+      "Long": "-72.6367494"
     },
     {
       "City": "South Deerfield",
@@ -1217,13 +1228,13 @@
     {
       "City": "South Deerfield",
       "Zip": "01373",
-      "Station": "Neighbors Convenience Store",
-      "Address": "242 Conway Rd, 01373",
+      "Station": "Cumberland Farms",
+      "Address": "31 Elm St, 01373",
       "Base": "3.09",
-      "Net": "3.09",
-      "Discount": "-",
-      "Lat": "42.4973938",
-      "Long": "-72.6367494"
+      "Net": "2.99",
+      "Discount": "Cumberland",
+      "Lat": "42.4769319",
+      "Long": "-72.6127799"
     },
     {
       "City": "Greenfield",
@@ -1235,6 +1246,39 @@
       "Discount": "-",
       "Lat": "42.600351",
       "Long": "-72.5939125"
+    },
+    {
+      "City": "Greenfield",
+      "Zip": "01301",
+      "Station": "Shell",
+      "Address": "100 Mohawk Tr, 01301",
+      "Base": "2.77",
+      "Net": "2.72",
+      "Discount": "Shell",
+      "Lat": "",
+      "Long": ""
+    },
+    {
+      "City": "Greenfield",
+      "Zip": "01301",
+      "Station": "Stop & Shop",
+      "Address": "488 Bernardston Rd, 01301",
+      "Base": "2.79",
+      "Net": "2.69",
+      "Discount": "Stop & Shop",
+      "Lat": "42.6094682",
+      "Long": "-72.5869418"
+    },
+    {
+      "City": "Greenfield",
+      "Zip": "01301",
+      "Station": "Irving",
+      "Address": "223 Mohawk Tr, 01301",
+      "Base": "2.85",
+      "Net": "2.85",
+      "Discount": "-",
+      "Lat": "",
+      "Long": ""
     },
     {
       "City": "Greenfield",
@@ -1261,44 +1305,11 @@
     {
       "City": "Greenfield",
       "Zip": "01301",
-      "Station": "Shell",
-      "Address": "100 Mohawk Tr, 01301",
-      "Base": "2.77",
-      "Net": "2.72",
-      "Discount": "Shell",
-      "Lat": "",
-      "Long": ""
-    },
-    {
-      "City": "Greenfield",
-      "Zip": "01301",
       "Station": "Mobil",
       "Address": "142 Mohawk Tr, 01301",
       "Base": "2.77",
       "Net": "2.74",
       "Discount": "Mobil",
-      "Lat": "",
-      "Long": ""
-    },
-    {
-      "City": "Greenfield",
-      "Zip": "01301",
-      "Station": "Stop & Shop",
-      "Address": "488 Bernardston Rd, 01301",
-      "Base": "2.79",
-      "Net": "2.69",
-      "Discount": "Stop & Shop",
-      "Lat": "42.6094682",
-      "Long": "-72.5869418"
-    },
-    {
-      "City": "Greenfield",
-      "Zip": "01301",
-      "Station": "Irving",
-      "Address": "223 Mohawk Tr, 01301",
-      "Base": "2.85",
-      "Net": "2.85",
-      "Discount": "-",
       "Lat": "",
       "Long": ""
     },
