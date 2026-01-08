@@ -10,7 +10,7 @@ import CyclingStats from "@components/CyclingStats.astro";
 import MediaTeaser from "@components/MediaTeaser.astro";
 import HighlightSchema from "@components/HighlightSchema.astro";
 import HighlightsList from "@components/HighlightsList.astro";
-import BlogList from "@components/BlogList.astro";
+import TeaserBlogList from "@components/TeaserBlogList.astro";
 import RecipesList from "@components/RecipesList.astro";
 
 const blog = (await getCollection("blog"))
@@ -46,7 +46,7 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
 
         <section class="animate" data-testid="music-section"><MusicStats /></section>
 
-        <BlogList posts={blog} />
+        <TeaserBlogList posts={blog} />
 
         <RecipesList recipes={recipes} />
 
