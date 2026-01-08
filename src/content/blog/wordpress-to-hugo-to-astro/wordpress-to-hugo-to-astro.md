@@ -73,19 +73,3 @@ Tailwind feels like the opposite. It feels gross. Cluttering my markup with a so
 Ripping it out is next on my list. I want a codebase that feels crafted, not just assembled from a kit.
 
 But for now? We’re live. It’s fast. It’s free. And I'm actually having fun pushing boundaries, like my [GasPrices](/gas/) page that pulls data into a readable repo, or my [SportsFeed](/sports/) that uses Cloudflare Workers to fetch data on-demand.
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "From WordPress to Hugo to Astro",
-  "image": "https://astro.build/assets/press/astro-icon-light-gradient.svg",
-  "datePublished": "2026-01-06T22:40:47",
-  "author": {
-    "@type": "Person",
-    "name": "Eddie Welker"
-  },
-  "description": "How I went from WordPress fatigue to Hugo frustration, and finally found a home with Astro, but we're not sailing through space yet!",
-  "keywords": ["Astro", "Hugo", "WordPress", "Migration", "CSS"]
-}
-</script>
