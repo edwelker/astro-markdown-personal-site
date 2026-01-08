@@ -1,11 +1,23 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { getPostHref } from "@lib/blog";
 
 interface Props {
   post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props;
+
+const href = getPostHref(post);
+const url = new URL(href, Astro.site).href;
+
+let image = undefined;
+if (post.data.coverImage) {
+  // Handle both Astro image objects and string paths
+  image = typeof post.data.coverImage === 'string' 
+    ? new URL(post.data.coverImage, Astro.site).href
+    : new URL(post.data.coverImage.src, Astro.site).href;
+}
 
 const schema = {
   "@context": "https://schema.org",
@@ -16,8 +28,15 @@ const schema = {
   ...(post.data.updatedDate && { "dateModified": post.data.updatedDate.toISOString() }),
   "author": {
     "@type": "Person",
-    "name": "Eddie Welker"
-  }
+    "name": "Eddie Welker",
+    "url": Astro.site
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": url
+  },
+  "url": url,
+  ...(image && { "image": image })
 };
 ---
 
