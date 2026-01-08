@@ -4,6 +4,7 @@ import Container from "@components/Container.astro";
 import { SITE, HOME } from "@consts";
 import { getCollection } from "astro:content";
 import { getAllHighlights } from "@lib/highlights";
+import { getAllActivity } from "@lib/activity";
 import Flickr from '@components/Flickr.astro';
 import MusicStats from "@components/MusicStats.astro";
 import CyclingStats from "@components/CyclingStats.astro";
@@ -12,6 +13,7 @@ import HighlightSchema from "@components/HighlightSchema.astro";
 import HighlightsList from "@components/HighlightsList.astro";
 import TeaserBlogList from "@components/TeaserBlogList.astro";
 import RecipesList from "@components/RecipesList.astro";
+import ActivitySparkline from "@components/ActivitySparkline.astro";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -24,6 +26,7 @@ const recipes = (await getCollection("recipes"))
   .slice(0, 6);
 
 const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS_ON_HOMEPAGE);
+const allActivity = await getAllActivity();
 ---
 
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -45,6 +48,8 @@ const recentHighlights = (await getAllHighlights()).slice(0, SITE.NUM_HIGHLIGHTS
         <section class="animate" data-testid="cycling-section"><CyclingStats /></section>
 
         <section class="animate" data-testid="music-section"><MusicStats /></section>
+
+        <!-- <ActivitySparkline items={allActivity} /> -->
 
         <TeaserBlogList posts={blog} />
 

@@ -1,22 +1,9 @@
 import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
 import { SITE } from '@consts';
+import { getAllActivity } from '@lib/activity';
 
 export async function GET(context) {
-  const blog = await getCollection('blog', ({ data }) => {
-    return data.draft !== true;
-  });
-
-  const recipes = await getCollection('recipes', ({ data }) => {
-    return data.draft !== true;
-  });
-
-  const allItems = [
-    ...blog.map((post) => ({ ...post, type: 'blog' })),
-    ...recipes.map((recipe) => ({ ...recipe, type: 'recipes' })),
-  ];
-
-  allItems.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  const allItems = await getAllActivity();
 
   return rss({
     title: SITE.TITLE,
@@ -26,7 +13,6 @@ export async function GET(context) {
       title: item.data.title,
       pubDate: item.data.date,
       description: item.data.description || '',
-      // Fix: Blog posts are served at /blog/[slug], not /[slug]
       link: item.type === 'blog' ? `/blog/${item.slug}/` : `/${item.type}/${item.slug}/`,
     })),
     customData: `<language>en-us</language>`,
