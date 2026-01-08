@@ -4,7 +4,7 @@ import path from 'path';
 
 describe('Astro View Transitions Lifecycle', () => {
   it('gas page script should be initialized with astro:page-load', async () => {
-    const filePath = path.resolve(process.cwd(), 'src/components/pages/GasRegion.page.astro');
+    const filePath = path.resolve(process.cwd(), 'src/components/pages/GasRegionList.page.astro');
     const content = await fs.readFile(filePath, 'utf-8');
 
     // This test ensures the client-side script on the gas page is compatible with

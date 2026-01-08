@@ -28,23 +28,23 @@ export default defineConfig({
           'astro:config:setup': ({ injectRoute }) => {
             injectRoute({
               pattern: '/blog/[...slug]',
-              entrypoint: './src/components/pages/BlogPost.page.astro'
+              entrypoint: './src/components/pages/BlogList.page.astro'
             });
             injectRoute({
               pattern: '/gas/[region]',
-              entrypoint: './src/components/pages/GasRegion.page.astro'
+              entrypoint: './src/components/pages/GasRegionList.page.astro'
             });
             injectRoute({
               pattern: '/tags/[tag]',
-              entrypoint: './src/components/pages/TagPage.page.astro'
+              entrypoint: './src/components/pages/TagList.page.astro'
             });
             injectRoute({
               pattern: '/recipes/[...slug]',
-              entrypoint: './src/components/pages/RecipePost.page.astro'
+              entrypoint: './src/components/pages/RecipeList.page.astro'
             });
             injectRoute({
               pattern: '/media/[decade]',
-              entrypoint: './src/components/pages/MediaDecade.page.astro'
+              entrypoint: './src/components/pages/MediaDecadeList.page.astro'
             });
           }
         }
