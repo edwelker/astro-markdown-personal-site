@@ -19,5 +19,3 @@ export const BlogSchema = ({ image }) => z.object({
   ignore_links: z.array(z.string()).optional(),
   slug: z.string().optional(),
 });
-
-export type BlogFrontmatter = z.infer<ReturnType<typeof BlogSchema>>;

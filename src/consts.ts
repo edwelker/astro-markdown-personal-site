@@ -25,11 +25,6 @@ export const RECIPES: Metadata = {
 };
 
 
-export const PROJECTS: Metadata = {
-  TITLE: "Highlights",
-  DESCRIPTION: "A curated list of my cycling achievements, technical projects, and other creative highlights.",
-};
-
 export const HIGHLIGHTS = {
   TITLE: "Recent Highlights",
   DESCRIPTION: "Projects, work, or things I'm proud of",

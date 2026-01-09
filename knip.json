@@ -1,0 +1,29 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "astro": {
+    "entry": [
+      "astro.config.mjs",
+      "src/content/config.ts",
+      "src/pages/**/*.{astro,md,mdx,js,ts}",
+      "src/components/pages/**/*.astro",
+      "src/content/**/*.{md,mdx}",
+      "src/layouts/**/*.astro"
+    ]
+  },
+  "entry": [
+    "scripts/**/*.{mjs,cjs}",
+    "tests/**/*.{js,mjs,cjs,ts}",
+    "migration_scripts/**/*.{mjs,cjs}",
+    "functions/**/*.js",
+    "src/types/**/*.ts"
+  ],
+  "ignore": [
+    "src/env.d.ts",
+    "**/*.d.ts",
+    "public/**",
+    "venv/**"
+  ],
+  "ignoreDependencies": [
+    "@astrojs/check"
+  ]
+}

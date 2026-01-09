@@ -29,7 +29,7 @@ const fetchWithTimeout = (promise: Promise<any>, ms = 8000) => {
     return Promise.race([promise, timeout]);
 };
 
-export async function getLeagueRecords(sport: 'basketball' | 'baseball', league: 'nba' | 'mlb') {
+async function getLeagueRecords(sport: 'basketball' | 'baseball', league: 'nba' | 'mlb') {
     try {
         const res = await fetch(`https://site.api.espn.com/apis/v2/sports/${sport}/${league}/standings`);
         if (!res.ok) return {};

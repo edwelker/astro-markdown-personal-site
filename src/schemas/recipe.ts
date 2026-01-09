@@ -17,5 +17,3 @@ export const RecipeSchema = z.object({
   recipeInstructions: z.array(z.string()),
   draft: z.boolean().optional(),
 });
-
-export type RecipeFrontmatter = z.infer<typeof RecipeSchema>;

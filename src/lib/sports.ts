@@ -1,4 +1,4 @@
-export interface SportsNewsItem {
+interface SportsNewsItem {
   title: string;
   link: string;
   date: Date;

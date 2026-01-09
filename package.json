@@ -16,7 +16,8 @@
     "test:build": "npx playwright test --config=playwright.config.build.mjs",
     "test:update": "npx playwright test --config=playwright.config.local.mjs --update-snapshots",
     "clean": "rm -rf dist .astro src/data/*.json",
-    "mvdata": "mkdir -p public/data; cp src/data/*.json public/data"
+    "mvdata": "mkdir -p public/data; cp src/data/*.json public/data",
+    "knip": "knip"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -41,6 +42,8 @@
     "@tailwindcss/typography": "^0.5.18",
     "@vitest/coverage-v8": "^4.0.16",
     "gray-matter": "^4.0.3",
+    "knip": "^5.44.0",
+    "typescript": "^5.7.3",
     "vitest": "^4.0.16"
   }
 }

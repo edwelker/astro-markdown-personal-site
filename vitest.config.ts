@@ -17,8 +17,15 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
-      include: ['scripts/**/*.mjs'],
-      exclude: []
+      // Use specific extensions to automatically ignore .astro, .md, .json, etc.
+      include: [
+        'src/**/*.{js,mjs,ts,mts,tsx,jsx}',
+        'scripts/**/*.{js,mjs,ts,mts}'
+      ],
+      exclude: [
+        '**/*.d.ts', // Ignore type declaration files
+        '**/*.json' // Explicitly ignore JSON files
+      ]
     }
   }
 });
