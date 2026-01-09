@@ -17,6 +17,12 @@ const filteredRides = (recent || [])
     return elev > 0 && dist > 5;
   })
   .slice(0, 5);
+
+const formatDistance = (val: string | number | undefined) => {
+  if (val === undefined || val === null) return "0";
+  const s = val.toString();
+  return s.endsWith('.0') ? s.slice(0, -2) : s;
+};
 ---
 <div class="space-y-8">
   <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
@@ -43,7 +49,7 @@ const filteredRides = (recent || [])
         <h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-3">Year to Date</h4>
         <div class="flex flex-col">
           <span class="text-3xl font-mono text-black dark:text-white">
-            {year?.distance || 0}<span class="text-sm text-neutral-400 ml-1 font-sans">mi</span>
+            {formatDistance(year?.distance)}<span class="text-sm text-neutral-400 ml-1 font-sans">mi</span>
           </span>
           <span class="text-xs text-neutral-500 mt-1">{year?.elevation || 0} vertical feet</span>
         </div>
@@ -52,7 +58,7 @@ const filteredRides = (recent || [])
         <h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-3">{month?.name}</h4>
         <div class="flex flex-col">
           <span class="text-3xl font-mono text-black dark:text-white">
-            {month?.distance || 0}<span class="text-sm text-neutral-400 ml-1 font-sans">mi</span>
+            {formatDistance(month?.distance)}<span class="text-sm text-neutral-400 ml-1 font-sans">mi</span>
           </span>
         </div>
       </div>
