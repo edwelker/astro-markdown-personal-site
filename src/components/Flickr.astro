@@ -3,6 +3,28 @@ import data from '../data/flickr-photos.json';
 const allPhotos = data || [];
 const photosToShow = allPhotos.slice(0, 10);
 const hasPhotos = photosToShow.length > 0;
+
+const getRelativeTime = (dateStr) => {
+  if (!dateStr) return '';
+  const date = new Date(dateStr);
+  const now = new Date();
+  
+  // Reset times to compare calendar days
+  const d = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  const n = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  
+  const diffTime = n - d;
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+  if (diffDays === 0) return "Today";
+  if (diffDays === 1) return "Yesterday";
+  if (diffDays < 7) return `Last ${date.toLocaleDateString('en-US', { weekday: 'long' })}`;
+  
+  if (date.getFullYear() === now.getFullYear()) {
+     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  }
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+};
 ---
 
 {hasPhotos ? (
@@ -26,9 +48,9 @@ const hasPhotos = photosToShow.length > 0;
           <div class={`${spanClass} group relative overflow-hidden bg-neutral-100 dark:bg-neutral-900 border border-black/5 dark:border-white/5`}>
             <a href={`https://www.flickr.com/photos/ed_welker/${photo.id}`} target="_blank" rel="noopener noreferrer" class="block w-full h-full">
               <img src={photo.src} alt={photo.title || 'Flickr photo'} loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110" />
-              <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span class="text-white/70 font-mono text-[9px] uppercase tracking-wider truncate block">
-                  {photo.title !== 'Untitled' ? photo.title : `IMG_${photo.id.slice(-4)}`}
+              <div class="absolute top-2 right-2 px-2 py-1 bg-black/60 backdrop-blur-md rounded shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-white/90 font-mono font-bold text-[10px] uppercase tracking-wider block">
+                  {getRelativeTime(photo.date)}
                 </span>
               </div>
             </a>
