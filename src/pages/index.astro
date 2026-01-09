@@ -41,6 +41,8 @@ const allActivity = await getAllActivity();
           </article>
         </section>
 
+        <!-- <ActivitySparkline items={allActivity} /> -->
+
         <HighlightsList items={recentHighlights} />
 
         <section data-testid="flickr-section"><Flickr /></section>
@@ -49,7 +51,6 @@ const allActivity = await getAllActivity();
 
         <section class="animate" data-testid="music-section"><MusicStats /></section>
 
-        <!-- <ActivitySparkline items={allActivity} /> -->
 
         <TeaserBlogList posts={blog} />
 

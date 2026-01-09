@@ -1,79 +1,78 @@
 ---
 const { items } = Astro.props;
 
-// Determine the window: Last 30 days, or fallback to last 5 items
+// Determine the window: Last 30 days
 const now = new Date();
 const thirtyDaysAgo = new Date(now);
 thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+thirtyDaysAgo.setHours(0, 0, 0, 0);
 
-let recentItems = items.filter(item => item.data.date >= thirtyDaysAgo);
+// Filter items to last 30 days
+const recentItems = items.filter(item => item.data.date >= thirtyDaysAgo);
 
-if (recentItems.length < 5) {
-    recentItems = items.slice(0, 5);
-}
+// Bin data by day for the sparkline
+const dayCounts = new Array(30).fill(0);
+recentItems.forEach(item => {
+  const dayDiff = Math.floor((item.data.date.getTime() - thirtyDaysAgo.getTime()) / (1000 * 60 * 60 * 24));
+  if (dayDiff >= 0 && dayDiff < 30) {
+    dayCounts[dayDiff]++;
+  }
+});
 
-// Calculate date range for the sparkline
-const dates = recentItems.map(i => i.data.date.getTime());
-const maxDate = dates.length > 0 ? Math.max(...dates) : now.getTime();
-const minDate = dates.length > 0 ? Math.min(...dates) : thirtyDaysAgo.getTime();
-const timeSpan = maxDate - minDate;
-
-const getPosition = (date) => {
-    if (timeSpan === 0) return 100;
-    return ((date.getTime() - minDate) / timeSpan) * 100;
-};
+const maxCount = Math.max(...dayCounts, 1);
 
 const formatDate = (date) => {
     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 };
 
-const rangeLabel = timeSpan === 0 
-    ? formatDate(new Date(maxDate)) 
-    : `${formatDate(new Date(minDate))} - ${formatDate(new Date(maxDate))}`;
+const rangeLabel = `${formatDate(thirtyDaysAgo)} - ${formatDate(now)}`;
 ---
 
-<div class="space-y-3">
-  <div class="flex justify-between items-end">
-    <h2 class="font-bold text-xl">Recent Activity</h2>
-    <span class="text-xs text-gray-500 font-mono">{rangeLabel}</span>
+<section class="animate space-y-4">
+  <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
+    <h3 class="font-semibold text-black dark:text-white text-lg">Recent Activity</h3>
+    <span class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400">{rangeLabel}</span>
   </div>
 
-  <!-- Sparkline Visualization -->
-  <div class="relative h-6 w-full mt-2 select-none" aria-hidden="true">
-    <!-- Timeline base -->
-    <div class="absolute top-1/2 left-0 right-0 h-px bg-gray-200 dark:bg-gray-700 -translate-y-1/2"></div>
-    
-    {recentItems.map((item) => (
-      <div 
-        class={`absolute top-1/2 w-2 h-2 rounded-full -translate-y-1/2 -translate-x-1/2 border border-white dark:border-gray-900 ${
-            item.type === 'blog' ? 'bg-black dark:bg-white z-10' : 
-            item.type === 'photos' ? 'bg-blue-500 z-10' :
-            'bg-gray-400 dark:bg-gray-500 z-0'
-        }`}
-        style={`left: ${getPosition(item.data.date)}%;`}
-        title={`${item.data.title} (${formatDate(item.data.date)})`}
-      ></div>
-    ))}
-  </div>
+  <div class="space-y-4">
+    <!-- Sparkline Visualization -->
+    <div class="h-8 w-full" aria-hidden="true">
+      <svg viewBox="0 0 30 10" preserveAspectRatio="none" class="w-full h-full">
+          {dayCounts.map((count, index) => {
+              // Scale height: if count > 0, scale between 20% and 100% of height. If 0, show tiny blip.
+              const height = count > 0 ? ((count / maxCount) * 8 + 2) : 0.5;
+              const y = 10 - height;
+              return (
+                  <rect
+                      x={index}
+                      y={y}
+                      width="0.6"
+                      height={height}
+                      class={count > 0 ? "fill-black dark:fill-white" : "fill-neutral-200 dark:fill-neutral-800"}
+                      rx="0.2"
+                  />
+              );
+          })}
+      </svg>
+    </div>
 
-  <!-- Horizontal Scroll List -->
-  <div class="flex overflow-x-auto gap-3 pb-2 -mx-1 px-1">
-    {recentItems.map((item) => (
-      <a 
-        href={item.type === 'blog' ? `/blog/${item.slug}/` : `/${item.type}/${item.slug}/`} 
-        class="flex-none w-60 p-2 border border-gray-200 dark:border-gray-800 rounded-lg hover:border-gray-400 dark:hover:border-gray-600 transition-colors bg-white dark:bg-gray-900"
-      >
-        <div class="flex flex-col h-full justify-center gap-1">
-          <span class={`text-[10px] font-bold uppercase tracking-wider ${
-              item.type === 'blog' ? 'text-black dark:text-white' : 
-              item.type === 'photos' ? 'text-blue-600 dark:text-blue-400' :
-              'text-gray-500'
-          }`}>
-            {item.type}
-          </span>
-          <h3 class="font-medium text-sm leading-tight line-clamp-2">{item.data.title}</h3>
-        </div>
-      </a>
-    ))}
+    <!-- Horizontal Scroll List -->
+    <div class="flex overflow-x-auto pb-2 -mx-1 px-1">
+      {recentItems.map((item) => (
+        <a 
+          href={item.type === 'blog' ? `/blog/${item.slug}/` : `/${item.type}/${item.slug}/`} 
+          class="flex-none w-48 pr-6 group"
+        >
+          <div class="flex flex-col gap-1">
+            <span class="text-[10px] font-mono text-neutral-500 uppercase tracking-wider">
+              {formatDate(item.data.date)} • {item.type}
+            </span>
+            <h4 class="font-medium text-sm leading-snug text-black dark:text-white group-hover:underline decoration-1 underline-offset-2 line-clamp-2">
+              {item.data.title}
+            </h4>
+          </div>
+        </a>
+      ))}
+    </div>
   </div>
-</div>
+</section>

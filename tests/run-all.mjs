@@ -1,8 +1,8 @@
-import { run as runCycling } from './cycling-fetch.mjs';
-import { run as runMusic } from './music-fetch.mjs';
-import { run as runTrakt } from './trakt-fetch.mjs';
-import { run as runFlickr } from './flickr-fetch.mjs';
-import { run as runGas } from './gas-fetch.mjs';
+import { run as runCycling } from '../scripts/cycling-fetch.mjs';
+import { run as runMusic } from '../scripts/music-fetch.mjs';
+import { run as runTrakt } from '../scripts/trakt-fetch.mjs';
+import { run as runFlickr } from '../scripts/flickr-fetch.mjs';
+import { run as runGas } from '../scripts/gas-fetch.mjs';
 
 async function runAll() {
   console.log('🔥 Starting all data fetch scripts...');
