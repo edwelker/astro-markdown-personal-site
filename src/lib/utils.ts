@@ -59,3 +59,9 @@ export function getSourceDomain(url: string | null | undefined): string {
         return '';
     }
 }
+
+export function formatPrice(price: any) {
+  const p = parseFloat(price);
+  if (isNaN(p)) return 'N/A';
+  return `$${p.toFixed(2)}`;
+}
