@@ -35,7 +35,8 @@ export default defineConfig({
         'tests/artifacts.test.ts',
         'tests/sitemap-integrity.test.ts',
         'tests/mocks/**'
-      ]
+      ],
+      all: true
     }
   }
 });
