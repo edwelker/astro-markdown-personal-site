@@ -1,6 +1,6 @@
 import rss from '@astrojs/rss';
-import { SITE } from '@consts';
-import { getAllActivity } from '@lib/activity';
+import { SITE } from '../consts';
+import { getAllActivity } from '../lib/activity';
 
 export async function GET(context) {
   const allItems = await getAllActivity();

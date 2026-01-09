@@ -1,13 +1,14 @@
 import { runETL } from './lib-etl.mjs';
+import { fileURLToPath } from 'node:url';
 
-const REPO_BASE = 'https://raw.githubusercontent.com/edwelker/find_cheap_local_gas/master';
-const FILES = {
+export const REPO_BASE = 'https://raw.githubusercontent.com/edwelker/find_cheap_local_gas/master';
+export const FILES = {
   md: 'latest_Maryland_ALL_Columbia_EC_Severn.csv',
   ny: 'latest_Long_Island_East_End.csv',
   ma: 'latest_Western_Mass_I-91_Corridor.csv'
 };
 
-async function fetchGasData() {
+export async function fetchGasData() {
   const data = {};
   for (const [region, filename] of Object.entries(FILES)) {
     const res = await fetch(`${REPO_BASE}/${filename}`);
@@ -21,7 +22,7 @@ async function fetchGasData() {
   return data;
 }
 
-function parseCSV(text) {
+export function parseCSV(text) {
   if (!text || !text.trim()) return [];
   
   const lines = text.trim().split('\n');
@@ -56,7 +57,7 @@ function parseCSV(text) {
   });
 }
 
-function transformGasData(rawData) {
+export function transformGasData(rawData) {
   const result = {};
   for (const [region, csv] of Object.entries(rawData)) {
     result[region] = parseCSV(csv);
@@ -74,4 +75,6 @@ export async function run() {
   });
 }
 
-run();
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  run();
+}
