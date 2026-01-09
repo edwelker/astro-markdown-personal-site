@@ -22,7 +22,7 @@ export default defineConfig({
     globals: true,
     environment: 'node',
     coverage: {
-      provider: 'v8',
+      provider: 'istanbul',
       reporter: ['text', 'lcov', 'html', 'json-summary'],
       // Use specific extensions to automatically ignore .astro, .md, .json, etc.
       include: [

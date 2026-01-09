@@ -41,7 +41,7 @@
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@tailwindcss/typography": "^0.5.18",
-    "@vitest/coverage-v8": "^4.0.16",
+    "@vitest/coverage-istanbul": "^4.0.16",
     "gray-matter": "^4.0.3",
     "knip": "^5.44.0",
     "typescript": "^5.7.3",
