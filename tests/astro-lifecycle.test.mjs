@@ -8,13 +8,15 @@ describe('Astro View Transitions Lifecycle', () => {
     const content = await fs.readFile(filePath, 'utf-8');
 
     // This test ensures the client-side script on the gas page is compatible with
-    // Astro's View Transitions. It must wrap its logic in an init function and
+    // Astro's View Transitions. It must wrap its logic in an init function (or import it) and
     // attach it to the `astro:page-load` event.
-    const hasInitFunction = /function initGasPage\(\) {/.test(content);
+    
+    // Check for inline definition OR import
+    const hasInitFunction = /function initGasPage\(\) {/.test(content) || /import\s+\{\s*initGasPage\s*\}\s+from/.test(content);
     const hasEventListener = /document\.addEventListener\('astro:page-load', initGasPage\);/.test(content);
 
     expect(hasInitFunction, 
-      'The gas page script must contain a `function initGasPage() { ... }`'
+      'The gas page script must contain or import `initGasPage`'
     ).toBe(true);
     
     expect(hasEventListener, 
