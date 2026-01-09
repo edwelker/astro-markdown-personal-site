@@ -32,6 +32,8 @@ const { team, logoUrl } = Astro.props;
         <NewsList recentItems={team.recentItems} olderItems={team.olderItems} />
 
         <!-- Right Column: Next Games -->
-        <ScheduleList schedule={team.schedule} scheduleLink={team.scheduleLink} />
+        <div class="text-left lg:text-right">
+            <ScheduleList schedule={team.schedule} scheduleLink={team.scheduleLink} />
+        </div>
     </div>
 </div>
