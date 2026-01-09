@@ -1,7 +1,13 @@
 /// <reference types="vitest" />
-import { getViteConfig } from 'astro/config';
+import { defineConfig } from 'vitest/config';
+import path from 'path';
 
-export default getViteConfig({
+export default defineConfig({
+  resolve: {
+    alias: {
+      'astro:content': path.resolve(process.cwd(), './tests/mocks/astro-content.ts'),
+    },
+  },
   test: {
     // Only include unit and safety tests
     include: ['tests/**/*.{test,unit}.{ts,mts,mjs,js}', 'src/**/*.{test,unit}.{ts,mts,mjs,js}'],
@@ -27,7 +33,8 @@ export default getViteConfig({
         '**/*.d.ts', // Ignore type declaration files
         '**/*.json', // Explicitly ignore JSON files
         'tests/artifacts.test.ts',
-        'tests/sitemap-integrity.test.ts'
+        'tests/sitemap-integrity.test.ts',
+        'tests/mocks/**'
       ]
     }
   }

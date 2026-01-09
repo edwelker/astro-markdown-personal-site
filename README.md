@@ -1,7 +1,7 @@
 # Website: Astro version
 
-![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)
-[![codecov](https://codecov.io/gh/OWNER/REPO/graph/badge.svg)](https://codecov.io/gh/OWNER/REPO)
+![CI](https://github.com/edwelker/astro-markdown-personal-site/actions/workflows/ci.yml/badge.svg)
+[![codecov](https://codecov.io/gh/edwelker/astro-markdown-personal-site/graph/badge.svg)](https://codecov.io/gh/OWNER/REPO)
 
 This is the repository for my personal site, eddiewelker.com.
 
