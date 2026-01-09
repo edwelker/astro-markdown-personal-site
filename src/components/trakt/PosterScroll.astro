@@ -1,0 +1,70 @@
+---
+import type { RatingItem } from "./types";
+
+interface Props {
+  title: string;
+  items: RatingItem[];
+  viewAllLink?: string;
+  viewAllText?: string;
+  variant?: "xl" | "lg" | "md" | "sm";
+  titleColorClass?: string;
+}
+
+const { 
+  title, 
+  items, 
+  viewAllLink, 
+  viewAllText = "View ↗", 
+  variant = "md",
+  titleColorClass = "text-neutral-500"
+} = Astro.props;
+
+// Variant styles configuration
+const styles = {
+  xl: {
+    container: "min-w-[150px] sm:min-w-[180px] space-y-2",
+    text: "text-[12px] text-neutral-800 dark:text-neutral-200",
+    hover: "hover:scale-[1.02]",
+    border: "border-black/5 dark:border-white/5"
+  },
+  lg: {
+    container: "min-w-[120px] space-y-1",
+    text: "text-[10px] text-neutral-500",
+    hover: "hover:scale-105",
+    border: "border-black/5 dark:border-white/5"
+  },
+  md: {
+    container: "min-w-[110px] space-y-1",
+    text: "text-[10px] text-neutral-500",
+    hover: "hover:scale-105",
+    border: "border-white/5"
+  },
+  sm: {
+    container: "min-w-[80px] space-y-1",
+    text: "text-[9px] text-neutral-500",
+    hover: "hover:scale-105",
+    border: "border-white/5"
+  }
+};
+
+const style = styles[variant];
+---
+
+<section class="space-y-4">
+  <div class="flex items-end justify-between border-b border-black/10 dark:border-white/10 pb-2">
+    <h2 class={`text-xs font-mono uppercase tracking-[0.3em] font-bold ${titleColorClass}`}>{title}</h2>
+    {viewAllLink && (
+      <a href={viewAllLink} target="_blank" class="text-[9px] font-mono uppercase text-neutral-400 hover:text-orange-600 font-bold">{viewAllText}</a>
+    )}
+  </div>
+  <div class="flex gap-4 overflow-x-auto pb-4 snap-x no-scrollbar">
+    {items.map((item) => (
+      <div class={`${style.container} snap-start`}>
+        <a href={item.href} target="_blank" class={`block aspect-[2/3] w-full relative rounded-lg overflow-hidden bg-neutral-900 border ${style.border} transition-transform ${style.hover}`}>
+          <img src={item.poster} alt={item.title} class="absolute inset-0 h-full w-full object-cover block" loading="lazy" />
+        </a>
+        <p class={`font-bold uppercase truncate leading-tight ${style.text}`}>{item.title}</p>
+      </div>
+    ))}
+  </div>
+</section>

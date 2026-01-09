@@ -1,6 +1,6 @@
 import { MY_TEAMS, LEAGUES } from './constants';
 
-export interface SportsNewsItem {
+interface SportsNewsItem {
   title: string;
   url: string;
   date: Date;

@@ -1,0 +1,30 @@
+---
+import type { SparklineDecade } from "./types";
+
+interface Props {
+  sparkline: SparklineDecade[];
+}
+
+const { sparkline } = Astro.props;
+const maxVol = Math.max(...sparkline.map((s) => s.volume), 1);
+---
+
+<section class="animate space-y-6">
+  <div class="space-y-2">
+    <h2 class="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 font-bold">The History Map</h2>
+    <div class="text-xs text-neutral-500 leading-relaxed max-w-xl space-y-2">
+      <p>This graph visualizes cinematic quality versus consumption volume. The orange bars represent items watched per decade; the floating dots represent the average quality.</p>
+      <p class="font-mono text-[10px]">Note: A high dot signifies higher average ratings for that decade despite more movies rated.</p>
+    </div>
+  </div>
+  <div class="flex items-end gap-2 h-20 pt-4">
+    {sparkline.map((s) => (
+      <a href={`/media/${s.decade}`} class="flex-1 flex flex-col items-center group relative h-full justify-end">
+        <div class="w-full bg-orange-600/10 group-hover:bg-orange-600/40 transition-colors rounded-t-sm" style={`height: ${(s.volume / maxVol) * 100}%`}>
+          <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-orange-600 border border-white dark:border-black shadow-sm" style={`bottom: ${((parseFloat(s.score) - 5) / 5) * 100}%`}></div>
+        </div>
+        <span class="text-[9px] font-mono text-neutral-500 mt-2">{s.decade}s</span>
+      </a>
+    ))}
+  </div>
+</section>
