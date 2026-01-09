@@ -1,4 +1,6 @@
-interface SportsNewsItem {
+import { MY_TEAMS, LEAGUES } from './constants';
+
+export interface SportsNewsItem {
   title: string;
   url: string;
   date: Date;
@@ -7,24 +9,15 @@ interface SportsNewsItem {
   league: 'MLB' | 'NBA';
 }
 
-export const MY_TEAMS = [
-  { league: 'MLB', name: 'Red Sox', url: 'https://www.mlbtraderumors.com/boston-red-sox/feed/atom' },
-  { league: 'NBA', name: 'Knicks', url: 'https://www.hoopsrumors.com/newyorkknicks.xml' },
-  { league: 'NBA', name: 'Celtics', url: 'https://www.hoopsrumors.com/bostonceltics.xml' },
-  { league: 'MLB', name: 'Orioles', url: 'https://www.mlbtraderumors.com/baltimore-orioles/feed/atom' },
-  { league: 'NBA', name: 'Pistons', url: 'https://www.hoopsrumors.com/detroitpistons.xml' },
-  { league: 'NBA', name: 'Wizards', url: 'https://www.hoopsrumors.com/washingtonwizards.xml' },
-  { league: 'MLB', name: 'White Sox', url: 'https://www.mlbtraderumors.com/chicago-white-sox/feed/atom' },
-] as const;
-
-const LEAGUES = [
-    { league: 'MLB', name: 'MLB Trade Rumors', url: 'https://www.mlbtraderumors.com/feed' },
-    { league: 'MLB', name: 'FanGraphs', url: 'https://blogs.fangraphs.com/feed/' },
-    { league: 'MLB', name: 'CBS Sports', url: 'https://www.cbssports.com/rss/headlines/mlb/' },
-    { league: 'NBA', name: 'Hoops Rumors', url: 'https://www.hoopsrumors.com/feed' },
-    { league: 'NBA', name: 'RealGM', url: 'https://basketball.realgm.com/rss/wiretap/0/0.xml' },
-    { league: 'NBA', name: 'CBS Sports', url: 'https://www.cbssports.com/rss/headlines/nba/' }
-] as const;
+function decodeHTMLEntities(text: string) {
+    return text.replace(/&amp;/g, '&')
+               .replace(/&lt;/g, '<')
+               .replace(/&gt;/g, '>')
+               .replace(/&quot;/g, '"')
+               .replace(/&#39;/g, "'")
+               .replace(/&apos;/g, "'")
+               .replace(/<!\[CDATA\[(.*?)\]\]>/g, '$1');
+}
 
 async function fetchAndParse(url: string, source: string, league: 'MLB' | 'NBA'): Promise<SportsNewsItem[]> {
   try {
@@ -91,16 +84,6 @@ async function fetchAndParse(url: string, source: string, league: 'MLB' | 'NBA')
   }
 }
 
-function decodeHTMLEntities(text: string) {
-    return text.replace(/&amp;/g, '&')
-               .replace(/&lt;/g, '<')
-               .replace(/&gt;/g, '>')
-               .replace(/&quot;/g, '"')
-               .replace(/&#39;/g, "'")
-               .replace(/&apos;/g, "'")
-               .replace(/<!\[CDATA\[(.*?)\]\]>/g, '$1');
-}
-
 export async function getMyTeamsNews() {
     const promises = MY_TEAMS.map(t => fetchAndParse(t.url, t.name, t.league));
     const results = await Promise.all(promises);
@@ -111,4 +94,38 @@ export async function getAllLeagueNews() {
     const promises = LEAGUES.map(l => fetchAndParse(l.url, l.name, l.league));
     const results = await Promise.all(promises);
     return results.flat().sort((a, b) => b.date.getTime() - a.date.getTime());
+}
+
+export async function fetchHoopsRumorsNews(slug: string, teamName: string) {
+    try {
+        const res = await fetch(`https://www.hoopsrumors.com/${slug}/feed`);
+        if (!res.ok) return [];
+        const text = await res.text();
+        
+        const items: any[] = [];
+        const itemRegex = /<item>([\s\S]*?)<\/item>/g;
+        let match;
+        
+        while ((match = itemRegex.exec(text)) !== null) {
+            const itemContent = match[1];
+            const titleMatch = itemContent.match(/<title[^>]*>([\s\S]*?)<\/title>/);
+            const linkMatch = itemContent.match(/<link>([\s\S]*?)<\/link>/);
+            const dateMatch = itemContent.match(/<pubDate>([\s\S]*?)<\/pubDate>/);
+            const descMatch = itemContent.match(/<description>([\s\S]*?)<\/description>/);
+            
+            if (titleMatch && linkMatch && dateMatch) {
+                items.push({
+                    title: decodeHTMLEntities(titleMatch[1].trim()),
+                    url: decodeHTMLEntities(linkMatch[1].trim()),
+                    date: new Date(dateMatch[1]),
+                    description: descMatch ? decodeHTMLEntities(descMatch[1].trim()) : undefined,
+                    source: teamName
+                });
+            }
+        }
+        return items;
+    } catch (e) {
+        console.error(`Error fetching news for ${teamName}`, e);
+        return [];
+    }
 }

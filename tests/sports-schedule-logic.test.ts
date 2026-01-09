@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { getTeamData } from '../src/lib/sports-data';
+import { getTeamData } from '../src/lib/sports/team_records_and_data';
 
 // Mock global fetch
 const globalFetch = global.fetch;

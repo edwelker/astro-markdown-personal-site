@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { getMyTeamsNews, getAllLeagueNews } from '../src/lib/sports';
+import { getMyTeamsNews, getAllLeagueNews } from '../src/lib/sports/rss_news_logic';
 
 describe('Sports News Logic', () => {
   beforeEach(() => {

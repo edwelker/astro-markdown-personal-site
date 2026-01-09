@@ -1,16 +1,30 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { getSportsPageData, getTeamData, fetchHoopsRumorsNews } from '../src/lib/sports-data';
-import * as sportsLib from '../src/lib/sports';
+import { getSportsPageData } from '../src/lib/sports/index';
+import { getTeamData } from '../src/lib/sports/team_records_and_data';
+import { fetchHoopsRumorsNews } from '../src/lib/sports/rss_news_logic';
+import * as rssNewsLogic from '../src/lib/sports/rss_news_logic';
 
-// Mock the sports library dependencies
-vi.mock('../src/lib/sports', () => ({
-  getMyTeamsNews: vi.fn(),
-  getAllLeagueNews: vi.fn(),
-  MY_TEAMS: [
-    { league: 'MLB', name: 'Red Sox', url: 'http://test.com' },
-    { league: 'NBA', name: 'Celtics', url: 'http://test.com' }
-  ]
-}));
+// Mock the constants
+vi.mock('../src/lib/sports/constants', async (importOriginal) => {
+  const actual: any = await importOriginal();
+  return {
+    ...actual,
+    MY_TEAMS: [
+      { league: 'MLB', name: 'Red Sox', url: 'http://test.com' },
+      { league: 'NBA', name: 'Celtics', url: 'http://test.com' }
+    ]
+  };
+});
+
+// Mock the RSS logic
+vi.mock('../src/lib/sports/rss_news_logic', async (importOriginal) => {
+    const actual: any = await importOriginal();
+    return {
+        ...actual,
+        getMyTeamsNews: vi.fn(),
+        getAllLeagueNews: vi.fn(),
+    };
+});
 
 describe('Sports Data Logic', () => {
   beforeEach(() => {
@@ -106,10 +120,10 @@ describe('Sports Data Logic', () => {
   describe('getSportsPageData', () => {
     it('aggregates data from all sources', async () => {
       // Mock sports lib responses
-      (sportsLib.getMyTeamsNews as any).mockResolvedValue([
+      (rssNewsLogic.getMyTeamsNews as any).mockResolvedValue([
         { source: 'Red Sox', title: 'Sox Win', date: new Date(), url: 'http://sox.com' }
       ]);
-      (sportsLib.getAllLeagueNews as any).mockResolvedValue([
+      (rssNewsLogic.getAllLeagueNews as any).mockResolvedValue([
         { title: 'League News', date: new Date(), url: 'http://league.com' }
       ]);
 
@@ -164,8 +178,8 @@ describe('Sports Data Logic', () => {
     });
     
     it('handles partial failures', async () => {
-        (sportsLib.getMyTeamsNews as any).mockRejectedValue(new Error('Fail'));
-        (sportsLib.getAllLeagueNews as any).mockResolvedValue([]);
+        (rssNewsLogic.getMyTeamsNews as any).mockRejectedValue(new Error('Fail'));
+        (rssNewsLogic.getAllLeagueNews as any).mockResolvedValue([]);
         
         // Mock fetch to fail
         (fetch as any).mockRejectedValue(new Error('Fetch Fail'));
@@ -179,11 +193,11 @@ describe('Sports Data Logic', () => {
 
     it('handles timeout', async () => {
         vi.useFakeTimers();
-        (sportsLib.getMyTeamsNews as any).mockImplementation(async () => {
+        (rssNewsLogic.getMyTeamsNews as any).mockImplementation(async () => {
             await new Promise(resolve => setTimeout(resolve, 10000));
             return [];
         });
-        (sportsLib.getAllLeagueNews as any).mockResolvedValue([]);
+        (rssNewsLogic.getAllLeagueNews as any).mockResolvedValue([]);
         
         const promise = getSportsPageData();
         vi.advanceTimersByTime(9500);
