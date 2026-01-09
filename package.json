@@ -9,8 +9,8 @@
     "preview": "astro preview",
     "fetch": "node tests/run-all.mjs",
     "check:links": "node migration_scripts/check-links.mjs",
-    "test": "vitest run --exclude tests/artifacts.test.ts --exclude tests/sitemap-integrity.test.ts",
-    "test:cov": "vitest run --coverage --exclude tests/artifacts.test.ts --exclude tests/sitemap-integrity.test.ts",
+    "test": "vitest run --coverage",
+    "test:cov": "vitest run --coverage",
     "test:artifacts": "vitest run tests/artifacts.test.ts tests/sitemap-integrity.test.ts",
     "test:local": "npm test && npx playwright test --config=playwright.config.local.mjs",
     "test:build": "npx playwright test --config=playwright.config.build.mjs",
@@ -35,7 +35,8 @@
     "astro-seo-schema": "^5.1.0",
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss": "^4.1.13"
+    "tailwindcss": "^4.1.13",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.57.0",

@@ -1,5 +1,8 @@
 # Website: Astro version
 
+![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)
+[![codecov](https://codecov.io/gh/OWNER/REPO/graph/badge.svg)](https://codecov.io/gh/OWNER/REPO)
+
 This is the repository for my personal site, eddiewelker.com.
 
 It uses the [Astro Micro](https://github.com/trevortylerlee/astro-micro) theme, as well as the [Inter](https://github.com/rsms/inter/) font.
@@ -15,5 +18,3 @@ It uses the [Astro Micro](https://github.com/trevortylerlee/astro-micro) theme, 
 ## Info for me
 
 **Frontmatter Note:** Always use double quotes for string values in frontmatter (e.g., `title: "My Title"`, `slug: "2023/01/01/my-slug"`). This is the most foolproof way to ensure special characters (like colons) don't break the YAML parsing.
-
-

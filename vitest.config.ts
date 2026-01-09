@@ -1,6 +1,7 @@
-import { defineConfig } from 'vitest/config';
+/// <reference types="vitest" />
+import { getViteConfig } from 'astro/config';
 
-export default defineConfig({
+export default getViteConfig({
   test: {
     // Only include unit and safety tests
     include: ['tests/**/*.{test,unit}.{ts,mts,mjs,js}', 'src/**/*.{test,unit}.{ts,mts,mjs,js}'],
@@ -16,7 +17,7 @@ export default defineConfig({
     environment: 'node',
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'json', 'html'],
+      reporter: ['text', 'lcov', 'html', 'json-summary'],
       // Use specific extensions to automatically ignore .astro, .md, .json, etc.
       include: [
         'src/**/*.{js,mjs,ts,mts,tsx,jsx}',
@@ -24,7 +25,9 @@ export default defineConfig({
       ],
       exclude: [
         '**/*.d.ts', // Ignore type declaration files
-        '**/*.json' // Explicitly ignore JSON files
+        '**/*.json', // Explicitly ignore JSON files
+        'tests/artifacts.test.ts',
+        'tests/sitemap-integrity.test.ts'
       ]
     }
   }

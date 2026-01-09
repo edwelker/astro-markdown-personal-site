@@ -1,18 +1,10 @@
 import { describe, it, expect, vi } from 'vitest';
+import { z } from 'zod';
 
 // Mock astro:content
 vi.mock('astro:content', () => ({
   defineCollection: (config: any) => ({ ...config, _mocked: true }),
-  z: {
-    object: vi.fn(() => ({})),
-    string: vi.fn(() => ({})),
-    date: vi.fn(() => ({})),
-    array: vi.fn(() => ({})),
-    boolean: vi.fn(() => ({})),
-    number: vi.fn(() => ({})),
-    enum: vi.fn(() => ({})),
-    infer: vi.fn(),
-  }
+  z: z
 }));
 
 import { collections } from '../src/content.config';
