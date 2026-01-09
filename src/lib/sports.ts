@@ -1,7 +1,8 @@
 interface SportsNewsItem {
   title: string;
-  link: string;
+  url: string;
   date: Date;
+  description?: string;
   source: string;
   league: 'MLB' | 'NBA';
 }
@@ -43,15 +44,18 @@ async function fetchAndParse(url: string, source: string, league: 'MLB' | 'NBA')
       while ((match = entryRegex.exec(text)) !== null) {
         const content = match[1];
         const titleMatch = content.match(/<title[^>]*>([\s\S]*?)<\/title>/);
-        const linkMatch = content.match(/<link[^>]*href="([^"]*)"/);
+        // Match href with single or double quotes
+        const linkMatch = content.match(/<link[^>]*href=["']([^"']*)["']/);
         // Atom dates: published or updated
         const dateMatch = content.match(/<published>([\s\S]*?)<\/published>/) || content.match(/<updated>([\s\S]*?)<\/updated>/);
+        const summaryMatch = content.match(/<summary[^>]*>([\s\S]*?)<\/summary>/);
         
         if (titleMatch && linkMatch && dateMatch) {
             items.push({
                 title: decodeHTMLEntities(titleMatch[1].trim()),
-                link: linkMatch[1],
+                url: decodeHTMLEntities(linkMatch[1].trim()),
                 date: new Date(dateMatch[1]),
+                description: summaryMatch ? decodeHTMLEntities(summaryMatch[1].trim()) : undefined,
                 source,
                 league
             });
@@ -66,12 +70,14 @@ async function fetchAndParse(url: string, source: string, league: 'MLB' | 'NBA')
         const titleMatch = content.match(/<title[^>]*>([\s\S]*?)<\/title>/);
         const linkMatch = content.match(/<link>([\s\S]*?)<\/link>/);
         const dateMatch = content.match(/<pubDate>([\s\S]*?)<\/pubDate>/);
+        const descMatch = content.match(/<description>([\s\S]*?)<\/description>/);
         
         if (titleMatch && linkMatch && dateMatch) {
             items.push({
                 title: decodeHTMLEntities(titleMatch[1].trim()),
-                link: linkMatch[1].trim(),
+                url: decodeHTMLEntities(linkMatch[1].trim()),
                 date: new Date(dateMatch[1]),
+                description: descMatch ? decodeHTMLEntities(descMatch[1].trim()) : undefined,
                 source,
                 league
             });

@@ -13,8 +13,8 @@ export async function fetchGasData() {
   for (const [region, filename] of Object.entries(FILES)) {
     const res = await fetch(`${REPO_BASE}/${filename}`);
     if (!res.ok) {
-      console.warn(`Failed to fetch ${filename}: ${res.statusText}`);
-      data[region] = "";
+      // Throwing here ensures runETL catches it and falls back to the cache
+      throw new Error(`Failed to fetch ${filename}: ${res.statusText}`);
     } else {
       data[region] = await res.text();
     }

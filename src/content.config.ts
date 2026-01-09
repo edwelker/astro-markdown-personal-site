@@ -1,6 +1,6 @@
 import { defineCollection } from "astro:content";
-import { BlogSchema } from "@schemas/blog";
-import { RecipeSchema } from "@schemas/recipe";
+import { BlogSchema } from "./schemas/blog";
+import { RecipeSchema } from "./schemas/recipe";
 
 const blog = defineCollection({
   type: 'content',

@@ -26,22 +26,13 @@ describe('Gas Fetch Logic', () => {
       });
     });
 
-    it('should handle fetch failures gracefully', async () => {
+    it('should throw error on fetch failure', async () => {
       fetch.mockResolvedValueOnce({
         ok: false,
         statusText: 'Not Found',
       });
-      // Mock subsequent calls to succeed to isolate the failure test
-      fetch.mockResolvedValue({
-        ok: true,
-        text: async () => 'csv',
-      });
-
-      const data = await fetchGasData();
       
-      // The first region (md) failed
-      expect(data.md).toBe('');
-      expect(console.warn).toHaveBeenCalled();
+      await expect(fetchGasData()).rejects.toThrow('Failed to fetch');
     });
   });
 

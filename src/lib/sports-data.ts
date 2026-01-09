@@ -29,6 +29,16 @@ const fetchWithTimeout = (promise: Promise<any>, ms = 8000) => {
     return Promise.race([promise, timeout]);
 };
 
+function decodeHTMLEntities(text: string) {
+    return text.replace(/&amp;/g, '&')
+               .replace(/&lt;/g, '<')
+               .replace(/&gt;/g, '>')
+               .replace(/&quot;/g, '"')
+               .replace(/&#39;/g, "'")
+               .replace(/&apos;/g, "'")
+               .replace(/<!\[CDATA\[(.*?)\]\]>/g, '$1');
+}
+
 async function getLeagueRecords(sport: 'basketball' | 'baseball', league: 'nba' | 'mlb') {
     try {
         const res = await fetch(`https://site.api.espn.com/apis/v2/sports/${sport}/${league}/standings`);
@@ -70,16 +80,8 @@ export async function getTeamData(teamName: string, leagueRecords: Record<string
     const standingsLink = info.league === 'MLB' ? 'https://www.mlb.com/standings' : 'https://www.nba.com/standings';
     
     // Construct official schedule link (approximate based on team name slug)
-    const teamSlug = teamName.toLowerCase().split(' ').pop(); // e.g., 'knicks', 'sox' (might need adjustment for multi-word cities/names if strict)
     // Better slug generation:
     let officialSlug = teamName.toLowerCase().replace(/\s+/g, '-');
-    // MLB/NBA sites usually use just the team name part or specific slugs, but linking to main schedule page is safer if slug is tricky
-    // For now, let's link to the league schedule page or team specific if easy.
-    // ESPN team page is reliable with ID.
-    const scheduleLink = `https://www.espn.com/${league}/team/schedule/_/name/${info.league === 'MLB' ? teamSlug?.substring(0,3) : teamSlug}/${officialSlug}`; 
-    // Actually, let's use the league sites as requested:
-    // NBA: https://www.nba.com/team/1610612752/schedule (requires NBA ID, not ESPN ID)
-    // MLB: https://www.mlb.com/redsox/schedule
     
     // Simplified approach for official sites:
     let officialScheduleLink = '';
@@ -244,7 +246,7 @@ async function fetchAllTeamData(teams: any[]) {
     return data;
 }
 
-async function fetchHoopsRumorsNews(slug: string, teamName: string) {
+export async function fetchHoopsRumorsNews(slug: string, teamName: string) {
     try {
         const res = await fetch(`https://www.hoopsrumors.com/${slug}/feed`);
         if (!res.ok) return [];
@@ -256,15 +258,17 @@ async function fetchHoopsRumorsNews(slug: string, teamName: string) {
         
         while ((match = itemRegex.exec(text)) !== null) {
             const itemContent = match[1];
-            const titleMatch = /<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/title>/.exec(itemContent);
-            const linkMatch = /<link>(.*?)<\/link>/.exec(itemContent);
-            const dateMatch = /<pubDate>(.*?)<\/pubDate>/.exec(itemContent);
+            const titleMatch = itemContent.match(/<title[^>]*>([\s\S]*?)<\/title>/);
+            const linkMatch = itemContent.match(/<link>([\s\S]*?)<\/link>/);
+            const dateMatch = itemContent.match(/<pubDate>([\s\S]*?)<\/pubDate>/);
+            const descMatch = itemContent.match(/<description>([\s\S]*?)<\/description>/);
             
             if (titleMatch && linkMatch && dateMatch) {
                 items.push({
-                    title: titleMatch[1],
-                    link: linkMatch[1],
-                    date: dateMatch[1],
+                    title: decodeHTMLEntities(titleMatch[1].trim()),
+                    url: decodeHTMLEntities(linkMatch[1].trim()),
+                    date: new Date(dateMatch[1]),
+                    description: descMatch ? decodeHTMLEntities(descMatch[1].trim()) : undefined,
                     source: teamName
                 });
             }
