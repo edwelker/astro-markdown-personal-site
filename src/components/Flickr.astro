@@ -6,24 +6,61 @@ const hasPhotos = photosToShow.length > 0;
 
 const getRelativeTime = (dateStr) => {
   if (!dateStr) return '';
-  const date = new Date(dateStr);
+  
+  // 1. Get "Now" in America/New_York
   const now = new Date();
+  const nyNowParts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric'
+  }).formatToParts(now);
   
-  // Reset times to compare calendar days
-  const d = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-  const n = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const getPart = (type) => nyNowParts.find(p => p.type === type).value;
+  const nyYear = parseInt(getPart('year'));
+  const nyMonth = parseInt(getPart('month')) - 1; // 0-indexed
+  const nyDay = parseInt(getPart('day'));
   
-  const diffTime = n - d;
+  // Use UTC for day calculation to avoid DST issues
+  const todayMidnight = Date.UTC(nyYear, nyMonth, nyDay);
+
+  // 2. Parse Flickr date (YYYY-MM-DD HH:MM:SS)
+  let pYear, pMonth, pDay;
+  const match = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  
+  if (match) {
+    pYear = parseInt(match[1]);
+    pMonth = parseInt(match[2]) - 1;
+    pDay = parseInt(match[3]);
+  } else {
+    const d = new Date(dateStr);
+    pYear = d.getFullYear();
+    pMonth = d.getMonth();
+    pDay = d.getDate();
+  }
+  
+  const photoMidnight = Date.UTC(pYear, pMonth, pDay);
+  
+  // 3. Calculate difference in days
+  const diffTime = todayMidnight - photoMidnight;
   const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
   if (diffDays === 0) return "Today";
   if (diffDays === 1) return "Yesterday";
-  if (diffDays < 7) return `Last ${date.toLocaleDateString('en-US', { weekday: 'long' })}`;
   
-  if (date.getFullYear() === now.getFullYear()) {
-     return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  // Construct a Date object for formatting. 
+  // We use UTC timezone for formatting to match the UTC timestamp we created.
+  const photoDateObj = new Date(Date.UTC(pYear, pMonth, pDay));
+  const formatOpts = { timeZone: 'UTC' };
+
+  if (diffDays < 7 && diffDays > 1) {
+    return `Last ${photoDateObj.toLocaleDateString('en-US', { ...formatOpts, weekday: 'long' })}`;
   }
-  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  
+  if (pYear === nyYear) {
+     return photoDateObj.toLocaleDateString('en-US', { ...formatOpts, month: 'short', day: 'numeric' });
+  }
+  return photoDateObj.toLocaleDateString('en-US', { ...formatOpts, month: 'short', day: 'numeric', year: 'numeric' });
 };
 ---
 
