@@ -96,4 +96,39 @@ describe('Menu Modal Logic', () => {
     mockLink.click();
     expect(mockDialog.close).toHaveBeenCalled();
   });
+
+  it('closes modal when clicking outside the dialog content', () => {
+    // Simulate click event handler on dialog
+    const clickHandler = events['menu-dialog:click'];
+    expect(clickHandler).toBeDefined();
+    
+    // Click at 150, 150 (outside 0,0-100,100 rect)
+    clickHandler({ clientX: 150, clientY: 150 });
+    expect(mockDialog.close).toHaveBeenCalled();
+  });
+
+  it('does not close modal when clicking inside the dialog content', () => {
+    const clickHandler = events['menu-dialog:click'];
+    expect(clickHandler).toBeDefined();
+
+    // Click at 50, 50 (inside 0,0-100,100 rect)
+    clickHandler({ clientX: 50, clientY: 50 });
+    expect(mockDialog.close).not.toHaveBeenCalled();
+  });
+});
+
+describe('Menu Modal Safety', () => {
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
+  it('should safely handle missing elements', () => {
+    // Mock document to return null for everything
+    vi.stubGlobal('document', {
+      getElementById: vi.fn(() => null)
+    });
+
+    // Should not throw error
+    expect(() => initMenuModal('missing', 'missing', 'missing')).not.toThrow();
+  });
 });
