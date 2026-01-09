@@ -1,7 +1,12 @@
-function parsePrice(price: any): number {
-  if (price === undefined || price === null || price === '') return NaN;
-  const num = parseFloat(String(price).replace(/[^0-9.-]+/g, ""));
-  return num;
+function parseCurrencyForSort(val: any): number | undefined {
+  if (typeof val === 'number' && !isNaN(val)) {
+    return val;
+  }
+  if (typeof val !== 'string') {
+    return undefined;
+  }
+  const num = parseFloat(val.replace(/[^0-9.-]+/g, ""));
+  return isNaN(num) ? undefined : num;
 }
 
 /**
@@ -12,26 +17,15 @@ function parsePrice(price: any): number {
  * @returns -1, 0, or 1 for sorting
  */
 export function sortByNetPrice(a: { Net: any }, b: { Net: any }): number {
-  const netA = parsePrice(a.Net);
-  const netB = parsePrice(b.Net);
+  const netA = parseCurrencyForSort(a.Net);
+  const netB = parseCurrencyForSort(b.Net);
 
-  // Handle NaNs by pushing them to the end
-  if (isNaN(netA) && isNaN(netB)) return 0;
-  if (isNaN(netA)) return 1;
-  if (isNaN(netB)) return -1;
+  // Handle undefined/NaN by pushing them to the end
+  if (netA === undefined && netB === undefined) return 0;
+  if (netA === undefined) return 1;
+  if (netB === undefined) return -1;
 
   return netA - netB;
-}
-
-function parseCurrencyForSort(val: any): number | undefined {
-  if (typeof val === 'number' && !isNaN(val)) {
-    return val;
-  }
-  if (typeof val !== 'string') {
-    return undefined;
-  }
-  const num = parseFloat(val.replace(/[^0-9.-]+/g, ""));
-  return isNaN(num) ? undefined : num;
 }
 
 /**
@@ -70,8 +64,6 @@ export function sortGasData(
     if (valA > valB) return sortAsc ? 1 : -1;
 
     // Tie-breaker: cheaper Net price first
-    const netA = parseCurrencyForSort(a.Net) ?? Infinity;
-    const netB = parseCurrencyForSort(b.Net) ?? Infinity;
-    return netA - netB;
+    return sortByNetPrice(a, b);
   });
 }

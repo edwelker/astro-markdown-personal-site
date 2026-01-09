@@ -31,6 +31,19 @@ describe('Gas Sort - sortByNetPrice', () => {
     items.sort(sortByNetPrice);
     expect(items).toEqual([]);
   });
+
+  // Explicit branch testing for coverage
+  it('should return 0 when both are invalid', () => {
+    expect(sortByNetPrice({ Net: null }, { Net: 'invalid' })).toBe(0);
+  });
+
+  it('should return 1 when A is invalid and B is valid', () => {
+    expect(sortByNetPrice({ Net: null }, { Net: '3.50' })).toBe(1);
+  });
+
+  it('should return -1 when A is valid and B is invalid', () => {
+    expect(sortByNetPrice({ Net: '3.50' }, { Net: null })).toBe(-1);
+  });
 });
 
 describe('Gas Sort - sortGasData', () => {
@@ -85,5 +98,29 @@ describe('Gas Sort - sortGasData', () => {
     const data = testData();
     sortGasData(data, { sortCol: 'Time', sortAsc: false, distances });
     expect(data.map(i => i.Address)).toEqual(['3 Main St', '1 Main St', '2 Main St', '4 Main St']);
+  });
+
+  // Explicit branch testing for sortGasData numeric columns
+  it('should handle invalid values in numeric sort columns (Base)', () => {
+    const data = [
+      { Base: 'invalid', Net: '3.00' },
+      { Base: null, Net: '3.00' },
+      { Base: '3.50', Net: '3.00' }
+    ];
+    sortGasData(data, { sortCol: 'Base', sortAsc: true, distances: {} });
+    // Expect valid first, then invalids (order between invalids is stable/0)
+    expect(data[0].Base).toBe('3.50');
+    expect(data[1].Base).toBe('invalid');
+    expect(data[2].Base).toBe(null);
+  });
+
+  it('should handle valid vs invalid in numeric sort', () => {
+    const data = [
+      { Base: 'invalid', Net: '3.00' },
+      { Base: '3.50', Net: '3.00' }
+    ];
+    sortGasData(data, { sortCol: 'Base', sortAsc: true, distances: {} });
+    expect(data[0].Base).toBe('3.50');
+    expect(data[1].Base).toBe('invalid');
   });
 });
