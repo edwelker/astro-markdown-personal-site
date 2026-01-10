@@ -1,0 +1,33 @@
+# --- GLOBAL DEFAULTS (The Safety Net) ---
+# Apply this to EVERYTHING first.
+# 1. Force Google to Index everything (overrides any accidental noindex)
+# 2. Force Cloudflare to re-check for fresh content (prevents "Zombie" pages)
+/*
+  X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=0, must-revalidate
+
+# --- STATIC ASSETS (Performance) ---
+# Since Astro adds hashes to filenames (e.g., index.A8d1.css),
+# we can cache these forever.
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# --- EXCEPTIONS ---
+# Your code in sports.astro sets this dynamically, which takes precedence.
+# But adding it here serves as documentation and a fallback.
+/sports
+  Cache-Control: public, max-age=900, s-maxage=900
