@@ -1,5 +1,5 @@
 import { runETL } from './lib-etl.mjs';
-import { fileURLToPath } from 'node:url';
+import { fetchOrThrow, runIfMain } from './lib-utils.mjs';
 
 export const REPO_BASE = 'https://raw.githubusercontent.com/edwelker/find_cheap_local_gas/master';
 export const FILES = {
@@ -11,13 +11,8 @@ export const FILES = {
 export async function fetchGasData() {
   const data = {};
   for (const [region, filename] of Object.entries(FILES)) {
-    const res = await fetch(`${REPO_BASE}/${filename}`);
-    if (!res.ok) {
-      // Throwing here ensures runETL catches it and falls back to the cache
-      throw new Error(`Failed to fetch ${filename}: ${res.statusText}`);
-    } else {
-      data[region] = await res.text();
-    }
+    const res = await fetchOrThrow(`${REPO_BASE}/${filename}`);
+    data[region] = await res.text();
   }
   return data;
 }
@@ -75,6 +70,4 @@ export async function run() {
   });
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  run();
-}
+runIfMain(import.meta.url, run);

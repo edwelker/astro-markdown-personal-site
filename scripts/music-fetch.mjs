@@ -1,6 +1,7 @@
 import { runETL } from './lib-etl.mjs';
 import { transformMusicData } from './music-logic.mjs';
 import { validateEnv } from './lib-credentials.mjs';
+import { fetchOrThrow, runIfMain } from './lib-utils.mjs';
 
 const periods = ['7day', '3month', '12month', 'overall'];
 const types = ['gettopartists', 'gettopalbums', 'gettoptracks'];
@@ -17,10 +18,7 @@ export async function fetchMusicData({ username, apiKey }) {
     )
   ];
 
-  const responses = await Promise.all(urls.map(url => fetch(url)));
-  for (const response of responses) {
-    if (!response.ok) throw new Error(`HTTP ${response.status} for ${response.url}`);
-  }
+  const responses = await Promise.all(urls.map(url => fetchOrThrow(url)));
   return Promise.all(responses.map(r => r.json()));
 }
 
@@ -43,7 +41,4 @@ export async function run() {
   });
 }
 
-// This allows the script to be run directly, or imported by a parallel runner.
-if (process.argv[1] === new URL(import.meta.url).pathname) {
-  run();
-}
+runIfMain(import.meta.url, run);

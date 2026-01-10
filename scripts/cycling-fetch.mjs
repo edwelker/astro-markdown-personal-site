@@ -1,9 +1,10 @@
 import { runETL } from './lib-etl.mjs';
 import { transformStravaData } from './cycling-logic.mjs';
 import { validateEnv } from './lib-credentials.mjs';
+import { fetchOrThrow, runIfMain } from './lib-utils.mjs';
 
 export async function getStravaAccessToken({ clientId, clientSecret, refreshToken }) {
-  const res = await fetch('https://www.strava.com/oauth/token', {
+  const res = await fetchOrThrow('https://www.strava.com/oauth/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -13,7 +14,6 @@ export async function getStravaAccessToken({ clientId, clientSecret, refreshToke
       grant_type: 'refresh_token'
     })
   });
-  if (!res.ok) throw new Error(`Strava auth failed: HTTP ${res.status}`);
   const data = await res.json();
   return data.access_token;
 }
@@ -29,12 +29,9 @@ export async function fetchCyclingData({ token }) {
   let keepFetching = true;
 
   while (keepFetching) {
-    const res = await fetch(`https://www.strava.com/api/v3/athlete/activities?page=${page}&per_page=100`, {
+    const res = await fetchOrThrow(`https://www.strava.com/api/v3/athlete/activities?page=${page}&per_page=100`, {
       headers: { Authorization: `Bearer ${token}` }
     });
-    if (!res.ok) {
-      throw new Error(`Strava activities fetch failed: HTTP ${res.status}`);
-    }
 
     const list = await res.json();
     if (list.length === 0) {
@@ -74,7 +71,4 @@ export async function run() {
   });
 }
 
-// This allows the script to be run directly, or imported by a parallel runner.
-if (process.argv[1] === new URL(import.meta.url).pathname) {
-  run();
-}
+runIfMain(import.meta.url, run);

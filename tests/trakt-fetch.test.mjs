@@ -44,8 +44,8 @@ describe('Trakt Fetch Logic', () => {
       const cache = new Map();
       
       global.fetch
-        .mockResolvedValueOnce({ json: async () => ({ poster_path: '/poster.jpg' }) }) // TMDB details
-        .mockResolvedValueOnce({ json: async () => ({ crew: [{ job: 'Director', name: 'Nolan' }] }) }); // Credits
+        .mockResolvedValueOnce({ ok: true, json: async () => ({ poster_path: '/poster.jpg' }) }) // TMDB details
+        .mockResolvedValueOnce({ ok: true, json: async () => ({ crew: [{ job: 'Director', name: 'Nolan' }] }) }); // Credits
 
       const result = await enrichItem(item, { cache, apiKey: 'key' });
       
@@ -77,8 +77,8 @@ describe('Trakt Fetch Logic', () => {
         .mockResolvedValueOnce({ ok: true, json: async () => mockTraktResponse }) // Movies
         .mockResolvedValueOnce({ ok: true, json: async () => [] }) // Shows
         // TMDB calls inside enrichItem
-        .mockResolvedValueOnce({ json: async () => ({}) })
-        .mockResolvedValueOnce({ json: async () => ({}) });
+        .mockResolvedValueOnce({ ok: true, json: async () => ({}) })
+        .mockResolvedValueOnce({ ok: true, json: async () => ({}) });
 
       const result = await fetchAndEnrichTraktData({
         clientId: 'id',
@@ -93,14 +93,14 @@ describe('Trakt Fetch Logic', () => {
 
     it('should throw if Trakt fetch fails', async () => {
       fs.readFile.mockResolvedValue('{}');
-      global.fetch.mockResolvedValue({ ok: false });
+      global.fetch.mockResolvedValue({ ok: false, status: 500, statusText: 'Error' });
 
       await expect(fetchAndEnrichTraktData({
         clientId: 'id',
         username: 'user',
         tmdbApiKey: 'key',
         dataPath: 'path.json'
-      })).rejects.toThrow('Failed to fetch from Trakt');
+      })).rejects.toThrow('Request failed: 500 Error');
     });
   });
 

@@ -1,40 +1,44 @@
 import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const scriptsDir = path.join(__dirname, '../scripts');
+const SCRIPTS_DIR = path.join(process.cwd(), 'scripts');
 
-const fetchFiles = fs.readdirSync(scriptsDir)
-  .filter(f => f.endsWith('-fetch.mjs'));
+// List of ETL scripts that should follow the pattern
+const ETL_SCRIPTS = [
+  'cycling-fetch.mjs',
+  'flickr-fetch.mjs',
+  'gas-fetch.mjs',
+  'music-fetch.mjs',
+  'trakt-fetch.mjs'
+];
 
 describe('ETL Script Structure', () => {
-  it.each(fetchFiles)('should follow the ETL pattern: %s', async (filename) => {
-    const filePath = path.join(scriptsDir, filename);
-    const content = fs.readFileSync(filePath, 'utf-8');
+  ETL_SCRIPTS.forEach(scriptName => {
+    it(`should follow the ETL pattern: ${scriptName}`, () => {
+      const content = fs.readFileSync(path.join(SCRIPTS_DIR, scriptName), 'utf-8');
 
-    // 1. Verify it imports runETL from lib-etl
-    // Matches: import { runETL } from ... or import { runETL, other } from ...
-    expect(content).toMatch(/import\s+\{.*runETL.*\}\s+from\s+['"]\.\/lib-etl\.mjs['"]/);
+      // 1. Should export a run() function
+      expect(content).toMatch(/export async function run\(\)/);
 
-    // 2. Verify it exports a run function
-    // We use dynamic import to verify the actual export exists
-    const modulePath = path.join(scriptsDir, filename);
-    const module = await import(modulePath);
-    expect(module.run).toBeDefined();
-    expect(typeof module.run).toBe('function');
+      // 2. Should import runETL
+      expect(content).toMatch(/import \{.*runETL.*\} from/);
 
-    // 3. Verify it has the self-execution block for CLI usage
-    // This ensures the script can be run directly via node
-    const usesUrlPathname = content.includes('process.argv[1] === new URL(import.meta.url).pathname');
-    const usesFileUrlToPath = content.includes('process.argv[1] === fileURLToPath(import.meta.url)');
-    
-    expect(usesUrlPathname || usesFileUrlToPath, 
-      'Should contain a self-execution block checking process.argv[1] against the module path'
-    ).toBe(true);
+      // 3. Should call runETL inside run()
+      // Simple check: does the file contain 'await runETL({' ?
+      expect(content).toMatch(/await runETL\(\{/);
 
-    // Ensure run() is actually called in that block
-    expect(content).toMatch(/\{\s*run\(\);\s*\}/);
+      // 4. Should contain a self-execution block checking process.argv[1] against the module path
+      // We now use a helper function runIfMain(import.meta.url, run)
+      const usesRunIfMain = /runIfMain\(import\.meta\.url,\s*run\)/.test(content);
+      
+      // Legacy check for direct process.argv comparison (in case some scripts haven't migrated yet, though they should have)
+      const usesUrlPathname = /process\.argv\[1\] === new URL\(import\.meta\.url\)\.pathname/.test(content);
+      const usesFileUrlToPath = /process\.argv\[1\] === fileURLToPath\(import\.meta\.url\)/.test(content);
+
+      expect(usesRunIfMain || usesUrlPathname || usesFileUrlToPath, 
+        'Should contain a self-execution block (runIfMain or process.argv check)'
+      ).toBe(true);
+    });
   });
 });

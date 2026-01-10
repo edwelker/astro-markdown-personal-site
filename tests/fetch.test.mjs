@@ -6,6 +6,17 @@ import { fetchFlickrData } from '../scripts/flickr-fetch.mjs';
 // Mock the global fetch function
 global.fetch = vi.fn();
 
+// Mock credentials validation to avoid needing actual env vars during tests
+vi.mock('../scripts/lib-credentials.mjs', () => ({
+  validateEnv: vi.fn(() => ({
+    clientId: 'mock-client-id',
+    clientSecret: 'mock-secret',
+    refreshToken: 'mock-refresh',
+    username: 'mock-user',
+    apiKey: 'mock-api-key'
+  }))
+}));
+
 describe('Cycling Fetch Logic', () => {
   beforeEach(() => {
     vi.resetAllMocks();
@@ -29,11 +40,11 @@ describe('Cycling Fetch Logic', () => {
     });
 
     it('should throw an error on failed authentication', async () => {
-      global.fetch.mockResolvedValueOnce({ ok: false, status: 401 });
+      global.fetch.mockResolvedValueOnce({ ok: false, status: 401, statusText: 'Unauthorized' });
 
       await expect(
         getStravaAccessToken({ clientId: 'id', clientSecret: 'secret', refreshToken: 'refresh' })
-      ).rejects.toThrow('Strava auth failed: HTTP 401');
+      ).rejects.toThrow('Request failed: 401 Unauthorized');
     });
   });
 
@@ -87,8 +98,8 @@ describe('Cycling Fetch Logic', () => {
     });
 
     it('should throw an error if the fetch fails', async () => {
-      global.fetch.mockResolvedValueOnce({ ok: false, status: 500 });
-      await expect(fetchCyclingData({ token: 'test_token' })).rejects.toThrow('Strava activities fetch failed: HTTP 500');
+      global.fetch.mockResolvedValueOnce({ ok: false, status: 500, statusText: 'Server Error' });
+      await expect(fetchCyclingData({ token: 'test_token' })).rejects.toThrow('Request failed: 500 Server Error');
     });
   });
 });
@@ -116,8 +127,8 @@ describe('Music Fetch Logic', () => {
   });
 
   it('should throw an error on a failed fetch', async () => {
-    global.fetch.mockResolvedValueOnce({ ok: false, status: 503 });
-    await expect(fetchMusicData({ username: 'testuser', apiKey: 'testkey' })).rejects.toThrow('HTTP 503');
+    global.fetch.mockResolvedValueOnce({ ok: false, status: 503, statusText: 'Service Unavailable' });
+    await expect(fetchMusicData({ username: 'testuser', apiKey: 'testkey' })).rejects.toThrow('Request failed: 503 Service Unavailable');
   });
 });
 
@@ -133,15 +144,16 @@ describe('Flickr Fetch Logic', () => {
       json: async () => mockFlickrResponse,
     });
 
-    const data = await fetchFlickrData();
+    const data = await fetchFlickrData('mock-api-key');
 
     expect(global.fetch).toHaveBeenCalledTimes(1);
-    expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining('flickr.com'));
+    // fetchOrThrow adds a second argument (options object), so we need to account for that
+    expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining('flickr.com'), expect.anything());
     expect(data).toEqual(mockFlickrResponse);
   });
 
   it('should throw an error on a failed fetch', async () => {
-    global.fetch.mockResolvedValueOnce({ ok: false, status: 500 });
-    await expect(fetchFlickrData()).rejects.toThrow('HTTP 500');
+    global.fetch.mockResolvedValueOnce({ ok: false, status: 500, statusText: 'Server Error' });
+    await expect(fetchFlickrData('mock-api-key')).rejects.toThrow('Request failed: 500 Server Error');
   });
 });

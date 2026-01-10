@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import { runETL, mapConcurrent } from './lib-etl.mjs';
 import { transformTraktData } from './trakt-logic.mjs';
 import { validateEnv } from './lib-credentials.mjs';
+import { fetchOrThrow, runIfMain } from './lib-utils.mjs';
 
 const CONCURRENCY_LIMIT = 5;
 
@@ -18,8 +19,8 @@ export async function enrichItem(item, { cache, apiKey }) {
   if (tmdbId) {
     try {
       const [tRes, cRes] = await Promise.all([
-        fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}?api_key=${apiKey}`),
-        fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}/credits?api_key=${apiKey}`)
+        fetchOrThrow(`https://api.themoviedb.org/3/${type}/${tmdbId}?api_key=${apiKey}`),
+        fetchOrThrow(`https://api.themoviedb.org/3/${type}/${tmdbId}/credits?api_key=${apiKey}`)
       ]);
       
       const tData = await tRes.json();
@@ -48,10 +49,9 @@ export async function fetchAndEnrichTraktData({ clientId, username, tmdbApiKey, 
   
   console.log('... Fetching Trakt ratings...');
   const [mRes, sRes] = await Promise.all([
-    fetch(`https://api.trakt.tv/users/${username}/ratings/movies?limit=1000&extended=full`, { headers }),
-    fetch(`https://api.trakt.tv/users/${username}/ratings/shows?limit=1000&extended=full`, { headers })
+    fetchOrThrow(`https://api.trakt.tv/users/${username}/ratings/movies?limit=1000&extended=full`, { headers }),
+    fetchOrThrow(`https://api.trakt.tv/users/${username}/ratings/shows?limit=1000&extended=full`, { headers })
   ]);
-  if (!mRes.ok || !sRes.ok) throw new Error('Failed to fetch from Trakt');
   
   const raw = [...await mRes.json(), ...await sRes.json()];
   
@@ -118,8 +118,4 @@ export async function run() {
   });
 }
 
-// This allows the script to be run directly, or imported by a parallel runner.
-/* v8 ignore next 3 */
-if (process.argv[1] === new URL(import.meta.url).pathname) {
-  run();
-}
+runIfMain(import.meta.url, run);
