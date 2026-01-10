@@ -30,6 +30,8 @@ jobs:
       # Run Tests (now includes coverage by default)
       - name: Run Tests
         run: npm run test
+        env:
+          TZ: 'America/New_York'
 
       # Upload coverage to Codecov (Requires CODECOV_TOKEN in repository secrets)
       - name: Upload coverage to Codecov
