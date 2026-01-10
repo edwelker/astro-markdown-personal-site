@@ -14,6 +14,9 @@ export default defineConfig({
   adapter: cloudflare({
     imageService: "compile",
   }),
+  build: {
+    inlineStylesheets: 'always',
+  },
   redirects: {
     '/dashboard': '/dash/',
   },
@@ -68,11 +71,6 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
-    resolve: process.argv.includes("build") ? {
-      alias: {
-        "node:path/posix": "path-browserify",
-      },
-    } : undefined,
   },
   markdown: {
     shikiConfig: {
