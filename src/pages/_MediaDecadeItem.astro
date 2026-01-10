@@ -2,7 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import BackToPrevious from "@components/BackToPrevious.astro";
-import traktData from "../../data/trakt.json";
+import traktData from "../data/trakt.json";
 
 export async function getStaticPaths() {
   const { sparkline } = traktData;
