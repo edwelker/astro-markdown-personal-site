@@ -14,10 +14,6 @@ export default defineConfig({
   adapter: cloudflare({
     imageService: "compile",
   }),
-  build: {
-    // Force Astro to link stylesheets as external files
-    inlineStylesheets: 'never',
-  },
   redirects: {
     '/dashboard': '/dash/',
   },
@@ -77,12 +73,6 @@ export default defineConfig({
         "node:path/posix": "path-browserify",
       },
     } : undefined,
-    build: {
-      // Prevent Vite from inlining assets (including CSS) as base64
-      assetsInlineLimit: 0,
-      // Ensure CSS is split into separate files
-      cssCodeSplit: true,
-    },
   },
   markdown: {
     shikiConfig: {
