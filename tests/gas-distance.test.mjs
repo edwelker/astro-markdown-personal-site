@@ -86,9 +86,10 @@ describe('Gas Distance - calculateDistances', () => {
       }),
     });
 
+    const distancesObj = {};
     const result = await calculateDistances({
       initialData: mockStations,
-      distances: {},
+      distances: distancesObj,
       userCoords: null,
       uiCallbacks: mockUiCallbacks,
     });
@@ -102,6 +103,9 @@ describe('Gas Distance - calculateDistances', () => {
 
     expect(result.newDistances['1 Main St']).toBeDefined();
     expect(result.newUserCoords).toEqual({ lat: 40, lon: -75 });
+    
+    // Verify mutation of input object
+    expect(distancesObj['1 Main St']).toBeDefined();
   });
 
   it('should handle geolocation failure', async () => {

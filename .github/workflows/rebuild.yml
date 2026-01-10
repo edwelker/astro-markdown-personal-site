@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '25'
           cache: 'npm'
 
       - name: Install Dependencies
@@ -43,13 +43,13 @@ jobs:
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
-          
+
           # Ensure directory exists to prevent git add failure if it wasn't created
           mkdir -p src/data/cache
-          
+
           # Add the cache directory contents
           git add src/data/cache
-          
+
           # Check if there are staged changes
           if git diff --staged --quiet; then
             echo "No changes to commit"

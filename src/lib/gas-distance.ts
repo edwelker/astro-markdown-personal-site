@@ -48,6 +48,9 @@ interface UICallbacks {
 /**
  * Handles the entire process of calculating driving times: getting user location,
  * batching API requests, and updating UI via callbacks.
+ * 
+ * Note: This function mutates the `distances` object in-place to allow for 
+ * progressive UI updates via the updateTable callback.
  */
 export async function calculateDistances({ initialData, distances, userCoords, uiCallbacks }: {
   initialData: GasStation[],
@@ -56,7 +59,8 @@ export async function calculateDistances({ initialData, distances, userCoords, u
   uiCallbacks: UICallbacks
 }) {
   let internalUserCoords = userCoords;
-  const internalDistances = { ...distances };
+  // We use the reference directly to allow progressive updates in the UI
+  const internalDistances = distances;
 
   uiCallbacks.setStatus("Waiting for location permission...", true);
   uiCallbacks.setButtonState("Calculating...", true);
