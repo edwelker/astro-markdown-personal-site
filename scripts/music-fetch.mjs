@@ -8,7 +8,7 @@ const types = ['gettopartists', 'gettopalbums', 'gettoptracks'];
 const limit = 40;
 
 export async function fetchMusicData({ username, apiKey }) {
-  const params = `user=${username}&api_key=${apiKey}&format=json`;
+  const params = `user=${username}&api_key=${apiKey}&format=json&_=${Date.now()}`;
   const base = "http://ws.audioscrobbler.com/2.0/";
 
   const urls = [
