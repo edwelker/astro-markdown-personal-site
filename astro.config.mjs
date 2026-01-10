@@ -14,9 +14,6 @@ export default defineConfig({
   adapter: cloudflare({
     imageService: "compile",
   }),
-  build: {
-    inlineStylesheets: 'always',
-  },
   redirects: {
     '/dashboard': '/dash/',
   },
@@ -27,23 +24,23 @@ export default defineConfig({
           'astro:config:setup': ({ injectRoute }) => {
             injectRoute({
               pattern: '/blog/[...slug]',
-              entrypoint: './src/pages/_BlogPostItem.astro'
+              entrypoint: './src/pages/BlogPostItem.astro'
             });
             injectRoute({
               pattern: '/recipes/[slug]',
-              entrypoint: './src/pages/_RecipeItem.astro'
+              entrypoint: './src/pages/RecipeItem.astro'
             });
             injectRoute({
               pattern: '/tags/[tag]',
-              entrypoint: './src/pages/_TagItem.astro'
+              entrypoint: './src/pages/TagItem.astro'
             });
             injectRoute({
               pattern: '/media/[decade]',
-              entrypoint: './src/pages/_MediaDecadeItem.astro'
+              entrypoint: './src/pages/MediaDecadeItem.astro'
             });
             injectRoute({
               pattern: '/gas/[region]',
-              entrypoint: './src/pages/_GasRegionItem.astro'
+              entrypoint: './src/pages/GasRegionItem.astro'
             });
           }
         }
