@@ -1,10 +1,8 @@
 import { runETL } from './lib-etl.mjs';
 import { transformStravaData } from './cycling-logic.mjs';
+import { validateEnv } from './lib-credentials.mjs';
 
 export async function getStravaAccessToken({ clientId, clientSecret, refreshToken }) {
-  if (!clientId || !clientSecret || !refreshToken) {
-    throw new Error('STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, and STRAVA_REFRESH_TOKEN must be set');
-  }
   const res = await fetch('https://www.strava.com/oauth/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -59,14 +57,16 @@ export async function fetchCyclingData({ token }) {
 }
 
 export async function run() {
+  const creds = validateEnv({
+    clientId: 'STRAVA_CLIENT_ID',
+    clientSecret: 'STRAVA_CLIENT_SECRET',
+    refreshToken: 'STRAVA_REFRESH_TOKEN'
+  }, 'Strava');
+
   await runETL({
     name: 'Strava',
     fetcher: async () => {
-      const token = await getStravaAccessToken({
-        clientId: process.env.STRAVA_CLIENT_ID,
-        clientSecret: process.env.STRAVA_CLIENT_SECRET,
-        refreshToken: process.env.STRAVA_REFRESH_TOKEN,
-      });
+      const token = await getStravaAccessToken(creds);
       return fetchCyclingData({ token });
     },
     transform: transformStravaData,

@@ -12,12 +12,6 @@ describe('Cycling Fetch Logic', () => {
   });
 
   describe('getStravaAccessToken', () => {
-    it('should throw an error if required credentials are not provided', async () => {
-      await expect(getStravaAccessToken({})).rejects.toThrow(
-        'STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, and STRAVA_REFRESH_TOKEN must be set'
-      );
-    });
-
     it('should return an access token on successful authentication', async () => {
       global.fetch.mockResolvedValueOnce({
         ok: true,
@@ -102,10 +96,6 @@ describe('Cycling Fetch Logic', () => {
 describe('Music Fetch Logic', () => {
   beforeEach(() => {
     vi.resetAllMocks();
-  });
-
-  it('should throw an error if required credentials are not provided', async () => {
-    await expect(fetchMusicData({})).rejects.toThrow('LASTFM_USERNAME and LASTFM_API_KEY must be set');
   });
 
   it('should construct correct URLs and fetch data', async () => {

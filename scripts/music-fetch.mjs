@@ -1,12 +1,12 @@
 import { runETL } from './lib-etl.mjs';
 import { transformMusicData } from './music-logic.mjs';
+import { validateEnv } from './lib-credentials.mjs';
 
 const periods = ['7day', '3month', '12month', 'overall'];
 const types = ['gettopartists', 'gettopalbums', 'gettoptracks'];
 const limit = 40;
 
 export async function fetchMusicData({ username, apiKey }) {
-  if (!username || !apiKey) throw new Error('LASTFM_USERNAME and LASTFM_API_KEY must be set');
   const params = `user=${username}&api_key=${apiKey}&format=json`;
   const base = "http://ws.audioscrobbler.com/2.0/";
 
@@ -30,12 +30,14 @@ function transform(rawData) {
 }
 
 export async function run() {
+  const creds = validateEnv({
+    username: 'LASTFM_USERNAME',
+    apiKey: 'LASTFM_API_KEY'
+  }, 'Last.fm');
+
   await runETL({
     name: 'Music',
-    fetcher: () => fetchMusicData({ 
-      username: process.env.LASTFM_USERNAME, 
-      apiKey: process.env.LASTFM_API_KEY 
-    }),
+    fetcher: () => fetchMusicData(creds),
     transform,
     outFile: 'src/data/music.json'
   });

@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import { runETL, mapConcurrent } from './lib-etl.mjs';
 import { transformTraktData } from './trakt-logic.mjs';
+import { validateEnv } from './lib-credentials.mjs';
 
 const CONCURRENCY_LIMIT = 5;
 
@@ -14,7 +15,7 @@ export async function enrichItem(item, { cache, apiKey }) {
   const type = item.movie ? 'movie' : 'tv';
   let poster = null, director = "Unknown";
 
-  if (tmdbId && apiKey) {
+  if (tmdbId) {
     try {
       const [tRes, cRes] = await Promise.all([
         fetch(`https://api.themoviedb.org/3/${type}/${tmdbId}?api_key=${apiKey}`),
@@ -93,6 +94,12 @@ export function transformAndAggregateTraktData(enriched, { username }) {
 }
 
 export async function run() {
+  const creds = validateEnv({
+    clientId: 'TRAKT_CLIENT_ID',
+    username: 'TRAKT_USERNAME',
+    tmdbApiKey: 'TMDB_API_KEY'
+  }, 'Trakt or TMDB');
+
   const outFile = 'src/data/trakt.json';
   // Use the committed cache file to seed the enrichment process
   const cacheFile = 'src/data/cache/trakt.json';
@@ -100,13 +107,11 @@ export async function run() {
   await runETL({
     name: 'Trakt',
     fetcher: () => fetchAndEnrichTraktData({
-      clientId: process.env.TRAKT_CLIENT_ID,
-      username: process.env.TRAKT_USERNAME,
-      tmdbApiKey: process.env.TMDB_API_KEY,
+      ...creds,
       dataPath: cacheFile
     }),
     transform: (data) => transformAndAggregateTraktData(data, { 
-      username: process.env.TRAKT_USERNAME 
+      username: creds.username 
     }),
     outFile: outFile,
     defaultData: { allRatings: [], genres: [], directors: [], sparkline: [], username: "ewelker", lastUpdated: "never" }
