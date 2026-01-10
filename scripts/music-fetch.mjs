@@ -1,4 +1,4 @@
-import { runETL } from './lib-etl.mjs';
+import { runETL, mapConcurrent } from './lib-etl.mjs';
 import { transformMusicData } from './music-logic.mjs';
 import { validateEnv } from './lib-credentials.mjs';
 import { fetchOrThrow, runIfMain } from './lib-utils.mjs';
@@ -9,7 +9,7 @@ const limit = 40;
 
 export async function fetchMusicData({ username, apiKey }) {
   const params = `user=${username}&api_key=${apiKey}&format=json&_=${Date.now()}`;
-  const base = "http://ws.audioscrobbler.com/2.0/";
+  const base = "https://ws.audioscrobbler.com/2.0/";
 
   const urls = [
     `${base}?method=user.getinfo&${params}`,
@@ -18,7 +18,7 @@ export async function fetchMusicData({ username, apiKey }) {
     )
   ];
 
-  const responses = await Promise.all(urls.map(url => fetchOrThrow(url)));
+  const responses = await mapConcurrent(urls, 2, url => fetchOrThrow(url));
   return Promise.all(responses.map(r => r.json()));
 }
 
