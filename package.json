@@ -8,6 +8,7 @@
     "build": "npm run fetch && npm run mvdata && npm test && astro build && npm run test:artifacts",
     "preview": "astro preview",
     "fetch": "node tests/run-all.mjs",
+    "check": "astro check",
     "check:links": "node migration_scripts/check-links.mjs",
     "test": "vitest run --coverage --exclude tests/build_artifacts_tests",
     "test:cov": "vitest run --coverage --exclude tests/build_artifacts_tests",
