@@ -13,7 +13,7 @@ const recentlyRated = (traktData?.allRatings || []).slice(0, 8);
     {recentlyRated.map((item) => (
       <a href={item.href} target="_blank" class="group relative aspect-[2/3] overflow-hidden rounded-md border border-black/10 dark:border-white/10 bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-transform hover:scale-105">
         <img src={item.poster} alt={item.title} class="absolute inset-0 h-full w-full object-cover block m-0 p-0" />
-        <div class="absolute bottom-1 right-1 rounded bg-black/70 backdrop-blur-md px-1 py-0.5 text-[8px] font-bold text-white z-10 border border-white/10 flex items-center gap-0.5">
+        <div class="absolute bottom-1 right-1 rounded bg-black/70 backdrop-blur-md px-1 py-0.5 text-[10px] font-bold text-white z-10 border border-white/10 flex items-center gap-0.5">
           {item.rating} <span class="text-orange-500 font-normal">★</span>
         </div>
       </a>
