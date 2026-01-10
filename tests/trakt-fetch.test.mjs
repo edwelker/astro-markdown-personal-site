@@ -10,6 +10,15 @@ vi.mock('../scripts/lib-etl.mjs', () => ({
   writeFile: vi.fn()
 }));
 
+// Mock credentials validation to avoid needing actual env vars during tests
+vi.mock('../scripts/lib-credentials.mjs', () => ({
+  validateEnv: vi.fn(() => ({
+    clientId: 'mock-client-id',
+    username: 'mock-username',
+    tmdbApiKey: 'mock-api-key'
+  }))
+}));
+
 describe('Trakt Fetch Logic', () => {
   beforeEach(() => {
     vi.resetAllMocks();
