@@ -60,7 +60,7 @@ const enrichedItems = await enrichHighlightsWithImages(items);
           </div>
           {item.thought && (
             <div class={`mt-3 pt-3 border-t text-xs relative z-10 ${hasImage ? "border-white/20 text-white/70" : "border-black/5 dark:border-white/5 text-neutral-500"}`}>
-              <span class={`italic [&_a]:underline [&_a:hover]:text-white ${hasImage ? "[&_a]:decoration-white/50" : "[&_a]:decoration-neutral-400 dark:[&_a]:decoration-neutral-600 [&_a:hover]:text-black dark:[&_a:hover]:text-white"}`} set:html={item.thought} />
+              <span class={`italic [&_a]:underline ${hasImage ? "[&_a]:decoration-white/50 [&_a:hover]:text-white" : "[&_a]:decoration-neutral-400 dark:[&_a]:decoration-neutral-600 [&_a:hover]:text-black dark:[&_a:hover]:text-white"}`} set:html={item.thought} />
             </div>
           )}
         </div>
