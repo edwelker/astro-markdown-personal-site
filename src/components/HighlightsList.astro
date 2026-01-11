@@ -48,7 +48,7 @@ const enrichedItems = await enrichHighlightsWithImages(items);
                 {icon && (
                   <span class={`mt-0.5 shrink-0 ${hasImage ? "text-white/80" : "text-neutral-400 dark:text-neutral-500"}`} set:html={icon} />
                 )}
-                <Link href={item.url} external={item.url.startsWith("http")} aria-label={item.title} class={`font-bold text-base leading-tight after:absolute after:inset-0 ${hasImage ? "text-white" : "text-black dark:text-white"}`}>
+                <Link href={item.url} external={item.url.startsWith("http")} aria-label={item.title} class={`font-bold text-base leading-tight after:absolute after:inset-0 no-underline hover:no-underline ${hasImage ? "text-white hover:text-white" : "text-black dark:text-white"}`}>
                   {item.title}
                 </Link>
               </div>
