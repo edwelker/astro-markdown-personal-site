@@ -26,21 +26,21 @@ export const highlights: Highlight[] = [
     description: "Photos from 2024 Micro Tour 10",
     date: "2024-12-01",
     url: "https://photos.google.com/share/AF1QipMVQd_WRrYB6JwAXFZVypTMudkwPMNXoKsYDs1GxufiyCLbOAcSFLTtN036zhFRgQ?key=OUpJcjVkTC0zS2NmZHdLazVibFdEQXJGRGZWZXBn",
-    thought: "<a href='https://718outdoors.com/'>Joe's 718 Outdoors</a> Micro-tour 10, Labor Day 2024",
+    thought: "<a href='https://718outdoors.com/'>Joe's 718 Outdoors</a> Micro-tour 10, Labor Day 2024"
   },
   {
     title: "718 2024 GAP/C&O",
     description: "Photos from 2024 GAP/C&O",
     date: "2024-12-01",
     url: "https://photos.google.com/share/AF1QipPjln17COSHshcQ8hRndTWSh0Nsrb20Sbia0MUfgEfuUoJnvRo0un_XsdaMcqF5oQ?key=d25XMGE1eWlNWEI2ZlJCMU9jYnJCQjduN1F6MERR",
-    thought: "<a href='https://718outdoors.com/'>Joe's 718 Outdoors</a> 2024 GAP/C&O tour",
+    thought: "<a href='https://718outdoors.com/'>Joe's 718 Outdoors</a> 2024 GAP/C&O tour"
   },
   {
     title: "718 Erie Canal Tour, 2024",
     description: "Photos from 718 Erie Canal Tour, 2024",
     date: "2024-12-01",
     url: "https://photos.google.com/share/AF1QipNPjKyC4iaTnLBhj0g-CTrnpXxxGMBf-09YYA-BZ7iWPmA6AyE_odwwHE5TrL__uQ?key=bXNXUGNGMEFveHlSX0lNazhiZmQ2X1FfclRQUGFR",
-    thought: "<a href='https://718outdoors.com/'>Joe's 718 Outdoors</a> 2024 Erie Canal Tour",
+    thought: "<a href='https://718outdoors.com/'>Joe's 718 Outdoors</a> 2024 Erie Canal Tour"
   },
   {
     title: "718 2023 GAP/C&O",

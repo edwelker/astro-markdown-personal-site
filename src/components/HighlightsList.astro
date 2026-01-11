@@ -4,30 +4,30 @@ import Link from "@components/Link.astro";
 const { items } = Astro.props;
 ---
 
-<section class="animate space-y-6" data-testid="highlights-section">
-  <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
+<section class="animate space-y-4" data-testid="highlights-section">
+  <div class="flex justify-between items-baseline pb-3 border-b border-black/10 dark:border-white/10">
     <h3 class="font-semibold text-black dark:text-white text-lg">Highlights</h3>
     <Link href="/highlights/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
       See All <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
     </Link>
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 auto-rows-fr">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 auto-rows-fr">
     {items.map((item, index) => (
-      <div class={`relative group flex flex-col justify-between p-5 rounded-2xl bg-neutral-50 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:border-black/10 dark:hover:border-white/20 transition-all hover:scale-[1.01] ${index === 0 ? "sm:col-span-2" : ""}`}>
-        <div class="flex flex-col gap-3">
+      <div class={`relative group flex flex-col justify-between p-4 rounded-xl bg-neutral-50 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:border-black/10 dark:hover:border-white/20 transition-all hover:scale-[1.01] ${index === 0 ? "sm:col-span-2" : ""}`}>
+        <div class="flex flex-col gap-2">
           <div class="flex items-start justify-between gap-2">
-            <Link href={item.url} external={item.url.startsWith("http")} aria-label={item.title} class="font-medium text-black dark:text-white text-lg leading-tight after:absolute after:inset-0">
+            <Link href={item.url} external={item.url.startsWith("http")} aria-label={item.title} class="font-medium text-black dark:text-white text-base leading-tight after:absolute after:inset-0">
               {item.title}
             </Link>
-            {item.url.startsWith("http") && <span class="text-xs text-neutral-400 shrink-0 mt-1">↗</span>}
+            {item.url.startsWith("http") && <span class="text-xs text-neutral-400 shrink-0 mt-0.5">↗</span>}
           </div>
-          <p class="text-sm text-neutral-600 dark:text-neutral-400">
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-snug">
             {item.description}
           </p>
         </div>
         {item.thought && (
-          <div class="mt-4 pt-4 border-t border-black/5 dark:border-white/5 text-xs text-neutral-500">
-            <span class="italic" set:html={item.thought} />
+          <div class="mt-3 pt-3 border-t border-black/5 dark:border-white/5 text-xs text-neutral-500 relative z-10">
+            <span class="italic [&_a]:underline [&_a]:decoration-neutral-400 dark:[&_a]:decoration-neutral-600 [&_a:hover]:text-black dark:[&_a:hover]:text-white" set:html={item.thought} />
           </div>
         )}
       </div>
