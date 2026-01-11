@@ -5,6 +5,7 @@ export interface Highlight {
   date: string;
   thought?: string;
   type?: 'code' | 'photos' | 'video' | 'music';
+  image?: string;
 }
 
 export const highlights: Highlight[] = [
@@ -67,4 +68,43 @@ export function getHighlightIcon(type: string) {
     default:
       return null;
   }
+}
+
+export async function enrichHighlightsWithImages(items: Highlight[]): Promise<Highlight[]> {
+  return Promise.all(items.map(async (item) => {
+    if (item.type === 'photos' && item.url.includes('photos.google.com') && !item.image) {
+      try {
+        const response = await fetch(item.url);
+        if (response.ok) {
+          const html = await response.text();
+          
+          // Try to find random images first
+          // Look for standard google content URLs (lh3.googleusercontent.com etc)
+          // We filter for reasonably long URLs to avoid icons
+          const regex = /(https:\/\/lh[0-9]+\.googleusercontent\.com\/[a-zA-Z0-9_-]+)/g;
+          const matches = html.match(regex);
+
+          if (matches) {
+            // Filter out short matches (likely icons or garbage) and duplicates
+            const uniqueUrls = [...new Set(matches.filter(url => url.length > 50))];
+            
+            if (uniqueUrls.length > 0) {
+              const randomUrl = uniqueUrls[Math.floor(Math.random() * uniqueUrls.length)];
+              // Append size param to ensure we get a valid image response
+              return { ...item, image: `${randomUrl}=w1024` };
+            }
+          }
+
+          // Fallback to OG image if no random images found
+          const ogMatch = html.match(/<meta property="og:image" content="([^"]+)"/);
+          if (ogMatch && ogMatch[1]) {
+            return { ...item, image: ogMatch[1] };
+          }
+        }
+      } catch (e) {
+        console.error(`Failed to fetch images for ${item.title}`, e);
+      }
+    }
+    return item;
+  }));
 }
