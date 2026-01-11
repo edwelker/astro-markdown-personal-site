@@ -1,6 +1,5 @@
 ---
 import Link from "@components/Link.astro";
-import RecipeCard from "@components/RecipeCard.astro";
 
 const { recipes } = Astro.props;
 ---
@@ -15,13 +14,27 @@ const { recipes } = Astro.props;
 
   <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
     {recipes.map((recipe) => (
-      <RecipeCard
-        recipe={recipe}
-        showMetadata={false}
-        showDescription={false}
-        titleClass="text-sm"
-        underlineOnHover={true}
-      />
+      <a 
+        href={`/recipes/${recipe.slug}/`}
+        class="group relative aspect-square overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-800"
+      >
+        {recipe.data.coverPhoto ? (
+          <img 
+            src={recipe.data.coverPhoto} 
+            alt={recipe.data.title}
+            class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div class="absolute inset-0 bg-gradient-to-br from-neutral-200 to-neutral-300 dark:from-neutral-700 dark:to-neutral-800 transition-transform duration-500 group-hover:scale-105" />
+        )}
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        
+        <div class="absolute bottom-0 left-0 p-4 w-full">
+          <p class="text-white font-medium text-sm leading-tight line-clamp-3 group-hover:underline decoration-white/50 underline-offset-2">
+            {recipe.data.title}
+          </p>
+        </div>
+      </a>
     ))}
   </div>
 </section>
