@@ -15,7 +15,7 @@ export interface Highlight {
 export const highlights: Highlight[] = [
   {
     title: "Personal Website Github Repo",
-    description: "This site's github repo. My website and sandbox for to play around in. After butting heads with other clunky platforms, I found Astro, a tool that I quite like. It works more-or-less the way I think (except it's in JavaScript, not Python). ",
+    description: "This site's github repo. My website and sandbox. After butting heads with other platforms, I found Astro, a tool that I quite like, and  works the way I think (except it's in JavaScript, not Python). ",
     url: "https://github.com/edwelker/astro-markdown-personal-site/tree/astro",
     date: "2025-12-20",
     thought: "This is my Astro 5 / Typescript playground.. <a href='/blog/2026/01/06/wordpress-to-hugo-to-astro/'>Read the full migration story.</a>",
