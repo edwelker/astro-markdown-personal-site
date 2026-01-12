@@ -3,12 +3,38 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import BackToPrevious from "@components/BackToPrevious.astro";
 import Trakt from "@components/Trakt.astro";
+import traktData from "../data/trakt.json";
 
 const title = "Movies & TV";
 const description = "A curated collection of film and television ratings.";
+
+const { allRatings } = traktData;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": (allRatings || []).map((item: any) => ({
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "CreativeWork",
+      "name": item.title,
+      "image": item.poster,
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": item.rating,
+      "bestRating": "10",
+      "worstRating": "1",
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Eddie Welker",
+    },
+  })),
+};
 ---
 
 <Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Container>
     <div class="animate">
       <BackToPrevious href="/" />

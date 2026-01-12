@@ -20,9 +20,32 @@ const decadeMovies = (allRatings as any[])
   .sort((a, b) => b.rating - a.rating);
 
 const title = `${decade}s Archive`;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": decadeMovies.map((item) => ({
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "CreativeWork",
+      "name": item.title,
+      "image": item.poster,
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": item.rating,
+      "bestRating": "10",
+      "worstRating": "1",
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Eddie Welker",
+    },
+  })),
+};
 ---
 
 <Layout title={title} description={`Cinematic history from the ${decade}s.`}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Container>
     <div class="animate">
       <BackToPrevious href="/media/" />
