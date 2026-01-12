@@ -1,5 +1,5 @@
 ---
-import TableOfContentsHeading from "./TableOfContentsHeading.astro";
+import TableOfContentsHeading from './TableOfContentsHeading.astro';
 
 // https://kld.dev/building-table-of-contents/
 const { headings } = Astro.props;
@@ -27,10 +27,7 @@ function buildToc(headings: Heading[]) {
 }
 ---
 
-<details
-  open
-  class="animate group rounded-lg border border-black/15 dark:border-white/20"
->
+<details open class="animate group rounded-lg border border-black/15 dark:border-white/20">
   <summary
     class="cursor-pointer rounded-t-lg px-3 py-1.5 font-medium transition-colors group-open:bg-black/5 hover:bg-black/5 dark:group-open:bg-white/5 hover:dark:bg-white/5"
     >Table of Contents</summary

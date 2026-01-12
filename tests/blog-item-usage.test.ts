@@ -12,7 +12,7 @@ describe('BlogItem Usage Consistency', () => {
   FILES_TO_CHECK.forEach((filePath) => {
     it(`${filePath} should import and use BlogItem`, () => {
       const fullPath = path.resolve(process.cwd(), filePath);
-      
+
       if (!fs.existsSync(fullPath)) {
         // Skip if file doesn't exist in the current environment
         return;
@@ -24,7 +24,7 @@ describe('BlogItem Usage Consistency', () => {
       // Matches: import BlogItem from "@components/BlogItem.astro";
       const importRegex = /import\s+BlogItem\s+from\s+["']@components\/BlogItem\.astro["']/;
       const hasImport = importRegex.test(content);
-      
+
       // 2. Check for the component usage in the template
       // Matches: <BlogItem ... />
       const usageRegex = /<BlogItem/;

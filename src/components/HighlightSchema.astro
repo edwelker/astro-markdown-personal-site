@@ -1,6 +1,6 @@
 ---
-import { Schema } from "astro-seo-schema";
-import type { Highlight } from "@data/highlights";
+import { Schema } from 'astro-seo-schema';
+import type { Highlight } from '@data/highlights';
 
 interface Props {
   items: Highlight[];
@@ -9,29 +9,31 @@ interface Props {
 const { items } = Astro.props;
 
 const listSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Eddie Welker's Project Highlights",
-  "description": "Selected software repositories and photography galleries.",
-  "itemListElement": items.map((item, index) => {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: "Eddie Welker's Project Highlights",
+  description: 'Selected software repositories and photography galleries.',
+  itemListElement: items.map((item, index) => {
     const isGithub = item.url.includes('github.com');
-    const isPhotos = item.url.includes('googleusercontent') || item.url.includes('photos.app.goo.gl');
+    const isPhotos =
+      item.url.includes('googleusercontent') || item.url.includes('photos.app.goo.gl');
 
     return {
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": isGithub ? "SoftwareSourceCode" : isPhotos ? "ImageGallery" : "CreativeWork",
-        "name": item.title,
-        "description": item.description,
-        "url": item.url,
-        "datePublished": item.date,
-        "author": {
-          "@id": "https://eddiewelker.com/#person"
-        }
-      }
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': isGithub ? 'SoftwareSourceCode' : isPhotos ? 'ImageGallery' : 'CreativeWork',
+        name: item.title,
+        description: item.description,
+        url: item.url,
+        datePublished: item.date,
+        author: {
+          '@id': 'https://eddiewelker.com/#person',
+        },
+      },
     };
-  })
+  }),
 };
 ---
+
 <Schema item={listSchema} />

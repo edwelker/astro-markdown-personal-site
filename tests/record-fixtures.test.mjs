@@ -8,7 +8,7 @@ vi.mock('node:fs/promises', () => ({
   default: {
     mkdir: vi.fn(),
     copyFile: vi.fn(),
-  }
+  },
 }));
 
 describe('Record Fixtures Script', () => {
@@ -33,18 +33,18 @@ describe('Record Fixtures Script', () => {
     await record();
     // Should attempt to copy each file in the list
     expect(fs.copyFile).toHaveBeenCalledTimes(FILES_TO_RECORD.length);
-    
+
     const firstFile = FILES_TO_RECORD[0];
     const expectedSrc = path.join(DATA_DIR, firstFile);
     const expectedDest = path.join(FIXTURE_DIR, `sample-${firstFile}`);
-    
+
     expect(fs.copyFile).toHaveBeenCalledWith(expectedSrc, expectedDest);
   });
 
   it('should log success when copy succeeds', async () => {
     fs.copyFile.mockResolvedValue(undefined);
     await record();
-    
+
     expect(console.log).toHaveBeenCalledTimes(FILES_TO_RECORD.length);
     expect(console.log).toHaveBeenCalledWith(expect.stringContaining('Recorded:'));
     expect(console.warn).not.toHaveBeenCalled();
@@ -53,7 +53,7 @@ describe('Record Fixtures Script', () => {
   it('should log warning when copy fails (file not found)', async () => {
     fs.copyFile.mockRejectedValue(new Error('File not found'));
     await record();
-    
+
     expect(console.warn).toHaveBeenCalledTimes(FILES_TO_RECORD.length);
     expect(console.warn).toHaveBeenCalledWith(expect.stringContaining('Skip:'));
     expect(console.log).not.toHaveBeenCalled();
@@ -72,7 +72,7 @@ describe('Record Fixtures Script', () => {
 
     expect(console.warn).toHaveBeenCalledTimes(1);
     expect(console.warn).toHaveBeenCalledWith(expect.stringContaining(FILES_TO_RECORD[0]));
-    
+
     expect(console.log).toHaveBeenCalledTimes(FILES_TO_RECORD.length - 1);
   });
 });

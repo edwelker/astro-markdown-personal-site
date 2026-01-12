@@ -1,6 +1,12 @@
 ---
 import musicData from '../data/music.json';
-interface Item { name: string; url: string; image?: string; artist?: string; plays?: string | number; }
+interface Item {
+  name: string;
+  url: string;
+  image?: string;
+  artist?: string;
+  plays?: string | number;
+}
 const data = musicData || {};
 const week = data.week || { artists: [], albums: [], tracks: [] };
 const month = data.month || { artists: [], albums: [], tracks: [] };
@@ -9,75 +15,153 @@ const weekArtists = Array.isArray(week.artists) ? week.artists : [];
 const monthAlbums = Array.isArray(month.albums) ? month.albums : [];
 const monthArtists = Array.isArray(month.artists) ? month.artists : [];
 ---
+
 <div class="space-y-6">
-  <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
-    <h3 class="font-semibold text-black dark:text-white text-lg">Recent Music</h3>
-    <a href="/music/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
-      Full music stats <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+  <div
+    class="flex items-baseline justify-between border-b border-black/10 pb-4 dark:border-white/10"
+  >
+    <h3 class="text-lg font-semibold text-black dark:text-white">Recent Music</h3>
+    <a
+      href="/music/"
+      class="group font-mono text-[9px] tracking-[0.1em] text-neutral-400 uppercase transition-colors hover:text-black dark:hover:text-white"
+    >
+      Full music stats <span class="inline-block transition-transform group-hover:translate-x-0.5"
+        >→</span
+      >
     </a>
   </div>
 
-  <div class="grid md:grid-cols-2 gap-8 md:gap-0 md:divide-x divide-black/10 dark:divide-white/10">
+  <div class="grid gap-8 divide-black/10 md:grid-cols-2 md:gap-0 md:divide-x dark:divide-white/10">
     <div class="space-y-8 md:pr-8">
-      <h4 class="text-[10px] uppercase tracking-wider font-bold text-neutral-400">Last 7 Days</h4>
+      <h4 class="text-[10px] font-bold tracking-wider text-neutral-400 uppercase">Last 7 Days</h4>
       <div class="space-y-6">
         <div class="space-y-3">
-          <h5 class="text-[10px] uppercase tracking-wider font-bold text-neutral-400">Top Albums</h5>
+          <h5 class="text-[10px] font-bold tracking-wider text-neutral-400 uppercase">
+            Top Albums
+          </h5>
           <ul class="space-y-2">
-            {weekAlbums.slice(0, 3).map((alb: Item, i: number) => (
-              <li class="flex items-center gap-3 group">
-                <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
-                {alb.image ? <img src={alb.image} alt={alb.name} class="w-8 h-8 rounded border border-black/10 dark:border-white/10 object-cover" /> : <div class="w-8 h-8 rounded border border-black/10 dark:border-white/10 bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center text-[10px] text-neutral-500">CD</div>}
-                <div class="flex-1 min-w-0 overflow-hidden"><a href={alb.url} target="_blank" class="block text-sm truncate text-neutral-700 dark:text-neutral-300 group-hover:text-black dark:group-hover:text-white group-hover:underline decoration-1 underline-offset-2 transition-colors">{alb.name}</a><div class="text-xs text-neutral-500 truncate">{alb.artist}</div></div>
-                <span class="text-xs font-mono text-neutral-400">{alb.plays}</span>
-              </li>
-            ))}
+            {
+              weekAlbums.slice(0, 3).map((alb: Item, i: number) => (
+                <li class="group flex items-center gap-3">
+                  <span class="w-3 font-mono text-xs text-neutral-400">{i + 1}</span>
+                  {alb.image ? (
+                    <img
+                      src={alb.image}
+                      alt={alb.name}
+                      class="h-8 w-8 rounded border border-black/10 object-cover dark:border-white/10"
+                    />
+                  ) : (
+                    <div class="flex h-8 w-8 items-center justify-center rounded border border-black/10 bg-neutral-100 text-[10px] text-neutral-500 dark:border-white/10 dark:bg-neutral-800">
+                      CD
+                    </div>
+                  )}
+                  <div class="min-w-0 flex-1 overflow-hidden">
+                    <>
+                      <a
+                        href={alb.url}
+                        target="_blank"
+                        class="block truncate text-sm text-neutral-700 decoration-1 underline-offset-2 transition-colors group-hover:text-black group-hover:underline dark:text-neutral-300 dark:group-hover:text-white"
+                      >
+                        {alb.name}
+                      </a>
+                      <div class="truncate text-xs text-neutral-500">{alb.artist}</div>
+                    </>
+                  </div>
+                  <span class="font-mono text-xs text-neutral-400">{alb.plays}</span>
+                </li>
+              ))
+            }
           </ul>
         </div>
-        <div class="space-y-3 border-t border-black/10 dark:border-white/10 pt-4">
-          <h5 class="text-[10px] uppercase tracking-wider font-bold text-neutral-400">Top Artists</h5>
+        <div class="space-y-3 border-t border-black/10 pt-4 dark:border-white/10">
+          <h5 class="text-[10px] font-bold tracking-wider text-neutral-400 uppercase">
+            Top Artists
+          </h5>
           <ul class="space-y-1">
-            {weekArtists.slice(0, 5).map((art: Item, i: number) => (
-              <li class="flex justify-between items-center group">
-                <div class="flex items-center gap-2 min-w-0">
-                  <span class="text-[10px] font-mono text-neutral-400 w-3 shrink-0">{i + 1}</span>
-                  <a href={art.url} target="_blank" class="text-sm truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">{art.name}</a>
-                </div>
-                <span class="text-xs font-mono text-neutral-400 ml-2">{art.plays}</span>
-              </li>
-            ))}
+            {
+              weekArtists.slice(0, 5).map((art: Item, i: number) => (
+                <li class="group flex items-center justify-between">
+                  <div class="flex min-w-0 items-center gap-2">
+                    <span class="w-3 shrink-0 font-mono text-[10px] text-neutral-400">{i + 1}</span>
+                    <a
+                      href={art.url}
+                      target="_blank"
+                      class="truncate text-sm text-neutral-600 transition-colors group-hover:text-black dark:text-neutral-400 dark:group-hover:text-white"
+                    >
+                      {art.name}
+                    </a>
+                  </div>
+                  <span class="ml-2 font-mono text-xs text-neutral-400">{art.plays}</span>
+                </li>
+              ))
+            }
           </ul>
         </div>
       </div>
     </div>
     <div class="space-y-8 md:pl-8">
-      <h4 class="text-[10px] uppercase tracking-wider font-bold text-neutral-400">Last 3 Months</h4>
+      <h4 class="text-[10px] font-bold tracking-wider text-neutral-400 uppercase">Last 3 Months</h4>
       <div class="space-y-6">
         <div class="space-y-3">
-          <h5 class="text-[10px] uppercase tracking-wider font-bold text-neutral-400">Top Albums</h5>
+          <h5 class="text-[10px] font-bold tracking-wider text-neutral-400 uppercase">
+            Top Albums
+          </h5>
           <ul class="space-y-2">
-            {monthAlbums.slice(0, 3).map((alb: Item, i: number) => (
-              <li class="flex items-center gap-3 group">
-                <span class="text-xs font-mono text-neutral-400 w-3">{i + 1}</span>
-                {alb.image ? <img src={alb.image} alt={alb.name} class="w-8 h-8 rounded border border-black/10 dark:border-white/10 object-cover" /> : <div class="w-8 h-8 rounded border border-black/10 dark:border-white/10 bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center text-[10px] text-neutral-500">CD</div>}
-                <div class="flex-1 min-w-0 overflow-hidden"><a href={alb.url} target="_blank" class="block text-sm truncate text-neutral-700 dark:text-neutral-300 group-hover:text-black dark:group-hover:text-white group-hover:underline decoration-1 underline-offset-2 transition-colors">{alb.name}</a><div class="text-xs text-neutral-500 truncate">{alb.artist}</div></div>
-                <span class="text-xs font-mono text-neutral-400">{alb.plays}</span>
-              </li>
-            ))}
+            {
+              monthAlbums.slice(0, 3).map((alb: Item, i: number) => (
+                <li class="group flex items-center gap-3">
+                  <span class="w-3 font-mono text-xs text-neutral-400">{i + 1}</span>
+                  {alb.image ? (
+                    <img
+                      src={alb.image}
+                      alt={alb.name}
+                      class="h-8 w-8 rounded border border-black/10 object-cover dark:border-white/10"
+                    />
+                  ) : (
+                    <div class="flex h-8 w-8 items-center justify-center rounded border border-black/10 bg-neutral-100 text-[10px] text-neutral-500 dark:border-white/10 dark:bg-neutral-800">
+                      CD
+                    </div>
+                  )}
+                  <div class="min-w-0 flex-1 overflow-hidden">
+                    <>
+                      <a
+                        href={alb.url}
+                        target="_blank"
+                        class="block truncate text-sm text-neutral-700 decoration-1 underline-offset-2 transition-colors group-hover:text-black group-hover:underline dark:text-neutral-300 dark:group-hover:text-white"
+                      >
+                        {alb.name}
+                      </a>
+                      <div class="truncate text-xs text-neutral-500">{alb.artist}</div>
+                    </>
+                  </div>
+                  <span class="font-mono text-xs text-neutral-400">{alb.plays}</span>
+                </li>
+              ))
+            }
           </ul>
         </div>
-        <div class="space-y-3 border-t border-black/10 dark:border-white/10 pt-4">
-          <h5 class="text-[10px] uppercase tracking-wider font-bold text-neutral-400">Top Artists</h5>
+        <div class="space-y-3 border-t border-black/10 pt-4 dark:border-white/10">
+          <h5 class="text-[10px] font-bold tracking-wider text-neutral-400 uppercase">
+            Top Artists
+          </h5>
           <ul class="space-y-1">
-            {monthArtists.slice(0, 5).map((art: Item, i: number) => (
-              <li class="flex justify-between items-center group">
-                <div class="flex items-center gap-2 min-w-0">
-                  <span class="text-[10px] font-mono text-neutral-400 w-3 shrink-0">{i + 1}</span>
-                  <a href={art.url} target="_blank" class="text-sm truncate text-neutral-600 dark:text-neutral-400 group-hover:text-black dark:group-hover:text-white transition-colors">{art.name}</a>
-                </div>
-                <span class="text-xs font-mono text-neutral-400 ml-2">{art.plays}</span>
-              </li>
-            ))}
+            {
+              monthArtists.slice(0, 5).map((art: Item, i: number) => (
+                <li class="group flex items-center justify-between">
+                  <div class="flex min-w-0 items-center gap-2">
+                    <span class="w-3 shrink-0 font-mono text-[10px] text-neutral-400">{i + 1}</span>
+                    <a
+                      href={art.url}
+                      target="_blank"
+                      class="truncate text-sm text-neutral-600 transition-colors group-hover:text-black dark:text-neutral-400 dark:group-hover:text-white"
+                    >
+                      {art.name}
+                    </a>
+                  </div>
+                  <span class="ml-2 font-mono text-xs text-neutral-400">{art.plays}</span>
+                </li>
+              ))
+            }
           </ul>
         </div>
       </div>

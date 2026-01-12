@@ -1,24 +1,27 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/Container.astro";
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
 
 const links = [
   {
-    category: "Monitoring",
+    category: 'Monitoring',
     items: [
-      { name: "Google Analytics", url: "https://analytics.google.com/" },
-      { name: "Search Console", url: "https://search.google.com/search-console" },
-      { name: "Ahrefs", url: "https://ahrefs.com/dashboard" }
-    ]
+      { name: 'Google Analytics', url: 'https://analytics.google.com/' },
+      { name: 'Search Console', url: 'https://search.google.com/search-console' },
+      { name: 'Ahrefs', url: 'https://ahrefs.com/dashboard' },
+    ],
   },
   {
-    category: "Infrastructure",
+    category: 'Infrastructure',
     items: [
-      { name: "Cloudflare Pages", url: "https://dash.cloudflare.com/8123990e7d6c560ed116c9af48d7d668/pages/view/website/" },
-      { name: "GitHub Actions", url: "https://github.com/edwelker/website/actions" },
-      { name: "GitHub Repo (Site)", url: "https://github.com/edwelker/website" }
-    ]
-  }
+      {
+        name: 'Cloudflare Pages',
+        url: 'https://dash.cloudflare.com/8123990e7d6c560ed116c9af48d7d668/pages/view/website/',
+      },
+      { name: 'GitHub Actions', url: 'https://github.com/edwelker/website/actions' },
+      { name: 'GitHub Repo (Site)', url: 'https://github.com/edwelker/website' },
+    ],
+  },
 ];
 ---
 
@@ -30,45 +33,67 @@ const links = [
   <Container>
     <div class="space-y-12">
       <section>
-        <h1 class="text-3xl font-bold text-black dark:text-white mb-2">Dashboard</h1>
-        <p class="text-neutral-500 text-sm">Private management links for edwelker.com</p>
+        <h1 class="mb-2 text-3xl font-bold text-black dark:text-white">Dashboard</h1>
+        <p class="text-sm text-neutral-500">Private management links for edwelker.com</p>
       </section>
 
       <div class="grid gap-12">
         {/* Profile README Section */}
         <section class="space-y-4">
-          <h5 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold border-b border-black/5 dark:border-white/5 pb-2">
+          <h5
+            class="border-b border-black/5 pb-2 text-xs font-semibold tracking-widest text-neutral-500 uppercase dark:border-white/5"
+          >
             Profile README Automation
           </h5>
-          <div class="p-4 rounded-xl border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.02]">
-            <div class="flex justify-between items-start mb-4">
+          <div
+            class="rounded-xl border border-black/5 bg-black/[0.02] p-4 dark:border-white/5 dark:bg-white/[0.02]"
+          >
+            <div class="mb-4 flex items-start justify-between">
               <div>
-                <a href="https://github.com/edwelker/edwelker" target="_blank" class="font-medium text-black dark:text-white hover:underline decoration-1 underline-offset-2 text-lg">
+                <a
+                  href="https://github.com/edwelker/edwelker"
+                  target="_blank"
+                  class="text-lg font-medium text-black decoration-1 underline-offset-2 hover:underline dark:text-white"
+                >
                   edwelker/edwelker
                 </a>
-                <p class="text-xs text-neutral-500 mt-1">Self-updating GitHub Profile via GitHub Actions.</p>
+                <p class="mt-1 text-xs text-neutral-500">
+                  Self-updating GitHub Profile via GitHub Actions.
+                </p>
               </div>
               <span class="text-xs text-neutral-400">↗</span>
             </div>
 
             <div class="space-y-4">
               <div>
-                <p class="text-xs font-mono text-neutral-400 uppercase tracking-tighter mb-1">Logic</p>
+                <p class="mb-1 font-mono text-xs tracking-tighter text-neutral-400 uppercase">
+                  Logic
+                </p>
                 <p class="text-sm text-neutral-600 dark:text-neutral-400">
-                  A scheduled GitHub Action runs hourly to fetch the latest content from this site. It parses the RSS feeds and injects them into the README.md markers using a two-step sync to avoid commit conflicts.
+                  A scheduled GitHub Action runs hourly to fetch the latest content from this site.
+                  It parses the RSS feeds and injects them into the README.md markers using a
+                  two-step sync to avoid commit conflicts.
                 </p>
               </div>
 
               <div>
-                <p class="text-xs font-mono text-neutral-400 uppercase tracking-tighter mb-1">Required Endpoints</p>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <p class="mb-1 font-mono text-xs tracking-tighter text-neutral-400 uppercase">
+                  Required Endpoints
+                </p>
+                <ul class="grid grid-cols-1 gap-2 md:grid-cols-2">
                   <li class="flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
-                    <code class="text-[11px] bg-black/5 dark:bg-white/10 px-1 rounded text-orange-600 dark:text-orange-400">/rss.xml</code>
+                    <span class="h-1.5 w-1.5 rounded-full bg-orange-500"></span>
+                    <code
+                      class="rounded bg-black/5 px-1 text-[11px] text-orange-600 dark:bg-white/10 dark:text-orange-400"
+                      >/rss.xml</code
+                    >
                   </li>
                   <li class="flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
-                    <code class="text-[11px] bg-black/5 dark:bg-white/10 px-1 rounded text-orange-600 dark:text-orange-400">/highlights.xml</code>
+                    <span class="h-1.5 w-1.5 rounded-full bg-orange-500"></span>
+                    <code
+                      class="rounded bg-black/5 px-1 text-[11px] text-orange-600 dark:bg-white/10 dark:text-orange-400"
+                      >/highlights.xml</code
+                    >
                   </li>
                 </ul>
               </div>
@@ -77,45 +102,53 @@ const links = [
         </section>
 
         {/* Standard Categories */}
-        {links.map((group) => (
-          <section class="space-y-4">
-            <h5 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold border-b border-black/5 dark:border-white/5 pb-2">
-              {group.category}
-            </h5>
-            <ul class="flex flex-col gap-2 p-0 list-none not-prose">
-              {group.items.map((item) => (
-                <li>
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="group block p-2 -mx-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-                  >
-                    <div class="flex justify-between items-center">
-                      <span class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2">
-                        {item.name}
-                      </span>
-                      <span class="text-xs text-neutral-400">↗</span>
-                    </div>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
+        {
+          links.map((group) => (
+            <section class="space-y-4">
+              <h5 class="border-b border-black/5 pb-2 text-xs font-semibold tracking-widest text-neutral-500 uppercase dark:border-white/5">
+                {group.category}
+              </h5>
+              <ul class="not-prose flex list-none flex-col gap-2 p-0">
+                {group.items.map((item) => (
+                  <li>
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="group -mx-2 block rounded-lg p-2 transition-colors hover:bg-black/5 dark:hover:bg-white/5"
+                    >
+                      <div class="flex items-center justify-between">
+                        <span class="font-medium text-black decoration-1 underline-offset-2 group-hover:underline dark:text-white">
+                          {item.name}
+                        </span>
+                        <span class="text-xs text-neutral-400">↗</span>
+                      </div>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))
+        }
 
         {/* Debugging Section */}
         <section class="space-y-4">
-          <h5 class="text-xs uppercase tracking-widest text-neutral-500 font-semibold border-b border-black/5 dark:border-white/5 pb-2">
+          <h5
+            class="border-b border-black/5 pb-2 text-xs font-semibold tracking-widest text-neutral-500 uppercase dark:border-white/5"
+          >
             Debugging
           </h5>
-          <div class="p-4 rounded-xl border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.02]">
-             <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
-                To view real-time logs from the Cloudflare Worker (SSR pages):
-             </p>
-             <code class="block text-xs font-mono bg-black/5 dark:bg-white/10 p-2 rounded select-all">
-                npx wrangler pages deployment tail
-             </code>
+          <div
+            class="rounded-xl border border-black/5 bg-black/[0.02] p-4 dark:border-white/5 dark:bg-white/[0.02]"
+          >
+            <p class="mb-2 text-sm text-neutral-600 dark:text-neutral-400">
+              To view real-time logs from the Cloudflare Worker (SSR pages):
+            </p>
+            <code
+              class="block rounded bg-black/5 p-2 font-mono text-xs select-all dark:bg-white/10"
+            >
+              npx wrangler pages deployment tail
+            </code>
           </div>
         </section>
       </div>

@@ -1,17 +1,31 @@
 ---
-import cyclingDataRaw from "../data/cycling.json";
-interface RecentRide { name: string; date: string; distance: string; elevation: string; id: number; }
-interface CyclingData { year: { distance: string; elevation: string; count: number }; month: { name: string; distance: number; count: number }; recent: RecentRide[]; chart: number[]; }
+import cyclingDataRaw from '../data/cycling.json';
+interface RecentRide {
+  name: string;
+  date: string;
+  distance: string;
+  elevation: string;
+  id: number;
+}
+interface CyclingData {
+  year: { distance: string; elevation: string; count: number };
+  month: { name: string; distance: number; count: number };
+  recent: RecentRide[];
+  chart: number[];
+}
 const cyclingData = (cyclingDataRaw || {}) as CyclingData;
 const { year, month, recent, chart = [] } = cyclingData;
 const maxWeekly = Math.max(...(chart || [1]), 1);
-const currentYear = new Date().toLocaleDateString('en-US', { year: 'numeric', timeZone: 'America/New_York' });
+const currentYear = new Date().toLocaleDateString('en-US', {
+  year: 'numeric',
+  timeZone: 'America/New_York',
+});
 
 // Filter logic:
 // 1. Must have elevation (Outdoor only)
 // 2. Lowered distance threshold to 5mi to show more variety
 const filteredRides = (recent || [])
-  .filter(r => {
+  .filter((r) => {
     const elev = parseInt(r.elevation.replace(/,/g, ''));
     const dist = parseFloat(r.distance);
     return elev > 0 && dist > 5;
@@ -19,69 +33,108 @@ const filteredRides = (recent || [])
   .slice(0, 5);
 
 const formatDistance = (val: string | number | undefined) => {
-  if (val === undefined || val === null) return "0";
+  if (val === undefined || val === null) return '0';
   const s = val.toString();
   return s.endsWith('.0') ? s.slice(0, -2) : s;
 };
 ---
+
 <div class="space-y-8">
-  <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
-    <h3 class="font-semibold text-black dark:text-white text-lg">Cycling</h3>
-    <a href="https://www.strava.com/athletes/43444098" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group text-right">
-      {year?.count || 0} rides in {currentYear} <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+  <div
+    class="flex items-baseline justify-between border-b border-black/10 pb-4 dark:border-white/10"
+  >
+    <h3 class="text-lg font-semibold text-black dark:text-white">Cycling</h3>
+    <a
+      href="https://www.strava.com/athletes/43444098"
+      class="group text-right font-mono text-[9px] tracking-[0.1em] text-neutral-400 uppercase transition-colors hover:text-black dark:hover:text-white"
+    >
+      {year?.count || 0} rides in {currentYear}
+      <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
     </a>
   </div>
 
-  {chart && chart.length > 0 && (
-    <div class="group">
-      <div class="flex items-end gap-[2px] h-10 w-full">
-        {chart.map((m: number) => <div class="flex-1 bg-neutral-200 dark:bg-neutral-800 rounded-t-[1px] transition-all duration-300 group-hover:opacity-40 hover:!opacity-100 hover:bg-orange-500" style={`height: ${Math.max((m/maxWeekly)*100, 4)}%`} title={`${m} miles`} />)}
+  {
+    chart && chart.length > 0 && (
+      <div class="group">
+        <div class="flex h-10 w-full items-end gap-[2px]">
+          {chart.map((m: number) => (
+            <div
+              class="flex-1 rounded-t-[1px] bg-neutral-200 transition-all duration-300 group-hover:opacity-40 hover:bg-orange-500 hover:!opacity-100 dark:bg-neutral-800"
+              style={`height: ${Math.max((m / maxWeekly) * 100, 4)}%`}
+              title={`${m} miles`}
+            />
+          ))}
+        </div>
+        <div class="mt-2 flex justify-between border-t border-black/10 pt-1 font-mono text-[10px] tracking-widest text-neutral-400 uppercase dark:border-white/10">
+          <>
+            <span>Jan</span>
+            <span>Jun</span>
+            <span>Dec</span>
+          </>
+        </div>
       </div>
-      <div class="flex justify-between mt-2 text-[10px] font-mono text-neutral-400 uppercase tracking-widest border-t border-black/10 dark:border-white/10 pt-1">
-        <span>Jan</span><span>Jun</span><span>Dec</span>
-      </div>
-    </div>
-  )}
+    )
+  }
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+  <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
     <div class="space-y-6">
       <div>
-        <h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-3">Year to Date</h4>
+        <h4 class="mb-3 text-[10px] font-bold tracking-widest text-neutral-400 uppercase">
+          Year to Date
+        </h4>
         <div class="flex flex-col">
-          <span class="text-3xl font-mono text-black dark:text-white">
-            {formatDistance(year?.distance)}<span class="text-sm text-neutral-400 ml-1 font-sans">mi</span>
+          <span class="font-mono text-3xl text-black dark:text-white">
+            {formatDistance(year?.distance)}<span class="ml-1 font-sans text-sm text-neutral-400"
+              >mi</span
+            >
           </span>
-          <span class="text-xs text-neutral-500 mt-1">{year?.elevation || 0} vertical feet</span>
+          <span class="mt-1 text-xs text-neutral-500">{year?.elevation || 0} vertical feet</span>
         </div>
       </div>
       <div>
-        <h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-3">{month?.name}</h4>
+        <h4 class="mb-3 text-[10px] font-bold tracking-widest text-neutral-400 uppercase">
+          {month?.name}
+        </h4>
         <div class="flex flex-col">
-          <span class="text-3xl font-mono text-black dark:text-white">
-            {formatDistance(month?.distance)}<span class="text-sm text-neutral-400 ml-1 font-sans">mi</span>
+          <span class="font-mono text-3xl text-black dark:text-white">
+            {formatDistance(month?.distance)}<span class="ml-1 font-sans text-sm text-neutral-400"
+              >mi</span
+            >
           </span>
         </div>
       </div>
     </div>
     <div>
-      <h4 class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold mb-4">Recent Rides</h4>
-      {filteredRides.length > 0 ? (
-        <ul class="space-y-4">
-          {filteredRides.map((r: RecentRide) => (
-            <li class="group/ride">
-              <a href={`https://www.strava.com/activities/${r.id}`} target="_blank" class="block">
-                <div class="flex justify-between items-baseline">
-                  <span class="text-sm text-neutral-800 dark:text-neutral-200 truncate group-hover/ride:text-orange-500 transition-colors">{r.name}</span>
-                  <span class="text-[9px] font-mono text-neutral-400 shrink-0 ml-4">{r.date}</span>
-                </div>
-                <div class="text-[11px] text-neutral-500 font-mono mt-0.5">{r.distance}mi / {r.elevation}ft</div>
-              </a>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <div class="text-xs font-mono text-neutral-400 italic">No recent outdoor rides found.</div>
-      )}
+      <h4 class="mb-4 text-[10px] font-bold tracking-widest text-neutral-400 uppercase">
+        Recent Rides
+      </h4>
+      {
+        filteredRides.length > 0 ? (
+          <ul class="space-y-4">
+            {filteredRides.map((r: RecentRide) => (
+              <li class="group/ride">
+                <a href={`https://www.strava.com/activities/${r.id}`} target="_blank" class="block">
+                  <div class="flex items-baseline justify-between">
+                    <span class="truncate text-sm text-neutral-800 transition-colors group-hover/ride:text-orange-500 dark:text-neutral-200">
+                      {r.name}
+                    </span>
+                    <span class="ml-4 shrink-0 font-mono text-[9px] text-neutral-400">
+                      {r.date}
+                    </span>
+                  </div>
+                  <div class="mt-0.5 font-mono text-[11px] text-neutral-500">
+                    {r.distance}mi / {r.elevation}ft
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div class="font-mono text-xs text-neutral-400 italic">
+            No recent outdoor rides found.
+          </div>
+        )
+      }
     </div>
   </div>
 </div>

@@ -1,40 +1,49 @@
 ---
-import Link from "@components/Link.astro";
+import Link from '@components/Link.astro';
 
 const { recipes } = Astro.props;
 ---
 
 <section class="animate space-y-6" data-testid="recipes-section">
-  <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
-    <h3 class="font-semibold text-black dark:text-white text-lg">Recipes</h3>
-    <Link href="/recipes/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
-      See All Recipes <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+  <div
+    class="flex items-baseline justify-between border-b border-black/10 pb-4 dark:border-white/10"
+  >
+    <h3 class="text-lg font-semibold text-black dark:text-white">Recipes</h3>
+    <Link
+      href="/recipes/"
+      class="group font-mono text-[9px] tracking-[0.1em] text-neutral-400 uppercase transition-colors hover:text-black dark:hover:text-white"
+    >
+      See All Recipes <span class="inline-block transition-transform group-hover:translate-x-0.5"
+        >→</span
+      >
     </Link>
   </div>
 
-  <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-    {recipes.map((recipe) => (
-      <a 
-        href={`/recipes/${recipe.slug}/`}
-        class="group relative aspect-square overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-800"
-      >
-        {recipe.data.coverPhoto ? (
-          <img 
-            src={recipe.data.coverPhoto} 
-            alt={recipe.data.title}
-            class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        ) : (
-          <div class="absolute inset-0 bg-gradient-to-br from-neutral-200 to-neutral-300 dark:from-neutral-700 dark:to-neutral-800 transition-transform duration-500 group-hover:scale-105" />
-        )}
-        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-        
-        <div class="absolute bottom-0 left-0 p-4 w-full">
-          <p class="text-white font-medium text-sm leading-tight line-clamp-3 group-hover:underline decoration-white/50 underline-offset-2">
-            {recipe.data.title}
-          </p>
-        </div>
-      </a>
-    ))}
+  <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+    {
+      recipes.map((recipe) => (
+        <a
+          href={`/recipes/${recipe.slug}/`}
+          class="group relative aspect-square overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-800"
+        >
+          {recipe.data.coverPhoto ? (
+            <img
+              src={recipe.data.coverPhoto}
+              alt={recipe.data.title}
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
+            <div class="absolute inset-0 bg-gradient-to-br from-neutral-200 to-neutral-300 transition-transform duration-500 group-hover:scale-105 dark:from-neutral-700 dark:to-neutral-800" />
+          )}
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+          <div class="absolute bottom-0 left-0 w-full p-4">
+            <p class="line-clamp-3 text-sm leading-tight font-medium text-white decoration-white/50 underline-offset-2 group-hover:underline">
+              {recipe.data.title}
+            </p>
+          </div>
+        </a>
+      ))
+    }
   </div>
 </section>

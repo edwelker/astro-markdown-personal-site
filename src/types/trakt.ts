@@ -1,7 +1,7 @@
 export interface TraktRating {
   rated_at: string;
   rating: number;
-  type: "movie" | "show" | "episode";
+  type: 'movie' | 'show' | 'episode';
   poster?: string;
   movie?: {
     title: string;

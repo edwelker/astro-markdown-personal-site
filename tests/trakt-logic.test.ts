@@ -3,7 +3,7 @@ import { filterRatings, getDirectorSpotlight, mapTopLists } from '../src/lib/tra
 import type { RatingItem, DirectorInfo } from '../src/components/trakt/types';
 
 // Helper to create a mock rating item
-const mockItem = (id: string, rating: number, director: string = "Unknown"): RatingItem => ({
+const mockItem = (id: string, rating: number, director: string = 'Unknown'): RatingItem => ({
   id,
   title: `Movie ${id}`,
   year: 2020,
@@ -11,7 +11,7 @@ const mockItem = (id: string, rating: number, director: string = "Unknown"): Rat
   director,
   directorId: 123,
   href: `http://example.com/${id}`,
-  poster: `img-${id}.jpg`
+  poster: `img-${id}.jpg`,
 });
 
 describe('Trakt Logic', () => {
@@ -30,7 +30,7 @@ describe('Trakt Logic', () => {
       const result = filterRatings(ratings);
       expect(result.tens).toHaveLength(1);
       expect(result.tens[0].id).toBe('1');
-      
+
       expect(result.nines).toHaveLength(1);
       expect(result.nines[0].id).toBe('2');
 
@@ -40,7 +40,7 @@ describe('Trakt Logic', () => {
 
     it('reverses mid and low quality lists', () => {
       const result = filterRatings(ratings);
-      
+
       // Mid: 7, 6. Reversed: 6, 7 (IDs 5, 4)
       expect(result.midQuality).toHaveLength(2);
       expect(result.midQuality[0].id).toBe('5');
@@ -62,58 +62,61 @@ describe('Trakt Logic', () => {
 
   describe('getDirectorSpotlight', () => {
     const directors: [string, DirectorInfo][] = [
-      ["Nolan", { count: 5, id: 101 }],
-      ["Spielberg", { count: 3, id: 102 }]
+      ['Nolan', { count: 5, id: 101 }],
+      ['Spielberg', { count: 3, id: 102 }],
     ];
 
     it('selects the top director', () => {
       const ratings = [
-        mockItem('1', 10, "Nolan"),
-        mockItem('2', 8, "Nolan"),
-        mockItem('3', 10, "Spielberg"),
+        mockItem('1', 10, 'Nolan'),
+        mockItem('2', 8, 'Nolan'),
+        mockItem('3', 10, 'Spielberg'),
       ];
-      
+
       const result = getDirectorSpotlight(ratings, directors);
-      expect(result.topDirectorName).toBe("Nolan");
+      expect(result.topDirectorName).toBe('Nolan');
       expect(result.topDirectorId).toBe(101);
     });
 
     it('filters spotlight items to only include ratings >= 9', () => {
       const ratings = [
-        mockItem('1', 10, "Nolan"), // Include
-        mockItem('2', 9, "Nolan"),  // Include
-        mockItem('3', 8, "Nolan"),  // Exclude (< 9)
+        mockItem('1', 10, 'Nolan'), // Include
+        mockItem('2', 9, 'Nolan'), // Include
+        mockItem('3', 8, 'Nolan'), // Exclude (< 9)
       ];
-      
+
       const result = getDirectorSpotlight(ratings, directors);
       expect(result.directorSpotlight).toHaveLength(2);
-      expect(result.directorSpotlight.map(r => r.rating)).toEqual([10, 9]);
+      expect(result.directorSpotlight.map((r) => r.rating)).toEqual([10, 9]);
     });
 
     it('handles empty director lists gracefully', () => {
       const result = getDirectorSpotlight([], []);
-      expect(result.topDirectorName).toBe("");
+      expect(result.topDirectorName).toBe('');
       expect(result.directorSpotlight).toHaveLength(0);
     });
   });
 
   describe('mapTopLists', () => {
     it('formats genres and directors correctly', () => {
-      const genres: [string, number][] = [["Action", 10], ["Drama", 5]];
-      const directors: [string, DirectorInfo][] = [["Nolan", { count: 5, id: 1 }]];
-      
-      const result = mapTopLists(genres, directors, "testuser");
-      
+      const genres: [string, number][] = [
+        ['Action', 10],
+        ['Drama', 5],
+      ];
+      const directors: [string, DirectorInfo][] = [['Nolan', { count: 5, id: 1 }]];
+
+      const result = mapTopLists(genres, directors, 'testuser');
+
       expect(result.topGenres[0]).toEqual({
-        label: "Action",
+        label: 'Action',
         count: 10,
-        href: "https://trakt.tv/users/testuser/history/movies/added?genres=action"
+        href: 'https://trakt.tv/users/testuser/history/movies/added?genres=action',
       });
 
       expect(result.topDirectors[0]).toEqual({
-        label: "Nolan",
+        label: 'Nolan',
         count: 5,
-        href: "https://www.google.com/search?q=Nolan+director"
+        href: 'https://www.google.com/search?q=Nolan+director',
       });
     });
   });

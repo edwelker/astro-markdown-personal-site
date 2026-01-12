@@ -30,23 +30,23 @@ test('Content files should not contain insecure HTTP links (excluding code block
 
   for (const file of files) {
     const content = fs.readFileSync(file, 'utf-8');
-    
+
     // Split by code blocks to ignore them.
     // The regex matches ```...``` including newlines.
     const parts = content.split(/```[\s\S]*?```/g);
-    
+
     parts.forEach((part) => {
       const httpRegex = /http:\/\//g;
       let match;
       while ((match = httpRegex.exec(part)) !== null) {
-          const start = Math.max(0, match.index - 30);
-          const end = Math.min(part.length, match.index + 50);
-          const context = part.substring(start, end).replace(/\n/g, ' ');
-          
-          errors.push({
-            file: path.relative(process.cwd(), file),
-            context: context.trim()
-          });
+        const start = Math.max(0, match.index - 30);
+        const end = Math.min(part.length, match.index + 50);
+        const context = part.substring(start, end).replace(/\n/g, ' ');
+
+        errors.push({
+          file: path.relative(process.cwd(), file),
+          context: context.trim(),
+        });
       }
     });
   }

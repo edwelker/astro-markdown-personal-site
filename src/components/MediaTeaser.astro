@@ -1,22 +1,38 @@
 ---
-import traktData from "../data/trakt.json";
+import traktData from '../data/trakt.json';
 const recentlyRated = (traktData?.allRatings || []).slice(0, 8);
 ---
+
 <section class="animate space-y-4">
-  <div class="flex items-center justify-between pb-4 border-b border-black/10 dark:border-white/10">
-    <h3 class="font-semibold text-black dark:text-white text-lg">Recent Movies & TV</h3>
-    <a href="/media/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
-      Full media stats<span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+  <div class="flex items-center justify-between border-b border-black/10 pb-4 dark:border-white/10">
+    <h3 class="text-lg font-semibold text-black dark:text-white">Recent Movies & TV</h3>
+    <a
+      href="/media/"
+      class="group font-mono text-[9px] tracking-[0.1em] text-neutral-400 uppercase transition-colors hover:text-black dark:hover:text-white"
+    >
+      Full media stats<span class="inline-block transition-transform group-hover:translate-x-0.5"
+        >→</span
+      >
     </a>
   </div>
-  <div class="grid grid-cols-4 sm:grid-cols-8 gap-2">
-    {recentlyRated.map((item) => (
-      <a href={item.href} target="_blank" class="group relative aspect-[2/3] overflow-hidden rounded-md border border-black/10 dark:border-white/10 bg-neutral-100 dark:bg-neutral-900 shadow-sm transition-transform hover:scale-105">
-        <img src={item.poster} alt={item.title} class="absolute inset-0 h-full w-full object-cover block m-0 p-0" />
-        <div class="absolute bottom-1 right-1 rounded bg-black/70 backdrop-blur-md px-1 py-0.5 text-[10px] font-bold text-white z-10 border border-white/10 flex items-center gap-0.5">
-          {item.rating} <span class="text-orange-500 font-normal">★</span>
-        </div>
-      </a>
-    ))}
+  <div class="grid grid-cols-4 gap-2 sm:grid-cols-8">
+    {
+      recentlyRated.map((item) => (
+        <a
+          href={item.href}
+          target="_blank"
+          class="group relative aspect-[2/3] overflow-hidden rounded-md border border-black/10 bg-neutral-100 shadow-sm transition-transform hover:scale-105 dark:border-white/10 dark:bg-neutral-900"
+        >
+          <img
+            src={item.poster}
+            alt={item.title}
+            class="absolute inset-0 m-0 block h-full w-full object-cover p-0"
+          />
+          <div class="absolute right-1 bottom-1 z-10 flex items-center gap-0.5 rounded border border-white/10 bg-black/70 px-1 py-0.5 text-[10px] font-bold text-white backdrop-blur-md">
+            {item.rating} <span class="font-normal text-orange-500">★</span>
+          </div>
+        </a>
+      ))
+    }
   </div>
 </section>

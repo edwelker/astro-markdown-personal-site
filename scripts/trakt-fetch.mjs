@@ -14,20 +14,21 @@ export async function enrichItem(item, { cache, apiKey }) {
 
   const tmdbId = item.movie?.ids?.tmdb || item.show?.ids?.tmdb;
   const type = item.movie ? 'movie' : 'tv';
-  let poster = null, director = "Unknown";
+  let poster = null,
+    director = 'Unknown';
 
   if (tmdbId) {
     try {
       const [tRes, cRes] = await Promise.all([
         fetchOrThrow(`https://api.themoviedb.org/3/${type}/${tmdbId}?api_key=${apiKey}`),
-        fetchOrThrow(`https://api.themoviedb.org/3/${type}/${tmdbId}/credits?api_key=${apiKey}`)
+        fetchOrThrow(`https://api.themoviedb.org/3/${type}/${tmdbId}/credits?api_key=${apiKey}`),
       ]);
-      
+
       const tData = await tRes.json();
       const cData = await cRes.json();
-      
+
       poster = tData.poster_path ? `https://image.tmdb.org/t/p/w500${tData.poster_path}` : null;
-      director = cData.crew?.find(c => c.job === 'Director')?.name || "Unknown";
+      director = cData.crew?.find((c) => c.job === 'Director')?.name || 'Unknown';
     } catch (err) {
       console.warn(`⚠️ TMDB enrichment failed for ${type} id ${tmdbId}`);
     }
@@ -38,67 +39,86 @@ export async function enrichItem(item, { cache, apiKey }) {
 export async function fetchAndEnrichTraktData({ clientId, username, tmdbApiKey, dataPath }) {
   const existingRaw = await fs.readFile(dataPath, 'utf-8').catch(() => '{"allRatings":[]}');
   const existing = JSON.parse(existingRaw);
-  const flatExisting = Array.isArray(existing.allRatings) ? existing.allRatings : (existing.allRatings?.allRatings || []);
-  const cache = new Map(flatExisting.map(r => [r.imdbId, r]));
+  const flatExisting = Array.isArray(existing.allRatings)
+    ? existing.allRatings
+    : existing.allRatings?.allRatings || [];
+  const cache = new Map(flatExisting.map((r) => [r.imdbId, r]));
 
   const headers = {
     'Content-Type': 'application/json',
     'trakt-api-version': '2',
-    'trakt-api-key': clientId
+    'trakt-api-key': clientId,
   };
-  
+
   console.log('... Fetching Trakt ratings...');
   const [mRes, sRes] = await Promise.all([
-    fetchOrThrow(`https://api.trakt.tv/users/${username}/ratings/movies?limit=1000&extended=full`, { headers }),
-    fetchOrThrow(`https://api.trakt.tv/users/${username}/ratings/shows?limit=1000&extended=full`, { headers })
+    fetchOrThrow(`https://api.trakt.tv/users/${username}/ratings/movies?limit=1000&extended=full`, {
+      headers,
+    }),
+    fetchOrThrow(`https://api.trakt.tv/users/${username}/ratings/shows?limit=1000&extended=full`, {
+      headers,
+    }),
   ]);
-  
-  const raw = [...await mRes.json(), ...await sRes.json()];
-  
+
+  const raw = [...(await mRes.json()), ...(await sRes.json())];
+
   console.log(`... Enriching ${raw.length} items with TMDB data...`);
-  return mapConcurrent(raw, CONCURRENCY_LIMIT, (item) => enrichItem(item, { cache, apiKey: tmdbApiKey }));
+  return mapConcurrent(raw, CONCURRENCY_LIMIT, (item) =>
+    enrichItem(item, { cache, apiKey: tmdbApiKey })
+  );
 }
 
 export function transformAndAggregateTraktData(enriched, { username }) {
   const allRatings = transformTraktData(enriched);
-  const genreMap = {}, decadeStats = {}, directorMap = {};
+  const genreMap = {},
+    decadeStats = {},
+    directorMap = {};
 
-  enriched.forEach(item => {
+  enriched.forEach((item) => {
     const year = item.year || item.movie?.year || item.show?.year;
     if (year) {
       const decade = Math.floor(year / 10) * 10;
       if (!decadeStats[decade]) decadeStats[decade] = { count: 0, sum: 0 };
-      decadeStats[decade].count++; 
+      decadeStats[decade].count++;
       decadeStats[decade].sum += item.rating;
     }
-    if (item.director && item.director !== "Unknown") {
+    if (item.director && item.director !== 'Unknown') {
       directorMap[item.director] = (directorMap[item.director] || 0) + 1;
     }
-    (item.movie?.genres || item.show?.genres || []).forEach(g => {
+    (item.movie?.genres || item.show?.genres || []).forEach((g) => {
       genreMap[g] = (genreMap[g] || 0) + 1;
     });
   });
 
   return {
     allRatings,
-    genres: Object.entries(genreMap).sort((a,b) => b[1] - a[1]).slice(0, 10),
-    directors: Object.entries(directorMap).sort((a,b) => b[1] - a[1]).slice(0, 10),
-    sparkline: Object.entries(decadeStats).map(([d, v]) => ({
-      decade: Number(d),
-      score: (v.sum / v.count).toFixed(2),
-      volume: v.count
-    })).sort((a,b) => a.decade - b.decade),
-    username: username || "ewelker",
-    lastUpdated: new Date().toISOString()
+    genres: Object.entries(genreMap)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10),
+    directors: Object.entries(directorMap)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10),
+    sparkline: Object.entries(decadeStats)
+      .map(([d, v]) => ({
+        decade: Number(d),
+        score: (v.sum / v.count).toFixed(2),
+        volume: v.count,
+      }))
+      .sort((a, b) => a.decade - b.decade),
+    username: username || 'ewelker',
+    lastUpdated: new Date().toISOString(),
   };
 }
 
 export async function run() {
-  const creds = validateEnv({
-    clientId: 'TRAKT_CLIENT_ID',
-    username: 'TRAKT_USERNAME',
-    tmdbApiKey: 'TMDB_API_KEY'
-  }, 'Trakt or TMDB');
+  const creds = validateEnv(
+    {
+      clientId: 'TRAKT_CLIENT_ID',
+      username: 'TRAKT_USERNAME',
+      tmdbApiKey: 'TMDB_API_KEY',
+    },
+    'Trakt or TMDB'
+  );
 
   const outFile = 'src/data/trakt.json';
   // Use the committed cache file to seed the enrichment process
@@ -106,15 +126,24 @@ export async function run() {
 
   await runETL({
     name: 'Trakt',
-    fetcher: () => fetchAndEnrichTraktData({
-      ...creds,
-      dataPath: cacheFile
-    }),
-    transform: (data) => transformAndAggregateTraktData(data, { 
-      username: creds.username 
-    }),
+    fetcher: () =>
+      fetchAndEnrichTraktData({
+        ...creds,
+        dataPath: cacheFile,
+      }),
+    transform: (data) =>
+      transformAndAggregateTraktData(data, {
+        username: creds.username,
+      }),
     outFile: outFile,
-    defaultData: { allRatings: [], genres: [], directors: [], sparkline: [], username: "ewelker", lastUpdated: "never" }
+    defaultData: {
+      allRatings: [],
+      genres: [],
+      directors: [],
+      sparkline: [],
+      username: 'ewelker',
+      lastUpdated: 'never',
+    },
   });
 }
 

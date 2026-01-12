@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ astro ]
+    branches: [astro]
   pull_request:
-    branches: [ astro ]
+    branches: [astro]
 
 jobs:
   test-and-audit:

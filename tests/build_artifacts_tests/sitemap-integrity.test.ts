@@ -9,11 +9,12 @@ describe.skipIf(!distExists)('Sitemap & Page Integrity', () => {
   it('should verify all sitemap URLs exist as valid HTML files', () => {
     // Find sitemap files
     let sitemapFiles: string[] = [];
-    
+
     if (fs.existsSync(distDir)) {
-      sitemapFiles = fs.readdirSync(distDir)
-        .filter(f => f.startsWith('sitemap-') && f.endsWith('.xml') && f !== 'sitemap-index.xml')
-        .map(f => path.join(distDir, f));
+      sitemapFiles = fs
+        .readdirSync(distDir)
+        .filter((f) => f.startsWith('sitemap-') && f.endsWith('.xml') && f !== 'sitemap-index.xml')
+        .map((f) => path.join(distDir, f));
     }
 
     // Fallback for simple sitemap
@@ -28,7 +29,7 @@ describe.skipIf(!distExists)('Sitemap & Page Integrity', () => {
       const content = fs.readFileSync(file, 'utf-8');
       const matches = content.match(/<loc>(.*?)<\/loc>/g);
       if (matches) {
-        urls.push(...matches.map(m => m.replace(/<\/?loc>/g, '')));
+        urls.push(...matches.map((m) => m.replace(/<\/?loc>/g, '')));
       }
     }
 
@@ -37,14 +38,14 @@ describe.skipIf(!distExists)('Sitemap & Page Integrity', () => {
     // Define routes that are server-side rendered and won't exist as static files
     const ssrRoutes = new Set(['/sports/', '/sports']);
 
-    urls.forEach(url => {
+    urls.forEach((url) => {
       const urlObj = new URL(url);
       const pathname = decodeURIComponent(urlObj.pathname);
-      
+
       if (ssrRoutes.has(pathname)) return;
 
       let possiblePaths: string[] = [];
-      
+
       if (pathname === '/' || pathname === '') {
         possiblePaths.push(path.join(distDir, 'index.html'));
       } else if (pathname.endsWith('/')) {
@@ -56,8 +57,8 @@ describe.skipIf(!distExists)('Sitemap & Page Integrity', () => {
         possiblePaths.push(path.join(distDir, `${pathname}.html`));
       }
 
-      const actualPath = possiblePaths.find(p => fs.existsSync(p));
-      
+      const actualPath = possiblePaths.find((p) => fs.existsSync(p));
+
       // 1. Existence Check
       expect(actualPath, `Route ${pathname} (from ${url}) should exist on disk.`).toBeDefined();
 
@@ -66,12 +67,15 @@ describe.skipIf(!distExists)('Sitemap & Page Integrity', () => {
         const content = fs.readFileSync(actualPath, 'utf-8');
 
         // 2. Size Check (Ensure pages aren't empty/truncated)
-        expect(stats.size, `Page ${pathname} is suspiciously small (${stats.size} bytes)`).toBeGreaterThan(500);
+        expect(
+          stats.size,
+          `Page ${pathname} is suspiciously small (${stats.size} bytes)`
+        ).toBeGreaterThan(500);
 
         // 3. Content Smoke Test (Ensure basic HTML structure is present)
         // We check for doctype as a reliable indicator of an HTML build artifact.
-        // We avoid checking for <title> or </html> here as some pages (like redirects 
-        // or minimal archives) might have unusual head/body structures that 
+        // We avoid checking for <title> or </html> here as some pages (like redirects
+        // or minimal archives) might have unusual head/body structures that
         // cause false positives in simple string matching.
         expect(content, `Page ${pathname} is missing doctype`).toContain('<!DOCTYPE html>');
       }

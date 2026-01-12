@@ -1,8 +1,8 @@
 ---
 // src/layouts/PostLayout.astro (Based on your working PageLayout)
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/Container.astro";
-import BlogFeaturedImage from "@components/BlogFeaturedImage.astro";
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
+import BlogFeaturedImage from '@components/BlogFeaturedImage.astro';
 
 // Make sure this is present to access the frontmatter:
 const { frontmatter } = Astro.props;
@@ -10,22 +10,22 @@ const { frontmatter } = Astro.props;
 
 <Layout title={frontmatter.title} description={frontmatter.description}>
   <Container>
-    <article class="space-y-4 prose prose-neutral dark:prose-invert max-w-none">
+    <article class="prose prose-neutral dark:prose-invert max-w-none space-y-4">
+      <header>
+        <h1 class="mb-4 text-3xl">{frontmatter.title}</h1>
 
-        <header>
-            <h1 class="text-3xl mb-4">{frontmatter.title}</h1>
+        {
+          frontmatter.coverImage && (
+            <BlogFeaturedImage
+              coverImage={frontmatter.coverImage}
+              alt={frontmatter.coverImageAlt}
+              title={frontmatter.title}
+            />
+          )
+        }
+      </header>
 
-            {frontmatter.coverImage && (
-                <BlogFeaturedImage 
-                    coverImage={frontmatter.coverImage} 
-                    alt={frontmatter.coverImageAlt}
-                    title={frontmatter.title}
-                />
-            )}
-        </header>
-
-        <slot />
-
+      <slot />
     </article>
   </Container>
 </Layout>

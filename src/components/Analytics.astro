@@ -8,12 +8,13 @@ const GA_MEASUREMENT_ID = 'G-19CWWGK0FL';
   is:inline
   async
   type="text/partytown"
-  src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-></script>
+  src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
 
 <script is:inline type="text/partytown" define:vars={{ GA_MEASUREMENT_ID }}>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() {
+    dataLayer.push(arguments);
+  }
   gtag('js', new Date());
   gtag('config', GA_MEASUREMENT_ID);
 </script>

@@ -2,53 +2,61 @@
 const { item } = Astro.props;
 
 function formatRelativeTime(dateInput) {
-    if (!dateInput) return '';
-    const date = new Date(dateInput);
-    if (isNaN(date.getTime())) return '';
+  if (!dateInput) return '';
+  const date = new Date(dateInput);
+  if (isNaN(date.getTime())) return '';
 
-    const now = new Date();
-    const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
-    const diffInDays = Math.floor(diffInSeconds / 86400);
+  const now = new Date();
+  const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+  const diffInDays = Math.floor(diffInSeconds / 86400);
 
-    if (diffInDays === 0) {
-        return 'Today';
-    } else if (diffInDays === 1) {
-        return 'Yesterday';
-    } else {
-        return `${diffInDays} days ago`;
-    }
+  if (diffInDays === 0) {
+    return 'Today';
+  } else if (diffInDays === 1) {
+    return 'Yesterday';
+  } else {
+    return `${diffInDays} days ago`;
+  }
 }
 
 function decodeHtmlEntities(str) {
-    if (!str) return "";
-    return str.replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(dec))
-              .replace(/&#x([0-9a-fA-F]+);/g, (match, hex) => String.fromCharCode(parseInt(hex, 16)))
-              .replace(/&quot;/g, '"')
-              .replace(/&apos;/g, "'")
-              .replace(/&amp;/g, '&')
-              .replace(/&lt;/g, '<')
-              .replace(/&gt;/g, '>');
+  if (!str) return '';
+  return str
+    .replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(dec))
+    .replace(/&#x([0-9a-fA-F]+);/g, (match, hex) => String.fromCharCode(parseInt(hex, 16)))
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
 }
 
 function getSourceDomain(url) {
-    try {
-        const domain = new URL(url).hostname;
-        return domain.replace('www.', '');
-    } catch (e) {
-        return '';
-    }
+  try {
+    const domain = new URL(url).hostname;
+    return domain.replace('www.', '');
+  } catch (e) {
+    return '';
+  }
 }
 ---
 
 <li>
-    <a href={decodeHtmlEntities(item.url)} target="_blank" rel="noopener noreferrer" class="block w-full group">
-        <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
-            {decodeHtmlEntities(item.title)}
-        </h3>
-    </a>
-    <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-        <span>{formatRelativeTime(item.date)}</span>
-        <span class="text-neutral-300 dark:text-neutral-700">•</span>
-        <span class="text-neutral-400">{getSourceDomain(decodeHtmlEntities(item.url))}</span>
-    </div>
+  <a
+    href={decodeHtmlEntities(item.url)}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="group block w-full"
+  >
+    <h3
+      class="text-sm leading-tight font-medium text-neutral-900 transition-colors group-hover:text-blue-600 dark:text-neutral-100 dark:group-hover:text-blue-400"
+    >
+      {decodeHtmlEntities(item.title)}
+    </h3>
+  </a>
+  <div class="mt-1 flex items-center gap-3 font-mono text-xs text-neutral-500">
+    <span>{formatRelativeTime(item.date)}</span>
+    <span class="text-neutral-300 dark:text-neutral-700">•</span>
+    <span class="text-neutral-400">{getSourceDomain(decodeHtmlEntities(item.url))}</span>
+  </div>
 </li>

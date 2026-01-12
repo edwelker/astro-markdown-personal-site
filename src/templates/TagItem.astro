@@ -1,12 +1,12 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/Container.astro";
-import Link from "@components/Link.astro";
-import BlogItem from "@components/BlogItem.astro";
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
+import Link from '@components/Link.astro';
+import BlogItem from '@components/BlogItem.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
 
   // Get unique tags
   const tags = [...new Set(posts.flatMap((post) => post.data.tags || []))];
@@ -16,9 +16,7 @@ export async function getStaticPaths() {
     const taggedPosts = posts.filter((post) => post.data.tags?.includes(tag));
 
     // Sort by date, most recent first
-    taggedPosts.sort(
-      (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-    );
+    taggedPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
     return {
       params: { tag },
@@ -32,7 +30,7 @@ const { posts } = Astro.props;
 
 // Group posts by year
 type Acc = {
-  [year: string]: CollectionEntry<"blog">[];
+  [year: string]: CollectionEntry<'blog'>[];
 };
 
 const postsByYear = posts.reduce((acc: Acc, post) => {
@@ -47,29 +45,34 @@ const years = Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a))
 
 <Layout title={`Topic: ${tag}`} description={`Posts with the topic: ${tag}`}>
   <Container>
-    <div class="flex justify-between items-baseline mb-8">
-      <h1 class="font-semibold text-2xl text-black dark:text-white capitalize">#{tag}</h1>
-      <Link href="/tags/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-500 hover:text-black dark:hover:text-white transition-colors">
+    <div class="mb-8 flex items-baseline justify-between">
+      <h1 class="text-2xl font-semibold text-black capitalize dark:text-white">#{tag}</h1>
+      <Link
+        href="/tags/"
+        class="font-mono text-[9px] tracking-[0.1em] text-neutral-500 uppercase transition-colors hover:text-black dark:hover:text-white"
+      >
         View all topics &rarr;
       </Link>
     </div>
-    
+
     <div class="space-y-10" data-pagefind-ignore>
       <div class="space-y-8">
-        {years.map((year) => (
-          <section class="animate space-y-4">
-            <div class="font-semibold text-black dark:text-white border-b border-black/5 dark:border-white/5 pb-2">
-              {year}
-            </div>
-            <div>
-              <ul class="not-prose flex flex-col gap-2">
-                {postsByYear[year].map((post) => (
-                  <BlogItem post={post} />
-                ))}
-              </ul>
-            </div>
-          </section>
-        ))}
+        {
+          years.map((year) => (
+            <section class="animate space-y-4">
+              <div class="border-b border-black/5 pb-2 font-semibold text-black dark:border-white/5 dark:text-white">
+                {year}
+              </div>
+              <div>
+                <ul class="not-prose flex flex-col gap-2">
+                  {postsByYear[year].map((post) => (
+                    <BlogItem post={post} />
+                  ))}
+                </ul>
+              </div>
+            </section>
+          ))
+        }
       </div>
     </div>
   </Container>

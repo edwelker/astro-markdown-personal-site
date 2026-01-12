@@ -18,7 +18,7 @@ describe('Trakt Logic: transformTraktData', () => {
           ids: { trakt: 1, imdb: 'tt0133093', slug: 'the-matrix-1999' },
         },
         poster: 'poster1.jpg',
-        director: 'Wachowskis'
+        director: 'Wachowskis',
       },
       {
         rating: 10,
@@ -28,7 +28,7 @@ describe('Trakt Logic: transformTraktData', () => {
           ids: { trakt: 2, imdb: 'tt0903747', slug: 'breaking-bad-2008' },
         },
         poster: 'poster2.jpg',
-        director: 'Vince Gilligan'
+        director: 'Vince Gilligan',
       },
       // Item with missing optional data
       {
@@ -37,8 +37,8 @@ describe('Trakt Logic: transformTraktData', () => {
           title: 'Indie Film',
           year: 2021,
           ids: { trakt: 3, imdb: 'tt1234567' },
-        }
-      }
+        },
+      },
     ];
 
     const result = transformTraktData(mockRatings);
@@ -53,7 +53,7 @@ describe('Trakt Logic: transformTraktData', () => {
       type: 'movie',
       href: 'https://trakt.tv/movies/the-matrix-1999',
       poster: 'poster1.jpg',
-      director: 'Wachowskis'
+      director: 'Wachowskis',
     });
     expect(result[1]).toEqual({
       id: 2,
@@ -64,7 +64,7 @@ describe('Trakt Logic: transformTraktData', () => {
       type: 'show',
       href: 'https://trakt.tv/shows/breaking-bad-2008',
       poster: 'poster2.jpg',
-      director: 'Vince Gilligan'
+      director: 'Vince Gilligan',
     });
     expect(result[2]).toEqual({
       id: 3,
@@ -75,7 +75,7 @@ describe('Trakt Logic: transformTraktData', () => {
       type: 'movie',
       href: 'https://trakt.tv/movies/',
       poster: '',
-      director: 'Unknown'
+      director: 'Unknown',
     });
   });
 });

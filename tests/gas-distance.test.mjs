@@ -14,12 +14,12 @@ describe('Gas Distance - getStationsToFetch', () => {
   it('should return stations with valid coordinates that are not known', () => {
     const knownDistances = { '2 Broad St': { duration: 100, distance: 5 } };
     const result = getStationsToFetch(testStations, knownDistances);
-    expect(result.map(r => r.Station)).toEqual(['A', 'E']);
+    expect(result.map((r) => r.Station)).toEqual(['A', 'E']);
   });
 
   it('should handle an empty knownDistances object', () => {
     const result = getStationsToFetch(testStations, {});
-    expect(result.map(r => r.Station)).toEqual(['A', 'B', 'E']);
+    expect(result.map((r) => r.Station)).toEqual(['A', 'B', 'E']);
   });
 
   it('should return an empty array if all valid stations are known', () => {
@@ -39,7 +39,7 @@ describe('Gas Distance - getStationsToFetch', () => {
       { Station: 'C', Address: '1 Main St', lat: '40.7128', lng: '-74.0060' }, // Duplicate of A
     ];
     const result = getStationsToFetch(stationsWithDuplicates, {});
-    expect(result.map(r => r.Station)).toEqual(['A', 'B']);
+    expect(result.map((r) => r.Station)).toEqual(['A', 'B']);
   });
 
   it('should handle an empty station list', () => {
@@ -80,10 +80,11 @@ describe('Gas Distance - calculateDistances', () => {
     );
     fetch.mockResolvedValue({
       ok: true,
-      json: () => Promise.resolve({
-        durations: [[120, 240]],
-        distances: [[1.5, 3.0]],
-      }),
+      json: () =>
+        Promise.resolve({
+          durations: [[120, 240]],
+          distances: [[1.5, 3.0]],
+        }),
     });
 
     const distancesObj = {};
@@ -94,23 +95,29 @@ describe('Gas Distance - calculateDistances', () => {
       uiCallbacks: mockUiCallbacks,
     });
 
-    expect(mockUiCallbacks.setStatus).toHaveBeenCalledWith("Waiting for location permission...", true);
-    expect(mockUiCallbacks.setStatus).toHaveBeenCalledWith("Calculating driving times... 2/2", true);
-    expect(mockUiCallbacks.setButtonState).toHaveBeenCalledWith("Calculating...", true);
-    expect(mockUiCallbacks.setButtonState).toHaveBeenCalledWith("Calculate Driving Times", false);
+    expect(mockUiCallbacks.setStatus).toHaveBeenCalledWith(
+      'Waiting for location permission...',
+      true
+    );
+    expect(mockUiCallbacks.setStatus).toHaveBeenCalledWith(
+      'Calculating driving times... 2/2',
+      true
+    );
+    expect(mockUiCallbacks.setButtonState).toHaveBeenCalledWith('Calculating...', true);
+    expect(mockUiCallbacks.setButtonState).toHaveBeenCalledWith('Calculate Driving Times', false);
     expect(mockUiCallbacks.updateTable).toHaveBeenCalled();
     expect(mockUiCallbacks.alert).not.toHaveBeenCalled();
 
     expect(result.newDistances['1 Main St']).toBeDefined();
     expect(result.newUserCoords).toEqual({ lat: 40, lon: -75 });
-    
+
     // Verify mutation of input object
     expect(distancesObj['1 Main St']).toBeDefined();
   });
 
   it('should handle geolocation failure', async () => {
     navigator.geolocation.getCurrentPosition.mockImplementationOnce((_, error) =>
-      error(new Error("Permission denied"))
+      error(new Error('Permission denied'))
     );
 
     const result = await calculateDistances({
@@ -120,7 +127,9 @@ describe('Gas Distance - calculateDistances', () => {
       uiCallbacks: mockUiCallbacks,
     });
 
-    expect(mockUiCallbacks.alert).toHaveBeenCalledWith("Unable to get your location. Please ensure location services are enabled and try again.");
+    expect(mockUiCallbacks.alert).toHaveBeenCalledWith(
+      'Unable to get your location. Please ensure location services are enabled and try again.'
+    );
     expect(fetch).not.toHaveBeenCalled();
     expect(result).toBeNull();
   });
@@ -142,7 +151,9 @@ describe('Gas Distance - calculateDistances', () => {
       uiCallbacks: mockUiCallbacks,
     });
 
-    expect(mockUiCallbacks.alert).toHaveBeenCalledWith("Failed to calculate driving times: Server Error. Check console for details.");
+    expect(mockUiCallbacks.alert).toHaveBeenCalledWith(
+      'Failed to calculate driving times: Server Error. Check console for details.'
+    );
   });
 
   it('should show an alert if no stations have valid coordinates to fetch', async () => {
@@ -154,7 +165,9 @@ describe('Gas Distance - calculateDistances', () => {
       uiCallbacks: mockUiCallbacks,
     });
 
-    expect(mockUiCallbacks.alert).toHaveBeenCalledWith("No location data found for these stations. Driving times cannot be calculated.");
+    expect(mockUiCallbacks.alert).toHaveBeenCalledWith(
+      'No location data found for these stations. Driving times cannot be calculated.'
+    );
     expect(fetch).not.toHaveBeenCalled();
   });
 });

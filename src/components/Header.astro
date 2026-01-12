@@ -1,14 +1,12 @@
 ---
-import Container from "@components/Container.astro";
-import Link from "@components/Link.astro";
-import Icon from "@components/Icon.astro";
-import NavigationMenu from "@components/NavigationMenu.astro";
-import { SITE, SOCIALS } from "@consts";
+import Container from '@components/Container.astro';
+import Link from '@components/Link.astro';
+import Icon from '@components/Icon.astro';
+import NavigationMenu from '@components/NavigationMenu.astro';
+import { SITE, SOCIALS } from '@consts';
 
 // Filter for only the specific header icons
-const HEADER_SOCIALS = SOCIALS.filter(s =>
-  ["GitHub", "LinkedIn", "Instagram"].includes(s.NAME)
-);
+const HEADER_SOCIALS = SOCIALS.filter((s) => ['GitHub', 'LinkedIn', 'Instagram'].includes(s.NAME));
 ---
 
 <header transition:persist>
@@ -21,17 +19,19 @@ const HEADER_SOCIALS = SOCIALS.filter(s =>
         <Link href="/about/">About</Link>
         <span>{`/`}</span>
 
-        {HEADER_SOCIALS.map((social) => (
-          <a
-            href={social.HREF}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={social.NAME}
-            class="flex items-center hover:text-black/70 dark:hover:text-white/70 transition-colors"
-          >
-            <Icon name={social.NAME} class="h-3.5 w-3.5 fill-current" />
-          </a>
-        ))}
+        {
+          HEADER_SOCIALS.map((social) => (
+            <a
+              href={social.HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.NAME}
+              class="flex items-center transition-colors hover:text-black/70 dark:hover:text-white/70"
+            >
+              <Icon name={social.NAME} class="h-3.5 w-3.5 fill-current" />
+            </a>
+          ))
+        }
 
         <span>{`/`}</span>
 

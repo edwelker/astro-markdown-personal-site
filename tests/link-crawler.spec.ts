@@ -1,9 +1,9 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from '@playwright/test';
 
-test.describe("Site Link Integrity", () => {
-  test("should have no broken internal links", async ({ page }) => {
+test.describe('Site Link Integrity', () => {
+  test('should have no broken internal links', async ({ page }) => {
     const seen = new Set();
-    const queue = ["/"];
+    const queue = ['/'];
     const brokenLinks = [];
 
     while (queue.length > 0) {
@@ -19,14 +19,14 @@ test.describe("Site Link Integrity", () => {
 
       const links = await page.locator('a[href^="/"]:not([href*="."])').all();
       for (const link of links) {
-        const href = await link.getAttribute("href");
-        const cleanHref = href?.split("#")[0].replace(/\/$/, "") || "/";
+        const href = await link.getAttribute('href');
+        const cleanHref = href?.split('#')[0].replace(/\/$/, '') || '/';
         if (cleanHref && !seen.has(cleanHref) && !queue.includes(cleanHref)) {
           queue.push(cleanHref);
         }
       }
     }
 
-    expect(brokenLinks, `Broken links found: ${brokenLinks.join(", ")}`).toHaveLength(0);
+    expect(brokenLinks, `Broken links found: ${brokenLinks.join(', ')}`).toHaveLength(0);
   });
 });

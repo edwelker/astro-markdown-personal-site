@@ -18,25 +18,23 @@ describe('getAllActivity', () => {
       { data: { date: new Date('2023-01-01'), draft: false }, slug: 'post-1' },
       { data: { date: new Date('2023-01-02'), draft: true }, slug: 'draft-post' }, // Should be filtered out
     ];
-    const recipeData = [
-      { data: { date: new Date('2023-02-01'), draft: false }, slug: 'recipe-1' },
-    ];
-    const photoData = [
-      { data: { date: new Date('2023-03-01'), draft: false }, slug: 'photo-1' },
-    ];
+    const recipeData = [{ data: { date: new Date('2023-02-01'), draft: false }, slug: 'recipe-1' }];
+    const photoData = [{ data: { date: new Date('2023-03-01'), draft: false }, slug: 'photo-1' }];
 
     // Mock implementation that respects the filter callback passed by the implementation
-    (getCollection as any).mockImplementation(async (name: string, filter: (item: any) => boolean) => {
-      let items: any[] = [];
-      if (name === 'blog') items = blogData;
-      if (name === 'recipes') items = recipeData;
-      if (name === 'photos') items = photoData;
-      
-      if (filter) {
-        return items.filter(filter);
+    (getCollection as any).mockImplementation(
+      async (name: string, filter: (item: any) => boolean) => {
+        let items: any[] = [];
+        if (name === 'blog') items = blogData;
+        if (name === 'recipes') items = recipeData;
+        if (name === 'photos') items = photoData;
+
+        if (filter) {
+          return items.filter(filter);
+        }
+        return items;
       }
-      return items;
-    });
+    );
 
     const result = await getAllActivity();
 
@@ -59,7 +57,7 @@ describe('getAllActivity', () => {
     });
 
     const result = await getAllActivity();
-    
+
     // Should return empty array (assuming other collections return empty in this mock setup)
     expect(result).toEqual([]);
   });

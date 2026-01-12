@@ -10,7 +10,7 @@ describe('Recipe Schema', () => {
       recipeIngredient: ['Ingredient 1', 'Ingredient 2'],
       recipeInstructions: ['Step 1', 'Step 2'],
     };
-    
+
     const result = RecipeSchema.safeParse(validRecipe);
     expect(result.success).toBe(true);
   });
@@ -47,11 +47,11 @@ describe('Recipe Schema', () => {
     const result = RecipeSchema.safeParse(invalidRecipe);
     expect(result.success).toBe(false);
     if (!result.success) {
-        const errors = result.error.flatten().fieldErrors;
-        expect(errors.description).toBeDefined();
-        expect(errors.date).toBeDefined();
-        expect(errors.recipeIngredient).toBeDefined();
-        expect(errors.recipeInstructions).toBeDefined();
+      const errors = result.error.flatten().fieldErrors;
+      expect(errors.description).toBeDefined();
+      expect(errors.date).toBeDefined();
+      expect(errors.recipeIngredient).toBeDefined();
+      expect(errors.recipeInstructions).toBeDefined();
     }
   });
 
@@ -62,24 +62,24 @@ describe('Recipe Schema', () => {
       date: new Date(),
       recipeIngredient: ['a'],
       recipeInstructions: ['b'],
-      coverPhoto: 'not-a-url-or-path'
+      coverPhoto: 'not-a-url-or-path',
     };
-    
+
     const result = RecipeSchema.safeParse(badUrl);
     expect(result.success).toBe(false);
   });
-  
+
   it('allows relative path for coverPhoto', () => {
-      const relativePhoto = {
-        title: 'Test',
-        description: 'Desc',
-        date: new Date(),
-        recipeIngredient: ['a'],
-        recipeInstructions: ['b'],
-        coverPhoto: '/images/recipe.jpg'
-      };
-      
-      const result = RecipeSchema.safeParse(relativePhoto);
-      expect(result.success).toBe(true);
+    const relativePhoto = {
+      title: 'Test',
+      description: 'Desc',
+      date: new Date(),
+      recipeIngredient: ['a'],
+      recipeInstructions: ['b'],
+      coverPhoto: '/images/recipe.jpg',
+    };
+
+    const result = RecipeSchema.safeParse(relativePhoto);
+    expect(result.success).toBe(true);
   });
 });

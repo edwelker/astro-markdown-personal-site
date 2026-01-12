@@ -28,7 +28,7 @@ export function normalizeGasData(rawData: RawGasStation[], region: string): Norm
     const getVal = (key: string) => {
       if (row[key] !== undefined) return row[key];
       const lowerKey = key.toLowerCase();
-      const foundKey = Object.keys(row).find(k => k.toLowerCase() === lowerKey);
+      const foundKey = Object.keys(row).find((k) => k.toLowerCase() === lowerKey);
       return foundKey ? row[foundKey] : undefined;
     };
 
@@ -38,8 +38,8 @@ export function normalizeGasData(rawData: RawGasStation[], region: string): Norm
 
     // Check if net is missing or empty string
     if (net === undefined || net === null || String(net).trim() === '') {
-      const baseStr = String(baseRaw || "").replace(/[^0-9.-]+/g, "");
-      const discountStr = String(discountRaw || "0").replace(/[^0-9.-]+/g, "");
+      const baseStr = String(baseRaw || '').replace(/[^0-9.-]+/g, '');
+      const discountStr = String(discountRaw || '0').replace(/[^0-9.-]+/g, '');
 
       const base = parseFloat(baseStr);
       const discount = parseFloat(discountStr);
@@ -57,7 +57,9 @@ export function normalizeGasData(rawData: RawGasStation[], region: string): Norm
     let city = getVal('City');
     // Clean up MD city names (remove parens)
     if (region === 'md' && city) {
-      city = String(city).replace(/\s*\(.*?\)/g, '').trim();
+      city = String(city)
+        .replace(/\s*\(.*?\)/g, '')
+        .trim();
     }
 
     return {
@@ -69,7 +71,7 @@ export function normalizeGasData(rawData: RawGasStation[], region: string): Norm
       Discount: discountRaw,
       Net: net,
       lat: getVal('lat') ?? getVal('latitude'),
-      lng: getVal('lng') ?? getVal('long') ?? getVal('longitude')
+      lng: getVal('lng') ?? getVal('long') ?? getVal('longitude'),
     };
   });
 }

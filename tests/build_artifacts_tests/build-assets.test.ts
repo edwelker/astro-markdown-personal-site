@@ -7,7 +7,7 @@ const DIST_DIR = path.join(process.cwd(), 'dist');
 function getHtmlFiles(dir: string): string[] {
   let results: string[] = [];
   if (!fs.existsSync(dir)) return results;
-  
+
   const list = fs.readdirSync(dir);
   list.forEach((file) => {
     const filePath = path.join(dir, file);
@@ -36,10 +36,10 @@ describe('Build Assets Integrity', () => {
 
   htmlFiles.forEach((file) => {
     const relativePath = path.relative(DIST_DIR, file);
-    
+
     it(`should reference valid assets in ${relativePath}`, () => {
       const content = fs.readFileSync(file, 'utf-8');
-      
+
       // Check stylesheets
       // Matches <link ... href="..." ...>
       const linkRegex = /<link[^>]+href="([^"]+)"[^>]*>/g;
@@ -47,16 +47,22 @@ describe('Build Assets Integrity', () => {
       while ((match = linkRegex.exec(content)) !== null) {
         const tag = match[0];
         const href = match[1];
-        
+
         // Only care about stylesheets
         if (!tag.includes('rel="stylesheet"')) continue;
         if (href.startsWith('http') || href.startsWith('//')) continue;
-        
+
         const cleanPath = href.split('?')[0].split('#')[0];
         // Handle absolute paths (starting with /) relative to dist
-        const assetPath = path.join(DIST_DIR, cleanPath.startsWith('/') ? cleanPath.slice(1) : cleanPath);
-        
-        expect(fs.existsSync(assetPath), `Missing CSS asset: ${cleanPath} referenced in ${relativePath}`).toBe(true);
+        const assetPath = path.join(
+          DIST_DIR,
+          cleanPath.startsWith('/') ? cleanPath.slice(1) : cleanPath
+        );
+
+        expect(
+          fs.existsSync(assetPath),
+          `Missing CSS asset: ${cleanPath} referenced in ${relativePath}`
+        ).toBe(true);
       }
 
       // Check scripts
@@ -67,9 +73,15 @@ describe('Build Assets Integrity', () => {
         if (src.startsWith('http') || src.startsWith('//')) continue;
 
         const cleanPath = src.split('?')[0].split('#')[0];
-        const assetPath = path.join(DIST_DIR, cleanPath.startsWith('/') ? cleanPath.slice(1) : cleanPath);
-        
-        expect(fs.existsSync(assetPath), `Missing JS asset: ${cleanPath} referenced in ${relativePath}`).toBe(true);
+        const assetPath = path.join(
+          DIST_DIR,
+          cleanPath.startsWith('/') ? cleanPath.slice(1) : cleanPath
+        );
+
+        expect(
+          fs.existsSync(assetPath),
+          `Missing JS asset: ${cleanPath} referenced in ${relativePath}`
+        ).toBe(true);
       }
     });
   });

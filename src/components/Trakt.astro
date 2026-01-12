@@ -1,23 +1,26 @@
 ---
-import traktData from "../data/trakt.json";
-import type { RatingItem, SparklineDecade, DirectorInfo } from "./trakt/types";
-import HistoryGraph from "./trakt/HistoryGraph.astro";
-import PosterScroll from "./trakt/PosterScroll.astro";
-import TopLists from "./trakt/TopLists.astro";
-import RecentlyRated from "./trakt/RecentlyRated.astro";
-import { filterRatings, getDirectorSpotlight, mapTopLists } from "../lib/trakt-logic";
+import traktData from '../data/trakt.json';
+import type { RatingItem, SparklineDecade, DirectorInfo } from './trakt/types';
+import HistoryGraph from './trakt/HistoryGraph.astro';
+import PosterScroll from './trakt/PosterScroll.astro';
+import TopLists from './trakt/TopLists.astro';
+import RecentlyRated from './trakt/RecentlyRated.astro';
+import { filterRatings, getDirectorSpotlight, mapTopLists } from '../lib/trakt-logic';
 
 const {
   allRatings = [] as RatingItem[],
   genres = [] as [string, number][],
   directors = [] as [string, DirectorInfo][],
   sparkline = [] as SparklineDecade[],
-  username = "ewelker"
+  username = 'ewelker',
 } = traktData || {};
 
 // Logic extracted to src/lib/trakt-logic.ts
 const { tens, nines, eights, midQuality, lowQuality, recentlyRated } = filterRatings(allRatings);
-const { topDirectorName, topDirectorId, directorSpotlight } = getDirectorSpotlight(allRatings, directors);
+const { topDirectorName, topDirectorId, directorSpotlight } = getDirectorSpotlight(
+  allRatings,
+  directors
+);
 const { topGenres, topDirectors } = mapTopLists(genres, directors, username);
 ---
 
@@ -25,7 +28,7 @@ const { topGenres, topDirectors } = mapTopLists(genres, directors, username);
   <HistoryGraph sparkline={sparkline} />
 
   <div class="animate">
-    <PosterScroll 
+    <PosterScroll
       title={`The 10/10 Collection (${tens.length})`}
       items={tens}
       viewAllLink={`https://trakt.tv/users/${username}/ratings/all/10/added/asc`}
@@ -35,28 +38,32 @@ const { topGenres, topDirectors } = mapTopLists(genres, directors, username);
     />
   </div>
 
-  {topDirectorName && (
-    <div class="animate">
-      <PosterScroll 
-        title={`Director Spotlight: ${topDirectorName}`}
-        items={directorSpotlight.slice(0, 10)}
-        viewAllLink={topDirectorId ? `https://www.themoviedb.org/person/${topDirectorId}` : undefined}
-        viewAllText="Credits ↗"
-        variant="lg"
-        titleColorClass="text-orange-600"
-      />
-    </div>
-  )}
+  {
+    topDirectorName && (
+      <div class="animate">
+        <PosterScroll
+          title={`Director Spotlight: ${topDirectorName}`}
+          items={directorSpotlight.slice(0, 10)}
+          viewAllLink={
+            topDirectorId ? `https://www.themoviedb.org/person/${topDirectorId}` : undefined
+          }
+          viewAllText="Credits ↗"
+          variant="lg"
+          titleColorClass="text-orange-600"
+        />
+      </div>
+    )
+  }
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate">
-    <PosterScroll 
+  <div class="animate grid grid-cols-1 gap-12 md:grid-cols-2">
+    <PosterScroll
       title="The 9/10 Tier"
       items={nines.slice(0, 15)}
       viewAllLink={`https://trakt.tv/users/${username}/ratings/all/9/added/asc`}
       variant="md"
       titleColorClass="text-orange-500"
     />
-    <PosterScroll 
+    <PosterScroll
       title="The 8/10 Tier"
       items={eights.slice(0, 15)}
       viewAllLink={`https://trakt.tv/users/${username}/ratings/all/8/added/asc`}
@@ -64,20 +71,20 @@ const { topGenres, topDirectors } = mapTopLists(genres, directors, username);
     />
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate">
+  <div class="animate grid grid-cols-1 gap-12 md:grid-cols-2">
     <TopLists title="Top Genres" items={topGenres} />
     <TopLists title="Top Directors" items={topDirectors} />
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate">
-    <PosterScroll 
+  <div class="animate grid grid-cols-1 gap-12 md:grid-cols-2">
+    <PosterScroll
       title="6.0 - 7.9 range"
       items={midQuality.slice(0, 15)}
       viewAllLink={`https://trakt.tv/users/${username}/ratings/all/7/added/asc`}
       viewAllText="View 7s ↗"
       variant="sm"
     />
-    <PosterScroll 
+    <PosterScroll
       title="5.0 and below"
       items={lowQuality.slice(0, 15)}
       viewAllLink={`https://trakt.tv/users/${username}/ratings/all/5/added/asc`}

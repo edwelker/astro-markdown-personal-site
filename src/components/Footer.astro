@@ -1,49 +1,50 @@
 ---
-import Container from "@components/Container.astro";
-import Icon from "@components/Icon.astro";
-import SiteLinks from "@components/SiteLinks.astro";
-import { SITE, SOCIALS } from "@consts";
+import Container from '@components/Container.astro';
+import Icon from '@components/Icon.astro';
+import SiteLinks from '@components/SiteLinks.astro';
+import { SITE, SOCIALS } from '@consts';
 
 // Calculate the build time in EST and UTC
 const now = new Date();
 
-const estTime = now.toLocaleString("en-US", {
-  month: "short",
-  day: "numeric",
-  year: "numeric",
-  hour: "numeric",
-  minute: "2-digit",
-  timeZoneName: "short",
-  timeZone: "America/New_York",
+const estTime = now.toLocaleString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: '2-digit',
+  timeZoneName: 'short',
+  timeZone: 'America/New_York',
 });
 
-const utcTime = now.toLocaleString("en-US", {
-  hour: "numeric",
-  minute: "2-digit",
-  timeZoneName: "short",
-  timeZone: "UTC",
+const utcTime = now.toLocaleString('en-US', {
+  hour: 'numeric',
+  minute: '2-digit',
+  timeZoneName: 'short',
+  timeZone: 'UTC',
 });
 
 const buildTimestamp = `${estTime} (${utcTime})`;
 ---
 
-<footer class="mt-auto py-12 border-t border-black/5 dark:border-white/5">
+<footer class="mt-auto border-t border-black/5 py-12 dark:border-white/5">
   <Container>
     <div class="flex flex-col items-center gap-8">
-
       {/* Social Icons */}
       <div class="flex flex-wrap justify-center gap-6">
-        {SOCIALS.map((social) => (
-          <a
-            href={social.HREF}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={social.NAME}
-            class="text-black/40 hover:text-black dark:text-white/40 dark:hover:text-white transition-colors"
-          >
-            <Icon name={social.NAME} class="h-5 w-5 fill-current" />
-          </a>
-        ))}
+        {
+          SOCIALS.map((social) => (
+            <a
+              href={social.HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.NAME}
+              class="text-black/40 transition-colors hover:text-black dark:text-white/40 dark:hover:text-white"
+            >
+              <Icon name={social.NAME} class="h-5 w-5 fill-current" />
+            </a>
+          ))
+        }
       </div>
 
       {/* Site Links */}
@@ -52,20 +53,27 @@ const buildTimestamp = `${estTime} (${utcTime})`;
       {/* Technical Metadata & API Links */}
       <div class="flex flex-col items-center gap-4">
         <div class="flex flex-col items-center gap-1">
-          <div class="text-[10px] font-mono text-black/40 dark:text-white/40 uppercase tracking-[0.2em]">
+          <div
+            class="font-mono text-[10px] tracking-[0.2em] text-black/40 uppercase dark:text-white/40"
+          >
             Generated via GitHub Actions • {buildTimestamp}
           </div>
-          <a href="/api/" class="text-[10px] font-mono text-orange-600/60 hover:text-orange-600 dark:text-orange-400/60 dark:hover:text-orange-400 uppercase tracking-[0.2em] transition-colors">
+          <a
+            href="/api/"
+            class="font-mono text-[10px] tracking-[0.2em] text-orange-600/60 uppercase transition-colors hover:text-orange-600 dark:text-orange-400/60 dark:hover:text-orange-400"
+          >
             View Site Architecture & API ↗
           </a>
         </div>
       </div>
 
       {/* Copyright */}
-      <div class="text-[11px] text-black/30 dark:text-white/30 text-center uppercase tracking-widest pt-2">
-        &copy; {now.getFullYear()} {SITE.TITLE}
+      <div
+        class="pt-2 text-center text-[11px] tracking-widest text-black/30 uppercase dark:text-white/30"
+      >
+        &copy; {now.getFullYear()}
+        {SITE.TITLE}
       </div>
-
     </div>
   </Container>
 </footer>

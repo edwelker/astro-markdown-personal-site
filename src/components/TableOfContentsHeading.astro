@@ -1,6 +1,6 @@
 ---
-import type { Heading } from "./TableOfContents.astro";
-import Link from "./Link.astro";
+import type { Heading } from './TableOfContents.astro';
+import Link from './Link.astro';
 
 // https://kld.dev/building-table-of-contents/
 
@@ -8,7 +8,7 @@ const { heading } = Astro.props;
 ---
 
 <li class="list-inside list-disc px-2 py-0.5 text-sm">
-  <Link href={"#" + heading.slug} underline>
+  <Link href={'#' + heading.slug} underline>
     {heading.text}
   </Link>
   {

@@ -8,12 +8,14 @@ thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
 thirtyDaysAgo.setHours(0, 0, 0, 0);
 
 // Filter items to last 30 days
-const recentItems = items.filter(item => item.data.date >= thirtyDaysAgo);
+const recentItems = items.filter((item) => item.data.date >= thirtyDaysAgo);
 
 // Bin data by day for the sparkline
 const dayCounts = new Array(30).fill(0);
-recentItems.forEach(item => {
-  const dayDiff = Math.floor((item.data.date.getTime() - thirtyDaysAgo.getTime()) / (1000 * 60 * 60 * 24));
+recentItems.forEach((item) => {
+  const dayDiff = Math.floor(
+    (item.data.date.getTime() - thirtyDaysAgo.getTime()) / (1000 * 60 * 60 * 24)
+  );
   if (dayDiff >= 0 && dayDiff < 30) {
     dayCounts[dayDiff]++;
   }
@@ -22,57 +24,69 @@ recentItems.forEach(item => {
 const maxCount = Math.max(...dayCounts, 1);
 
 const formatDate = (date) => {
-    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 };
 
 const rangeLabel = `${formatDate(thirtyDaysAgo)} - ${formatDate(now)}`;
 ---
 
 <section class="animate space-y-4">
-  <div class="flex justify-between items-baseline pb-4 border-b border-black/10 dark:border-white/10">
-    <h3 class="font-semibold text-black dark:text-white text-lg">Recent Activity</h3>
-    <span class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400">{rangeLabel}</span>
+  <div
+    class="flex items-baseline justify-between border-b border-black/10 pb-4 dark:border-white/10"
+  >
+    <h3 class="text-lg font-semibold text-black dark:text-white">Recent Activity</h3>
+    <span class="font-mono text-[9px] tracking-[0.1em] text-neutral-400 uppercase"
+      >{rangeLabel}</span
+    >
   </div>
 
   <div class="space-y-4">
     <!-- Sparkline Visualization -->
     <div class="h-8 w-full" aria-hidden="true">
-      <svg viewBox="0 0 30 10" preserveAspectRatio="none" class="w-full h-full">
-          {dayCounts.map((count, index) => {
-              // Scale height: if count > 0, scale between 20% and 100% of height. If 0, show tiny blip.
-              const height = count > 0 ? ((count / maxCount) * 8 + 2) : 0.5;
-              const y = 10 - height;
-              return (
-                  <rect
-                      x={index}
-                      y={y}
-                      width="0.6"
-                      height={height}
-                      class={count > 0 ? "fill-black dark:fill-white" : "fill-neutral-200 dark:fill-neutral-800"}
-                      rx="0.2"
-                  />
-              );
-          })}
+      <svg viewBox="0 0 30 10" preserveAspectRatio="none" class="h-full w-full">
+        {
+          dayCounts.map((count, index) => {
+            // Scale height: if count > 0, scale between 20% and 100% of height. If 0, show tiny blip.
+            const height = count > 0 ? (count / maxCount) * 8 + 2 : 0.5;
+            const y = 10 - height;
+            return (
+              <rect
+                x={index}
+                y={y}
+                width="0.6"
+                height={height}
+                class={
+                  count > 0
+                    ? 'fill-black dark:fill-white'
+                    : 'fill-neutral-200 dark:fill-neutral-800'
+                }
+                rx="0.2"
+              />
+            );
+          })
+        }
       </svg>
     </div>
 
     <!-- Horizontal Scroll List -->
-    <div class="flex overflow-x-auto pb-2 -mx-1 px-1">
-      {recentItems.map((item) => (
-        <a 
-          href={item.type === 'blog' ? `/blog/${item.slug}/` : `/${item.type}/${item.slug}/`} 
-          class="flex-none w-48 pr-6 group"
-        >
-          <div class="flex flex-col gap-1">
-            <span class="text-[10px] font-mono text-neutral-500 uppercase tracking-wider">
-              {formatDate(item.data.date)} • {item.type}
-            </span>
-            <h4 class="font-medium text-sm leading-snug text-black dark:text-white group-hover:underline decoration-1 underline-offset-2 line-clamp-2">
-              {item.data.title}
-            </h4>
-          </div>
-        </a>
-      ))}
+    <div class="-mx-1 flex overflow-x-auto px-1 pb-2">
+      {
+        recentItems.map((item) => (
+          <a
+            href={item.type === 'blog' ? `/blog/${item.slug}/` : `/${item.type}/${item.slug}/`}
+            class="group w-48 flex-none pr-6"
+          >
+            <div class="flex flex-col gap-1">
+              <span class="font-mono text-[10px] tracking-wider text-neutral-500 uppercase">
+                {formatDate(item.data.date)} • {item.type}
+              </span>
+              <h4 class="line-clamp-2 text-sm leading-snug font-medium text-black decoration-1 underline-offset-2 group-hover:underline dark:text-white">
+                {item.data.title}
+              </h4>
+            </div>
+          </a>
+        ))
+      }
     </div>
   </div>
 </section>

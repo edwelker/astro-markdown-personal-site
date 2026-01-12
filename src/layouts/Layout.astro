@@ -1,12 +1,12 @@
 ---
-import Head from "@components/Head.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
-import Pagefind from "@components/PageFind.astro";
-import Analytics from "@components/Analytics.astro";
-import { Schema } from "astro-seo-schema";
+import Head from '@components/Head.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Pagefind from '@components/PageFind.astro';
+import Analytics from '@components/Analytics.astro';
+import { Schema } from 'astro-seo-schema';
 
-import "@fontsource/inter";
+import '@fontsource/inter';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/700.css';
 
@@ -16,7 +16,7 @@ type Props = {
   image?: string;
 };
 
-import { SITE } from "@consts";
+import { SITE } from '@consts';
 
 const { title, description, image } = Astro.props;
 ---
@@ -26,80 +26,81 @@ const { title, description, image } = Astro.props;
   <head>
     <Head title={`${SITE.TITLE}: ${title}`} description={description} image={image} />
     <Analytics />
-    
+
     <slot name="head" />
 
     <Schema
       item={{
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://eddiewelker.com/#person",
-        name: "Eddie Welker",
-        alternateName: ["Ed Welker", "edwelker", "Edward Welker"],
-        description: "Principal Software Engineer and Systems Architect specializing in Python, Cloud Computing, and DevOps. Avid cyclist and photographer.",
-        url: "https://eddiewelker.com",
-        image: "https://github.com/edwelker.png",
-        jobTitle: "Principal Software Engineer",
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        '@id': 'https://eddiewelker.com/#person',
+        name: 'Eddie Welker',
+        alternateName: ['Ed Welker', 'edwelker', 'Edward Welker'],
+        description:
+          'Principal Software Engineer and Systems Architect specializing in Python, Cloud Computing, and DevOps. Avid cyclist and photographer.',
+        url: 'https://eddiewelker.com',
+        image: 'https://github.com/edwelker.png',
+        jobTitle: 'Principal Software Engineer',
         worksFor: {
-          "@type": "Organization",
-          name: "Freelance"
+          '@type': 'Organization',
+          name: 'Freelance',
         },
         address: {
-          "@type": "PostalAddress",
-          addressLocality: "North Laurel",
-          addressRegion: "MD",
-          addressCountry: "US",
-          postalCode: "20723"
+          '@type': 'PostalAddress',
+          addressLocality: 'North Laurel',
+          addressRegion: 'MD',
+          addressCountry: 'US',
+          postalCode: '20723',
         },
         sameAs: [
-          "https://github.com/edwelker",
-          "https://www.linkedin.com/in/edwardwelker/",
-          "https://instagram.com/edwelker",
-          "https://www.strava.com/athletes/43444098",
-          "https://trakt.tv/users/edwelker",
-          "https://www.last.fm/user/edwelker",
-          "https://www.flickr.com/photos/ed_welker/",
-          "https://open.spotify.com/user/edwelker"
+          'https://github.com/edwelker',
+          'https://www.linkedin.com/in/edwardwelker/',
+          'https://instagram.com/edwelker',
+          'https://www.strava.com/athletes/43444098',
+          'https://trakt.tv/users/edwelker',
+          'https://www.last.fm/user/edwelker',
+          'https://www.flickr.com/photos/ed_welker/',
+          'https://open.spotify.com/user/edwelker',
         ],
         knowsAbout: [
           {
-            "@type": "Thing",
-            name: "Software Engineering",
-            sameAs: "https://en.wikipedia.org/wiki/Software_engineering"
+            '@type': 'Thing',
+            name: 'Software Engineering',
+            sameAs: 'https://en.wikipedia.org/wiki/Software_engineering',
           },
           {
-            "@type": "Thing",
-            name: "Systems Architecture",
-            sameAs: "https://en.wikipedia.org/wiki/Systems_architecture"
+            '@type': 'Thing',
+            name: 'Systems Architecture',
+            sameAs: 'https://en.wikipedia.org/wiki/Systems_architecture',
           },
           {
-            "@type": "Thing",
-            name: "Cloud Computing",
-            sameAs: "https://en.wikipedia.org/wiki/Cloud_computing"
+            '@type': 'Thing',
+            name: 'Cloud Computing',
+            sameAs: 'https://en.wikipedia.org/wiki/Cloud_computing',
           },
           {
-            "@type": "Thing",
-            name: "Python",
-            sameAs: "https://en.wikipedia.org/wiki/Python_(programming_language)"
+            '@type': 'Thing',
+            name: 'Python',
+            sameAs: 'https://en.wikipedia.org/wiki/Python_(programming_language)',
           },
           {
-            "@type": "Thing",
-            name: "Django",
-            sameAs: "https://en.wikipedia.org/wiki/Django_(web_framework)"
+            '@type': 'Thing',
+            name: 'Django',
+            sameAs: 'https://en.wikipedia.org/wiki/Django_(web_framework)',
           },
-          "DevOps",
-          "Cycling",
-          "Bikepacking",
-          "Photography"
-        ]
+          'DevOps',
+          'Cycling',
+          'Bikepacking',
+          'Photography',
+        ],
       }}
     />
   </head>
   <body>
     <noscript>
       <style>
-        .animate{
-          opacity:1;
+        .animate {
+          opacity: 1;
           translate: var(--tw-translate-x) calc(var(--spacing) * 0);
         }
       </style>

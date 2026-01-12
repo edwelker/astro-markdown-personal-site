@@ -10,16 +10,19 @@ export async function fetchFlickrData(apiKey) {
 }
 
 export async function run() {
-  const { apiKey } = validateEnv({
-    apiKey: 'FLICKR_API_KEY'
-  }, 'Flickr');
+  const { apiKey } = validateEnv(
+    {
+      apiKey: 'FLICKR_API_KEY',
+    },
+    'Flickr'
+  );
 
   await runETL({
     name: 'Flickr',
     fetcher: () => fetchFlickrData(apiKey),
     transform: transformFlickrData,
     outFile: 'src/data/flickr-photos.json',
-    defaultData: []
+    defaultData: [],
   });
 }
 

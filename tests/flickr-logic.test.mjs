@@ -20,7 +20,7 @@ describe('Flickr Logic: transformFlickrData', () => {
             width_m: '800',
             height_m: '600',
             datetaken: '2023-01-01 12:00:00',
-            tags: 'tag1 tag2'
+            tags: 'tag1 tag2',
           },
           {
             id: '2',
@@ -29,7 +29,7 @@ describe('Flickr Logic: transformFlickrData', () => {
             width_m: '600',
             height_m: '800',
             datetaken: '2023-01-02 12:00:00',
-            tags: ''
+            tags: '',
           },
           {
             id: '3',
@@ -38,10 +38,10 @@ describe('Flickr Logic: transformFlickrData', () => {
             width_m: '800',
             height_m: '600',
             datetaken: '2023-01-03 12:00:00',
-            tags: 'tagA  tagB'
-          }
-        ]
-      }
+            tags: 'tagA  tagB',
+          },
+        ],
+      },
     };
     const result = transformFlickrData(mockData);
     expect(result).toHaveLength(3);
@@ -53,7 +53,7 @@ describe('Flickr Logic: transformFlickrData', () => {
       tags: ['tag1', 'tag2'],
       aspect: 800 / 600,
       isLandscape: true,
-      isPortrait: false
+      isPortrait: false,
     });
     expect(result[1]).toEqual({
       id: '2',
@@ -63,7 +63,7 @@ describe('Flickr Logic: transformFlickrData', () => {
       tags: [],
       aspect: 600 / 800,
       isLandscape: false,
-      isPortrait: true
+      isPortrait: true,
     });
     expect(result[2]).toEqual({
       id: '3',
@@ -73,7 +73,7 @@ describe('Flickr Logic: transformFlickrData', () => {
       tags: ['tagA', 'tagB'],
       aspect: 800 / 600,
       isLandscape: true,
-      isPortrait: false
+      isPortrait: false,
     });
   });
 
@@ -87,10 +87,10 @@ describe('Flickr Logic: transformFlickrData', () => {
             title: 'Another Photo',
             url_m: 'url4.jpg',
             datetaken: '2023-01-04 12:00:00',
-            tags: 'tag4'
-          }
-        ]
-      }
+            tags: 'tag4',
+          },
+        ],
+      },
     };
     const result = transformFlickrData(mockData);
     expect(result[0]).toEqual({
@@ -101,7 +101,7 @@ describe('Flickr Logic: transformFlickrData', () => {
       tags: [],
       aspect: 1,
       isLandscape: false,
-      isPortrait: false
+      isPortrait: false,
     });
     expect(result[1]).toEqual({
       id: '4',
@@ -111,7 +111,7 @@ describe('Flickr Logic: transformFlickrData', () => {
       tags: ['tag4'],
       aspect: 1,
       isLandscape: false,
-      isPortrait: false
+      isPortrait: false,
     });
   });
 });

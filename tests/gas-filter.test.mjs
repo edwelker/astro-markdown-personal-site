@@ -8,28 +8,28 @@ const testData = [
   { Station: 'Delta Pump', Address: '4 Low Rd', City: 'Capital City', Zip: 12345 },
   { Station: 'Epsilon', City: null, Zip: '99999' },
   { Station: 'Zeta', City: 'NoZipCity', Zip: null },
-  { Station: 'Eta' } // Empty object mostly
+  { Station: 'Eta' }, // Empty object mostly
 ];
 
 describe('Gas Filter - filterGasData', () => {
   it('should filter by city, case-insensitively', () => {
     const result = filterGasData(testData, 'spring');
-    expect(result.map(r => r.Station)).toEqual(['Alpha Gas', 'Gamma Oil']);
+    expect(result.map((r) => r.Station)).toEqual(['Alpha Gas', 'Gamma Oil']);
   });
 
   it('should filter by zip code string', () => {
     const result = filterGasData(testData, '12345');
-    expect(result.map(r => r.Station)).toEqual(['Alpha Gas', 'Delta Pump']);
+    expect(result.map((r) => r.Station)).toEqual(['Alpha Gas', 'Delta Pump']);
   });
 
   it('should filter by station name', () => {
     const result = filterGasData(testData, 'beta');
-    expect(result.map(r => r.Station)).toEqual(['Beta Fuel']);
+    expect(result.map((r) => r.Station)).toEqual(['Beta Fuel']);
   });
 
   it('should filter by address', () => {
     const result = filterGasData(testData, 'High Way');
-    expect(result.map(r => r.Station)).toEqual(['Gamma Oil']);
+    expect(result.map((r) => r.Station)).toEqual(['Gamma Oil']);
   });
 
   it('should return all items if query is empty', () => {
@@ -44,10 +44,10 @@ describe('Gas Filter - filterGasData', () => {
 
   it('should handle null or undefined values gracefully', () => {
     const resultByZip = filterGasData(testData, '99999');
-    expect(resultByZip.map(r => r.Station)).toEqual(['Epsilon']);
-    
+    expect(resultByZip.map((r) => r.Station)).toEqual(['Epsilon']);
+
     const resultByCity = filterGasData(testData, 'NoZip');
-    expect(resultByCity.map(r => r.Station)).toEqual(['Zeta']);
+    expect(resultByCity.map((r) => r.Station)).toEqual(['Zeta']);
   });
 
   it('should handle an empty data array', () => {

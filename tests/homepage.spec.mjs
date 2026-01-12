@@ -6,15 +6,15 @@ import matter from 'gray-matter';
 test.describe('Content Integrity', () => {
   test('Blog count matches non-draft files', async ({ page }) => {
     const blogDir = path.resolve('src/content/blog');
-    const files = fs.readdirSync(blogDir).filter(f => f.endsWith('.md') || f.endsWith('.mdx'));
-    
-    const nonDrafts = files.filter(file => {
+    const files = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md') || f.endsWith('.mdx'));
+
+    const nonDrafts = files.filter((file) => {
       const { data } = matter(fs.readFileSync(path.join(blogDir, file), 'utf-8'));
       return !data.draft;
     });
-    
+
     await page.goto('/blog');
-    const renderedPosts = page.locator('main ul li a, aside ul li a'); 
+    const renderedPosts = page.locator('main ul li a, aside ul li a');
     await expect(renderedPosts).toHaveCount(nonDrafts.length);
   });
 

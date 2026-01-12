@@ -1,26 +1,26 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/Container.astro";
-import { SITE, HOME } from "@consts";
-import { getCollection } from "astro:content";
-import { getAllHighlights } from "@lib/highlights";
-import { getAllActivity } from "@lib/activity";
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
+import { SITE, HOME } from '@consts';
+import { getCollection } from 'astro:content';
+import { getAllHighlights } from '@lib/highlights';
+import { getAllActivity } from '@lib/activity';
 import Flickr from '@components/Flickr.astro';
-import MusicStats from "@components/MusicStats.astro";
-import CyclingStats from "@components/CyclingStats.astro";
-import MediaTeaser from "@components/MediaTeaser.astro";
-import HighlightSchema from "@components/HighlightSchema.astro";
-import HighlightsList from "@components/HighlightsList.astro";
-import TeaserBlogList from "@components/TeaserBlogList.astro";
-import RecipesList from "@components/RecipesList.astro";
-import ActivitySparkline from "@components/ActivitySparkline.astro";
+import MusicStats from '@components/MusicStats.astro';
+import CyclingStats from '@components/CyclingStats.astro';
+import MediaTeaser from '@components/MediaTeaser.astro';
+import HighlightSchema from '@components/HighlightSchema.astro';
+import HighlightsList from '@components/HighlightsList.astro';
+import TeaserBlogList from '@components/TeaserBlogList.astro';
+import RecipesList from '@components/RecipesList.astro';
+import ActivitySparkline from '@components/ActivitySparkline.astro';
 
-const blog = (await getCollection("blog"))
+const blog = (await getCollection('blog'))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
-const recipes = (await getCollection("recipes"))
+const recipes = (await getCollection('recipes'))
   .filter((recipe) => !recipe.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 6);
@@ -33,8 +33,8 @@ const allActivity = await getAllActivity();
   <HighlightSchema items={recentHighlights} slot="head" />
   <Container>
     <aside data-pagefind-ignore>
-      <h1 class="font-extrabold text-3xl text-black dark:text-white">Eddie Welker</h1>
-      <div class="space-y-16 mt-4">
+      <h1 class="text-3xl font-extrabold text-black dark:text-white">Eddie Welker</h1>
+      <div class="mt-4 space-y-16">
         <section>
           <article class="space-y-4">
             <p>Programmer, Cyclist, Photographer, Cellist, Cook, Woodworker, Laurel, MD, USA.</p>
@@ -50,7 +50,6 @@ const allActivity = await getAllActivity();
         <section class="animate" data-testid="cycling-section"><CyclingStats /></section>
 
         <section class="animate" data-testid="music-section"><MusicStats /></section>
-
 
         <TeaserBlogList posts={blog} />
 

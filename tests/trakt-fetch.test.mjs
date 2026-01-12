@@ -1,5 +1,10 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { enrichItem, fetchAndEnrichTraktData, transformAndAggregateTraktData, run } from '../scripts/trakt-fetch.mjs';
+import {
+  enrichItem,
+  fetchAndEnrichTraktData,
+  transformAndAggregateTraktData,
+  run,
+} from '../scripts/trakt-fetch.mjs';
 import fs from 'node:fs/promises';
 import { runETL } from '../scripts/lib-etl.mjs';
 
@@ -7,7 +12,7 @@ vi.mock('node:fs/promises');
 vi.mock('../scripts/lib-etl.mjs', () => ({
   runETL: vi.fn(),
   mapConcurrent: vi.fn(async (items, limit, fn) => Promise.all(items.map(fn))),
-  writeFile: vi.fn()
+  writeFile: vi.fn(),
 }));
 
 // Mock credentials validation to avoid needing actual env vars during tests
@@ -15,8 +20,8 @@ vi.mock('../scripts/lib-credentials.mjs', () => ({
   validateEnv: vi.fn(() => ({
     clientId: 'mock-client-id',
     username: 'mock-username',
-    tmdbApiKey: 'mock-api-key'
-  }))
+    tmdbApiKey: 'mock-api-key',
+  })),
 }));
 
 describe('Trakt Fetch Logic', () => {
@@ -33,7 +38,7 @@ describe('Trakt Fetch Logic', () => {
     it('should return cached item if available', async () => {
       const item = { movie: { ids: { imdb: 'tt123' } } };
       const cache = new Map([['tt123', { poster: 'cached.jpg' }]]);
-      
+
       const result = await enrichItem(item, { cache, apiKey: 'key' });
       expect(result).toEqual({ ...item, poster: 'cached.jpg' });
       expect(global.fetch).not.toHaveBeenCalled();
@@ -42,13 +47,16 @@ describe('Trakt Fetch Logic', () => {
     it('should fetch from TMDB if not in cache', async () => {
       const item = { movie: { ids: { tmdb: '456' } } };
       const cache = new Map();
-      
+
       global.fetch
         .mockResolvedValueOnce({ ok: true, json: async () => ({ poster_path: '/poster.jpg' }) }) // TMDB details
-        .mockResolvedValueOnce({ ok: true, json: async () => ({ crew: [{ job: 'Director', name: 'Nolan' }] }) }); // Credits
+        .mockResolvedValueOnce({
+          ok: true,
+          json: async () => ({ crew: [{ job: 'Director', name: 'Nolan' }] }),
+        }); // Credits
 
       const result = await enrichItem(item, { cache, apiKey: 'key' });
-      
+
       expect(result.poster).toBe('https://image.tmdb.org/t/p/w500/poster.jpg');
       expect(result.director).toBe('Nolan');
     });
@@ -61,7 +69,7 @@ describe('Trakt Fetch Logic', () => {
       global.fetch.mockRejectedValue(new Error('API Error'));
 
       const result = await enrichItem(item, { cache, apiKey: 'key' });
-      
+
       expect(result.poster).toBeNull();
       expect(result.director).toBe('Unknown');
       expect(consoleWarnSpy).toHaveBeenCalled();
@@ -71,7 +79,7 @@ describe('Trakt Fetch Logic', () => {
   describe('fetchAndEnrichTraktData', () => {
     it('should fetch and enrich data', async () => {
       fs.readFile.mockResolvedValue(JSON.stringify({ allRatings: [] }));
-      
+
       const mockTraktResponse = [{ movie: { ids: { tmdb: 1 } } }];
       global.fetch
         .mockResolvedValueOnce({ ok: true, json: async () => mockTraktResponse }) // Movies
@@ -84,7 +92,7 @@ describe('Trakt Fetch Logic', () => {
         clientId: 'id',
         username: 'user',
         tmdbApiKey: 'key',
-        dataPath: 'path.json'
+        dataPath: 'path.json',
       });
 
       expect(result).toHaveLength(1);
@@ -95,57 +103,59 @@ describe('Trakt Fetch Logic', () => {
       fs.readFile.mockResolvedValue('{}');
       global.fetch.mockResolvedValue({ ok: false, status: 500, statusText: 'Error' });
 
-      await expect(fetchAndEnrichTraktData({
-        clientId: 'id',
-        username: 'user',
-        tmdbApiKey: 'key',
-        dataPath: 'path.json'
-      })).rejects.toThrow('Request failed: 500 Error');
+      await expect(
+        fetchAndEnrichTraktData({
+          clientId: 'id',
+          username: 'user',
+          tmdbApiKey: 'key',
+          dataPath: 'path.json',
+        })
+      ).rejects.toThrow('Request failed: 500 Error');
     });
   });
 
   describe('transformAndAggregateTraktData', () => {
     it('should aggregate data correctly', () => {
       const enriched = [
-        { 
-          rating: 10, 
-          year: 2020, 
-          director: 'Director A', 
-          movie: { title: 'M1', genres: ['Action'] } 
+        {
+          rating: 10,
+          year: 2020,
+          director: 'Director A',
+          movie: { title: 'M1', genres: ['Action'] },
         },
-        { 
-          rating: 8, 
-          year: 2021, 
-          director: 'Director A', 
-          movie: { title: 'M2', genres: ['Drama'] } 
-        }
+        {
+          rating: 8,
+          year: 2021,
+          director: 'Director A',
+          movie: { title: 'M2', genres: ['Drama'] },
+        },
       ];
 
       const result = transformAndAggregateTraktData(enriched, { username: 'test' });
 
       expect(result.username).toBe('test');
       expect(result.allRatings).toHaveLength(2);
-      
+
       // Check directors
       expect(result.directors).toEqual([['Director A', 2]]);
-      
+
       // Check genres (Action: 1, Drama: 1) - order depends on sort, likely stable or equal
       expect(result.genres).toHaveLength(2);
-      
+
       // Check sparkline (Decade 2020)
-      expect(result.sparkline).toEqual([
-        { decade: 2020, score: "9.00", volume: 2 }
-      ]);
+      expect(result.sparkline).toEqual([{ decade: 2020, score: '9.00', volume: 2 }]);
     });
   });
 
   describe('run', () => {
     it('should execute the ETL process', async () => {
       await run();
-      expect(runETL).toHaveBeenCalledWith(expect.objectContaining({
-        name: 'Trakt',
-        outFile: 'src/data/trakt.json'
-      }));
+      expect(runETL).toHaveBeenCalledWith(
+        expect.objectContaining({
+          name: 'Trakt',
+          outFile: 'src/data/trakt.json',
+        })
+      );
     });
   });
 });

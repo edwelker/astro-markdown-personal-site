@@ -15,7 +15,7 @@ if (fs.existsSync(traktPath)) {
       process.exit(1);
     }
   });
-  
+
   console.log('✅ Trakt data validation passed (or skipped safely).');
 } else {
   console.log('⚠️ Trakt data file missing, skipping validation.');

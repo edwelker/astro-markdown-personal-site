@@ -1,16 +1,19 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/Container.astro";
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
 
-const posts = await getCollection("blog", ({ data }) => !data.draft);
+const posts = await getCollection('blog', ({ data }) => !data.draft);
 
-const tagCounts = posts.reduce((acc, post) => {
-  (post.data.tags || []).forEach((tag) => {
-    acc[tag] = (acc[tag] || 0) + 1;
-  });
-  return acc;
-}, {} as Record<string, number>);
+const tagCounts = posts.reduce(
+  (acc, post) => {
+    (post.data.tags || []).forEach((tag) => {
+      acc[tag] = (acc[tag] || 0) + 1;
+    });
+    return acc;
+  },
+  {} as Record<string, number>
+);
 
 const tags = Object.keys(tagCounts).sort((a, b) => {
   const countDiff = tagCounts[b] - tagCounts[a];
@@ -26,46 +29,53 @@ const otherTags = tags.slice(6);
   <Container>
     <div class="space-y-12">
       <div class="animate">
-        <h1 class="font-semibold text-2xl text-black dark:text-white mb-4">Topics</h1>
+        <h1 class="mb-4 text-2xl font-semibold text-black dark:text-white">Topics</h1>
         <p class="text-neutral-500">Explore posts by topic.</p>
       </div>
-      
-      {topTags.length > 0 && (
-        <div class="animate space-y-4">
-          <h2 class="font-semibold text-lg text-black dark:text-white">Featured</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {topTags.map((tag) => (
-              <a 
-                href={`/tags/${tag}/`}
-                class="group p-4 border border-black/10 dark:border-white/10 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:border-blue-200 dark:hover:border-blue-800 transition-colors flex flex-col justify-between h-full no-underline"
-              >
-                <span class="font-medium text-black dark:text-white capitalize group-hover:underline decoration-1 underline-offset-2 mb-2 group-hover:text-blue-700 dark:group-hover:text-blue-200">
-                  {tag}
-                </span>
-                <span class="text-sm text-neutral-500 group-hover:text-blue-600/70 dark:group-hover:text-blue-300/70">
-                  {tagCounts[tag]} {tagCounts[tag] === 1 ? "post" : "posts"}
-                </span>
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
 
-      {otherTags.length > 0 && (
-        <div class="animate space-y-4">
-          <h2 class="font-semibold text-lg text-black dark:text-white">All Topics</h2>
-          <div class="flex flex-wrap gap-1.5 -ml-3">
-            {otherTags.map((tag) => (
-              <a 
-                href={`/tags/${tag}/`}
-                class="group px-3 py-1.5 rounded-md bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-blue-100 dark:hover:bg-blue-900/40 hover:text-blue-700 dark:hover:text-blue-200 transition-colors text-sm no-underline"
-              >
-                <span class="group-hover:underline decoration-1 underline-offset-2">{tag}</span> <span class="text-neutral-400 ml-1 group-hover:text-blue-600/70 dark:group-hover:text-blue-300/70">{tagCounts[tag]}</span>
-              </a>
-            ))}
+      {
+        topTags.length > 0 && (
+          <div class="animate space-y-4">
+            <h2 class="text-lg font-semibold text-black dark:text-white">Featured</h2>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+              {topTags.map((tag) => (
+                <a
+                  href={`/tags/${tag}/`}
+                  class="group flex h-full flex-col justify-between rounded-lg border border-black/10 p-4 no-underline transition-colors hover:border-blue-200 hover:bg-blue-50 dark:border-white/10 dark:hover:border-blue-800 dark:hover:bg-blue-900/20"
+                >
+                  <span class="mb-2 font-medium text-black capitalize decoration-1 underline-offset-2 group-hover:text-blue-700 group-hover:underline dark:text-white dark:group-hover:text-blue-200">
+                    {tag}
+                  </span>
+                  <span class="text-sm text-neutral-500 group-hover:text-blue-600/70 dark:group-hover:text-blue-300/70">
+                    {tagCounts[tag]} {tagCounts[tag] === 1 ? 'post' : 'posts'}
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )
+      }
+
+      {
+        otherTags.length > 0 && (
+          <div class="animate space-y-4">
+            <h2 class="text-lg font-semibold text-black dark:text-white">All Topics</h2>
+            <div class="-ml-3 flex flex-wrap gap-1.5">
+              {otherTags.map((tag) => (
+                <a
+                  href={`/tags/${tag}/`}
+                  class="group rounded-md bg-neutral-100 px-3 py-1.5 text-sm text-neutral-700 no-underline transition-colors hover:bg-blue-100 hover:text-blue-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-blue-900/40 dark:hover:text-blue-200"
+                >
+                  <span class="decoration-1 underline-offset-2 group-hover:underline">{tag}</span>{' '}
+                  <span class="ml-1 text-neutral-400 group-hover:text-blue-600/70 dark:group-hover:text-blue-300/70">
+                    {tagCounts[tag]}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )
+      }
     </div>
   </Container>
 </Layout>

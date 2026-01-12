@@ -6,28 +6,28 @@ const hasPhotos = photosToShow.length > 0;
 
 const getRelativeTime = (dateStr) => {
   if (!dateStr) return '';
-  
+
   // 1. Get "Now" in America/New_York
   const now = new Date();
   const nyNowParts = new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/New_York',
     year: 'numeric',
     month: 'numeric',
-    day: 'numeric'
+    day: 'numeric',
   }).formatToParts(now);
-  
-  const getPart = (type) => nyNowParts.find(p => p.type === type).value;
+
+  const getPart = (type) => nyNowParts.find((p) => p.type === type).value;
   const nyYear = parseInt(getPart('year'));
   const nyMonth = parseInt(getPart('month')) - 1; // 0-indexed
   const nyDay = parseInt(getPart('day'));
-  
+
   // Use UTC for day calculation to avoid DST issues
   const todayMidnight = Date.UTC(nyYear, nyMonth, nyDay);
 
   // 2. Parse Flickr date (YYYY-MM-DD HH:MM:SS)
   let pYear, pMonth, pDay;
   const match = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})/);
-  
+
   if (match) {
     pYear = parseInt(match[1]);
     pMonth = parseInt(match[2]) - 1;
@@ -38,17 +38,17 @@ const getRelativeTime = (dateStr) => {
     pMonth = d.getMonth();
     pDay = d.getDate();
   }
-  
+
   const photoMidnight = Date.UTC(pYear, pMonth, pDay);
-  
+
   // 3. Calculate difference in days
   const diffTime = todayMidnight - photoMidnight;
   const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
-  if (diffDays === 0) return "Today";
-  if (diffDays === 1) return "Yesterday";
-  
-  // Construct a Date object for formatting. 
+  if (diffDays === 0) return 'Today';
+  if (diffDays === 1) return 'Yesterday';
+
+  // Construct a Date object for formatting.
   // We use UTC timezone for formatting to match the UTC timestamp we created.
   const photoDateObj = new Date(Date.UTC(pYear, pMonth, pDay));
   const formatOpts = { timeZone: 'UTC' };
@@ -56,46 +56,73 @@ const getRelativeTime = (dateStr) => {
   if (diffDays < 7 && diffDays > 1) {
     return `Last ${photoDateObj.toLocaleDateString('en-US', { ...formatOpts, weekday: 'long' })}`;
   }
-  
+
   if (pYear === nyYear) {
-     return photoDateObj.toLocaleDateString('en-US', { ...formatOpts, month: 'short', day: 'numeric' });
+    return photoDateObj.toLocaleDateString('en-US', {
+      ...formatOpts,
+      month: 'short',
+      day: 'numeric',
+    });
   }
-  return photoDateObj.toLocaleDateString('en-US', { ...formatOpts, month: 'short', day: 'numeric', year: 'numeric' });
+  return photoDateObj.toLocaleDateString('en-US', {
+    ...formatOpts,
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  });
 };
 ---
 
-{hasPhotos ? (
-  <section class="my-16 animate" data-testid="flickr-section">
-    <div class="flex justify-between items-baseline mb-4 border-b border-black/10 dark:border-white/10 pb-4">
-      <h3 class="font-semibold text-black dark:text-white text-lg">Photo Archive</h3>
-      <a href="https://www.flickr.com/photos/ed_welker/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
-        Flickr <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
-      </a>
-    </div>
+{
+  hasPhotos ? (
+    <section class="animate my-16" data-testid="flickr-section">
+      <div class="mb-4 flex items-baseline justify-between border-b border-black/10 pb-4 dark:border-white/10">
+        <h3 class="text-lg font-semibold text-black dark:text-white">Photo Archive</h3>
+        <a
+          href="https://www.flickr.com/photos/ed_welker/"
+          class="group font-mono text-[9px] tracking-[0.1em] text-neutral-400 uppercase transition-colors hover:text-black dark:hover:text-white"
+        >
+          Flickr{' '}
+          <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+        </a>
+      </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 auto-rows-[120px] md:auto-rows-[160px]">
-      {photosToShow.map((photo, i) => {
-        const isTopHero = i === 0;
-        const isBottomHero = i === 9;
-        let spanClass = "col-span-1 row-span-1";
-        if (isTopHero) spanClass = "col-span-2 row-span-2";
-        if (isBottomHero) spanClass = "col-span-2 row-span-2 md:col-start-3 md:row-start-3";
+      <div class="grid auto-rows-[120px] grid-cols-2 gap-2 md:auto-rows-[160px] md:grid-cols-4">
+        {photosToShow.map((photo, i) => {
+          const isTopHero = i === 0;
+          const isBottomHero = i === 9;
+          let spanClass = 'col-span-1 row-span-1';
+          if (isTopHero) spanClass = 'col-span-2 row-span-2';
+          if (isBottomHero) spanClass = 'col-span-2 row-span-2 md:col-start-3 md:row-start-3';
 
-        return (
-          <div class={`${spanClass} group relative overflow-hidden bg-neutral-100 dark:bg-neutral-900 border border-black/5 dark:border-white/5`}>
-            <a href={`https://www.flickr.com/photos/ed_welker/${photo.id}`} target="_blank" rel="noopener noreferrer" class="block w-full h-full">
-              <img src={photo.src} alt={photo.title || 'Flickr photo'} loading="lazy" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110" />
-              <div class="absolute top-2 right-2 px-2 py-1 bg-black/60 backdrop-blur-md rounded shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span class="text-white/90 font-mono font-bold text-[10px] uppercase tracking-wider block">
-                  {getRelativeTime(photo.date)}
-                </span>
-              </div>
-            </a>
-          </div>
-        );
-      })}
-    </div>
-  </section>
-) : (
-  <div data-flickr-empty style="display: none;" />
-)}
+          return (
+            <div
+              class={`${spanClass} group relative overflow-hidden border border-black/5 bg-neutral-100 dark:border-white/5 dark:bg-neutral-900`}
+            >
+              <a
+                href={`https://www.flickr.com/photos/ed_welker/${photo.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block h-full w-full"
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.title || 'Flickr photo'}
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
+                />
+                <div class="absolute top-2 right-2 rounded bg-black/60 px-2 py-1 opacity-0 shadow-sm backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100">
+                  <span class="block font-mono text-[10px] font-bold tracking-wider text-white/90 uppercase">
+                    {getRelativeTime(photo.date)}
+                  </span>
+                </div>
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  ) : (
+    <div data-flickr-empty style="display: none;" />
+  )
+}

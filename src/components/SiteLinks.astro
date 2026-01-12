@@ -1,26 +1,34 @@
 ---
-import { mainLinks, secondaryLinks } from "../lib/nav-links";
+import { mainLinks, secondaryLinks } from '../lib/nav-links';
 ---
 
 <div class="flex flex-col items-center gap-y-3">
-  <nav class="flex flex-wrap justify-center gap-x-6 text-sm font-medium text-black/60 dark:text-white/60">
-    {mainLinks.map((link) => (
-      <a 
-        href={link.href} 
-        class="hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
-      >
-        {link.label}
-      </a>
-    ))}
+  <nav
+    class="flex flex-wrap justify-center gap-x-6 text-sm font-medium text-black/60 dark:text-white/60"
+  >
+    {
+      mainLinks.map((link) => (
+        <a
+          href={link.href}
+          class="transition-colors duration-300 ease-in-out hover:text-black dark:hover:text-white"
+        >
+          {link.label}
+        </a>
+      ))
+    }
   </nav>
-  <nav class="flex flex-wrap justify-center gap-x-6 text-sm font-medium text-black/60 dark:text-white/60">
-    {secondaryLinks.map((link) => (
-      <a 
-        href={link.href} 
-        class="hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
-      >
-        {link.label}
-      </a>
-    ))}
+  <nav
+    class="flex flex-wrap justify-center gap-x-6 text-sm font-medium text-black/60 dark:text-white/60"
+  >
+    {
+      secondaryLinks.map((link) => (
+        <a
+          href={link.href}
+          class="transition-colors duration-300 ease-in-out hover:text-black dark:hover:text-white"
+        >
+          {link.label}
+        </a>
+      ))
+    }
   </nav>
 </div>

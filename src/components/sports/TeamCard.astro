@@ -5,35 +5,46 @@ import ScheduleList from './ScheduleList.astro';
 const { team, logoUrl } = Astro.props;
 ---
 
-<div id={team.name.toLowerCase().replace(/\s+/g, '-')} class="space-y-4 scroll-mt-4">
-    <h2 class="text-xl font-bold text-black dark:text-white border-b border-neutral-200 dark:border-neutral-800 pb-2 flex items-baseline flex-wrap">
-        <div class="flex items-baseline mr-4">
-            {logoUrl ? (
-                <img src={logoUrl} class="w-6 h-6 mr-2 self-center" alt="" />
-            ) : (
-                <span class="mr-2 self-center">{team.league === 'MLB' ? '⚾' : '🏀'}</span>
-            )}
-            {team.name}
-        </div>
-        {team.record && (
-            <span class="text-sm font-normal text-neutral-500 flex items-baseline">
-                {team.record}
-                {team.rank && (
-                    <a href={team.standingsLink} target="_blank" rel="noopener noreferrer" class="text-xs ml-2 hover:underline hover:text-blue-600 transition-colors">
-                        ({team.rank})
-                    </a>
-                )}
-            </span>
-        )}
-    </h2>
-    
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- Left Column: News -->
-        <NewsList recentItems={team.recentItems} olderItems={team.olderItems} />
-
-        <!-- Right Column: Next Games -->
-        <div class="text-left lg:text-right">
-            <ScheduleList schedule={team.schedule} scheduleLink={team.scheduleLink} />
-        </div>
+<div id={team.name.toLowerCase().replace(/\s+/g, '-')} class="scroll-mt-4 space-y-4">
+  <h2
+    class="flex flex-wrap items-baseline border-b border-neutral-200 pb-2 text-xl font-bold text-black dark:border-neutral-800 dark:text-white"
+  >
+    <div class="mr-4 flex items-baseline">
+      {
+        logoUrl ? (
+          <img src={logoUrl} class="mr-2 h-6 w-6 self-center" alt="" />
+        ) : (
+          <span class="mr-2 self-center">{team.league === 'MLB' ? '⚾' : '🏀'}</span>
+        )
+      }
+      {team.name}
     </div>
+    {
+      team.record && (
+        <span class="flex items-baseline text-sm font-normal text-neutral-500">
+          {team.record}
+          {team.rank && (
+            <a
+              href={team.standingsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ml-2 text-xs transition-colors hover:text-blue-600 hover:underline"
+            >
+              ({team.rank})
+            </a>
+          )}
+        </span>
+      )
+    }
+  </h2>
+
+  <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+    <!-- Left Column: News -->
+    <NewsList recentItems={team.recentItems} olderItems={team.olderItems} />
+
+    <!-- Right Column: Next Games -->
+    <div class="text-left lg:text-right">
+      <ScheduleList schedule={team.schedule} scheduleLink={team.scheduleLink} />
+    </div>
+  </div>
 </div>

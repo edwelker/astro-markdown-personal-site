@@ -13,8 +13,8 @@ export default {
   },
   variants: {
     extend: {
-        /* textColor: ['visited'], */
+      /* textColor: ['visited'], */
     },
   },
   plugins: [],
-}
+};

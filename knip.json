@@ -18,13 +18,6 @@
     "functions/**/*.js",
     "src/types/**/*.ts"
   ],
-  "ignore": [
-    "src/env.d.ts",
-    "**/*.d.ts",
-    "public/**",
-    "venv/**"
-  ],
-  "ignoreDependencies": [
-    "@astrojs/check"
-  ]
+  "ignore": ["src/env.d.ts", "**/*.d.ts", "public/**", "venv/**"],
+  "ignoreDependencies": ["@astrojs/check"]
 }

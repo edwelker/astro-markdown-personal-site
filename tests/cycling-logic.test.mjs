@@ -12,13 +12,13 @@ describe('Cycling Logic: transformStravaData', () => {
       year: { distance: '0.0', elevation: '0', count: 0 },
       month: { name: 'July', distance: '0.0' },
       recent: [],
-      chart: Array(52).fill(0)
+      chart: Array(52).fill(0),
     });
     expect(transformStravaData(null)).toEqual({
       year: { distance: '0.0', elevation: '0', count: 0 },
       month: { name: 'July', distance: '0.0' },
       recent: [],
-      chart: Array(52).fill(0)
+      chart: Array(52).fill(0),
     });
   });
 
@@ -74,7 +74,7 @@ describe('Cycling Logic: transformStravaData', () => {
         distance: 16093.4, // 10 miles
         total_elevation_gain: 100,
         sport_type: 'Ride',
-      }
+      },
     ];
 
     const result = transformStravaData(mockActivities);
@@ -82,10 +82,10 @@ describe('Cycling Logic: transformStravaData', () => {
     expect(result.year.distance).toBe('60.0');
     expect(result.year.elevation).toBe('1,700');
     expect(result.year.count).toBe(4);
-    
+
     expect(result.month.name).toBe('August');
     expect(result.month.distance).toBe('40.0');
-    
+
     // Recent list now includes previous year rides if they are fetched
     expect(result.recent).toHaveLength(3);
     expect(result.recent[0]).toEqual({
@@ -110,15 +110,15 @@ describe('Cycling Logic: transformStravaData', () => {
       elevation: '328',
     });
 
-    expect(result.chart[2]).toBe(20); 
-    expect(result.chart[31]).toBe(10); 
+    expect(result.chart[2]).toBe(20);
+    expect(result.chart[31]).toBe(10);
     expect(result.chart[30]).toBe(30);
   });
 
   it('should show previous month stats when current month has 0 distance (Jan 1st scenario)', () => {
     // Mock date: Jan 1st 2025, 10:00 AM EST (UTC-5) -> 15:00 UTC
-    const mockNow = new Date('2025-01-01T15:00:00Z'); 
-    
+    const mockNow = new Date('2025-01-01T15:00:00Z');
+
     const activities = [
       // Ride in Dec 2024
       {
@@ -128,24 +128,24 @@ describe('Cycling Logic: transformStravaData', () => {
         distance: 16093.4, // ~10 miles
         total_elevation_gain: 100,
         sport_type: 'Ride',
-        visibility: 'everyone'
-      }
+        visibility: 'everyone',
+      },
     ];
 
     const result = transformStravaData(activities, mockNow);
 
     // Year stats (2025) should be empty
     expect(result.year.count).toBe(0);
-    expect(result.year.distance).toBe("0.0");
+    expect(result.year.distance).toBe('0.0');
 
     // Month stats should fall back to December
     expect(result.month.name).toBe('December');
-    expect(result.month.distance).toBe("10.0"); // 10 miles
+    expect(result.month.distance).toBe('10.0'); // 10 miles
   });
 
   it('should show current month stats when rides exist in current year', () => {
     const mockNow = new Date('2025-01-02T15:00:00Z');
-    
+
     const activities = [
       {
         id: 2,
@@ -154,15 +154,15 @@ describe('Cycling Logic: transformStravaData', () => {
         distance: 16093.4, // ~10 miles
         total_elevation_gain: 100,
         sport_type: 'Ride',
-        visibility: 'everyone'
-      }
+        visibility: 'everyone',
+      },
     ];
 
     const result = transformStravaData(activities, mockNow);
 
     expect(result.year.count).toBe(1);
-    expect(result.year.distance).toBe("10.0");
+    expect(result.year.distance).toBe('10.0');
     expect(result.month.name).toBe('January');
-    expect(result.month.distance).toBe("10.0");
+    expect(result.month.distance).toBe('10.0');
   });
 });

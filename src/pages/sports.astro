@@ -15,146 +15,204 @@ const { teamData, allLeagueNews, fetchError } = await getSportsPageData();
 
 const now = new Date();
 const lastUpdated = now.toLocaleString('en-US', {
-    timeZone: 'America/New_York',
-    dateStyle: 'medium',
-    timeStyle: 'short'
+  timeZone: 'America/New_York',
+  dateStyle: 'medium',
+  timeStyle: 'short',
 });
 
 const tabs = [
-    { id: 'my-teams', label: 'My Teams' },
-    { id: 'all', label: 'All News' },
-    { id: 'mlb', label: '⚾ MLB' },
-    { id: 'nba', label: '🏀 NBA' }
+  { id: 'my-teams', label: 'My Teams' },
+  { id: 'all', label: 'All News' },
+  { id: 'mlb', label: '⚾ MLB' },
+  { id: 'nba', label: '🏀 NBA' },
 ];
 ---
 
-<Layout title="Sports Feed" description="Aggregated news and updates for my favorite MLB and NBA teams.">
-  <div class="max-w-2xl mx-auto px-4 py-8">
-    <div class="flex justify-between items-end mb-8">
-        <div>
-            <h1 class="text-3xl font-bold text-black dark:text-white">Sports Feed</h1>
-            <div class="text-xs text-neutral-400 mt-1 space-x-2">
-                <span>Sources:</span>
-                <a href="https://www.mlbtraderumors.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors">MLB Trade Rumors</a>
-                <a href="https://www.hoopsrumors.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors">Hoops Rumors</a>
-            </div>
+<Layout
+  title="Sports Feed"
+  description="Aggregated news and updates for my favorite MLB and NBA teams."
+>
+  <div class="mx-auto max-w-2xl px-4 py-8">
+    <div class="mb-8 flex items-end justify-between">
+      <div>
+        <h1 class="text-3xl font-bold text-black dark:text-white">Sports Feed</h1>
+        <div class="mt-1 space-x-2 text-xs text-neutral-400">
+          <span>Sources:</span>
+          <a
+            href="https://www.mlbtraderumors.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-colors hover:text-blue-500">MLB Trade Rumors</a
+          >
+          <a
+            href="https://www.hoopsrumors.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-colors hover:text-blue-500">Hoops Rumors</a
+          >
         </div>
-        <span id="last-updated" data-timestamp={now.toISOString()} class="text-xs text-neutral-500 font-mono mb-1">Updated: {lastUpdated}</span>
+      </div>
+      <span
+        id="last-updated"
+        data-timestamp={now.toISOString()}
+        class="mb-1 font-mono text-xs text-neutral-500">Updated: {lastUpdated}</span
+      >
     </div>
 
-    {fetchError && (
-        <div class="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-sm text-red-600 dark:text-red-400">
-            <p class="font-bold">Unable to load some sports data.</p>
-            <p>Please try refreshing the page in a few moments.</p>
+    {
+      fetchError && (
+        <div class="mb-6 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-600 dark:border-red-800 dark:bg-red-900/20 dark:text-red-400">
+          <p class="font-bold">Unable to load some sports data.</p>
+          <p>Please try refreshing the page in a few moments.</p>
         </div>
-    )}
+      )
+    }
 
     <div class="space-y-6">
-        <!-- Tabs Navigation -->
-        <div class="flex gap-6 border-b border-neutral-200 dark:border-neutral-800 pb-1 overflow-x-auto">
-            {tabs.map(tab => (
-                <button
-                    data-tab={tab.id}
-                    class={`pb-2 px-1 text-sm uppercase tracking-wider transition-colors whitespace-nowrap ${tab.id === 'my-teams' ? 'border-b-2 border-blue-500 text-black dark:text-white font-bold' : 'text-neutral-500 hover:text-black dark:hover:text-white border-b-2 border-transparent'}`}
+      <!-- Tabs Navigation -->
+      <div
+        class="flex gap-6 overflow-x-auto border-b border-neutral-200 pb-1 dark:border-neutral-800"
+      >
+        {
+          tabs.map((tab) => (
+            <button
+              data-tab={tab.id}
+              class={`px-1 pb-2 text-sm tracking-wider whitespace-nowrap uppercase transition-colors ${tab.id === 'my-teams' ? 'border-b-2 border-blue-500 font-bold text-black dark:text-white' : 'border-b-2 border-transparent text-neutral-500 hover:text-black dark:hover:text-white'}`}
+            >
+              {tab.label}
+            </button>
+          ))
+        }
+      </div>
+
+      <!-- My Teams Panel -->
+      <div data-panel="my-teams" class="animate-in fade-in space-y-12 duration-300">
+        {/* Jump Links */}
+        {
+          teamData.length > 0 && (
+            <div class="flex w-full flex-wrap items-center justify-between gap-4">
+              {teamData.map((team) => (
+                <a
+                  href={`#${team.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  class="transition-transform hover:scale-110"
+                  title={team.name}
                 >
-                    {tab.label}
-                </button>
-            ))}
-        </div>
+                  {TEAM_LOGOS[team.name] ? (
+                    <img src={TEAM_LOGOS[team.name]} class="h-8 w-8" alt={team.name} />
+                  ) : (
+                    <span class="text-2xl">{team.league === 'MLB' ? '⚾' : '🏀'}</span>
+                  )}
+                </a>
+              ))}
+            </div>
+          )
+        }
 
-        <!-- My Teams Panel -->
-        <div data-panel="my-teams" class="space-y-12 animate-in fade-in duration-300">
-            {/* Jump Links */}
-            {teamData.length > 0 && (
-                <div class="flex flex-wrap gap-4 items-center justify-between w-full">
-                    {teamData.map(team => (
-                        <a
-                            href={`#${team.name.toLowerCase().replace(/\s+/g, '-')}`}
-                            class="transition-transform hover:scale-110"
-                            title={team.name}
-                        >
-                            {TEAM_LOGOS[team.name] ? (
-                                <img src={TEAM_LOGOS[team.name]} class="w-8 h-8" alt={team.name} />
-                            ) : (
-                                <span class="text-2xl">{team.league === 'MLB' ? '⚾' : '🏀'}</span>
-                            )}
-                        </a>
-                    ))}
-                </div>
-            )}
+        {
+          teamData.length === 0 && !fetchError && (
+            <p class="text-neutral-500 italic">No recent news found for your teams.</p>
+          )
+        }
 
-            {teamData.length === 0 && !fetchError && <p class="text-neutral-500 italic">No recent news found for your teams.</p>}
+        {teamData.map((team) => <TeamCard team={team} logoUrl={TEAM_LOGOS[team.name]} />)}
+      </div>
 
-            {teamData.map(team => (
-                <TeamCard team={team} logoUrl={TEAM_LOGOS[team.name]} />
-            ))}
-        </div>
+      <!-- All News Panel -->
+      <div data-panel="all" class="animate-in fade-in hidden space-y-8 duration-300">
+        <ul class="space-y-6">
+          {
+            allLeagueNews &&
+              allLeagueNews.map((item) => (
+                <li>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group block w-full no-underline"
+                  >
+                    <h3 class="text-sm leading-tight font-medium text-neutral-900 transition-colors group-hover:text-blue-600 dark:text-neutral-100 dark:group-hover:text-blue-400">
+                      <span class="mr-2">{LEAGUE_ICONS[item.league] || '📰'}</span>
+                      {decodeHtmlEntities(item.title)}
+                    </h3>
+                  </a>
+                  <div class="mt-1 flex items-center gap-3 font-mono text-xs text-neutral-500">
+                    <span>{formatRelativeTime(item.date)}</span>
+                    <span class="text-neutral-300 dark:text-neutral-700">•</span>
+                    <span class="text-neutral-400">
+                      {item.league} • {item.source}
+                    </span>
+                    <span class="text-neutral-300 dark:text-neutral-700">•</span>
+                    <span class="text-neutral-400">{getSourceDomain(item.link)}</span>
+                  </div>
+                </li>
+              ))
+          }
+        </ul>
+      </div>
 
-        <!-- All News Panel -->
-        <div data-panel="all" class="space-y-8 hidden animate-in fade-in duration-300">
-             <ul class="space-y-6">
-                {allLeagueNews && allLeagueNews.map((item) => (
-                    <li>
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-full group no-underline">
-                            <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
-                                <span class="mr-2">{LEAGUE_ICONS[item.league] || '📰'}</span>{decodeHtmlEntities(item.title)}
-                            </h3>
-                        </a>
-                        <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                            <span>{formatRelativeTime(item.date)}</span>
-                            <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                            <span class="text-neutral-400">{item.league} • {item.source}</span>
-                            <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                            <span class="text-neutral-400">{getSourceDomain(item.link)}</span>
-                        </div>
-                    </li>
-                ))}
-            </ul>
-        </div>
+      <!-- MLB Panel -->
+      <div data-panel="mlb" class="animate-in fade-in hidden space-y-8 duration-300">
+        <ul class="space-y-6">
+          {
+            allLeagueNews &&
+              allLeagueNews
+                .filter((i) => i.league === 'MLB')
+                .map((item) => (
+                  <li>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="group block w-full no-underline"
+                    >
+                      <h3 class="text-sm leading-tight font-medium text-neutral-900 transition-colors group-hover:text-blue-600 dark:text-neutral-100 dark:group-hover:text-blue-400">
+                        {decodeHtmlEntities(item.title)}
+                      </h3>
+                    </a>
+                    <div class="mt-1 flex items-center gap-3 font-mono text-xs text-neutral-500">
+                      <span>{formatRelativeTime(item.date)}</span>
+                      <span class="text-neutral-300 dark:text-neutral-700">•</span>
+                      <span class="text-neutral-400">{item.source}</span>
+                      <span class="text-neutral-300 dark:text-neutral-700">•</span>
+                      <span class="text-neutral-400">{getSourceDomain(item.link)}</span>
+                    </div>
+                  </li>
+                ))
+          }
+        </ul>
+      </div>
 
-        <!-- MLB Panel -->
-        <div data-panel="mlb" class="space-y-8 hidden animate-in fade-in duration-300">
-             <ul class="space-y-6">
-                {allLeagueNews && allLeagueNews.filter(i => i.league === 'MLB').map((item) => (
-                    <li>
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-full group no-underline">
-                            <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
-                                {decodeHtmlEntities(item.title)}
-                            </h3>
-                        </a>
-                        <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                            <span>{formatRelativeTime(item.date)}</span>
-                            <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                            <span class="text-neutral-400">{item.source}</span>
-                            <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                            <span class="text-neutral-400">{getSourceDomain(item.link)}</span>
-                        </div>
-                    </li>
-                ))}
-            </ul>
-        </div>
-
-        <!-- NBA Panel -->
-        <div data-panel="nba" class="space-y-8 hidden animate-in fade-in duration-300">
-             <ul class="space-y-6">
-                {allLeagueNews && allLeagueNews.filter(i => i.league === 'NBA').map((item) => (
-                    <li>
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" class="block w-full group no-underline">
-                            <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
-                                {decodeHtmlEntities(item.title)}
-                            </h3>
-                        </a>
-                        <div class="mt-1 flex items-center gap-3 text-xs text-neutral-500 font-mono">
-                            <span>{formatRelativeTime(item.date)}</span>
-                            <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                            <span class="text-neutral-400">{item.source}</span>
-                            <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                            <span class="text-neutral-400">{getSourceDomain(item.link)}</span>
-                        </div>
-                    </li>
-                ))}
-            </ul>
-        </div>
+      <!-- NBA Panel -->
+      <div data-panel="nba" class="animate-in fade-in hidden space-y-8 duration-300">
+        <ul class="space-y-6">
+          {
+            allLeagueNews &&
+              allLeagueNews
+                .filter((i) => i.league === 'NBA')
+                .map((item) => (
+                  <li>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="group block w-full no-underline"
+                    >
+                      <h3 class="text-sm leading-tight font-medium text-neutral-900 transition-colors group-hover:text-blue-600 dark:text-neutral-100 dark:group-hover:text-blue-400">
+                        {decodeHtmlEntities(item.title)}
+                      </h3>
+                    </a>
+                    <div class="mt-1 flex items-center gap-3 font-mono text-xs text-neutral-500">
+                      <span>{formatRelativeTime(item.date)}</span>
+                      <span class="text-neutral-300 dark:text-neutral-700">•</span>
+                      <span class="text-neutral-400">{item.source}</span>
+                      <span class="text-neutral-300 dark:text-neutral-700">•</span>
+                      <span class="text-neutral-400">{getSourceDomain(item.link)}</span>
+                    </div>
+                  </li>
+                ))
+          }
+        </ul>
+      </div>
     </div>
   </div>
 </Layout>
@@ -171,53 +229,53 @@ const tabs = [
     const panels = document.querySelectorAll('[data-panel]');
 
     // Handle Tabs
-    tabs.forEach(tab => {
+    tabs.forEach((tab) => {
       tab.addEventListener('click', () => {
         const target = (tab as HTMLElement).dataset.tab;
 
         // Update tabs
-        tabs.forEach(t => {
-            if ((t as HTMLElement).dataset.tab === target) {
-                t.classList.add('border-blue-500', 'text-black', 'dark:text-white', 'font-bold');
-                t.classList.remove('text-neutral-500', 'border-transparent');
-            } else {
-                t.classList.remove('border-blue-500', 'text-black', 'dark:text-white', 'font-bold');
-                t.classList.add('text-neutral-500', 'border-transparent');
-            }
+        tabs.forEach((t) => {
+          if ((t as HTMLElement).dataset.tab === target) {
+            t.classList.add('border-blue-500', 'text-black', 'dark:text-white', 'font-bold');
+            t.classList.remove('text-neutral-500', 'border-transparent');
+          } else {
+            t.classList.remove('border-blue-500', 'text-black', 'dark:text-white', 'font-bold');
+            t.classList.add('text-neutral-500', 'border-transparent');
+          }
         });
 
         // Update panels
-        panels.forEach(p => {
-            if ((p as HTMLElement).dataset.panel === target) {
-                p.classList.remove('hidden');
-            } else {
-                p.classList.add('hidden');
-            }
+        panels.forEach((p) => {
+          if ((p as HTMLElement).dataset.panel === target) {
+            p.classList.remove('hidden');
+          } else {
+            p.classList.add('hidden');
+          }
         });
       });
     });
 
     // Handle Relative Time Update for Caching
     const updateLastUpdated = () => {
-        const el = document.getElementById('last-updated');
-        if (!el || !el.dataset.timestamp) return;
+      const el = document.getElementById('last-updated');
+      if (!el || !el.dataset.timestamp) return;
 
-        const ts = new Date(el.dataset.timestamp);
-        const now = new Date();
-        const diff = Math.floor((now.getTime() - ts.getTime()) / 1000);
+      const ts = new Date(el.dataset.timestamp);
+      const now = new Date();
+      const diff = Math.floor((now.getTime() - ts.getTime()) / 1000);
 
-        let text = '';
-        if (diff < 60) {
-            text = 'Just now';
-        } else if (diff < 3600) {
-            text = `${Math.floor(diff / 60)}m ago`;
-        } else if (diff < 86400) {
-            text = `${Math.floor(diff / 3600)}h ago`;
-        } else {
-            text = ts.toLocaleDateString();
-        }
+      let text = '';
+      if (diff < 60) {
+        text = 'Just now';
+      } else if (diff < 3600) {
+        text = `${Math.floor(diff / 60)}m ago`;
+      } else if (diff < 86400) {
+        text = `${Math.floor(diff / 3600)}h ago`;
+      } else {
+        text = ts.toLocaleDateString();
+      }
 
-        el.textContent = `Updated: ${text}`;
+      el.textContent = `Updated: ${text}`;
     };
 
     updateLastUpdated();

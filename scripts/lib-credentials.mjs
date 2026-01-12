@@ -12,7 +12,9 @@ export function validateEnv(varMap, serviceName) {
   }
 
   if (missing.length > 0) {
-    throw new Error(`${serviceName} credentials are missing. Please check your environment variables: ${missing.join(', ')}`);
+    throw new Error(
+      `${serviceName} credentials are missing. Please check your environment variables: ${missing.join(', ')}`
+    );
   }
 
   return result;

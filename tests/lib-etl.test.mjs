@@ -5,7 +5,7 @@ import { existsSync } from 'node:fs';
 
 vi.mock('node:fs/promises');
 vi.mock('node:fs', () => ({
-  existsSync: vi.fn()
+  existsSync: vi.fn(),
 }));
 
 describe('lib-etl', () => {
@@ -26,8 +26,13 @@ describe('lib-etl', () => {
   describe('writeFile', () => {
     it('should create directory and write file', async () => {
       await writeFile('path/to/file.json', { foo: 'bar' });
-      expect(fs.mkdir).toHaveBeenCalledWith(expect.stringContaining('path/to'), { recursive: true });
-      expect(fs.writeFile).toHaveBeenCalledWith(expect.stringContaining('file.json'), JSON.stringify({ foo: 'bar' }, null, 2));
+      expect(fs.mkdir).toHaveBeenCalledWith(expect.stringContaining('path/to'), {
+        recursive: true,
+      });
+      expect(fs.writeFile).toHaveBeenCalledWith(
+        expect.stringContaining('file.json'),
+        JSON.stringify({ foo: 'bar' }, null, 2)
+      );
     });
   });
 
@@ -41,20 +46,25 @@ describe('lib-etl', () => {
         name: 'Test',
         fetcher,
         transform,
-        outFile: 'out.json'
+        outFile: 'out.json',
       });
 
       expect(fetcher).toHaveBeenCalled();
       expect(transform).toHaveBeenCalledWith({ raw: 'data' });
-      expect(fs.writeFile).toHaveBeenCalledWith(expect.stringContaining('out.json'), JSON.stringify({ clean: 'data' }, null, 2));
-      expect(consoleLogSpy).toHaveBeenCalledWith(expect.stringContaining('✅ Test: Wrote data to out.json'));
+      expect(fs.writeFile).toHaveBeenCalledWith(
+        expect.stringContaining('out.json'),
+        JSON.stringify({ clean: 'data' }, null, 2)
+      );
+      expect(consoleLogSpy).toHaveBeenCalledWith(
+        expect.stringContaining('✅ Test: Wrote data to out.json')
+      );
     });
 
     it('should handle errors and write default data', async () => {
       const fetcher = vi.fn().mockRejectedValue(new Error('Fetch failed'));
       const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
       const consoleLogSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
-      
+
       // Mock existsSync to return false so it falls back to default data
       vi.mocked(existsSync).mockReturnValue(false);
 
@@ -63,11 +73,16 @@ describe('lib-etl', () => {
         fetcher,
         transform: vi.fn(),
         outFile: 'out.json',
-        defaultData: { default: 'data' }
+        defaultData: { default: 'data' },
       });
 
-      expect(consoleErrorSpy).toHaveBeenCalledWith(expect.stringContaining('❌ Test: Fetch failed'));
-      expect(fs.writeFile).toHaveBeenCalledWith(expect.stringContaining('out.json'), JSON.stringify({ default: 'data' }, null, 2));
+      expect(consoleErrorSpy).toHaveBeenCalledWith(
+        expect.stringContaining('❌ Test: Fetch failed')
+      );
+      expect(fs.writeFile).toHaveBeenCalledWith(
+        expect.stringContaining('out.json'),
+        JSON.stringify({ default: 'data' }, null, 2)
+      );
     });
   });
 });

@@ -4,7 +4,7 @@ import { z } from 'zod';
 // Mock astro:content
 vi.mock('astro:content', () => ({
   defineCollection: (config: any) => ({ ...config, _mocked: true }),
-  z: z
+  z: z,
 }));
 
 import { collections } from '../src/content.config';

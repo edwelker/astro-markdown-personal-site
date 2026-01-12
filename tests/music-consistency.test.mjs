@@ -7,10 +7,10 @@ describe('Music Data Consistency', () => {
     const fetchScript = fs.readFileSync('scripts/music-fetch.mjs', 'utf-8');
     const periodsMatch = fetchScript.match(/const periods = \[(.*?)\]/s);
     if (!periodsMatch) throw new Error('Could not find periods in music-fetch.mjs');
-    
+
     const periods = periodsMatch[1]
       .split(',')
-      .map(p => p.trim().replace(/['"]/g, ''))
+      .map((p) => p.trim().replace(/['"]/g, ''))
       .filter(Boolean);
 
     // Define expected headers based on periods
@@ -19,12 +19,12 @@ describe('Music Data Consistency', () => {
       '1month': 'Last Month',
       '3month': 'Last 3 Months',
       '12month': 'Last 12 Months',
-      'overall': 'All Time'
+      overall: 'All Time',
     };
 
     // 2. Check MusicStats.astro (shows first two periods)
     const musicStats = fs.readFileSync('src/components/MusicStats.astro', 'utf-8');
-    
+
     const firstPeriod = periods[0];
     const secondPeriod = periods[1];
 
@@ -33,8 +33,8 @@ describe('Music Data Consistency', () => {
 
     // 3. Check music.astro (shows all periods)
     const musicPage = fs.readFileSync('src/pages/music.astro', 'utf-8');
-    
-    periods.forEach(period => {
+
+    periods.forEach((period) => {
       const expectedHeader = periodToHeader[period];
       if (!expectedHeader) throw new Error(`No header mapping for period: ${period}`);
       expect(musicPage).toContain(expectedHeader);

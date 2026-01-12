@@ -5,7 +5,7 @@ function parseCurrencyForSort(val: any): number | undefined {
   if (typeof val !== 'string') {
     return undefined;
   }
-  const num = parseFloat(val.replace(/[^0-9.-]+/g, ""));
+  const num = parseFloat(val.replace(/[^0-9.-]+/g, ''));
   return isNaN(num) ? undefined : num;
 }
 
@@ -56,8 +56,8 @@ export function sortGasData(
       if (valA === undefined) return 1;
       if (valB === undefined) return -1;
     } else {
-      valA = (a[sortCol] || "").toString().toLowerCase();
-      valB = (b[sortCol] || "").toString().toLowerCase();
+      valA = (a[sortCol] || '').toString().toLowerCase();
+      valB = (b[sortCol] || '').toString().toLowerCase();
     }
 
     if (valA < valB) return sortAsc ? -1 : 1;

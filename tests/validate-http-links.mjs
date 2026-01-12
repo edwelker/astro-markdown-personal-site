@@ -32,12 +32,12 @@ let filesChecked = 0;
 for (const file of files) {
   filesChecked++;
   const content = fs.readFileSync(file, 'utf-8');
-  
+
   // Split by code blocks to ignore them.
   // The regex matches ```...``` including newlines.
   // The split results in an array of text segments that are NOT inside code blocks.
   const parts = content.split(/```[\s\S]*?```/g);
-  
+
   parts.forEach((part) => {
     // Regex for http://
     // We use a simple check. If we needed to be stricter about word boundaries we could,
@@ -45,15 +45,15 @@ for (const file of files) {
     const httpRegex = /http:\/\//g;
     let match;
     while ((match = httpRegex.exec(part)) !== null) {
-        console.error(`\n[FAIL] Found 'http://' in ${path.relative(process.cwd(), file)}`);
-        
-        // Show some context
-        const start = Math.max(0, match.index - 30);
-        const end = Math.min(part.length, match.index + 50);
-        const context = part.substring(start, end).replace(/\n/g, ' ');
-        console.error(`Context: "...${context}..."`);
-        
-        hasError = true;
+      console.error(`\n[FAIL] Found 'http://' in ${path.relative(process.cwd(), file)}`);
+
+      // Show some context
+      const start = Math.max(0, match.index - 30);
+      const end = Math.min(part.length, match.index + 50);
+      const context = part.substring(start, end).replace(/\n/g, ' ');
+      console.error(`Context: "...${context}..."`);
+
+      hasError = true;
     }
   });
 }

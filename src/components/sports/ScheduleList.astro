@@ -2,113 +2,137 @@
 const { schedule = [], scheduleLink } = Astro.props;
 
 function formatGameDate(date) {
-    return new Date(date).toLocaleString('en-US', {
-        month: 'short',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: '2-digit',
-        timeZone: 'America/New_York'
-    });
+  return new Date(date).toLocaleString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    timeZone: 'America/New_York',
+  });
 }
 
 function formatPastGameDate(date) {
-    const d = new Date(date);
-    const now = new Date();
-    const yesterday = new Date(now);
-    yesterday.setDate(now.getDate() - 1);
-    
-    const isToday = d.getDate() === now.getDate() && 
-                    d.getMonth() === now.getMonth() && 
-                    d.getFullYear() === now.getFullYear();
-                    
-    const isYesterday = d.getDate() === yesterday.getDate() && 
-                        d.getMonth() === yesterday.getMonth() && 
-                        d.getFullYear() === yesterday.getFullYear();
+  const d = new Date(date);
+  const now = new Date();
+  const yesterday = new Date(now);
+  yesterday.setDate(now.getDate() - 1);
 
-    if (isToday) return 'Today';
-    if (isYesterday) return 'Yesterday';
-    
-    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  const isToday =
+    d.getDate() === now.getDate() &&
+    d.getMonth() === now.getMonth() &&
+    d.getFullYear() === now.getFullYear();
+
+  const isYesterday =
+    d.getDate() === yesterday.getDate() &&
+    d.getMonth() === yesterday.getMonth() &&
+    d.getFullYear() === yesterday.getFullYear();
+
+  if (isToday) return 'Today';
+  if (isYesterday) return 'Yesterday';
+
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 ---
 
 <div class="text-right">
-    <div class="flex items-center justify-end mb-4 gap-2">
-        <h3 class="font-bold text-base text-black dark:text-white">Schedule</h3>
-        {scheduleLink && (
-            <a href={scheduleLink} target="_blank" rel="noopener noreferrer" class="text-neutral-400 hover:text-blue-500 transition-colors" title="View Full Schedule">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                </svg>
-            </a>
-        )}
-    </div>
-    <ul class="space-y-4">
-        {schedule.map(game => (
-            <li>
-                <div class="text-sm font-medium text-neutral-900 dark:text-neutral-100 flex items-center justify-end">
-                    {game.text}
-                    {!game.completed && game.opponentRecord && (
-                        <a 
-                            href={game.standingsLink} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            class="text-neutral-400 font-normal text-[10px] ml-1.5 hover:underline hover:text-blue-600 transition-colors"
-                        >
-                            ({game.opponentRecord})
-                        </a>
-                    )}
-                </div>
-                <div class="mt-1 text-xs text-neutral-500 font-mono">
-                    {game.completed ? (
-                        <>
-                            <span class="text-neutral-400 mr-1.5">{formatPastGameDate(game.date)}</span>
-                            <a 
-                                href={game.boxScoreLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                class={`hover:underline font-bold ${game.isWin ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"}`}
-                            >
-                                {game.isWin ? 'W' : 'L'} {game.score}
-                            </a>
-                        </>
-                    ) : (
-                        <>
-                            <time datetime={new Date(game.date).toISOString()} class="game-time">
-                                {formatGameDate(game.date)}
-                            </time>
-                            {game.tv && <span class="text-neutral-400"> • {game.tv}</span>}
-                        </>
-                    )}
-                </div>
-            </li>
-        ))}
-        {schedule.length === 0 && (
-            <li class="text-sm text-neutral-500 italic">No upcoming games found.</li>
-        )}
-    </ul>
+  <div class="mb-4 flex items-center justify-end gap-2">
+    <h3 class="text-base font-bold text-black dark:text-white">Schedule</h3>
+    {
+      scheduleLink && (
+        <a
+          href={scheduleLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-neutral-400 transition-colors hover:text-blue-500"
+          title="View Full Schedule"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+        </a>
+      )
+    }
+  </div>
+  <ul class="space-y-4">
+    {
+      schedule.map((game) => (
+        <li>
+          <div class="flex items-center justify-end text-sm font-medium text-neutral-900 dark:text-neutral-100">
+            {game.text}
+            {!game.completed && game.opponentRecord && (
+              <a
+                href={game.standingsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ml-1.5 text-[10px] font-normal text-neutral-400 transition-colors hover:text-blue-600 hover:underline"
+              >
+                ({game.opponentRecord})
+              </a>
+            )}
+          </div>
+          <div class="mt-1 font-mono text-xs text-neutral-500">
+            {game.completed ? (
+              <>
+                <span class="mr-1.5 text-neutral-400">{formatPastGameDate(game.date)}</span>
+                <a
+                  href={game.boxScoreLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class={`font-bold hover:underline ${game.isWin ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}
+                >
+                  {game.isWin ? 'W' : 'L'} {game.score}
+                </a>
+              </>
+            ) : (
+              <>
+                <time datetime={new Date(game.date).toISOString()} class="game-time">
+                  {formatGameDate(game.date)}
+                </time>
+                {game.tv && <span class="text-neutral-400"> • {game.tv}</span>}
+              </>
+            )}
+          </div>
+        </li>
+      ))
+    }
+    {
+      schedule.length === 0 && (
+        <li class="text-sm text-neutral-500 italic">No upcoming games found.</li>
+      )
+    }
+  </ul>
 </div>
 
 <script>
-    function updateTimes() {
-        const times = document.querySelectorAll('.game-time');
-        times.forEach(time => {
-            const datetime = time.getAttribute('datetime');
-            if (datetime) {
-                const date = new Date(datetime);
-                time.textContent = date.toLocaleString('en-US', {
-                    month: 'short',
-                    day: 'numeric',
-                    hour: 'numeric',
-                    minute: '2-digit'
-                });
-            }
+  function updateTimes() {
+    const times = document.querySelectorAll('.game-time');
+    times.forEach((time) => {
+      const datetime = time.getAttribute('datetime');
+      if (datetime) {
+        const date = new Date(datetime);
+        time.textContent = date.toLocaleString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          hour: 'numeric',
+          minute: '2-digit',
         });
-    }
+      }
+    });
+  }
 
-    updateTimes();
-    document.addEventListener('astro:page-load', updateTimes);
+  updateTimes();
+  document.addEventListener('astro:page-load', updateTimes);
 </script>

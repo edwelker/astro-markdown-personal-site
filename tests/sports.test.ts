@@ -41,12 +41,12 @@ describe('Sports News Logic', () => {
     });
 
     const news = await getMyTeamsNews();
-    
+
     expect(news.length).toBeGreaterThan(0);
     expect(news[0]).toMatchObject({
       title: 'Test News Item',
       url: 'https://example.com/news/1',
-      description: 'This is a test description.'
+      description: 'This is a test description.',
     });
     expect(news[0].date).toBeInstanceOf(Date);
   });
@@ -63,7 +63,7 @@ describe('Sports News Logic', () => {
     expect(news[0]).toMatchObject({
       title: 'Atom News Item',
       url: 'https://example.com/news/2',
-      description: 'This is an atom summary.'
+      description: 'This is an atom summary.',
     });
   });
 
@@ -98,9 +98,9 @@ describe('Sports News Logic', () => {
     expect(news[0].title).toBe('News & Updates: "Quotes"');
     expect(news[0].url).toBe('http://example.com?a=1&b=2');
   });
-  
+
   it('handles CDATA sections in RSS', async () => {
-      const cdataFeed = `
+    const cdataFeed = `
         <rss>
           <channel>
             <item>
@@ -111,15 +111,15 @@ describe('Sports News Logic', () => {
           </channel>
         </rss>
       `;
-      
-      fetch.mockResolvedValue({
-        ok: true,
-        text: async () => cdataFeed,
-      });
-  
-      const news = await getMyTeamsNews();
-      expect(news[0].title).toBe('News with CDATA');
-      expect(news[0].url).toBe('http://example.com/cdata');
+
+    fetch.mockResolvedValue({
+      ok: true,
+      text: async () => cdataFeed,
+    });
+
+    const news = await getMyTeamsNews();
+    expect(news[0].title).toBe('News with CDATA');
+    expect(news[0].url).toBe('http://example.com/cdata');
   });
 
   it('handles single quotes in Atom links', async () => {
@@ -132,7 +132,7 @@ describe('Sports News Logic', () => {
         </entry>
       </feed>
     `;
-    
+
     fetch.mockResolvedValue({
       ok: true,
       text: async () => atomSingleQuote,
@@ -150,7 +150,7 @@ describe('Sports News Logic', () => {
 
     const news = await getMyTeamsNews();
     const item = news[0];
-    
+
     expect(item).toHaveProperty('url');
     expect(item.url).toBe('https://example.com/news/1');
     // @ts-ignore

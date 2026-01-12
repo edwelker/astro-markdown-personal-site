@@ -10,7 +10,7 @@ describe('Navigation Links', () => {
   });
 
   it('should have expected main links', () => {
-    const labels = mainLinks.map(l => l.label);
+    const labels = mainLinks.map((l) => l.label);
     expect(labels).toContain('About');
     expect(labels).toContain('Blog');
     expect(labels).toContain('Music');
@@ -18,7 +18,7 @@ describe('Navigation Links', () => {
   });
 
   it('should have expected secondary links', () => {
-    const labels = secondaryLinks.map(l => l.label);
+    const labels = secondaryLinks.map((l) => l.label);
     expect(labels).toContain('GasPrices');
     expect(labels).toContain('Sports');
     expect(labels).toContain('Uses');
@@ -37,9 +37,10 @@ describe('Menu Modal Logic', () => {
     events = {};
 
     // Helper to simulate event listeners
-    const addEventListener = (id: string) => vi.fn((event: string, callback: any) => {
-      events[`${id}:${event}`] = callback;
-    });
+    const addEventListener = (id: string) =>
+      vi.fn((event: string, callback: any) => {
+        events[`${id}:${event}`] = callback;
+      });
 
     mockLink = {
       addEventListener: addEventListener('link'),
@@ -50,7 +51,15 @@ describe('Menu Modal Logic', () => {
       showModal: vi.fn(),
       close: vi.fn(),
       getBoundingClientRect: vi.fn(() => ({
-        top: 0, left: 0, width: 100, height: 100, bottom: 100, right: 100, x: 0, y: 0, toJSON: () => {}
+        top: 0,
+        left: 0,
+        width: 100,
+        height: 100,
+        bottom: 100,
+        right: 100,
+        x: 0,
+        y: 0,
+        toJSON: () => {},
       })),
       addEventListener: addEventListener('menu-dialog'),
       querySelectorAll: vi.fn(() => [mockLink]),
@@ -72,7 +81,7 @@ describe('Menu Modal Logic', () => {
         if (id === 'menu-btn') return mockBtn;
         if (id === 'menu-close') return mockCloseBtn;
         return null;
-      })
+      }),
     });
 
     initMenuModal('menu-btn', 'menu-dialog', 'menu-close');
@@ -101,7 +110,7 @@ describe('Menu Modal Logic', () => {
     // Simulate click event handler on dialog
     const clickHandler = events['menu-dialog:click'];
     expect(clickHandler).toBeDefined();
-    
+
     // Click at 150, 150 (outside 0,0-100,100 rect)
     clickHandler({ clientX: 150, clientY: 150 });
     expect(mockDialog.close).toHaveBeenCalled();
@@ -125,7 +134,7 @@ describe('Menu Modal Safety', () => {
   it('should safely handle missing elements', () => {
     // Mock document to return null for everything
     vi.stubGlobal('document', {
-      getElementById: vi.fn(() => null)
+      getElementById: vi.fn(() => null),
     });
 
     // Should not throw error

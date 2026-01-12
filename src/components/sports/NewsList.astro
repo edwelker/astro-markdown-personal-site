@@ -5,41 +5,43 @@ const { recentItems = [], olderItems = [] } = Astro.props;
 ---
 
 <div class="space-y-4">
-    <ul class="space-y-4">
-        {recentItems.map((item) => (
+  <ul class="space-y-4">
+    {recentItems.map((item) => <SportsNewsArticle item={item} />)}
+  </ul>
+
+  {
+    olderItems.length > 0 && (
+      <div>
+        <button class="toggle-older-news text-xs font-bold text-neutral-500 transition-colors hover:text-blue-600 focus:outline-none">
+          Show {olderItems.length} older articles...
+        </button>
+        <ul class="mt-4 hidden space-y-4">
+          {olderItems.map((item) => (
             <SportsNewsArticle item={item} />
-        ))}
-    </ul>
+          ))}
+        </ul>
+      </div>
+    )
+  }
 
-    {olderItems.length > 0 && (
-        <div>
-            <button class="toggle-older-news text-xs font-bold text-neutral-500 hover:text-blue-600 transition-colors focus:outline-none">
-                Show {olderItems.length} older articles...
-            </button>
-            <ul class="hidden space-y-4 mt-4">
-                {olderItems.map((item) => (
-                    <SportsNewsArticle item={item} />
-                ))}
-            </ul>
-        </div>
-    )}
-
-    {recentItems.length === 0 && olderItems.length === 0 && (
-        <li class="text-sm text-neutral-500 italic list-none">No recent news.</li>
-    )}
+  {
+    recentItems.length === 0 && olderItems.length === 0 && (
+      <li class="list-none text-sm text-neutral-500 italic">No recent news.</li>
+    )
+  }
 </div>
 
 <script>
-    // Handle Older News Toggles
-    // Using body delegation to handle multiple instances safely
-    document.body.addEventListener('click', (e) => {
-        if (e.target instanceof Element && e.target.classList.contains('toggle-older-news')) {
-            const button = e.target;
-            const container = button.nextElementSibling;
-            if (container) {
-                container.classList.remove('hidden');
-                button.remove();
-            }
-        }
-    });
+  // Handle Older News Toggles
+  // Using body delegation to handle multiple instances safely
+  document.body.addEventListener('click', (e) => {
+    if (e.target instanceof Element && e.target.classList.contains('toggle-older-news')) {
+      const button = e.target;
+      const container = button.nextElementSibling;
+      if (container) {
+        container.classList.remove('hidden');
+        button.remove();
+      }
+    }
+  });
 </script>

@@ -1,5 +1,11 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { fetchGasData, parseCSV, transformGasData, FILES, REPO_BASE } from '../scripts/gas-fetch.mjs';
+import {
+  fetchGasData,
+  parseCSV,
+  transformGasData,
+  FILES,
+  REPO_BASE,
+} from '../scripts/gas-fetch.mjs';
 
 // Mock global fetch
 global.fetch = vi.fn();
@@ -14,15 +20,15 @@ describe('Gas Fetch Logic', () => {
       const mockText = 'Station,Address\nShell,123 Main St';
       global.fetch.mockResolvedValue({
         ok: true,
-        text: async () => mockText
+        text: async () => mockText,
       });
 
       const data = await fetchGasData();
 
       expect(global.fetch).toHaveBeenCalledTimes(Object.keys(FILES).length);
-      
+
       // Verify correct URLs were called
-      Object.values(FILES).forEach(filename => {
+      Object.values(FILES).forEach((filename) => {
         expect(global.fetch).toHaveBeenCalledWith(
           `${REPO_BASE}/${filename}`,
           expect.anything() // fetchOrThrow adds options object
@@ -32,7 +38,7 @@ describe('Gas Fetch Logic', () => {
       expect(data).toEqual({
         md: mockText,
         ny: mockText,
-        ma: mockText
+        ma: mockText,
       });
     });
 
@@ -40,9 +46,9 @@ describe('Gas Fetch Logic', () => {
       global.fetch.mockResolvedValueOnce({
         ok: false,
         status: 404,
-        statusText: 'Not Found'
+        statusText: 'Not Found',
       });
-      
+
       await expect(fetchGasData()).rejects.toThrow('Request failed: 404 Not Found');
     });
   });
@@ -53,16 +59,14 @@ describe('Gas Fetch Logic', () => {
       const result = parseCSV(csv);
       expect(result).toEqual([
         { Name: 'Alice', Age: '30' },
-        { Name: 'Bob', Age: '25' }
+        { Name: 'Bob', Age: '25' },
       ]);
     });
 
     it('should handle quoted values with commas', () => {
       const csv = 'Name,Location\n"Smith, John","New York, NY"';
       const result = parseCSV(csv);
-      expect(result).toEqual([
-        { Name: 'Smith, John', Location: 'New York, NY' }
-      ]);
+      expect(result).toEqual([{ Name: 'Smith, John', Location: 'New York, NY' }]);
     });
 
     it('should return empty array for empty input', () => {
@@ -75,11 +79,11 @@ describe('Gas Fetch Logic', () => {
     it('should transform raw map of CSV strings to objects', () => {
       const rawData = {
         md: 'Station,Price\nShell,3.50',
-        ny: 'Station,Price\nExxon,3.60'
+        ny: 'Station,Price\nExxon,3.60',
       };
-      
+
       const result = transformGasData(rawData);
-      
+
       expect(result.md).toHaveLength(1);
       expect(result.md[0]).toEqual({ Station: 'Shell', Price: '3.50' });
       expect(result.ny).toHaveLength(1);

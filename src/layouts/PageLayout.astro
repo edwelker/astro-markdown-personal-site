@@ -1,6 +1,6 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/Container.astro";
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
 
 const { title, description, frontmatter } = Astro.props;
 
@@ -11,10 +11,10 @@ const displayDescription = description || frontmatter?.description;
 <Layout title={displayTitle} description={displayDescription}>
   <Container>
     <div class="animate font-semibold text-black dark:text-white">
-      <h1 class="text-3xl mb-6">{displayTitle}</h1>
+      <h1 class="mb-6 text-3xl">{displayTitle}</h1>
     </div>
 
-    <article class="space-y-4 prose prose-neutral dark:prose-invert max-w-none">
+    <article class="prose prose-neutral dark:prose-invert max-w-none space-y-4">
       <slot />
     </article>
   </Container>

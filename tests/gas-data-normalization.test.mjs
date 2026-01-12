@@ -13,7 +13,7 @@ describe('Gas Data Normalization - normalizeGasData', () => {
     const rawData = [
       { lat: 1, lng: 2 },
       { latitude: 3, long: 4 },
-      { lat: 5, longitude: 6 }
+      { lat: 5, longitude: 6 },
     ];
     const result = normalizeGasData(rawData, 'any');
     expect(result[0]).toMatchObject({ lat: 1, lng: 2 });
@@ -32,7 +32,7 @@ describe('Gas Data Normalization - normalizeGasData', () => {
     const result = normalizeGasData(rawData, 'any');
     expect(result[0].Net).toBe('3.33');
   });
-  
+
   it('should handle invalid discount by defaulting to 0', () => {
     const rawData = [{ Base: '3.50', Discount: 'N/A' }];
     const result = normalizeGasData(rawData, 'any');

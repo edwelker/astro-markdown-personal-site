@@ -1,17 +1,17 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/Container.astro";
-import BackToPrevious from "@components/BackToPrevious.astro";
-import MusicList from "@components/MusicList.astro";
-import AlbumGrid from "@components/AlbumGrid.astro";
-import musicData from "../data/music.json";
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
+import BackToPrevious from '@components/BackToPrevious.astro';
+import MusicList from '@components/MusicList.astro';
+import AlbumGrid from '@components/AlbumGrid.astro';
+import musicData from '../data/music.json';
 
-const { 
-  user = { scrobbles: 0 }, 
+const {
+  user = { scrobbles: 0 },
   week = { albums: [], artists: [], tracks: [] },
   month = { albums: [], artists: [], tracks: [] },
-  year = { albums: [], artists: [], tracks: [] }, 
-  allTime = { albums: [], artists: [], tracks: [] } 
+  year = { albums: [], artists: [], tracks: [] },
+  allTime = { albums: [], artists: [], tracks: [] },
 } = musicData || {};
 ---
 
@@ -19,26 +19,36 @@ const {
   <Container>
     <div class="animate">
       <BackToPrevious href="/" />
-      <div class="h-24 md:h-32 w-full block"></div>
+      <div class="block h-24 w-full md:h-32"></div>
 
-      <header class="mb-12 flex justify-between items-end">
+      <header class="mb-12 flex items-end justify-between">
         <div>
-          <h1 class="font-bold text-2xl text-black dark:text-white mb-2">Music Stats</h1>
-          <p class="text-neutral-500 text-sm">
-            Lifetime Scrobbles: <span class="text-black dark:text-white font-mono font-bold">{(user.scrobbles || 0).toLocaleString()}</span>
+          <h1 class="mb-2 text-2xl font-bold text-black dark:text-white">Music Stats</h1>
+          <p class="text-sm text-neutral-500">
+            Lifetime Scrobbles: <span class="font-mono font-bold text-black dark:text-white"
+              >{(user.scrobbles || 0).toLocaleString()}</span
+            >
           </p>
         </div>
-        <a href="https://last.fm/user/edwelker" target="_blank" class="text-xs text-neutral-400 hover:text-black dark:hover:text-white transition-colors mb-1.5 no-underline font-semibold">
+        <a
+          href="https://last.fm/user/edwelker"
+          target="_blank"
+          class="mb-1.5 text-xs font-semibold text-neutral-400 no-underline transition-colors hover:text-black dark:hover:text-white"
+        >
           last.fm ↗
         </a>
       </header>
 
       <div class="space-y-20 pb-20">
         <section class="space-y-8">
-          <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">Last 7 Days</h2>
+          <h2
+            class="border-b-2 border-black pb-2 text-xl font-bold text-black dark:border-white dark:text-white"
+          >
+            Last 7 Days
+          </h2>
           <div class="space-y-12">
             <AlbumGrid items={week.albums} limit={7} />
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div class="grid gap-8 md:grid-cols-2 md:gap-12">
               <MusicList title="Top Songs" items={week.tracks} limit={5} showArtist />
               <MusicList title="Top Artists" items={week.artists} limit={5} />
             </div>
@@ -46,10 +56,14 @@ const {
         </section>
 
         <section class="space-y-8">
-          <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">Last 3 Months</h2>
+          <h2
+            class="border-b-2 border-black pb-2 text-xl font-bold text-black dark:border-white dark:text-white"
+          >
+            Last 3 Months
+          </h2>
           <div class="space-y-12">
             <AlbumGrid items={month.albums} limit={7} />
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div class="grid gap-8 md:grid-cols-2 md:gap-12">
               <MusicList title="Top Songs" items={month.tracks} limit={5} showArtist />
               <MusicList title="Top Artists" items={month.artists} limit={5} />
             </div>
@@ -57,10 +71,14 @@ const {
         </section>
 
         <section class="space-y-8">
-          <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">Last 12 Months</h2>
+          <h2
+            class="border-b-2 border-black pb-2 text-xl font-bold text-black dark:border-white dark:text-white"
+          >
+            Last 12 Months
+          </h2>
           <div class="space-y-12">
             <AlbumGrid items={year.albums} limit={12} />
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div class="grid gap-8 md:grid-cols-2 md:gap-12">
               <MusicList title="Top Songs" items={year.tracks} limit={10} showArtist />
               <MusicList title="Top Artists" items={year.artists} limit={10} />
             </div>
@@ -68,20 +86,28 @@ const {
         </section>
 
         <section class="space-y-8">
-          <h2 class="text-xl font-bold text-black dark:text-white border-b-2 border-black dark:border-white pb-2">All Time</h2>
+          <h2
+            class="border-b-2 border-black pb-2 text-xl font-bold text-black dark:border-white dark:text-white"
+          >
+            All Time
+          </h2>
           <div class="space-y-12">
             <AlbumGrid items={allTime.albums} limit={12} />
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div class="grid gap-8 md:grid-cols-2 md:gap-12">
               <MusicList title="Top Songs" items={allTime.tracks} limit={10} showArtist />
               <MusicList title="Top Artists" items={allTime.artists} limit={10} />
             </div>
           </div>
         </section>
 
-        <div class="text-center pt-16 border-t border-neutral-100 dark:border-neutral-800">
-           <a href="https://last.fm/user/edwelker" target="_blank" class="text-xs text-neutral-400 hover:text-black dark:hover:text-white transition-colors no-underline font-semibold">
-             View full profile on Last.fm ↗
-           </a>
+        <div class="border-t border-neutral-100 pt-16 text-center dark:border-neutral-800">
+          <a
+            href="https://last.fm/user/edwelker"
+            target="_blank"
+            class="text-xs font-semibold text-neutral-400 no-underline transition-colors hover:text-black dark:hover:text-white"
+          >
+            View full profile on Last.fm ↗
+          </a>
         </div>
       </div>
     </div>

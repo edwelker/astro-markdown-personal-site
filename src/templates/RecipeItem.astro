@@ -1,30 +1,30 @@
 ---
-import { type CollectionEntry, getCollection, render } from "astro:content";
-import Layout from "@layouts/Layout.astro";
-import Container from "@components/Container.astro";
-import { readingTime } from "@lib/utils";
-import BackToPrevious from "@components/BackToPrevious.astro";
-import PostNavigation from "@components/PostNavigation.astro";
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
+import { readingTime } from '@lib/utils';
+import BackToPrevious from '@components/BackToPrevious.astro';
+import PostNavigation from '@components/PostNavigation.astro';
 
-type Recipe = CollectionEntry<"recipes">;
+type Recipe = CollectionEntry<'recipes'>;
 type Props = { recipe: Recipe; prevPost?: Recipe; nextPost?: Recipe };
 
 export async function getStaticPaths() {
-  const allRecipes = (await getCollection("recipes"))
+  const allRecipes = (await getCollection('recipes'))
     .filter((recipe) => !recipe.data.draft)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
   if (allRecipes.length === 0) {
-    console.warn("No recipes found for static paths generation!");
+    console.warn('No recipes found for static paths generation!');
   }
 
   return allRecipes.map((recipe, index) => {
     const nextPost = allRecipes[index - 1] || undefined;
     const prevPost = allRecipes[index + 1] || undefined;
-    
-    return { 
-      params: { slug: recipe.slug }, 
-      props: { recipe, prevPost, nextPost } as Props 
+
+    return {
+      params: { slug: recipe.slug },
+      props: { recipe, prevPost, nextPost } as Props,
     };
   });
 }
@@ -37,25 +37,25 @@ const prevHref = prevPost ? `/recipes/${prevPost.slug}/` : undefined;
 const nextHref = nextPost ? `/recipes/${nextPost.slug}/` : undefined;
 
 const ldJson = {
-  "@context": "https://schema.org/",
-  "@type": "Recipe",
-  "name": data.title,
-  "author": {
-    "@type": "Person",
-    "name": "Eddie Welker"
+  '@context': 'https://schema.org/',
+  '@type': 'Recipe',
+  name: data.title,
+  author: {
+    '@type': 'Person',
+    name: 'Eddie Welker',
   },
-  "datePublished": data.date.toISOString().split('T')[0],
-  "description": data.description,
-  "image": data.coverPhoto ? new URL(data.coverPhoto, Astro.site).href : undefined,
-  "prepTime": data.prepTime,
-  "cookTime": data.cookTime,
-  "totalTime": data.totalTime,
-  "recipeYield": data.recipeYield,
-  "recipeCategory": data.recipeCategory,
-  "recipeCuisine": data.recipeCuisine,
-  "keywords": data.keywords?.join(", "),
-  "recipeIngredient": data.recipeIngredient,
-  "recipeInstructions": data.recipeInstructions.map(text => ({ "@type": "HowToStep", text })),
+  datePublished: data.date.toISOString().split('T')[0],
+  description: data.description,
+  image: data.coverPhoto ? new URL(data.coverPhoto, Astro.site).href : undefined,
+  prepTime: data.prepTime,
+  cookTime: data.cookTime,
+  totalTime: data.totalTime,
+  recipeYield: data.recipeYield,
+  recipeCategory: data.recipeCategory,
+  recipeCuisine: data.recipeCuisine,
+  keywords: data.keywords?.join(', '),
+  recipeIngredient: data.recipeIngredient,
+  recipeInstructions: data.recipeInstructions.map((text) => ({ '@type': 'HowToStep', text })),
 };
 ---
 
@@ -63,34 +63,40 @@ const ldJson = {
   <Container>
     <main class="prose dark:prose-invert mx-auto py-8">
       <h1 class="text-3xl font-bold">{data.title}</h1>
-      <div class="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400 mb-8">
-        <span>{new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+      <div class="mb-8 flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
+        <span
+          >{
+            new Date(data.date).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })
+          }</span
+        >
         <span>&bull;</span>
-        <span>{readingTime(recipe.body ?? "")}</span>
+        <span>{readingTime(recipe.body ?? '')}</span>
       </div>
-      {data.coverPhoto && (
-        <img src={data.coverPhoto} alt={data.title} class="w-full rounded-lg mb-4" />
-      )}
-      
+      {
+        data.coverPhoto && (
+          <img src={data.coverPhoto} alt={data.title} class="mb-4 w-full rounded-lg" />
+        )
+      }
+
       <h2>Ingredients</h2>
       <ul>
-        {data.recipeIngredient.map((ingredient) => (
-          <li>{ingredient}</li>
-        ))}
+        {data.recipeIngredient.map((ingredient) => <li>{ingredient}</li>)}
       </ul>
 
       <h2>Instructions</h2>
       <ol>
-        {data.recipeInstructions.map((instruction) => (
-          <li>{instruction}</li>
-        ))}
+        {data.recipeInstructions.map((instruction) => <li>{instruction}</li>)}
       </ol>
 
       <Content />
       <div class="mt-24">
-        <PostNavigation 
-          prevPost={prevPost ? { ...prevPost, href: prevHref } : undefined} 
-          nextPost={nextPost ? { ...nextPost, href: nextHref } : undefined} 
+        <PostNavigation
+          prevPost={prevPost ? { ...prevPost, href: prevHref } : undefined}
+          nextPost={nextPost ? { ...nextPost, href: nextHref } : undefined}
         />
       </div>
       <div class="mt-8"><BackToPrevious href="/recipes/">Back to recipes</BackToPrevious></div>

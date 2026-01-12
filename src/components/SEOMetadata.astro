@@ -1,7 +1,7 @@
 ---
 // src/components/SEOMetadata.astro
 import { SEO } from 'astro-seo';
-import { SITE } from "@consts";
+import { SITE } from '@consts';
 
 type Props = {
   title: string;
@@ -12,13 +12,15 @@ type Props = {
 const { title, description, image } = Astro.props;
 
 // Isolate the logic for the fallback image here
-const defaultImage = "https://eddiewelker.com/default-social-card.jpg";
+const defaultImage = 'https://eddiewelker.com/default-social-card.jpg';
 const resolvedImage = image || defaultImage;
 ---
 
-{/* We move the standard meta tags here too, so Layout.astro
+{
+  /* We move the standard meta tags here too, so Layout.astro
     doesn't even need to worry about charsets or viewports.
-*/}
+*/
+}
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
@@ -27,29 +29,26 @@ const resolvedImage = image || defaultImage;
   title={title}
   titleTemplate={`%s`}
   description={description}
-
   openGraph={{
     basic: {
       title: title,
-      type: "website",
+      type: 'website',
       image: resolvedImage,
     },
     optional: {
       siteName: SITE.TITLE,
       description: description,
-    }
+    },
   }}
-
   twitter={{
-    card: "summary_large_image",
-    creator: "@eddiewelker",
+    card: 'summary_large_image',
+    creator: '@eddiewelker',
     image: resolvedImage,
     title: title,
     description: description,
   }}
-
   extend={{
-    link: [{ rel: "icon", href: "/favicon.ico" }],
-    meta: [{ name: "theme-color", content: "#1a202c" }],
+    link: [{ rel: 'icon', href: '/favicon.ico' }],
+    meta: [{ name: 'theme-color', content: '#1a202c' }],
   }}
 />

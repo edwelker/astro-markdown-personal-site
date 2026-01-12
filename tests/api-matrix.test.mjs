@@ -38,26 +38,36 @@ describe('API Matrix Endpoint', () => {
     const locals = {}; // No runtime env
 
     const response = await POST({ request, locals });
-    
+
     expect(response.status).toBe(500);
     const data = await response.json();
     expect(data.message).toContain('ORS_API_KEY not found');
   });
 
   it('forwards request to ORS when API key is in locals', async () => {
-    const mockBody = { locations: [[0,0], [1,1]] };
+    const mockBody = {
+      locations: [
+        [0, 0],
+        [1, 1],
+      ],
+    };
     const request = {
       json: vi.fn().mockResolvedValue(mockBody),
     };
     const locals = {
       runtime: {
         env: {
-          ORS_API_KEY: 'test-key-locals'
-        }
-      }
+          ORS_API_KEY: 'test-key-locals',
+        },
+      },
     };
 
-    const mockResponseData = { distances: [[0, 10], [10, 0]] };
+    const mockResponseData = {
+      distances: [
+        [0, 10],
+        [10, 0],
+      ],
+    };
     fetch.mockResolvedValue({
       ok: true,
       status: 200,
@@ -70,9 +80,9 @@ describe('API Matrix Endpoint', () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'test-key-locals'
+        Authorization: 'test-key-locals',
       },
-      body: JSON.stringify(mockBody)
+      body: JSON.stringify(mockBody),
     });
 
     expect(response.status).toBe(200);
@@ -93,13 +103,23 @@ describe('API Matrix Endpoint', () => {
     // If no key available at all, skip test
     if (!effectiveKey) return;
 
-    const mockBody = { locations: [[0,0], [1,1]] };
+    const mockBody = {
+      locations: [
+        [0, 0],
+        [1, 1],
+      ],
+    };
     const request = {
       json: vi.fn().mockResolvedValue(mockBody),
     };
     const locals = {};
 
-    const mockResponseData = { distances: [[0, 10], [10, 0]] };
+    const mockResponseData = {
+      distances: [
+        [0, 10],
+        [10, 0],
+      ],
+    };
     fetch.mockResolvedValue({
       ok: true,
       status: 200,
@@ -108,11 +128,14 @@ describe('API Matrix Endpoint', () => {
 
     const response = await POST({ request, locals });
 
-    expect(fetch).toHaveBeenCalledWith(expect.any(String), expect.objectContaining({
-      headers: expect.objectContaining({
-        'Authorization': effectiveKey
+    expect(fetch).toHaveBeenCalledWith(
+      expect.any(String),
+      expect.objectContaining({
+        headers: expect.objectContaining({
+          Authorization: effectiveKey,
+        }),
       })
-    }));
+    );
     expect(response.status).toBe(200);
   });
 
@@ -121,7 +144,7 @@ describe('API Matrix Endpoint', () => {
       json: vi.fn().mockResolvedValue({}),
     };
     const locals = {
-      runtime: { env: { ORS_API_KEY: 'key' } }
+      runtime: { env: { ORS_API_KEY: 'key' } },
     };
 
     fetch.mockResolvedValue({
@@ -131,7 +154,7 @@ describe('API Matrix Endpoint', () => {
     });
 
     const response = await POST({ request, locals });
-    
+
     expect(response.status).toBe(400);
     const data = await response.json();
     expect(data).toEqual({ error: 'Bad Request' });
@@ -142,11 +165,11 @@ describe('API Matrix Endpoint', () => {
       json: vi.fn().mockRejectedValue(new Error('Invalid JSON')),
     };
     const locals = {
-      runtime: { env: { ORS_API_KEY: 'key' } }
+      runtime: { env: { ORS_API_KEY: 'key' } },
     };
 
     const response = await POST({ request, locals });
-    
+
     expect(response.status).toBe(500);
     const data = await response.json();
     expect(data.message).toBe('Invalid JSON');

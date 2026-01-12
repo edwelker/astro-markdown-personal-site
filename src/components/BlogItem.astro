@@ -1,6 +1,6 @@
 ---
-import Link from "@components/Link.astro";
-import { getPostHref } from "@lib/blog";
+import Link from '@components/Link.astro';
+import { getPostHref } from '@lib/blog';
 
 const { post } = Astro.props;
 
@@ -18,10 +18,11 @@ async function getPostImage(post) {
 
   // 2. Find image marked with id="listing-image" in Markdown body
   // Matches: <div ... id="listing-image" ...> ... ![alt](path) ...
-  const listingImageRegex = /<div[^>]*?id=["']listing-image["'][^>]*?>[\s\S]*?(?:!\[.*?\]\(([^)\s]+)(?:[^\)]*)?\)|<img[^>]+src=["'](.*?)["'])/;
+  const listingImageRegex =
+    /<div[^>]*?id=["']listing-image["'][^>]*?>[\s\S]*?(?:!\[.*?\]\(([^)\s]+)(?:[^\)]*)?\)|<img[^>]+src=["'](.*?)["'])/;
   const match = body.match(listingImageRegex);
-  
-  let imagePath = match ? (match[1] || match[2]) : null;
+
+  let imagePath = match ? match[1] || match[2] : null;
 
   // 3. Fallback to first image in post if needed
   if (!imagePath) {
@@ -59,24 +60,30 @@ const coverImage = await getPostImage(post);
 
 <li>
   <Link href={getPostHref(post)} class="group block no-underline">
-    <div class="flex justify-between items-center gap-4">
+    <div class="flex items-center justify-between gap-4">
       <div class="flex flex-col gap-1">
-        <span class="font-medium text-black dark:text-white group-hover:underline decoration-1 underline-offset-2 leading-tight">
+        <span
+          class="leading-tight font-medium text-black decoration-1 underline-offset-2 group-hover:underline dark:text-white"
+        >
           {post.data.title}
         </span>
         <p class="text-xs text-neutral-500">
-          {post.data.date.getUTCFullYear()}-{String(post.data.date.getUTCMonth() + 1).padStart(2, '0')}-{String(post.data.date.getUTCDate()).padStart(2, '0')}
+          {post.data.date.getUTCFullYear()}-{
+            String(post.data.date.getUTCMonth() + 1).padStart(2, '0')
+          }-{String(post.data.date.getUTCDate()).padStart(2, '0')}
         </p>
       </div>
-      {coverImage && (
-        <div class="shrink-0 w-24 h-24 overflow-hidden rounded-md bg-neutral-100 dark:bg-neutral-800">
-          <img
-            src={coverImage}
-            alt={post.data.title}
-            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-        </div>
-      )}
+      {
+        coverImage && (
+          <div class="h-24 w-24 shrink-0 overflow-hidden rounded-md bg-neutral-100 dark:bg-neutral-800">
+            <img
+              src={coverImage}
+              alt={post.data.title}
+              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+        )
+      }
     </div>
   </Link>
 </li>

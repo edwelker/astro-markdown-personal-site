@@ -16,13 +16,15 @@ interface GasStation {
 export function filterGasData(data: GasStation[], query: string): GasStation[] {
   if (!query) return data;
   const lowerCaseQuery = query.toLowerCase();
-  
-  return data.filter(row => {
-    const stationMatch = row.Station != null && String(row.Station).toLowerCase().includes(lowerCaseQuery);
-    const addressMatch = row.Address != null && String(row.Address).toLowerCase().includes(lowerCaseQuery);
+
+  return data.filter((row) => {
+    const stationMatch =
+      row.Station != null && String(row.Station).toLowerCase().includes(lowerCaseQuery);
+    const addressMatch =
+      row.Address != null && String(row.Address).toLowerCase().includes(lowerCaseQuery);
     const cityMatch = row.City != null && String(row.City).toLowerCase().includes(lowerCaseQuery);
     const zipMatch = row.Zip != null && String(row.Zip).includes(lowerCaseQuery);
-    
+
     return stationMatch || addressMatch || cityMatch || zipMatch;
   });
 }

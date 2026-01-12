@@ -31,26 +31,26 @@ test('Internal links in source code should have trailing slashes', () => {
 
   for (const file of files) {
     const content = fs.readFileSync(file, 'utf-8');
-    
+
     // Regex to capture href values in quotes
     const hrefRegex = /href\s*=\s*(["'])(.*?)\1/g;
     let match;
-    
+
     while ((match = hrefRegex.exec(content)) !== null) {
       const url = match[2];
-      
+
       // 1. Filter for internal links or absolute links to our site
       const isInternal = url.startsWith('/');
       const isAbsoluteSite = url.startsWith(SITE_URL);
-      
+
       if (!isInternal && !isAbsoluteSite) continue;
-      
+
       // 2. Ignore root, empty, or just the domain
       if (url === '/' || url === SITE_URL || url === `${SITE_URL}/`) continue;
-      
+
       // 3. Ignore anchors (e.g. #top or /page#section)
       if (url.startsWith('#')) continue;
-      
+
       // 4. Ignore protocol relative //
       if (url.startsWith('//')) continue;
 
@@ -59,14 +59,14 @@ test('Internal links in source code should have trailing slashes', () => {
 
       // 5. Ignore if it already ends with /
       if (urlPath.endsWith('/')) continue;
-      
+
       // 6. Ignore files (heuristic: last segment contains a dot, e.g. style.css, image.jpg)
       const lastSegment = urlPath.split('/').pop();
       if (lastSegment && lastSegment.includes('.')) continue;
 
       errors.push({
         file: path.relative(process.cwd(), file),
-        link: url
+        link: url,
       });
     }
   }

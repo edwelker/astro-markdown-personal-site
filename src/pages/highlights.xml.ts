@@ -16,7 +16,7 @@ export async function GET(context: any) {
       description: item.description,
       link: item.url,
       // You can inject the 'thought' field into the description if desired
-      content: item.thought ? `<div>${item.thought}</div>` : ""
+      content: item.thought ? `<div>${item.thought}</div>` : '',
     })),
   });
 }

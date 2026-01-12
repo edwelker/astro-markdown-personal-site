@@ -5,7 +5,7 @@ export const REPO_BASE = 'https://raw.githubusercontent.com/edwelker/find_cheap_
 export const FILES = {
   md: 'latest_Maryland_ALL_Columbia_EC_Severn.csv',
   ny: 'latest_Long_Island_East_End.csv',
-  ma: 'latest_Western_Mass_I-91_Corridor.csv'
+  ma: 'latest_Western_Mass_I-91_Corridor.csv',
 };
 
 export async function fetchGasData() {
@@ -19,20 +19,23 @@ export async function fetchGasData() {
 
 export function parseCSV(text) {
   if (!text || !text.trim()) return [];
-  
+
   const lines = text.trim().split('\n');
-  const headers = lines.shift().split(',').map(h => h.trim());
-  
-  return lines.map(line => {
+  const headers = lines
+    .shift()
+    .split(',')
+    .map((h) => h.trim());
+
+  return lines.map((line) => {
     const values = [];
     let current = '';
     let inQuotes = false;
-    
-    for(let i = 0; i < line.length; i++) {
+
+    for (let i = 0; i < line.length; i++) {
       const char = line[i];
-      if(char === '"') {
+      if (char === '"') {
         inQuotes = !inQuotes;
-      } else if(char === ',' && !inQuotes) {
+      } else if (char === ',' && !inQuotes) {
         values.push(current.trim());
         current = '';
       } else {
@@ -40,7 +43,7 @@ export function parseCSV(text) {
       }
     }
     values.push(current.trim());
-    
+
     return headers.reduce((obj, header, index) => {
       let val = values[index] || '';
       if (val.startsWith('"') && val.endsWith('"')) {
@@ -66,7 +69,7 @@ export async function run() {
     fetcher: fetchGasData,
     transform: transformGasData,
     outFile: 'src/data/gas.json',
-    defaultData: { md: [], ny: [], ma: [] }
+    defaultData: { md: [], ny: [], ma: [] },
   });
 }
 

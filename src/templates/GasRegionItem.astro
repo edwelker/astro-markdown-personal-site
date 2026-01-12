@@ -1,15 +1,15 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import gasData from "../data/gas.json";
-import { sortByNetPrice } from "../lib/gas-sort";
-import { normalizeGasData } from "../lib/gas-data-normalization";
-import { formatPrice } from "../lib/utils";
+import Layout from '@layouts/Layout.astro';
+import gasData from '../data/gas.json';
+import { sortByNetPrice } from '../lib/gas-sort';
+import { normalizeGasData } from '../lib/gas-data-normalization';
+import { formatPrice } from '../lib/utils';
 
 export function getStaticPaths() {
   return [
-    { params: { region: "md" }, props: { name: "Maryland", data: gasData.md } },
-    { params: { region: "ny" }, props: { name: "New York", data: gasData.ny } },
-    { params: { region: "ma" }, props: { name: "Massachusetts", data: gasData.ma } },
+    { params: { region: 'md' }, props: { name: 'Maryland', data: gasData.md } },
+    { params: { region: 'ny' }, props: { name: 'New York', data: gasData.ny } },
+    { params: { region: 'ma' }, props: { name: 'Massachusetts', data: gasData.ma } },
   ];
 }
 
@@ -23,80 +23,131 @@ const data = normalizeGasData(rawData, region).sort(sortByNetPrice);
 ---
 
 <Layout title={title} description={description}>
-  <div class="w-full px-2 sm:px-4 py-8">
+  <div class="w-full px-2 py-8 sm:px-4">
     <div class="animate">
-      <div class="mb-6 max-w-screen-md mx-auto">
-        <a href="/gas/" class="text-sm text-neutral-500 hover:text-black dark:hover:text-white transition-colors">← Back to Gas</a>
-        <h1 class="font-semibold text-2xl mt-2">{name} Gas Prices</h1>
+      <div class="mx-auto mb-6 max-w-screen-md">
+        <a
+          href="/gas/"
+          class="text-sm text-neutral-500 transition-colors hover:text-black dark:hover:text-white"
+          >← Back to Gas</a
+        >
+        <h1 class="mt-2 text-2xl font-semibold">{name} Gas Prices</h1>
       </div>
 
-      <div class="mb-4 max-w-screen-md mx-auto flex flex-col sm:flex-row gap-3">
+      <div class="mx-auto mb-4 flex max-w-screen-md flex-col gap-3 sm:flex-row">
         <input
           type="text"
           id="gas-filter"
           placeholder="Filter by Station, City or Zip..."
-          class="flex-grow px-4 py-2 border border-neutral-200 dark:border-neutral-700 rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-neutral-500"
+          class="flex-grow rounded-lg border border-neutral-200 bg-transparent px-4 py-2 focus:ring-2 focus:ring-neutral-500 focus:outline-none dark:border-neutral-700"
         />
         <button
           id="sort-distance"
-          class="px-4 py-2 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg text-sm font-medium transition-colors whitespace-nowrap"
+          class="rounded-lg bg-neutral-100 px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700"
         >
           Calculate Driving Times
         </button>
       </div>
 
-      <div id="distance-status" style="display: none;" class="mb-4 max-w-screen-md mx-auto text-xs text-neutral-500 italic text-center">
+      <div
+        id="distance-status"
+        style="display: none;"
+        class="mx-auto mb-4 max-w-screen-md text-center text-xs text-neutral-500 italic"
+      >
         Calculating driving times...
       </div>
 
       <div class="overflow-x-auto">
-        <table class="w-full text-xs sm:text-sm text-left">
-          <thead class="text-neutral-500 uppercase bg-neutral-50 dark:bg-neutral-800 dark:text-neutral-400">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead
+            class="bg-neutral-50 text-neutral-500 uppercase dark:bg-neutral-800 dark:text-neutral-400"
+          >
             <tr>
-              <th class="w-full px-2 py-3 cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Station" data-label="Station / Location">Station / Location ↕</th>
-              <th class="px-2 py-3 text-right whitespace-nowrap cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Base" data-label="Price">Price ↕</th>
-              <th class="hidden sm:table-cell px-2 py-3 text-right whitespace-nowrap select-none">Discount</th>
-              <th class="px-2 py-3 text-right whitespace-nowrap cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Net" data-label="Net">Net ↑</th>
-              <th class="px-2 py-3 text-right whitespace-nowrap cursor-pointer hover:text-black dark:hover:text-white select-none" data-sort="Time" data-label="Time">Time ↕</th>
+              <th
+                class="w-full cursor-pointer px-2 py-3 select-none hover:text-black dark:hover:text-white"
+                data-sort="Station"
+                data-label="Station / Location">Station / Location ↕</th
+              >
+              <th
+                class="cursor-pointer px-2 py-3 text-right whitespace-nowrap select-none hover:text-black dark:hover:text-white"
+                data-sort="Base"
+                data-label="Price">Price ↕</th
+              >
+              <th class="hidden px-2 py-3 text-right whitespace-nowrap select-none sm:table-cell"
+                >Discount</th
+              >
+              <th
+                class="cursor-pointer px-2 py-3 text-right whitespace-nowrap select-none hover:text-black dark:hover:text-white"
+                data-sort="Net"
+                data-label="Net">Net ↑</th
+              >
+              <th
+                class="cursor-pointer px-2 py-3 text-right whitespace-nowrap select-none hover:text-black dark:hover:text-white"
+                data-sort="Time"
+                data-label="Time">Time ↕</th
+              >
             </tr>
           </thead>
           <tbody id="gas-table-body">
-            {data.map((row) => {
-              const streetRaw = (row.Address || "").split(',')[0].replace(/^\d+\S*\s+/, "");
-              const street = streetRaw.toLowerCase().split(/\s+/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-              const city = (row.City || '').split('/')[0].trim();
-              const displayLocation = `${street}, ${city}`;
-              const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${row.Address}, ${row.City} ${row.Zip}`)}`;
+            {
+              data.map((row) => {
+                const streetRaw = (row.Address || '').split(',')[0].replace(/^\d+\S*\s+/, '');
+                const street = streetRaw
+                  .toLowerCase()
+                  .split(/\s+/)
+                  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(' ');
+                const city = (row.City || '').split('/')[0].trim();
+                const displayLocation = `${street}, ${city}`;
+                const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${row.Address}, ${row.City} ${row.Zip}`)}`;
 
-              return (
-                <tr
-                  class="border-b border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
-                  data-lat={row.lat}
-                  data-lng={row.lng}
-                >
-                  <td class="px-2 py-3 font-medium">
-                    <a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="hover:underline block">
-                      <strong>{row.Station || ''}</strong>: <span class="text-[10px] sm:text-xs text-neutral-600 dark:text-neutral-400">{displayLocation}</span>
-                    </a>
-                  </td>
-                  <td class="px-2 py-3 text-right whitespace-nowrap">{formatPrice(row.Base)}</td>
-                  <td class="hidden sm:table-cell px-2 py-3 text-right whitespace-nowrap">{row.Discount}</td>
-                  <td class="px-2 py-3 text-right whitespace-nowrap font-bold">{formatPrice(row.Net)}</td>
-                  <td class="px-2 py-3 text-right whitespace-nowrap text-neutral-400 italic">—</td>
-                </tr>
-              );
-            })}
+                return (
+                  <tr
+                    class="border-b border-neutral-200 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-800/50"
+                    data-lat={row.lat}
+                    data-lng={row.lng}
+                  >
+                    <td class="px-2 py-3 font-medium">
+                      <a
+                        href={mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="block hover:underline"
+                      >
+                        <strong>{row.Station || ''}</strong>:{' '}
+                        <span class="text-[10px] text-neutral-600 sm:text-xs dark:text-neutral-400">
+                          {displayLocation}
+                        </span>
+                      </a>
+                    </td>
+                    <td class="px-2 py-3 text-right whitespace-nowrap">{formatPrice(row.Base)}</td>
+                    <td class="hidden px-2 py-3 text-right whitespace-nowrap sm:table-cell">
+                      {row.Discount}
+                    </td>
+                    <td class="px-2 py-3 text-right font-bold whitespace-nowrap">
+                      {formatPrice(row.Net)}
+                    </td>
+                    <td class="px-2 py-3 text-right whitespace-nowrap text-neutral-400 italic">
+                      —
+                    </td>
+                  </tr>
+                );
+              })
+            }
           </tbody>
         </table>
       </div>
-      <p class="text-xs text-neutral-400 mt-4 text-center">
-        Data sourced from <a href="https://github.com/edwelker/find_cheap_local_gas" class="underline">edwelker/find_cheap_local_gas</a>.
+      <p class="mt-4 text-center text-xs text-neutral-400">
+        Data sourced from <a
+          href="https://github.com/edwelker/find_cheap_local_gas"
+          class="underline">edwelker/find_cheap_local_gas</a
+        >.
       </p>
     </div>
   </div>
 </Layout>
 
-<script id="gas-data" type="application/json" set:html={JSON.stringify(data)}></script>
+<script id="gas-data" type="application/json" set:html={JSON.stringify(data)} />
 
 <script>
   import { calculateDistances } from '../lib/gas-distance';
@@ -123,13 +174,17 @@ const data = normalizeGasData(rawData, region).sort(sortByNetPrice);
 
     // 3. Render
     tbody.innerHTML = '';
-    displayData.forEach(row => {
-      const streetRaw = (row.Address || "").split(',')[0].replace(/^\d+\S*\s+/, "");
-      const street = streetRaw.toLowerCase().split(/\s+/).map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+    displayData.forEach((row) => {
+      const streetRaw = (row.Address || '').split(',')[0].replace(/^\d+\S*\s+/, '');
+      const street = streetRaw
+        .toLowerCase()
+        .split(/\s+/)
+        .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
       const city = (row.City || '').split('/')[0].trim();
       const displayLocation = `${street}, ${city}`;
       const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${row.Address}, ${row.City} ${row.Zip}`)}`;
-      
+
       const distInfo = currentDistances[row.Address];
       let timeDisplay = '—';
       let timeClass = 'text-neutral-400 italic';
@@ -142,7 +197,8 @@ const data = normalizeGasData(rawData, region).sort(sortByNetPrice);
       }
 
       const tr = document.createElement('tr');
-      tr.className = "border-b border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800/50";
+      tr.className =
+        'border-b border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-800/50';
       tr.dataset.lat = row.lat;
       tr.dataset.lng = row.lng;
 
@@ -159,9 +215,9 @@ const data = normalizeGasData(rawData, region).sort(sortByNetPrice);
       `;
       tbody.appendChild(tr);
     });
-    
+
     // Update header arrows
-    document.querySelectorAll('th[data-sort]').forEach(th => {
+    document.querySelectorAll('th[data-sort]').forEach((th) => {
       const col = th.getAttribute('data-sort');
       const label = th.getAttribute('data-label');
       let arrow = '↕';
@@ -191,17 +247,17 @@ const data = normalizeGasData(rawData, region).sort(sortByNetPrice);
     }
 
     // Sort Events
-    document.querySelectorAll('th[data-sort]').forEach(th => {
+    document.querySelectorAll('th[data-sort]').forEach((th) => {
       th.addEventListener('click', () => {
         const col = th.getAttribute('data-sort');
         if (!col) return;
-        
+
         if (sortCol === col) {
           sortAsc = !sortAsc;
         } else {
           sortCol = col;
           // Default sort direction logic
-          sortAsc = col !== 'Time'; // Time usually wants shortest first (asc), Price cheapest first (asc). 
+          sortAsc = col !== 'Time'; // Time usually wants shortest first (asc), Price cheapest first (asc).
           // Actually, let's just default to true (asc) for everything initially.
           sortAsc = true;
         }
@@ -231,13 +287,13 @@ const data = normalizeGasData(rawData, region).sort(sortByNetPrice);
             },
             alert: (msg: string) => alert(msg),
             updateTable: () => {
-               renderTable();
-            }
-          }
+              renderTable();
+            },
+          },
         });
-        
+
         if (result) {
-            currentUserCoords = result.newUserCoords;
+          currentUserCoords = result.newUserCoords;
         }
       });
     }

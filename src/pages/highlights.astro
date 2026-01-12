@@ -1,10 +1,10 @@
 ---
-import PageLayout from "@layouts/PageLayout.astro";
-import { HIGHLIGHTS } from "@consts";
-import { getAllHighlights } from "@lib/highlights";
-import HighlightSchema from "@components/HighlightSchema.astro";
-import { enrichHighlightsWithImages } from "../data/highlights";
-import HighlightsList from "@components/HighlightsList.astro";
+import PageLayout from '@layouts/PageLayout.astro';
+import { HIGHLIGHTS } from '@consts';
+import { getAllHighlights } from '@lib/highlights';
+import HighlightSchema from '@components/HighlightSchema.astro';
+import { enrichHighlightsWithImages } from '../data/highlights';
+import HighlightsList from '@components/HighlightsList.astro';
 
 const highlights = await getAllHighlights();
 const enrichedHighlights = await enrichHighlightsWithImages(highlights);

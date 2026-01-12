@@ -7,7 +7,7 @@ import { runETL } from '../scripts/lib-etl.mjs';
 vi.mock('../scripts/lib-etl.mjs', () => ({
   runETL: vi.fn(),
   mapConcurrent: vi.fn(),
-  writeFile: vi.fn()
+  writeFile: vi.fn(),
 }));
 
 describe('ETL Runners', () => {

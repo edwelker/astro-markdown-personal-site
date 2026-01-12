@@ -1,70 +1,106 @@
 ---
-import Link from "@components/Link.astro";
-import { getHighlightIcon, enrichHighlightsWithImages } from "../data/highlights";
+import Link from '@components/Link.astro';
+import { getHighlightIcon, enrichHighlightsWithImages } from '../data/highlights';
 
 const { items, showHeader = true } = Astro.props;
 const enrichedItems = await enrichHighlightsWithImages(items);
 ---
 
 <section class="animate space-y-4" data-testid="highlights-section">
-  {showHeader && (
-    <div class="flex justify-between items-baseline pb-3 border-b border-black/10 dark:border-white/10">
-      <h3 class="font-semibold text-black dark:text-white text-lg">Highlights</h3>
-      <Link href="/highlights/" class="text-[9px] font-mono uppercase tracking-[0.1em] text-neutral-400 hover:text-black dark:hover:text-white transition-colors group">
-        See All <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
-      </Link>
-    </div>
-  )}
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 auto-rows-fr">
-    {enrichedItems.map((item, index) => {
-      const icon = item.type ? getHighlightIcon(item.type) : null;
-      const hasImage = !!item.image;
-      const isCode = item.type === 'code';
+  {
+    showHeader && (
+      <div class="flex items-baseline justify-between border-b border-black/10 pb-3 dark:border-white/10">
+        <h3 class="text-lg font-semibold text-black dark:text-white">Highlights</h3>
+        <Link
+          href="/highlights/"
+          class="group font-mono text-[9px] tracking-[0.1em] text-neutral-400 uppercase transition-colors hover:text-black dark:hover:text-white"
+        >
+          See All{' '}
+          <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+        </Link>
+      </div>
+    )
+  }
+  <div class="grid auto-rows-fr grid-cols-1 gap-3 sm:grid-cols-2">
+    {
+      enrichedItems.map((item, index) => {
+        const icon = item.type ? getHighlightIcon(item.type) : null;
+        const hasImage = !!item.image;
+        const isCode = item.type === 'code';
 
-      return (
-        <div class={`relative group flex flex-col justify-between p-4 rounded-xl transition-all hover:scale-[1.01] ${index === 0 ? "sm:col-span-2" : ""} ${hasImage ? "bg-neutral-900 overflow-hidden" : "bg-neutral-50 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:border-black/10 dark:hover:border-white/20"} ${isCode ? "overflow-hidden" : ""}`}>
-
-          {isCode && !hasImage && (
-            <div class="absolute -right-6 -bottom-6 w-32 h-32 text-black/5 dark:text-white/5 pointer-events-none rotate-12">
-              <svg viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/></svg>
-            </div>
-          )}
-
-          {hasImage && (
-            <>
-              <img
-                src={item.image}
-                alt=""
-                referrerpolicy="no-referrer"
-                class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
-            </>
-          )}
-
-          <div class={`relative z-10 flex flex-col gap-2 ${hasImage ? "text-white" : ""}`}>
-            <div class="flex items-start justify-between gap-2">
-              <div class="flex items-start gap-2">
-                {icon && (
-                  <span class={`mt-0.5 shrink-0 ${hasImage ? "text-white/80" : "text-neutral-400 dark:text-neutral-500"}`} set:html={icon} />
-                )}
-                <Link href={item.url} external={item.url.startsWith("http")} aria-label={item.title} class={`font-bold text-base leading-tight after:absolute after:inset-0 no-underline hover:no-underline ${hasImage ? "text-white hover:text-white" : "text-black dark:text-white"}`}>
-                  {item.title}
-                </Link>
+        return (
+          <div
+            class={`group relative flex flex-col justify-between rounded-xl p-4 transition-all hover:scale-[1.01] ${index === 0 ? 'sm:col-span-2' : ''} ${hasImage ? 'overflow-hidden bg-neutral-900' : 'border border-black/5 bg-neutral-50 hover:border-black/10 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20'} ${isCode ? 'overflow-hidden' : ''}`}
+          >
+            {isCode && !hasImage && (
+              <div class="pointer-events-none absolute -right-6 -bottom-6 h-32 w-32 rotate-12 text-black/5 dark:text-white/5">
+                <svg viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                  />
+                </svg>
               </div>
-              {item.url.startsWith("http") && <span class={`text-xs shrink-0 mt-0.5 ${hasImage ? "text-white/70" : "text-neutral-400"}`}>↗</span>}
+            )}
+
+            {hasImage && (
+              <>
+                <img
+                  src={item.image}
+                  alt=""
+                  referrerpolicy="no-referrer"
+                  class="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
+              </>
+            )}
+
+            <div class={`relative z-10 flex flex-col gap-2 ${hasImage ? 'text-white' : ''}`}>
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-start gap-2">
+                  {icon && (
+                    <span
+                      class={`mt-0.5 shrink-0 ${hasImage ? 'text-white/80' : 'text-neutral-400 dark:text-neutral-500'}`}
+                      set:html={icon}
+                    />
+                  )}
+                  <Link
+                    href={item.url}
+                    external={item.url.startsWith('http')}
+                    aria-label={item.title}
+                    class={`text-base leading-tight font-bold no-underline after:absolute after:inset-0 hover:no-underline ${hasImage ? 'text-white hover:text-white' : 'text-black dark:text-white'}`}
+                  >
+                    {item.title}
+                  </Link>
+                </div>
+                {item.url.startsWith('http') && (
+                  <span
+                    class={`mt-0.5 shrink-0 text-xs ${hasImage ? 'text-white/70' : 'text-neutral-400'}`}
+                  >
+                    ↗
+                  </span>
+                )}
+              </div>
+              <p
+                class={`text-sm leading-snug ${hasImage ? 'text-white/80' : 'text-neutral-600 dark:text-neutral-400'}`}
+              >
+                {item.description}
+              </p>
             </div>
-            <p class={`text-sm leading-snug ${hasImage ? "text-white/80" : "text-neutral-600 dark:text-neutral-400"}`}>
-              {item.description}
-            </p>
+            {item.thought && (
+              <div
+                class={`relative z-10 mt-3 border-t pt-3 text-xs ${hasImage ? 'border-white/20 text-white/70' : 'border-black/5 text-neutral-500 dark:border-white/5'}`}
+              >
+                <span
+                  class={`italic [&_a]:underline ${hasImage ? '[&_a]:decoration-white/50 [&_a:hover]:text-white' : '[&_a]:decoration-neutral-400 dark:[&_a]:decoration-neutral-600 [&_a:hover]:text-black dark:[&_a:hover]:text-white'}`}
+                  set:html={item.thought}
+                />
+              </div>
+            )}
           </div>
-          {item.thought && (
-            <div class={`mt-3 pt-3 border-t text-xs relative z-10 ${hasImage ? "border-white/20 text-white/70" : "border-black/5 dark:border-white/5 text-neutral-500"}`}>
-              <span class={`italic [&_a]:underline ${hasImage ? "[&_a]:decoration-white/50 [&_a:hover]:text-white" : "[&_a]:decoration-neutral-400 dark:[&_a]:decoration-neutral-600 [&_a:hover]:text-black dark:[&_a:hover]:text-white"}`} set:html={item.thought} />
-            </div>
-          )}
-        </div>
-      );
-    })}
+        );
+      })
+    }
   </div>
 </section>

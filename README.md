@@ -13,7 +13,7 @@ It uses the [Astro Micro](https://github.com/trevortylerlee/astro-micro) theme, 
 2.  **Hugo (The Static Phase):** Templating was terrible because each had their own individual config format, so I couldn't switch templates easily.
 3.  **Astro (The Final Form):** This current version is built on Astro. Standardized markdown schema and configuration.
 
-***
+---
 
 ## Info for me
 

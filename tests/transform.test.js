@@ -13,52 +13,65 @@ const getData = (filename) => {
 };
 
 describe('Data Transformation Logic', () => {
-
   describe('Transformation Unit Tests', () => {
     it('Cycling: converts metric to imperial correctly', () => {
       vi.useFakeTimers().setSystemTime(new Date('2025-12-23'));
-      const mock = [{ sport_type: 'Ride', start_date: '2025-12-01', distance: 16093.4, total_elevation_gain: 304.8, visibility: 'public' }];
+      const mock = [
+        {
+          sport_type: 'Ride',
+          start_date: '2025-12-01',
+          distance: 16093.4,
+          total_elevation_gain: 304.8,
+          visibility: 'public',
+        },
+      ];
       const res = transformStravaData(mock);
-      expect(res.year.distance).toBe("10.0");
-      expect(res.year.elevation).toBe("1,000");
+      expect(res.year.distance).toBe('10.0');
+      expect(res.year.elevation).toBe('1,000');
       vi.useRealTimers();
     });
 
     it('Cycling: falls back to previous month if current month has 0 distance', () => {
       // Set date to Jan 1st, 2026
       vi.useFakeTimers().setSystemTime(new Date('2026-01-01T12:00:00Z'));
-      
+
       const mock = [
         // Ride in Dec 2025
-        { sport_type: 'Ride', start_date: '2025-12-15T12:00:00Z', distance: 16093.4, total_elevation_gain: 100, visibility: 'public' }
+        {
+          sport_type: 'Ride',
+          start_date: '2025-12-15T12:00:00Z',
+          distance: 16093.4,
+          total_elevation_gain: 100,
+          visibility: 'public',
+        },
       ];
-      
+
       const res = transformStravaData(mock);
-      
+
       // Year stats (2026) should be 0
-      expect(res.year.distance).toBe("0.0");
-      
+      expect(res.year.distance).toBe('0.0');
+
       // Month stats should show December (fallback)
-      expect(res.month.name).toBe("December");
-      expect(res.month.distance).toBe("10.0"); // 10 miles from Dec ride
-      
+      expect(res.month.name).toBe('December');
+      expect(res.month.distance).toBe('10.0'); // 10 miles from Dec ride
+
       vi.useRealTimers();
     });
 
     it('Flickr: validates aspect ratio calculation', () => {
-      const mock = { photos: { photo: [{ width_m: "1000", height_m: "500", id: "1" }] } };
+      const mock = { photos: { photo: [{ width_m: '1000', height_m: '500', id: '1' }] } };
       const res = transformFlickrData(mock);
       expect(res[0].aspect).toBe(2);
       expect(res[0].isLandscape).toBe(true);
     });
 
     it('Music: parses playcounts from strings', () => {
-      const res = transformMusicData({ user: { playcount: "500" } });
+      const res = transformMusicData({ user: { playcount: '500' } });
       expect(res.user.scrobbles).toBe(500);
     });
 
     it('Trakt: unifies schema for movies and shows', () => {
-      const mock = [{ movie: { title: "A", ids: { trakt: 1, slug: "a" } }, rating: 10 }];
+      const mock = [{ movie: { title: 'A', ids: { trakt: 1, slug: 'a' } }, rating: 10 }];
       const res = transformTraktData(mock);
       expect(res[0].type).toBe('movie');
       expect(res[0].href).toContain('trakt.tv/movies/a');

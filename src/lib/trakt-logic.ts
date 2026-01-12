@@ -1,4 +1,4 @@
-import type { RatingItem, DirectorInfo, TopListItem } from "../components/trakt/types";
+import type { RatingItem, DirectorInfo, TopListItem } from '../components/trakt/types';
 
 export function filterRatings(allRatings: RatingItem[]) {
   const tens = allRatings.filter((r) => r.rating === 10);
@@ -6,24 +6,23 @@ export function filterRatings(allRatings: RatingItem[]) {
   const eights = allRatings.filter((r) => r.rating === 8);
 
   // Reversed: Show oldest items first to avoid visual duplication with "Recent Watches"
-  const midQuality = allRatings
-    .filter((r) => r.rating >= 6 && r.rating < 8)
-    .reverse();
+  const midQuality = allRatings.filter((r) => r.rating >= 6 && r.rating < 8).reverse();
 
-  const lowQuality = allRatings
-    .filter((r) => r.rating < 6)
-    .reverse();
+  const lowQuality = allRatings.filter((r) => r.rating < 6).reverse();
 
   const recentlyRated = allRatings.slice(0, 10);
 
   return { tens, nines, eights, midQuality, lowQuality, recentlyRated };
 }
 
-export function getDirectorSpotlight(allRatings: RatingItem[], directors: [string, DirectorInfo][]) {
+export function getDirectorSpotlight(
+  allRatings: RatingItem[],
+  directors: [string, DirectorInfo][]
+) {
   const topDirectorData = directors?.[0];
-  const topDirectorName = topDirectorData ? topDirectorData[0] : "";
+  const topDirectorName = topDirectorData ? topDirectorData[0] : '';
   const topDirectorId = topDirectorData ? (topDirectorData[1] as DirectorInfo).id : null;
-  
+
   // Spotlight only includes movies rated 9 or higher by this director
   const directorSpotlight = allRatings.filter(
     (m) => m.director === topDirectorName && m.rating >= 9
@@ -33,8 +32,8 @@ export function getDirectorSpotlight(allRatings: RatingItem[], directors: [strin
 }
 
 export function mapTopLists(
-  genres: [string, number][], 
-  directors: [string, DirectorInfo][], 
+  genres: [string, number][],
+  directors: [string, DirectorInfo][],
   username: string
 ) {
   const topGenres: TopListItem[] = genres.slice(0, 10).map((g) => ({

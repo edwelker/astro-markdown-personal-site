@@ -1,5 +1,5 @@
 export function getPostHref(post: string | { slug?: string; data?: { slug?: string } }) {
-  if (typeof post === "string") {
+  if (typeof post === 'string') {
     return `/blog/${post}/`;
   }
   const slug = post.slug || post.data?.slug;

@@ -12,33 +12,41 @@ describe('Credentials Library', () => {
     process.env = {
       ...originalEnv,
       TEST_CLIENT_ID: 'abc',
-      TEST_SECRET: '123'
+      TEST_SECRET: '123',
     };
 
-    const result = validateEnv({
-      clientId: 'TEST_CLIENT_ID',
-      secret: 'TEST_SECRET'
-    }, 'TestService');
+    const result = validateEnv(
+      {
+        clientId: 'TEST_CLIENT_ID',
+        secret: 'TEST_SECRET',
+      },
+      'TestService'
+    );
 
     expect(result).toEqual({
       clientId: 'abc',
-      secret: '123'
+      secret: '123',
     });
   });
 
   it('should throw a human-readable error when credentials are missing', () => {
     process.env = {
       ...originalEnv,
-      TEST_CLIENT_ID: 'abc'
+      TEST_CLIENT_ID: 'abc',
       // TEST_SECRET is missing
     };
 
     expect(() => {
-      validateEnv({
-        clientId: 'TEST_CLIENT_ID',
-        secret: 'TEST_SECRET'
-      }, 'TestService');
-    }).toThrow('TestService credentials are missing. Please check your environment variables: TEST_SECRET');
+      validateEnv(
+        {
+          clientId: 'TEST_CLIENT_ID',
+          secret: 'TEST_SECRET',
+        },
+        'TestService'
+      );
+    }).toThrow(
+      'TestService credentials are missing. Please check your environment variables: TEST_SECRET'
+    );
   });
 
   it('should list all missing variables in the error message', () => {
@@ -46,10 +54,15 @@ describe('Credentials Library', () => {
     // Both missing
 
     expect(() => {
-      validateEnv({
-        clientId: 'TEST_CLIENT_ID',
-        secret: 'TEST_SECRET'
-      }, 'TestService');
-    }).toThrow('TestService credentials are missing. Please check your environment variables: TEST_CLIENT_ID, TEST_SECRET');
+      validateEnv(
+        {
+          clientId: 'TEST_CLIENT_ID',
+          secret: 'TEST_SECRET',
+        },
+        'TestService'
+      );
+    }).toThrow(
+      'TestService credentials are missing. Please check your environment variables: TEST_CLIENT_ID, TEST_SECRET'
+    );
   });
 });

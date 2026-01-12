@@ -14,10 +14,12 @@ export async function mapConcurrent(items, limit, fn) {
   const results = [];
   const executing = new Set();
   for (const item of items) {
-    const p = Promise.resolve().then(() => fn(item)).then(res => {
-      executing.delete(p);
-      return res;
-    });
+    const p = Promise.resolve()
+      .then(() => fn(item))
+      .then((res) => {
+        executing.delete(p);
+        return res;
+      });
     executing.add(p);
     results.push(p);
     if (executing.size >= limit) {
@@ -61,7 +63,7 @@ export async function runETL({ name, fetcher, transform, outFile, defaultData = 
     console.log(`⏳ ${name}: Fetching fresh data...`);
     const rawData = await fetcher();
     data = transform(rawData);
-    
+
     // If fetch succeeds, update the cache file (the "latest" working version)
     // This file should be committed to the repo by the GitHub Action
     console.log(`💾 ${name}: Updating cache at ${cacheFile}`);
@@ -69,7 +71,7 @@ export async function runETL({ name, fetcher, transform, outFile, defaultData = 
   } catch (error) {
     console.error(`❌ ${name}: Fetch failed (${error.message})`);
     source = 'cache';
-    
+
     // Try to load from cache (last good data fetch)
     try {
       if (existsSync(cacheFile)) {

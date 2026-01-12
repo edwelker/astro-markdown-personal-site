@@ -13,9 +13,10 @@ describe('Sports Page Link Integrity', () => {
     const badUsageRegex = /<a href=\{decodeHtmlEntities\(item\.link\)\}/g;
     const occurrences = content.match(badUsageRegex);
 
-    expect(occurrences, 
+    expect(
+      occurrences,
       'Found `decodeHtmlEntities(item.link)` in an `href` attribute in sports.astro. ' +
-      'This can break URLs. Please use `item.link` directly.'
+        'This can break URLs. Please use `item.link` directly.'
     ).toBeNull();
   });
 });

@@ -13,8 +13,8 @@ vi.mock('../scripts/lib-credentials.mjs', () => ({
     clientSecret: 'mock-secret',
     refreshToken: 'mock-refresh',
     username: 'mock-user',
-    apiKey: 'mock-api-key'
-  }))
+    apiKey: 'mock-api-key',
+  })),
 }));
 
 describe('Cycling Fetch Logic', () => {
@@ -35,7 +35,10 @@ describe('Cycling Fetch Logic', () => {
         refreshToken: 'refresh',
       });
 
-      expect(global.fetch).toHaveBeenCalledWith('https://www.strava.com/oauth/token', expect.any(Object));
+      expect(global.fetch).toHaveBeenCalledWith(
+        'https://www.strava.com/oauth/token',
+        expect.any(Object)
+      );
       expect(token).toBe('test_token');
     });
 
@@ -63,23 +66,23 @@ describe('Cycling Fetch Logic', () => {
           ok: true,
           json: async () => [
             { id: 3, start_date: `${currentYear}-08-01T00:00:00Z` },
-            { id: 4, start_date: `${currentYear - 1}-06-01T00:00:00Z` }, 
+            { id: 4, start_date: `${currentYear - 1}-06-01T00:00:00Z` },
           ],
         })
         .mockResolvedValueOnce({
           ok: true,
           json: async () => [
-             // Older than 15 months (approx 2 years ago)
+            // Older than 15 months (approx 2 years ago)
             { id: 5, start_date: `${currentYear - 2}-06-01T00:00:00Z` },
           ],
         });
-        
+
       const activities = await fetchCyclingData({ token: 'test_token' });
-      
+
       expect(global.fetch).toHaveBeenCalledTimes(3);
       // It should include id 1, 2, 3, 4. id 5 is excluded by date check.
       expect(activities).toHaveLength(4);
-      expect(activities.map(a => a.id)).toEqual([1, 2, 3, 4]);
+      expect(activities.map((a) => a.id)).toEqual([1, 2, 3, 4]);
     });
 
     it('should stop fetching if an empty list is returned', async () => {
@@ -92,14 +95,16 @@ describe('Cycling Fetch Logic', () => {
           ok: true,
           json: async () => [], // Empty response
         });
-        
+
       await fetchCyclingData({ token: 'test_token' });
       expect(global.fetch).toHaveBeenCalledTimes(2);
     });
 
     it('should throw an error if the fetch fails', async () => {
       global.fetch.mockResolvedValueOnce({ ok: false, status: 500, statusText: 'Server Error' });
-      await expect(fetchCyclingData({ token: 'test_token' })).rejects.toThrow('Request failed: 500 Server Error');
+      await expect(fetchCyclingData({ token: 'test_token' })).rejects.toThrow(
+        'Request failed: 500 Server Error'
+      );
     });
   });
 });
@@ -113,7 +118,7 @@ describe('Music Fetch Logic', () => {
     // There are 13 API calls in total for music
     global.fetch.mockResolvedValue({
       ok: true,
-      json: async () => ({})
+      json: async () => ({}),
     });
 
     await fetchMusicData({ username: 'testuser', apiKey: 'testkey' });
@@ -127,8 +132,14 @@ describe('Music Fetch Logic', () => {
   });
 
   it('should throw an error on a failed fetch', async () => {
-    global.fetch.mockResolvedValueOnce({ ok: false, status: 503, statusText: 'Service Unavailable' });
-    await expect(fetchMusicData({ username: 'testuser', apiKey: 'testkey' })).rejects.toThrow('Request failed: 503 Service Unavailable');
+    global.fetch.mockResolvedValueOnce({
+      ok: false,
+      status: 503,
+      statusText: 'Service Unavailable',
+    });
+    await expect(fetchMusicData({ username: 'testuser', apiKey: 'testkey' })).rejects.toThrow(
+      'Request failed: 503 Service Unavailable'
+    );
   });
 });
 
@@ -148,12 +159,17 @@ describe('Flickr Fetch Logic', () => {
 
     expect(global.fetch).toHaveBeenCalledTimes(1);
     // fetchOrThrow adds a second argument (options object), so we need to account for that
-    expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining('flickr.com'), expect.anything());
+    expect(global.fetch).toHaveBeenCalledWith(
+      expect.stringContaining('flickr.com'),
+      expect.anything()
+    );
     expect(data).toEqual(mockFlickrResponse);
   });
 
   it('should throw an error on a failed fetch', async () => {
     global.fetch.mockResolvedValueOnce({ ok: false, status: 500, statusText: 'Server Error' });
-    await expect(fetchFlickrData('mock-api-key')).rejects.toThrow('Request failed: 500 Server Error');
+    await expect(fetchFlickrData('mock-api-key')).rejects.toThrow(
+      'Request failed: 500 Server Error'
+    );
   });
 });
