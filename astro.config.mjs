@@ -7,6 +7,8 @@ import sitemap from "@astrojs/sitemap";
 import robotsTxt from 'astro-robots-txt';
 import cloudflare from "@astrojs/cloudflare";
 
+const isBuild = process.argv.includes("build");
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://eddiewelker.com",
@@ -69,10 +71,10 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     resolve: {
-      alias: {
+      alias: isBuild ? {
         "node:path/posix": "path-browserify",
         "path": "path-browserify",
-      },
+      } : {},
     },
   },
   markdown: {
