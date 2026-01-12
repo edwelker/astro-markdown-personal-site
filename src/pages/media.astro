@@ -15,7 +15,7 @@ const schema = {
   "@graph": (allRatings || []).map((item: any) => ({
     "@type": "Review",
     "itemReviewed": {
-      "@type": "CreativeWork",
+      "@type": item.type === "show" ? "TVSeries" : "Movie",
       "name": item.title,
       "image": item.poster,
     },
