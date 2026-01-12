@@ -10,6 +10,7 @@
     "fetch": "node tests/run-all.mjs",
     "check": "astro check",
     "check:links": "node migration_scripts/check-links.mjs",
+    "format": "prettier --write .",
     "test": "vitest run --coverage --exclude tests/build_artifacts_tests",
     "test:cov": "vitest run --coverage --exclude tests/build_artifacts_tests",
     "test:artifacts": "vitest run tests/build_artifacts_tests",
@@ -46,6 +47,9 @@
     "gray-matter": "^4.0.3",
     "knip": "^5.44.0",
     "path-browserify": "^1.0.1",
+    "prettier": "^3.7.4",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript": "^5.7.3",
     "vitest": "^4.0.16"
   }
