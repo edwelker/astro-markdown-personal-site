@@ -68,6 +68,12 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        "node:path/posix": "path-browserify",
+        "path": "path-browserify",
+      },
+    },
   },
   markdown: {
     shikiConfig: {
