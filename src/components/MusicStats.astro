@@ -7,28 +7,147 @@ interface Item {
   artist?: string;
   plays?: string | number;
 }
+
+interface DayStat {
+  dayName: string;
+  date: string;
+  hours: string;
+  lastHours: string;
+  topArtist: string | null;
+}
+
 const data = musicData || {};
+const history = (data.history || []) as DayStat[];
 const week = data.week || { artists: [], albums: [], tracks: [] };
 const month = data.month || { artists: [], albums: [], tracks: [] };
 const weekAlbums = Array.isArray(week.albums) ? week.albums : [];
 const weekArtists = Array.isArray(week.artists) ? week.artists : [];
 const monthAlbums = Array.isArray(month.albums) ? month.albums : [];
 const monthArtists = Array.isArray(month.artists) ? month.artists : [];
+
+// Calculate totals for header
+const totalThisWeek = history.reduce((acc, d) => acc + parseFloat(d.hours), 0).toFixed(1);
+const totalLastWeek = history.reduce((acc, d) => acc + parseFloat(d.lastHours), 0).toFixed(1);
+const trend = (parseFloat(totalThisWeek) - parseFloat(totalLastWeek)).toFixed(1);
+const isPositive = parseFloat(trend) > 0;
+
+// Calculate max value for bar scaling
+const maxVal = Math.max(
+  ...history.map((d) => Math.max(parseFloat(d.hours), parseFloat(d.lastHours))),
+  0.1 // prevent divide by zero
+);
 ---
 
-<div class="space-y-6">
-  <div
-    class="flex items-baseline justify-between border-b border-black/10 pb-4 dark:border-white/10"
-  >
-    <h3 class="text-lg font-semibold text-black dark:text-white">Recent Music</h3>
-    <a
-      href="/music/"
-      class="group font-mono text-[9px] tracking-[0.1em] text-neutral-400 uppercase transition-colors hover:text-black dark:hover:text-white"
-    >
-      Full music stats <span class="inline-block transition-transform group-hover:translate-x-0.5"
-        >→</span
+<div class="space-y-12">
+  <div class="space-y-6">
+    <div class="flex items-end justify-between">
+      <div class="space-y-1">
+        <h3 class="text-lg font-semibold text-black dark:text-white">Recent Music</h3>
+        <div class="flex items-baseline gap-3 text-xs">
+          <span class="font-bold text-black dark:text-white">{totalThisWeek}h</span>
+          <span class="text-neutral-400">past 7 days</span>
+          <span
+            class={`font-medium ${isPositive ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}
+          >
+            {isPositive ? '+' : ''}{trend}h vs prev week
+          </span>
+        </div>
+      </div>
+      <a
+        href="/music/"
+        class="group block font-mono text-[9px] tracking-[0.1em] text-neutral-400 uppercase transition-colors hover:text-black dark:hover:text-white"
       >
-    </a>
+        Full music stats <span class="inline-block transition-transform group-hover:translate-x-0.5"
+          >→</span
+        >
+      </a>
+    </div>
+
+    <!-- Daily Log Visualization -->
+    <div class="space-y-2 border-t border-black/10 pt-4 dark:border-white/10">
+      {
+        history.map((d) => {
+          const h = parseFloat(d.hours);
+          const lh = parseFloat(d.lastHours);
+          const w = (h / maxVal) * 100;
+          const lw = (lh / maxVal) * 100;
+
+          return (
+            <div class="group relative text-xs">
+              
+              <!-- Mobile Layout -->
+              <div class="grid grid-cols-[2rem_1fr_auto] items-center gap-3 md:hidden">
+                <div class="font-mono text-[10px] text-neutral-400 uppercase tracking-wider">{d.dayName}</div>
+                
+                <div class="relative flex h-6 items-center min-w-0">
+                  <!-- Bar -->
+                  <div class="group/chart relative h-full w-[100px] shrink-0">
+                    <div class="absolute top-1 bottom-1 rounded-sm bg-neutral-200 transition-all dark:bg-neutral-700" style={`width: ${lw}%`}></div>
+                    <div class="absolute top-2.5 bottom-2.5 rounded-full bg-black shadow-sm transition-all dark:bg-white" style={`width: ${w}%`}></div>
+                    
+                    <!-- Tooltip -->
+                    <div class="pointer-events-none absolute left-1/2 bottom-full z-20 mb-2 -translate-x-1/2 whitespace-nowrap rounded bg-black px-2 py-1 text-[10px] text-white opacity-0 shadow-lg transition-opacity group-hover/chart:opacity-100 dark:bg-white dark:text-black">
+                      <span class="font-bold">This Week:</span> {d.hours}h <span class="opacity-50 mx-1">/</span> <span class="font-bold">Last Week:</span> {d.lastHours}h
+                    </div>
+                  </div>
+
+                  <!-- Artist -->
+                  {d.topArtist && (
+                    <div class="ml-4 min-w-0 flex-1 truncate font-medium text-neutral-600 dark:text-neutral-400 text-[10px]">
+                      <span class="mr-1 text-[9px] uppercase tracking-wider text-neutral-400">Top Artist:</span>
+                      <a 
+                        href={`https://www.last.fm/music/${encodeURIComponent(d.topArtist)}`}
+                        target="_blank"
+                        class="hover:text-black hover:underline dark:hover:text-white transition-colors"
+                      >
+                        {d.topArtist}
+                      </a>
+                    </div>
+                  )}
+                </div>
+
+                <div class="w-10 text-right font-mono text-[10px] text-neutral-500">{d.hours}h</div>
+              </div>
+
+              <!-- Desktop Layout -->
+              <div class="hidden md:flex items-center">
+                <!-- Left Half -->
+                <div class="w-1/2 pr-8 flex items-center gap-3">
+                   <div class="font-mono text-[10px] text-neutral-400 uppercase tracking-wider w-8 shrink-0">{d.dayName}</div>
+                   <div class="group/chart relative h-6 w-full max-w-[160px]">
+                      <div class="absolute top-1 bottom-1 rounded-sm bg-neutral-200 transition-all dark:bg-neutral-700" style={`width: ${lw}%`}></div>
+                      <div class="absolute top-2.5 bottom-2.5 rounded-full bg-black shadow-sm transition-all dark:bg-white" style={`width: ${w}%`}></div>
+                      
+                      <!-- Tooltip -->
+                      <div class="pointer-events-none absolute left-1/2 bottom-full z-20 mb-2 -translate-x-1/2 whitespace-nowrap rounded bg-black px-2 py-1 text-[10px] text-white opacity-0 shadow-lg transition-opacity group-hover/chart:opacity-100 dark:bg-white dark:text-black">
+                        <span class="font-bold">This Week:</span> {d.hours}h <span class="opacity-50 mx-1">/</span> <span class="font-bold">Last Week:</span> {d.lastHours}h
+                      </div>
+                   </div>
+                </div>
+
+                <!-- Right Half -->
+                <div class="w-1/2 pl-8 flex items-center justify-between">
+                   {d.topArtist && (
+                    <div class="min-w-0 flex-1 truncate font-medium text-neutral-600 dark:text-neutral-400 text-[10px] sm:text-xs">
+                      <span class="mr-1 text-[9px] uppercase tracking-wider text-neutral-400">Top Artist:</span>
+                      <a 
+                        href={`https://www.last.fm/music/${encodeURIComponent(d.topArtist)}`}
+                        target="_blank"
+                        class="hover:text-black hover:underline dark:hover:text-white transition-colors"
+                      >
+                        {d.topArtist}
+                      </a>
+                    </div>
+                   )}
+                   <div class="w-10 text-right font-mono text-[10px] text-neutral-500">{d.hours}h</div>
+                </div>
+              </div>
+
+            </div>
+          );
+        })
+      }
+    </div>
   </div>
 
   <div class="grid gap-8 divide-black/10 md:grid-cols-2 md:gap-0 md:divide-x dark:divide-white/10">

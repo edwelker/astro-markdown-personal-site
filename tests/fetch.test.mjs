@@ -115,7 +115,7 @@ describe('Music Fetch Logic', () => {
   });
 
   it('should construct correct URLs and fetch data', async () => {
-    // There are 13 API calls in total for music
+    // There are 14 API calls in total for music (1 info + 1 recent + 12 top lists)
     global.fetch.mockResolvedValue({
       ok: true,
       json: async () => ({}),
@@ -123,9 +123,9 @@ describe('Music Fetch Logic', () => {
 
     await fetchMusicData({ username: 'testuser', apiKey: 'testkey' });
 
-    expect(global.fetch).toHaveBeenCalledTimes(13);
+    expect(global.fetch).toHaveBeenCalledTimes(14);
     const firstUrl = global.fetch.mock.calls[0][0];
-    const lastUrl = global.fetch.mock.calls[12][0];
+    const lastUrl = global.fetch.mock.calls[13][0];
 
     expect(firstUrl).toContain('method=user.getinfo&user=testuser&api_key=testkey');
     expect(lastUrl).toContain('method=user.gettoptracks&period=overall&limit=40');
