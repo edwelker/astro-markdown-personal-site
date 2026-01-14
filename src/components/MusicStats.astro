@@ -71,29 +71,31 @@ const maxVal = Math.max(
           const lh = parseFloat(d.lastHours);
           const w = (h / maxVal) * 100;
           const lw = (lh / maxVal) * 100;
+          const diff = h - lh;
+          const diffStr = (diff > 0 ? '+' : '') + diff.toFixed(1) + 'h';
 
           return (
             <div class="group relative text-xs">
               
               <!-- Mobile Layout -->
-              <div class="grid grid-cols-[2rem_1fr_auto] items-center gap-3 md:hidden">
+              <div class="grid grid-cols-[2rem_1fr] items-center gap-3 md:hidden">
                 <div class="font-mono text-[10px] text-neutral-400 uppercase tracking-wider">{d.dayName}</div>
                 
                 <div class="relative flex h-6 items-center min-w-0">
                   <!-- Bar -->
                   <div class="group/chart relative h-full w-[100px] shrink-0">
-                    <div class="absolute top-1 bottom-1 rounded-sm bg-neutral-200 transition-all dark:bg-neutral-700" style={`width: ${lw}%`}></div>
+                    <div class="absolute top-1 bottom-1 rounded-sm bg-neutral-300 transition-all dark:bg-neutral-700" style={`width: ${lw}%`}></div>
                     <div class="absolute top-2.5 bottom-2.5 rounded-full bg-black shadow-sm transition-all dark:bg-white" style={`width: ${w}%`}></div>
-                    
-                    <!-- Tooltip -->
-                    <div class="pointer-events-none absolute left-1/2 bottom-full z-20 mb-2 -translate-x-1/2 whitespace-nowrap rounded bg-black px-2 py-1 text-[10px] text-white opacity-0 shadow-lg transition-opacity group-hover/chart:opacity-100 dark:bg-white dark:text-black">
-                      <span class="font-bold">This Week:</span> {d.hours}h <span class="opacity-50 mx-1">/</span> <span class="font-bold">Last Week:</span> {d.lastHours}h
-                    </div>
+                  </div>
+
+                  <!-- Hours -->
+                  <div class="ml-3 font-mono text-[10px] text-neutral-500 whitespace-nowrap">
+                    {d.hours}h <span class="text-neutral-400">{diffStr}</span>
                   </div>
 
                   <!-- Artist -->
                   {d.topArtist && (
-                    <div class="ml-4 min-w-0 flex-1 truncate font-medium text-neutral-600 dark:text-neutral-400 text-[10px]">
+                    <div class="ml-3 min-w-0 flex-1 truncate font-medium text-neutral-600 dark:text-neutral-400 text-[10px]">
                       <span class="mr-1 text-[9px] uppercase tracking-wider text-neutral-400">Top Artist:</span>
                       <a 
                         href={`https://www.last.fm/music/${encodeURIComponent(d.topArtist)}`}
@@ -105,8 +107,6 @@ const maxVal = Math.max(
                     </div>
                   )}
                 </div>
-
-                <div class="w-10 text-right font-mono text-[10px] text-neutral-500">{d.hours}h</div>
               </div>
 
               <!-- Desktop Layout -->
@@ -115,18 +115,16 @@ const maxVal = Math.max(
                 <div class="w-1/2 pr-8 flex items-center gap-3">
                    <div class="font-mono text-[10px] text-neutral-400 uppercase tracking-wider w-8 shrink-0">{d.dayName}</div>
                    <div class="group/chart relative h-6 w-full max-w-[160px]">
-                      <div class="absolute top-1 bottom-1 rounded-sm bg-neutral-200 transition-all dark:bg-neutral-700" style={`width: ${lw}%`}></div>
+                      <div class="absolute top-1 bottom-1 rounded-sm bg-neutral-300 transition-all dark:bg-neutral-700" style={`width: ${lw}%`}></div>
                       <div class="absolute top-2.5 bottom-2.5 rounded-full bg-black shadow-sm transition-all dark:bg-white" style={`width: ${w}%`}></div>
-                      
-                      <!-- Tooltip -->
-                      <div class="pointer-events-none absolute left-1/2 bottom-full z-20 mb-2 -translate-x-1/2 whitespace-nowrap rounded bg-black px-2 py-1 text-[10px] text-white opacity-0 shadow-lg transition-opacity group-hover/chart:opacity-100 dark:bg-white dark:text-black">
-                        <span class="font-bold">This Week:</span> {d.hours}h <span class="opacity-50 mx-1">/</span> <span class="font-bold">Last Week:</span> {d.lastHours}h
-                      </div>
+                   </div>
+                   <div class="font-mono text-[10px] text-neutral-500 whitespace-nowrap">
+                     {d.hours}h <span class="text-neutral-400">{diffStr}</span>
                    </div>
                 </div>
 
                 <!-- Right Half -->
-                <div class="w-1/2 pl-8 flex items-center justify-between">
+                <div class="w-1/2 pl-8 flex items-center">
                    {d.topArtist && (
                     <div class="min-w-0 flex-1 truncate font-medium text-neutral-600 dark:text-neutral-400 text-[10px] sm:text-xs">
                       <span class="mr-1 text-[9px] uppercase tracking-wider text-neutral-400">Top Artist:</span>
@@ -139,7 +137,6 @@ const maxVal = Math.max(
                       </a>
                     </div>
                    )}
-                   <div class="w-10 text-right font-mono text-[10px] text-neutral-500">{d.hours}h</div>
                 </div>
               </div>
 
