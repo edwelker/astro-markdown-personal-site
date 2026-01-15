@@ -8,6 +8,8 @@ showComments: false
 weight: 10
 layout: ../layouts/PageLayout.astro
 ---
+Hi, I'm Eddie Welker (technically Edward Welker, but I stick to Eddie).
+
 Part programmer, cellist, biker, and photographer, I live in the suburbs of Maryland, spend time on Long Island, and ride bikes wherever I can.
 
 I am a Senior Software Engineer with over 15 years of experience, and I am exceptional at what I do. I am a natural leader skilled at guiding teams through big organizational changes. I'm good at [Python](https://www.python.org/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [Django](https://www.djangoproject.com/), Data, and more!
