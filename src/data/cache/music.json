@@ -1,6 +1,6 @@
 {
   "user": {
-    "scrobbles": 273149
+    "scrobbles": 273153
   },
   "history": [
     {
@@ -48,7 +48,7 @@
     {
       "dayName": "Fri",
       "date": "2026-01-16",
-      "hours": "0.1",
+      "hours": "0.3",
       "lastHours": "6.5",
       "topArtist": "Zella Day"
     }
@@ -62,21 +62,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Zella Day",
+        "url": "https://www.last.fm/music/Zella+Day",
+        "plays": "34",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Robert Schumann",
         "url": "https://www.last.fm/music/Robert+Schumann",
         "plays": "32",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Zella Day",
-        "url": "https://www.last.fm/music/Zella+Day",
-        "plays": "30",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Grateful Dead",
-        "url": "https://www.last.fm/music/Grateful+Dead",
-        "plays": "27",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -92,8 +86,8 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Witold Lutosławski",
-        "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski",
+        "name": "Grateful Dead",
+        "url": "https://www.last.fm/music/Grateful+Dead",
         "plays": "19",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -107,6 +101,12 @@
         "name": "Steve Reich",
         "url": "https://www.last.fm/music/Steve+Reich",
         "plays": "15",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Witold Lutosławski",
+        "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski",
+        "plays": "14",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -224,12 +224,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Austra",
-        "url": "https://www.last.fm/music/Austra",
-        "plays": "7",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Bohuslav Martinů",
         "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF",
         "plays": "7",
@@ -294,6 +288,12 @@
         "url": "https://www.last.fm/music/Roy+Harris",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Camille Saint-Saëns",
+        "url": "https://www.last.fm/music/Camille+Saint-Sa%C3%ABns",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -312,18 +312,18 @@
         "image": ""
       },
       {
+        "name": "Kicker",
+        "url": "https://www.last.fm/music/Zella+Day/Kicker",
+        "artist": "Zella Day",
+        "plays": "22",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/29e214babcf74d2dcd5b10882975b4f9.png"
+      },
+      {
         "name": "Theme and Variations II",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven/Theme+and+Variations+II",
         "artist": "Ludwig van Beethoven",
         "plays": "20",
         "image": ""
-      },
-      {
-        "name": "Kicker",
-        "url": "https://www.last.fm/music/Zella+Day/Kicker",
-        "artist": "Zella Day",
-        "plays": "18",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/29e214babcf74d2dcd5b10882975b4f9.png"
       },
       {
         "name": "Collected works",
@@ -396,13 +396,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7156c05ac1f14050eb2160d8ef9d7cc8.png"
       },
       {
-        "name": "Dead Set (Live)",
-        "url": "https://www.last.fm/music/Grateful+Dead/Dead+Set+(Live)",
-        "artist": "Grateful Dead",
-        "plays": "9",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6e35fd04c96cc4202a9cc2b36c68f0f7.jpg"
-      },
-      {
         "name": "A Century of Russian Colours",
         "url": "https://www.last.fm/music/Lera+Auerbach/A+Century+of+Russian+Colours",
         "artist": "Lera Auerbach",
@@ -450,13 +443,6 @@
         "artist": "Zella Day",
         "plays": "8",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c9bc1000106bf293fbf8e29b9c8bf421.jpg"
-      },
-      {
-        "name": "Chin Up Buttercup",
-        "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
-        "artist": "Austra",
-        "plays": "7",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
       },
       {
         "name": "String Quartets nos. 2, 3, 5, 7",
@@ -576,6 +562,20 @@
         "artist": "Witold Lutosławski",
         "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c265b647ed6e4b63cb840df7db612f8b.jpg"
+      },
+      {
+        "name": "Piano Concerto / The Golden Spinning Wheel",
+        "url": "https://www.last.fm/music/Anton%C3%ADn+Dvo%C5%99%C3%A1k/Piano+Concerto+%2F+The+Golden+Spinning+Wheel",
+        "artist": "Antonín Dvořák",
+        "plays": "4",
+        "image": ""
+      },
+      {
+        "name": "Great Pianists of the 20th Century, Volume 80: André Previn",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Great+Pianists+of+the+20th+Century,+Volume+80:+Andr%C3%A9+Previn",
+        "artist": "Dmitri Shostakovich",
+        "plays": "4",
+        "image": ""
       }
     ],
     "tracks": [
@@ -601,16 +601,16 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Loser - Live; 2008 Remaster",
-        "url": "https://www.last.fm/music/Grateful+Dead/_/Loser+-+Live;+2008+Remaster",
-        "artist": "Grateful Dead",
+        "name": "Symphony No. 4 in G major: IV. Sehr behaglich \"Wir genießen die himmlischen Freuden\"",
+        "url": "https://www.last.fm/music/Gustav+Mahler/_/Symphony+No.+4+in+G+major:+IV.+Sehr+behaglich+%22Wir+genie%C3%9Fen+die+himmlischen+Freuden%22",
+        "artist": "Gustav Mahler",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Symphony No. 4 in G major: IV. Sehr behaglich \"Wir genießen die himmlischen Freuden\"",
-        "url": "https://www.last.fm/music/Gustav+Mahler/_/Symphony+No.+4+in+G+major:+IV.+Sehr+behaglich+%22Wir+genie%C3%9Fen+die+himmlischen+Freuden%22",
-        "artist": "Gustav Mahler",
+        "name": "East of Eden",
+        "url": "https://www.last.fm/music/Zella+Day/_/East+of+Eden",
+        "artist": "Zella Day",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -825,6 +825,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "1965",
+        "url": "https://www.last.fm/music/Zella+Day/_/1965",
+        "artist": "Zella Day",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Ace of Hearts",
         "url": "https://www.last.fm/music/Zella+Day/_/Ace+of+Hearts",
         "artist": "Zella Day",
@@ -834,13 +841,6 @@
       {
         "name": "Compass",
         "url": "https://www.last.fm/music/Zella+Day/_/Compass",
-        "artist": "Zella Day",
-        "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "East of Eden",
-        "url": "https://www.last.fm/music/Zella+Day/_/East+of+Eden",
         "artist": "Zella Day",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -884,7 +884,7 @@
       {
         "name": "Siouxsie and the Banshees",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
-        "plays": "96",
+        "plays": "93",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -930,6 +930,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Zella Day",
+        "url": "https://www.last.fm/music/Zella+Day",
+        "plays": "35",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Franz Schubert",
         "url": "https://www.last.fm/music/Franz+Schubert",
         "plays": "33",
@@ -951,12 +957,6 @@
         "name": "The Smashing Pumpkins",
         "url": "https://www.last.fm/music/The+Smashing+Pumpkins",
         "plays": "32",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Zella Day",
-        "url": "https://www.last.fm/music/Zella+Day",
-        "plays": "31",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1218,6 +1218,13 @@
         "image": ""
       },
       {
+        "name": "Kicker",
+        "url": "https://www.last.fm/music/Zella+Day/Kicker",
+        "artist": "Zella Day",
+        "plays": "22",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/29e214babcf74d2dcd5b10882975b4f9.png"
+      },
+      {
         "name": "Die Zauberflöte",
         "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart/Die+Zauberfl%C3%B6te",
         "artist": "Wolfgang Amadeus Mozart",
@@ -1246,13 +1253,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7653da5c1d3d4aebca9a1e1378b90cc0.png"
       },
       {
-        "name": "The Scream",
-        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/The+Scream",
-        "artist": "Siouxsie and the Banshees",
-        "plays": "20",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6353d251df424c4eb608dc80417d71f0.jpg"
-      },
-      {
         "name": "Gloria / Litanies à la Vierge noire / Stabat Mater",
         "url": "https://www.last.fm/music/Francis+Poulenc/Gloria+%2F+Litanies+%C3%A0+la+Vierge+noire+%2F+Stabat+Mater",
         "artist": "Francis Poulenc",
@@ -1260,11 +1260,11 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b7d1f36c078240c6c03993ff9414b09d.jpg"
       },
       {
-        "name": "The Best Of...",
-        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/The+Best+Of...",
+        "name": "The Scream",
+        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/The+Scream",
         "artist": "Siouxsie and the Banshees",
         "plays": "19",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6957aae4fe05469a9ccde9e84c109a05.jpg"
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6353d251df424c4eb608dc80417d71f0.jpg"
       },
       {
         "name": "The Social Network",
@@ -1281,11 +1281,11 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d04fa68396a05d7e4c768916e15d730e.jpg"
       },
       {
-        "name": "Kicker",
-        "url": "https://www.last.fm/music/Zella+Day/Kicker",
-        "artist": "Zella Day",
+        "name": "The Best Of...",
+        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/The+Best+Of...",
+        "artist": "Siouxsie and the Banshees",
         "plays": "18",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/29e214babcf74d2dcd5b10882975b4f9.png"
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6957aae4fe05469a9ccde9e84c109a05.jpg"
       },
       {
         "name": "Symphony No.5 / Cello Concerto No.2",
@@ -1549,13 +1549,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "This Wheel's on Fire",
-        "url": "https://www.last.fm/music/Bob+Dylan/_/This+Wheel%27s+on+Fire",
-        "artist": "Bob Dylan",
-        "plays": "3",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Samson and Delilah, Op. 47: Bacchanale",
         "url": "https://www.last.fm/music/Camille+Saint-Sa%C3%ABns/_/Samson+and+Delilah,+Op.+47:+Bacchanale",
         "artist": "Camille Saint-Saëns",
@@ -1663,6 +1656,13 @@
       {
         "name": "Anton",
         "url": "https://www.last.fm/music/Iona+Zajac/_/Anton",
+        "artist": "Iona Zajac",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Chicken Supermarket",
+        "url": "https://www.last.fm/music/Iona+Zajac/_/Chicken+Supermarket",
         "artist": "Iona Zajac",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
