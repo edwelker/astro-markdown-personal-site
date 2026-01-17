@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 273219
+    "scrobbles": 273230
   },
   "history": [
-    {
-      "dayName": "Sat",
-      "date": "2026-01-10",
-      "hours": "5.2",
-      "lastHours": "0.9",
-      "topArtist": "Steve Reich"
-    },
     {
       "dayName": "Sun",
       "date": "2026-01-11",
@@ -51,6 +44,13 @@
       "hours": "4.1",
       "lastHours": "6.5",
       "topArtist": "Zoltán Kodály"
+    },
+    {
+      "dayName": "Sat",
+      "date": "2026-01-17",
+      "hours": "0.6",
+      "lastHours": "5.2",
+      "topArtist": "Einstürzende Neubauten"
     }
   ],
   "week": {
@@ -58,7 +58,7 @@
       {
         "name": "Zella Day",
         "url": "https://www.last.fm/music/Zella+Day",
-        "plays": "40",
+        "plays": "41",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -230,12 +230,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Gabriela Ortiz",
-        "url": "https://www.last.fm/music/Gabriela+Ortiz",
-        "plays": "6",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Carl Nielsen",
         "url": "https://www.last.fm/music/Carl+Nielsen",
         "plays": "5",
@@ -272,26 +266,32 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Chappell Roan",
+        "url": "https://www.last.fm/music/Chappell+Roan",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Claude Debussy",
         "url": "https://www.last.fm/music/Claude+Debussy",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Einstürzende Neubauten",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "George Enescu",
+        "url": "https://www.last.fm/music/George+Enescu",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Jean Sibelius",
         "url": "https://www.last.fm/music/Jean+Sibelius",
-        "plays": "3",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "John Adams",
-        "url": "https://www.last.fm/music/John+Adams",
-        "plays": "3",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Արամ Խաչատրյան",
-        "url": "https://www.last.fm/music/%D4%B1%D6%80%D5%A1%D5%B4+%D4%BD%D5%A1%D5%B9%D5%A1%D5%BF%D6%80%D5%B5%D5%A1%D5%B6",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -315,7 +315,7 @@
         "name": "Kicker",
         "url": "https://www.last.fm/music/Zella+Day/Kicker",
         "artist": "Zella Day",
-        "plays": "23",
+        "plays": "24",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/29e214babcf74d2dcd5b10882975b4f9.png"
       },
       {
@@ -473,13 +473,6 @@
         "image": ""
       },
       {
-        "name": "Gabriela Ortiz: Yanga",
-        "url": "https://www.last.fm/music/Gabriela+Ortiz/Gabriela+Ortiz:+Yanga",
-        "artist": "Gabriela Ortiz",
-        "plays": "6",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d04fa68396a05d7e4c768916e15d730e.jpg"
-      },
-      {
         "name": "The Complete Symphonies & Orchestral Songs",
         "url": "https://www.last.fm/music/Gustav+Mahler/The+Complete+Symphonies+&+Orchestral+Songs",
         "artist": "Gustav Mahler",
@@ -576,6 +569,13 @@
         "artist": "Grateful Dead",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7980f6f3596ed901b3f32e1b9b94dcc3.jpg"
+      },
+      {
+        "name": "T-Minus Zero",
+        "url": "https://www.last.fm/music/Panacea/T-Minus+Zero",
+        "artist": "Panacea",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/fe5395f3938f49f77705aeefbf12303b.jpg"
       }
     ],
     "tracks": [
@@ -583,6 +583,13 @@
         "name": "Loser - Live at the Knickerbocker Arena, Albany, NY, March 24, 1990",
         "url": "https://www.last.fm/music/Grateful+Dead/_/Loser+-+Live+at+the+Knickerbocker+Arena,+Albany,+NY,+March+24,+1990",
         "artist": "Grateful Dead",
+        "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sweet Ophelia",
+        "url": "https://www.last.fm/music/Zella+Day/_/Sweet+Ophelia",
+        "artist": "Zella Day",
         "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -604,13 +611,6 @@
         "name": "Pictures at an Exhibition (Piano): Promenade",
         "url": "https://www.last.fm/music/Modest+Petrovich+Mussorgsky/_/Pictures+at+an+Exhibition+(Piano):+Promenade",
         "artist": "Modest Petrovich Mussorgsky",
-        "plays": "4",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sweet Ophelia",
-        "url": "https://www.last.fm/music/Zella+Day/_/Sweet+Ophelia",
-        "artist": "Zella Day",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -688,6 +688,13 @@
         "name": "Punctum",
         "url": "https://www.last.fm/music/Caroline+Shaw/_/Punctum",
         "artist": "Caroline Shaw",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Pink Pony Club",
+        "url": "https://www.last.fm/music/Chappell+Roan/_/Pink+Pony+Club",
+        "artist": "Chappell Roan",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -851,13 +858,6 @@
         "artist": "Wet Leg",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "1965",
-        "url": "https://www.last.fm/music/Zella+Day/_/1965",
-        "artist": "Zella Day",
-        "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -924,14 +924,14 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Johann Sebastian Bach",
-        "url": "https://www.last.fm/music/Johann+Sebastian+Bach",
-        "plays": "41",
+        "name": "Zella Day",
+        "url": "https://www.last.fm/music/Zella+Day",
+        "plays": "42",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Zella Day",
-        "url": "https://www.last.fm/music/Zella+Day",
+        "name": "Johann Sebastian Bach",
+        "url": "https://www.last.fm/music/Johann+Sebastian+Bach",
         "plays": "41",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1050,6 +1050,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Einstürzende Neubauten",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
+        "plays": "20",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Igor Stravinsky • Chicago Symphony Orchestra • Pierre Boulez",
         "url": "https://www.last.fm/music/Igor+Stravinsky+%E2%80%A2+Chicago+Symphony+Orchestra+%E2%80%A2+Pierre+Boulez",
         "plays": "20",
@@ -1094,12 +1100,6 @@
       {
         "name": "Alice in Chains",
         "url": "https://www.last.fm/music/Alice+in+Chains",
-        "plays": "18",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Gabriela Ortiz",
-        "url": "https://www.last.fm/music/Gabriela+Ortiz",
         "plays": "18",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1221,7 +1221,7 @@
         "name": "Kicker",
         "url": "https://www.last.fm/music/Zella+Day/Kicker",
         "artist": "Zella Day",
-        "plays": "23",
+        "plays": "24",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/29e214babcf74d2dcd5b10882975b4f9.png"
       },
       {
@@ -1344,6 +1344,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/62b58469f6c84a3e8a6e4c7fd3fbc6b9.jpg"
       },
       {
+        "name": "Ende Neu",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Ende+Neu",
+        "artist": "Einstürzende Neubauten",
+        "plays": "15",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d51ddf4b15914649b972854afe537786.png"
+      },
+      {
         "name": "The Complete Recordings on Deutsche Grammophon",
         "url": "https://www.last.fm/music/Maurice+Ravel/The+Complete+Recordings+on+Deutsche+Grammophon",
         "artist": "Maurice Ravel",
@@ -1363,13 +1370,6 @@
         "artist": "Alan Hovhaness",
         "plays": "14",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/dbaf0323a2dd011658248513136dcbdf.jpg"
-      },
-      {
-        "name": "Ende Neu",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Ende+Neu",
-        "artist": "Einstürzende Neubauten",
-        "plays": "14",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d51ddf4b15914649b972854afe537786.png"
       },
       {
         "name": "May Our Chambers Be Full",
@@ -1507,6 +1507,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Sweet Ophelia",
+        "url": "https://www.last.fm/music/Zella+Day/_/Sweet+Ophelia",
+        "artist": "Zella Day",
+        "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Loser",
         "url": "https://www.last.fm/music/Grateful+Dead/_/Loser",
         "artist": "Grateful Dead",
@@ -1545,13 +1552,6 @@
         "name": "I'm On A Boat",
         "url": "https://www.last.fm/music/The+Lonely+Island/_/I%27m+On+A+Boat",
         "artist": "The Lonely Island",
-        "plays": "4",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sweet Ophelia",
-        "url": "https://www.last.fm/music/Zella+Day/_/Sweet+Ophelia",
-        "artist": "Zella Day",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1746,7 +1746,7 @@
       {
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "140",
+        "plays": "143",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2494,7 +2494,7 @@
       {
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "5588",
+        "plays": "5591",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
