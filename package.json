@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/cloudflare": "^12.6.12",
+    "@astrojs/cloudflare": "^12.6.8",
     "@astrojs/mdx": "^4.3.5",
     "@astrojs/partytown": "^2.1.4",
     "@astrojs/rss": "^4.0.14",
@@ -31,6 +31,7 @@
     "@fontsource/inter": "^5.2.8",
     "@tailwindcss/vite": "^4.1.13",
     "astro": "^5.13.9",
+    "astro-indexnow": "^2.0.0",
     "astro-pagefind": "^1.8.5",
     "astro-robots-txt": "^1.0.0",
     "astro-seo": "^0.8.4",
