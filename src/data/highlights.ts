@@ -16,7 +16,7 @@ export const highlights: Highlight[] = [
   {
     title: 'Personal Website Github Repo',
     description:
-      "My sandbox and source code. I moved to Astro as a trial, but found the architecture makes sense to me. It’s a TypeScript environment—a fun change of pace from Python.",
+      "A high-performance static site built with Astro 5 and TypeScript, while also being my playground.  I moved to Astro as a trial, but found the architecture makes sense to me. It’s a TypeScript environment—a fun change of pace from Python. Deployed with Github Actions and Cloudflare.",
     url: 'https://github.com/edwelker/astro-markdown-personal-site/tree/astro',
     date: '2025-12-20',
     thought:
