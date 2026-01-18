@@ -6,6 +6,7 @@ import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 import cloudflare from '@astrojs/cloudflare';
+import indexNow from 'astro-indexnow';
 
 const isBuild = process.argv.includes('build');
 
@@ -47,6 +48,9 @@ export default defineConfig({
         },
       },
     },
+    indexNow({
+      key: 'a65da6c13546cfc1ba9ce202a16754166c09d7e3f7ce142d60d41ed7d514326b'
+    }),
     sitemap({
       filter: (page) => !page.includes('/dash'),
     }),
