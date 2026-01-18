@@ -36,6 +36,12 @@ const maxVal = Math.max(
   ...history.map((d) => Math.max(parseFloat(d.hours), parseFloat(d.lastHours))),
   0.1 // prevent divide by zero
 );
+
+function getDayName(dateStr: string) {
+  if (!dateStr) return '';
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('en-US', { weekday: 'short', timeZone: 'UTC' });
+}
 ---
 
 <div class="space-y-12">
@@ -79,7 +85,7 @@ const maxVal = Math.max(
               
               <!-- Mobile Layout -->
               <div class="grid grid-cols-[2rem_1fr] items-center gap-3 md:hidden">
-                <div class="font-mono text-[10px] text-neutral-400 uppercase tracking-wider">{d.dayName}</div>
+                <div class="font-mono text-[10px] text-neutral-400 uppercase tracking-wider">{getDayName(d.date)}</div>
                 
                 <div class="relative flex h-6 items-center min-w-0">
                   <!-- Bar -->
@@ -113,7 +119,7 @@ const maxVal = Math.max(
               <div class="hidden md:flex items-center">
                 <!-- Left Half -->
                 <div class="w-1/2 pr-8 flex items-center gap-3">
-                   <div class="font-mono text-[10px] text-neutral-400 uppercase tracking-wider w-8 shrink-0">{d.dayName}</div>
+                   <div class="font-mono text-[10px] text-neutral-400 uppercase tracking-wider w-8 shrink-0">{getDayName(d.date)}</div>
                    <div class="group/chart relative h-6 w-full max-w-[160px]">
                       <div class="absolute top-1 bottom-1 rounded-sm bg-neutral-300 transition-all dark:bg-neutral-700" style={`width: ${lw}%`}></div>
                       <div class="absolute top-2.5 bottom-2.5 rounded-full bg-black shadow-sm transition-all dark:bg-white" style={`width: ${w}%`}></div>
