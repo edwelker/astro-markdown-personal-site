@@ -167,6 +167,53 @@ describe('Music Logic: transformMusicData', () => {
     expect(yesterdayStat.lastHours).toBe('0.1');
   });
 
+  it('should shift history window back if today has no data', () => {
+    // Set a fixed date: 2023-10-27 (Friday)
+    const mockDate = new Date('2023-10-27T12:00:00Z');
+    vi.setSystemTime(mockDate);
+
+    const mockInfo = { user: { playcount: '1000' } };
+    
+    // Helper to get timestamp for X days ago
+    const getTs = (daysAgo) => {
+      const d = new Date(mockDate);
+      d.setDate(d.getDate() - daysAgo);
+      return Math.floor(d.getTime() / 1000).toString();
+    };
+
+    const mockRecent = {
+      recenttracks: {
+        track: [
+          // Yesterday (1 day ago) - 1 track for Artist B
+          { date: { uts: getTs(1) }, artist: { '#text': 'Artist B' } },
+          // NO DATA FOR TODAY (0 days ago)
+        ]
+      }
+    };
+
+    const emptyList = {}; 
+
+    const result = transformMusicData(
+      mockInfo,
+      mockRecent,
+      emptyList, emptyList, emptyList,
+      emptyList, emptyList, emptyList,
+      emptyList, emptyList, emptyList,
+      emptyList, emptyList, emptyList
+    );
+
+    const history = result.history;
+    
+    // Check length (should be 7 days)
+    expect(history).toHaveLength(7);
+
+    // The last element should be YESTERDAY (Thu), not Today (Fri), because Today was empty
+    const lastStat = history[6];
+    expect(lastStat.dayName).toBe('Thu'); // 2023-10-26
+    expect(lastStat.hours).toBe('0.1'); // 1 track
+    expect(lastStat.topArtist).toBe('Artist B');
+  });
+
   it('should handle single item response from API (Last.fm quirk)', () => {
     const mockInfo = { user: { playcount: '100' } };
     // Single object instead of array
@@ -201,8 +248,6 @@ describe('Music Logic: transformMusicData', () => {
     expect(result.week.artists[0].name).toBe('Single Artist');
     
     // Check that history processed the single track
-    // Since we didn't mock time here, it likely falls out of the 7 day window, 
-    // but we just want to ensure it didn't crash and processed the object.
     expect(result.history).toBeDefined();
   });
 });
