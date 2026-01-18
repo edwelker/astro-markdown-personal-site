@@ -11,7 +11,7 @@ export const SITE = {
 // todo, all of this crap needs to be streamlined, and made less yuck
 export const HOME: Metadata = {
   TITLE: 'Home',
-  DESCRIPTION: 'Programmer, Cyclist, Cellist, Photographer, Cook, Woodworker, MD/NY, USA.  ',
+  DESCRIPTION: 'Senior Software Engineer, Cyclist, Cellist, Photographer, Cook, Woodworker, Laurel, MD, USA.',
 };
 
 export const BLOG: Metadata = {
