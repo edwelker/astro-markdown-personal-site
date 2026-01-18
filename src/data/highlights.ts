@@ -20,7 +20,7 @@ export const highlights: Highlight[] = [
     url: 'https://github.com/edwelker/astro-markdown-personal-site/tree/astro',
     date: '2025-12-20',
     thought:
-      "This is my Astro 5 / Typescript playground.. <a href='/blog/2026/01/06/wordpress-to-hugo-to-astro/'>Read the full migration story.</a>",
+      "Formerly Wordpress and Hugo, but now Astro. <a href='/blog/2026/01/06/wordpress-to-hugo-to-astro/'>Read the full migration story.</a>",
     type: 'code',
   },
   {
