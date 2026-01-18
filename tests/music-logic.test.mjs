@@ -250,4 +250,89 @@ describe('Music Logic: transformMusicData', () => {
     // Check that history processed the single track
     expect(result.history).toBeDefined();
   });
+
+  it('should handle missing images and invalid tracks', () => {
+    const mockInfo = { user: { playcount: '100' } };
+    const mockTopArtists = {
+      topartists: {
+        artist: [
+          {
+            name: 'No Image Artist',
+            url: 'url1',
+            playcount: '10',
+            // No image array
+          },
+          {
+            name: 'Small Image Artist',
+            url: 'url2',
+            playcount: '5',
+            image: [{ '#text': 'small.jpg', size: 'small' }], // No extralarge
+          }
+        ],
+      },
+    };
+    
+    const mockRecent = {
+      recenttracks: {
+        track: [
+           // Valid track
+           { date: { uts: '1700000000' }, artist: { '#text': 'Artist A' } },
+           // Track with missing date (should be ignored or handled if logic allows)
+           { artist: { '#text': 'Artist B' } }, 
+           // Track with invalid uts (if parseInt returns NaN, !ts is true)
+           { date: { uts: 'invalid' }, artist: { '#text': 'Artist C' } }
+        ]
+      }
+    };
+
+    const emptyList = {};
+
+    const result = transformMusicData(
+      mockInfo,
+      mockRecent,
+      mockTopArtists, emptyList, emptyList,
+      emptyList, emptyList, emptyList,
+      emptyList, emptyList, emptyList,
+      emptyList, emptyList, emptyList
+    );
+
+    expect(result.week.artists[0].image).toBe('');
+    expect(result.week.artists[1].image).toBe('');
+    
+    // Check history doesn't crash
+    expect(result.history).toBeDefined();
+  });
+
+  it('should determine top artist correctly when multiple artists played on same day', () => {
+    const mockDate = new Date('2023-10-27T12:00:00Z');
+    vi.setSystemTime(mockDate);
+    const getTs = (daysAgo) => {
+        const d = new Date(mockDate);
+        d.setDate(d.getDate() - daysAgo);
+        return Math.floor(d.getTime() / 1000).toString();
+    };
+
+    const mockInfo = { user: { playcount: '100' } };
+    const mockRecent = {
+      recenttracks: {
+        track: [
+          { date: { uts: getTs(0) }, artist: { '#text': 'Artist A' } },
+          { date: { uts: getTs(0) }, artist: { '#text': 'Artist B' } },
+          { date: { uts: getTs(0) }, artist: { '#text': 'Artist A' } }, // A: 2, B: 1
+        ]
+      }
+    };
+    const emptyList = {};
+
+    const result = transformMusicData(
+      mockInfo, mockRecent,
+      emptyList, emptyList, emptyList,
+      emptyList, emptyList, emptyList,
+      emptyList, emptyList, emptyList,
+      emptyList, emptyList, emptyList
+    );
+
+    const today = result.history[6];
+    expect(today.topArtist).toBe('Artist A');
+  });
 });
