@@ -47,14 +47,18 @@ jobs:
           # Ensure directory exists to prevent git add failure if it wasn't created
           mkdir -p src/data/cache
 
-          # Add the cache directory contents
-          git add src/data/cache
+          # Add all changes. This ensures that any files modified by the fetch process
+          # (like package-lock.json or other data files outside src/data/cache) are staged.
+          # This prevents 'git pull --rebase' from failing due to unstaged changes.
+          git add .
 
           # Check if there are staged changes
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             git commit -m "chore: update data cache"
+            # Pull with rebase to handle concurrent updates to the repo.
+            # The working tree is clean now because we staged and committed all changes.
             git pull --rebase
             git push
           fi
