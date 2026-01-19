@@ -28,5 +28,6 @@ jobs:
         uses: lycheeverse/lychee-action@v1.10.0
         with:
           # Check the built files in dist
-          args: ./dist/**/*.html --root-dir ./dist --insecure --no-progress --exclude 'trakt\.tv' --exclude 'gnu\.org' --exclude 'oxo\.com' --exclude 'onntv\.com' --exclude 'mama\.indstate\.edu' --exclude 'linkedin\.com' --exclude '/sports' --exclude 'bsomusic\.org' --exclude 'damieng\.com' --exclude 'github\.com/pstadler/gauth'
+          # The action automatically picks up lychee.toml for config
+          args: ./dist/**/*.html
           fail: true

@@ -1,0 +1,24 @@
+# Lychee Configuration
+
+# Check local files relative to this directory
+root_dir = "./dist"
+
+# Ignore SSL errors (e.g. bassibikes.com)
+insecure = true
+
+# Hide progress bar (cleaner logs)
+no_progress = true
+
+# Exclude specific domains or patterns
+exclude = [
+    "trakt\\.tv",
+    "gnu\\.org",
+    "oxo\\.com",
+    "onntv\\.com",
+    "mama\\.indstate\\.edu",
+    "linkedin\\.com",
+    "/sports",
+    "bsomusic\\.org",
+    "damieng\\.com",
+    "github\\.com/pstadler/gauth"
+]
