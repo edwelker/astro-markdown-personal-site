@@ -24,6 +24,16 @@ jobs:
 
       - name: Build Site
         run: npm run build
+        env:
+          FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          LASTFM_USERNAME: ${{ secrets.LASTFM_USERNAME }}
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          TRAKT_CLIENT_ID: ${{ secrets.TRAKT_CLIENT_ID }}
+          TRAKT_USERNAME: ${{ secrets.TRAKT_USERNAME }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
 
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1.10.0
@@ -32,3 +42,5 @@ jobs:
           # The action automatically picks up lychee.toml for config
           args: ./dist/**/*.html
           fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
