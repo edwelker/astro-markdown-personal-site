@@ -9,3 +9,10 @@
 * discord integration?
 * allow anything to be pin-nable as a highlight (may want comments, so it'd need to be a separate
   table)
+
+
+Code: Write in MDX -> schema-dts validates data -> astro-og-canvas makes images.
+Build: astro build runs -> astro-link-check validates internal paths.
+Audit: GitHub Action runs Lighthouse CI & Axe-core -> Fails if quality drops.
+Deploy: Push to host -> Script triggers IndexNow & WebSub.
+Monitor: Check Clarity for user behavior & Ahrefs for backlink health.
