@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "fetch": "node tests/run-all.mjs",
     "check": "astro check",
-    "check:links": "node migration_scripts/check-links.mjs",
+    "check:links": "lychee ./dist/**/*.html --root-dir ./dist --insecure --no-progress --exclude 'trakt\\.tv' --exclude 'gnu\\.org' --exclude 'oxo\\.com' --exclude 'onntv\\.com' --exclude 'mama\\.indstate\\.edu' --exclude 'linkedin\\.com' --exclude '/sports' --exclude 'bsomusic\\.org' --exclude 'damieng\\.com' --exclude 'github\\.com/pstadler/gauth'",
     "format": "prettier --write .",
     "test": "vitest run --coverage --exclude tests/build_artifacts_tests",
     "test:cov": "vitest run --coverage --exclude tests/build_artifacts_tests",

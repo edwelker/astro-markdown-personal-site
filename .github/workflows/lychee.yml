@@ -1,0 +1,32 @@
+name: Link Checker
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Site
+        run: npm run build
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v1.10.0
+        with:
+          # Check the built files in dist
+          args: ./dist/**/*.html --root-dir ./dist --insecure --no-progress --exclude 'trakt\.tv' --exclude 'gnu\.org' --exclude 'oxo\.com' --exclude 'onntv\.com' --exclude 'mama\.indstate\.edu' --exclude 'linkedin\.com' --exclude '/sports' --exclude 'bsomusic\.org' --exclude 'damieng\.com' --exclude 'github\.com/pstadler/gauth'
+          fail: true
