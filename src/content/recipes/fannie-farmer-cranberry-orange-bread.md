@@ -40,4 +40,4 @@ draft: false
 
 ## About This Recipe
 
-This recipe is a classic from the Fannie Farmer cookbook. My only change is to add more cranberries, which really works to my taste.
+This recipe is a classic from the [Fannie Farmer](https://en.wikipedia.org/wiki/Fannie_Farmer) cookbook. My only change is to add more cranberries, which really works to my taste.
