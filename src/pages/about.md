@@ -35,6 +35,8 @@ I’m a photo geek as well. My dad was a big [Olympus](https://en.wikipedia.org/
 
 I’m an avid [Red Sox](https://www.mlb.com/redsox) fan who grew up watching them during the summers I spent at my grandparents' house.
 
+For a list of a lot of the stuff I use regularly, check out my [Uses](/uses) page.
+
 ## About this site
 
 I used to use [WordPress](https://wordpress.org/) to make things easier, but I finally foolishly decided it was time to break the cardinal sin, and develop my own site from scratch. For the third time. First I tried [Hugo](https://gohugo.io/), and now this site is on [Astro](https://astro.build/).
