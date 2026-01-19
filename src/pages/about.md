@@ -12,7 +12,16 @@ Hi, I'm Eddie Welker (technically Edward Welker, but I stick to Eddie).
 
 Part programmer, cellist, biker, and photographer, I live in the suburbs of Maryland, spend time on Long Island, and ride bikes wherever I can.
 
-I am a Senior Software Engineer with over 15 years of experience, and I am exceptional at what I do. I am a natural leader skilled at guiding teams through big organizational changes. I'm good at [Python](https://www.python.org/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [Django](https://www.djangoproject.com/), Data, and more!
+## Work
+
+I am a Senior Software Engineer with over 15 years of experience, and I am exceptional at what I do.
+
+For nearly two decades, I worked at the [National Center for Biotechnology Information (NCBI)](https://www.ncbi.nlm.nih.gov/), where I wrote code and more. I led the technical migration of NCBI's core stack, from a proprietary legacy XSLT system to a modern Python and Django ecosystem. I architected the high-scale redesign of [PubMed.gov](https://pubmed.ncbi.nlm.nih.gov/) to handle over 5 million daily requests and built a centralized Internal Developer Platform that aggregated data from 47 different sources.
+
+I am a natural leader skilled at guiding teams through big organizational changes. I have managed 30-person engineering groups, standardized hiring processes to efficiently vet thousands of candidates, and taught Git and CI/CD curriculums to hundreds of established developers.
+
+Pre-pandemic, I had been strongly involved in the local Python community. I led the [DCPython Meetup group](https://www.meetup.com/DCPython/) for four years, taught free local classes ([DjangoGirls](https://djangogirls.org/), etc.), and have reviewed technical books for [Manning Publications](https://www.manning.com/). I’m good at Python, Django, Platform Engineering, Data, and making complex systems actually work.
+## Loves
 
 I love riding my bicycles, and I own too many of them. I've done 3 straight yearly tours of the [GAP](https://gaptrail.org/)/[C&O](https://www.nps.gov/choh/index.htm), the [Erie Canal](https://eriecanalway.org/), and a bunch of other shorter tours. Riding is one of the things that brings me great joy. Especially on my [All-City Space Horse](/blog/2025/12/05/all_city_space_horse/). That and my cat Sophie.
 
@@ -26,4 +35,17 @@ I’m a photo geek as well. My dad was a big [Olympus](https://en.wikipedia.org/
 
 I’m an avid [Red Sox](https://www.mlb.com/redsox) fan who grew up watching them during the summers I spent at my grandparents' house.
 
+## About this site
+
 I used to use [WordPress](https://wordpress.org/) to make things easier, but I finally foolishly decided it was time to break the cardinal sin, and develop my own site from scratch. For the third time. First I tried [Hugo](https://gohugo.io/), and now this site is on [Astro](https://astro.build/).
+
+You can find the source code for this site on [GitHub](https://github.com/edwelker/astro-markdown-personal-site/tree/astro). Note that the `astro` branch is the active one; the `master` branch contains the previous Hugo-based version.
+
+I wrote about the transition from WordPress to Hugo to Astro 5 [here](/blog/2026/01/06/wordpress-to-hugo-to-astro/).
+
+<style>
+  h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+</style>
