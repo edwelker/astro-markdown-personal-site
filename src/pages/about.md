@@ -46,6 +46,6 @@ I wrote about the transition from WordPress to Hugo to Astro 5 [here](/blog/2026
 <style>
   h2 {
     margin-top: 1.5rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 </style>
