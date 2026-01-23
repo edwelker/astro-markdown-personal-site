@@ -1,14 +1,21 @@
 {
   "year": {
-    "distance": "322.4",
-    "elevation": "14,551",
-    "count": 21
+    "distance": "339.0",
+    "elevation": "15,548",
+    "count": 22
   },
   "month": {
     "name": "January",
-    "distance": "322.4"
+    "distance": "339.0"
   },
   "recent": [
+    {
+      "name": "Afternoon Ride",
+      "date": "Jan 22",
+      "distance": "16.6",
+      "elevation": "997",
+      "id": 17144200443
+    },
     {
       "name": "Afternoon Ride",
       "date": "Jan 19",
@@ -71,20 +78,13 @@
       "distance": "17.3",
       "elevation": "1,040",
       "id": 16973201221
-    },
-    {
-      "name": "Afternoon Ride",
-      "date": "Jan 6",
-      "distance": "11.8",
-      "elevation": "745",
-      "id": 16961840277
     }
   ],
   "chart": [
     110,
     121,
     91,
-    0,
+    17,
     0,
     0,
     0,
