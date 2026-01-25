@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 273493
+    "scrobbles": 273503
   },
   "history": [
-    {
-      "dayName": "Sun",
-      "date": "2026-01-18",
-      "hours": "2.0",
-      "lastHours": "2.9",
-      "topArtist": "Dmitri Shostakovich"
-    },
     {
       "dayName": "Mon",
       "date": "2026-01-19",
@@ -51,16 +44,17 @@
       "hours": "0.2",
       "lastHours": "3.3",
       "topArtist": "System of a Down"
+    },
+    {
+      "dayName": "Sun",
+      "date": "2026-01-25",
+      "hours": "0.6",
+      "lastHours": "2.0",
+      "topArtist": "Arthur William Foote"
     }
   ],
   "week": {
     "artists": [
-      {
-        "name": "Dmitri Shostakovich",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "15",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
       {
         "name": "Dobrinka Tabakova",
         "url": "https://www.last.fm/music/Dobrinka+Tabakova",
@@ -122,15 +116,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Nicolai Myaskovsky",
-        "url": "https://www.last.fm/music/Nicolai+Myaskovsky",
+        "name": "Ralph Vaughan Williams",
+        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
         "plays": "7",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Ralph Vaughan Williams",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
-        "plays": "7",
+        "name": "Arthur William Foote",
+        "url": "https://www.last.fm/music/Arthur+William+Foote",
+        "plays": "6",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -164,6 +158,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Dmitri Shostakovich",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
+        "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Roy Harris",
         "url": "https://www.last.fm/music/Roy+Harris",
         "plays": "5",
@@ -173,6 +173,12 @@
         "name": "System of a Down",
         "url": "https://www.last.fm/music/System+of+a+Down",
         "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Arthur Foote",
+        "url": "https://www.last.fm/music/Arthur+Foote",
+        "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -302,13 +308,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ec172ed4fce8f5d5574a684de375e1ec.jpg"
       },
       {
-        "name": "Symphonies",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Symphonies",
-        "artist": "Dmitri Shostakovich",
-        "plays": "10",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/cfeec8539b3e5f748be83a21415b754a.jpg"
-      },
-      {
         "name": "The 5 Piano Concertos",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven/The+5+Piano+Concertos",
         "artist": "Ludwig van Beethoven",
@@ -334,6 +333,13 @@
         "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/The+Complete+Symphonies+%2F+Orchestral+Works",
         "artist": "Ralph Vaughan Williams",
         "plays": "7",
+        "image": ""
+      },
+      {
+        "name": "Piano Quartet, String Quartet No. 1, Nocturne and Scherzo",
+        "url": "https://www.last.fm/music/Arthur+William+Foote/Piano+Quartet,+String+Quartet+No.+1,+Nocturne+and+Scherzo",
+        "artist": "Arthur William Foote",
+        "plays": "6",
         "image": ""
       },
       {
@@ -365,13 +371,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c100a1a722fa17da80e0e948261a5565.jpg"
       },
       {
-        "name": "Intégrale des symphonies",
-        "url": "https://www.last.fm/music/Nicolai+Myaskovsky/Int%C3%A9grale+des+symphonies",
-        "artist": "Nicolai Myaskovsky",
-        "plays": "5",
-        "image": ""
-      },
-      {
         "name": "Symphonies Nos. 7 and 9",
         "url": "https://www.last.fm/music/Roy+Harris/Symphonies+Nos.+7+and+9",
         "artist": "Roy Harris",
@@ -390,6 +389,13 @@
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Enescu+%2F+Prokofiev+%2F+Szymanowski",
         "artist": "Sergei Prokofiev",
         "plays": "5",
+        "image": ""
+      },
+      {
+        "name": "FOOTE: Piano Quintet / String Quartets Op. 32 and Op. 70",
+        "url": "https://www.last.fm/music/Arthur+Foote/FOOTE:+Piano+Quintet+%2F+String+Quartets+Op.+32+and+Op.+70",
+        "artist": "Arthur Foote",
+        "plays": "4",
         "image": ""
       },
       {
@@ -533,13 +539,6 @@
         "image": ""
       },
       {
-        "name": "Piano Sonatas 1, 2, 3, & 6",
-        "url": "https://www.last.fm/music/Nicolai+Myaskovsky/Piano+Sonatas+1,+2,+3,+&+6",
-        "artist": "Nicolai Myaskovsky",
-        "plays": "2",
-        "image": ""
-      },
-      {
         "name": "Concerti - Piano",
         "url": "https://www.last.fm/music/Prokofiev,+Sergei/Concerti+-+Piano",
         "artist": "Prokofiev, Sergei",
@@ -552,6 +551,13 @@
         "artist": "System of a Down",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a96a0ff1cd9b384659b7edac19dc15b6.jpg"
+      },
+      {
+        "name": "The Berlin Recital",
+        "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart/The+Berlin+Recital",
+        "artist": "Wolfgang Amadeus Mozart",
+        "plays": "2",
+        "image": ""
       }
     ],
     "tracks": [
@@ -766,72 +772,72 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Siren Song",
-        "url": "https://www.last.fm/music/Austra/_/Siren+Song",
-        "artist": "Austra",
+        "name": "String Quartet No. 2 in E Major, Op. 32 (1893) I. Allegro giocoso",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+2+in+E+Major,+Op.+32+(1893)+I.+Allegro+giocoso",
+        "artist": "Arthur Foote",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Suite No. 5, I. Allemande",
-        "url": "https://www.last.fm/music/Carrie+Frey/_/Suite+No.+5,+I.+Allemande",
-        "artist": "Carrie Frey",
+        "name": "String Quartet No. 2 in E Major, Op. 32 (1893) II. Scherzo: Vivace",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+2+in+E+Major,+Op.+32+(1893)+II.+Scherzo:+Vivace",
+        "artist": "Arthur Foote",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Suite No. 5, II. Courante",
-        "url": "https://www.last.fm/music/Carrie+Frey/_/Suite+No.+5,+II.+Courante",
-        "artist": "Carrie Frey",
+        "name": "String Quartet No. 3 in D Major, Op. 70 (1910) (1910) II. Scherzo: Capriccioso",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+3+in+D+Major,+Op.+70+(1910)+(1910)+II.+Scherzo:+Capriccioso",
+        "artist": "Arthur Foote",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sonata for Violin and Piano in A major, FWV 8: III. Recitativo - Fantasia (Ben moderato)",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+for+Violin+and+Piano+in+A+major,+FWV+8:+III.+Recitativo+-+Fantasia+(Ben+moderato)",
-        "artist": "César Franck",
+        "name": "String Quartet No. 3 in D Major, Op. 70 (1910) I. Allegro",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+3+in+D+Major,+Op.+70+(1910)+I.+Allegro",
+        "artist": "Arthur Foote",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sonata for Violin and Piano in A Major, FWV 8: IV. Allegretto poco mosso",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+for+Violin+and+Piano+in+A+Major,+FWV+8:+IV.+Allegretto+poco+mosso",
-        "artist": "César Franck",
+        "name": "Nocturne and Scherzo for Flute and String Quartet - I. Nocturne ('a Night Piece')- Andantino Languido",
+        "url": "https://www.last.fm/music/Arthur+William+Foote/_/Nocturne+and+Scherzo+for+Flute+and+String+Quartet+-+I.+Nocturne+(%27a+Night+Piece%27)-+Andantino+Languido",
+        "artist": "Arthur William Foote",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sonata in A major: I. Allegretto moderato",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+in+A+major:+I.+Allegretto+moderato",
-        "artist": "César Franck",
+        "name": "Nocturne and Scherzo for Flute and String Quartet - II. Scherzo- Vivace",
+        "url": "https://www.last.fm/music/Arthur+William+Foote/_/Nocturne+and+Scherzo+for+Flute+and+String+Quartet+-+II.+Scherzo-+Vivace",
+        "artist": "Arthur William Foote",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sonata in A major: II. Allegro",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+in+A+major:+II.+Allegro",
-        "artist": "César Franck",
+        "name": "Piano Quartet in C major, Op.23 - I. Allegro Comodo",
+        "url": "https://www.last.fm/music/Arthur+William+Foote/_/Piano+Quartet+in+C+major,+Op.23+-+I.+Allegro+Comodo",
+        "artist": "Arthur William Foote",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sonata in A major: III. Recitativo: Fantasia. Moderato",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+in+A+major:+III.+Recitativo:+Fantasia.+Moderato",
-        "artist": "César Franck",
+        "name": "Piano Quartet in C major, Op.23 - II. Scherzo- Allegro Vivace",
+        "url": "https://www.last.fm/music/Arthur+William+Foote/_/Piano+Quartet+in+C+major,+Op.23+-+II.+Scherzo-+Allegro+Vivace",
+        "artist": "Arthur William Foote",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sonata in A major: IV. Allegretto poco mosso",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+in+A+major:+IV.+Allegretto+poco+mosso",
-        "artist": "César Franck",
+        "name": "Piano Quartet in C major, Op.23 - III. Agagio, Ma Con Moto",
+        "url": "https://www.last.fm/music/Arthur+William+Foote/_/Piano+Quartet+in+C+major,+Op.23+-+III.+Agagio,+Ma+Con+Moto",
+        "artist": "Arthur William Foote",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Beau soir",
-        "url": "https://www.last.fm/music/Claude+Debussy/_/Beau+soir",
-        "artist": "Claude Debussy",
+        "name": "Piano Quartet in C major, Op.23 - IV. Allegro Non Troppo",
+        "url": "https://www.last.fm/music/Arthur+William+Foote/_/Piano+Quartet+in+C+major,+Op.23+-+IV.+Allegro+Non+Troppo",
+        "artist": "Arthur William Foote",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -848,7 +854,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "148",
+        "plays": "128",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -866,7 +872,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "92",
+        "plays": "88",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1662,7 +1668,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "340",
+        "plays": "335",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1770,7 +1776,7 @@
       {
         "name": "Depeche Mode",
         "url": "https://www.last.fm/music/Depeche+Mode",
-        "plays": "91",
+        "plays": "87",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
