@@ -1,7 +1,6 @@
 # .aider.conf.yml
 
 read:
-  - public/pagefind/
   - package-lock.json
   - pnpm-lock.yaml
   - yarn.lock
