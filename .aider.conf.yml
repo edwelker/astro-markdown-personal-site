@@ -1,12 +1,11 @@
-read-only:
+# .aider.conf.yml
+
+read:
   - public/pagefind/
   - package-lock.json
   - pnpm-lock.yaml
   - yarn.lock
 
-exclude:
-  - dist/
-  - .astro/
-  - node_modules/
-
+lint-cmd: "npm run lint"
 test-cmd: npm test
+editor-edit-format: whole
