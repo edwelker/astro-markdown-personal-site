@@ -171,7 +171,7 @@ function getDayName(dateStr: string) {
                   {alb.image ? (
                     <img
                       src={alb.image}
-                      alt={truncateString(alb.name, 100)}
+                      alt={truncateString(alb.name, 150)}
                       class="h-8 w-8 rounded border border-black/10 object-cover dark:border-white/10"
                     />
                   ) : (
@@ -186,9 +186,11 @@ function getDayName(dateStr: string) {
                         target="_blank"
                         class="block truncate text-sm text-neutral-700 decoration-1 underline-offset-2 transition-colors group-hover:text-black group-hover:underline dark:text-neutral-300 dark:group-hover:text-white"
                       >
-                        {truncateString(alb.name, 100)}
+                        {truncateString(alb.name, 150)}
                       </a>
-                      <div class="truncate text-xs text-neutral-500">{alb.artist}</div>
+                      <div class="truncate text-xs text-neutral-500">
+                        {truncateString(alb.artist || '', 150)}
+                      </div>
                     </>
                   </div>
                   <span class="font-mono text-xs text-neutral-400">{alb.plays}</span>
@@ -212,7 +214,7 @@ function getDayName(dateStr: string) {
                       target="_blank"
                       class="truncate text-sm text-neutral-600 transition-colors group-hover:text-black dark:text-neutral-400 dark:group-hover:text-white"
                     >
-                      {art.name}
+                      {truncateString(art.name, 150)}
                     </a>
                   </div>
                   <span class="ml-2 font-mono text-xs text-neutral-400">{art.plays}</span>
@@ -238,7 +240,7 @@ function getDayName(dateStr: string) {
                   {alb.image ? (
                     <img
                       src={alb.image}
-                      alt={truncateString(alb.name, 100)}
+                      alt={truncateString(alb.name, 150)}
                       class="h-8 w-8 rounded border border-black/10 object-cover dark:border-white/10"
                     />
                   ) : (
@@ -253,9 +255,11 @@ function getDayName(dateStr: string) {
                         target="_blank"
                         class="block truncate text-sm text-neutral-700 decoration-1 underline-offset-2 transition-colors group-hover:text-black group-hover:underline dark:text-neutral-300 dark:group-hover:text-white"
                       >
-                        {truncateString(alb.name, 100)}
+                        {truncateString(alb.name, 150)}
                       </a>
-                      <div class="truncate text-xs text-neutral-500">{alb.artist}</div>
+                      <div class="truncate text-xs text-neutral-500">
+                        {truncateString(alb.artist || '', 150)}
+                      </div>
                     </>
                   </div>
                   <span class="font-mono text-xs text-neutral-400">{alb.plays}</span>
@@ -279,7 +283,7 @@ function getDayName(dateStr: string) {
                       target="_blank"
                       class="truncate text-sm text-neutral-600 transition-colors group-hover:text-black dark:text-neutral-400 dark:group-hover:text-white"
                     >
-                      {art.name}
+                      {truncateString(art.name, 150)}
                     </a>
                   </div>
                   <span class="ml-2 font-mono text-xs text-neutral-400">{art.plays}</span>

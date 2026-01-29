@@ -15,5 +15,12 @@ describe('MusicStats Utilities', () => {
     it('truncates string and adds ellipsis if length exceeds limit', () => {
       expect(truncateString('longer string', 6)).toBe('longer...');
     });
+
+    it('truncates long strings correctly', () => {
+      const longString = 'a'.repeat(200);
+      const truncated = truncateString(longString, 150);
+      expect(truncated.length).toBe(153); // 150 + '...'
+      expect(truncated.endsWith('...')).toBe(true);
+    });
   });
 });
