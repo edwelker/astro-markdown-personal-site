@@ -110,7 +110,7 @@ function getDayName(dateStr: string) {
                         target="_blank"
                         class="hover:text-black hover:underline dark:hover:text-white transition-colors"
                       >
-                        {d.topArtist}
+                        {truncateString(d.topArtist, 150)}
                       </a>
                     </div>
                   )}
@@ -141,7 +141,7 @@ function getDayName(dateStr: string) {
                         target="_blank"
                         class="hover:text-black hover:underline dark:hover:text-white transition-colors"
                       >
-                        {d.topArtist}
+                        {truncateString(d.topArtist, 150)}
                       </a>
                     </div>
                    )}
@@ -156,7 +156,7 @@ function getDayName(dateStr: string) {
   </div>
 
   <div class="grid gap-8 divide-black/10 md:grid-cols-2 md:gap-0 md:divide-x dark:divide-white/10">
-    <div class="space-y-8 md:pr-8">
+    <div class="min-w-0 space-y-8 md:pr-8">
       <h4 class="text-[10px] font-bold tracking-wider text-neutral-400 uppercase">Last 7 Days</h4>
       <div class="space-y-6">
         <div class="space-y-3">
@@ -225,7 +225,7 @@ function getDayName(dateStr: string) {
         </div>
       </div>
     </div>
-    <div class="space-y-8 md:pl-8">
+    <div class="min-w-0 space-y-8 md:pl-8">
       <h4 class="text-[10px] font-bold tracking-wider text-neutral-400 uppercase">Last 3 Months</h4>
       <div class="space-y-6">
         <div class="space-y-3">
