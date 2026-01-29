@@ -66,3 +66,11 @@ export function formatPrice(price: any) {
   if (isNaN(p)) return 'N/A';
   return `$${p.toFixed(2)}`;
 }
+
+export function truncateString(str: string, num: number) {
+  if (!str) return '';
+  if (str.length <= num) {
+    return str;
+  }
+  return str.slice(0, num) + '...';
+}

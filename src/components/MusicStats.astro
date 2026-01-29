@@ -1,5 +1,7 @@
 ---
 import musicData from '../data/music.json';
+import { truncateString } from '../lib/utils';
+
 interface Item {
   name: string;
   url: string;
@@ -169,7 +171,7 @@ function getDayName(dateStr: string) {
                   {alb.image ? (
                     <img
                       src={alb.image}
-                      alt={alb.name}
+                      alt={truncateString(alb.name, 100)}
                       class="h-8 w-8 rounded border border-black/10 object-cover dark:border-white/10"
                     />
                   ) : (
@@ -184,7 +186,7 @@ function getDayName(dateStr: string) {
                         target="_blank"
                         class="block truncate text-sm text-neutral-700 decoration-1 underline-offset-2 transition-colors group-hover:text-black group-hover:underline dark:text-neutral-300 dark:group-hover:text-white"
                       >
-                        {alb.name}
+                        {truncateString(alb.name, 100)}
                       </a>
                       <div class="truncate text-xs text-neutral-500">{alb.artist}</div>
                     </>
@@ -236,7 +238,7 @@ function getDayName(dateStr: string) {
                   {alb.image ? (
                     <img
                       src={alb.image}
-                      alt={alb.name}
+                      alt={truncateString(alb.name, 100)}
                       class="h-8 w-8 rounded border border-black/10 object-cover dark:border-white/10"
                     />
                   ) : (
@@ -251,7 +253,7 @@ function getDayName(dateStr: string) {
                         target="_blank"
                         class="block truncate text-sm text-neutral-700 decoration-1 underline-offset-2 transition-colors group-hover:text-black group-hover:underline dark:text-neutral-300 dark:group-hover:text-white"
                       >
-                        {alb.name}
+                        {truncateString(alb.name, 100)}
                       </a>
                       <div class="truncate text-xs text-neutral-500">{alb.artist}</div>
                     </>
