@@ -1,6 +1,6 @@
 {
   "user": {
-    "scrobbles": 273715
+    "scrobbles": 273731
   },
   "history": [
     {
@@ -48,7 +48,7 @@
     {
       "dayName": "Thu",
       "date": "2026-01-29",
-      "hours": "2.0",
+      "hours": "2.9",
       "lastHours": "1.8",
       "topArtist": "George Antheil"
     }
@@ -92,6 +92,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Dmitri Shostakovich",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
+        "plays": "9",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Hans Werner Henze",
         "url": "https://www.last.fm/music/Hans+Werner+Henze",
         "plays": "9",
@@ -100,12 +106,6 @@
       {
         "name": "Jean Sibelius",
         "url": "https://www.last.fm/music/Jean+Sibelius",
-        "plays": "9",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Johannes Brahms",
-        "url": "https://www.last.fm/music/Johannes+Brahms",
         "plays": "9",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -134,6 +134,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Clarice Jensen",
+        "url": "https://www.last.fm/music/Clarice+Jensen",
+        "plays": "7",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Arthur William Foote",
         "url": "https://www.last.fm/music/Arthur+William+Foote",
         "plays": "6",
@@ -154,6 +160,12 @@
       {
         "name": "George Enescu , Luiza Borac",
         "url": "https://www.last.fm/music/George+Enescu+,+Luiza+Borac",
+        "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Johannes Brahms",
+        "url": "https://www.last.fm/music/Johannes+Brahms",
         "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -282,18 +294,6 @@
         "url": "https://www.last.fm/music/George+Whitefield+Chadwick",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "John Adams",
-        "url": "https://www.last.fm/music/John+Adams",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "John Cage",
-        "url": "https://www.last.fm/music/John+Cage",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -340,6 +340,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/43a4f30295949e597ed4f26016196716.jpg"
       },
       {
+        "name": "Symphonies",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Symphonies",
+        "artist": "Dmitri Shostakovich",
+        "plays": "9",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/cfeec8539b3e5f748be83a21415b754a.jpg"
+      },
+      {
         "name": "Œuvres pour violoncelle seul",
         "url": "https://www.last.fm/music/Hans+Werner+Henze/%C5%92uvres+pour+violoncelle+seul",
         "artist": "Hans Werner Henze",
@@ -373,6 +380,13 @@
         "artist": "Михаил Иванович Глинка",
         "plays": "8",
         "image": ""
+      },
+      {
+        "name": "Esthesis",
+        "url": "https://www.last.fm/music/Clarice+Jensen/Esthesis",
+        "artist": "Clarice Jensen",
+        "plays": "7",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/df6161b1be62cd62bea3e980038764d6.jpg"
       },
       {
         "name": "Piano Quartet, String Quartet No. 1, Nocturne and Scherzo",
@@ -462,13 +476,6 @@
         "name": "Cello Concertos nos. 1 and 2 / Symphonic Poem: Spring",
         "url": "https://www.last.fm/music/Dmitri+Kabalevsky/Cello+Concertos+nos.+1+and+2+%2F+Symphonic+Poem:+Spring",
         "artist": "Dmitri Kabalevsky",
-        "plays": "4",
-        "image": ""
-      },
-      {
-        "name": "Violinkonzert / Ungarische Tänze",
-        "url": "https://www.last.fm/music/Johannes+Brahms/Violinkonzert+%2F+Ungarische+T%C3%A4nze",
-        "artist": "Johannes Brahms",
         "plays": "4",
         "image": ""
       },
@@ -567,13 +574,6 @@
         "name": "Petrushka & The Rite Of Spring",
         "url": "https://www.last.fm/music/Igor+Stravinsky/Petrushka+&+The+Rite+Of+Spring",
         "artist": "Igor Stravinsky",
-        "plays": "2",
-        "image": ""
-      },
-      {
-        "name": "The Berlin Recital",
-        "url": "https://www.last.fm/music/Johannes+Brahms/The+Berlin+Recital",
-        "artist": "Johannes Brahms",
         "plays": "2",
         "image": ""
       }
@@ -890,13 +890,13 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "88",
+        "plays": "97",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "György Ligeti",
         "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti",
-        "plays": "62",
+        "plays": "60",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1288,6 +1288,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/43a4f30295949e597ed4f26016196716.jpg"
       },
       {
+        "name": "Symphonies",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Symphonies",
+        "artist": "Dmitri Shostakovich",
+        "plays": "19",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/cfeec8539b3e5f748be83a21415b754a.jpg"
+      },
+      {
         "name": "Gloria / Litanies à la Vierge noire / Stabat Mater",
         "url": "https://www.last.fm/music/Francis+Poulenc/Gloria+%2F+Litanies+%C3%A0+la+Vierge+noire+%2F+Stabat+Mater",
         "artist": "Francis Poulenc",
@@ -1377,13 +1384,6 @@
         "artist": "Maurice Ravel",
         "plays": "15",
         "image": ""
-      },
-      {
-        "name": "Collected works",
-        "url": "https://www.last.fm/music/Steve+Reich/Collected+works",
-        "artist": "Steve Reich",
-        "plays": "15",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/24e13037eab7fb61f898b7c2db6e4cce.jpg"
       }
     ],
     "tracks": [
@@ -1598,13 +1598,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Samson and Delilah, Op. 47: Bacchanale",
-        "url": "https://www.last.fm/music/Camille+Saint-Sa%C3%ABns/_/Samson+and+Delilah,+Op.+47:+Bacchanale",
-        "artist": "Camille Saint-Saëns",
-        "plays": "3",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Entr'acte",
         "url": "https://www.last.fm/music/Caroline+Shaw/_/Entr%27acte",
         "artist": "Caroline Shaw",
@@ -1666,6 +1659,13 @@
         "artist": "Igor Stravinsky",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "L’Oiseau de feu: Premier tableau. Apparition de l’Oiseau de feu, poursuivi par Ivan Tsarévitch",
+        "url": "https://www.last.fm/music/Igor+Stravinsky/_/L%E2%80%99Oiseau+de+feu:+Premier+tableau.+Apparition+de+l%E2%80%99Oiseau+de+feu,+poursuivi+par+Ivan+Tsar%C3%A9vitch",
+        "artist": "Igor Stravinsky",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -1686,7 +1686,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "317",
+        "plays": "306",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1734,7 +1734,7 @@
       {
         "name": "Nine Inch Nails",
         "url": "https://www.last.fm/music/Nine+Inch+Nails",
-        "plays": "164",
+        "plays": "149",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1921,13 +1921,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/76626da326e005b734d56ed6e396c998.jpg"
       },
       {
-        "name": "Shostakovich: The String Quartets",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Shostakovich:+The+String+Quartets",
-        "artist": "Dmitri Shostakovich",
-        "plays": "141",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2d2bdfc69ee18190778f6dbccf2d366e.jpg"
-      },
-      {
         "name": "Eine Alpensinfonie / Rosenkavaliersuite",
         "url": "https://www.last.fm/music/Richard+Strauss;+Vienna+Philharmonic,+Christian+Thielemann/Eine+Alpensinfonie+%2F+Rosenkavaliersuite",
         "artist": "Richard Strauss; Vienna Philharmonic, Christian Thielemann",
@@ -1947,6 +1940,13 @@
         "artist": "Austra",
         "plays": "123",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
+      },
+      {
+        "name": "Shostakovich: The String Quartets",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Shostakovich:+The+String+Quartets",
+        "artist": "Dmitri Shostakovich",
+        "plays": "121",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2d2bdfc69ee18190778f6dbccf2d366e.jpg"
       },
       {
         "name": "Cinderella / Summer Night Suite",
@@ -2518,7 +2518,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "3896",
+        "plays": "3905",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
