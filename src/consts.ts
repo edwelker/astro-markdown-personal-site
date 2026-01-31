@@ -11,23 +11,26 @@ export const SITE = {
 // todo, all of this crap needs to be streamlined, and made less yuck
 export const HOME: Metadata = {
   TITLE: 'Home',
-  DESCRIPTION: 'Software Engineer, Cyclist, Cellist, Photographer, Cook, Woodworker, Laurel, MD, USA.',
+  DESCRIPTION:
+    'The personal site of Eddie Welker. Software Engineer, Cyclist, Cellist, Photographer, Cook, Woodworker, Laurel, MD, USA.',
 };
 
 export const BLOG: Metadata = {
   TITLE: 'Blog',
   DESCRIPTION:
-    'A collection of articles on software engineering, XSLT, Python, food, cycling, and the intersection of technology and hobby.',
+    'Writing about software engineering, cycling tours, and music history. It covers everything from Python and XSLT to bike maintenance and the cello.',
 };
 
 export const RECIPES: Metadata = {
   TITLE: 'Recipes',
-  DESCRIPTION: 'A collection of my recipes.',
+  DESCRIPTION:
+    'A list of what I cook at home. Focus on rustic breads, lentils, and recipes using dried beans instead of the canned stuff.',
 };
 
 export const HIGHLIGHTS = {
   TITLE: 'Recent Highlights',
-  DESCRIPTION: "Projects, work, or things I'm proud of",
+  DESCRIPTION:
+    'A collection of significant posts and projects from my archives. Highlighting the work and moments I find most interesting.',
 };
 
 export const SOCIALS: Socials = [
