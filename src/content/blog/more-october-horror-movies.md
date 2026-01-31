@@ -1,5 +1,6 @@
 ---
 title: "More October Horror Movies"
+description: "Reviews of horror films including 28 Days Later and Hellraiser. A look at 80s imagery and movie plot holes."
 date: '2008-10-26T15:07:47-05:00'
 slug: "2008/10/26/more-october-horror-movies"
 tags: ["film", "halloween"]

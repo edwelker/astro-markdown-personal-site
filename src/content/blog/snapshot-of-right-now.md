@@ -1,5 +1,6 @@
 ---
 title: 'Snapshot of right now'
+description: "A late night reading the Fannie Farmer Cookbook and listening to George Crumb. Thoughts on camera lenses and the next day of work."
 date: '2008-10-08T00:39:48-05:00'
 slug: 2008/10/08/snapshot-of-right-now
 tags: ["life"]

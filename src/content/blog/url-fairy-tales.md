@@ -1,5 +1,6 @@
 ---
 title: 'Url Fairy Tales'
+description: "An email imagining a story behind a very long and messy ringling dot com URL. A look at how technology can feel like a fantasy world."
 date: '2009-03-31T11:23:47-05:00'
 slug: 2009/03/31/url-fairy-tales
 tags: ["career", "email", "fairy tales", "urls"]

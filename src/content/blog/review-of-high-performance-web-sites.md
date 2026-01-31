@@ -1,5 +1,6 @@
 ---
 title: 'Review of High Performance Web Sites'
+description: "My thoughts on Steve Souders book about web speed. The YSlow plugin is great but the book mostly covers things already available in the free documentation."
 date: '2007-11-19T00:27:28-05:00'
 slug: 2007/11/19/review-of-high-performance-web-sites
 tags: ["design", "firebug", "firefox", "high performance web sites", "load time", "performance", "reading", "speed", "yslow"]

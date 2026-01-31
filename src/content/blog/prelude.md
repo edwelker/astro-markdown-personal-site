@@ -1,5 +1,6 @@
 ---
 title: Prelude
+description: "The first post on my new domain and blog. Notes on the yellow theme and the work needed to get the site designed."
 date: '2007-08-15T21:04:28-05:00'
 slug: 2007/08/15/prelude
 tags: ["life", "meta"]

@@ -1,5 +1,6 @@
 ---
 title: 'Class over'
+description: "Wrapping up an XSLT class and seeing how the language fits with functional programming concepts. A short note on the connection to Lisp and Scheme."
 date: '2007-10-18T07:36:00-05:00'
 slug: 2007/10/18/class-over
 tags: ["functional programming", "scheme", "xslt"]

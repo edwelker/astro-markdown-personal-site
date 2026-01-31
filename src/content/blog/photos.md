@@ -1,5 +1,6 @@
 ---
 title: Photos!
+description: "Editing ALCS game photos and band shots in Photoshop. A look at why I feel the need to edit everything before posting to Flickr Pro."
 date: '2007-11-16T12:48:41-05:00'
 slug: 2007/11/16/photos
 tags: ["baseball", "life", "party", "photography", "photoshop", "red sox"]

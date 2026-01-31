@@ -1,5 +1,6 @@
 ---
 title: 'Minor distractions'
+description: "A handful of links to stay busy with microformats and the email standards project while waiting on news about IE8."
 date: '2007-12-05T20:04:45-05:00'
 slug: 2007/12/05/minor-distractions
 tags: ["email standards project", "internet explorer", "microformats", "podcasts", "reading", "rss"]

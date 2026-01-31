@@ -1,5 +1,6 @@
 ---
 title: 'Game 7: I think Kenny Lofton was out at second'
+description: "Analyzing a controversial play in the ALCS between the Red Sox and Indians. A look at base running rules and a great play by Manny Ramirez."
 date: '2007-10-22T00:23:29-05:00'
 slug: 2007/10/22/game-7-i-think-kenny-lofton-was-out-at-second
 tags: ["baseball", "red sox", "replay", "second base"]

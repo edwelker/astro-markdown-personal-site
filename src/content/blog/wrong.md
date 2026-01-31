@@ -1,5 +1,6 @@
 ---
 title: 'wrong'
+description: "A friend shares an xkcd comic that feels very accurate to my online habits. A look at the feeling of needing to correct things on the internet."
 date: '2008-04-04T11:50:10-05:00'
 slug: 2008/04/04/wrong
 tags: ["raluca", "twitter"]

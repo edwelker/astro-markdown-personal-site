@@ -1,5 +1,6 @@
 ---
 title: 'My XSLT Toolbox – copy and copy-of'
+description: "A guide on using xsl:copy and xsl:copy-of to handle XML elements. It covers the difference between shallow and deep copies with clear examples."
 date: '2008-12-27T16:05:09-05:00'
 slug: 2008/12/27/xslt-copy-copy-of
 tags: ["copy", "copy-of", "programming", "tutorial", "xslt"]

@@ -1,5 +1,6 @@
 ---
 title: "Review of \"Expert Python Programming\""
+description: "A review of Tarek Ziade's book on Python. It covers high level patterns and best practices for developers looking to write better Python code."
 date: '2009-01-25T13:02:24-05:00'
 slug: "2009/01/25/review-of-expert-python-programming"
 tags: ["programming", "python", "reading", "reviews"]

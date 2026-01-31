@@ -1,5 +1,6 @@
 ---
 title: 'Update to some random thoughts'
+description: "Focusing on learning Scheme instead of Python for now. Also a quick update on the Giants and the Processing language."
 date: '2008-01-08T19:19:16-05:00'
 slug: 2008/01/08/update-to-some-random-thoughts
 tags: ["life"]

@@ -1,5 +1,6 @@
 ---
 title: 'Editing Live'
+description: "Tweaking the sites CSS in real time. A quick warning for anyone seeing things move around while I work on the design."
 date: '2007-12-18T20:11:20-05:00'
 slug: 2007/12/18/editing-live
 tags: ["css", "meta"]

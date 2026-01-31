@@ -1,5 +1,6 @@
 ---
 title: 'Review of "Web Form Design, Filling in the Blanks"'
+description: "Review of Luke Wroblewskis book on form design. It covers eye tracking data and best practices for making web forms easier to use."
 date: '2008-08-04T21:33:45-05:00'
 slug: 2008/08/04/review-of-web-form-design-filling-in-the-blanks
 tags: ["design", "luke wroblewski", "reading", "ux"]

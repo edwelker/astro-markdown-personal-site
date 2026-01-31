@@ -1,5 +1,6 @@
 ---
 title: "Website usability annoyance no. 1"
+description: "The frustration of being redirected to a home page after logging in. A look at why websites should preserve your search context."
 date: '2008-01-13T04:14:48-05:00'
 slug: "2008/01/13/website-usability-annoyance-no-1"
 tags: ["ux", "web"]

@@ -1,5 +1,6 @@
 ---
 title: "Down to three bugs"
+description: "Getting close to a work deadline and enjoying a legendary year for Boston sports. A look at championships for the Celtics, Sox, and Giants."
 date: '2008-06-20T17:44:02-05:00'
 slug: "2008/06/20/down-to-three-bugs"
 tags: ["career", "red sox"]

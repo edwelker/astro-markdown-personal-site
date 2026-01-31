@@ -1,5 +1,6 @@
 ---
 title: 'Review of "Object-Oriented JavaScript"'
+description: "A review of Stoyan Stefanov's book on JavaScript. It breaks down how the language handles objects and patterns without the usual academic fluff."
 date: '2008-10-25T22:02:16-05:00'
 slug: 2008/10/25/object-oriented-javascript-review
 tags: ["javascript", "programming", "reading", "reviews"]

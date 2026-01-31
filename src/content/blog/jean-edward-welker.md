@@ -1,5 +1,6 @@
 ---
 title: 'Jean Edward Welker'
+description: "A personal post about family history and the story behind my name. A short look at the generations that came before me."
 date: '2007-12-17T22:23:47-05:00'
 slug: 2007/12/17/jean-edward-welker
 tags: ["life"]

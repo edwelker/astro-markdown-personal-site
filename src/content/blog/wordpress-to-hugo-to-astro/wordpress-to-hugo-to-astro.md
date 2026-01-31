@@ -2,7 +2,7 @@
 title: "From WordPress to Hugo to Astro"
 date: 2026-01-06T22:40:47
 draft: false
-description: "How I went from WordPress fatigue to Hugo frustration, and finally found a home with Astro, but we're not sailing through space yet!"
+description: "My process of moving this site from WordPress to Hugo and then to Astro. A look at why I made the switch and how the tools compare."
 slug: "2026/01/06/wordpress-to-hugo-to-astro"
 tags: ["Astro", "Hugo", "WordPress", "Migration", "CSS"]
 ---

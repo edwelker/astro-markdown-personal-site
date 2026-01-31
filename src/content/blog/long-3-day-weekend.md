@@ -1,5 +1,6 @@
 ---
 title: 'Long 3 day weekend'
+description: "Closing down a house in East Hampton while dealing with long drives and bad pizza. A look at the chores and small victories of a 3 day weekend."
 date: '2007-11-13T23:53:17-05:00'
 slug: 2007/11/13/long-3-day-weekend
 tags: ["Farmers Market", "new york"]

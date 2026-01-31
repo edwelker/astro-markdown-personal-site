@@ -1,5 +1,6 @@
 ---
 title: 'The IE8 doctype meta waiting game'
+description: "Thoughts on the IE8 meta tag proposal. A look at the history of waiting for Microsoft to fix standard browser behavior."
 date: '2008-01-26T20:16:26-05:00'
 slug: 2008/01/26/the-ie8-doctype-meta-waiting-game
 tags: ["civil discourse", "default behavior", "internet explorer", "meta", "microsoft", "proposal", "web", "web developer", "web standards"]

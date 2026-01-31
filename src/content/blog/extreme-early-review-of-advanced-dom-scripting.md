@@ -1,5 +1,6 @@
 ---
 title: 'Extreme early review of Advanced DOM Scripting'
+description: "Early excitement about Jeffrey Sambells book on DOM scripting. A look at scope chains and closures for developers learning JavaScript."
 date: '2007-08-22T23:03:22-05:00'
 slug: 2007/08/22/extreme-early-review-of-advanced-dom-scripting
 tags: ["javascript", "reading"]

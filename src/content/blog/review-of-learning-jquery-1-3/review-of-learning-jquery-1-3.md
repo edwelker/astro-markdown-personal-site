@@ -1,5 +1,6 @@
 ---
 title: 'Review of Learning jQuery 1.3'
+description: "My review of a jQuery 1.3 book. It covers the basics of the library and if it provides enough value for developers already familiar with JavaScript."
 date: '2009-09-24T00:13:32-05:00'
 slug: 2009/09/24/review-of-learning-jquery-1-3
 ---

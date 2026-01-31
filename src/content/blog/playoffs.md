@@ -1,5 +1,6 @@
 ---
 title: Playoffs
+description: "Planning a trip to Boston for the Red Sox playoffs. A quick note on the stress of getting tickets for a big game."
 date: '2007-10-02T19:07:46-05:00'
 slug: 2007/10/02/playoffs
 tags: ["baseball", "red sox"]

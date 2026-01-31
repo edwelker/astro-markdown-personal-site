@@ -1,5 +1,6 @@
 ---
 title: Whirlwind
+description: "Packing for a trip to see the Red Sox in the ALCS. A look at the excitement of visiting Boston for the first time in years."
 date: '2007-10-12T18:03:40-05:00'
 slug: 2007/10/12/whirlwind
 tags: ["baseball", "classical music", "fall", "red sox"]

@@ -2,7 +2,7 @@
 title: 'Dishes of Panda Gourmet'
 date: 2025-03-30T12:53:35-05:00
 slug: 2025/03/30/panda_gourmet_mar_2025
-description: "My notes and descriptions of dishes from Washington's Panda Gourmet"
+description: "Notes on Szechuan dishes at Panda Gourmet in DC. I breakdown the dry braised chicken and dan dan noodles and why the garlic cucumbers are worth the trip."
 coverImage: https://live.staticflickr.com/65535/54419176606_965675fd03_c.jpg
 tags: ["chinese", "cooking", "restaurants", "dc"]
 ---

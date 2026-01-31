@@ -1,5 +1,6 @@
 ---
 title: 'Being different.'
+description: "The Seattle Symphony hired four concertmasters without giving a clear reason. A look at this unusual move and its departure from orchestral norms."
 date: '2007-08-20T21:28:59-05:00'
 slug: 2007/08/20/being-different
 tags: ["classical music", "seattle", "seattle symphony"]

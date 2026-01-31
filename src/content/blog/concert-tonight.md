@@ -1,5 +1,6 @@
 ---
 title: 'Concert Tonight'
+description: "Preparing for a performance of Tchaikovskys 4th with the Columbia Orchestra. A quick note on practice, performance, and baseball distractions."
 date: '2007-10-20T14:44:25-05:00'
 slug: 2007/10/20/concert-tonight
 tags: ["classical music", "red sox"]

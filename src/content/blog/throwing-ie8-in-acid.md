@@ -1,5 +1,6 @@
 ---
 title: 'Throwing IE8 in acid.'
+description: "Putting IE8 and other browsers through the Acid3 test. A quick check on which browsers are actually following web standards."
 date: '2008-03-04T09:01:39-05:00'
 slug: 2008/03/04/throwing-ie8-in-acid
 tags: ["internet explorer", "web standards"]

@@ -1,5 +1,6 @@
 ---
 title: "what I've been up to"
+description: "A diagram for a default application design at NCBI. Also includes initial ideas for writing a Firefox extension."
 date: '2008-01-16T13:44:14-05:00'
 slug: "2008/01/16/what-ive-been-up-to"
 tags: ["career", "design", "firefox", "twitter"]

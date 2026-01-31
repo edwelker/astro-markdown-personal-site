@@ -1,5 +1,6 @@
 ---
 title: 'blog software'
+description: "Thinking about switching to ExpressionEngine or Symphony CMS. A look at customizable tools and a quick update on a Washington Nationals game."
 date: '2007-08-17T10:47:40-05:00'
 slug: '2007/08/17/blog-software'
 tags: ["baseball", "software"]

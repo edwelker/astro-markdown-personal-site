@@ -1,5 +1,6 @@
 ---
 title: 'I looked, I purchased'
+description: "Renting a house in Kensington Maryland after just one look. A quick update on moving close to work and the costs of living in the area."
 date: '2007-08-28T20:41:22-05:00'
 slug: 2007/08/28/i-looked-i-purchased
 tags: ["maryland", "moving", "rent a house"]

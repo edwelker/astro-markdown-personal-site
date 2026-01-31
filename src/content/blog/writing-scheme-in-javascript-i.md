@@ -1,5 +1,6 @@
 ---
 title: 'Writing Scheme in Javascript I'
+description: "Translating a Scheme function into JavaScript. A look at how to handle scope and secrets in an anonymous self executing function."
 date: '2008-02-10T13:04:16-05:00'
 slug: 2008/02/10/writing-scheme-in-javascript-i
 tags: ["global scope", "javascript", "scheme"]

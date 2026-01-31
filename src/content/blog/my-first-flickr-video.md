@@ -1,5 +1,6 @@
 ---
 title: 'My first flickr video'
+description: "Using the video service on Flickr to share a clip of Leon Redbone at the Avalon Theater after a YouTube rejection."
 date: '2008-04-27T00:45:36-05:00'
 slug: 2008/04/27/my-first-flickr-video
 tags: ["leon redbone", "leonredbone", "music", "photography", "youtube"]

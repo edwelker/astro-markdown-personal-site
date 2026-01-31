@@ -1,5 +1,6 @@
 ---
 title: 'High Performance CSS code design'
+description: "How to find messy spots in your CSS and clean them up. A look at better selectors and modular patterns to help your site load faster."
 date: '2011-04-06T00:44:25-05:00'
 slug: 2011/04/06/high-performance-css-code-design
 tags: ["css", "design", "programming", "refactoring"]

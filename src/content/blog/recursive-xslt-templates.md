@@ -1,5 +1,6 @@
 ---
 title: 'My XSLT Toolbox – Recursive XSLT templates'
+description: "How to write recursive XSLT templates to solve tricky problems like splitting strings without needing extra libraries or outside functions."
 date: '2008-12-28T17:21:35-05:00'
 slug: 2008/12/28/recursive-xslt-templates
 tags: ["programming", "recursive", "templates", "tokenize", "xslt"]

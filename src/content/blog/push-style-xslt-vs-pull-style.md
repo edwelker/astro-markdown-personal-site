@@ -1,5 +1,6 @@
 ---
 title: 'Advantages of push-style XSLT over pull-style'
+description: "Why push style XSLT is usually better than pulling data. A look at using functional programming ideas to make your templates more reusable."
 date: '2008-11-25T00:56:24-05:00'
 slug: 2008/11/25/push-style-xslt-vs-pull-style
 tags: ["functional programming", "programming", "pull", "push", "scheme", "templates", "typography", "xslt"]

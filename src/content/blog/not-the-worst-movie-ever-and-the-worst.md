@@ -1,5 +1,6 @@
 ---
 title: "Not the worst movie ever, and the worst"
+description: "Criticizing the Rob Zombie Halloween remake and its lack of camera angles. Also a quick mention of watching Snakes on a Plane."
 date: '2007-10-23T23:14:27-05:00'
 slug: "2007/10/23/not-the-worst-movie-ever-and-the-worst"
 tags: ["film", "halloween"]

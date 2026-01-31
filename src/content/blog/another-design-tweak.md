@@ -1,5 +1,6 @@
 ---
 title: 'Another design tweak'
+description: "Making small CSS adjustments using pseudo attributes. A look at cross platform rendering in 2007 and why IE didnt catch on fire this time."
 date: '2007-12-18T21:06:19-05:00'
 slug: 2007/12/18/another-design-tweak
 tags: ["css", "design", "firefox", "internet explorer", "mac", "mac pc", "opera", "pc", "pseudo attributes"]

@@ -1,5 +1,6 @@
 ---
 title: 'Time for small celebration!'
+description: "Celebrating the launch of several months of work on the PubMed website. A look at the minor but important steps in a large redesign."
 date: '2007-11-08T21:48:35-05:00'
 slug: 2007/11/08/time-for-small-celebration
 tags: ["pubmed"]

@@ -1,5 +1,6 @@
 ---
 title: 'Funny thing about bugs…'
+description: "Reflection on the reality of long term bug fixing and writing context dependent code in XSLT. A look at growth as a developer over two years."
 date: '2008-09-18T21:17:12-05:00'
 slug: 2008/09/18/funny-thing-about-bugs
 tags: ["programming", "xslt"]

@@ -1,5 +1,6 @@
 ---
 title: 'My new look on old characters'
+description: "Learning about typography history and interaction design. A look at how common symbols change the way we read and design."
 date: '2007-08-30T23:23:14-05:00'
 slug: '2007/08/30/my-new-look-on-old-characters'
 tags: ["characters", "typography"]

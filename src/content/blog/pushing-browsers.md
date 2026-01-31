@@ -1,5 +1,6 @@
 ---
 title: 'Pushing Browsers'
+description: "Frustration with Internet Explorer not supporting css table attributes from 1998. A look at why web standards take so long to adopt."
 date: '2007-09-04T22:59:03-05:00'
 slug: 2007/09/04/pushing-browsers
 tags: ["css", "firefox", "html", "internet explorer", "microsoft", "web standards"]

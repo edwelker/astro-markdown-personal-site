@@ -1,5 +1,6 @@
 ---
 title: 'Affecting your situation'
+description: "Thoughts on professional integrity and taking responsibility in a stormy industry. A look at a New York Philharmonic trombonists take on fakes."
 date: '2008-12-18T01:17:38-05:00'
 slug: 2008/12/18/affecting-your-situation
 tags: ["New York Philharmonic", "classical music"]

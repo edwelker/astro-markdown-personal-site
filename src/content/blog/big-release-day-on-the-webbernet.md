@@ -1,5 +1,6 @@
 ---
 title: 'Big release day on the webbernet'
+description: "A massive day for web standards with the IE8 beta, Yahoo Fire Eagle, and the Google Contacts API. A breakdown of the latest tools for developers."
 date: '2008-03-05T23:06:37-05:00'
 slug: 2008/03/05/big-release-day-on-the-webbernet
 tags: ["beta", "contacts", "css", "fire eagle", "firefox", "geo tagging", "gmail", "google", "html", "internet explorer", "javascript", "microformats", "microsoft", "openAIM", "operator plugin", "release", "software", "web", "web standards", "whitepapers", "wia aria", "yahoo"]

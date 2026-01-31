@@ -1,5 +1,6 @@
 ---
 title: 'Red Sox sweep White Sox'
+description: "The Red Sox outscore Chicago by 39 runs in a four game sweep. A look at the team heating up before heading to New York."
 date: '2007-08-26T16:19:08-05:00'
 slug: 2007/08/26/red-sox-sweep-white-sox
 tags: ["baseball", "red sox"]

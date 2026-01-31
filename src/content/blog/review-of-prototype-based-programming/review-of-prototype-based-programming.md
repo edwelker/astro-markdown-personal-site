@@ -1,5 +1,6 @@
 ---
 title: 'Review of "Prototype-Based Programming"'
+description: "Thoughts on prototype based languages and how they differ from standard object oriented programming. A look at the pros and cons for software design."
 date: '2009-01-29T20:14:56-05:00'
 slug: 2009/01/29/review-of-prototype-based-programming
 tags: ["javascript", "programming", "reading", "reviews"]

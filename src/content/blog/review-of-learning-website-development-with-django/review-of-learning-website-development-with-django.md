@@ -1,5 +1,6 @@
 ---
 title: 'Review of "Learning Website Development with Django"'
+description: "A review of a Django book for beginners. It covers the framework's approach to web development and if the tutorial style works for new programmers."
 date: '2008-07-07T23:09:03-05:00'
 slug: 2008/07/07/review-of-learning-website-development-with-django
 tags: ["application", "ayman hourieh", "design", "development", "django", "programming", "python", "reading", "web"]

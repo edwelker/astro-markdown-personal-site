@@ -1,5 +1,6 @@
 ---
 title: 'Horror Movies, Final installment'
+description: "My final reviews of classic and modern horror films for Halloween. Thoughts on The Exorcist, Carrie, and the scariest scenes in cinema."
 date: '2008-11-11T12:47:43-05:00'
 slug: 2008/11/11/horror-movies-final-installment
 tags: ["film", "halloween"]

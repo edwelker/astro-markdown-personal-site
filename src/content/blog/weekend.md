@@ -1,5 +1,6 @@
 ---
 title: Weekend
+description: "A quick trip to New York to shut down the summer house for the season. A short update on driving and relaxing for the weekend."
 date: '2007-11-10T08:38:25-05:00'
 slug: 2007/11/10/weekend
 tags: ["life"]

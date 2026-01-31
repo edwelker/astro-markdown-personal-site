@@ -1,5 +1,6 @@
 ---
 title: 'TBS broadcasting the Red Sox playoff game'
+description: "Criticizing technical errors in the TBS baseball coverage. A look at missed pitches and common knowledge repeats during the playoffs."
 date: '2007-10-03T19:40:41-05:00'
 slug: 2007/10/03/tbs-broadcasting-the-red-sox-playoff-game
 tags: ["baseball", "red sox"]

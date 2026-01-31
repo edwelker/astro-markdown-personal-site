@@ -1,5 +1,6 @@
 ---
 title: 'CSS Shorthand Cheat Sheet'
+description: "I made a single page reference for CSS shorthand properties. It covers the orders and defaults for the styles I can never seem to remember."
 date: '2007-09-06T23:37:56-05:00'
 slug: 2007/09/06/css-shorthand-cheat-sheet
 tags: ["cheat sheet", "cheat sheets", "css", "design", "shorthand", "typography"]

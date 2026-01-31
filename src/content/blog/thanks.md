@@ -1,5 +1,6 @@
 ---
 title: Thanks
+description: "A look at the visitor locations for this website. It is exciting to see traffic coming from dozens of different countries."
 date: '2007-12-31T21:47:20-05:00'
 slug: 2007/12/31/thanks
 tags: ["life", "meta", "new years"]

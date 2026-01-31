@@ -1,5 +1,6 @@
 ---
 title: "IE 6 background flicker problem revisited"
+description: "Fixing the old IE6 bug where background images flicker on hover. A look at how mouse movements were causing too many server hits for single images."
 date: '2007-08-21T14:20:56-05:00'
 slug: "2007/08/21/ie-6-background-flicker-problem"
 tags: ["css", "internet explorer", "microsoft", "photography", "server settings"]

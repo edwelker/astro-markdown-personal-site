@@ -1,5 +1,6 @@
 ---
 title: "Sweet! Now I'll never have to join facebook"
+description: "Googles announcement of OpenSocial and common APIs for social apps. A look at new ways to build social tools without Facebook."
 date: '2007-10-30T23:45:08-05:00'
 slug: "2007/10/30/sweet-now-ill-never-have-to-join-facebook"
 tags: ["OpenSocial", "api", "facebook", "google", "linkedin"]

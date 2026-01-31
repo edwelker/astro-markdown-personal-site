@@ -1,5 +1,6 @@
 ---
 title: 'Random February Thoughts'
+description: "Playing Beethovens Ninth and working on the NCBI website. A personal update on legal tasks and listening to David Bowie."
 date: '2008-03-01T13:02:29-05:00'
 slug: 2008/03/01/random-february-thoughts
 tags: ["classical music", "xslt"]

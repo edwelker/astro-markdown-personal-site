@@ -1,5 +1,6 @@
 ---
 title: "I was going to write tonight…"
+description: "Getting distracted by uploading a large batch of photos to Flickr instead of writing a blog post. A quick link to see the latest pictures."
 date: '2008-02-21T00:05:05-05:00'
 slug: "2008/02/21/i-was-going-to-write-tonight"
 tags: ["photography"]

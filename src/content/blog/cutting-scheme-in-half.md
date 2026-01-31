@@ -1,5 +1,6 @@
 ---
 title: "Cutting Scheme in Half"
+description: "The Scheme steering committee decided to split the language into two versions. A look at what this means for the future of the language and its fans."
 date: '2009-08-24T17:50:33-05:00'
 slug: "2009/08/24/cutting-scheme-in-half"
 tags: ["programming", "scheme"]

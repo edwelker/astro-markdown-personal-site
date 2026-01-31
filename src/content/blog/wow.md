@@ -1,5 +1,6 @@
 ---
 title: 'Microsoft claims IE8 passes Acid2?'
+description: "Microsoft claims a version of IE8 passes the Acid2 smiley face test. A skeptical look at the screenshot and web standards."
 date: '2007-12-19T18:11:44-05:00'
 slug: 2007/12/19/wow
 tags: ["internet explorer", "microsoft", "web standards"]

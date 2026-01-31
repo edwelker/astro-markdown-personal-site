@@ -1,5 +1,6 @@
 ---
 title: 'XSLT Class'
+description: "My experience at an XSLT training course in Maryland. A look at functional programming ideas and Doug Tidwells book on XML transformations."
 date: '2007-10-23T22:07:13-05:00'
 slug: 2007/10/23/xslt-class
 tags: ["functional programming", "mulberry technologies", "xslt"]

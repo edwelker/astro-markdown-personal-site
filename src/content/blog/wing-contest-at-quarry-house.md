@@ -1,5 +1,6 @@
 ---
 title: "Wing contest at Quarry House"
+description: "Eating habanero wings with friends at Quarry House Tavern. A look at spicy food and watching Young Frankenstein at the AFI."
 date: '2013-05-15T23:50:58-05:00'
 slug: "2013/05/15/wing-contest-at-quarry-house"
 coverImage: https://live.staticflickr.com/2746/4461565840_02fda45cb2_b_d.jpg

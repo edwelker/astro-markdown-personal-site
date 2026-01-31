@@ -1,5 +1,6 @@
 ---
 title: 'Firefox for Mac and displaying small font sizes'
+description: "Checking out a one pixel difference in how Firefox for Mac renders small fonts. A look at how different browsers handle anti aliasing and tiny text."
 date: '2007-10-25T15:19:27-05:00'
 slug: 2007/10/25/firefox-for-mac-and-displaying-small-font-sizes
 tags: ["bug report", "css", "firefox", "macosx", "microsoft", "mozilla", "opera", "pixel", "typography"]

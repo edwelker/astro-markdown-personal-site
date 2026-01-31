@@ -1,5 +1,6 @@
 ---
 title: 'Back on two wheels'
+description: "Riding to work for the first time in ages. Notes on Maryland hills, fixed gear ratios, and why January weather in Bethesda is worth the trip."
 date: '2008-01-08T19:04:57-05:00'
 slug: 2008/01/08/back-on-two-wheels
 tags: ["cycling", "maryland", "new year"]

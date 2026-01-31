@@ -1,5 +1,6 @@
 ---
 title: Check-in
+description: "A summer update on the PubMed redesign, technical books, and fixing a favorite Bianchi bike. Notes on user interaction and developer life in DC."
 date: '2009-08-03T21:42:19-05:00'
 slug: 2009/08/03/check-in
 tags: ["cycling", "design", "life", "photography", "programming", "pubmed", "reading", "summer"]

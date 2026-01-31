@@ -1,5 +1,6 @@
 ---
 title: 'Thought for the day'
+description: "A reminder that usability should be part of every step in the creation process. Every role on a project should keep the user in mind."
 date: '2007-09-18T18:55:50-05:00'
 slug: 2007/09/18/thought-for-the-day
 tags: ["design", "ux"]

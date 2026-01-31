@@ -1,5 +1,6 @@
 ---
 title: 'catching up'
+description: "A life update covering moving, baseball, and a reading list for developers. Notes on DOM scripting, the Little Schemer, and riding in Rockville."
 date: '2007-10-03T22:16:00-05:00'
 slug: 2007/10/03/catching-up
 tags: ["baseball", "classical music", "cycling", "javascript", "life", "maryland", "moving", "red sox", "xslt"]

@@ -1,5 +1,6 @@
 ---
 title: "October Horror Movies"
+description: "Starting a horror movie marathon with reviews of Nightwatch and Sisters. A look at what makes a psychological thriller actually scary."
 date: '2008-10-16T01:02:30-05:00'
 slug: "2008/10/16/october-horror-movies"
 tags: ["film", "halloween"]

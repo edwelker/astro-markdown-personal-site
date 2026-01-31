@@ -1,5 +1,6 @@
 ---
 title: 'Minor design update'
+description: "Tuning the CSS for a new site design. A look at the philosophy of using Photoshop for comps and why clean design is not always the main goal."
 date: '2007-09-01T01:42:51-05:00'
 slug: 2007/09/01/minor-design-update
 tags: ["css", "design", "html", "meta", "photoshop"]

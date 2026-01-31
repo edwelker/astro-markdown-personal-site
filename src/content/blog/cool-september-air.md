@@ -1,5 +1,6 @@
 ---
 title: "welcome to fall"
+description: "David Ortiz hits a walk off home run just as the fall weather arrives. A short post on the intersection of baseball and the changing seasons."
 date: '2007-09-12T21:47:12-05:00'
 slug: "2007/09/12/cool-september-air"
 tags: ["baseball", "red sox"]

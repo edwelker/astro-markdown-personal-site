@@ -1,5 +1,6 @@
 ---
 title: 'Next-to-last Horror Movies'
+description: "Watching 50s cheese in The Blob and psychological horror in Hellraiser II. A look at why some sequels fail to beat the original."
 date: '2008-10-30T00:56:47-05:00'
 slug: 2008/10/30/next-to-last-horror-movies
 tags: ["film", "halloween"]

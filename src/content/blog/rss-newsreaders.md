@@ -1,5 +1,6 @@
 ---
 title: 'RSS newsreaders'
+description: "Comparing Vienna and FeedDemon newsreaders. A look at ergonomic keystrokes and why usability matters in small applications."
 date: '2007-10-03T23:46:54-05:00'
 slug: 2007/10/03/rss-newsreaders
 tags: ["feeddemon", "firefox", "poor", "rss", "rss newsreader", "sage", "vienna"]

@@ -1,5 +1,6 @@
 ---
 title: 'I just killed WordPress'
+description: "Browser crashes while trying to edit a post in WordPress. A look at the frustrations of working with web tools that do not behave as expected."
 date: '2007-10-30T19:45:22-05:00'
 slug: 2007/10/30/i-just-killed-wordpress
 tags: ["firefox", "mac", "windows", "wordpress"]

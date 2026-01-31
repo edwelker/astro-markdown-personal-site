@@ -1,5 +1,6 @@
 ---
 title: '...all this traffic.'
+description: "Leaving the traffic behind and signing the lease for a new place. A quick update on the nerves and excitement of moving into a new space."
 date: '2007-09-01T09:52:07-05:00'
 slug: 2007/09/01/all-this-traffic
 tags: ["life", "moving"]

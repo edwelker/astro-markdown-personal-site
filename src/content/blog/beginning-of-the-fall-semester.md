@@ -1,5 +1,6 @@
 ---
 title: 'Beginning of the fall semester'
+description: "Reflection on a new orchestra season and a year of career growth. Thoughts on learning HTML and CSS while moving through a big career transition."
 date: '2007-08-26T21:28:12-05:00'
 slug: 2007/08/26/beginning-of-the-fall-semester
 tags: ["classical music", "fall", "fall semester", "new york", "summer"]

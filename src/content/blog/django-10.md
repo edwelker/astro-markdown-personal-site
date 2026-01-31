@@ -1,5 +1,6 @@
 ---
 title: "Django 1.0"
+description: "A quick note on the official release of Django 1.0. A milestone for Python developers and web frameworks everywhere."
 date: '2008-09-03T21:08:48-05:00'
 slug: "2008/09/03/django-10"
 tags: ["django", "python"]

@@ -1,5 +1,6 @@
 ---
 title: 'Opera 9 and decimal em lengths'
+description: "Testing how Opera 9 calculates decimal em values. A look at visual alignment issues and css hacks for different browsers."
 date: '2007-08-27T14:14:59-05:00'
 slug: 2007/08/27/opera-9-and-decimal-em-lengths
 tags: ["opera"]

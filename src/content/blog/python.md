@@ -1,5 +1,6 @@
 ---
 title: "python number 1"
+description: "A quick recommendation to learn Python. It provides a helpful context for understanding different programming language theories."
 date: '2008-04-13T01:17:13-05:00'
 slug: "2008/04/13/python"
 tags: ["language", "programming", "programming language theory", "python", "scheme"]

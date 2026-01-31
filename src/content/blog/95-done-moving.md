@@ -1,5 +1,6 @@
 ---
 title: '95% done moving'
+description: "Almost settled into the new place while keeping an eye on the Red Sox division race. A look at the chaos of boxes and the need for a routine."
 date: '2007-09-25T23:11:03-05:00'
 slug: "2007/09/25/95-done-moving"
 tags: ["life", "moving", "papi", "red sox"]

@@ -1,5 +1,6 @@
 ---
 title: 'July 4'
+description: "Celebrating July 4th with hot dog contests and Szechuan food. Also includes a look at rebuilding a site in Django and a new reading list."
 date: '2008-07-04T19:46:39-05:00'
 slug: 2008/07/04/july-4
 tags: ["cooking", "database api", "django", "javascript", "publishers", "python", "red sox", "resturants"]

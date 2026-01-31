@@ -1,5 +1,6 @@
 ---
 title: 'blurry focus'
+description: "The struggle of a long CSS redesign project and the constraints of mimicking old table layouts. Thoughts on developer focus and browser limitations."
 date: '2007-09-12T21:23:12-05:00'
 slug: 2007/09/12/blurry-focus
 tags: ["constraints", "css", "display table", "internet explorer", "microsoft", "table attributes"]

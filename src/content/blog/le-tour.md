@@ -1,5 +1,6 @@
 ---
 title: 'Le Tour'
+description: "Following the Tour de France and the stories behind the competition. A look at great cycling photography and coverage of the race."
 date: '2008-07-15T21:01:52-05:00'
 slug: 2008/07/15/le-tour
 tags: ["cycling", "france"]

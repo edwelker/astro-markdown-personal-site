@@ -1,5 +1,6 @@
 ---
 title: 'IE8, Doctype and potentially broken default behavior'
+description: "Concerns about how Microsoft uses meta tags for IE8 rendering. It covers the mess of using two doctypes and potential issues with backward compatibility."
 date: '2008-01-22T11:21:53-05:00'
 slug: 2008/01/22/ie8-doctype-and-potentially-broken-default-behavior
 tags: ["css", "internet explorer", "metatag", "microsoft", "web standards"]

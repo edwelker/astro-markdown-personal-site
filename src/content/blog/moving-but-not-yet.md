@@ -1,5 +1,6 @@
 ---
 title: 'Moving, but not yet'
+description: "Trying to find an affordable place to live in Bethesda. Notes on local commuting and concerns about safety on the bike path."
 date: '2007-08-20T18:20:58-05:00'
 slug: 2007/08/20/moving-but-not-yet
 tags: ["life", "maryland", "moving"]

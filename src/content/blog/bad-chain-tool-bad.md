@@ -1,5 +1,6 @@
 ---
 title: 'Bad chain tool, bad'
+description: "A bike maintenance disaster involving a broken chain tool and a snapped chain. A quick lesson on checking your tools before heading out for a ride."
 date: '2009-08-12T00:02:32-05:00'
 slug: 2009/08/12/bad-chain-tool-bad
 tags: ["chain", "cycling", "life", "tool"]

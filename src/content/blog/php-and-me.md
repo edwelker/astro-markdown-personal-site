@@ -1,5 +1,6 @@
 ---
 title: 'PHP and Me'
+description: "Why I find the way PHP handles functions to be a bit much. A comparison to simpler languages like Scheme and why intuitive tools matter for developers."
 date: '2008-04-01T23:02:38-05:00'
 slug: 2008/04/01/php-and-me
 tags: ["php", "programming", "programming language", "scheme", "xslt"]

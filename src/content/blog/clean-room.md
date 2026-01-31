@@ -1,5 +1,6 @@
 ---
 title: 'Clean room!'
+description: "A tour of my desk and bookshelf after a rare cleaning session. Notes on graph theory books, Mac setups, and keeping the laptop cool with a stand."
 date: '2008-07-17T23:58:16-05:00'
 slug: 2008/07/17/clean-room
 tags: ["desk", "photography", "reading"]

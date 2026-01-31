@@ -1,5 +1,6 @@
 ---
 title: 'Finally, I get feedburner'
+description: "Integrating Feedburner with delicioso and Flickr. A look at the process of aggregating feeds and learning developer tools from scratch."
 date: '2008-01-21T15:32:04-05:00'
 slug: 2008/01/21/finally-i-get-feedburner
 tags: ["del.icio.us", "feed", "feedburner", "meta", "photography", "rss"]

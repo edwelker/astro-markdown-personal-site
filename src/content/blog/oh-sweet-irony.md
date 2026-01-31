@@ -1,5 +1,6 @@
 ---
 title: 'Oh sweet irony…'
+description: "A short note on the Orioles losing by 27 runs immediately after making their interim manager permanent."
 date: '2007-08-22T20:40:57-05:00'
 slug: 2007/08/22/oh-sweet-irony
 tags: ["baseball"]

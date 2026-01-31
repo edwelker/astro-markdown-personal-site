@@ -1,5 +1,6 @@
 ---
 title: 'Uploaded Photos'
+description: "A resolution to improve my photography skills to save time on editing. A look at moving toward a digital SLR camera."
 date: '2008-03-18T22:56:47-05:00'
 slug: 2008/03/18/uploaded-photos
 tags: ["photography"]

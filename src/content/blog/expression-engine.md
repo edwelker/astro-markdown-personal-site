@@ -1,5 +1,6 @@
 ---
 title: 'Expression Engine'
+description: "Experimenting with ExpressionEngine and its template syntax. A look at the work required to customize a CMS and a large order of technical books."
 date: '2007-08-19T10:55:05-05:00'
 slug: 2007/08/19/expression-engine
 tags: ["css", "expressionengine", "reading", "software", "template syntax"]

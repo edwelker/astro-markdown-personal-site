@@ -1,5 +1,6 @@
 ---
 title: 'Twitter inspires similar thoughts (when broken!)'
+description: "Ideas for a decentralized version of Twitter using a distributed model. A look at how to handle storage and permissions during outages."
 date: '2008-01-20T12:15:03-05:00'
 slug: 2008/01/20/twitter-inspires-similar-thoughts-when-broken
 tags: ["client", "decentralization", "decentralized service", "distributed", "macworld", "macworld keynote address", "servers", "storage", "twitter"]

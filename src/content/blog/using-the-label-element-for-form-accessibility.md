@@ -1,5 +1,6 @@
 ---
 title: 'Using the label element for form accessibility'
+description: "Why the label element matters for web forms and accessibility. It also covers a weird Firefox bug where links inside labels trigger checkboxes."
 date: '2008-03-09T23:24:38-05:00'
 slug: 2008/03/09/using-the-label-element-for-form-accessibility
 tags: ["bug", "css", "element", "firefox", "form", "html", "ux", "web"]

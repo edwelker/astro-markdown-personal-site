@@ -1,5 +1,6 @@
 ---
 title: 'My XSLT Toolbox – 5 Favorite XSLT Books'
+description: "My list of the best XSLT books for different skill levels. These are the five references I keep on my shelf for daily programming work."
 date: '2009-01-08T23:42:00-05:00'
 slug: 2009/01/08/top-5-xslt-books
 tags: ["programming", "reading", "xslt"]

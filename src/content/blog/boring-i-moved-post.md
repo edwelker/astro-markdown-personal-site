@@ -1,5 +1,6 @@
 ---
 title: "Boring \"I moved\" post"
+description: "Moving back to Laurel to save money and restore a house. A personal update on property taxes and getting back into a regular study routine."
 date: '2009-09-09T20:07:12-05:00'
 slug: "2009/09/09/boring-i-moved-post"
 tags: ["life", "moving"]
