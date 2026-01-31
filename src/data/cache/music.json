@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 273740
+    "scrobbles": 273753
   },
   "history": [
-    {
-      "dayName": "Sat",
-      "date": "2026-01-24",
-      "hours": "0.2",
-      "lastHours": "3.3",
-      "topArtist": "System of a Down"
-    },
     {
       "dayName": "Sun",
       "date": "2026-01-25",
@@ -51,6 +44,13 @@
       "hours": "0.5",
       "lastHours": "1.6",
       "topArtist": "Dmitri Shostakovich"
+    },
+    {
+      "dayName": "Sat",
+      "date": "2026-01-31",
+      "hours": "0.8",
+      "lastHours": "0.2",
+      "topArtist": "Rostropovich, Mstislav, cello"
     }
   ],
   "week": {
@@ -92,6 +92,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Sergei Prokofiev",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev",
+        "plays": "11",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Sophia Jani",
         "url": "https://www.last.fm/music/Sophia+Jani",
         "plays": "11",
@@ -107,12 +113,6 @@
         "name": "Jean Sibelius",
         "url": "https://www.last.fm/music/Jean+Sibelius",
         "plays": "9",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sergei Prokofiev",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "8",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -140,6 +140,18 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Rostropovich, Mstislav, cello",
+        "url": "https://www.last.fm/music/Rostropovich,+Mstislav,+cello",
+        "plays": "6",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sergei Rachmaninoff",
+        "url": "https://www.last.fm/music/Sergei+Rachmaninoff",
+        "plays": "6",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Wolfgang Amadeus Mozart",
         "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart",
         "plays": "6",
@@ -154,12 +166,6 @@
       {
         "name": "Nicolas Bacri",
         "url": "https://www.last.fm/music/Nicolas+Bacri",
-        "plays": "5",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sergei Rachmaninoff",
-        "url": "https://www.last.fm/music/Sergei+Rachmaninoff",
         "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -260,14 +266,14 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Aaron Copland",
-        "url": "https://www.last.fm/music/Aaron+Copland",
-        "plays": "1",
+        "name": "Nicolai Myaskovsky",
+        "url": "https://www.last.fm/music/Nicolai+Myaskovsky",
+        "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Austra",
-        "url": "https://www.last.fm/music/Austra",
+        "name": "Aaron Copland",
+        "url": "https://www.last.fm/music/Aaron+Copland",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -286,12 +292,6 @@
       {
         "name": "Meredith Brooks",
         "url": "https://www.last.fm/music/Meredith+Brooks",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Robert Schumann",
-        "url": "https://www.last.fm/music/Robert+Schumann",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -399,6 +399,13 @@
         "name": "Symphonies, Tone Poems & Concertos",
         "url": "https://www.last.fm/music/Carl+Nielsen/Symphonies,+Tone+Poems+&+Concertos",
         "artist": "Carl Nielsen",
+        "plays": "6",
+        "image": ""
+      },
+      {
+        "name": "Sinfonia Concertante & Concertino",
+        "url": "https://www.last.fm/music/Rostropovich,+Mstislav,+cello/Sinfonia+Concertante+&+Concertino",
+        "artist": "Rostropovich, Mstislav, cello",
         "plays": "6",
         "image": ""
       },
@@ -522,6 +529,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d347d577f3f001d144303d9abb6a0499.jpg"
       },
       {
+        "name": "Sinfonia Concertante / Cello Concerto",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Sinfonia+Concertante+%2F+Cello+Concerto",
+        "artist": "Sergei Prokofiev",
+        "plays": "3",
+        "image": ""
+      },
+      {
         "name": "Œuvres pour violoncelle seul",
         "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti/%C5%92uvres+pour+violoncelle+seul",
         "artist": "György Ligeti",
@@ -532,6 +546,13 @@
         "name": "Petrushka & The Rite Of Spring",
         "url": "https://www.last.fm/music/Igor+Stravinsky/Petrushka+&+The+Rite+Of+Spring",
         "artist": "Igor Stravinsky",
+        "plays": "2",
+        "image": ""
+      },
+      {
+        "name": "Sinfonia Concertante / Cello Concerto",
+        "url": "https://www.last.fm/music/Nicolai+Myaskovsky/Sinfonia+Concertante+%2F+Cello+Concerto",
+        "artist": "Nicolai Myaskovsky",
         "plays": "2",
         "image": ""
       },
@@ -550,32 +571,11 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b6e9272716ac45cec5735a47663b3daa.jpg"
       },
       {
-        "name": "Chin Up Buttercup",
-        "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
-        "artist": "Austra",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
-      },
-      {
         "name": "Chadwick: Symphony no. 3 / Barber: Two Orchestral Excerpts from \"Vanessa\" / Music for a Scene from Shelley / Medea's Meditation and Dance of Vengeance",
         "url": "https://www.last.fm/music/George+Whitefield+Chadwick/Chadwick:+Symphony+no.+3+%2F+Barber:+Two+Orchestral+Excerpts+from+%22Vanessa%22+%2F+Music+for+a+Scene+from+Shelley+%2F+Medea%27s+Meditation+and+Dance+of+Vengeance",
         "artist": "George Whitefield Chadwick",
         "plays": "1",
         "image": ""
-      },
-      {
-        "name": "Le monde selon George Antheil",
-        "url": "https://www.last.fm/music/John+Cage/Le+monde+selon+George+Antheil",
-        "artist": "John Cage",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/93f12b31f62fb7123393d93de749ca31.jpg"
-      },
-      {
-        "name": "Blurring the Edges",
-        "url": "https://www.last.fm/music/Meredith+Brooks/Blurring+the+Edges",
-        "artist": "Meredith Brooks",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/1b6a7423d0204efabc2d7d5a8adc4449.jpg"
       }
     ],
     "tracks": [
@@ -748,13 +748,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Siren Song",
-        "url": "https://www.last.fm/music/Austra/_/Siren+Song",
-        "artist": "Austra",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Symphony No. 5, Op. 50: I. (a) Tempo giusto",
         "url": "https://www.last.fm/music/Carl+Nielsen/_/Symphony+No.+5,+Op.+50:+I.+(a)+Tempo+giusto",
         "artist": "Carl Nielsen",
@@ -858,6 +851,13 @@
         "artist": "Clarice Jensen",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "La Damoiselle élue",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/La+Damoiselle+%C3%A9lue",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -872,7 +872,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "136",
+        "plays": "139",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1674,7 +1674,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "850",
+        "plays": "853",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1702,12 +1702,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Dmitri Shostakovich",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "242",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Claude Debussy",
         "url": "https://www.last.fm/music/Claude+Debussy",
         "plays": "232",
@@ -1717,6 +1711,12 @@
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
         "plays": "231",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Dmitri Shostakovich",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
+        "plays": "202",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2096,13 +2096,6 @@
         "image": ""
       },
       {
-        "name": "Shostakovich: The String Quartets",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Shostakovich:+The+String+Quartets",
-        "artist": "Dmitri Shostakovich",
-        "plays": "48",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2d2bdfc69ee18190778f6dbccf2d366e.jpg"
-      },
-      {
         "name": "Tchaikovsky: The Nutcracker / Løvenskiold: La Sylphide",
         "url": "https://www.last.fm/music/Pyotr+Ilyich+Tchaikovsky/Tchaikovsky:+The+Nutcracker+%2F+L%C3%B8venskiold:+La+Sylphide",
         "artist": "Pyotr Ilyich Tchaikovsky",
@@ -2192,6 +2185,13 @@
         "artist": "Sergei Prokofiev",
         "plays": "40",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e45b0afa2ea7d525bc4bc0c0d8ce2eae.jpg"
+      },
+      {
+        "name": "The Complete EMI Recordings",
+        "url": "https://www.last.fm/music/Johann+Sebastian+Bach/The+Complete+EMI+Recordings",
+        "artist": "Johann Sebastian Bach",
+        "plays": "39",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/de96f9001f8040348b7d6849991c1242.png"
       }
     ],
     "tracks": [
@@ -2500,7 +2500,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "5479",
+        "plays": "5482",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
