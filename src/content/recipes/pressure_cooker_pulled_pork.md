@@ -1,6 +1,6 @@
 ---
 title: "Pressure Cooker Pulled Pork"
-description: "Tender, shredded pork shoulder with a rich, reduced sauce made in a pressure cooker"
+description: "Make tender, shredded pork shoulder in the pressure cooker. Features a homemade dry rub and a rich sauce reduced from the cooking liquid. Perfect for meal prep."
 date: 2020-09-07T16:32:00
 totalTime: "PT2H15M"
 recipeYield: "12 servings"

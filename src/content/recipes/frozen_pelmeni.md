@@ -1,6 +1,6 @@
 ---
 title: "Best Frozen Pelmeni"
-description: "How to enhance basic store bought Pelmeni"
+description: "Elevate store-bought frozen pelmeni with simple tricks. Learn how to boil them with aromatics or pan-fry for a crispy finish, served with traditional toppings."
 date: 2023-12-11T10:09:00
 totalTime: "PT20M"
 recipeYield: "1 serving"

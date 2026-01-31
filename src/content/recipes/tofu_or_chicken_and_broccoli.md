@@ -1,6 +1,6 @@
 ---
 title: "Tofu or Chicken and Broccoli"
-description: "A lighter, non-fatty take on takeout sauce using bouillon, adaptable for tofu or chicken"
+description: "Make a lighter version of takeout favorites with this bouillon-based sauce. Uses the Instant Pot to steam broccoli perfectly, paired with tofu or chicken."
 date: 2024-04-07T21:33:00
 totalTime: "PT30M"
 recipeYield: "3-4 servings"

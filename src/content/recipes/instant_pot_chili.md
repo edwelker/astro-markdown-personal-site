@@ -1,6 +1,6 @@
 ---
 title: "Instant Pot Turkey Chili with Quick-Soak Dried Beans"
-description: "A hearty ground turkey chili using dried pinto beans and masa harina for a thick, authentic texture without the overnight wait."
+description: "A hearty ground turkey chili made in the Instant Pot. Uses dried pinto beans with a quick-soak method and masa harina for a thick, rich texture in 90 minutes."
 date: 2025-11-01T21:39:00
 totalTime: "PT90M"
 recipeYield: "6 servings"

@@ -1,6 +1,6 @@
 ---
 title: "Fannie Farmer's Cranberry Orange Bread"
-description: "A classic quick bread recipe from the Fannie Farmer cookbook, perfect for holidays or any time."
+description: "Bake this classic Fannie Farmer Cranberry Orange Bread with a delicious twist: double the cranberries! A moist, citrusy quick bread perfect for the holidays."
 date: 2025-12-27
 coverPhoto: "https://live.staticflickr.com/65535/55005022633_2f7b02a6a5_c.jpg"
 prepTime: "PT15M"

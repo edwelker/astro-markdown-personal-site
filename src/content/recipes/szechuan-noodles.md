@@ -1,6 +1,6 @@
 ---
 title: "My Szechuan Noodles"
-description: "My base recipe for Szechuan noodles (noods)."
+description: "My go-to base recipe for spicy Szechuan noodles. Features a rich blend of chili oil, garlic, tahini, and spices bloomed with boiling water for deep flavor."
 date: 2025-09-01T05:04:28-05:00
 prepTime: "PT10M"
 cookTime: "PT10M"

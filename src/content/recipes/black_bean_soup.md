@@ -1,6 +1,6 @@
 ---
 title: "Pressure Cooker Black Bean Soup (adapted from Bittman/Sass)"
-description: "My favorite black bean soup, slightly adapted from the NYTimes/Mark Bittman recipe."
+description: "A hearty black bean soup adapted from Mark Bittman. Made in the pressure cooker using dried beans for a rich, creamy texture without the need for soaking."
 date: 2024-12-26T17:32:00
 totalTime: "PT1H15M"
 recipeYield: "6 to 8 servings"

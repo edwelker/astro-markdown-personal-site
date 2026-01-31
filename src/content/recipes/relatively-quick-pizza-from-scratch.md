@@ -1,6 +1,6 @@
 ---
 title: "Relatively Quick Pizza from Scratch"
-description: "A quick and easy pizza dough recipe using a food processor, yielding two large pizzas."
+description: "Make two large homemade pizzas in about an hour. This food processor dough recipe is fast, reliable, and yields a crispy crust without the long rise time."
 date: 2011-07-12T23:27:59-05:00
 prepTime: "PT45M"
 cookTime: "PT15M"

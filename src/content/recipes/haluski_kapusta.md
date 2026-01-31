@@ -1,6 +1,6 @@
 ---
 title: "Haluski Kapusta (Polish Cabbage and Noodles)"
-description: "Homemade noodles with sautéed cabbage and onions, refined with notes on texture and acidity"
+description: "Comfort food at its best: homemade noodles tossed with buttery sautéed cabbage and onions. A Polish classic refined with notes on texture and essential acidity."
 date: 2020-02-18T16:17:00
 totalTime: "PT45M"
 recipeYield: "4-6 servings"
