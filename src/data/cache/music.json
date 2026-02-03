@@ -1,6 +1,6 @@
 {
   "user": {
-    "scrobbles": 273848
+    "scrobbles": 273861
   },
   "history": [
     {
@@ -48,9 +48,9 @@
     {
       "dayName": "Mon",
       "date": "2026-02-02",
-      "hours": "1.8",
+      "hours": "2.6",
       "lastHours": "2.5",
-      "topArtist": "Sergei Prokofiev"
+      "topArtist": "Ralph Vaughan Williams"
     }
   ],
   "week": {
@@ -58,7 +58,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "37",
+        "plays": "38",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -80,6 +80,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Ralph Vaughan Williams",
+        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
+        "plays": "18",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Lera Auerbach",
         "url": "https://www.last.fm/music/Lera+Auerbach",
         "plays": "15",
@@ -89,12 +95,6 @@
         "name": "Leonard Bernstein",
         "url": "https://www.last.fm/music/Leonard+Bernstein",
         "plays": "14",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ralph Vaughan Williams",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
-        "plays": "11",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -146,14 +146,14 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Wolfgang Amadeus Mozart",
-        "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart",
-        "plays": "6",
+        "name": "George Enescu , Luiza Borac",
+        "url": "https://www.last.fm/music/George+Enescu+,+Luiza+Borac",
+        "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "George Enescu , Luiza Borac",
-        "url": "https://www.last.fm/music/George+Enescu+,+Luiza+Borac",
+        "name": "Lotta Wennäkoski",
+        "url": "https://www.last.fm/music/Lotta+Wenn%C3%A4koski",
         "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -312,6 +312,13 @@
         "image": ""
       },
       {
+        "name": "The Complete Symphonies / Orchestral Works",
+        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/The+Complete+Symphonies+%2F+Orchestral+Works",
+        "artist": "Ralph Vaughan Williams",
+        "plays": "18",
+        "image": ""
+      },
+      {
         "name": "Antheil: Ballet Mecanique / Serenade for String Orchestra",
         "url": "https://www.last.fm/music/George+Antheil/Antheil:+Ballet+Mecanique+%2F+Serenade+for+String+Orchestra",
         "artist": "George Antheil",
@@ -337,13 +344,6 @@
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Wartime+Music,+Vol.+10",
         "artist": "Sergei Prokofiev",
         "plays": "14",
-        "image": ""
-      },
-      {
-        "name": "The Complete Symphonies / Orchestral Works",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/The+Complete+Symphonies+%2F+Orchestral+Works",
-        "artist": "Ralph Vaughan Williams",
-        "plays": "11",
         "image": ""
       },
       {
@@ -403,13 +403,6 @@
         "image": ""
       },
       {
-        "name": "Piano Concertos No. 20 K. 466 & No. 24 K. 491 / Concert Rondo, K. 382",
-        "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart/Piano+Concertos+No.+20+K.+466+&+No.+24+K.+491+%2F+Concert+Rondo,+K.+382",
-        "artist": "Wolfgang Amadeus Mozart",
-        "plays": "6",
-        "image": ""
-      },
-      {
         "name": "Pavlova: Symphony No. 6 - Thumbelina Suite",
         "url": "https://www.last.fm/music/Alla+Pavlova/Pavlova:+Symphony+No.+6+-+Thumbelina+Suite",
         "artist": "Alla Pavlova",
@@ -427,6 +420,13 @@
         "name": "The Three Piano Suites",
         "url": "https://www.last.fm/music/George+Enescu+,+Luiza+Borac/The+Three+Piano+Suites",
         "artist": "George Enescu , Luiza Borac",
+        "plays": "5",
+        "image": ""
+      },
+      {
+        "name": "Sigla / Flounce / Sedecim",
+        "url": "https://www.last.fm/music/Lotta+Wenn%C3%A4koski/Sigla+%2F+Flounce+%2F+Sedecim",
+        "artist": "Lotta Wennäkoski",
         "plays": "5",
         "image": ""
       },
@@ -878,7 +878,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "125",
+        "plays": "126",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -960,6 +960,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Ralph Vaughan Williams",
+        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
+        "plays": "34",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Franz Schubert",
         "url": "https://www.last.fm/music/Franz+Schubert",
         "plays": "33",
@@ -1016,12 +1022,6 @@
       {
         "name": "ohGr",
         "url": "https://www.last.fm/music/ohGr",
-        "plays": "27",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ralph Vaughan Williams",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
         "plays": "27",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1225,6 +1225,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/29e214babcf74d2dcd5b10882975b4f9.png"
       },
       {
+        "name": "The Complete Symphonies / Orchestral Works",
+        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/The+Complete+Symphonies+%2F+Orchestral+Works",
+        "artist": "Ralph Vaughan Williams",
+        "plays": "25",
+        "image": ""
+      },
+      {
         "name": "Great Pianists of the 20th Century, Volume 80: André Previn",
         "url": "https://www.last.fm/music/Francis+Poulenc/Great+Pianists+of+the+20th+Century,+Volume+80:+Andr%C3%A9+Previn",
         "artist": "Francis Poulenc",
@@ -1328,13 +1335,6 @@
         "artist": "Gabriela Ortiz",
         "plays": "18",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d04fa68396a05d7e4c768916e15d730e.jpg"
-      },
-      {
-        "name": "The Complete Symphonies / Orchestral Works",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/The+Complete+Symphonies+%2F+Orchestral+Works",
-        "artist": "Ralph Vaughan Williams",
-        "plays": "18",
-        "image": ""
       },
       {
         "name": "Devils In My Details",
@@ -1647,6 +1647,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Violin Concerto no. 1 in A minor, op. 99 (formerly op. 77): I. Nocturne (Moderato)",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Violin+Concerto+no.+1+in+A+minor,+op.+99+(formerly+op.+77):+I.+Nocturne+(Moderato)",
+        "artist": "Dmitri Shostakovich",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Earth Suite: I. Tectonic",
         "url": "https://www.last.fm/music/Dobrinka+Tabakova/_/Earth+Suite:+I.+Tectonic",
         "artist": "Dobrinka Tabakova",
@@ -1659,13 +1666,6 @@
         "artist": "Emma Ruth Rundle",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Symphony No. 4 in G major: I. Bedächtig. Nicht eilen",
-        "url": "https://www.last.fm/music/Gustav+Mahler/_/Symphony+No.+4+in+G+major:+I.+Bed%C3%A4chtig.+Nicht+eilen",
-        "artist": "Gustav Mahler",
-        "plays": "3",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -1674,7 +1674,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "767",
+        "plays": "712",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1716,7 +1716,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "213",
+        "plays": "205",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1750,15 +1750,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "The Birthday Massacre",
-        "url": "https://www.last.fm/music/The+Birthday+Massacre",
-        "plays": "114",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
         "plays": "112",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Birthday Massacre",
+        "url": "https://www.last.fm/music/The+Birthday+Massacre",
+        "plays": "107",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1914,13 +1914,6 @@
     ],
     "albums": [
       {
-        "name": "Prokofiev: Cinderella & Symphony No. 1, Op. 25 \"Classical\"",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev:+Cinderella+&+Symphony+No.+1,+Op.+25+%22Classical%22",
-        "artist": "Sergei Prokofiev",
-        "plays": "163",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/76626da326e005b734d56ed6e396c998.jpg"
-      },
-      {
         "name": "Eine Alpensinfonie / Rosenkavaliersuite",
         "url": "https://www.last.fm/music/Richard+Strauss;+Vienna+Philharmonic,+Christian+Thielemann/Eine+Alpensinfonie+%2F+Rosenkavaliersuite",
         "artist": "Richard Strauss; Vienna Philharmonic, Christian Thielemann",
@@ -1956,18 +1949,18 @@
         "image": ""
       },
       {
+        "name": "Prokofiev: Cinderella & Symphony No. 1, Op. 25 \"Classical\"",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev:+Cinderella+&+Symphony+No.+1,+Op.+25+%22Classical%22",
+        "artist": "Sergei Prokofiev",
+        "plays": "108",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/76626da326e005b734d56ed6e396c998.jpg"
+      },
+      {
         "name": "I Told You I Was Freaky",
         "url": "https://www.last.fm/music/Flight+of+the+Conchords/I+Told+You+I+Was+Freaky",
         "artist": "Flight of the Conchords",
         "plays": "102",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ea057b5556e44c59a6e0e505647e8efc.png"
-      },
-      {
-        "name": "Diamonds",
-        "url": "https://www.last.fm/music/The+Birthday+Massacre/Diamonds",
-        "artist": "The Birthday Massacre",
-        "plays": "97",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/40a299d93d8fef4cbe1029f562d03ac9.jpg"
       },
       {
         "name": "Cinderella / \"Classical\" Symphony",
@@ -1982,6 +1975,13 @@
         "artist": "Richard Strauss",
         "plays": "95",
         "image": ""
+      },
+      {
+        "name": "Diamonds",
+        "url": "https://www.last.fm/music/The+Birthday+Massacre/Diamonds",
+        "artist": "The Birthday Massacre",
+        "plays": "90",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/40a299d93d8fef4cbe1029f562d03ac9.jpg"
       },
       {
         "name": "Janacek: On an Overgrown Path / In the Mist / Sonata I. X. 1905 / Theme and Variations",
@@ -2346,7 +2346,7 @@
         "name": "Enter",
         "url": "https://www.last.fm/music/The+Birthday+Massacre/_/Enter",
         "artist": "The Birthday Massacre",
-        "plays": "16",
+        "plays": "15",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2381,13 +2381,6 @@
         "name": "Spellbound",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/_/Spellbound",
         "artist": "Siouxsie and the Banshees",
-        "plays": "14",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Sky Will Turn",
-        "url": "https://www.last.fm/music/The+Birthday+Massacre/_/The+Sky+Will+Turn",
-        "artist": "The Birthday Massacre",
         "plays": "14",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -2455,6 +2448,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "The Sky Will Turn",
+        "url": "https://www.last.fm/music/The+Birthday+Massacre/_/The+Sky+Will+Turn",
+        "artist": "The Birthday Massacre",
+        "plays": "13",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Narcisse et Echo, op. 40: Entre Narcisse, épuisé par la fatigue (Narcissus enters, exhausted)",
         "url": "https://www.last.fm/music/Nikolai+Tcherepnin/_/Narcisse+et+Echo,+op.+40:+Entre+Narcisse,+%C3%A9puis%C3%A9+par+la+fatigue+(Narcissus+enters,+exhausted)",
         "artist": "Nikolai Tcherepnin",
@@ -2518,7 +2518,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "3933",
+        "plays": "3934",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
