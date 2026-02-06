@@ -10,6 +10,7 @@ export function formatDate(date: Date) {
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
+    timeZone: 'America/New_York',
   }).format(date);
 }
 
@@ -23,7 +24,6 @@ export function readingTime(html: string) {
 export function formatRelativeTime(dateInput: string | Date): string {
   if (!dateInput) return '';
   const date = new Date(dateInput);
-  // Safety check for invalid dates
   if (isNaN(date.getTime())) return '';
 
   const now = new Date();
@@ -64,7 +64,7 @@ export function getSourceDomain(url: string | null | undefined): string {
 export function formatPrice(price: any) {
   const p = parseFloat(price);
   if (isNaN(p)) return 'N/A';
-  return `$${p.toFixed(2)}`;
+  return \`$\${p.toFixed(2)}\`;
 }
 
 export function truncateString(str: string, num: number) {

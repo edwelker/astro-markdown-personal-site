@@ -9,9 +9,9 @@ import {
 
 describe('Utils Library', () => {
   describe('formatDate', () => {
-    it('should format a date correctly', () => {
-      const testDate = new Date(2024, 0, 1); // Jan 1, 2024
-      expect(formatDate(testDate)).toBe('01/01/2024');
+    it('should format a date correctly in EST', () => {
+      const testDate = new Date('2008-09-18T21:17:12-05:00');
+      expect(formatDate(testDate)).toBe('09/18/2008');
     });
   });
 
@@ -25,16 +25,21 @@ describe('Utils Library', () => {
       const html = 'word '.repeat(100);
       expect(readingTime(html)).toBe('2 min read');
     });
+
+    it('should end with "min read" and not have extra text', () => {
+      const html = 'word '.repeat(100);
+      const result = readingTime(html);
+      expect(result).toMatch(/min read$/);
+      expect(result).not.toMatch(/min read\s+min read/);
+    });
   });
 
   describe('formatRelativeTime', () => {
     const baseDate = new Date();
-
     beforeEach(() => {
       vi.useFakeTimers();
       vi.setSystemTime(baseDate);
     });
-
     afterEach(() => {
       vi.useRealTimers();
     });
@@ -66,19 +71,16 @@ describe('Utils Library', () => {
   describe('decodeHtmlEntities', () => {
     it('should decode named entities', () => {
       const str = '&lt;div&gt;&quot;It&apos;s a test&quot; &amp; Co.&lt;/div&gt;';
-      expect(decodeHtmlEntities(str)).toBe(`<div>"It's a test" & Co.</div>`);
+      expect(decodeHtmlEntities(str)).toBe(\`<div>"It's a test" & Co.</div>\`);
     });
-
     it('should decode numeric entities', () => {
       const str = '&#60;hello&#62;';
       expect(decodeHtmlEntities(str)).toBe('<hello>');
     });
-
     it('should decode hex entities', () => {
       const str = '&#x3C;hello&#x3E;';
       expect(decodeHtmlEntities(str)).toBe('<hello>');
     });
-
     it('should handle null or empty input', () => {
       expect(decodeHtmlEntities(null)).toBe('');
       expect(decodeHtmlEntities('')).toBe('');
@@ -90,17 +92,14 @@ describe('Utils Library', () => {
       const url = 'https://www.example.com/path/to/page';
       expect(getSourceDomain(url)).toBe('example.com');
     });
-
     it('should handle URLs without www.', () => {
       const url = 'https://sub.example.co.uk/page';
       expect(getSourceDomain(url)).toBe('sub.example.co.uk');
     });
-
     it('should handle invalid URLs gracefully', () => {
       const url = 'not-a-url';
       expect(getSourceDomain(url)).toBe('');
     });
-
     it('should handle null or empty input', () => {
       expect(getSourceDomain(null)).toBe('');
       expect(getSourceDomain('')).toBe('');

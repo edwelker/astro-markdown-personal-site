@@ -21,8 +21,6 @@ export async function getStaticPaths() {
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
   return allPosts.map((post, index) => {
-    // Note: in a descending sort, index - 1 is actually the NEWER post
-    // and index + 1 is the OLDER post.
     const nextPost = allPosts[index - 1] || undefined;
     const prevPost = allPosts[index + 1] || undefined;
 
@@ -33,17 +31,15 @@ export async function getStaticPaths() {
 const { post, prevPost, nextPost } = Astro.props;
 const { Content, headings } = await render(post);
 
-// Safely generate description from body if not provided in frontmatter
 const seoDescription =
   post.data.description ||
   (post.body
     ? post.body
-        .replace(/[#*`\[\]]/g, '')
+        .replace(/[#*\`\[\]]/g, '')
         .trim()
         .slice(0, 155) + '...'
     : '');
 
-// Resolve navigation HREFs using the shared utility
 const prevHref = prevPost ? getPostHref(prevPost) : undefined;
 const nextHref = nextPost ? getPostHref(nextPost) : undefined;
 ---
@@ -56,7 +52,7 @@ const nextHref = nextPost ? getPostHref(nextPost) : undefined;
       <div class="mb-8 flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
         <FormattedDate date={post.data.date} />
         <span>&bull;</span>
-        <span>{readingTime(post.body ?? '')} min read</span>
+        <span>{readingTime(post.body ?? '')}</span>
       </div>
       {
         post.data.coverImage && (
@@ -75,7 +71,7 @@ const nextHref = nextPost ? getPostHref(nextPost) : undefined;
           <div class="mt-12 flex flex-wrap gap-2">
             {post.data.tags.map((tag) => (
               <a
-                href={`/tags/${tag}/`}
+                href={\`/tags/\${tag}/\`}
                 class="rounded-md bg-neutral-100 px-2 py-1 text-sm text-neutral-700 no-underline transition-colors hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700"
               >
                 #{tag}
