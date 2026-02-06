@@ -71,7 +71,7 @@ describe('Utils Library', () => {
   describe('decodeHtmlEntities', () => {
     it('should decode named entities', () => {
       const str = '&lt;div&gt;&quot;It&apos;s a test&quot; &amp; Co.&lt;/div&gt;';
-      expect(decodeHtmlEntities(str)).toBe(\`<div>"It's a test" & Co.</div>\`);
+      expect(decodeHtmlEntities(str)).toBe(`<div>"It's a test" & Co.</div>`);
     });
     it('should decode numeric entities', () => {
       const str = '&#60;hello&#62;';

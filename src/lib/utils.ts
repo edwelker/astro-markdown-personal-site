@@ -64,7 +64,7 @@ export function getSourceDomain(url: string | null | undefined): string {
 export function formatPrice(price: any) {
   const p = parseFloat(price);
   if (isNaN(p)) return 'N/A';
-  return \`$\${p.toFixed(2)}\`;
+  return `$${p.toFixed(2)}`;
 }
 
 export function truncateString(str: string, num: number) {

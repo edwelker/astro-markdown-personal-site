@@ -35,7 +35,7 @@ const seoDescription =
   post.data.description ||
   (post.body
     ? post.body
-        .replace(/[#*\`\[\]]/g, '')
+        .replace(/[#*`\[\]]/g, '')
         .trim()
         .slice(0, 155) + '...'
     : '');
@@ -71,7 +71,7 @@ const nextHref = nextPost ? getPostHref(nextPost) : undefined;
           <div class="mt-12 flex flex-wrap gap-2">
             {post.data.tags.map((tag) => (
               <a
-                href={\`/tags/\${tag}/\`}
+                href={`/tags/${tag}/`}
                 class="rounded-md bg-neutral-100 px-2 py-1 text-sm text-neutral-700 no-underline transition-colors hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700"
               >
                 #{tag}
