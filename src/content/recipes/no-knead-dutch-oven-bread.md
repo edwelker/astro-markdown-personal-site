@@ -1,6 +1,6 @@
 ---
 title: "No-Knead Dutch Oven Bread"
-description: "An easy, high-hydration, no-knead bread featuring a blend of bread flour and dark rye. Optimized for cold-house proofing using a seed heating pad."
+description: "An easy, high-hydration, no-knead bread featuring a blend of bread flour and dark rye. Optimized for a 7 quart dutch oven."
 date: 2026-02-07T14:15:00-05:00
 prepTime: "PT15M"
 cookTime: "PT55M"
@@ -26,7 +26,7 @@ recipeInstructions:
   - "Mix: In a large bowl (I like a round pyrex so there are no corners for flour to hide in), whisk together the flours, salt, yeast, and malt powder. Add water and stir until a shaggy dough forms and no dry flour remains. Do not knead."
   - "Rise: Cover the bowl tightly with plastic wrap or a lid. Let sit at room temperature for 12–18 hours until the surface is bubbly and the dough has more than doubled."
   - "Cold House Requirement: If your kitchen is cold, which mine is in the winter, place the bowl on a seed heating pad. Set to ~75°F and use a towel buffer. Note: Avoid settings above medium; 55-60% power can inadvertently cook the bottom of the dough (tested Jan 2026)."
-  - "Preheat: Place your Dutch oven and lid in the oven. Preheat to 475°F for 30–45 minutes."
+  - "Preheat: Place your Dutch oven in the oven. Preheat to 475°F for 30–45 minutes."
   - "Shape: Gently scrape the dough onto a well-floured surface. Fold the edges toward the center 4 times. Flip it seam-side down and shape into a ball or oval. Transfer to a sheet of parchment paper."
   - "Bake: Carefully lower the parchment and dough into the hot Dutch oven. Cover with the lid. Bake for 30 minutes. Remove the lid and continue baking for 10–15 minutes until the crust is dark mahogany brown."
   - "Cool: Transfer to a wire rack and cool for at least 1 hour (2 hours preferred) before slicing to allow the internal structure to set."
@@ -38,3 +38,6 @@ Keep the loaf **cut-side down** directly on your cutting board. The crust acts a
 
 ### Hydration Note
 If you substitute All-Purpose flour for the Bread Flour, reduce the water slightly to **570g** (full size) to maintain manageable dough strength.
+
+### Dutch Oven
+This is optimized for a 7-quart Dutch oven. For smaller sizes, just halve the recipe.
