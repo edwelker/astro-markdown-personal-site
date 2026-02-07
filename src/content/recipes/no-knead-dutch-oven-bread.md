@@ -1,6 +1,6 @@
 ---
 title: "No-Knead Dutch Oven Bread"
-description: "A high-hydration, no-knead bread featuring a blend of bread flour and dark rye. Optimized for cold-house proofing using a seed heating pad."
+description: "An easy, high-hydration, no-knead bread featuring a blend of bread flour and dark rye. Optimized for cold-house proofing using a seed heating pad."
 date: 2026-02-07T14:15:00-05:00
 prepTime: "PT15M"
 cookTime: "PT55M"
