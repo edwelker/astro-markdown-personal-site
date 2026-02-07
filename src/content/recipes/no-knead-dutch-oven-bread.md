@@ -19,7 +19,7 @@ recipeIngredient:
   - "640g bread flour (or 320g for half size)"
   - "160g dark rye or whole wheat flour (or 80g for half size)"
   - "600g water - use 570g if using All-Purpose flour (or 300g for half size)"
-  - "16g fine sea salt (or 8g for half size)"
+  - "16g salt (or 8g for half size), kosher salt or sea salt is fine"
   - "2g instant yeast - approx 1/2 tsp (or 1g for half size)"
   - "6g diastatic malt powder - optional (or 3g for half size)"
 recipeInstructions:
