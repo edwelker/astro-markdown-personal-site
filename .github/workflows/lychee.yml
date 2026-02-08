@@ -2,9 +2,9 @@ name: Link Checker
 
 on:
   push:
-    branches: [ astro ]
+    branches: [astro]
   pull_request:
-    branches: [ astro ]
+    branches: [astro]
   workflow_dispatch:
 
 jobs:

@@ -25,6 +25,7 @@ const tabs = [
   { id: 'all', label: 'All News' },
   { id: 'mlb', label: '⚾ MLB' },
   { id: 'nba', label: '🏀 NBA' },
+  { id: 'about', label: 'ℹ️ About' },
 ];
 ---
 
@@ -202,6 +203,58 @@ const tabs = [
                 ))
           }
         </ul>
+      </div>
+
+      <!-- About Panel -->
+      <div data-panel="about" class="animate-in fade-in hidden space-y-8 duration-300">
+        <div class="prose prose-sm dark:prose-invert">
+          <h3>Technical Details</h3>
+
+          <h4>Architecture</h4>
+          <ul class="list-disc pl-5">
+            <li>
+              <strong>Cloudflare Workers:</strong> This page is rendered server-side (SSR) on Cloudflare's
+              global edge network. Unlike traditional Node.js servers, it runs on V8 isolates, providing
+              near-instant startup times and minimal latency by executing code in the data center closest
+              to the user.
+            </li>
+            <li>
+              <strong>Edge Caching:</strong> To prevent rate-limiting from upstream APIs and ensure sub-second
+              page loads, the fully rendered HTML is cached at the edge for 15 minutes (<code
+                >Cache-Control: s-maxage=900</code
+              >). Subsequent requests are served directly from the CDN cache without invoking the
+              Worker.
+            </li>
+            <li>
+              <strong>Resiliency:</strong> The architecture is designed to fail gracefully. If external
+              data sources are down or slow, the system handles timeouts via <code
+                >Promise.race</code
+              > and renders whatever data is available or cached.
+            </li>
+          </ul>
+
+          <h4>Data Pipeline</h4>
+          <ul class="list-disc pl-5">
+            <li>
+              <strong>Parallel Execution:</strong> All data fetching happens concurrently using <code
+                >Promise.all</code
+              >. This includes multiple RSS feeds and JSON APIs, ensuring the total wait time is
+              determined only by the slowest single request, capped at a strict 8-second timeout.
+            </li>
+            <li>
+              <strong>News Aggregation:</strong> Fetches RSS/Atom feeds directly from
+              <a href="https://www.mlbtraderumors.com" target="_blank">MLB Trade Rumors</a> and
+              <a href="https://www.hoopsrumors.com" target="_blank">Hoops Rumors</a>. The XML is
+              parsed using lightweight regex patterns to avoid the overhead of heavy DOM parsers in
+              the Worker environment.
+            </li>
+            <li>
+              <strong>Live Data:</strong> Real-time scores, standings, and schedules are retrieved from
+              ESPN's public APIs. Cross-referencing opponent records with live league standings happens
+              on-the-fly during the render pass.
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

@@ -108,7 +108,7 @@ describe('Music Logic: transformMusicData', () => {
     vi.setSystemTime(mockDate);
 
     const mockInfo = { user: { playcount: '1000' } };
-    
+
     // Helper to get timestamp for X days ago
     const getTs = (daysAgo) => {
       const d = new Date(mockDate);
@@ -130,30 +130,38 @@ describe('Music Logic: transformMusicData', () => {
           { date: { uts: getTs(7) }, artist: { '#text': 'Artist C' } },
           // Comparison for yesterday (8 days ago) - 1 track for Artist D
           { date: { uts: getTs(8) }, artist: { '#text': 'Artist D' } },
-        ]
-      }
+        ],
+      },
     };
 
-    const emptyList = {}; 
+    const emptyList = {};
 
     const result = transformMusicData(
       mockInfo,
       mockRecent,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList
     );
 
     const history = result.history;
-    
+
     // Check length (should be 7 days)
     expect(history).toHaveLength(7);
 
     // Check Today (last element)
     const todayStat = history[6];
     // 2 tracks * 3.5 mins / 60 = 0.1166... -> 0.1
-    expect(todayStat.hours).toBe('0.1'); 
+    expect(todayStat.hours).toBe('0.1');
     expect(todayStat.topArtist).toBe('Artist A');
     // Last week for today (7 days ago) had 1 track -> 0.1
     expect(todayStat.lastHours).toBe('0.1');
@@ -173,7 +181,7 @@ describe('Music Logic: transformMusicData', () => {
     vi.setSystemTime(mockDate);
 
     const mockInfo = { user: { playcount: '1000' } };
-    
+
     // Helper to get timestamp for X days ago
     const getTs = (daysAgo) => {
       const d = new Date(mockDate);
@@ -187,23 +195,31 @@ describe('Music Logic: transformMusicData', () => {
           // Yesterday (1 day ago) - 1 track for Artist B
           { date: { uts: getTs(1) }, artist: { '#text': 'Artist B' } },
           // NO DATA FOR TODAY (0 days ago)
-        ]
-      }
+        ],
+      },
     };
 
-    const emptyList = {}; 
+    const emptyList = {};
 
     const result = transformMusicData(
       mockInfo,
       mockRecent,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList
     );
 
     const history = result.history;
-    
+
     // Check length (should be 7 days)
     expect(history).toHaveLength(7);
 
@@ -229,8 +245,8 @@ describe('Music Logic: transformMusicData', () => {
     };
     const mockRecent = {
       recenttracks: {
-        track: { date: { uts: '1234567890' }, artist: { '#text': 'Single Track Artist' } }
-      }
+        track: { date: { uts: '1234567890' }, artist: { '#text': 'Single Track Artist' } },
+      },
     };
 
     const emptyList = {};
@@ -238,15 +254,23 @@ describe('Music Logic: transformMusicData', () => {
     const result = transformMusicData(
       mockInfo,
       mockRecent,
-      mockTopArtists, emptyList, emptyList,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList
+      mockTopArtists,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList
     );
 
     expect(result.week.artists).toHaveLength(1);
     expect(result.week.artists[0].name).toBe('Single Artist');
-    
+
     // Check that history processed the single track
     expect(result.history).toBeDefined();
   });
@@ -267,22 +291,22 @@ describe('Music Logic: transformMusicData', () => {
             url: 'url2',
             playcount: '5',
             image: [{ '#text': 'small.jpg', size: 'small' }], // No extralarge
-          }
+          },
         ],
       },
     };
-    
+
     const mockRecent = {
       recenttracks: {
         track: [
-           // Valid track
-           { date: { uts: '1700000000' }, artist: { '#text': 'Artist A' } },
-           // Track with missing date (should be ignored or handled if logic allows)
-           { artist: { '#text': 'Artist B' } }, 
-           // Track with invalid uts (if parseInt returns NaN, !ts is true)
-           { date: { uts: 'invalid' }, artist: { '#text': 'Artist C' } }
-        ]
-      }
+          // Valid track
+          { date: { uts: '1700000000' }, artist: { '#text': 'Artist A' } },
+          // Track with missing date (should be ignored or handled if logic allows)
+          { artist: { '#text': 'Artist B' } },
+          // Track with invalid uts (if parseInt returns NaN, !ts is true)
+          { date: { uts: 'invalid' }, artist: { '#text': 'Artist C' } },
+        ],
+      },
     };
 
     const emptyList = {};
@@ -290,15 +314,23 @@ describe('Music Logic: transformMusicData', () => {
     const result = transformMusicData(
       mockInfo,
       mockRecent,
-      mockTopArtists, emptyList, emptyList,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList
+      mockTopArtists,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList
     );
 
     expect(result.week.artists[0].image).toBe('');
     expect(result.week.artists[1].image).toBe('');
-    
+
     // Check history doesn't crash
     expect(result.history).toBeDefined();
   });
@@ -307,9 +339,9 @@ describe('Music Logic: transformMusicData', () => {
     const mockDate = new Date('2023-10-27T12:00:00Z');
     vi.setSystemTime(mockDate);
     const getTs = (daysAgo) => {
-        const d = new Date(mockDate);
-        d.setDate(d.getDate() - daysAgo);
-        return Math.floor(d.getTime() / 1000).toString();
+      const d = new Date(mockDate);
+      d.setDate(d.getDate() - daysAgo);
+      return Math.floor(d.getTime() / 1000).toString();
     };
 
     const mockInfo = { user: { playcount: '100' } };
@@ -319,17 +351,26 @@ describe('Music Logic: transformMusicData', () => {
           { date: { uts: getTs(0) }, artist: { '#text': 'Artist A' } },
           { date: { uts: getTs(0) }, artist: { '#text': 'Artist B' } },
           { date: { uts: getTs(0) }, artist: { '#text': 'Artist A' } }, // A: 2, B: 1
-        ]
-      }
+        ],
+      },
     };
     const emptyList = {};
 
     const result = transformMusicData(
-      mockInfo, mockRecent,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList,
-      emptyList, emptyList, emptyList
+      mockInfo,
+      mockRecent,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList
     );
 
     const today = result.history[6];

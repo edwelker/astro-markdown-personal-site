@@ -43,7 +43,10 @@ const postsByYear = posts.reduce((acc: Acc, post) => {
 const years = Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a));
 ---
 
-<Layout title={`Topic: ${tag}`} description={`All posts and projects categorized under the ${tag} label. This includes technical notes and personal updates related to this specific subject.`}>
+<Layout
+  title={`Topic: ${tag}`}
+  description={`All posts and projects categorized under the ${tag} label. This includes technical notes and personal updates related to this specific subject.`}
+>
   <Container>
     <div class="mb-8 flex items-baseline justify-between">
       <h1 class="text-2xl font-semibold text-black capitalize dark:text-white">#{tag}</h1>

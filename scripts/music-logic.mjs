@@ -42,18 +42,18 @@ export function transformMusicData(
     // 1. Process all available tracks into the map first
     if (rawTracks && !recent.error) {
       const tracks = Array.isArray(rawTracks) ? rawTracks : [rawTracks];
-      
+
       tracks.forEach((t) => {
         if (t['@attr']?.nowplaying) return;
         const ts = parseInt(t.date?.uts);
         if (!ts) return;
-        
+
         // Convert UTC timestamp to local date key
         const dateObj = new Date(ts * 1000);
         const date = getLocalDateKey(dateObj);
-        
+
         if (!daysMap[date]) daysMap[date] = { count: 0, artists: {} };
-        
+
         daysMap[date].count += 1;
         const artist = t.artist['#text'];
         daysMap[date].artists[artist] = (daysMap[date].artists[artist] || 0) + 1;
@@ -65,11 +65,11 @@ export function transformMusicData(
     // so we don't show an empty graph.
     const today = new Date();
     const todayKey = getLocalDateKey(today);
-    
+
     let anchorDate = today;
     if (!daysMap[todayKey] || daysMap[todayKey].count === 0) {
-        anchorDate = new Date(today);
-        anchorDate.setDate(anchorDate.getDate() - 1);
+      anchorDate = new Date(today);
+      anchorDate.setDate(anchorDate.getDate() - 1);
     }
 
     // 3. Build the history array for the chosen window
@@ -77,9 +77,9 @@ export function transformMusicData(
     for (let i = 6; i >= 0; i--) {
       const d = new Date(anchorDate);
       d.setDate(d.getDate() - i);
-      
+
       const dateStr = getLocalDateKey(d);
-      
+
       // Calculate comparison date (7 days prior)
       const dLast = new Date(d);
       dLast.setDate(dLast.getDate() - 7);
@@ -103,9 +103,9 @@ export function transformMusicData(
       history.push({
         dayName: d.toLocaleDateString('en-US', { weekday: 'short' }),
         date: dateStr,
-        hours: ((thisDayData?.count || 0) * 3.5 / 60).toFixed(1),
-        lastHours: ((lastDayData?.count || 0) * 3.5 / 60).toFixed(1),
-        topArtist
+        hours: (((thisDayData?.count || 0) * 3.5) / 60).toFixed(1),
+        lastHours: (((lastDayData?.count || 0) * 3.5) / 60).toFixed(1),
+        topArtist,
       });
     }
 

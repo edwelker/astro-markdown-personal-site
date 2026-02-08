@@ -84,31 +84,40 @@ function getDayName(dateStr: string) {
 
           return (
             <div class="group relative text-xs">
-              
-              <!-- Mobile Layout -->
+              {/* Mobile Layout */}
               <div class="grid grid-cols-[2rem_1fr] items-center gap-3 md:hidden">
-                <div class="font-mono text-[10px] text-neutral-400 uppercase tracking-wider">{getDayName(d.date)}</div>
-                
-                <div class="relative flex h-6 items-center min-w-0">
-                  <!-- Bar -->
+                <div class="font-mono text-[10px] tracking-wider text-neutral-400 uppercase">
+                  {getDayName(d.date)}
+                </div>
+
+                <div class="relative flex h-6 min-w-0 items-center">
+                  {/* Bar */}
                   <div class="group/chart relative h-full w-[100px] shrink-0">
-                    <div class="absolute top-1 bottom-1 rounded-sm bg-neutral-300 transition-all dark:bg-neutral-700" style={`width: ${lw}%`}></div>
-                    <div class="absolute top-2.5 bottom-2.5 rounded-full bg-black shadow-sm transition-all dark:bg-white" style={`width: ${w}%`}></div>
+                    <div
+                      class="absolute top-1 bottom-1 rounded-sm bg-neutral-300 transition-all dark:bg-neutral-700"
+                      style={`width: ${lw}%`}
+                    />
+                    <div
+                      class="absolute top-2.5 bottom-2.5 rounded-full bg-black shadow-sm transition-all dark:bg-white"
+                      style={`width: ${w}%`}
+                    />
                   </div>
 
-                  <!-- Hours -->
-                  <div class="ml-3 font-mono text-[10px] text-neutral-500 whitespace-nowrap">
+                  {/* Hours */}
+                  <div class="ml-3 font-mono text-[10px] whitespace-nowrap text-neutral-500">
                     {d.hours}h <span class="text-neutral-400">{diffStr}</span>
                   </div>
 
-                  <!-- Artist -->
+                  {/* Artist */}
                   {d.topArtist && (
-                    <div class="ml-3 min-w-0 flex-1 truncate font-medium text-neutral-600 dark:text-neutral-400 text-[10px]">
-                      <span class="mr-1 text-[9px] uppercase tracking-wider text-neutral-400">Top Artist:</span>
-                      <a 
+                    <div class="ml-3 min-w-0 flex-1 truncate text-[10px] font-medium text-neutral-600 dark:text-neutral-400">
+                      <span class="mr-1 text-[9px] tracking-wider text-neutral-400 uppercase">
+                        Top Artist:
+                      </span>
+                      <a
                         href={`https://www.last.fm/music/${encodeURIComponent(d.topArtist)}`}
                         target="_blank"
-                        class="hover:text-black hover:underline dark:hover:text-white transition-colors"
+                        class="transition-colors hover:text-black hover:underline dark:hover:text-white"
                       >
                         {truncateString(d.topArtist, 150)}
                       </a>
@@ -117,37 +126,46 @@ function getDayName(dateStr: string) {
                 </div>
               </div>
 
-              <!-- Desktop Layout -->
-              <div class="hidden md:flex items-center">
-                <!-- Left Half -->
-                <div class="w-1/2 pr-8 flex items-center gap-3">
-                   <div class="font-mono text-[10px] text-neutral-400 uppercase tracking-wider w-8 shrink-0">{getDayName(d.date)}</div>
-                   <div class="group/chart relative h-6 w-full max-w-[160px]">
-                      <div class="absolute top-1 bottom-1 rounded-sm bg-neutral-300 transition-all dark:bg-neutral-700" style={`width: ${lw}%`}></div>
-                      <div class="absolute top-2.5 bottom-2.5 rounded-full bg-black shadow-sm transition-all dark:bg-white" style={`width: ${w}%`}></div>
-                   </div>
-                   <div class="font-mono text-[10px] text-neutral-500 whitespace-nowrap">
-                     {d.hours}h <span class="text-neutral-400">{diffStr}</span>
-                   </div>
+              {/* Desktop Layout */}
+              <div class="hidden items-center md:flex">
+                {/* Left Half */}
+                <div class="flex w-1/2 items-center gap-3 pr-8">
+                  <div class="w-8 shrink-0 font-mono text-[10px] tracking-wider text-neutral-400 uppercase">
+                    {getDayName(d.date)}
+                  </div>
+                  <div class="group/chart relative h-6 w-full max-w-[160px]">
+                    <div
+                      class="absolute top-1 bottom-1 rounded-sm bg-neutral-300 transition-all dark:bg-neutral-700"
+                      style={`width: ${lw}%`}
+                    />
+                    <div
+                      class="absolute top-2.5 bottom-2.5 rounded-full bg-black shadow-sm transition-all dark:bg-white"
+                      style={`width: ${w}%`}
+                    />
+                  </div>
+                  <div class="font-mono text-[10px] whitespace-nowrap text-neutral-500">
+                    {d.hours}h <span class="text-neutral-400">{diffStr}</span>
+                  </div>
                 </div>
 
-                <!-- Right Half -->
-                <div class="w-1/2 pl-8 flex items-center">
-                   {d.topArtist && (
-                    <div class="min-w-0 flex-1 truncate font-medium text-neutral-600 dark:text-neutral-400 text-[10px] sm:text-xs">
-                      <span class="mr-1 text-[9px] uppercase tracking-wider text-neutral-400">Top Artist:</span>
-                      <a 
+                {/* Right Half */}
+                <div class="flex w-1/2 items-center pl-8">
+                  {d.topArtist && (
+                    <div class="min-w-0 flex-1 truncate text-[10px] font-medium text-neutral-600 sm:text-xs dark:text-neutral-400">
+                      <span class="mr-1 text-[9px] tracking-wider text-neutral-400 uppercase">
+                        Top Artist:
+                      </span>
+                      <a
                         href={`https://www.last.fm/music/${encodeURIComponent(d.topArtist)}`}
                         target="_blank"
-                        class="hover:text-black hover:underline dark:hover:text-white transition-colors"
+                        class="transition-colors hover:text-black hover:underline dark:hover:text-white"
                       >
                         {truncateString(d.topArtist, 150)}
                       </a>
                     </div>
-                   )}
+                  )}
                 </div>
               </div>
-
             </div>
           );
         })

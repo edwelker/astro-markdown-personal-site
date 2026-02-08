@@ -6,7 +6,7 @@ import { fetchOrThrow, runIfMain } from './lib-utils.mjs';
 const periods = ['7day', '3month', '12month', 'overall'];
 const types = ['gettopartists', 'gettopalbums', 'gettoptracks'];
 const limit = 40;
-const recentLimit = 1000; 
+const recentLimit = 1000;
 
 // Local helper to fetch URLs with concurrency while strictly preserving order
 async function fetchInOrder(urls, concurrency) {
@@ -21,11 +21,8 @@ async function fetchInOrder(urls, concurrency) {
     }
   };
 
-  const workers = Array.from(
-    { length: Math.min(concurrency, urls.length) }, 
-    () => worker()
-  );
-  
+  const workers = Array.from({ length: Math.min(concurrency, urls.length) }, () => worker());
+
   await Promise.all(workers);
   return results;
 }
