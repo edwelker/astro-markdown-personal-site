@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 274072
+    "scrobbles": 274093
   },
   "history": [
-    {
-      "dayName": "Sun",
-      "date": "2026-02-01",
-      "hours": "2.5",
-      "lastHours": "1.3",
-      "topArtist": "Sergei Prokofiev"
-    },
     {
       "dayName": "Mon",
       "date": "2026-02-02",
@@ -51,10 +44,23 @@
       "hours": "1.7",
       "lastHours": "2.0",
       "topArtist": "Igor Stravinsky"
+    },
+    {
+      "dayName": "Sun",
+      "date": "2026-02-08",
+      "hours": "1.2",
+      "lastHours": "2.5",
+      "topArtist": "Igor Stravinsky"
     }
   ],
   "week": {
     "artists": [
+      {
+        "name": "Igor Stravinsky",
+        "url": "https://www.last.fm/music/Igor+Stravinsky",
+        "plays": "25",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
       {
         "name": "Lingua Ignota",
         "url": "https://www.last.fm/music/Lingua+Ignota",
@@ -71,12 +77,6 @@
         "name": "Ralph Vaughan Williams",
         "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
         "plays": "18",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Igor Stravinsky",
-        "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "16",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -152,12 +152,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Алла Павлова",
-        "url": "https://www.last.fm/music/%D0%90%D0%BB%D0%BB%D0%B0+%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B0",
-        "plays": "7",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Vladimir Vladimirovich Shcherbachov",
         "url": "https://www.last.fm/music/Vladimir+Vladimirovich+Shcherbachov",
         "plays": "6",
@@ -173,6 +167,18 @@
         "name": "Lotta Wennäkoski",
         "url": "https://www.last.fm/music/Lotta+Wenn%C3%A4koski",
         "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Алла Павлова",
+        "url": "https://www.last.fm/music/%D0%90%D0%BB%D0%BB%D0%B0+%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B0",
+        "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Anatoly Lyadov",
+        "url": "https://www.last.fm/music/Anatoly+Lyadov",
+        "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -196,6 +202,12 @@
       {
         "name": "Roy Harris",
         "url": "https://www.last.fm/music/Roy+Harris",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sergei Taneyev",
+        "url": "https://www.last.fm/music/Sergei+Taneyev",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -260,6 +272,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Nikolai Rimsky-Korsakov",
+        "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Rammstein",
         "url": "https://www.last.fm/music/Rammstein",
         "plays": "2",
@@ -274,24 +292,6 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "George Antheil",
-        "url": "https://www.last.fm/music/George+Antheil",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Marriages",
-        "url": "https://www.last.fm/music/Marriages",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Meat Beat Manifesto",
-        "url": "https://www.last.fm/music/Meat+Beat+Manifesto",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -382,6 +382,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ec172ed4fce8f5d5574a684de375e1ec.jpg"
       },
       {
+        "name": "Stravinsky: The Firebird / Lyadov: Baba-Yaga / Rimsky-Korsakov: Dubinushka",
+        "url": "https://www.last.fm/music/Igor+Stravinsky/Stravinsky:+The+Firebird+%2F+Lyadov:+Baba-Yaga+%2F+Rimsky-Korsakov:+Dubinushka",
+        "artist": "Igor Stravinsky",
+        "plays": "10",
+        "image": ""
+      },
+      {
         "name": "SINNER GET READY",
         "url": "https://www.last.fm/music/Lingua+Ignota/SINNER+GET+READY",
         "artist": "Lingua Ignota",
@@ -424,13 +431,6 @@
         "image": ""
       },
       {
-        "name": "Pavlova: Symphony No. 6 - Thumbelina Suite",
-        "url": "https://www.last.fm/music/Alla+Pavlova/Pavlova:+Symphony+No.+6+-+Thumbelina+Suite",
-        "artist": "Alla Pavlova",
-        "plays": "5",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/dddf3c4890eaa55fcf4ab7cae58fc0bf.png"
-      },
-      {
         "name": "Bernstein Symphony Edition, CD16 - Dvorak - Symphony No.9 `From the New World` & Harris - Symphony No.3",
         "url": "https://www.last.fm/music/Leonard+Bernstein+&+New+York+Philharmonic/Bernstein+Symphony+Edition,+CD16+-+Dvorak+-+Symphony+No.9+%60From+the+New+World%60+&+Harris+-+Symphony+No.3",
         "artist": "Leonard Bernstein & New York Philharmonic",
@@ -442,6 +442,13 @@
         "url": "https://www.last.fm/music/Lotta+Wenn%C3%A4koski/Sigla+%2F+Flounce+%2F+Sedecim",
         "artist": "Lotta Wennäkoski",
         "plays": "5",
+        "image": ""
+      },
+      {
+        "name": "Stravinsky: The Firebird / Lyadov: Baba-Yaga / Rimsky-Korsakov: Dubinushka",
+        "url": "https://www.last.fm/music/Anatoly+Lyadov/Stravinsky:+The+Firebird+%2F+Lyadov:+Baba-Yaga+%2F+Rimsky-Korsakov:+Dubinushka",
+        "artist": "Anatoly Lyadov",
+        "plays": "4",
         "image": ""
       },
       {
@@ -480,11 +487,25 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/5c9cc2154b3dae1f46860ff8fe1adde3.jpg"
       },
       {
+        "name": "Chamber Music",
+        "url": "https://www.last.fm/music/Sergei+Taneyev/Chamber+Music",
+        "artist": "Sergei Taneyev",
+        "plays": "4",
+        "image": ""
+      },
+      {
         "name": "Juju",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/Juju",
         "artist": "Siouxsie and the Banshees",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7653da5c1d3d4aebca9a1e1378b90cc0.png"
+      },
+      {
+        "name": "Pavlova: Symphony No. 6 - Thumbelina Suite",
+        "url": "https://www.last.fm/music/Alla+Pavlova/Pavlova:+Symphony+No.+6+-+Thumbelina+Suite",
+        "artist": "Alla Pavlova",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/dddf3c4890eaa55fcf4ab7cae58fc0bf.png"
       },
       {
         "name": "The American Masters - Barber & Bates: Violin Concertos - Corigliano: Lullaby for Natalie",
@@ -550,39 +571,32 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/1c00f7b9cd94c2b6fbd7f12fc00bd8d2.jpg"
       },
       {
-        "name": "Zeit",
-        "url": "https://www.last.fm/music/Rammstein/Zeit",
-        "artist": "Rammstein",
+        "name": "Stravinsky: The Firebird / Lyadov: Baba-Yaga / Rimsky-Korsakov: Dubinushka",
+        "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov/Stravinsky:+The+Firebird+%2F+Lyadov:+Baba-Yaga+%2F+Rimsky-Korsakov:+Dubinushka",
+        "artist": "Nikolai Rimsky-Korsakov",
         "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8940190193debafcd59c1fccc506595a.jpg"
-      },
-      {
-        "name": "Pavlova: Symphony No. 5 - Elegy",
-        "url": "https://www.last.fm/music/Alla+Pavlova/Pavlova:+Symphony+No.+5+-+Elegy",
-        "artist": "Alla Pavlova",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/68ef4a75a7984195a8ed4804137406ba.jpg"
-      },
-      {
-        "name": "Orange",
-        "url": "https://www.last.fm/music/Caroline+Shaw;+Attacca+Quartet/Orange",
-        "artist": "Caroline Shaw; Attacca Quartet",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a77303f3c4bb2bac17913ef873480cc1.jpg"
-      },
-      {
-        "name": "The Ape of Naples",
-        "url": "https://www.last.fm/music/Coil/The+Ape+of+Naples",
-        "artist": "Coil",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/95e25a1a67adbb4e944c7e50fa76beee.png"
+        "image": ""
       }
     ],
     "tracks": [
       {
+        "name": "The Enchanted Lake, Op. 62",
+        "url": "https://www.last.fm/music/Anatoly+Lyadov/_/The+Enchanted+Lake,+Op.+62",
+        "artist": "Anatoly Lyadov",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Loser - Live; 2008 Remaster",
         "url": "https://www.last.fm/music/Grateful+Dead/_/Loser+-+Live;+2008+Remaster",
         "artist": "Grateful Dead",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Dubinushka, Op. 62",
+        "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov/_/Dubinushka,+Op.+62",
+        "artist": "Nikolai Rimsky-Korsakov",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -680,13 +694,6 @@
       {
         "name": "IV. Lullaby for the Twins (2002 orchestral Version)",
         "url": "https://www.last.fm/music/Alla+Pavlova/_/IV.+Lullaby+for+the+Twins+(2002+orchestral+Version)",
-        "artist": "Alla Pavlova",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Symphony No. 6: II. —",
-        "url": "https://www.last.fm/music/Alla+Pavlova/_/Symphony+No.+6:+II.+%E2%80%94",
         "artist": "Alla Pavlova",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -797,6 +804,20 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Baba-Yaga, Op. 56",
+        "url": "https://www.last.fm/music/Anatoly+Lyadov/_/Baba-Yaga,+Op.+56",
+        "artist": "Anatoly Lyadov",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Kikimora, Op. 63",
+        "url": "https://www.last.fm/music/Anatoly+Lyadov/_/Kikimora,+Op.+63",
+        "artist": "Anatoly Lyadov",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Sonate Nr. 2 für Violine und Klavier, op. 35: I. Allegro",
         "url": "https://www.last.fm/music/Carl+Nielsen/_/Sonate+Nr.+2+f%C3%BCr+Violine+und+Klavier,+op.+35:+I.+Allegro",
         "artist": "Carl Nielsen",
@@ -837,27 +858,6 @@
         "artist": "Claude Debussy",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "La Mer: III. Dialogue du vent et de la mer",
-        "url": "https://www.last.fm/music/Claude+Debussy/_/La+Mer:+III.+Dialogue+du+vent+et+de+la+mer",
-        "artist": "Claude Debussy",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Aqua Regis",
-        "url": "https://www.last.fm/music/Coil/_/Aqua+Regis",
-        "artist": "Coil",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "At the Heart of It All",
-        "url": "https://www.last.fm/music/Coil/_/At+the+Heart+of+It+All",
-        "artist": "Coil",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -876,15 +876,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Dmitri Shostakovich",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "126",
+        "name": "Igor Stravinsky",
+        "url": "https://www.last.fm/music/Igor+Stravinsky",
+        "plays": "130",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Igor Stravinsky",
-        "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "120",
+        "name": "Dmitri Shostakovich",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
+        "plays": "126",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1080,6 +1080,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Nikolai Rimsky-Korsakov",
+        "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov",
+        "plays": "23",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Béla Bartók",
         "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
         "plays": "22",
@@ -1095,12 +1101,6 @@
         "name": "Terry King",
         "url": "https://www.last.fm/music/Terry+King",
         "plays": "22",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Nikolai Rimsky-Korsakov",
-        "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov",
-        "plays": "21",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
@@ -1295,6 +1295,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ec172ed4fce8f5d5574a684de375e1ec.jpg"
       },
       {
+        "name": "Stravinsky: The Firebird / Lyadov: Baba-Yaga / Rimsky-Korsakov: Dubinushka",
+        "url": "https://www.last.fm/music/Igor+Stravinsky/Stravinsky:+The+Firebird+%2F+Lyadov:+Baba-Yaga+%2F+Rimsky-Korsakov:+Dubinushka",
+        "artist": "Igor Stravinsky",
+        "plays": "20",
+        "image": ""
+      },
+      {
         "name": "The Firebird • 4 Etudes • Fireworks",
         "url": "https://www.last.fm/music/Igor+Stravinsky+%E2%80%A2+Chicago+Symphony+Orchestra+%E2%80%A2+Pierre+Boulez/The+Firebird+%E2%80%A2+4+Etudes+%E2%80%A2+Fireworks",
         "artist": "Igor Stravinsky • Chicago Symphony Orchestra • Pierre Boulez",
@@ -1377,13 +1384,6 @@
         "artist": "George Antheil",
         "plays": "16",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/de90c3c8ab83a6183cc9cdbc48453202.png"
-      },
-      {
-        "name": "Prokofiev: Le bûcher d'hiver (Première mondiale avec le texte orginal)",
-        "url": "https://www.last.fm/music/Orchestre+symphonique+de+la+Saison+Russe/Prokofiev:+Le+b%C3%BBcher+d%27hiver+(Premi%C3%A8re+mondiale+avec+le+texte+orginal)",
-        "artist": "Orchestre symphonique de la Saison Russe",
-        "plays": "16",
-        "image": ""
       }
     ],
     "tracks": [
@@ -1619,6 +1619,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "The Enchanted Lake, Op. 62",
+        "url": "https://www.last.fm/music/Anatoly+Lyadov/_/The+Enchanted+Lake,+Op.+62",
+        "artist": "Anatoly Lyadov",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Symphony No. 10 in E Minor, Op. 93: I. Moderato",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Symphony+No.+10+in+E+Minor,+Op.+93:+I.+Moderato",
         "artist": "Dmitri Shostakovich",
@@ -1659,13 +1666,6 @@
         "artist": "Dobrinka Tabakova",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Marked for Death",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Marked+for+Death",
-        "artist": "Emma Ruth Rundle",
-        "plays": "3",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -1690,6 +1690,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Igor Stravinsky",
+        "url": "https://www.last.fm/music/Igor+Stravinsky",
+        "plays": "257",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Siouxsie and the Banshees",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
         "plays": "255",
@@ -1699,12 +1705,6 @@
         "name": "Miklós Rózsa",
         "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
         "plays": "249",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Igor Stravinsky",
-        "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "247",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2614,7 +2614,7 @@
       {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "1717",
+        "plays": "1727",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
