@@ -5,7 +5,7 @@ import { getSportsPageData } from '../lib/sports/index';
 import { TEAM_LOGOS, LEAGUE_ICONS } from '../lib/sports/constants';
 import Layout from '../layouts/Layout.astro';
 import TeamCard from '../components/sports/TeamCard.astro';
-import { formatRelativeTime, decodeHtmlEntities, getSourceDomain } from '../lib/utils';
+import { formatRelativeTime, decodeHtmlEntities } from '../lib/utils';
 
 // Cache the response for 15 minutes (900 seconds) at the edge (Cloudflare) and in the browser.
 // This prevents the Worker from running on every request, significantly reducing usage if scraped.
@@ -125,7 +125,7 @@ const tabs = [
               allLeagueNews.map((item) => (
                 <li>
                   <a
-                    href={item.link}
+                    href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     class="group block w-full no-underline"
@@ -137,12 +137,6 @@ const tabs = [
                   </a>
                   <div class="mt-1 flex items-center gap-3 font-mono text-xs text-neutral-500">
                     <span>{formatRelativeTime(item.date)}</span>
-                    <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                    <span class="text-neutral-400">
-                      {item.league} • {item.source}
-                    </span>
-                    <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                    <span class="text-neutral-400">{getSourceDomain(item.link)}</span>
                   </div>
                 </li>
               ))
@@ -160,7 +154,7 @@ const tabs = [
                 .map((item) => (
                   <li>
                     <a
-                      href={item.link}
+                      href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       class="group block w-full no-underline"
@@ -173,8 +167,6 @@ const tabs = [
                       <span>{formatRelativeTime(item.date)}</span>
                       <span class="text-neutral-300 dark:text-neutral-700">•</span>
                       <span class="text-neutral-400">{item.source}</span>
-                      <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                      <span class="text-neutral-400">{getSourceDomain(item.link)}</span>
                     </div>
                   </li>
                 ))
@@ -192,7 +184,7 @@ const tabs = [
                 .map((item) => (
                   <li>
                     <a
-                      href={item.link}
+                      href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       class="group block w-full no-underline"
@@ -205,8 +197,6 @@ const tabs = [
                       <span>{formatRelativeTime(item.date)}</span>
                       <span class="text-neutral-300 dark:text-neutral-700">•</span>
                       <span class="text-neutral-400">{item.source}</span>
-                      <span class="text-neutral-300 dark:text-neutral-700">•</span>
-                      <span class="text-neutral-400">{getSourceDomain(item.link)}</span>
                     </div>
                   </li>
                 ))
