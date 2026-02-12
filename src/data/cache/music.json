@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 274241
+    "scrobbles": 274263
   },
   "history": [
-    {
-      "dayName": "Thu",
-      "date": "2026-02-05",
-      "hours": "2.3",
-      "lastHours": "2.9",
-      "topArtist": "Inbal Segev"
-    },
     {
       "dayName": "Fri",
       "date": "2026-02-06",
@@ -51,6 +44,13 @@
       "hours": "4.6",
       "lastHours": "2.2",
       "topArtist": "Sergei Prokofiev"
+    },
+    {
+      "dayName": "Thu",
+      "date": "2026-02-12",
+      "hours": "1.3",
+      "lastHours": "2.3",
+      "topArtist": "Philip Glass"
     }
   ],
   "week": {
@@ -68,6 +68,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Philip Glass",
+        "url": "https://www.last.fm/music/Philip+Glass",
+        "plays": "22",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Coil",
         "url": "https://www.last.fm/music/Coil",
         "plays": "20",
@@ -77,18 +83,6 @@
         "name": "Robert Schumann",
         "url": "https://www.last.fm/music/Robert+Schumann",
         "plays": "19",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Inbal Segev",
-        "url": "https://www.last.fm/music/Inbal+Segev",
-        "plays": "15",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Anastasia Yasko",
-        "url": "https://www.last.fm/music/Anastasia+Yasko",
-        "plays": "14",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -118,12 +112,6 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "10",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Wolfgang Amadeus Mozart",
-        "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart",
         "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -264,6 +252,12 @@
         "url": "https://www.last.fm/music/Switchblade+Symphony",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Wolfgang Amadeus Mozart",
+        "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -273,6 +267,13 @@
         "artist": "Sergei Prokofiev",
         "plays": "77",
         "image": ""
+      },
+      {
+        "name": "Kronos Quartet performs Philip Glass",
+        "url": "https://www.last.fm/music/Philip+Glass/Kronos+Quartet+performs+Philip+Glass",
+        "artist": "Philip Glass",
+        "plays": "22",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/59679cd42fef4e419e27bc639fe48652.png"
       },
       {
         "name": "Theme and variations II",
@@ -287,20 +288,6 @@
         "artist": "Igor Stravinsky",
         "plays": "15",
         "image": ""
-      },
-      {
-        "name": "20 for 2020",
-        "url": "https://www.last.fm/music/Inbal+Segev/20+for+2020",
-        "artist": "Inbal Segev",
-        "plays": "15",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2fd4b2ce6ed97539747fa89b1f73cb4b.jpg"
-      },
-      {
-        "name": "20th Century Russian Piano Sonatas",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/20th+Century+Russian+Piano+Sonatas",
-        "artist": "Anastasia Yasko",
-        "plays": "14",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8adc83204d7a99a247be057f875a2958.jpg"
       },
       {
         "name": "Scatology",
@@ -349,13 +336,6 @@
         "url": "https://www.last.fm/music/Igor+Stravinsky/Stravinsky:+The+Firebird+%2F+Lyadov:+Baba-Yaga+%2F+Rimsky-Korsakov:+Dubinushka",
         "artist": "Igor Stravinsky",
         "plays": "10",
-        "image": ""
-      },
-      {
-        "name": "Piano Concertos No. 20 K. 466 & No. 24 K. 491 / Concert Rondo, K. 382",
-        "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart/Piano+Concertos+No.+20+K.+466+&+No.+24+K.+491+%2F+Concert+Rondo,+K.+382",
-        "artist": "Wolfgang Amadeus Mozart",
-        "plays": "9",
         "image": ""
       },
       {
@@ -546,6 +526,20 @@
         "artist": "Pig",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c5fd7c238349772dea0f46e4c20218ec.jpg"
+      },
+      {
+        "name": "Schumann: Symphonies Nos. 1-4",
+        "url": "https://www.last.fm/music/Robert+Schumann/Schumann:+Symphonies+Nos.+1-4",
+        "artist": "Robert Schumann",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/451db9b1023c818f1dc7b42c7451868e.jpg"
+      },
+      {
+        "name": "First Edition Encores",
+        "url": "https://www.last.fm/music/Samuel+Barber/First+Edition+Encores",
+        "artist": "Samuel Barber",
+        "plays": "1",
+        "image": ""
       }
     ],
     "tracks": [
@@ -581,6 +575,34 @@
         "name": "Dubinushka, Op. 62",
         "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov/_/Dubinushka,+Op.+62",
         "artist": "Nikolai Rimsky-Korsakov",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 5: I",
+        "url": "https://www.last.fm/music/Philip+Glass/_/String+Quartet+No.+5:+I",
+        "artist": "Philip Glass",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 5: II",
+        "url": "https://www.last.fm/music/Philip+Glass/_/String+Quartet+No.+5:+II",
+        "artist": "Philip Glass",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 5: III",
+        "url": "https://www.last.fm/music/Philip+Glass/_/String+Quartet+No.+5:+III",
+        "artist": "Philip Glass",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 5: IV",
+        "url": "https://www.last.fm/music/Philip+Glass/_/String+Quartet+No.+5:+IV",
+        "artist": "Philip Glass",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -669,104 +691,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Piano Sonata No. 12, Op. 48: I. Allegro",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata+No.+12,+Op.+48:+I.+Allegro",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata No. 12, Op. 48: II. Intermezzo. Andante",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata+No.+12,+Op.+48:+II.+Intermezzo.+Andante",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata No. 12, Op. 48: III. Improvisation. Tranquillo",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata+No.+12,+Op.+48:+III.+Improvisation.+Tranquillo",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata No. 4 in B Minor, Op. 56: I. Allegro",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata+No.+4+in+B+Minor,+Op.+56:+I.+Allegro",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata No. 4 in B Minor, Op. 56: II. Allegro",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata+No.+4+in+B+Minor,+Op.+56:+II.+Allegro",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata No. 4 in B Minor, Op. 56: III. Adagio",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata+No.+4+in+B+Minor,+Op.+56:+III.+Adagio",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata No. 4 in B Minor, Op. 56: IV. Allegro",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata+No.+4+in+B+Minor,+Op.+56:+IV.+Allegro",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata No. 9 in C Major, Op. 103: I. Allegretto",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata+No.+9+in+C+Major,+Op.+103:+I.+Allegretto",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata No. 9 in C Major, Op. 103: II. Allegro strepitoso",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata+No.+9+in+C+Major,+Op.+103:+II.+Allegro+strepitoso",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata No. 9 in C Major, Op. 103: III. Andante tranquillo",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata+No.+9+in+C+Major,+Op.+103:+III.+Andante+tranquillo",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata No. 9 in C Major, Op. 103: IV. Allegro con brio, ma non troppo presto",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata+No.+9+in+C+Major,+Op.+103:+IV.+Allegro+con+brio,+ma+non+troppo+presto",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata: I. Allegro",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata:+I.+Allegro",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata: II. Lento rubato",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata:+II.+Lento+rubato",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata: III. Poco allegro",
-        "url": "https://www.last.fm/music/Anastasia+Yasko/_/Piano+Sonata:+III.+Poco+allegro",
-        "artist": "Anastasia Yasko",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Baba-Yaga, Op. 56",
         "url": "https://www.last.fm/music/Anatoly+Lyadov/_/Baba-Yaga,+Op.+56",
         "artist": "Anatoly Lyadov",
@@ -826,6 +750,76 @@
         "name": "Math Equation",
         "url": "https://www.last.fm/music/Austra/_/Math+Equation",
         "artist": "Austra",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Siren Song",
+        "url": "https://www.last.fm/music/Austra/_/Siren+Song",
+        "artist": "Austra",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Hopefulness of Dawn",
+        "url": "https://www.last.fm/music/Austra/_/The+Hopefulness+of+Dawn",
+        "artist": "Austra",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Think Twice",
+        "url": "https://www.last.fm/music/Austra/_/Think+Twice",
+        "artist": "Austra",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sonate Nr. 2 für Violine und Klavier, op. 35: I. Allegro",
+        "url": "https://www.last.fm/music/Carl+Nielsen/_/Sonate+Nr.+2+f%C3%BCr+Violine+und+Klavier,+op.+35:+I.+Allegro",
+        "artist": "Carl Nielsen",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sonate Nr. 2 für Violine und Klavier, op. 35: II. Molto adagio",
+        "url": "https://www.last.fm/music/Carl+Nielsen/_/Sonate+Nr.+2+f%C3%BCr+Violine+und+Klavier,+op.+35:+II.+Molto+adagio",
+        "artist": "Carl Nielsen",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sonate Nr. 2 für Violine und Klavier, op. 35: III. Allegro piacevole",
+        "url": "https://www.last.fm/music/Carl+Nielsen/_/Sonate+Nr.+2+f%C3%BCr+Violine+und+Klavier,+op.+35:+III.+Allegro+piacevole",
+        "artist": "Carl Nielsen",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Entr'acte",
+        "url": "https://www.last.fm/music/Caroline+Shaw/_/Entr%27acte",
+        "artist": "Caroline Shaw",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sonata for Violin and Piano in A Major, FWV 8: I. Allegretto Ben Moderato",
+        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+for+Violin+and+Piano+in+A+Major,+FWV+8:+I.+Allegretto+Ben+Moderato",
+        "artist": "César Franck",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sonata for Violin and Piano in A Major, FWV 8: II. Allegro",
+        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+for+Violin+and+Piano+in+A+Major,+FWV+8:+II.+Allegro",
+        "artist": "César Franck",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Beau Soir, L 6",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/Beau+Soir,+L+6",
+        "artist": "Claude Debussy",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1020,6 +1014,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Philip Glass",
+        "url": "https://www.last.fm/music/Philip+Glass",
+        "plays": "25",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Pig",
         "url": "https://www.last.fm/music/Pig",
         "plays": "25",
@@ -1064,12 +1064,6 @@
       {
         "name": "Rasputina",
         "url": "https://www.last.fm/music/Rasputina",
-        "plays": "22",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Terry King",
-        "url": "https://www.last.fm/music/Terry+King",
         "plays": "22",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1251,6 +1245,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c9bc1000106bf293fbf8e29b9c8bf421.jpg"
       },
       {
+        "name": "Kronos Quartet performs Philip Glass",
+        "url": "https://www.last.fm/music/Philip+Glass/Kronos+Quartet+performs+Philip+Glass",
+        "artist": "Philip Glass",
+        "plays": "22",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/59679cd42fef4e419e27bc639fe48652.png"
+      },
+      {
         "name": "American Cello, Vol. 1",
         "url": "https://www.last.fm/music/Terry+King/American+Cello,+Vol.+1",
         "artist": "Terry King",
@@ -1347,13 +1348,6 @@
         "artist": "ohGr",
         "plays": "17",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c5424e7b022678aa4da08c78fd0de1de.jpg"
-      },
-      {
-        "name": "How We Quit the Forest",
-        "url": "https://www.last.fm/music/Rasputina/How+We+Quit+the+Forest",
-        "artist": "Rasputina",
-        "plays": "17",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/24d7074aedc84ff79fe0db8f68076c27.jpg"
       }
     ],
     "tracks": [
@@ -1644,7 +1638,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "751",
+        "plays": "743",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1975,13 +1969,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/26b6daf514da76b731dbfb02ffe23325.jpg"
       },
       {
-        "name": "Prokofiev Piano Sonatas",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev+Piano+Sonatas",
-        "artist": "Sergei Prokofiev",
-        "plays": "71",
-        "image": ""
-      },
-      {
         "name": "Ben-Hur: A Tale of the Christ",
         "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa/Ben-Hur:+A+Tale+of+the+Christ",
         "artist": "Miklós Rózsa",
@@ -2001,6 +1988,13 @@
         "artist": "Miklós Rózsa",
         "plays": "63",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7cbf567e40e9f903c2451518cf3dacba.jpg"
+      },
+      {
+        "name": "Prokofiev Piano Sonatas",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev+Piano+Sonatas",
+        "artist": "Sergei Prokofiev",
+        "plays": "63",
+        "image": ""
       },
       {
         "name": "L’Oiseau de feu / Feu d’artifice / Quatre Etudes pour orchestre",
@@ -2355,20 +2349,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Prokofiev: Sonate no. 4 op. 29, D’apres des vieux cahiers I. Allegro Molto Sostenuto",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Prokofiev:+Sonate+no.+4+op.+29,+D%E2%80%99apres+des+vieux+cahiers+I.+Allegro+Molto+Sostenuto",
-        "artist": "Sergei Prokofiev",
-        "plays": "13",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Prokofiev: Sonate no. 4 op. 29, D’apres des vieux cahiers II. Andante Assai",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Prokofiev:+Sonate+no.+4+op.+29,+D%E2%80%99apres+des+vieux+cahiers+II.+Andante+Assai",
-        "artist": "Sergei Prokofiev",
-        "plays": "13",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Blindsided",
         "url": "https://www.last.fm/music/Austra/_/Blindsided",
         "artist": "Austra",
@@ -2411,8 +2391,8 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Prokofiev: Sonate no. 4 op. 29, D’apres des vieux cahiers III. Allegro Con Brio, Ma Non Leggiere",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Prokofiev:+Sonate+no.+4+op.+29,+D%E2%80%99apres+des+vieux+cahiers+III.+Allegro+Con+Brio,+Ma+Non+Leggiere",
+        "name": "Prokofiev: Sonate no. 4 op. 29, D’apres des vieux cahiers II. Andante Assai",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Prokofiev:+Sonate+no.+4+op.+29,+D%E2%80%99apres+des+vieux+cahiers+II.+Andante+Assai",
         "artist": "Sergei Prokofiev",
         "plays": "12",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -2441,6 +2421,20 @@
       {
         "name": "Eine Alpensinfonie, op. 64: II: Sonnenaufgang",
         "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+II:+Sonnenaufgang",
+        "artist": "Richard Strauss",
+        "plays": "11",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Eine Alpensinfonie, op. 64: V: Am Wasserfall - Erscheinung",
+        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+V:+Am+Wasserfall+-+Erscheinung",
+        "artist": "Richard Strauss",
+        "plays": "11",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Eine Alpensinfonie, op. 64: VI: Auf blumigen Wiesen",
+        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+VI:+Auf+blumigen+Wiesen",
         "artist": "Richard Strauss",
         "plays": "11",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
