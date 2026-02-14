@@ -11,7 +11,11 @@ recipeCuisine: "American"
 keywords: ["bread", "no-knead", "dutch oven", "rye", "fermentation"]
 coverPhoto: "https://live.staticflickr.com/65535/55055098549_97c8809ced_h.jpg"
 nutrition:
-  calories: "2350 calories estimated for a full loaf"
+  calories: "2880 kcal"
+  carbohydrateContent: "575 g"
+  proteinContent: "97 g"
+  fatContent: "9 g"
+  sodiumContent: "6240 mg"
 aggregateRating:
   ratingValue: "5"
   reviewCount: "1"
@@ -34,10 +38,16 @@ draft: false
 ---
 
 ### Storage Tip
-Keep the loaf **cut-side down** directly on your cutting board. The crust acts as a natural seal, maintaining interior moisture while preventing the exterior from going soft in a plastic bag.
+Keep the loaf cut-side down directly on your cutting board. The crust acts as a natural seal, maintaining interior moisture while preventing the exterior from going soft in a plastic bag.
 
 ### Hydration Note
-If you substitute All-Purpose flour for the Bread Flour, reduce the water slightly to **570g** (full size) to maintain manageable dough strength.
+If you substitute All-Purpose flour for the Bread Flour, reduce the water slightly to 570g (full size) to maintain manageable dough strength.
 
 ### Dutch Oven
 This is optimized for a 7-quart Dutch oven. For smaller sizes, just halve the recipe.
+
+### Flavor Enhancements
+* Cold Cure: After the room temperature rise, refrigerate the dough for 24–72 hours. This retardation slows yeast while bacteria continue producing lactic and acetic acids, resulting in a tangier flavor and blistered crust.
+* Pinch Yeast: Reduce the yeast to 0.5g–1g. This extends the rise to 20–24 hours, giving organic acids more time to develop.
+* Salt Bump: Use exactly a 2% salt ratio (16g per 800g flour). Salt acts as a flavor multiplier and strengthens gluten.
+* High Hydration: Increase water to 640g+. This creates a more open, custardy crumb, though the dough will be stickier and harder to shape.
