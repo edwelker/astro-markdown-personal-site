@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 274330
+    "scrobbles": 274341
   },
   "history": [
-    {
-      "dayName": "Sun",
-      "date": "2026-02-08",
-      "hours": "2.1",
-      "lastHours": "2.5",
-      "topArtist": "Austra"
-    },
     {
       "dayName": "Mon",
       "date": "2026-02-09",
@@ -48,9 +41,16 @@
     {
       "dayName": "Sat",
       "date": "2026-02-14",
-      "hours": "1.8",
+      "hours": "2.3",
       "lastHours": "1.7",
       "topArtist": "Frederica von Stade, André Previn, Pittsburgh Symphony Orchestra"
+    },
+    {
+      "dayName": "Sun",
+      "date": "2026-02-15",
+      "hours": "0.1",
+      "lastHours": "2.1",
+      "topArtist": "The Strangeloves"
     }
   ],
   "week": {
@@ -80,12 +80,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "The Dresden Dolls",
-        "url": "https://www.last.fm/music/The+Dresden+Dolls",
-        "plays": "11",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Austra",
         "url": "https://www.last.fm/music/Austra",
         "plays": "10",
@@ -107,6 +101,12 @@
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
         "plays": "10",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Aaron Copland",
+        "url": "https://www.last.fm/music/Aaron+Copland",
+        "plays": "8",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -182,6 +182,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "The Strangeloves",
+        "url": "https://www.last.fm/music/The+Strangeloves",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Alan Parker",
         "url": "https://www.last.fm/music/Alan+Parker",
         "plays": "1",
@@ -208,6 +214,12 @@
       {
         "name": "Claude Debussy",
         "url": "https://www.last.fm/music/Claude+Debussy",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Daddy Yankee",
+        "url": "https://www.last.fm/music/Daddy+Yankee",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -308,13 +320,6 @@
         "image": ""
       },
       {
-        "name": "No, Virginia…",
-        "url": "https://www.last.fm/music/The+Dresden+Dolls/No,+Virginia%E2%80%A6",
-        "artist": "The Dresden Dolls",
-        "plays": "11",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a9959ea1ba0962bedcf3302eca4690cf.jpg"
-      },
-      {
         "name": "Chin Up Buttercup",
         "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
         "artist": "Austra",
@@ -341,6 +346,13 @@
         "artist": "Igor Stravinsky",
         "plays": "10",
         "image": ""
+      },
+      {
+        "name": "Appalachian Spring / Short Symphony / 3 Latin American Sketches / Quiet City",
+        "url": "https://www.last.fm/music/Aaron+Copland/Appalachian+Spring+%2F+Short+Symphony+%2F+3+Latin+American+Sketches+%2F+Quiet+City",
+        "artist": "Aaron Copland",
+        "plays": "8",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b6e9272716ac45cec5735a47663b3daa.jpg"
       },
       {
         "name": "Rózsa: String Quartets Nos. 1 and 2 / Rhapsody",
@@ -434,6 +446,13 @@
         "image": ""
       },
       {
+        "name": "I Want Candy: The Best Of The Strangeloves",
+        "url": "https://www.last.fm/music/The+Strangeloves/I+Want+Candy:+The+Best+Of+The+Strangeloves",
+        "artist": "The Strangeloves",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8d8c964b808b41679bc093010d92da21.jpg"
+      },
+      {
         "name": "The Voice Of Soul",
         "url": "https://www.last.fm/music/Alan+Parker/The+Voice+Of+Soul",
         "artist": "Alan Parker",
@@ -465,6 +484,13 @@
         "name": "Secret Love Letters",
         "url": "https://www.last.fm/music/Claude+Debussy/Secret+Love+Letters",
         "artist": "Claude Debussy",
+        "plays": "1",
+        "image": ""
+      },
+      {
+        "name": "Gasolina (Bhangra Remix)",
+        "url": "https://www.last.fm/music/Daddy+Yankee/Gasolina+(Bhangra+Remix)",
+        "artist": "Daddy Yankee",
         "plays": "1",
         "image": ""
       },
@@ -544,20 +570,6 @@
         "artist": "Samuel Barber",
         "plays": "1",
         "image": ""
-      },
-      {
-        "name": "Bread and Jam for Frances",
-        "url": "https://www.last.fm/music/Switchblade+Symphony/Bread+and+Jam+for+Frances",
-        "artist": "Switchblade Symphony",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/508eca739bd8f43f5bab254b3a0e8fa1.jpg"
-      },
-      {
-        "name": "The Botanic Verses",
-        "url": "https://www.last.fm/music/The+March+Violets/The+Botanic+Verses",
-        "artist": "The March Violets",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8acded7da6914fa8aa5707e23c6b5679.jpg"
       }
     ],
     "tracks": [
@@ -709,6 +721,62 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Appalachian Spring (Suite)",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Appalachian+Spring+(Suite)",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Quiet City",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Quiet+City",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Short Symphony (No. 2): I. Tempo = 144 (incisivo)",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Short+Symphony+(No.+2):+I.+Tempo+=+144+(incisivo)",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Short Symphony (No. 2): II. Tempo = circa 44",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Short+Symphony+(No.+2):+II.+Tempo+=+circa+44",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Short Symphony (No. 2): III. Tempo = 144 (preciso e ritmico)",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Short+Symphony+(No.+2):+III.+Tempo+=+144+(preciso+e+ritmico)",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Three Latin American Sketches: I. Estribillo",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Three+Latin+American+Sketches:+I.+Estribillo",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Three Latin American Sketches: II. Paisaje Mexicano",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Three+Latin+American+Sketches:+II.+Paisaje+Mexicano",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Three Latin American Sketches: III. Danza de Jalisco",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Three+Latin+American+Sketches:+III.+Danza+de+Jalisco",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "That's What Friends Are For",
         "url": "https://www.last.fm/music/Alan+Parker/_/That%27s+What+Friends+Are+For",
         "artist": "Alan Parker",
@@ -782,62 +850,6 @@
         "name": "Siren Song",
         "url": "https://www.last.fm/music/Austra/_/Siren+Song",
         "artist": "Austra",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Hopefulness of Dawn",
-        "url": "https://www.last.fm/music/Austra/_/The+Hopefulness+of+Dawn",
-        "artist": "Austra",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Think Twice",
-        "url": "https://www.last.fm/music/Austra/_/Think+Twice",
-        "artist": "Austra",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Boys (Original Version)",
-        "url": "https://www.last.fm/music/Bauhaus/_/Boys+(Original+Version)",
-        "artist": "Bauhaus",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Twisting Man - 2021 Remastered Version",
-        "url": "https://www.last.fm/music/Big+Electric+Cat/_/Twisting+Man+-+2021+Remastered+Version",
-        "artist": "Big Electric Cat",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Distance",
-        "url": "https://www.last.fm/music/Cake/_/The+Distance",
-        "artist": "Cake",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sonata for Violin and Piano in A Major, FWV 8: I. Allegretto Ben Moderato",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+for+Violin+and+Piano+in+A+Major,+FWV+8:+I.+Allegretto+Ben+Moderato",
-        "artist": "César Franck",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sonata for Violin and Piano in A Major, FWV 8: II. Allegro",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+for+Violin+and+Piano+in+A+Major,+FWV+8:+II.+Allegro",
-        "artist": "César Franck",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Beau Soir, L 6",
-        "url": "https://www.last.fm/music/Claude+Debussy/_/Beau+Soir,+L+6",
-        "artist": "Claude Debussy",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
