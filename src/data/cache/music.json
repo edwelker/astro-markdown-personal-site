@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 274425
+    "scrobbles": 274433
   },
   "history": [
-    {
-      "dayName": "Wed",
-      "date": "2026-02-11",
-      "hours": "4.6",
-      "lastHours": "2.2",
-      "topArtist": "Sergei Prokofiev"
-    },
     {
       "dayName": "Thu",
       "date": "2026-02-12",
@@ -51,6 +44,13 @@
       "hours": "1.2",
       "lastHours": "2.4",
       "topArtist": "Benjamin Britten"
+    },
+    {
+      "dayName": "Wed",
+      "date": "2026-02-18",
+      "hours": "0.4",
+      "lastHours": "4.6",
+      "topArtist": "The Lonely Island"
     }
   ],
   "week": {
@@ -58,7 +58,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "54",
+        "plays": "36",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -101,6 +101,12 @@
         "name": "Aaron Copland",
         "url": "https://www.last.fm/music/Aaron+Copland",
         "plays": "8",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Lonely Island",
+        "url": "https://www.last.fm/music/The+Lonely+Island",
+        "plays": "7",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -288,12 +294,6 @@
         "url": "https://www.last.fm/music/Paul+Creston",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Rob Zombie",
-        "url": "https://www.last.fm/music/Rob+Zombie",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -301,7 +301,7 @@
         "name": "Fiftieth Anniversary Edition",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Fiftieth+Anniversary+Edition",
         "artist": "Sergei Prokofiev",
-        "plays": "54",
+        "plays": "36",
         "image": ""
       },
       {
@@ -373,6 +373,13 @@
         "artist": "Ludwig van Beethoven",
         "plays": "7",
         "image": ""
+      },
+      {
+        "name": "The Wack Album",
+        "url": "https://www.last.fm/music/The+Lonely+Island/The+Wack+Album",
+        "artist": "The Lonely Island",
+        "plays": "7",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/cb10eb79ebf0be7dd35bc40201e1a692.jpg"
       },
       {
         "name": "Path to the Moon",
@@ -569,13 +576,6 @@
         "artist": "Gary Numan",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/113c762f98e645228f320b682cc4d5fc.jpg"
-      },
-      {
-        "name": "Replicas Live",
-        "url": "https://www.last.fm/music/Gary+Numan/Replicas+Live",
-        "artist": "Gary Numan",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f6d403d29e8548fa9a8072b375ad12a7.jpg"
       }
     ],
     "tracks": [
@@ -1804,6 +1804,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "The Lonely Island",
+        "url": "https://www.last.fm/music/The+Lonely+Island",
+        "plays": "82",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Arvo Pärt",
         "url": "https://www.last.fm/music/Arvo+P%C3%A4rt",
         "plays": "81",
@@ -1831,12 +1837,6 @@
         "name": "Modest Petrovich Mussorgsky",
         "url": "https://www.last.fm/music/Modest+Petrovich+Mussorgsky",
         "plays": "76",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Lonely Island",
-        "url": "https://www.last.fm/music/The+Lonely+Island",
-        "plays": "75",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2572,7 +2572,7 @@
       {
         "name": "The Lonely Island",
         "url": "https://www.last.fm/music/The+Lonely+Island",
-        "plays": "1941",
+        "plays": "1948",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
