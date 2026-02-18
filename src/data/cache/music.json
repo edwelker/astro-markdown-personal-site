@@ -1,6 +1,6 @@
 {
   "user": {
-    "scrobbles": 274433
+    "scrobbles": 274442
   },
   "history": [
     {
@@ -48,7 +48,7 @@
     {
       "dayName": "Wed",
       "date": "2026-02-18",
-      "hours": "0.4",
+      "hours": "0.9",
       "lastHours": "4.6",
       "topArtist": "The Lonely Island"
     }
@@ -98,15 +98,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Aaron Copland",
-        "url": "https://www.last.fm/music/Aaron+Copland",
-        "plays": "8",
+        "name": "The Lonely Island",
+        "url": "https://www.last.fm/music/The+Lonely+Island",
+        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "The Lonely Island",
-        "url": "https://www.last.fm/music/The+Lonely+Island",
-        "plays": "7",
+        "name": "Aaron Copland",
+        "url": "https://www.last.fm/music/Aaron+Copland",
+        "plays": "8",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -212,8 +212,20 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Cyndi Lauper",
+        "url": "https://www.last.fm/music/Cyndi+Lauper",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Daddy Yankee",
         "url": "https://www.last.fm/music/Daddy+Yankee",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "DMX",
+        "url": "https://www.last.fm/music/DMX",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -282,18 +294,6 @@
         "url": "https://www.last.fm/music/Nina+Simone",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Nine Inch Nails",
-        "url": "https://www.last.fm/music/Nine+Inch+Nails",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Paul Creston",
-        "url": "https://www.last.fm/music/Paul+Creston",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -347,6 +347,13 @@
         "image": ""
       },
       {
+        "name": "The Wack Album",
+        "url": "https://www.last.fm/music/The+Lonely+Island/The+Wack+Album",
+        "artist": "The Lonely Island",
+        "plays": "10",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/cb10eb79ebf0be7dd35bc40201e1a692.jpg"
+      },
+      {
         "name": "Appalachian Spring / Short Symphony / 3 Latin American Sketches / Quiet City",
         "url": "https://www.last.fm/music/Aaron+Copland/Appalachian+Spring+%2F+Short+Symphony+%2F+3+Latin+American+Sketches+%2F+Quiet+City",
         "artist": "Aaron Copland",
@@ -373,13 +380,6 @@
         "artist": "Ludwig van Beethoven",
         "plays": "7",
         "image": ""
-      },
-      {
-        "name": "The Wack Album",
-        "url": "https://www.last.fm/music/The+Lonely+Island/The+Wack+Album",
-        "artist": "The Lonely Island",
-        "plays": "7",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/cb10eb79ebf0be7dd35bc40201e1a692.jpg"
       },
       {
         "name": "Path to the Moon",
@@ -522,11 +522,25 @@
         "image": ""
       },
       {
+        "name": "She's So Unusual",
+        "url": "https://www.last.fm/music/Cyndi+Lauper/She%27s+So+Unusual",
+        "artist": "Cyndi Lauper",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ae70a7d166f5d47c6a7954f581cc8f9a.png"
+      },
+      {
         "name": "Gasolina (Bhangra Remix)",
         "url": "https://www.last.fm/music/Daddy+Yankee/Gasolina+(Bhangra+Remix)",
         "artist": "Daddy Yankee",
         "plays": "1",
         "image": ""
+      },
+      {
+        "name": "...And Then There Was X",
+        "url": "https://www.last.fm/music/DMX/...And+Then+There+Was+X",
+        "artist": "DMX",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ffa005c35e7f4708c7954dbe6d1bc76c.png"
       },
       {
         "name": "Path to the Moon",
@@ -562,20 +576,6 @@
         "artist": "Frankie Valli & the Four Seasons",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/023e184ea2c909d48a3bca230d65bbb9.jpg"
-      },
-      {
-        "name": "Path to the Moon",
-        "url": "https://www.last.fm/music/Gabriel+Faur%C3%A9/Path+to+the+Moon",
-        "artist": "Gabriel Fauré",
-        "plays": "1",
-        "image": ""
-      },
-      {
-        "name": "Exile",
-        "url": "https://www.last.fm/music/Gary+Numan/Exile",
-        "artist": "Gary Numan",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/113c762f98e645228f320b682cc4d5fc.jpg"
       }
     ],
     "tracks": [
@@ -734,6 +734,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "YOLO",
+        "url": "https://www.last.fm/music/The+Lonely+Island/_/YOLO",
+        "artist": "The Lonely Island",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Appalachian Spring (Suite)",
         "url": "https://www.last.fm/music/Aaron+Copland/_/Appalachian+Spring+(Suite)",
         "artist": "Aaron Copland",
@@ -849,13 +856,6 @@
         "name": "Twisting Man - 2021 Remastered Version",
         "url": "https://www.last.fm/music/Big+Electric+Cat/_/Twisting+Man+-+2021+Remastered+Version",
         "artist": "Big Electric Cat",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Distance",
-        "url": "https://www.last.fm/music/Cake/_/The+Distance",
-        "artist": "Cake",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1806,7 +1806,7 @@
       {
         "name": "The Lonely Island",
         "url": "https://www.last.fm/music/The+Lonely+Island",
-        "plays": "82",
+        "plays": "85",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2572,7 +2572,7 @@
       {
         "name": "The Lonely Island",
         "url": "https://www.last.fm/music/The+Lonely+Island",
-        "plays": "1948",
+        "plays": "1951",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
