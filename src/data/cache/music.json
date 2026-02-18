@@ -1,6 +1,6 @@
 {
   "user": {
-    "scrobbles": 274447
+    "scrobbles": 274454
   },
   "history": [
     {
@@ -48,19 +48,13 @@
     {
       "dayName": "Wed",
       "date": "2026-02-18",
-      "hours": "1.2",
+      "hours": "1.6",
       "lastHours": "4.6",
       "topArtist": "The Lonely Island"
     }
   ],
   "week": {
     "artists": [
-      {
-        "name": "Sergei Prokofiev",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "36",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
       {
         "name": "Maurice Ravel",
         "url": "https://www.last.fm/music/Maurice+Ravel",
@@ -83,6 +77,12 @@
         "name": "Philip Glass",
         "url": "https://www.last.fm/music/Philip+Glass",
         "plays": "24",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sergei Prokofiev",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev",
+        "plays": "22",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -152,6 +152,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Dmitri Shostakovich",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Joaquín Rodrigo",
         "url": "https://www.last.fm/music/Joaqu%C3%ADn+Rodrigo",
         "plays": "4",
@@ -166,6 +172,12 @@
       {
         "name": "Gary Numan",
         "url": "https://www.last.fm/music/Gary+Numan",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "George Enescu , Luiza Borac",
+        "url": "https://www.last.fm/music/George+Enescu+,+Luiza+Borac",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -282,28 +294,9 @@
         "url": "https://www.last.fm/music/Marilyn+Manson",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Michael Gore",
-        "url": "https://www.last.fm/music/Michael+Gore",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Nicolai Myaskovsky / A. Aliawdina",
-        "url": "https://www.last.fm/music/Nicolai+Myaskovsky+%2F+A.+Aliawdina",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
-      {
-        "name": "Fiftieth Anniversary Edition",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/Fiftieth+Anniversary+Edition",
-        "artist": "Sergei Prokofiev",
-        "plays": "36",
-        "image": ""
-      },
       {
         "name": "Kronos Quartet performs Philip Glass",
         "url": "https://www.last.fm/music/Philip+Glass/Kronos+Quartet+performs+Philip+Glass",
@@ -316,6 +309,13 @@
         "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa/String+Quartets+nos.+1+and+2+%2F+String+Trio+(original+version)",
         "artist": "Miklós Rózsa",
         "plays": "23",
+        "image": ""
+      },
+      {
+        "name": "Fiftieth Anniversary Edition",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Fiftieth+Anniversary+Edition",
+        "artist": "Sergei Prokofiev",
+        "plays": "22",
         "image": ""
       },
       {
@@ -431,6 +431,13 @@
         "image": ""
       },
       {
+        "name": "The Piano Concertos | Solo Works",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/The+Piano+Concertos+%7C+Solo+Works",
+        "artist": "Dmitri Shostakovich",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c100a1a722fa17da80e0e948261a5565.jpg"
+      },
+      {
         "name": "Concierto de Aranjuez",
         "url": "https://www.last.fm/music/Joaqu%C3%ADn+Rodrigo/Concierto+de+Aranjuez",
         "artist": "Joaquín Rodrigo",
@@ -442,6 +449,13 @@
         "url": "https://www.last.fm/music/Karol+Szymanowski/Secret+Love+Letters",
         "artist": "Karol Szymanowski",
         "plays": "4",
+        "image": ""
+      },
+      {
+        "name": "The Three Piano Suites",
+        "url": "https://www.last.fm/music/George+Enescu+,+Luiza+Borac/The+Three+Piano+Suites",
+        "artist": "George Enescu , Luiza Borac",
+        "plays": "3",
         "image": ""
       },
       {
@@ -560,20 +574,6 @@
         "name": "First Edition Encores",
         "url": "https://www.last.fm/music/Ernst+Toch/First+Edition+Encores",
         "artist": "Ernst Toch",
-        "plays": "1",
-        "image": ""
-      },
-      {
-        "name": "Jealous Ones Still Envy (J.O.S.E)",
-        "url": "https://www.last.fm/music/Fat+Joe/Jealous+Ones+Still+Envy+(J.O.S.E)",
-        "artist": "Fat Joe",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f9d979d28782518cc47f3eee29c6a4bf.jpg"
-      },
-      {
-        "name": "Path to the Moon",
-        "url": "https://www.last.fm/music/Florence+Price/Path+to+the+Moon",
-        "artist": "Florence Price",
         "plays": "1",
         "image": ""
       }
@@ -878,7 +878,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "132",
+        "plays": "136",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1281,6 +1281,13 @@
         "image": ""
       },
       {
+        "name": "The Piano Concertos | Solo Works",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/The+Piano+Concertos+%7C+Solo+Works",
+        "artist": "Dmitri Shostakovich",
+        "plays": "22",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c100a1a722fa17da80e0e948261a5565.jpg"
+      },
+      {
         "name": "American Cello, Vol. 1",
         "url": "https://www.last.fm/music/Terry+King/American+Cello,+Vol.+1",
         "artist": "Terry King",
@@ -1349,13 +1356,6 @@
         "artist": "Zoltán Kodály",
         "plays": "19",
         "image": ""
-      },
-      {
-        "name": "The Piano Concertos | Solo Works",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich/The+Piano+Concertos+%7C+Solo+Works",
-        "artist": "Dmitri Shostakovich",
-        "plays": "18",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c100a1a722fa17da80e0e948261a5565.jpg"
       },
       {
         "name": "Gabriela Ortiz: Yanga",
@@ -1640,30 +1640,30 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Symphony No. 5 in D Minor, Op. 47: I. Moderato",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Symphony+No.+5+in+D+Minor,+Op.+47:+I.+Moderato",
+        "name": "Piano Concerto No. 1 with Trumpet and Strings, Op. 35: I. Allegro moderato",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Piano+Concerto+No.+1+with+Trumpet+and+Strings,+Op.+35:+I.+Allegro+moderato",
         "artist": "Dmitri Shostakovich",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Violin Concerto no. 1 in A minor, op. 99 (formerly op. 77): I. Nocturne (Moderato)",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Violin+Concerto+no.+1+in+A+minor,+op.+99+(formerly+op.+77):+I.+Nocturne+(Moderato)",
+        "name": "Piano Concerto No. 1 with Trumpet and Strings, Op. 35: II. Lento",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Piano+Concerto+No.+1+with+Trumpet+and+Strings,+Op.+35:+II.+Lento",
         "artist": "Dmitri Shostakovich",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Earth Suite: I. Tectonic",
-        "url": "https://www.last.fm/music/Dobrinka+Tabakova/_/Earth+Suite:+I.+Tectonic",
-        "artist": "Dobrinka Tabakova",
+        "name": "Piano Concerto No. 1 with Trumpet and Strings, Op. 35: III. Moderato",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Piano+Concerto+No.+1+with+Trumpet+and+Strings,+Op.+35:+III.+Moderato",
+        "artist": "Dmitri Shostakovich",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Marked for Death",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Marked+for+Death",
-        "artist": "Emma Ruth Rundle",
+        "name": "Piano Concerto No. 1 with Trumpet and Strings, Op. 35: IV. Allegro con brio",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Piano+Concerto+No.+1+with+Trumpet+and+Strings,+Op.+35:+IV.+Allegro+con+brio",
+        "artist": "Dmitri Shostakovich",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1714,15 +1714,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Lera Auerbach",
-        "url": "https://www.last.fm/music/Lera+Auerbach",
-        "plays": "193",
+        "name": "Dmitri Shostakovich",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
+        "plays": "194",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Dmitri Shostakovich",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "190",
+        "name": "Lera Auerbach",
+        "url": "https://www.last.fm/music/Lera+Auerbach",
+        "plays": "193",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1894,12 +1894,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "The Birthday Massacre",
-        "url": "https://www.last.fm/music/The+Birthday+Massacre",
-        "plays": "67",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Philip Glass",
         "url": "https://www.last.fm/music/Philip+Glass",
         "plays": "66",
@@ -1908,6 +1902,12 @@
       {
         "name": "Frank Bridge",
         "url": "https://www.last.fm/music/Frank+Bridge",
+        "plays": "65",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Jean Sibelius",
+        "url": "https://www.last.fm/music/Jean+Sibelius",
         "plays": "65",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -2012,13 +2012,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/442dfa2b8e584e0680aae0fe7f5bb985.jpg"
       },
       {
-        "name": "Diamonds",
-        "url": "https://www.last.fm/music/The+Birthday+Massacre/Diamonds",
-        "artist": "The Birthday Massacre",
-        "plays": "66",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/40a299d93d8fef4cbe1029f562d03ac9.jpg"
-      },
-      {
         "name": "Marked For Death",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle/Marked+For+Death",
         "artist": "Emma Ruth Rundle",
@@ -2087,6 +2080,13 @@
         "artist": "Myrkur",
         "plays": "51",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f61de0c7e745b3072ba92fdeb1626d16.jpg"
+      },
+      {
+        "name": "Diamonds",
+        "url": "https://www.last.fm/music/The+Birthday+Massacre/Diamonds",
+        "artist": "The Birthday Massacre",
+        "plays": "51",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/40a299d93d8fef4cbe1029f562d03ac9.jpg"
       },
       {
         "name": "Cinderella / \"Classical\" Symphony",
@@ -2518,7 +2518,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "3944",
+        "plays": "3948",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
