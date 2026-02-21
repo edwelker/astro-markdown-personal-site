@@ -34,7 +34,7 @@ const enrichedItems = await enrichHighlightsWithImages(items);
           >
             {isCode && !hasImage && (
               <div class="pointer-events-none absolute -right-6 -bottom-6 h-32 w-32 rotate-12 text-black/5 dark:text-white/5">
-                <svg viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <svg viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
@@ -48,7 +48,7 @@ const enrichedItems = await enrichHighlightsWithImages(items);
               <>
                 <img
                   src={item.image}
-                  alt=""
+                  alt={item.title}
                   referrerpolicy="no-referrer"
                   class="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105"
                 />

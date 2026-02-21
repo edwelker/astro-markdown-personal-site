@@ -12,7 +12,7 @@ const { team, logoUrl } = Astro.props;
     <div class="mr-4 flex items-baseline">
       {
         logoUrl ? (
-          <img src={logoUrl} class="mr-2 h-6 w-6 self-center" alt="" />
+          <img src={logoUrl} class="mr-2 h-6 w-6 self-center" alt={team.name} />
         ) : (
           <span class="mr-2 self-center">{team.league === 'MLB' ? '⚾' : '🏀'}</span>
         )
