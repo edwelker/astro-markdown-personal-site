@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 274500
+    "scrobbles": 274513
   },
   "history": [
-    {
-      "dayName": "Sat",
-      "date": "2026-02-14",
-      "hours": "2.3",
-      "lastHours": "1.7",
-      "topArtist": "Frederica von Stade, André Previn, Pittsburgh Symphony Orchestra"
-    },
     {
       "dayName": "Sun",
       "date": "2026-02-15",
@@ -48,9 +41,16 @@
     {
       "dayName": "Fri",
       "date": "2026-02-20",
-      "hours": "0.4",
+      "hours": "0.9",
       "lastHours": "2.0",
       "topArtist": "George Enescu"
+    },
+    {
+      "dayName": "Sat",
+      "date": "2026-02-21",
+      "hours": "0.2",
+      "lastHours": "2.3",
+      "topArtist": "Mission of Burma"
     }
   ],
   "week": {
@@ -74,12 +74,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Miklós Rózsa",
-        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
-        "plays": "14",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Frederica von Stade, André Previn, Pittsburgh Symphony Orchestra",
         "url": "https://www.last.fm/music/Frederica+von+Stade,+Andr%C3%A9+Previn,+Pittsburgh+Symphony+Orchestra",
         "plays": "10",
@@ -94,6 +88,12 @@
       {
         "name": "Gary Numan",
         "url": "https://www.last.fm/music/Gary+Numan",
+        "plays": "9",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "George Enescu",
+        "url": "https://www.last.fm/music/George+Enescu",
         "plays": "9",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -116,15 +116,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "George Enescu",
-        "url": "https://www.last.fm/music/George+Enescu",
+        "name": "London Symphony Orchestra, Sir Georg Solti, Béla Bartók",
+        "url": "https://www.last.fm/music/London+Symphony+Orchestra,+Sir+Georg+Solti,+B%C3%A9la+Bart%C3%B3k",
         "plays": "6",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "London Symphony Orchestra, Sir Georg Solti, Béla Bartók",
-        "url": "https://www.last.fm/music/London+Symphony+Orchestra,+Sir+Georg+Solti,+B%C3%A9la+Bart%C3%B3k",
-        "plays": "6",
+        "name": "Bohuslav Martinů",
+        "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF",
+        "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -266,6 +266,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Gotan Project",
+        "url": "https://www.last.fm/music/Gotan+Project",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Libby Larsen",
         "url": "https://www.last.fm/music/Libby+Larsen",
         "plays": "1",
@@ -286,12 +292,6 @@
       {
         "name": "Meredith Monk",
         "url": "https://www.last.fm/music/Meredith+Monk",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Michael Gore",
-        "url": "https://www.last.fm/music/Michael+Gore",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -340,25 +340,18 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b6e9272716ac45cec5735a47663b3daa.jpg"
       },
       {
+        "name": "Symphony No. 3 / Romanian Rhapsody No. 1",
+        "url": "https://www.last.fm/music/George+Enescu/Symphony+No.+3+%2F+Romanian+Rhapsody+No.+1",
+        "artist": "George Enescu",
+        "plays": "8",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/061807ae17fc96e901de7ce78c919a5c.jpg"
+      },
+      {
         "name": "Complete Beethoven Edition, Volume 12: The Middle Quartets",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven/Complete+Beethoven+Edition,+Volume+12:+The+Middle+Quartets",
         "artist": "Ludwig van Beethoven",
         "plays": "8",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a59a738fe8e4af3ca7e85dd63602b72.jpg"
-      },
-      {
-        "name": "Rózsa: String Quartets Nos. 1 and 2 / Rhapsody",
-        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa/R%C3%B3zsa:+String+Quartets+Nos.+1+and+2+%2F+Rhapsody",
-        "artist": "Miklós Rózsa",
-        "plays": "7",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/1b717a99efa2449cabd423c882316ea5.jpg"
-      },
-      {
-        "name": "String Quartets nos. 1 and 2 / String Trio (original version)",
-        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa/String+Quartets+nos.+1+and+2+%2F+String+Trio+(original+version)",
-        "artist": "Miklós Rózsa",
-        "plays": "7",
-        "image": ""
       },
       {
         "name": "Path to the Moon",
@@ -396,18 +389,18 @@
         "image": ""
       },
       {
+        "name": "Spaliček / The Spectre's Bride / The Romance Of The Dandelions / The Primrose",
+        "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF/Spali%C4%8Dek+%2F+The+Spectre%27s+Bride+%2F+The+Romance+Of+The+Dandelions+%2F+The+Primrose",
+        "artist": "Bohuslav Martinů",
+        "plays": "5",
+        "image": ""
+      },
+      {
         "name": "Path to the Moon",
         "url": "https://www.last.fm/music/Claude+Debussy/Path+to+the+Moon",
         "artist": "Claude Debussy",
         "plays": "5",
         "image": ""
-      },
-      {
-        "name": "Symphony No. 3 / Romanian Rhapsody No. 1",
-        "url": "https://www.last.fm/music/George+Enescu/Symphony+No.+3+%2F+Romanian+Rhapsody+No.+1",
-        "artist": "George Enescu",
-        "plays": "5",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/061807ae17fc96e901de7ce78c919a5c.jpg"
       },
       {
         "name": "Beethoven: Concerto for Violin / Bernstein: Serenade",
@@ -576,6 +569,13 @@
         "artist": "Gabriel Fauré",
         "plays": "1",
         "image": ""
+      },
+      {
+        "name": "Women of Note",
+        "url": "https://www.last.fm/music/Galina+Ustvolskaya/Women+of+Note",
+        "artist": "Galina Ustvolskaya",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/989da1f066adeda926848192dc27308d.jpg"
       }
     ],
     "tracks": [
@@ -584,6 +584,27 @@
         "url": "https://www.last.fm/music/George+Enescu/_/Symphony+No.+3+In+C+Major,+Op.+21:+I.+Moderato,+Un+Poco+Maestoso",
         "artist": "George Enescu",
         "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony No. 3 In C Major, Op. 21: II. Vivace, Ma Non Troppo",
+        "url": "https://www.last.fm/music/George+Enescu/_/Symphony+No.+3+In+C+Major,+Op.+21:+II.+Vivace,+Ma+Non+Troppo",
+        "artist": "George Enescu",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony No. 3 In C Major, Op. 21: III. Lento, Ma Non Troppo",
+        "url": "https://www.last.fm/music/George+Enescu/_/Symphony+No.+3+In+C+Major,+Op.+21:+III.+Lento,+Ma+Non+Troppo",
+        "artist": "George Enescu",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Two Romanian Rhapsodies, Op. 11: No. 1 in A Major",
+        "url": "https://www.last.fm/music/George+Enescu/_/Two+Romanian+Rhapsodies,+Op.+11:+No.+1+in+A+Major",
+        "artist": "George Enescu",
+        "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -741,6 +762,41 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Petrklič, (The Primrose), H. 348: I. A new Hat (Poco Allegro)",
+        "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF/_/Petrkli%C4%8D,+(The+Primrose),+H.+348:+I.+A+new+Hat+(Poco+Allegro)",
+        "artist": "Bohuslav Martinů",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Petrklič, (The Primrose), H. 348: II. Behind our Farmyard (Allegro)",
+        "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF/_/Petrkli%C4%8D,+(The+Primrose),+H.+348:+II.+Behind+our+Farmyard+(Allegro)",
+        "artist": "Bohuslav Martinů",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Petrklič, (The Primrose), H. 348: III. Complaint (Poco Andante)",
+        "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF/_/Petrkli%C4%8D,+(The+Primrose),+H.+348:+III.+Complaint+(Poco+Andante)",
+        "artist": "Bohuslav Martinů",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Petrklič, (The Primrose), H. 348: IV. Painted Wood (Poco Allegro)",
+        "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF/_/Petrkli%C4%8D,+(The+Primrose),+H.+348:+IV.+Painted+Wood+(Poco+Allegro)",
+        "artist": "Bohuslav Martinů",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Spaliček, H.214: Opening",
+        "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF/_/Spali%C4%8Dek,+H.214:+Opening",
+        "artist": "Bohuslav Martinů",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "The Distance",
         "url": "https://www.last.fm/music/Cake/_/The+Distance",
         "artist": "Cake",
@@ -800,62 +856,6 @@
         "name": "Piano Concerto No. 1 with Trumpet and Strings, Op. 35: I. Allegro moderato",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Piano+Concerto+No.+1+with+Trumpet+and+Strings,+Op.+35:+I.+Allegro+moderato",
         "artist": "Dmitri Shostakovich",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Concerto No. 1 with Trumpet and Strings, Op. 35: II. Lento",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Piano+Concerto+No.+1+with+Trumpet+and+Strings,+Op.+35:+II.+Lento",
-        "artist": "Dmitri Shostakovich",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Concerto No. 1 with Trumpet and Strings, Op. 35: III. Moderato",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Piano+Concerto+No.+1+with+Trumpet+and+Strings,+Op.+35:+III.+Moderato",
-        "artist": "Dmitri Shostakovich",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Concerto No. 1 with Trumpet and Strings, Op. 35: IV. Allegro con brio",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Piano+Concerto+No.+1+with+Trumpet+and+Strings,+Op.+35:+IV.+Allegro+con+brio",
-        "artist": "Dmitri Shostakovich",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Party Up",
-        "url": "https://www.last.fm/music/DMX/_/Party+Up",
-        "artist": "DMX",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Hand of God",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Hand+of+God",
-        "artist": "Emma Ruth Rundle",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Heaven",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Heaven",
-        "artist": "Emma Ruth Rundle",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Marked for Death",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Marked+for+Death",
-        "artist": "Emma Ruth Rundle",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Medusa",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Medusa",
-        "artist": "Emma Ruth Rundle",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -924,6 +924,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Bohuslav Martinů",
+        "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF",
+        "plays": "49",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Claude Debussy",
         "url": "https://www.last.fm/music/Claude+Debussy",
         "plays": "49",
@@ -933,12 +939,6 @@
         "name": "Modest Petrovich Mussorgsky",
         "url": "https://www.last.fm/music/Modest+Petrovich+Mussorgsky",
         "plays": "46",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Bohuslav Martinů",
-        "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF",
-        "plays": "44",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1026,6 +1026,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "George Enescu",
+        "url": "https://www.last.fm/music/George+Enescu",
+        "plays": "27",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "ohGr",
         "url": "https://www.last.fm/music/ohGr",
         "plays": "27",
@@ -1058,12 +1064,6 @@
       {
         "name": "George Antheil",
         "url": "https://www.last.fm/music/George+Antheil",
-        "plays": "24",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "George Enescu",
-        "url": "https://www.last.fm/music/George+Enescu",
         "plays": "24",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1734,7 +1734,7 @@
       {
         "name": "Nine Inch Nails",
         "url": "https://www.last.fm/music/Nine+Inch+Nails",
-        "plays": "150",
+        "plays": "148",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
