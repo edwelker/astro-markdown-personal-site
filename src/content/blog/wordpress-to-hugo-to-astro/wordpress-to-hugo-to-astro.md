@@ -64,7 +64,7 @@ TypeScript is... fine. It's more typing than Python, and it feels like it has mo
 
 To get this thing shipped, I started with the [Astro Nano](https://github.com/markhorn-dev/astro-nano) theme. It’s great, but it’s built on Tailwind CSS.
 
-Look, I championed [OOCSS](/tags/css). Back when we refactored PubMed.gov, we crushed thousands of lines of CSS down to a few hundred using patterns. We ported that to PubMed Central with barely 80 lines of new code. That system worked for over 100 developers because it relied on architecture, not reinventing the wheel every time you needed a button.
+Look, I championed [OOCSS](/tags/css/). Back when we refactored PubMed.gov, we crushed thousands of lines of CSS down to a few hundred using patterns. We ported that to PubMed Central with barely 80 lines of new code. That system worked for over 100 developers because it relied on architecture, not reinventing the wheel every time you needed a button.
 
 Tailwind feels like the opposite. It feels gross. Cluttering my markup with a soup of utility classes? It destroys readability. It feels like a regression. It hurts my soul.
 

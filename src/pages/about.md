@@ -35,7 +35,8 @@ I’m a photo geek as well. My dad was a big [Olympus](https://en.wikipedia.org/
 
 I’m an avid [Red Sox](https://www.mlb.com/redsox) fan who grew up watching them during the summers I spent at my grandparents' house.
 
-For a list of a lot of the stuff I use regularly, check out my [Uses](/uses) page.
+For a list of a lot of the stuff I use regularly, check out my [Uses](/uses/) page.
+
 
 ## About this site
 
