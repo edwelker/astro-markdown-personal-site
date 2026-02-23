@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 274539
+    "scrobbles": 274562
   },
   "history": [
-    {
-      "dayName": "Mon",
-      "date": "2026-02-16",
-      "hours": "3.6",
-      "lastHours": "0.6",
-      "topArtist": "Maurice Ravel"
-    },
     {
       "dayName": "Tue",
       "date": "2026-02-17",
@@ -51,20 +44,33 @@
       "hours": "0.5",
       "lastHours": "0.2",
       "topArtist": "Karol Szymanowski"
+    },
+    {
+      "dayName": "Mon",
+      "date": "2026-02-23",
+      "hours": "1.3",
+      "lastHours": "3.6",
+      "topArtist": "Joonas Kokkonen"
     }
   ],
   "week": {
     "artists": [
       {
-        "name": "Maurice Ravel",
-        "url": "https://www.last.fm/music/Maurice+Ravel",
-        "plays": "34",
+        "name": "George Enescu",
+        "url": "https://www.last.fm/music/George+Enescu",
+        "plays": "18",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Ludwig van Beethoven",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
         "plays": "17",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Maurice Ravel",
+        "url": "https://www.last.fm/music/Maurice+Ravel",
+        "plays": "16",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -80,9 +86,9 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "George Enescu",
-        "url": "https://www.last.fm/music/George+Enescu",
-        "plays": "11",
+        "name": "Joonas Kokkonen",
+        "url": "https://www.last.fm/music/Joonas+Kokkonen",
+        "plays": "12",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -148,6 +154,12 @@
       {
         "name": "Sofia Gubaidulina",
         "url": "https://www.last.fm/music/Sofia+Gubaidulina",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Борис Иванович Тищенко",
+        "url": "https://www.last.fm/music/%D0%91%D0%BE%D1%80%D0%B8%D1%81+%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87+%D0%A2%D0%B8%D1%89%D0%B5%D0%BD%D0%BA%D0%BE",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -282,31 +294,12 @@
         "url": "https://www.last.fm/music/P!nk",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Pig",
-        "url": "https://www.last.fm/music/Pig",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ray Stevens",
-        "url": "https://www.last.fm/music/Ray+Stevens",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
       {
         "name": "Piano Music, Volume 1",
         "url": "https://www.last.fm/music/Maurice+Ravel/Piano+Music,+Volume+1",
-        "artist": "Maurice Ravel",
-        "plays": "18",
-        "image": ""
-      },
-      {
-        "name": "Piano Music, Volume 2",
-        "url": "https://www.last.fm/music/Maurice+Ravel/Piano+Music,+Volume+2",
         "artist": "Maurice Ravel",
         "plays": "16",
         "image": ""
@@ -324,6 +317,13 @@
         "artist": "Nikolai Tcherepnin",
         "plays": "14",
         "image": ""
+      },
+      {
+        "name": "Cello Concerto / Symphonies Nos. 3 & 4",
+        "url": "https://www.last.fm/music/Joonas+Kokkonen/Cello+Concerto+%2F+Symphonies+Nos.+3+&+4",
+        "artist": "Joonas Kokkonen",
+        "plays": "12",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f4a2d312188ec52f9ed6d7e427167816.jpg"
       },
       {
         "name": "The Wack Album",
@@ -345,6 +345,13 @@
         "artist": "Ludwig van Beethoven",
         "plays": "8",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a59a738fe8e4af3ca7e85dd63602b72.jpg"
+      },
+      {
+        "name": "Symphony no. 1 / Suite no. 3 'Villageoise'",
+        "url": "https://www.last.fm/music/George+Enescu/Symphony+no.+1+%2F+Suite+no.+3+%27Villageoise%27",
+        "artist": "George Enescu",
+        "plays": "7",
+        "image": ""
       },
       {
         "name": "Path to the Moon",
@@ -407,6 +414,13 @@
         "url": "https://www.last.fm/music/Leonard+Bernstein/Beethoven:+Concerto+for+Violin+%2F+Bernstein:+Serenade",
         "artist": "Leonard Bernstein",
         "plays": "5",
+        "image": ""
+      },
+      {
+        "name": "Violin Concerto No. 2, Op. 84",
+        "url": "https://www.last.fm/music/Boris+Tishchenko/Violin+Concerto+No.+2,+Op.+84",
+        "artist": "Boris Tishchenko",
+        "plays": "4",
         "image": ""
       },
       {
@@ -562,20 +576,6 @@
         "artist": "Mieczysław Weinberg",
         "plays": "1",
         "image": ""
-      },
-      {
-        "name": "Vs.",
-        "url": "https://www.last.fm/music/Mission+of+Burma/Vs.",
-        "artist": "Mission of Burma",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a2421a41fa9246368a0eec13715d2dca.png"
-      },
-      {
-        "name": "Nana and Manos",
-        "url": "https://www.last.fm/music/Nana+Mouskouri/Nana+and+Manos",
-        "artist": "Nana Mouskouri",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/5949c8bbf9eb7b1981d061ec0cb64719.jpg"
       }
     ],
     "tracks": [
@@ -734,6 +734,34 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Violin Concerto no. 2, op .84: Allegro",
+        "url": "https://www.last.fm/music/Boris+Tishchenko/_/Violin+Concerto+no.+2,+op+.84:+Allegro",
+        "artist": "Boris Tishchenko",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Violin Concerto no. 2, op .84: Allegro moderato",
+        "url": "https://www.last.fm/music/Boris+Tishchenko/_/Violin+Concerto+no.+2,+op+.84:+Allegro+moderato",
+        "artist": "Boris Tishchenko",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Violin Concerto no. 2, op .84: Andante",
+        "url": "https://www.last.fm/music/Boris+Tishchenko/_/Violin+Concerto+no.+2,+op+.84:+Andante",
+        "artist": "Boris Tishchenko",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Violin Concerto no. 2, op .84: Presto",
+        "url": "https://www.last.fm/music/Boris+Tishchenko/_/Violin+Concerto+no.+2,+op+.84:+Presto",
+        "artist": "Boris Tishchenko",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Beau soir, L. 6 (Arr. for Cello & Piano by Alexander Grechaninov)",
         "url": "https://www.last.fm/music/Claude+Debussy/_/Beau+soir,+L.+6+(Arr.+for+Cello+&+Piano+by+Alexander+Grechaninov)",
         "artist": "Claude Debussy",
@@ -830,34 +858,6 @@
         "artist": "Emma Ruth Rundle",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Medusa",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Medusa",
-        "artist": "Emma Ruth Rundle",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Protection",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Protection",
-        "artist": "Emma Ruth Rundle",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "So, Come",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/So,+Come",
-        "artist": "Emma Ruth Rundle",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Schönste Nacht, Op. 36 No. 25",
-        "url": "https://www.last.fm/music/Erich+Wolfgang+Korngold/_/Sch%C3%B6nste+Nacht,+Op.+36+No.+25",
-        "artist": "Erich Wolfgang Korngold",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -897,12 +897,6 @@
         "name": "Ludwig van Beethoven",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
         "plays": "65",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "György Ligeti",
-        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti",
-        "plays": "60",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -972,6 +966,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "George Enescu",
+        "url": "https://www.last.fm/music/George+Enescu",
+        "plays": "36",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Karol Szymanowski",
         "url": "https://www.last.fm/music/Karol+Szymanowski",
         "plays": "34",
@@ -1005,12 +1005,6 @@
         "name": "The Smashing Pumpkins",
         "url": "https://www.last.fm/music/The+Smashing+Pumpkins",
         "plays": "30",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "George Enescu",
-        "url": "https://www.last.fm/music/George+Enescu",
-        "plays": "29",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1102,6 +1096,12 @@
         "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
         "plays": "22",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Terry King",
+        "url": "https://www.last.fm/music/Terry+King",
+        "plays": "22",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -1146,13 +1146,6 @@
         "artist": "Robert Schumann",
         "plays": "47",
         "image": ""
-      },
-      {
-        "name": "Clear or Cloudy: Complete Recordings on Deutsche Grammophon",
-        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti/Clear+or+Cloudy:+Complete+Recordings+on+Deutsche+Grammophon",
-        "artist": "György Ligeti",
-        "plays": "43",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d59682fd4ecb4339c3de3dd798cc0bcd.png"
       },
       {
         "name": "The Complete EMI Recordings",
@@ -1384,6 +1377,13 @@
         "artist": "ohGr",
         "plays": "17",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c5424e7b022678aa4da08c78fd0de1de.jpg"
+      },
+      {
+        "name": "How We Quit the Forest",
+        "url": "https://www.last.fm/music/Rasputina/How+We+Quit+the+Forest",
+        "artist": "Rasputina",
+        "plays": "17",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/24d7074aedc84ff79fe0db8f68076c27.jpg"
       }
     ],
     "tracks": [
