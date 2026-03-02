@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 274757
+    "scrobbles": 274761
   },
   "history": [
-    {
-      "dayName": "Mon",
-      "date": "2026-02-23",
-      "hours": "2.5",
-      "lastHours": "3.6",
-      "topArtist": "Joonas Kokkonen"
-    },
     {
       "dayName": "Tue",
       "date": "2026-02-24",
@@ -51,6 +44,13 @@
       "hours": "0.5",
       "lastHours": "0.5",
       "topArtist": "Robert Schumann"
+    },
+    {
+      "dayName": "Mon",
+      "date": "2026-03-02",
+      "hours": "0.2",
+      "lastHours": "2.5",
+      "topArtist": "Nine Inch Nails"
     }
   ],
   "week": {
@@ -110,14 +110,20 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "George Enescu",
-        "url": "https://www.last.fm/music/George+Enescu",
+        "name": "Nine Inch Nails",
+        "url": "https://www.last.fm/music/Nine+Inch+Nails",
         "plays": "8",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Geirr Tveitt",
         "url": "https://www.last.fm/music/Geirr+Tveitt",
+        "plays": "7",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "George Enescu",
+        "url": "https://www.last.fm/music/George+Enescu",
         "plays": "7",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -131,12 +137,6 @@
         "name": "Родион Константинович Щедрин",
         "url": "https://www.last.fm/music/%D0%A0%D0%BE%D0%B4%D0%B8%D0%BE%D0%BD+%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%BE%D0%B2%D0%B8%D1%87+%D0%A9%D0%B5%D0%B4%D1%80%D0%B8%D0%BD",
         "plays": "5",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Nine Inch Nails",
-        "url": "https://www.last.fm/music/Nine+Inch+Nails",
-        "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -403,6 +403,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/93869a3524cb4869b0f0497bc3472108.jpg"
       },
       {
+        "name": "And All That Could Have Been: Live",
+        "url": "https://www.last.fm/music/Nine+Inch+Nails/And+All+That+Could+Have+Been:+Live",
+        "artist": "Nine Inch Nails",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e6ebc064ec031997efac0fb31a783a70.jpg"
+      },
+      {
         "name": "4 Symphonien",
         "url": "https://www.last.fm/music/Robert+Schumann/4+Symphonien",
         "artist": "Robert Schumann",
@@ -543,13 +550,6 @@
         "image": ""
       },
       {
-        "name": "Symphony no. 3 / Romanian Rhapsody no. 1",
-        "url": "https://www.last.fm/music/George+Enescu;+Leeds+Festival+Chorus,+BBC+Philharmonic,+Gennady+Rozhdestvensky/Symphony+no.+3+%2F+Romanian+Rhapsody+no.+1",
-        "artist": "George Enescu; Leeds Festival Chorus, BBC Philharmonic, Gennady Rozhdestvensky",
-        "plays": "1",
-        "image": ""
-      },
-      {
         "name": "Handel: Where'er You Walk (From \"Semele\")",
         "url": "https://www.last.fm/music/George+Frideric+Handel/Handel:+Where%27er+You+Walk+(From+%22Semele%22)",
         "artist": "George Frideric Handel",
@@ -674,6 +674,13 @@
         "name": "III. Fagraste viso pao Jorae (The loveliest song on earth)",
         "url": "https://www.last.fm/music/Geirr+Tveitt/_/III.+Fagraste+viso+pao+Jorae+(The+loveliest+song+on+earth)",
         "artist": "Geirr Tveitt",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Wish",
+        "url": "https://www.last.fm/music/Nine+Inch+Nails/_/Wish",
+        "artist": "Nine Inch Nails",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -851,13 +858,6 @@
         "artist": "Ani DiFranco",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "So kiss me and be damned. - from \"Wuthering Heights\" Original Motion Picture Score",
-        "url": "https://www.last.fm/music/Anthony+Willis/_/So+kiss+me+and+be+damned.+-+from+%22Wuthering+Heights%22+Original+Motion+Picture+Score",
-        "artist": "Anthony Willis",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -870,15 +870,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Austra",
-        "url": "https://www.last.fm/music/Austra",
-        "plays": "163",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
         "plays": "136",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Austra",
+        "url": "https://www.last.fm/music/Austra",
+        "plays": "109",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1109,7 +1109,7 @@
         "name": "Chin Up Buttercup",
         "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
         "artist": "Austra",
-        "plays": "126",
+        "plays": "109",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
       },
       {
@@ -1391,70 +1391,70 @@
         "name": "Amnesia",
         "url": "https://www.last.fm/music/Austra/_/Amnesia",
         "artist": "Austra",
-        "plays": "16",
+        "plays": "14",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Math Equation",
         "url": "https://www.last.fm/music/Austra/_/Math+Equation",
         "artist": "Austra",
-        "plays": "14",
+        "plays": "12",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Siren Song",
         "url": "https://www.last.fm/music/Austra/_/Siren+Song",
         "artist": "Austra",
-        "plays": "14",
+        "plays": "12",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Chin up Buttercup",
         "url": "https://www.last.fm/music/Austra/_/Chin+up+Buttercup",
         "artist": "Austra",
-        "plays": "13",
+        "plays": "11",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Blindsided",
         "url": "https://www.last.fm/music/Austra/_/Blindsided",
         "artist": "Austra",
-        "plays": "12",
+        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Fallen Cloud",
         "url": "https://www.last.fm/music/Austra/_/Fallen+Cloud",
         "artist": "Austra",
-        "plays": "12",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Think Twice",
-        "url": "https://www.last.fm/music/Austra/_/Think+Twice",
-        "artist": "Austra",
-        "plays": "12",
+        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Good Riddance",
         "url": "https://www.last.fm/music/Austra/_/Good+Riddance",
         "artist": "Austra",
-        "plays": "11",
+        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Look Me in the Eye",
         "url": "https://www.last.fm/music/Austra/_/Look+Me+in+the+Eye",
         "artist": "Austra",
-        "plays": "11",
+        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "The Hopefulness of Dawn",
         "url": "https://www.last.fm/music/Austra/_/The+Hopefulness+of+Dawn",
         "artist": "Austra",
-        "plays": "11",
+        "plays": "10",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Think Twice",
+        "url": "https://www.last.fm/music/Austra/_/Think+Twice",
+        "artist": "Austra",
+        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1734,7 +1734,7 @@
       {
         "name": "Nine Inch Nails",
         "url": "https://www.last.fm/music/Nine+Inch+Nails",
-        "plays": "142",
+        "plays": "146",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2482,7 +2482,7 @@
       {
         "name": "Nine Inch Nails",
         "url": "https://www.last.fm/music/Nine+Inch+Nails",
-        "plays": "11895",
+        "plays": "11899",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -3154,7 +3154,7 @@
         "name": "Wish",
         "url": "https://www.last.fm/music/Nine+Inch+Nails/_/Wish",
         "artist": "Nine Inch Nails",
-        "plays": "185",
+        "plays": "187",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
