@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 274802
+    "scrobbles": 274833
   },
   "history": [
-    {
-      "dayName": "Wed",
-      "date": "2026-02-25",
-      "hours": "1.3",
-      "lastHours": "2.6",
-      "topArtist": "Ani DiFranco"
-    },
     {
       "dayName": "Thu",
       "date": "2026-02-26",
@@ -34,7 +27,7 @@
     {
       "dayName": "Sun",
       "date": "2026-03-01",
-      "hours": "0.5",
+      "hours": "0.6",
       "lastHours": "0.5",
       "topArtist": "Robert Schumann"
     },
@@ -48,9 +41,16 @@
     {
       "dayName": "Tue",
       "date": "2026-03-03",
-      "hours": "0.8",
+      "hours": "2.5",
       "lastHours": "1.0",
-      "topArtist": "Frédéric Chopin"
+      "topArtist": "Franz Schubert"
+    },
+    {
+      "dayName": "Wed",
+      "date": "2026-03-04",
+      "hours": "0.1",
+      "lastHours": "1.3",
+      "topArtist": "Squarepusher"
     }
   ],
   "week": {
@@ -86,6 +86,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Franz Schubert",
+        "url": "https://www.last.fm/music/Franz+Schubert",
+        "plays": "13",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Sophia Jani",
         "url": "https://www.last.fm/music/Sophia+Jani",
         "plays": "13",
@@ -104,6 +110,18 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Paul Hindemith",
+        "url": "https://www.last.fm/music/Paul+Hindemith",
+        "plays": "8",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Frédéric Chopin",
+        "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin",
+        "plays": "7",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Geirr Tveitt",
         "url": "https://www.last.fm/music/Geirr+Tveitt",
         "plays": "7",
@@ -116,8 +134,8 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Frédéric Chopin",
-        "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin",
+        "name": "Hindemith / Gertler, Tortelier, Ancerl",
+        "url": "https://www.last.fm/music/Hindemith+%2F+Gertler,+Tortelier,+Ancerl",
         "plays": "6",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -173,6 +191,12 @@
         "name": "Ludwig van Beethoven",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
         "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Aaron Copland",
+        "url": "https://www.last.fm/music/Aaron+Copland",
+        "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -270,30 +294,6 @@
         "url": "https://www.last.fm/music/Nadia+Boulanger",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Nico Muhly",
-        "url": "https://www.last.fm/music/Nico+Muhly",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Niklas Paschburg",
-        "url": "https://www.last.fm/music/Niklas+Paschburg",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Pauline Viardot",
-        "url": "https://www.last.fm/music/Pauline+Viardot",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Pete Rock & C.L. Smooth",
-        "url": "https://www.last.fm/music/Pete+Rock+&+C.L.+Smooth",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -333,6 +333,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/df10a8fd134c15bc383db73dba757d38.png"
       },
       {
+        "name": "Winterreise",
+        "url": "https://www.last.fm/music/Franz+Schubert/Winterreise",
+        "artist": "Franz Schubert",
+        "plays": "13",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/491393c31cc2d0d6c3ed63780854235e.jpg"
+      },
+      {
         "name": "Music as a Mirror",
         "url": "https://www.last.fm/music/Sophia+Jani/Music+as+a+Mirror",
         "artist": "Sophia Jani",
@@ -352,6 +359,20 @@
         "artist": "Ani DiFranco",
         "plays": "8",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7d0fc8c6f87546c4c620eb8bceb8f125.jpg"
+      },
+      {
+        "name": "Schmidt: Symphony No. 3 / Hindemith: Concerto for Orchestra",
+        "url": "https://www.last.fm/music/Paul+Hindemith/Schmidt:+Symphony+No.+3+%2F+Hindemith:+Concerto+for+Orchestra",
+        "artist": "Paul Hindemith",
+        "plays": "8",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/071c0520d93f42be90fd651ac58f934b.jpg"
+      },
+      {
+        "name": "SUP-955 - Violin & Cello Concertos",
+        "url": "https://www.last.fm/music/Hindemith+%2F+Gertler,+Tortelier,+Ancerl/SUP-955+-+Violin+&+Cello+Concertos",
+        "artist": "Hindemith / Gertler, Tortelier, Ancerl",
+        "plays": "6",
+        "image": ""
       },
       {
         "name": "Secret Love Letters",
@@ -466,6 +487,20 @@
         "image": ""
       },
       {
+        "name": "Chopin: Cello Sonata, op. 65 / Polonaise, op. 3 / Schumann: Adagio & Allegro, op. 70",
+        "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin/Chopin:+Cello+Sonata,+op.+65+%2F+Polonaise,+op.+3+%2F+Schumann:+Adagio+&+Allegro,+op.+70",
+        "artist": "Frédéric Chopin",
+        "plays": "2",
+        "image": ""
+      },
+      {
+        "name": "Copland Conducts Copland",
+        "url": "https://www.last.fm/music/Aaron+Copland/Copland+Conducts+Copland",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/dc7da9a077fe38c0086cc0a29df8eed6.jpg"
+      },
+      {
         "name": "Black Mountain",
         "url": "https://www.last.fm/music/Alexej+Gerassimez/Black+Mountain",
         "artist": "Alexej Gerassimez",
@@ -541,41 +576,6 @@
         "artist": "Franz Liszt",
         "plays": "1",
         "image": ""
-      },
-      {
-        "name": "Chopin: Cello Sonata, op. 65 / Polonaise, op. 3 / Schumann: Adagio & Allegro, op. 70",
-        "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin/Chopin:+Cello+Sonata,+op.+65+%2F+Polonaise,+op.+3+%2F+Schumann:+Adagio+&+Allegro,+op.+70",
-        "artist": "Frédéric Chopin",
-        "plays": "1",
-        "image": ""
-      },
-      {
-        "name": "Funeral March Meditation (After Piano Sonata No. 2 in B-Flat Minor, Op. 35: III. Marche funèbre)",
-        "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin/Funeral+March+Meditation+(After+Piano+Sonata+No.+2+in+B-Flat+Minor,+Op.+35:+III.+Marche+fun%C3%A8bre)",
-        "artist": "Frédéric Chopin",
-        "plays": "1",
-        "image": ""
-      },
-      {
-        "name": "Handel: Where'er You Walk (From \"Semele\")",
-        "url": "https://www.last.fm/music/George+Frideric+Handel/Handel:+Where%27er+You+Walk+(From+%22Semele%22)",
-        "artist": "George Frideric Handel",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/acd04ecd7750299f714b4c51c0137984.jpg"
-      },
-      {
-        "name": "Stravinsky: Three Movements from Petrushka, K012: III. La semaine grasse",
-        "url": "https://www.last.fm/music/Igor+Stravinsky/Stravinsky:+Three+Movements+from+Petrushka,+K012:+III.+La+semaine+grasse",
-        "artist": "Igor Stravinsky",
-        "plays": "1",
-        "image": ""
-      },
-      {
-        "name": "Love Will Never Do (Without You): The Remixes",
-        "url": "https://www.last.fm/music/Janet+Jackson/Love+Will+Never+Do+(Without+You):+The+Remixes",
-        "artist": "Janet Jackson",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4657942c7668848d76eef2e7752e8649.jpg"
       }
     ],
     "tracks": [
@@ -689,6 +689,41 @@
         "url": "https://www.last.fm/music/Nine+Inch+Nails/_/Wish",
         "artist": "Nine Inch Nails",
         "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Concerto for Orchestra, Op. 38: I. Mit Kraft, mässig schnelle Viertel",
+        "url": "https://www.last.fm/music/Paul+Hindemith/_/Concerto+for+Orchestra,+Op.+38:+I.+Mit+Kraft,+m%C3%A4ssig+schnelle+Viertel",
+        "artist": "Paul Hindemith",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Concerto for Orchestra, Op. 38: II. Sehr schnelle Halbe",
+        "url": "https://www.last.fm/music/Paul+Hindemith/_/Concerto+for+Orchestra,+Op.+38:+II.+Sehr+schnelle+Halbe",
+        "artist": "Paul Hindemith",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Concerto for Orchestra, Op. 38: III. Marsch für Holzbläser. Nicht zu langsame Viertel",
+        "url": "https://www.last.fm/music/Paul+Hindemith/_/Concerto+for+Orchestra,+Op.+38:+III.+Marsch+f%C3%BCr+Holzbl%C3%A4ser.+Nicht+zu+langsame+Viertel",
+        "artist": "Paul Hindemith",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Concerto for Orchestra, Op. 38: IV. Basso ostinato. Schnelle Viertel",
+        "url": "https://www.last.fm/music/Paul+Hindemith/_/Concerto+for+Orchestra,+Op.+38:+IV.+Basso+ostinato.+Schnelle+Viertel",
+        "artist": "Paul Hindemith",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Appalachian Spring",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Appalachian+Spring",
+        "artist": "Aaron Copland",
+        "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -823,41 +858,6 @@
         "artist": "Ani DiFranco",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Million You Never Made",
-        "url": "https://www.last.fm/music/Ani+DiFranco/_/The+Million+You+Never+Made",
-        "artist": "Ani DiFranco",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "This Bouquet",
-        "url": "https://www.last.fm/music/Ani+DiFranco/_/This+Bouquet",
-        "artist": "Ani DiFranco",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Tip Toe",
-        "url": "https://www.last.fm/music/Ani+DiFranco/_/Tip+Toe",
-        "artist": "Ani DiFranco",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Worthy",
-        "url": "https://www.last.fm/music/Ani+DiFranco/_/Worthy",
-        "artist": "Ani DiFranco",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "So kiss me and be damned. - from \"Wuthering Heights\" Original Motion Picture Score",
-        "url": "https://www.last.fm/music/Anthony+Willis/_/So+kiss+me+and+be+damned.+-+from+%22Wuthering+Heights%22+Original+Motion+Picture+Score",
-        "artist": "Anthony Willis",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -888,15 +888,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Igor Stravinsky",
-        "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "79",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Ludwig van Beethoven",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
         "plays": "74",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Igor Stravinsky",
+        "url": "https://www.last.fm/music/Igor+Stravinsky",
+        "plays": "62",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -933,6 +933,12 @@
         "name": "Bohuslav Martinů",
         "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF",
         "plays": "49",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Franz Schubert",
+        "url": "https://www.last.fm/music/Franz+Schubert",
+        "plays": "46",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -993,12 +999,6 @@
         "name": "Ralph Vaughan Williams",
         "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
         "plays": "34",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Franz Schubert",
-        "url": "https://www.last.fm/music/Franz+Schubert",
-        "plays": "33",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1169,6 +1169,13 @@
         "image": ""
       },
       {
+        "name": "Winterreise",
+        "url": "https://www.last.fm/music/Franz+Schubert/Winterreise",
+        "artist": "Franz Schubert",
+        "plays": "37",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/491393c31cc2d0d6c3ed63780854235e.jpg"
+      },
+      {
         "name": "Music as a Mirror",
         "url": "https://www.last.fm/music/Sophia+Jani/Music+as+a+Mirror",
         "artist": "Sophia Jani",
@@ -1230,13 +1237,6 @@
         "artist": "Francis Poulenc",
         "plays": "24",
         "image": ""
-      },
-      {
-        "name": "Winterreise",
-        "url": "https://www.last.fm/music/Franz+Schubert/Winterreise",
-        "artist": "Franz Schubert",
-        "plays": "24",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/491393c31cc2d0d6c3ed63780854235e.jpg"
       },
       {
         "name": "Bang",
@@ -1306,7 +1306,7 @@
         "url": "https://www.last.fm/music/Coil/Scatology",
         "artist": "Coil",
         "plays": "21",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/baf84db96cd53260bcc66dce1e25c2a8.jpg"
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f774599ee66976bc40257a34a17b1996.png"
       },
       {
         "name": "Die Zauberflöte",
@@ -1858,6 +1858,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Franz Schubert",
+        "url": "https://www.last.fm/music/Franz+Schubert",
+        "plays": "72",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Trent Reznor and Atticus Ross",
         "url": "https://www.last.fm/music/Trent+Reznor+and+Atticus+Ross",
         "plays": "72",
@@ -1903,12 +1909,6 @@
         "name": "Philip Glass",
         "url": "https://www.last.fm/music/Philip+Glass",
         "plays": "66",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Frank Bridge",
-        "url": "https://www.last.fm/music/Frank+Bridge",
-        "plays": "65",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
