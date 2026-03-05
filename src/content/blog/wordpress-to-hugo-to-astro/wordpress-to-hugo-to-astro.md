@@ -60,6 +60,8 @@ I also really appreciated the template system. It felt like the MVC frameworks I
 
 TypeScript is... fine. It's more typing than Python, and it feels like it has more friction than the elegant languages I prefer, but it works. I hate the closing braces, it's not XSLT, but it's not Python whitespace either. And the testing? It feels bolted-on compared to pytest, but maybe that's just me.
 
+That said, what I really like is Zod. While I didn't do much Hugo exploration here, exporting out of Wordpress, the frontmatter of my markdown files was... not a mess, but messy.  Unkempt. Using Zod to define the schema took some data cleansing, but really helped me get to a place where my automated tests, or even Astro itself, can remind me when I'm creating a new document and using the wrong schema. Plus it meant that my 100+ posts were all correctly formatted, and that I didn't have to worry about an improper type breaking my render logic.  That's a huge relief.  I need to get back to <a href="https://github.com/edwelker/astro-markdown-personal-site/tree/astro/src/schemas">tightening down my schemas</a> (i.e. removing overly lenient `.optional()` permissions), but it's still a huge help.
+
 ## The Tailwind Problem
 
 To get this thing shipped, I started with the [Astro Nano](https://github.com/markhorn-dev/astro-nano) theme. It’s great, but it’s built on Tailwind CSS.
