@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 274868
+    "scrobbles": 274891
   },
   "history": [
-    {
-      "dayName": "Thu",
-      "date": "2026-02-26",
-      "hours": "4.1",
-      "lastHours": "1.3",
-      "topArtist": "Witold Lutosławski"
-    },
     {
       "dayName": "Fri",
       "date": "2026-02-27",
@@ -51,6 +44,13 @@
       "hours": "2.2",
       "lastHours": "1.3",
       "topArtist": "Ralph Vaughan Williams"
+    },
+    {
+      "dayName": "Thu",
+      "date": "2026-03-05",
+      "hours": "1.3",
+      "lastHours": "4.1",
+      "topArtist": "Ralph Vaughan Williams"
     }
   ],
   "week": {
@@ -58,13 +58,7 @@
       {
         "name": "Ralph Vaughan Williams",
         "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
-        "plays": "23",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Witold Lutosławski",
-        "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski",
-        "plays": "23",
+        "plays": "46",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -118,12 +112,6 @@
       {
         "name": "Frédéric Chopin",
         "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin",
-        "plays": "7",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Geirr Tveitt",
-        "url": "https://www.last.fm/music/Geirr+Tveitt",
         "plays": "7",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -260,6 +248,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Geirr Tveitt",
+        "url": "https://www.last.fm/music/Geirr+Tveitt",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Georg Friedrich Händel",
         "url": "https://www.last.fm/music/Georg+Friedrich+H%C3%A4ndel",
         "plays": "1",
@@ -294,15 +288,21 @@
         "url": "https://www.last.fm/music/Judas+Priest",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Libby Larsen",
+        "url": "https://www.last.fm/music/Libby+Larsen",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
       {
-        "name": "The Essential Lutosławski",
-        "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski/The+Essential+Lutos%C5%82awski",
-        "artist": "Witold Lutosławski",
+        "name": "Leonard Slatkin conducts Vaughan Williams",
+        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/Leonard+Slatkin+conducts+Vaughan+Williams",
+        "artist": "Ralph Vaughan Williams",
         "plays": "23",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d0880fbadaae408f8529cb3d8967b89d.jpg"
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9d366c5606653eaaae41582d07acb6b8.jpg"
       },
       {
         "name": "Chin Up Buttercup",
@@ -389,13 +389,6 @@
         "image": ""
       },
       {
-        "name": "Tveitt: 100 Folk-Tunes From Hardanger, Op. 151, Suite Nos. 1 & 2",
-        "url": "https://www.last.fm/music/Geirr+Tveitt/Tveitt:+100+Folk-Tunes+From+Hardanger,+Op.+151,+Suite+Nos.+1+&+2",
-        "artist": "Geirr Tveitt",
-        "plays": "4",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/93869a3524cb4869b0f0497bc3472108.jpg"
-      },
-      {
         "name": "Violin Concertos",
         "url": "https://www.last.fm/music/Igor+Stravinsky/Violin+Concertos",
         "artist": "Igor Stravinsky",
@@ -436,13 +429,6 @@
         "artist": "Edvard Grieg",
         "plays": "3",
         "image": ""
-      },
-      {
-        "name": "TVEITT: Piano Music, Vol. 1",
-        "url": "https://www.last.fm/music/Geirr+Tveitt/TVEITT:+Piano+Music,+Vol.+1",
-        "artist": "Geirr Tveitt",
-        "plays": "3",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/df248487dd85558d35f48077def4a45a.jpg"
       },
       {
         "name": "Secret Love Letters",
@@ -576,6 +562,20 @@
         "artist": "Fanny Mendelssohn",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/15fb512571504337c3fb2da605fb599e.png"
+      },
+      {
+        "name": "Title of Record (Expanded Edition)",
+        "url": "https://www.last.fm/music/Filter/Title+of+Record+(Expanded+Edition)",
+        "artist": "Filter",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0f57808ab0bda09e9385f3a67f24d660.png"
+      },
+      {
+        "name": "Liszt: Consolations S. 172 - 3. Lento placido",
+        "url": "https://www.last.fm/music/Franz+Liszt/Liszt:+Consolations+S.+172+-+3.+Lento+placido",
+        "artist": "Franz Liszt",
+        "plays": "1",
+        "image": ""
       }
     ],
     "tracks": [
@@ -583,13 +583,6 @@
         "name": "Beau Soir, L 6",
         "url": "https://www.last.fm/music/Claude+Debussy/_/Beau+Soir,+L+6",
         "artist": "Claude Debussy",
-        "plays": "3",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "50 Folk-Tunes from Hardanger, Op. 150: Welcome with Honour",
-        "url": "https://www.last.fm/music/Geirr+Tveitt/_/50+Folk-Tunes+from+Hardanger,+Op.+150:+Welcome+with+Honour",
-        "artist": "Geirr Tveitt",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -667,13 +660,6 @@
         "name": "Think Twice",
         "url": "https://www.last.fm/music/Austra/_/Think+Twice",
         "artist": "Austra",
-        "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "III. Fagraste viso pao Jorae (The loveliest song on earth)",
-        "url": "https://www.last.fm/music/Geirr+Tveitt/_/III.+Fagraste+viso+pao+Jorae+(The+loveliest+song+on+earth)",
-        "artist": "Geirr Tveitt",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -858,6 +844,20 @@
         "artist": "Dobrinka Tabakova",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Earth Suite: II. Pacific",
+        "url": "https://www.last.fm/music/Dobrinka+Tabakova/_/Earth+Suite:+II.+Pacific",
+        "artist": "Dobrinka Tabakova",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Earth Suite: III. Timber & Steel",
+        "url": "https://www.last.fm/music/Dobrinka+Tabakova/_/Earth+Suite:+III.+Timber+&+Steel",
+        "artist": "Dobrinka Tabakova",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -878,13 +878,19 @@
       {
         "name": "Austra",
         "url": "https://www.last.fm/music/Austra",
-        "plays": "109",
+        "plays": "99",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Pyotr Ilyich Tchaikovsky",
         "url": "https://www.last.fm/music/Pyotr+Ilyich+Tchaikovsky",
         "plays": "97",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Ralph Vaughan Williams",
+        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
+        "plays": "80",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -903,12 +909,6 @@
         "name": "Robert Schumann",
         "url": "https://www.last.fm/music/Robert+Schumann",
         "plays": "59",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ralph Vaughan Williams",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
-        "plays": "57",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1044,12 +1044,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "ohGr",
-        "url": "https://www.last.fm/music/ohGr",
-        "plays": "27",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Philip Glass",
         "url": "https://www.last.fm/music/Philip+Glass",
         "plays": "27",
@@ -1059,6 +1053,12 @@
         "name": "Pig",
         "url": "https://www.last.fm/music/Pig",
         "plays": "26",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "ohGr",
+        "url": "https://www.last.fm/music/ohGr",
+        "plays": "25",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1109,7 +1109,7 @@
         "name": "Chin Up Buttercup",
         "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
         "artist": "Austra",
-        "plays": "109",
+        "plays": "99",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
       },
       {
@@ -1288,6 +1288,13 @@
         "image": ""
       },
       {
+        "name": "Leonard Slatkin conducts Vaughan Williams",
+        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/Leonard+Slatkin+conducts+Vaughan+Williams",
+        "artist": "Ralph Vaughan Williams",
+        "plays": "23",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9d366c5606653eaaae41582d07acb6b8.jpg"
+      },
+      {
         "name": "The Piano Concertos | Solo Works",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich/The+Piano+Concertos+%7C+Solo+Works",
         "artist": "Dmitri Shostakovich",
@@ -1377,13 +1384,6 @@
         "artist": "Lana Del Rey",
         "plays": "17",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ab9ed65c5b337129f6b50ca5894d7319.png"
-      },
-      {
-        "name": "A Century of Russian Colours",
-        "url": "https://www.last.fm/music/Lera+Auerbach/A+Century+of+Russian+Colours",
-        "artist": "Lera Auerbach",
-        "plays": "17",
-        "image": ""
       }
     ],
     "tracks": [
@@ -1391,70 +1391,70 @@
         "name": "Amnesia",
         "url": "https://www.last.fm/music/Austra/_/Amnesia",
         "artist": "Austra",
-        "plays": "14",
+        "plays": "13",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Math Equation",
         "url": "https://www.last.fm/music/Austra/_/Math+Equation",
         "artist": "Austra",
-        "plays": "12",
+        "plays": "11",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Siren Song",
         "url": "https://www.last.fm/music/Austra/_/Siren+Song",
         "artist": "Austra",
-        "plays": "12",
+        "plays": "11",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Chin up Buttercup",
         "url": "https://www.last.fm/music/Austra/_/Chin+up+Buttercup",
         "artist": "Austra",
-        "plays": "11",
+        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Blindsided",
         "url": "https://www.last.fm/music/Austra/_/Blindsided",
         "artist": "Austra",
-        "plays": "10",
+        "plays": "9",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Fallen Cloud",
         "url": "https://www.last.fm/music/Austra/_/Fallen+Cloud",
         "artist": "Austra",
-        "plays": "10",
+        "plays": "9",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Good Riddance",
         "url": "https://www.last.fm/music/Austra/_/Good+Riddance",
         "artist": "Austra",
-        "plays": "10",
+        "plays": "9",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Look Me in the Eye",
         "url": "https://www.last.fm/music/Austra/_/Look+Me+in+the+Eye",
         "artist": "Austra",
-        "plays": "10",
+        "plays": "9",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "The Hopefulness of Dawn",
         "url": "https://www.last.fm/music/Austra/_/The+Hopefulness+of+Dawn",
         "artist": "Austra",
-        "plays": "10",
+        "plays": "9",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Think Twice",
         "url": "https://www.last.fm/music/Austra/_/Think+Twice",
         "artist": "Austra",
-        "plays": "10",
+        "plays": "9",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1798,6 +1798,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Ralph Vaughan Williams",
+        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
+        "plays": "92",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Benjamin Britten",
         "url": "https://www.last.fm/music/Benjamin+Britten",
         "plays": "89",
@@ -1884,12 +1890,6 @@
       {
         "name": "ohGr",
         "url": "https://www.last.fm/music/ohGr",
-        "plays": "69",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ralph Vaughan Williams",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
         "plays": "69",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
