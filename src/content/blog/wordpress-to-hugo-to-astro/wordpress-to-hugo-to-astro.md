@@ -22,7 +22,7 @@ The result? I just stopped writing. For years. A number of very expensive years.
 
 ## The Great Export
 
-In March 2024, I was done. I was getting out. I exported everything from the WordPress database into Markdown files.
+In March 2024, I was done. I was getting out. I exported everything from the WordPress database into Markdown files (using <a href="https://github.com/lonekorean/wordpress-export-to-markdown">wordpress-export-to-markdown</a>)
 
 That sounds simple, but the reality was a mess. I wrote a slew of python scripts to convert the database Markdown dumps to clean them and correct Markdown. I'd write a script scanning the content directory cleaning one small thing at a time, reviewing, committing, and modifying the script... in order to break as little as possible.
 
@@ -41,6 +41,8 @@ I looked around at alternatives, and chose  [Hugo](https://github.com/edwelker/a
 It was going fine for a good long while. I had my markdown corrected, I had a decent theme, and yet...
 
 I hit a wall. I got a basic site up and running, but while trying to add to the site, I kept going around and around trying to figure out if the configuration was part of Hugo, or the theme. And it was frankly confusing. Changing themes? Be prepared to reconfigure the site. Again.
+
+Not to be overly negative, but it was fairly frustrating. To be very specific, some of what Hugo does is standardized, and yet much more is left to individual theme developers. Too much in my opinion. If I were in charge, I would be bringing in, and standardizing as much as the "core platform" as possible, and not leaving so much of the operational functionality in theme developer's hands. But they didn't.  So for each different theme, came an entirely new set of configuration options, that didn't work like the previous theme.  Granted, I understand that will be the case to a degree, but this was an much larger degree than allowed me to be productive.
 
 However, at least I stopped paying the $130/yr! I moved everything to Cloudflare's free pages.
 
