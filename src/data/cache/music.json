@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 274899
+    "scrobbles": 274922
   },
   "history": [
-    {
-      "dayName": "Fri",
-      "date": "2026-02-27",
-      "hours": "3.3",
-      "lastHours": "0.9",
-      "topArtist": "Soul Coughing"
-    },
     {
       "dayName": "Sat",
       "date": "2026-02-28",
@@ -48,9 +41,16 @@
     {
       "dayName": "Thu",
       "date": "2026-03-05",
-      "hours": "1.8",
+      "hours": "1.9",
       "lastHours": "4.1",
       "topArtist": "Ralph Vaughan Williams"
+    },
+    {
+      "dayName": "Fri",
+      "date": "2026-03-06",
+      "hours": "1.3",
+      "lastHours": "3.3",
+      "topArtist": "Van Halen"
     }
   ],
   "week": {
@@ -59,12 +59,6 @@
         "name": "Ralph Vaughan Williams",
         "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
         "plays": "46",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Soul Coughing",
-        "url": "https://www.last.fm/music/Soul+Coughing",
-        "plays": "14",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -83,6 +77,12 @@
         "name": "Dobrinka Tabakova",
         "url": "https://www.last.fm/music/Dobrinka+Tabakova",
         "plays": "11",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Van Halen",
+        "url": "https://www.last.fm/music/Van+Halen",
+        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -134,6 +134,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "The Cranberries",
+        "url": "https://www.last.fm/music/The+Cranberries",
+        "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "César Franck",
         "url": "https://www.last.fm/music/C%C3%A9sar+Franck",
         "plays": "4",
@@ -164,8 +170,26 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Bluey",
+        "url": "https://www.last.fm/music/Bluey",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Ernest Chausson",
         "url": "https://www.last.fm/music/Ernest+Chausson",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Iron Maiden",
+        "url": "https://www.last.fm/music/Iron+Maiden",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Led Zeppelin",
+        "url": "https://www.last.fm/music/Led+Zeppelin",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -212,20 +236,14 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Bluey",
-        "url": "https://www.last.fm/music/Bluey",
+        "name": "Black Sabbath",
+        "url": "https://www.last.fm/music/Black+Sabbath",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Camille Saint-Saëns",
         "url": "https://www.last.fm/music/Camille+Saint-Sa%C3%ABns",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Erykah Badu",
-        "url": "https://www.last.fm/music/Erykah+Badu",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -276,24 +294,6 @@
         "url": "https://www.last.fm/music/Gy%C3%B6rgy+Kurt%C3%A1g",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Johann Sebastian Bach",
-        "url": "https://www.last.fm/music/Johann+Sebastian+Bach",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Judas Priest",
-        "url": "https://www.last.fm/music/Judas+Priest",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Libby Larsen",
-        "url": "https://www.last.fm/music/Libby+Larsen",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -310,13 +310,6 @@
         "artist": "Ralph Vaughan Williams",
         "plays": "14",
         "image": ""
-      },
-      {
-        "name": "El Oso",
-        "url": "https://www.last.fm/music/Soul+Coughing/El+Oso",
-        "artist": "Soul Coughing",
-        "plays": "14",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2071d3dc47bc073161a563fed99d44da.jpg"
       },
       {
         "name": "Winterreise",
@@ -338,6 +331,13 @@
         "artist": "Dobrinka Tabakova",
         "plays": "11",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ea383c32ac36e75e2964c3f4a8a5ccc3.jpg"
+      },
+      {
+        "name": "Van Halen (Remastered)",
+        "url": "https://www.last.fm/music/Van+Halen/Van+Halen+(Remastered)",
+        "artist": "Van Halen",
+        "plays": "10",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/20a4ef1646deb935e07c19c89159008d.jpg"
       },
       {
         "name": "Schmidt: Symphony No. 3 / Hindemith: Concerto for Orchestra",
@@ -410,6 +410,13 @@
         "image": ""
       },
       {
+        "name": "No Need To Argue (2025 Remastered)",
+        "url": "https://www.last.fm/music/The+Cranberries/No+Need+To+Argue+(2025+Remastered)",
+        "artist": "The Cranberries",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/571bbcf018af8f410c499c048c46ccc0.jpg"
+      },
+      {
         "name": "Secret Love Letters",
         "url": "https://www.last.fm/music/Claude+Debussy/Secret+Love+Letters",
         "artist": "Claude Debussy",
@@ -456,6 +463,13 @@
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Violin+Concertos",
         "artist": "Sergei Prokofiev",
         "plays": "3",
+        "image": ""
+      },
+      {
+        "name": "Sleepytime",
+        "url": "https://www.last.fm/music/Bluey/Sleepytime",
+        "artist": "Bluey",
+        "plays": "2",
         "image": ""
       },
       {
@@ -522,11 +536,11 @@
         "image": ""
       },
       {
-        "name": "Sleepytime",
-        "url": "https://www.last.fm/music/Bluey/Sleepytime",
-        "artist": "Bluey",
+        "name": "Reunion",
+        "url": "https://www.last.fm/music/Black+Sabbath/Reunion",
+        "artist": "Black Sabbath",
         "plays": "1",
-        "image": ""
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f3ef470f457d42389248eba844a65683.jpg"
       },
       {
         "name": "Le Carneval Des Animaux, R. 125: XIII. Le Cygne. Andantino Grazioso",
@@ -541,13 +555,6 @@
         "artist": "Concerto Köln",
         "plays": "1",
         "image": ""
-      },
-      {
-        "name": "Baduizm",
-        "url": "https://www.last.fm/music/Erykah+Badu/Baduizm",
-        "artist": "Erykah Badu",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e908f8c5e95b511a394bae27279e8960.png"
       },
       {
         "name": "Women of Note",
@@ -569,13 +576,6 @@
         "artist": "Franz Liszt",
         "plays": "1",
         "image": ""
-      },
-      {
-        "name": "Funeral March Meditation (After Piano Sonata No. 2 in B-Flat Minor, Op. 35: III. Marche funèbre)",
-        "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin/Funeral+March+Meditation+(After+Piano+Sonata+No.+2+in+B-Flat+Minor,+Op.+35:+III.+Marche+fun%C3%A8bre)",
-        "artist": "Frédéric Chopin",
-        "plays": "1",
-        "image": ""
       }
     ],
     "tracks": [
@@ -591,6 +591,13 @@
         "url": "https://www.last.fm/music/Nine+Inch+Nails/_/Non+Entity",
         "artist": "Nine Inch Nails",
         "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sleepytime",
+        "url": "https://www.last.fm/music/Bluey/_/Sleepytime",
+        "artist": "Bluey",
+        "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -678,9 +685,9 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sleepytime",
-        "url": "https://www.last.fm/music/Bluey/_/Sleepytime",
-        "artist": "Bluey",
+        "name": "Psycho Man",
+        "url": "https://www.last.fm/music/Black+Sabbath/_/Psycho+Man",
+        "artist": "Black Sabbath",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -835,13 +842,6 @@
         "name": "Poème, Op. 25: II. Poco Lento",
         "url": "https://www.last.fm/music/Ernest+Chausson/_/Po%C3%A8me,+Op.+25:+II.+Poco+Lento",
         "artist": "Ernest Chausson",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "On & On",
-        "url": "https://www.last.fm/music/Erykah+Badu/_/On+&+On",
-        "artist": "Erykah Badu",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
