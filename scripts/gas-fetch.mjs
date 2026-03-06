@@ -6,6 +6,7 @@ export const FILES = {
   md: 'latest_Maryland_ALL_Columbia_EC_Severn.csv',
   ny: 'latest_Long_Island_East_End.csv',
   ma: 'latest_Western_Mass_I-91_Corridor.csv',
+  frederick: 'latest_Central_MD_Columbia_to_Frederick_Corridor.csv',
 };
 
 export async function fetchGasData() {
@@ -69,7 +70,7 @@ export async function run() {
     fetcher: fetchGasData,
     transform: transformGasData,
     outFile: 'src/data/gas.json',
-    defaultData: { md: [], ny: [], ma: [] },
+    defaultData: { md: [], ny: [], ma: [], frederick: [] },
   });
 }
 
