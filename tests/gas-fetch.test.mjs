@@ -39,6 +39,7 @@ describe('Gas Fetch Logic', () => {
         md: mockText,
         ny: mockText,
         ma: mockText,
+        frederick: mockText,
       });
     });
 
