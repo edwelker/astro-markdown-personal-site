@@ -27,18 +27,25 @@ export function formatRelativeTime(dateInput: string | Date): string {
   if (isNaN(date.getTime())) return '';
 
   const now = new Date();
-  const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
-  const diffInDays = Math.floor(diffInSeconds / 86400);
+
+  // Normalize both dates to midnight to compare calendar days
+  const startOfNow = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const startOfInput = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+  // Calculate difference in milliseconds and convert to days
+  const diffInMs = startOfNow.getTime() - startOfInput.getTime();
+  const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24));
 
   if (diffInDays === 0) {
     return 'Today';
   } else if (diffInDays === 1) {
     return 'Yesterday';
+  } else if (diffInDays < 0) {
+    return 'In the future'; // Handling future dates
   } else {
     return `${diffInDays} days ago`;
   }
 }
-
 export function decodeHtmlEntities(str: string | null | undefined): string {
   if (!str) return '';
   return str
