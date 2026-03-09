@@ -27,7 +27,7 @@ recipeIngredient:
   - "1.5g instant yeast - approx 1/2 tsp (or 1g for half size)"
   - "6g diastatic malt powder - optional (or 3g for half size), don't use if using rye/spelt/winter wheat"
 recipeInstructions:
-  - "Mix: In a large bowl (I like a round Pyrex so there are no corners for flour to hide in), whisk together the flours, salt, yeast, and malt powder. Add water and stir until a shaggy dough forms and no dry flour remains. Do not knead."
+  - "Mix: In a large bowl add the water (this prevents flour from hiding in the corners of a square container), then whisk together the salt, yeast, and malt powder, and finally flour. Stir until a shaggy dough forms and no dry flour remains. Do not knead."
   - "Rise: Cover the bowl tightly with plastic wrap or a lid. Let sit at room temperature for 12–18 hours until the surface is bubbly and the dough has more than doubled. Starting volume is about 1.25liters, so mark for 2.5l doubled."
   - "Cold House Requirement: If your kitchen is cold, which mine is in the winter, place the bowl on a seed heating pad. Set to ~75°F and use a towel buffer. Note: Avoid settings above medium; 55-60% power can inadvertently cook the bottom of the dough (tested Jan 2026)."
   - "Preheat: Place your Dutch oven in the oven. Preheat to 475°F for 30–45 minutes."
