@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 274978
+    "scrobbles": 274981
   },
   "history": [
-    {
-      "dayName": "Thu",
-      "date": "2026-03-05",
-      "hours": "1.9",
-      "lastHours": "4.1",
-      "topArtist": "Ralph Vaughan Williams"
-    },
     {
       "dayName": "Fri",
       "date": "2026-03-06",
@@ -48,9 +41,16 @@
     {
       "dayName": "Wed",
       "date": "2026-03-11",
-      "hours": "0.5",
+      "hours": "0.6",
       "lastHours": "2.2",
       "topArtist": "Igor Stravinsky"
+    },
+    {
+      "dayName": "Thu",
+      "date": "2026-03-12",
+      "hours": "0.1",
+      "lastHours": "1.9",
+      "topArtist": "Ora Cogan"
     }
   ],
   "week": {
@@ -58,7 +58,7 @@
       {
         "name": "Ralph Vaughan Williams",
         "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
-        "plays": "39",
+        "plays": "24",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -122,6 +122,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Dmitri Kabalevsky",
+        "url": "https://www.last.fm/music/Dmitri+Kabalevsky",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Front Line Assembly",
         "url": "https://www.last.fm/music/Front+Line+Assembly",
         "plays": "2",
@@ -176,6 +182,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Ora Cogan",
+        "url": "https://www.last.fm/music/Ora+Cogan",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Paul Chambers",
         "url": "https://www.last.fm/music/Paul+Chambers",
         "plays": "1",
@@ -225,13 +237,6 @@
         "image": ""
       },
       {
-        "name": "The Complete Symphonies / Orchestral Works",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/The+Complete+Symphonies+%2F+Orchestral+Works",
-        "artist": "Ralph Vaughan Williams",
-        "plays": "6",
-        "image": ""
-      },
-      {
         "name": "Violin Concerto No. 2, Op. 84",
         "url": "https://www.last.fm/music/Boris+Tishchenko/Violin+Concerto+No.+2,+Op.+84",
         "artist": "Boris Tishchenko",
@@ -246,23 +251,9 @@
         "image": ""
       },
       {
-        "name": "Symphony no. 5 in D major / Fantasia on a Theme of Thomas Tallis",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/Symphony+no.+5+in+D+major+%2F+Fantasia+on+a+Theme+of+Thomas+Tallis",
-        "artist": "Ralph Vaughan Williams",
-        "plays": "5",
-        "image": ""
-      },
-      {
         "name": "Shchedrin: Concerto Cantabile / Stravinsky: Violin Concerto / Tchaikovsky: Sérénade mélancolique",
         "url": "https://www.last.fm/music/Igor+Stravinsky/Shchedrin:+Concerto+Cantabile+%2F+Stravinsky:+Violin+Concerto+%2F+Tchaikovsky:+S%C3%A9r%C3%A9nade+m%C3%A9lancolique",
         "artist": "Igor Stravinsky",
-        "plays": "4",
-        "image": ""
-      },
-      {
-        "name": "Symphonies nos. 7 & 8",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/Symphonies+nos.+7+&+8",
-        "artist": "Ralph Vaughan Williams",
         "plays": "4",
         "image": ""
       },
@@ -285,6 +276,13 @@
         "url": "https://www.last.fm/music/Rodion+Shchedrin/Shchedrin:+Concerto+Cantabile+%2F+Stravinsky:+Violin+Concerto+%2F+Tchaikovsky:+S%C3%A9r%C3%A9nade+m%C3%A9lancolique",
         "artist": "Rodion Shchedrin",
         "plays": "3",
+        "image": ""
+      },
+      {
+        "name": "Cello Concertos nos. 1 and 2 / Symphonic Poem: Spring",
+        "url": "https://www.last.fm/music/Dmitri+Kabalevsky/Cello+Concertos+nos.+1+and+2+%2F+Symphonic+Poem:+Spring",
+        "artist": "Dmitri Kabalevsky",
+        "plays": "2",
         "image": ""
       },
       {
@@ -372,6 +370,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e6ebc064ec031997efac0fb31a783a70.jpg"
       },
       {
+        "name": "Live on Audiotree (EP)",
+        "url": "https://www.last.fm/music/Ora+Cogan/Live+on+Audiotree+(EP)",
+        "artist": "Ora Cogan",
+        "plays": "1",
+        "image": ""
+      },
+      {
         "name": "Paul Chambers Quintet (Remastered)",
         "url": "https://www.last.fm/music/Paul+Chambers+Quintet/Paul+Chambers+Quintet+(Remastered)",
         "artist": "Paul Chambers Quintet",
@@ -433,34 +438,6 @@
         "name": "Sérénade mélancolique for Violin and Orchestra in B minor, op. 26",
         "url": "https://www.last.fm/music/Pyotr+Ilyich+Tchaikovsky/_/S%C3%A9r%C3%A9nade+m%C3%A9lancolique+for+Violin+and+Orchestra+in+B+minor,+op.+26",
         "artist": "Pyotr Ilyich Tchaikovsky",
-        "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Fantasia on a Theme by Thomas Tallis",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/_/Fantasia+on+a+Theme+by+Thomas+Tallis",
-        "artist": "Ralph Vaughan Williams",
-        "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Symphony No. 5 in D major: I. Preludio: Moderato",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/_/Symphony+No.+5+in+D+major:+I.+Preludio:+Moderato",
-        "artist": "Ralph Vaughan Williams",
-        "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Symphony No. 5 in D major: III. Romanza: Lento",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/_/Symphony+No.+5+in+D+major:+III.+Romanza:+Lento",
-        "artist": "Ralph Vaughan Williams",
-        "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Symphony No. 5 in D major: IV. Passacaglia: Moderato",
-        "url": "https://www.last.fm/music/Ralph+Vaughan+Williams/_/Symphony+No.+5+in+D+major:+IV.+Passacaglia:+Moderato",
-        "artist": "Ralph Vaughan Williams",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -545,6 +522,20 @@
         "name": "Nocturnes: III. Sirènes",
         "url": "https://www.last.fm/music/Claude+Debussy/_/Nocturnes:+III.+Sir%C3%A8nes",
         "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Cello Concerto No. 1 in G Minor, Op. 49: I. Allegro",
+        "url": "https://www.last.fm/music/Dmitri+Kabalevsky/_/Cello+Concerto+No.+1+in+G+Minor,+Op.+49:+I.+Allegro",
+        "artist": "Dmitri Kabalevsky",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Cello Concerto No. 1 in G minor, Op. 49: II. Largo, molto espressivo",
+        "url": "https://www.last.fm/music/Dmitri+Kabalevsky/_/Cello+Concerto+No.+1+in+G+minor,+Op.+49:+II.+Largo,+molto+espressivo",
+        "artist": "Dmitri Kabalevsky",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -677,6 +668,20 @@
       {
         "name": "Symphony no. 2, op. 19: Finale. Introduzione - Variation VI",
         "url": "https://www.last.fm/music/Karol+Szymanowski/_/Symphony+no.+2,+op.+19:+Finale.+Introduzione+-+Variation+VI",
+        "artist": "Karol Szymanowski",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony no. 2, op. 19: Fuga finale",
+        "url": "https://www.last.fm/music/Karol+Szymanowski/_/Symphony+no.+2,+op.+19:+Fuga+finale",
+        "artist": "Karol Szymanowski",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony no. 2, op. 19: I. Allegro moderato",
+        "url": "https://www.last.fm/music/Karol+Szymanowski/_/Symphony+no.+2,+op.+19:+I.+Allegro+moderato",
         "artist": "Karol Szymanowski",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -832,7 +837,7 @@
       {
         "name": "Dmitri Kabalevsky",
         "url": "https://www.last.fm/music/Dmitri+Kabalevsky",
-        "plays": "30",
+        "plays": "32",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
