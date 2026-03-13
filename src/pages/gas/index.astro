@@ -3,8 +3,8 @@ import Layout from '@layouts/Layout.astro';
 import Container from '@components/Container.astro';
 import Link from '@components/Link.astro';
 
-const title = 'Local Gas Prices';
-const description = 'Local gas prices for MD, NY, and MA.';
+const title = 'Local Gas Prices for Maryland, Long Island, and Western Massachusetts, updated 2x daily.';
+const description = 'Local gas prices for MD, NY, and MA, scraped twice daily.';
 ---
 
 <Layout title={title} description={description}>
@@ -12,11 +12,12 @@ const description = 'Local gas prices for MD, NY, and MA.';
     <div class="animate">
       <h1 class="mb-6 text-2xl font-semibold">Local Gas Prices</h1>
       <div class="prose prose-neutral dark:prose-invert">
-        <p>
-          Automated gas price tracking for both my sisters and myself, in the places I frequent.
+          <p>
+
+              Automated gas price tracking for central Maryland, Eastern Long Island, and Western Massachusetts, in the places I frequent.
         </p>
         <ul>
-          <li><Link href="/gas/md/">Maryland (Columbia/EC/Severn)</Link></li>
+          <li><Link href="/gas/md/">Maryland (Columbia/Ellicott City/Severn)</Link></li>
           <li><Link href="/gas/ny/">New York (Long Island East End)</Link></li>
           <li><Link href="/gas/ma/">Massachusetts (Western I-91 Corridor)</Link></li>
           <li><Link href="/gas/frederick/">Frederick MD (Columbia to Frederick to Point of Rocks and Brunswick MD)</Link></li>
