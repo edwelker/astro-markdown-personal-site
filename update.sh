@@ -1,3 +1,6 @@
+npm install path-browserify --legacy-peer-deps
+
+cat << 'EOF' > astro.config.mjs
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import pagefind from 'astro-pagefind';
@@ -55,3 +58,4 @@ export default defineConfig({
   },
   trailingSlash: 'ignore',
 });
+EOF

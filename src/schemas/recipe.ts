@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from 'astro:schema';
 
 export const RecipeSchema = z.object({
   title: z.string(),
