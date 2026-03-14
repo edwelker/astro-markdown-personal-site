@@ -35,14 +35,14 @@ jobs:
 
       # Upload coverage to Codecov (Requires CODECOV_TOKEN in repository secrets)
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage/lcov.info
 
       # Upload the coverage folder so you can download it from GitHub Actions summary
       - name: Upload Coverage Report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: coverage-report
           path: coverage/
