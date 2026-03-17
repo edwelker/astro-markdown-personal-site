@@ -42,8 +42,10 @@ export const transformStravaData = (activities, currentDate = new Date()) => {
 
   let ytdDist = 0,
     ytdElev = 0,
-    monthDist = 0;
-  let prevMonthDist = 0;
+    monthDist = 0,
+    monthElev = 0;
+  let prevMonthDist = 0,
+    prevMonthElev = 0;
   let yearCount = 0;
 
   // Determine previous month index
@@ -91,9 +93,11 @@ export const transformStravaData = (activities, currentDate = new Date()) => {
 
     if (rideYear === currentYear && rideMonth === currentMonth) {
       monthDist += miles;
+      monthElev += feet;
     }
     if (rideYear === prevMonthYear && rideMonth === prevMonthIndex) {
       prevMonthDist += miles;
+      prevMonthElev += feet;
     }
   });
 
@@ -124,6 +128,7 @@ export const transformStravaData = (activities, currentDate = new Date()) => {
   // Decide which month to show
   let displayMonthName = now.toLocaleDateString('en-US', { month: 'long', timeZone: TIMEZONE });
   let displayMonthDist = monthDist;
+  let displayMonthElev = monthElev;
   let showMonth = true;
 
   // If current month has 0 distance, show previous month
@@ -133,6 +138,7 @@ export const transformStravaData = (activities, currentDate = new Date()) => {
     const prevDate = new Date(Date.UTC(prevMonthYear, prevMonthIndex, 15));
     displayMonthName = prevDate.toLocaleDateString('en-US', { month: 'long', timeZone: TIMEZONE });
     displayMonthDist = prevMonthDist;
+    displayMonthElev = prevMonthElev;
 
     // If we fell back to previous month, and it's the previous year (Dec),
     // and we have no distance (likely meaning data wasn't fetched), hide it.
@@ -157,6 +163,7 @@ export const transformStravaData = (activities, currentDate = new Date()) => {
             minimumFractionDigits: 1,
             maximumFractionDigits: 1,
           }),
+          elevation: Math.round(displayMonthElev).toLocaleString(),
         }
       : null,
     recent: recentRides,

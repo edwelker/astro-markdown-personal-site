@@ -8,18 +8,14 @@ vi.setSystemTime(MOCK_DATE);
 describe('Cycling Logic: transformStravaData', () => {
   it('should return default structure for empty or invalid input', () => {
     // With 0 distance in August, it falls back to July
-    expect(transformStravaData([])).toEqual({
+    const expected = {
       year: { distance: '0.0', elevation: '0', count: 0 },
-      month: { name: 'July', distance: '0.0' },
+      month: { name: 'July', distance: '0.0', elevation: '0' },
       recent: [],
       chart: Array(52).fill(0),
-    });
-    expect(transformStravaData(null)).toEqual({
-      year: { distance: '0.0', elevation: '0', count: 0 },
-      month: { name: 'July', distance: '0.0' },
-      recent: [],
-      chart: Array(52).fill(0),
-    });
+    };
+    expect(transformStravaData([])).toEqual(expected);
+    expect(transformStravaData(null)).toEqual(expected);
   });
 
   it('should correctly transform a list of Strava activities', () => {
@@ -85,6 +81,7 @@ describe('Cycling Logic: transformStravaData', () => {
 
     expect(result.month.name).toBe('August');
     expect(result.month.distance).toBe('40.0');
+    expect(result.month.elevation).toBe('1,200');
 
     // Recent list now includes previous year rides if they are fetched
     expect(result.recent).toHaveLength(3);
@@ -141,6 +138,7 @@ describe('Cycling Logic: transformStravaData', () => {
     // Month stats should fall back to December
     expect(result.month.name).toBe('December');
     expect(result.month.distance).toBe('10.0'); // 10 miles
+    expect(result.month.elevation).toBe('328');
   });
 
   it('should show current month stats when rides exist in current year', () => {
@@ -164,5 +162,6 @@ describe('Cycling Logic: transformStravaData', () => {
     expect(result.year.distance).toBe('10.0');
     expect(result.month.name).toBe('January');
     expect(result.month.distance).toBe('10.0');
+    expect(result.month.elevation).toBe('328');
   });
 });

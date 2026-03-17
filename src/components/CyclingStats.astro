@@ -9,7 +9,7 @@ interface RecentRide {
 }
 interface CyclingData {
   year: { distance: string; elevation: string; count: number };
-  month: { name: string; distance: number; count: number };
+  month: { name: string; distance: number; count: number; elevation: string };
   recent: RecentRide[];
   chart: number[];
 }
@@ -59,7 +59,7 @@ const formatDistance = (val: string | number | undefined) => {
         <div class="flex h-10 w-full items-end gap-[2px]">
           {chart.map((m: number) => (
             <div
-              class="flex-1 rounded-t-[1px] bg-neutral-200 transition-all duration-300 group-hover:opacity-40 hover:bg-orange-500 hover:!opacity-100 dark:bg-neutral-800"
+              class="flex-1 rounded-t-[1px] bg-neutral-200 transition-all duration-300 group-hover:opacity-40 hover:bg-orange-500 hover:!opacity-100 dark:bg-neutral-800 dark:hover:bg-orange-500"
               style={`height: ${Math.max((m / maxWeekly) * 100, 4)}%`}
               title={`${m} miles`}
             />
@@ -88,7 +88,9 @@ const formatDistance = (val: string | number | undefined) => {
               >mi</span
             >
           </span>
-          <span class="mt-1 text-xs text-neutral-500">{year?.elevation || 0} vertical feet</span>
+          <span class="mt-1 text-xs text-neutral-500"
+            ><span class="dark:text-neutral-300">{year?.elevation || 0}</span> vertical feet</span
+          >
         </div>
       </div>
       <div>
@@ -101,6 +103,9 @@ const formatDistance = (val: string | number | undefined) => {
               >mi</span
             >
           </span>
+          <span class="mt-1 text-xs text-neutral-500"
+            ><span class="dark:text-neutral-300">{month?.elevation || 0}</span> vertical feet</span
+          >
         </div>
       </div>
     </div>
