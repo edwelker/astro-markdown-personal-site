@@ -1,6 +1,6 @@
 {
   "user": {
-    "scrobbles": 275149
+    "scrobbles": 275166
   },
   "history": [
     {
@@ -48,7 +48,7 @@
     {
       "dayName": "Mon",
       "date": "2026-03-16",
-      "hours": "1.8",
+      "hours": "2.7",
       "lastHours": "0.1",
       "topArtist": "Emma Ruth Rundle"
     }
@@ -74,12 +74,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "My Brightest Diamond",
-        "url": "https://www.last.fm/music/My+Brightest+Diamond",
-        "plays": "13",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Switchblade Symphony",
         "url": "https://www.last.fm/music/Switchblade+Symphony",
         "plays": "11",
@@ -94,7 +88,13 @@
       {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "8",
+        "plays": "9",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "plays": "9",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -130,6 +130,18 @@
       {
         "name": "Busta Rhymes",
         "url": "https://www.last.fm/music/Busta+Rhymes",
+        "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Jean Sibelius",
+        "url": "https://www.last.fm/music/Jean+Sibelius",
+        "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "My Brightest Diamond",
+        "url": "https://www.last.fm/music/My+Brightest+Diamond",
         "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -236,6 +248,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Carl Nielsen",
+        "url": "https://www.last.fm/music/Carl+Nielsen",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Chris Brown",
         "url": "https://www.last.fm/music/Chris+Brown",
         "plays": "1",
@@ -260,6 +278,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Edvard Grieg",
+        "url": "https://www.last.fm/music/Edvard+Grieg",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Eminem",
         "url": "https://www.last.fm/music/Eminem",
         "plays": "1",
@@ -268,30 +292,6 @@
       {
         "name": "Ernest Bloch",
         "url": "https://www.last.fm/music/Ernest+Bloch",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Eve",
-        "url": "https://www.last.fm/music/Eve",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "G.F. Malipiero",
-        "url": "https://www.last.fm/music/G.F.+Malipiero",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Gang Starr",
-        "url": "https://www.last.fm/music/Gang+Starr",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "GZA/Genius",
-        "url": "https://www.last.fm/music/GZA%2FGenius",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -319,13 +319,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8acd892fd683a67dbb8a87734c1eb94d.jpg"
       },
       {
-        "name": "A Thousand Shark's Teeth",
-        "url": "https://www.last.fm/music/My+Brightest+Diamond/A+Thousand+Shark%27s+Teeth",
-        "artist": "My Brightest Diamond",
-        "plays": "13",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f1ac4e329da74310998f055ce4cee159.jpg"
-      },
-      {
         "name": "LOVE AND LOSS",
         "url": "https://www.last.fm/music/Rudersdal+Chamber+Players/LOVE+AND+LOSS",
         "artist": "Rudersdal Chamber Players",
@@ -338,6 +331,13 @@
         "artist": "Switchblade Symphony",
         "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/834ae3767d875352354651ad9f03ac3a.png"
+      },
+      {
+        "name": "Violin Concertos / Mythes",
+        "url": "https://www.last.fm/music/Karol+Szymanowski/Violin+Concertos+%2F+Mythes",
+        "artist": "Karol Szymanowski",
+        "plays": "9",
+        "image": ""
       },
       {
         "name": "Juju",
@@ -355,6 +355,27 @@
       },
       {
         "name": "Violin Concertos",
+        "url": "https://www.last.fm/music/Igor+Stravinsky/Violin+Concertos",
+        "artist": "Igor Stravinsky",
+        "plays": "5",
+        "image": ""
+      },
+      {
+        "name": "Violin Concertos / 2 Serenades",
+        "url": "https://www.last.fm/music/Jean+Sibelius/Violin+Concertos+%2F+2+Serenades",
+        "artist": "Jean Sibelius",
+        "plays": "5",
+        "image": ""
+      },
+      {
+        "name": "A Thousand Shark's Teeth",
+        "url": "https://www.last.fm/music/My+Brightest+Diamond/A+Thousand+Shark%27s+Teeth",
+        "artist": "My Brightest Diamond",
+        "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f1ac4e329da74310998f055ce4cee159.jpg"
+      },
+      {
+        "name": "Violin Concertos",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich/Violin+Concertos",
         "artist": "Dmitri Shostakovich",
         "plays": "4",
@@ -363,13 +384,6 @@
       {
         "name": "Shchedrin: Concerto Cantabile / Stravinsky: Violin Concerto / Tchaikovsky: Sérénade mélancolique",
         "url": "https://www.last.fm/music/Igor+Stravinsky/Shchedrin:+Concerto+Cantabile+%2F+Stravinsky:+Violin+Concerto+%2F+Tchaikovsky:+S%C3%A9r%C3%A9nade+m%C3%A9lancolique",
-        "artist": "Igor Stravinsky",
-        "plays": "4",
-        "image": ""
-      },
-      {
-        "name": "Violin Concertos",
-        "url": "https://www.last.fm/music/Igor+Stravinsky/Violin+Concertos",
         "artist": "Igor Stravinsky",
         "plays": "4",
         "image": ""
@@ -557,25 +571,11 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d978f8542ef2a5bc6dfae21317db2a4f.jpg"
       },
       {
-        "name": "F.A.M.E. (Expanded Edition)",
-        "url": "https://www.last.fm/music/Chris+Brown/F.A.M.E.+(Expanded+Edition)",
-        "artist": "Chris Brown",
+        "name": "Violin Concertos / 2 Serenades",
+        "url": "https://www.last.fm/music/Carl+Nielsen/Violin+Concertos+%2F+2+Serenades",
+        "artist": "Carl Nielsen",
         "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a87d40fe905ed5efad4b671e81919166.jpg"
-      },
-      {
-        "name": "Heart Shaped World",
-        "url": "https://www.last.fm/music/Chris+Isaak/Heart+Shaped+World",
-        "artist": "Chris Isaak",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a3fd1c69333b4c0daf55a5a725a09037.png"
-      },
-      {
-        "name": "Skull & Bones",
-        "url": "https://www.last.fm/music/Cypress+Hill/Skull+&+Bones",
-        "artist": "Cypress Hill",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/81101d3364c945e0aedfdc03806b1992.png"
+        "image": ""
       }
     ],
     "tracks": [
@@ -639,20 +639,6 @@
         "name": "Walk on the Wild Side",
         "url": "https://www.last.fm/music/Lou+Reed/_/Walk+on+the+Wild+Side",
         "artist": "Lou Reed",
-        "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Apples",
-        "url": "https://www.last.fm/music/My+Brightest+Diamond/_/Apples",
-        "artist": "My Brightest Diamond",
-        "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Inside a Boy",
-        "url": "https://www.last.fm/music/My+Brightest+Diamond/_/Inside+a+Boy",
-        "artist": "My Brightest Diamond",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -769,6 +755,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Konzert für Violine und Orchester, op. 33: Präludium: Largo",
+        "url": "https://www.last.fm/music/Carl+Nielsen/_/Konzert+f%C3%BCr+Violine+und+Orchester,+op.+33:+Pr%C3%A4ludium:+Largo",
+        "artist": "Carl Nielsen",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Concerto per violoncello e orchestra in sol minore, Op.72 (1935): Allegretto gentile",
         "url": "https://www.last.fm/music/Castelnuovo-Tedesco/_/Concerto+per+violoncello+e+orchestra+in+sol+minore,+Op.72+(1935):+Allegretto+gentile",
         "artist": "Castelnuovo-Tedesco",
@@ -858,6 +851,13 @@
         "artist": "Dmitri Shostakovich",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Violin Concerto No. 1 in A Minor, Op. 77: II. Scherzo. Allegro",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Violin+Concerto+No.+1+in+A+Minor,+Op.+77:+II.+Scherzo.+Allegro",
+        "artist": "Dmitri Shostakovich",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -902,13 +902,19 @@
       {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "70",
+        "plays": "71",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Claude Debussy",
         "url": "https://www.last.fm/music/Claude+Debussy",
         "plays": "61",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "plays": "59",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -933,12 +939,6 @@
         "name": "Witold Lutosławski",
         "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski",
         "plays": "52",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
-        "plays": "50",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1365,6 +1365,13 @@
         "image": ""
       },
       {
+        "name": "Violin Concertos / Mythes",
+        "url": "https://www.last.fm/music/Karol+Szymanowski/Violin+Concertos+%2F+Mythes",
+        "artist": "Karol Szymanowski",
+        "plays": "17",
+        "image": ""
+      },
+      {
         "name": "A Century of Russian Colours",
         "url": "https://www.last.fm/music/Lera+Auerbach/A+Century+of+Russian+Colours",
         "artist": "Lera Auerbach",
@@ -1377,13 +1384,6 @@
         "artist": "Rasputina",
         "plays": "17",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/24d7074aedc84ff79fe0db8f68076c27.jpg"
-      },
-      {
-        "name": "Secret Love Letters",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/Secret+Love+Letters",
-        "artist": "César Franck",
-        "plays": "16",
-        "image": ""
       }
     ],
     "tracks": [
@@ -1704,7 +1704,7 @@
       {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "230",
+        "plays": "231",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1716,7 +1716,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "200",
+        "plays": "198",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1750,6 +1750,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "plays": "116",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Leoš Janáček",
         "url": "https://www.last.fm/music/Leo%C5%A1+Jan%C3%A1%C4%8Dek",
         "plays": "115",
@@ -1771,12 +1777,6 @@
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
         "plays": "109",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
-        "plays": "107",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1878,12 +1878,18 @@
       {
         "name": "Carl Nielsen",
         "url": "https://www.last.fm/music/Carl+Nielsen",
-        "plays": "70",
+        "plays": "71",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "György Ligeti",
         "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti",
+        "plays": "70",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Jean Sibelius",
+        "url": "https://www.last.fm/music/Jean+Sibelius",
         "plays": "70",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1902,12 +1908,6 @@
       {
         "name": "Myrkur",
         "url": "https://www.last.fm/music/Myrkur",
-        "plays": "67",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Samuel Barber",
-        "url": "https://www.last.fm/music/Samuel+Barber",
         "plays": "67",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -2614,7 +2614,7 @@
       {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "1740",
+        "plays": "1741",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2698,7 +2698,7 @@
       {
         "name": "Jean Sibelius",
         "url": "https://www.last.fm/music/Jean+Sibelius",
-        "plays": "1346",
+        "plays": "1351",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
