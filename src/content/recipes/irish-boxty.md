@@ -9,7 +9,7 @@ recipeYield: "4 servings"
 recipeCategory: "Side Dish"
 recipeCuisine: "Irish"
 keywords: ["boxty", "potato cake", "irish", "traditional"]
-coverPhoto: ""
+coverPhoto: "https://live.staticflickr.com/65535/33918917108_d572271710_b.jpg"
 nutrition:
   calories: "245 kcal"
   carbohydrateContent: "48 g"
