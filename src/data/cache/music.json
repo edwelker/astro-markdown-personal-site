@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 275167
+    "scrobbles": 275172
   },
   "history": [
-    {
-      "dayName": "Tue",
-      "date": "2026-03-10",
-      "hours": "0.7",
-      "lastHours": "2.5",
-      "topArtist": "My Brightest Diamond"
-    },
     {
       "dayName": "Wed",
       "date": "2026-03-11",
@@ -51,6 +44,13 @@
       "hours": "2.8",
       "lastHours": "0.1",
       "topArtist": "Emma Ruth Rundle"
+    },
+    {
+      "dayName": "Tue",
+      "date": "2026-03-17",
+      "hours": "0.3",
+      "lastHours": "0.7",
+      "topArtist": "Dropkick Murphys"
     }
   ],
   "week": {
@@ -142,6 +142,12 @@
       {
         "name": "DMX",
         "url": "https://www.last.fm/music/DMX",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Dropkick Murphys",
+        "url": "https://www.last.fm/music/Dropkick+Murphys",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -278,20 +284,14 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Derek and the Dominos",
+        "url": "https://www.last.fm/music/Derek+and+the+Dominos",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Edvard Grieg",
         "url": "https://www.last.fm/music/Edvard+Grieg",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Eminem",
-        "url": "https://www.last.fm/music/Eminem",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ernest Bloch",
-        "url": "https://www.last.fm/music/Ernest+Bloch",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -373,6 +373,13 @@
         "artist": "Dmitri Shostakovich",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0da447239679b662df788613c3362d87.jpg"
+      },
+      {
+        "name": "The Warrior's Code",
+        "url": "https://www.last.fm/music/Dropkick+Murphys/The+Warrior%27s+Code",
+        "artist": "Dropkick Murphys",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/dd8797a84503daf8618cfd28043e053e.jpg"
       },
       {
         "name": "Shchedrin: Concerto Cantabile / Stravinsky: Violin Concerto / Tchaikovsky: Sérénade mélancolique",
@@ -569,16 +576,16 @@
         "artist": "Cardi B",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d978f8542ef2a5bc6dfae21317db2a4f.jpg"
-      },
-      {
-        "name": "Violin Concertos / 2 Serenades",
-        "url": "https://www.last.fm/music/Carl+Nielsen/Violin+Concertos+%2F+2+Serenades",
-        "artist": "Carl Nielsen",
-        "plays": "1",
-        "image": ""
       }
     ],
     "tracks": [
+      {
+        "name": "I'm Shipping Up to Boston",
+        "url": "https://www.last.fm/music/Dropkick+Murphys/_/I%27m+Shipping+Up+to+Boston",
+        "artist": "Dropkick Murphys",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
       {
         "name": "Gimme Some More",
         "url": "https://www.last.fm/music/Busta+Rhymes/_/Gimme+Some+More",
@@ -818,6 +825,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Nobody Knows You When You're Down And Out - 40th Anniversary Version / 2010 Remastered",
+        "url": "https://www.last.fm/music/Derek+&+The+Dominos/_/Nobody+Knows+You+When+You%27re+Down+And+Out+-+40th+Anniversary+Version+%2F+2010+Remastered",
+        "artist": "Derek & The Dominos",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Cello Concerto No. 1 in G Minor, Op. 49: I. Allegro",
         "url": "https://www.last.fm/music/Dmitri+Kabalevsky/_/Cello+Concerto+No.+1+in+G+Minor,+Op.+49:+I.+Allegro",
         "artist": "Dmitri Kabalevsky",
@@ -841,20 +855,6 @@
       {
         "name": "Violin Concerto no. 1 in A minor, op. 77 / 99: I. Nocturno. Moderato",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Violin+Concerto+no.+1+in+A+minor,+op.+77+%2F+99:+I.+Nocturno.+Moderato",
-        "artist": "Dmitri Shostakovich",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Violin Concerto no. 1 in A minor, op. 77 / 99: II. Scherzo. Allegro",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Violin+Concerto+no.+1+in+A+minor,+op.+77+%2F+99:+II.+Scherzo.+Allegro",
-        "artist": "Dmitri Shostakovich",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Violin Concerto No. 1 in A Minor, Op. 77: I. Nocturne. Moderato",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Violin+Concerto+No.+1+in+A+Minor,+Op.+77:+I.+Nocturne.+Moderato",
         "artist": "Dmitri Shostakovich",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -1577,6 +1577,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "I'm Shipping Up to Boston",
+        "url": "https://www.last.fm/music/Dropkick+Murphys/_/I%27m+Shipping+Up+to+Boston",
+        "artist": "Dropkick Murphys",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Loser",
         "url": "https://www.last.fm/music/Grateful+Dead/_/Loser",
         "artist": "Grateful Dead",
@@ -1656,13 +1663,6 @@
       {
         "name": "Jameson (Digster Live Session)",
         "url": "https://www.last.fm/music/Zella+Day/_/Jameson+(Digster+Live+Session)",
-        "artist": "Zella Day",
-        "plays": "4",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sweet Ophelia (Digster Live Session)",
-        "url": "https://www.last.fm/music/Zella+Day/_/Sweet+Ophelia+(Digster+Live+Session)",
         "artist": "Zella Day",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -3021,7 +3021,7 @@
         "name": "I'm Shipping Up to Boston",
         "url": "https://www.last.fm/music/Dropkick+Murphys/_/I%27m+Shipping+Up+to+Boston",
         "artist": "Dropkick Murphys",
-        "plays": "622",
+        "plays": "626",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
