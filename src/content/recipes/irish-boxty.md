@@ -1,4 +1,4 @@
----
+lo---
 title: "Traditional Irish Boxty"
 description: "A delicious Irish Boxty that uses only the simplest ingredients, making me love it more."
 date: 2026-03-17T12:24:00-04:00
@@ -22,7 +22,7 @@ aggregateRating:
 recipeIngredient:
   - "6 medium potatoes (approx 1kg), peeled"
   - "30g (1/4 cup) all-purpose flour"
-  - "1 tsp sea salt"
+  - "3/4 tsp sea salt"
   - "1 tbsp butter or oil"
   - "Fresh parsley, chopped for garnish (barely optional)"
   - "Sour cream or applesauce for a topping (barely optional)"
