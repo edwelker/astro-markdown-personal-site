@@ -1,4 +1,4 @@
-lo---
+---
 title: "Traditional Irish Boxty"
 description: "A delicious Irish Boxty that uses only the simplest ingredients, making me love it more."
 date: 2026-03-17T12:24:00-04:00
