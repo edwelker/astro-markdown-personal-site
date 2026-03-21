@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 275261
+    "scrobbles": 275273
   },
   "history": [
-    {
-      "dayName": "Sat",
-      "date": "2026-03-14",
-      "hours": "0.9",
-      "lastHours": "0.2",
-      "topArtist": "Verdi Quartett"
-    },
     {
       "dayName": "Sun",
       "date": "2026-03-15",
@@ -34,7 +27,7 @@
     {
       "dayName": "Wed",
       "date": "2026-03-18",
-      "hours": "1.0",
+      "hours": "1.1",
       "lastHours": "0.7",
       "topArtist": "Leonard Bernstein"
     },
@@ -51,6 +44,13 @@
       "hours": "1.4",
       "lastHours": "1.3",
       "topArtist": "Sergei Prokofiev"
+    },
+    {
+      "dayName": "Sat",
+      "date": "2026-03-21",
+      "hours": "0.6",
+      "lastHours": "0.9",
+      "topArtist": "Genitorturers"
     }
   ],
   "week": {
@@ -58,7 +58,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "22",
+        "plays": "24",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -82,6 +82,12 @@
       {
         "name": "Dropkick Murphys",
         "url": "https://www.last.fm/music/Dropkick+Murphys",
+        "plays": "7",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Genitorturers",
+        "url": "https://www.last.fm/music/Genitorturers",
         "plays": "7",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -212,6 +218,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Lola Young",
+        "url": "https://www.last.fm/music/Lola+Young",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Lou Reed",
         "url": "https://www.last.fm/music/Lou+Reed",
         "plays": "2",
@@ -280,18 +292,6 @@
       {
         "name": "Cardi B",
         "url": "https://www.last.fm/music/Cardi+B",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Carl Nielsen",
-        "url": "https://www.last.fm/music/Carl+Nielsen",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Carlyle Fraser",
-        "url": "https://www.last.fm/music/Carlyle+Fraser",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -459,11 +459,32 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f3061ef07c144212c2fb34e13d54a3a1.png"
       },
       {
+        "name": "Blackheart Revolution",
+        "url": "https://www.last.fm/music/Genitorturers/Blackheart+Revolution",
+        "artist": "Genitorturers",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/22943bdc99a5e5368ad481b7eeee43e9.jpg"
+      },
+      {
+        "name": "Flesh Is the Law",
+        "url": "https://www.last.fm/music/Genitorturers/Flesh+Is+the+Law",
+        "artist": "Genitorturers",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/358a5bd590c1c902b36157c3e7f337d9.jpg"
+      },
+      {
         "name": "Violin Concertos",
         "url": "https://www.last.fm/music/Leo%C5%A1+Jan%C3%A1%C4%8Dek/Violin+Concertos",
         "artist": "Leoš Janáček",
         "plays": "2",
         "image": ""
+      },
+      {
+        "name": "This Wasn't Meant For You Anyway",
+        "url": "https://www.last.fm/music/Lola+Young/This+Wasn%27t+Meant+For+You+Anyway",
+        "artist": "Lola Young",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4e2f92d99dfa7c123c54401407e9ddf6.png"
       },
       {
         "name": "Transformer",
@@ -492,6 +513,13 @@
         "artist": "Ludacris",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f15fc26d2dc649a2486c511e84069823.jpg"
+      },
+      {
+        "name": "Prokofiev: Piano Concertos Nos. 1-5",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev:+Piano+Concertos+Nos.+1-5",
+        "artist": "Sergei Prokofiev",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/956fcce63a454ebbceb6829f84a160ff.jpg"
       },
       {
         "name": "Juju",
@@ -548,34 +576,6 @@
         "artist": "Bad Bunny",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7d0982b56a5e4304eb6207d6688c917a.png"
-      },
-      {
-        "name": "Standards",
-        "url": "https://www.last.fm/music/Blaggards/Standards",
-        "artist": "Blaggards",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c0ff8a7316315de5faea26f89b322295.jpg"
-      },
-      {
-        "name": "Wrecking Ball",
-        "url": "https://www.last.fm/music/Bruce+Springsteen/Wrecking+Ball",
-        "artist": "Bruce Springsteen",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/df0b1783abab4ecead611432893571b1.png"
-      },
-      {
-        "name": "Extinction Level Event: The Final World Front",
-        "url": "https://www.last.fm/music/Busta+Rhymes/Extinction+Level+Event:+The+Final+World+Front",
-        "artist": "Busta Rhymes",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/1024150928c90f689d9431a80fd04b70.jpg"
-      },
-      {
-        "name": "Invasion of Privacy",
-        "url": "https://www.last.fm/music/Cardi+B/Invasion+of+Privacy",
-        "artist": "Cardi B",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d978f8542ef2a5bc6dfae21317db2a4f.jpg"
       }
     ],
     "tracks": [
@@ -762,6 +762,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "I'm Every Woman - 2024 Remaster",
+        "url": "https://www.last.fm/music/Chaka+Khan/_/I%27m+Every+Woman+-+2024+Remaster",
+        "artist": "Chaka Khan",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "(Rock) Superstar (feat. Chino Moreno & Everlast)",
         "url": "https://www.last.fm/music/Cypress+Hill/_/(Rock)+Superstar+(feat.+Chino+Moreno+&+Everlast)",
         "artist": "Cypress Hill",
@@ -851,13 +858,6 @@
         "artist": "DMX",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ackrite",
-        "url": "https://www.last.fm/music/Dr.+Dre/_/Ackrite",
-        "artist": "Dr. Dre",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -866,7 +866,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "267",
+        "plays": "269",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1674,7 +1674,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "716",
+        "plays": "718",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2494,7 +2494,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "5627",
+        "plays": "5629",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
