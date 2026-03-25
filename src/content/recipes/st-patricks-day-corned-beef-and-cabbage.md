@@ -9,7 +9,7 @@ recipeYield: "6 servings"
 recipeCategory: "Dinner"
 recipeCuisine: "Irish-American"
 keywords: ["corned beef", "cabbage", "brisket", "st patricks day", "simmer"]
-coverPhoto: ""
+coverPhoto: "https://live.staticflickr.com/65535/55153683662_9cd91a373c_b.jpg"
 nutrition:
   calories: "650 kcal"
   carbohydrateContent: "35 g"
