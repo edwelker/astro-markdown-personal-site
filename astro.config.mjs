@@ -37,10 +37,6 @@ export default defineConfig({
             entrypoint: './src/templates/RecipeItem.astro',
           });
           injectRoute({
-            pattern: '/tags/[tag]',
-            entrypoint: './src/templates/TagItem.astro',
-          });
-          injectRoute({
             pattern: '/media/[decade]',
             entrypoint: './src/templates/MediaDecadeItem.astro',
           });
