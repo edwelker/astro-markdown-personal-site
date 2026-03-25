@@ -49,7 +49,8 @@
 # Catch-all for deleted taxonomies (Redirects to Home or Blog)
 /category/* / 301
 /categories/* / 301
-# tags is not here, some disappeared by my reducing the vocab, but they should 404.
+
+/tags/* / 301
 
 # Misc Assets
 /wp-content/uploads/2007/09/csscheatsheet.pdf /blog/2007/09/06/css-shorthand-cheat-sheet 301
