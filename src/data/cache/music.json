@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 275502
+    "scrobbles": 275509
   },
   "history": [
-    {
-      "dayName": "Sat",
-      "date": "2026-03-28",
-      "hours": "0.9",
-      "lastHours": "0.8",
-      "topArtist": "Gojira"
-    },
     {
       "dayName": "Sun",
       "date": "2026-03-29",
@@ -51,6 +44,13 @@
       "hours": "1.7",
       "lastHours": "0.0",
       "topArtist": "Claude Debussy"
+    },
+    {
+      "dayName": "Sat",
+      "date": "2026-04-04",
+      "hours": "0.4",
+      "lastHours": "0.9",
+      "topArtist": "Miklós Rózsa; Atlanta Symphony Orchestra, Robert McDuffie, Lynn Harrell, Yoel Levi"
     }
   ],
   "week": {
@@ -65,6 +65,12 @@
         "name": "Bohuslav Martinů",
         "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF",
         "plays": "11",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Miklós Rózsa; Atlanta Symphony Orchestra, Robert McDuffie, Lynn Harrell, Yoel Levi",
+        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa;+Atlanta+Symphony+Orchestra,+Robert+McDuffie,+Lynn+Harrell,+Yoel+Levi",
+        "plays": "6",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -86,20 +92,14 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Gojira",
-        "url": "https://www.last.fm/music/Gojira",
-        "plays": "4",
+        "name": "Onuka feat. Ukrainian National Academic Orchestra of Folk Instruments",
+        "url": "https://www.last.fm/music/Onuka+feat.+Ukrainian+National+Academic+Orchestra+of+Folk+Instruments",
+        "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Onuka",
         "url": "https://www.last.fm/music/Onuka",
-        "plays": "4",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Onuka feat. Ukrainian National Academic Orchestra of Folk Instruments",
-        "url": "https://www.last.fm/music/Onuka+feat.+Ukrainian+National+Academic+Orchestra+of+Folk+Instruments",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -158,12 +158,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Behemoth",
-        "url": "https://www.last.fm/music/Behemoth",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Cake",
         "url": "https://www.last.fm/music/Cake",
         "plays": "1",
@@ -172,6 +166,12 @@
       {
         "name": "Florence Price",
         "url": "https://www.last.fm/music/Florence+Price",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Gojira",
+        "url": "https://www.last.fm/music/Gojira",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -256,6 +256,13 @@
         "image": ""
       },
       {
+        "name": "Ben-Hur",
+        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa;+Atlanta+Symphony+Orchestra,+Robert+McDuffie,+Lynn+Harrell,+Yoel+Levi/Ben-Hur",
+        "artist": "Miklós Rózsa; Atlanta Symphony Orchestra, Robert McDuffie, Lynn Harrell, Yoel Levi",
+        "plays": "6",
+        "image": ""
+      },
+      {
         "name": "Path to the Moon",
         "url": "https://www.last.fm/music/Benjamin+Britten/Path+to+the+Moon",
         "artist": "Benjamin Britten",
@@ -266,6 +273,13 @@
         "name": "Path to the Moon",
         "url": "https://www.last.fm/music/Claude+Debussy/Path+to+the+Moon",
         "artist": "Claude Debussy",
+        "plays": "5",
+        "image": ""
+      },
+      {
+        "name": "Mozaïka: Live",
+        "url": "https://www.last.fm/music/Onuka+feat.+Ukrainian+National+Academic+Orchestra+of+Folk+Instruments/Moza%C3%AFka:+Live",
+        "artist": "Onuka feat. Ukrainian National Academic Orchestra of Folk Instruments",
         "plays": "5",
         "image": ""
       },
@@ -284,25 +298,11 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/edff45742f0f4b85cbeac9ca91a160af.png"
       },
       {
-        "name": "Magma",
-        "url": "https://www.last.fm/music/Gojira/Magma",
-        "artist": "Gojira",
-        "plays": "4",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8b8c62e070e4064dc240309f398d3854.jpg"
-      },
-      {
         "name": "VIDLIK",
         "url": "https://www.last.fm/music/Onuka/VIDLIK",
         "artist": "Onuka",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4171bb84ce47bc3d0cf95dbb416cd893.jpg"
-      },
-      {
-        "name": "Mozaïka: Live",
-        "url": "https://www.last.fm/music/Onuka+feat.+Ukrainian+National+Academic+Orchestra+of+Folk+Instruments/Moza%C3%AFka:+Live",
-        "artist": "Onuka feat. Ukrainian National Academic Orchestra of Folk Instruments",
-        "plays": "4",
-        "image": ""
       },
       {
         "name": "Path to the Moon",
@@ -375,13 +375,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/faa97dbad520347e0ab2841a34d96fd5.jpg"
       },
       {
-        "name": "Opvs Contra Natvram",
-        "url": "https://www.last.fm/music/Behemoth/Opvs+Contra+Natvram",
-        "artist": "Behemoth",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/cdeafe3d5831c7c6dc253d3d7d5c8789.jpg"
-      },
-      {
         "name": "Motorcade of Generosity",
         "url": "https://www.last.fm/music/Cake/Motorcade+of+Generosity",
         "artist": "Cake",
@@ -394,6 +387,13 @@
         "artist": "Florence Price",
         "plays": "1",
         "image": ""
+      },
+      {
+        "name": "Magma",
+        "url": "https://www.last.fm/music/Gojira/Magma",
+        "artist": "Gojira",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8b8c62e070e4064dc240309f398d3854.jpg"
       },
       {
         "name": "Femmes",
@@ -531,9 +531,9 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Only Pain",
-        "url": "https://www.last.fm/music/Gojira/_/Only+Pain",
-        "artist": "Gojira",
+        "name": "Batpa (Live)",
+        "url": "https://www.last.fm/music/Onuka+feat.+Ukrainian+National+Academic+Orchestra+of+Folk+Instruments/_/Batpa+(Live)",
+        "artist": "Onuka feat. Ukrainian National Academic Orchestra of Folk Instruments",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -590,13 +590,6 @@
         "name": "Musica nostalgica",
         "url": "https://www.last.fm/music/Alfred+Schnittke/_/Musica+nostalgica",
         "artist": "Alfred Schnittke",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Deathless Sun",
-        "url": "https://www.last.fm/music/Behemoth/_/The+Deathless+Sun",
-        "artist": "Behemoth",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -736,6 +729,13 @@
       {
         "name": "Cello Sonata, L. 135: II. [Sérénade] Modérément animé",
         "url": "https://www.last.fm/music/Claude+Debussy/_/Cello+Sonata,+L.+135:+II.+%5BS%C3%A9r%C3%A9nade%5D+Mod%C3%A9r%C3%A9ment+anim%C3%A9",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Cello Sonata, L. 135: III. Finale. Animé",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/Cello+Sonata,+L.+135:+III.+Finale.+Anim%C3%A9",
         "artist": "Claude Debussy",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -1567,7 +1567,7 @@
       {
         "name": "Caroline Shaw",
         "url": "https://www.last.fm/music/Caroline+Shaw",
-        "plays": "264",
+        "plays": "262",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1639,7 +1639,7 @@
       {
         "name": "Rasputina",
         "url": "https://www.last.fm/music/Rasputina",
-        "plays": "114",
+        "plays": "113",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2033,13 +2033,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8adc83204d7a99a247be057f875a2958.jpg"
       },
       {
-        "name": "Caroline Shaw: Evergreen",
-        "url": "https://www.last.fm/music/Caroline+Shaw/Caroline+Shaw:+Evergreen",
-        "artist": "Caroline Shaw",
-        "plays": "43",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a7786e06bcfbf611fbdf798843f1af53.jpg"
-      },
-      {
         "name": "Clear or Cloudy: Complete Recordings on Deutsche Grammophon",
         "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti/Clear+or+Cloudy:+Complete+Recordings+on+Deutsche+Grammophon",
         "artist": "György Ligeti",
@@ -2073,6 +2066,13 @@
         "artist": "Sergei Prokofiev",
         "plays": "40",
         "image": ""
+      },
+      {
+        "name": "The Complete EMI Recordings",
+        "url": "https://www.last.fm/music/Johann+Sebastian+Bach/The+Complete+EMI+Recordings",
+        "artist": "Johann Sebastian Bach",
+        "plays": "39",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/de96f9001f8040348b7d6849991c1242.png"
       }
     ],
     "tracks": [
