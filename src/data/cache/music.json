@@ -4,13 +4,6 @@
   },
   "history": [
     {
-      "dayName": "Sun",
-      "date": "2026-03-29",
-      "hours": "0.5",
-      "lastHours": "1.2",
-      "topArtist": "Sergei Prokofiev"
-    },
-    {
       "dayName": "Mon",
       "date": "2026-03-30",
       "hours": "2.6",
@@ -51,6 +44,13 @@
       "hours": "2.8",
       "lastHours": "0.9",
       "topArtist": "Mohammed Fairouz"
+    },
+    {
+      "dayName": "Sun",
+      "date": "2026-04-05",
+      "hours": "0.0",
+      "lastHours": "0.5",
+      "topArtist": null
     }
   ],
   "week": {
@@ -88,12 +88,6 @@
       {
         "name": "Miklós Rózsa; Atlanta Symphony Orchestra, Robert McDuffie, Lynn Harrell, Yoel Levi",
         "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa;+Atlanta+Symphony+Orchestra,+Robert+McDuffie,+Lynn+Harrell,+Yoel+Levi",
-        "plays": "6",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Dresden Dolls",
-        "url": "https://www.last.fm/music/The+Dresden+Dolls",
         "plays": "6",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -166,6 +160,12 @@
       {
         "name": "Sergei Rachmaninoff",
         "url": "https://www.last.fm/music/Sergei+Rachmaninoff",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Dresden Dolls",
+        "url": "https://www.last.fm/music/The+Dresden+Dolls",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -329,13 +329,6 @@
         "image": ""
       },
       {
-        "name": "Yes, Virginia...",
-        "url": "https://www.last.fm/music/The+Dresden+Dolls/Yes,+Virginia...",
-        "artist": "The Dresden Dolls",
-        "plays": "5",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/edff45742f0f4b85cbeac9ca91a160af.png"
-      },
-      {
         "name": "Scrapyard Exotica",
         "url": "https://www.last.fm/music/Mason+Bates/Scrapyard+Exotica",
         "artist": "Mason Bates",
@@ -425,6 +418,13 @@
         "artist": "Sergei Prokofiev",
         "plays": "2",
         "image": ""
+      },
+      {
+        "name": "Yes, Virginia...",
+        "url": "https://www.last.fm/music/The+Dresden+Dolls/Yes,+Virginia...",
+        "artist": "The Dresden Dolls",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/edff45742f0f4b85cbeac9ca91a160af.png"
       },
       {
         "name": "Russian Music for Cello & Piano",
@@ -806,7 +806,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "332",
+        "plays": "329",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -858,12 +858,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
-        "plays": "54",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Witold Lutosławski",
         "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski",
         "plays": "54",
@@ -878,6 +872,12 @@
       {
         "name": "Austra",
         "url": "https://www.last.fm/music/Austra",
+        "plays": "48",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
         "plays": "48",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -908,7 +908,7 @@
       {
         "name": "Lera Auerbach",
         "url": "https://www.last.fm/music/Lera+Auerbach",
-        "plays": "37",
+        "plays": "33",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -942,12 +942,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Dmitri Kabalevsky",
-        "url": "https://www.last.fm/music/Dmitri+Kabalevsky",
-        "plays": "25",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "George Enescu",
         "url": "https://www.last.fm/music/George+Enescu",
         "plays": "25",
@@ -957,6 +951,12 @@
         "name": "Olivier Messiaen",
         "url": "https://www.last.fm/music/Olivier+Messiaen",
         "plays": "25",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Dmitri Kabalevsky",
+        "url": "https://www.last.fm/music/Dmitri+Kabalevsky",
+        "plays": "24",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -974,12 +974,6 @@
       {
         "name": "George Antheil",
         "url": "https://www.last.fm/music/George+Antheil",
-        "plays": "24",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Iona Zajac",
-        "url": "https://www.last.fm/music/Iona+Zajac",
         "plays": "24",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1041,6 +1035,12 @@
         "name": "ohGr",
         "url": "https://www.last.fm/music/ohGr",
         "plays": "21",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "12 Rounds",
+        "url": "https://www.last.fm/music/12+Rounds",
+        "plays": "20",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
@@ -1158,13 +1158,6 @@
         "image": ""
       },
       {
-        "name": "Bang",
-        "url": "https://www.last.fm/music/Iona+Zajac/Bang",
-        "artist": "Iona Zajac",
-        "plays": "24",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d5255bdad6370c206a1f220cd45bff58.jpg"
-      },
-      {
         "name": "The Tsar's Bride",
         "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov+-+Galina+Vishnevskaya,+Vladimir+Atlantov,+Evgeny+Nesterenko,+%D0%98%D1%80%D0%B8%D0%BD%D0%B0+%D0%90%D1%80%D1%85%D0%B8%D0%BF%D0%BE%D0%B2%D0%B0,+%D0%A4%D1%83%D0%B0%D1%82+%D0%9C%D0%B0%D0%BD%D1%81%D1%83%D1%80%D0%BE%D0%B2/The+Tsar%27s+Bride",
         "artist": "Nikolai Rimsky-Korsakov - Galina Vishnevskaya, Vladimir Atlantov, Evgeny Nesterenko, Ирина Архипова, Фуат Мансуров",
@@ -1256,13 +1249,6 @@
         "image": ""
       },
       {
-        "name": "The Firebird • 4 Etudes • Fireworks",
-        "url": "https://www.last.fm/music/Igor+Stravinsky+%E2%80%A2+Chicago+Symphony+Orchestra+%E2%80%A2+Pierre+Boulez/The+Firebird+%E2%80%A2+4+Etudes+%E2%80%A2+Fireworks",
-        "artist": "Igor Stravinsky • Chicago Symphony Orchestra • Pierre Boulez",
-        "plays": "20",
-        "image": ""
-      },
-      {
         "name": "Marked For Death",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle/Marked+For+Death",
         "artist": "Emma Ruth Rundle",
@@ -1284,11 +1270,11 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d8a6417d7c1d30ed4a211bdceb0e8cf9.jpg"
       },
       {
-        "name": "Gabriela Ortiz: Yanga",
-        "url": "https://www.last.fm/music/Gabriela+Ortiz/Gabriela+Ortiz:+Yanga",
-        "artist": "Gabriela Ortiz",
+        "name": "Bang",
+        "url": "https://www.last.fm/music/Iona+Zajac/Bang",
+        "artist": "Iona Zajac",
         "plays": "18",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d04fa68396a05d7e4c768916e15d730e.jpg"
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d5255bdad6370c206a1f220cd45bff58.jpg"
       },
       {
         "name": "Piano Music, Volume 1",
@@ -1296,6 +1282,13 @@
         "artist": "Maurice Ravel",
         "plays": "18",
         "image": ""
+      },
+      {
+        "name": "Gabriela Ortiz: Yanga",
+        "url": "https://www.last.fm/music/Gabriela+Ortiz/Gabriela+Ortiz:+Yanga",
+        "artist": "Gabriela Ortiz",
+        "plays": "17",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d04fa68396a05d7e4c768916e15d730e.jpg"
       },
       {
         "name": "A Century of Russian Colours",
@@ -1324,6 +1317,13 @@
         "artist": "Maurice Ravel",
         "plays": "16",
         "image": ""
+      },
+      {
+        "name": "Orange",
+        "url": "https://www.last.fm/music/Caroline+Shaw;+Attacca+Quartet/Orange",
+        "artist": "Caroline Shaw; Attacca Quartet",
+        "plays": "15",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a77303f3c4bb2bac17913ef873480cc1.jpg"
       }
     ],
     "tracks": [
@@ -1708,12 +1708,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Emma Ruth Rundle",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle",
-        "plays": "100",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Ludwig van Beethoven",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
         "plays": "99",
@@ -1738,9 +1732,9 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Einstürzende Neubauten",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "88",
+        "name": "Emma Ruth Rundle",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle",
+        "plays": "91",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1771,6 +1765,12 @@
         "name": "Dobrinka Tabakova",
         "url": "https://www.last.fm/music/Dobrinka+Tabakova",
         "plays": "79",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Einstürzende Neubauten",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
+        "plays": "78",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1848,7 +1848,7 @@
       {
         "name": "Samuel Barber",
         "url": "https://www.last.fm/music/Samuel+Barber",
-        "plays": "67",
+        "plays": "66",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
@@ -2106,13 +2106,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/236b2cef8a10793af24d2879d780e415.png"
       },
       {
-        "name": "Grundstück",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Grundst%C3%BCck",
-        "artist": "Einstürzende Neubauten",
-        "plays": "40",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4490d85e31754333c347cbf90f224e28.png"
-      },
-      {
         "name": "Prokofiev: Romeo & Juliet",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev:+Romeo+&+Juliet",
         "artist": "Sergei Prokofiev",
@@ -2132,6 +2125,13 @@
         "artist": "Johann Sebastian Bach",
         "plays": "39",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/de96f9001f8040348b7d6849991c1242.png"
+      },
+      {
+        "name": "Thanks For The Ether",
+        "url": "https://www.last.fm/music/Rasputina/Thanks+For+The+Ether",
+        "artist": "Rasputina",
+        "plays": "39",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/e9d337771901d79174f707459c1d2e61.jpg"
       }
     ],
     "tracks": [
