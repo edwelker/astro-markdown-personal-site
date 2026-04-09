@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 275616
+    "scrobbles": 275620
   },
   "history": [
-    {
-      "dayName": "Wed",
-      "date": "2026-04-01",
-      "hours": "0.2",
-      "lastHours": "1.2",
-      "topArtist": "Sergei Prokofiev"
-    },
     {
       "dayName": "Thu",
       "date": "2026-04-02",
@@ -51,6 +44,13 @@
       "hours": "2.5",
       "lastHours": "1.8",
       "topArtist": "Ralph Vaughan Williams"
+    },
+    {
+      "dayName": "Wed",
+      "date": "2026-04-08",
+      "hours": "0.2",
+      "lastHours": "0.2",
+      "topArtist": "Type O Negative"
     }
   ],
   "week": {
@@ -76,7 +76,7 @@
       {
         "name": "Onuka",
         "url": "https://www.last.fm/music/Onuka",
-        "plays": "9",
+        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -212,6 +212,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Gojira",
+        "url": "https://www.last.fm/music/Gojira",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Ken Ueno",
         "url": "https://www.last.fm/music/Ken+Ueno",
         "plays": "1",
@@ -226,6 +232,18 @@
       {
         "name": "Nina Simone",
         "url": "https://www.last.fm/music/Nina+Simone",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "System of a Down",
+        "url": "https://www.last.fm/music/System+of+a+Down",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Type O Negative",
+        "url": "https://www.last.fm/music/Type+O+Negative",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -306,18 +324,18 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/df6161b1be62cd62bea3e980038764d6.jpg"
       },
       {
+        "name": "VIDLIK",
+        "url": "https://www.last.fm/music/Onuka/VIDLIK",
+        "artist": "Onuka",
+        "plays": "7",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4171bb84ce47bc3d0cf95dbb416cd893.jpg"
+      },
+      {
         "name": "Ben-Hur",
         "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa;+Atlanta+Symphony+Orchestra,+Robert+McDuffie,+Lynn+Harrell,+Yoel+Levi/Ben-Hur",
         "artist": "Miklós Rózsa; Atlanta Symphony Orchestra, Robert McDuffie, Lynn Harrell, Yoel Levi",
         "plays": "6",
         "image": ""
-      },
-      {
-        "name": "VIDLIK",
-        "url": "https://www.last.fm/music/Onuka/VIDLIK",
-        "artist": "Onuka",
-        "plays": "6",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4171bb84ce47bc3d0cf95dbb416cd893.jpg"
       },
       {
         "name": "Visions Of Prokofiev",
@@ -474,6 +492,13 @@
         "image": ""
       },
       {
+        "name": "Magma",
+        "url": "https://www.last.fm/music/Gojira/Magma",
+        "artist": "Gojira",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8b8c62e070e4064dc240309f398d3854.jpg"
+      },
+      {
         "name": "Scrapyard Exotica",
         "url": "https://www.last.fm/music/Ken+Ueno/Scrapyard+Exotica",
         "artist": "Ken Ueno",
@@ -502,25 +527,25 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ff913cdda0e7bb3ce4f44013e9fbe6db.jpg"
       },
       {
+        "name": "Steal This Album!",
+        "url": "https://www.last.fm/music/System+of+a+Down/Steal+This+Album!",
+        "artist": "System of a Down",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/303fd758c06840a876e090ccc46f5c2e.jpg"
+      },
+      {
+        "name": "Bloody Kisses",
+        "url": "https://www.last.fm/music/Type+O+Negative/Bloody+Kisses",
+        "artist": "Type O Negative",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/391b090e5d946374c2c8b7092782c12b.jpg"
+      },
+      {
         "name": "Piano Sonatas / Cello Sonata",
         "url": "https://www.last.fm/music/Valentyn+Sylvestrov/Piano+Sonatas+%2F+Cello+Sonata",
         "artist": "Valentyn Sylvestrov",
         "plays": "1",
         "image": ""
-      },
-      {
-        "name": "Femmes",
-        "url": "https://www.last.fm/music/Victoria+Yagling/Femmes",
-        "artist": "Victoria Yagling",
-        "plays": "1",
-        "image": ""
-      },
-      {
-        "name": "Symphonies / Concertos / Choral and Vocal Works",
-        "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski/Symphonies+%2F+Concertos+%2F+Choral+and+Vocal+Works",
-        "artist": "Witold Lutosławski",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/68a56f2ad11befccf91c09c4fe881653.png"
       }
     ],
     "tracks": [
@@ -528,7 +553,7 @@
         "name": "Vidlik",
         "url": "https://www.last.fm/music/Onuka/_/Vidlik",
         "artist": "Onuka",
-        "plays": "4",
+        "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -823,7 +848,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "91",
+        "plays": "89",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -853,7 +878,7 @@
       {
         "name": "Claude Debussy",
         "url": "https://www.last.fm/music/Claude+Debussy",
-        "plays": "56",
+        "plays": "54",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -863,33 +888,33 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Maurice Ravel",
-        "url": "https://www.last.fm/music/Maurice+Ravel",
-        "plays": "53",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Austra",
-        "url": "https://www.last.fm/music/Austra",
-        "plays": "48",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
-        "plays": "48",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Miklós Rózsa",
         "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
         "plays": "46",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "plays": "43",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Austra",
+        "url": "https://www.last.fm/music/Austra",
+        "plays": "42",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Johann Sebastian Bach",
         "url": "https://www.last.fm/music/Johann+Sebastian+Bach",
         "plays": "42",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Maurice Ravel",
+        "url": "https://www.last.fm/music/Maurice+Ravel",
+        "plays": "39",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1025,12 +1050,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "César Franck",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck",
-        "plays": "20",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "George Enescu , Luiza Borac",
         "url": "https://www.last.fm/music/George+Enescu+,+Luiza+Borac",
         "plays": "20",
@@ -1046,6 +1065,12 @@
         "name": "Emma Ruth Rundle",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle",
         "plays": "19",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Marriages",
+        "url": "https://www.last.fm/music/Marriages",
+        "plays": "18",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
@@ -1065,13 +1090,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9d366c5606653eaaae41582d07acb6b8.jpg"
       },
       {
-        "name": "Chin Up Buttercup",
-        "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
-        "artist": "Austra",
-        "plays": "48",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
-      },
-      {
         "name": "Symphonies",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich/Symphonies",
         "artist": "Dmitri Shostakovich",
@@ -1084,6 +1102,13 @@
         "artist": "Robert Schumann",
         "plays": "47",
         "image": ""
+      },
+      {
+        "name": "Chin Up Buttercup",
+        "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
+        "artist": "Austra",
+        "plays": "42",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
       },
       {
         "name": "The Five Piano Concertos / Overture on Hebrew Themes / Visions Fugitives",
@@ -1268,13 +1293,6 @@
         "image": ""
       },
       {
-        "name": "Secret Love Letters",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/Secret+Love+Letters",
-        "artist": "César Franck",
-        "plays": "16",
-        "image": ""
-      },
-      {
         "name": "Antheil: Ballet Mecanique / Serenade for String Orchestra",
         "url": "https://www.last.fm/music/George+Antheil/Antheil:+Ballet+Mecanique+%2F+Serenade+for+String+Orchestra",
         "artist": "George Antheil",
@@ -1317,18 +1335,25 @@
         "image": ""
       },
       {
-        "name": "The Complete Recordings on Deutsche Grammophon",
-        "url": "https://www.last.fm/music/Maurice+Ravel/The+Complete+Recordings+on+Deutsche+Grammophon",
-        "artist": "Maurice Ravel",
-        "plays": "15",
-        "image": ""
-      },
-      {
         "name": "Collected works",
         "url": "https://www.last.fm/music/Steve+Reich/Collected+works",
         "artist": "Steve Reich",
         "plays": "15",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/24e13037eab7fb61f898b7c2db6e4cce.jpg"
+      },
+      {
+        "name": "Piano Concertos No. 20 K. 466 & No. 24 K. 491 / Concert Rondo, K. 382",
+        "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart/Piano+Concertos+No.+20+K.+466+&+No.+24+K.+491+%2F+Concert+Rondo,+K.+382",
+        "artist": "Wolfgang Amadeus Mozart",
+        "plays": "15",
+        "image": ""
+      },
+      {
+        "name": "20th Century Russian Piano Sonatas",
+        "url": "https://www.last.fm/music/Anastasia+Yasko/20th+Century+Russian+Piano+Sonatas",
+        "artist": "Anastasia Yasko",
+        "plays": "14",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/8adc83204d7a99a247be057f875a2958.jpg"
       }
     ],
     "tracks": [
@@ -1375,20 +1400,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Amnesia",
-        "url": "https://www.last.fm/music/Austra/_/Amnesia",
-        "artist": "Austra",
-        "plays": "7",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Math Equation",
-        "url": "https://www.last.fm/music/Austra/_/Math+Equation",
-        "artist": "Austra",
-        "plays": "7",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "I'm Shipping Up to Boston",
         "url": "https://www.last.fm/music/Dropkick+Murphys/_/I%27m+Shipping+Up+to+Boston",
         "artist": "Dropkick Murphys",
@@ -1396,8 +1407,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Siren Song",
-        "url": "https://www.last.fm/music/Austra/_/Siren+Song",
+        "name": "Amnesia",
+        "url": "https://www.last.fm/music/Austra/_/Amnesia",
+        "artist": "Austra",
+        "plays": "6",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Math Equation",
+        "url": "https://www.last.fm/music/Austra/_/Math+Equation",
         "artist": "Austra",
         "plays": "6",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -1431,16 +1449,9 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sonata for Violin and Piano in A major, FWV 8: III. Recitativo - Fantasia (Ben moderato)",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+for+Violin+and+Piano+in+A+major,+FWV+8:+III.+Recitativo+-+Fantasia+(Ben+moderato)",
-        "artist": "César Franck",
-        "plays": "5",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sonata for Violin and Piano in A Major, FWV 8: IV. Allegretto poco mosso",
-        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+for+Violin+and+Piano+in+A+Major,+FWV+8:+IV.+Allegretto+poco+mosso",
-        "artist": "César Franck",
+        "name": "Siren Song",
+        "url": "https://www.last.fm/music/Austra/_/Siren+Song",
+        "artist": "Austra",
         "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1466,9 +1477,9 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Concerto for Violin and Orchestra no. 1, op. 35: I. Vivace assai",
-        "url": "https://www.last.fm/music/Karol+Szymanowski/_/Concerto+for+Violin+and+Orchestra+no.+1,+op.+35:+I.+Vivace+assai",
-        "artist": "Karol Szymanowski",
+        "name": "Vidlik",
+        "url": "https://www.last.fm/music/Onuka/_/Vidlik",
+        "artist": "Onuka",
         "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1536,27 +1547,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Blindsided",
-        "url": "https://www.last.fm/music/Austra/_/Blindsided",
-        "artist": "Austra",
-        "plays": "4",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Chin up Buttercup",
-        "url": "https://www.last.fm/music/Austra/_/Chin+up+Buttercup",
-        "artist": "Austra",
-        "plays": "4",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Fallen Cloud",
-        "url": "https://www.last.fm/music/Austra/_/Fallen+Cloud",
-        "artist": "Austra",
-        "plays": "4",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Good Riddance",
         "url": "https://www.last.fm/music/Austra/_/Good+Riddance",
         "artist": "Austra",
@@ -1592,6 +1582,20 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Sonata for Violin and Piano in A major, FWV 8: III. Recitativo - Fantasia (Ben moderato)",
+        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+for+Violin+and+Piano+in+A+major,+FWV+8:+III.+Recitativo+-+Fantasia+(Ben+moderato)",
+        "artist": "César Franck",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sonata for Violin and Piano in A Major, FWV 8: IV. Allegretto poco mosso",
+        "url": "https://www.last.fm/music/C%C3%A9sar+Franck/_/Sonata+for+Violin+and+Piano+in+A+Major,+FWV+8:+IV.+Allegretto+poco+mosso",
+        "artist": "César Franck",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Beau Soir, L 6",
         "url": "https://www.last.fm/music/Claude+Debussy/_/Beau+Soir,+L+6",
         "artist": "Claude Debussy",
@@ -1609,6 +1613,27 @@
         "name": "Loser",
         "url": "https://www.last.fm/music/Grateful+Dead/_/Loser",
         "artist": "Grateful Dead",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Concerto for Violin and Orchestra no. 1, op. 35: I. Vivace assai",
+        "url": "https://www.last.fm/music/Karol+Szymanowski/_/Concerto+for+Violin+and+Orchestra+no.+1,+op.+35:+I.+Vivace+assai",
+        "artist": "Karol Szymanowski",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "24 Preludes for Cello and Piano, op. 47 no. 19: Allegro appassionato",
+        "url": "https://www.last.fm/music/Lera+Auerbach/_/24+Preludes+for+Cello+and+Piano,+op.+47+no.+19:+Allegro+appassionato",
+        "artist": "Lera Auerbach",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Pictures at an Exhibition (orch. Ravel): Promenade",
+        "url": "https://www.last.fm/music/Modest+Petrovich+Mussorgsky/_/Pictures+at+an+Exhibition+(orch.+Ravel):+Promenade",
+        "artist": "Modest Petrovich Mussorgsky",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1767,12 +1792,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Dobrinka Tabakova",
-        "url": "https://www.last.fm/music/Dobrinka+Tabakova",
-        "plays": "79",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Béla Bartók",
         "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
         "plays": "76",
@@ -1830,6 +1849,12 @@
         "name": "Jean Sibelius",
         "url": "https://www.last.fm/music/Jean+Sibelius",
         "plays": "70",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Dobrinka Tabakova",
+        "url": "https://www.last.fm/music/Dobrinka+Tabakova",
+        "plays": "69",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2407,15 +2432,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Eine Alpensinfonie, op. 64: II: Sonnenaufgang",
-        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+II:+Sonnenaufgang",
-        "artist": "Richard Strauss",
+        "name": "Vidlik",
+        "url": "https://www.last.fm/music/Onuka/_/Vidlik",
+        "artist": "Onuka",
         "plays": "11",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Eine Alpensinfonie, op. 64: V: Am Wasserfall - Erscheinung",
-        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+V:+Am+Wasserfall+-+Erscheinung",
+        "name": "Eine Alpensinfonie, op. 64: II: Sonnenaufgang",
+        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+II:+Sonnenaufgang",
         "artist": "Richard Strauss",
         "plays": "11",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -2937,7 +2962,7 @@
         "url": "https://www.last.fm/music/Coil/The+Ape+of+Naples",
         "artist": "Coil",
         "plays": "636",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2b76cd757f1da4e8973302119383e416.png"
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/95e25a1a67adbb4e944c7e50fa76beee.png"
       },
       {
         "name": "Perpetuum Mobile",
