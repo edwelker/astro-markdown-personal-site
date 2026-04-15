@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 275779
+    "scrobbles": 275795
   },
   "history": [
-    {
-      "dayName": "Wed",
-      "date": "2026-04-08",
-      "hours": "0.2",
-      "lastHours": "0.2",
-      "topArtist": "Type O Negative"
-    },
     {
       "dayName": "Thu",
       "date": "2026-04-09",
@@ -51,20 +44,27 @@
       "hours": "0.8",
       "lastHours": "2.6",
       "topArtist": "William Walton"
+    },
+    {
+      "dayName": "Wed",
+      "date": "2026-04-15",
+      "hours": "0.9",
+      "lastHours": "0.2",
+      "topArtist": "William Walton"
     }
   ],
   "week": {
     "artists": [
       {
-        "name": "Caroline Shaw",
-        "url": "https://www.last.fm/music/Caroline+Shaw",
-        "plays": "23",
+        "name": "William Walton",
+        "url": "https://www.last.fm/music/William+Walton",
+        "plays": "26",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "William Walton",
-        "url": "https://www.last.fm/music/William+Walton",
-        "plays": "20",
+        "name": "Caroline Shaw",
+        "url": "https://www.last.fm/music/Caroline+Shaw",
+        "plays": "23",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -152,9 +152,33 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Ernest Bloch",
+        "url": "https://www.last.fm/music/Ernest+Bloch",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Ottorino Respighi",
+        "url": "https://www.last.fm/music/Ottorino+Respighi",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Samuel Barber",
+        "url": "https://www.last.fm/music/Samuel+Barber",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Nikolai Rimsky-Korsakov",
         "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov",
         "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Aaron Jay Kernis",
+        "url": "https://www.last.fm/music/Aaron+Jay+Kernis",
+        "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -363,6 +387,41 @@
         "image": ""
       },
       {
+        "name": "Kernis: Air for Violin / Barber: Violin Concerto / Bloch: Baal Shem / Walton: Violin Concerto",
+        "url": "https://www.last.fm/music/Ernest+Bloch/Kernis:+Air+for+Violin+%2F+Barber:+Violin+Concerto+%2F+Bloch:+Baal+Shem+%2F+Walton:+Violin+Concerto",
+        "artist": "Ernest Bloch",
+        "plays": "3",
+        "image": ""
+      },
+      {
+        "name": "Momentum 1",
+        "url": "https://www.last.fm/music/Ottorino+Respighi/Momentum+1",
+        "artist": "Ottorino Respighi",
+        "plays": "3",
+        "image": ""
+      },
+      {
+        "name": "Kernis: Air for Violin / Barber: Violin Concerto / Bloch: Baal Shem / Walton: Violin Concerto",
+        "url": "https://www.last.fm/music/Samuel+Barber/Kernis:+Air+for+Violin+%2F+Barber:+Violin+Concerto+%2F+Bloch:+Baal+Shem+%2F+Walton:+Violin+Concerto",
+        "artist": "Samuel Barber",
+        "plays": "3",
+        "image": ""
+      },
+      {
+        "name": "Kernis: Air for Violin / Barber: Violin Concerto / Bloch: Baal Shem / Walton: Violin Concerto",
+        "url": "https://www.last.fm/music/William+Walton/Kernis:+Air+for+Violin+%2F+Barber:+Violin+Concerto+%2F+Bloch:+Baal+Shem+%2F+Walton:+Violin+Concerto",
+        "artist": "William Walton",
+        "plays": "3",
+        "image": ""
+      },
+      {
+        "name": "Momentum 1",
+        "url": "https://www.last.fm/music/William+Walton/Momentum+1",
+        "artist": "William Walton",
+        "plays": "3",
+        "image": ""
+      },
+      {
         "name": "Walton: Symphony no. 2 / Portsmouth Point & Scapino Overtures / Lambert: The Rio Grande",
         "url": "https://www.last.fm/music/William+Walton/Walton:+Symphony+no.+2+%2F+Portsmouth+Point+&+Scapino+Overtures+%2F+Lambert:+The+Rio+Grande",
         "artist": "William Walton",
@@ -388,6 +447,13 @@
         "url": "https://www.last.fm/music/William+Walton/Walton:+Violin+Concerto+%2F+Stravinsky:+Violin+Concerto",
         "artist": "William Walton",
         "plays": "2",
+        "image": ""
+      },
+      {
+        "name": "Kernis: Air for Violin / Barber: Violin Concerto / Bloch: Baal Shem / Walton: Violin Concerto",
+        "url": "https://www.last.fm/music/Aaron+Jay+Kernis/Kernis:+Air+for+Violin+%2F+Barber:+Violin+Concerto+%2F+Bloch:+Baal+Shem+%2F+Walton:+Violin+Concerto",
+        "artist": "Aaron Jay Kernis",
+        "plays": "1",
         "image": ""
       },
       {
@@ -480,34 +546,6 @@
         "artist": "Shakira",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/cad3fe12f64beaf7e9f423d4b276ffcb.jpg"
-      },
-      {
-        "name": "Steal This Album!",
-        "url": "https://www.last.fm/music/System+of+a+Down/Steal+This+Album!",
-        "artist": "System of a Down",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/303fd758c06840a876e090ccc46f5c2e.jpg"
-      },
-      {
-        "name": "Bloody Kisses",
-        "url": "https://www.last.fm/music/Type+O+Negative/Bloody+Kisses",
-        "artist": "Type O Negative",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/391b090e5d946374c2c8b7092782c12b.jpg"
-      },
-      {
-        "name": "Symphony no. 1 / Orb & Sceptre / Crown Imperial",
-        "url": "https://www.last.fm/music/William+Walton/Symphony+no.+1+%2F+Orb+&+Sceptre+%2F+Crown+Imperial",
-        "artist": "William Walton",
-        "plays": "1",
-        "image": ""
-      },
-      {
-        "name": "Troilus and Cressida",
-        "url": "https://www.last.fm/music/William+Walton/Troilus+and+Cressida",
-        "artist": "William Walton",
-        "plays": "1",
-        "image": ""
       }
     ],
     "tracks": [
@@ -659,6 +697,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Air for Violin",
+        "url": "https://www.last.fm/music/Aaron+Jay+Kernis/_/Air+for+Violin",
+        "artist": "Aaron Jay Kernis",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Joyful Girl",
         "url": "https://www.last.fm/music/Ani+DiFranco/_/Joyful+Girl",
         "artist": "Ani DiFranco",
@@ -783,13 +828,6 @@
         "artist": "Busta Rhymes featuring Q-Tip and Marsha Ambrosius",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Limestone & Felt",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Limestone+&+Felt",
-        "artist": "Caroline Shaw",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -798,7 +836,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "363",
+        "plays": "359",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -810,13 +848,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "82",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ludwig van Beethoven",
-        "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
-        "plays": "71",
+        "plays": "78",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -832,15 +864,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Miklós Rózsa",
-        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
-        "plays": "48",
+        "name": "Ludwig van Beethoven",
+        "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
+        "plays": "51",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Robert Schumann",
-        "url": "https://www.last.fm/music/Robert+Schumann",
-        "plays": "45",
+        "name": "Miklós Rózsa",
+        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
+        "plays": "48",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -892,15 +924,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Caroline Shaw",
-        "url": "https://www.last.fm/music/Caroline+Shaw",
-        "plays": "28",
+        "name": "William Walton",
+        "url": "https://www.last.fm/music/William+Walton",
+        "plays": "30",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Benjamin Britten",
-        "url": "https://www.last.fm/music/Benjamin+Britten",
-        "plays": "27",
+        "name": "Caroline Shaw",
+        "url": "https://www.last.fm/music/Caroline+Shaw",
+        "plays": "28",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -910,14 +942,20 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Dobrinka Tabakova",
-        "url": "https://www.last.fm/music/Dobrinka+Tabakova",
-        "plays": "24",
+        "name": "Robert Schumann",
+        "url": "https://www.last.fm/music/Robert+Schumann",
+        "plays": "27",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Francis Poulenc",
-        "url": "https://www.last.fm/music/Francis+Poulenc",
+        "name": "Benjamin Britten",
+        "url": "https://www.last.fm/music/Benjamin+Britten",
+        "plays": "25",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Dobrinka Tabakova",
+        "url": "https://www.last.fm/music/Dobrinka+Tabakova",
         "plays": "24",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -948,12 +986,6 @@
       {
         "name": "Nikolai Rimsky-Korsakov - Galina Vishnevskaya, Vladimir Atlantov, Evgeny Nesterenko, Ирина Архипова, Фуат Мансуров",
         "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov+-+Galina+Vishnevskaya,+Vladimir+Atlantov,+Evgeny+Nesterenko,+%D0%98%D1%80%D0%B8%D0%BD%D0%B0+%D0%90%D1%80%D1%85%D0%B8%D0%BF%D0%BE%D0%B2%D0%B0,+%D0%A4%D1%83%D0%B0%D1%82+%D0%9C%D0%B0%D0%BD%D1%81%D1%83%D1%80%D0%BE%D0%B2",
-        "plays": "24",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "William Walton",
-        "url": "https://www.last.fm/music/William+Walton",
         "plays": "24",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1034,6 +1066,12 @@
         "url": "https://www.last.fm/music/Gavriil+Popov",
         "plays": "17",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Dresden Dolls",
+        "url": "https://www.last.fm/music/The+Dresden+Dolls",
+        "plays": "17",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -1080,13 +1118,6 @@
         "image": ""
       },
       {
-        "name": "Theme and variations II",
-        "url": "https://www.last.fm/music/Robert+Schumann/Theme+and+variations+II",
-        "artist": "Robert Schumann",
-        "plays": "36",
-        "image": ""
-      },
-      {
         "name": "Music as a Mirror",
         "url": "https://www.last.fm/music/Sophia+Jani/Music+as+a+Mirror",
         "artist": "Sophia Jani",
@@ -1115,13 +1146,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c9bc1000106bf293fbf8e29b9c8bf421.jpg"
       },
       {
-        "name": "Theme and Variations II",
-        "url": "https://www.last.fm/music/Ludwig+van+Beethoven/Theme+and+Variations+II",
-        "artist": "Ludwig van Beethoven",
-        "plays": "27",
-        "image": ""
-      },
-      {
         "name": "Kicker",
         "url": "https://www.last.fm/music/Zella+Day/Kicker",
         "artist": "Zella Day",
@@ -1148,13 +1172,6 @@
         "artist": "Dobrinka Tabakova",
         "plays": "24",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ea383c32ac36e75e2964c3f4a8a5ccc3.jpg"
-      },
-      {
-        "name": "Great Pianists of the 20th Century, Volume 80: André Previn",
-        "url": "https://www.last.fm/music/Francis+Poulenc/Great+Pianists+of+the+20th+Century,+Volume+80:+Andr%C3%A9+Previn",
-        "artist": "Francis Poulenc",
-        "plays": "24",
-        "image": ""
       },
       {
         "name": "The Tsar's Bride",
@@ -1248,6 +1265,13 @@
         "image": ""
       },
       {
+        "name": "Theme and variations II",
+        "url": "https://www.last.fm/music/Robert+Schumann/Theme+and+variations+II",
+        "artist": "Robert Schumann",
+        "plays": "18",
+        "image": ""
+      },
+      {
         "name": "Rózsa: String Quartets Nos. 1 and 2 / Rhapsody",
         "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa/R%C3%B3zsa:+String+Quartets+Nos.+1+and+2+%2F+Rhapsody",
         "artist": "Miklós Rózsa",
@@ -1316,6 +1340,20 @@
         "artist": "Clarice Jensen",
         "plays": "14",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/df6161b1be62cd62bea3e980038764d6.jpg"
+      },
+      {
+        "name": "Piano Concerto no. 1 / Piano Quintet / Concertino for Two Pianos",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Piano+Concerto+no.+1+%2F+Piano+Quintet+%2F+Concertino+for+Two+Pianos",
+        "artist": "Dmitri Shostakovich",
+        "plays": "14",
+        "image": ""
+      },
+      {
+        "name": "American Concertos",
+        "url": "https://www.last.fm/music/Leonard+Bernstein/American+Concertos",
+        "artist": "Leonard Bernstein",
+        "plays": "14",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/236b2cef8a10793af24d2879d780e415.png"
       }
     ],
     "tracks": [
@@ -1808,12 +1846,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Franz Schubert",
-        "url": "https://www.last.fm/music/Franz+Schubert",
-        "plays": "68",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "György Ligeti",
         "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti",
         "plays": "68",
@@ -1835,6 +1867,12 @@
         "name": "Nikolai Rimsky-Korsakov",
         "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov",
         "plays": "65",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "William Walton",
+        "url": "https://www.last.fm/music/William+Walton",
+        "plays": "64",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
