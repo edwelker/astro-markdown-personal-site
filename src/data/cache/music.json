@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 275858
+    "scrobbles": 275868
   },
   "history": [
-    {
-      "dayName": "Sat",
-      "date": "2026-04-11",
-      "hours": "0.0",
-      "lastHours": "2.8",
-      "topArtist": null
-    },
     {
       "dayName": "Sun",
       "date": "2026-04-12",
@@ -51,6 +44,13 @@
       "hours": "1.8",
       "lastHours": "1.9",
       "topArtist": "Olivier Messiaen"
+    },
+    {
+      "dayName": "Sat",
+      "date": "2026-04-18",
+      "hours": "0.6",
+      "lastHours": "0.0",
+      "topArtist": "Einstürzende Neubauten"
     }
   ],
   "week": {
@@ -71,6 +71,12 @@
         "name": "Sophia Jani",
         "url": "https://www.last.fm/music/Sophia+Jani",
         "plays": "12",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Einstürzende Neubauten",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
+        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -194,12 +200,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Miklós Rózsa; Atlanta Symphony Orchestra, Robert McDuffie, Lynn Harrell, Yoel Levi",
-        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa;+Atlanta+Symphony+Orchestra,+Robert+McDuffie,+Lynn+Harrell,+Yoel+Levi",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Philadelphia Orchestra",
         "url": "https://www.last.fm/music/Philadelphia+Orchestra",
         "plays": "1",
@@ -220,6 +220,13 @@
         "artist": "Sophia Jani",
         "plays": "12",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/43a4f30295949e597ed4f26016196716.jpg"
+      },
+      {
+        "name": "Grundstück",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Grundst%C3%BCck",
+        "artist": "Einstürzende Neubauten",
+        "plays": "10",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4490d85e31754333c347cbf90f224e28.png"
       },
       {
         "name": "Ritual Fire Dance",
@@ -428,13 +435,6 @@
         "name": "The Piano Concertos / Miroirs",
         "url": "https://www.last.fm/music/Maurice+Ravel/The+Piano+Concertos+%2F+Miroirs",
         "artist": "Maurice Ravel",
-        "plays": "1",
-        "image": ""
-      },
-      {
-        "name": "Ben-Hur",
-        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa;+Atlanta+Symphony+Orchestra,+Robert+McDuffie,+Lynn+Harrell,+Yoel+Levi/Ben-Hur",
-        "artist": "Miklós Rózsa; Atlanta Symphony Orchestra, Robert McDuffie, Lynn Harrell, Yoel Levi",
         "plays": "1",
         "image": ""
       },
@@ -760,19 +760,19 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "73",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ludwig van Beethoven",
-        "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
-        "plays": "50",
+        "plays": "63",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Miklós Rózsa",
         "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
         "plays": "48",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Ludwig van Beethoven",
+        "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
+        "plays": "44",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -794,15 +794,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Claude Debussy",
-        "url": "https://www.last.fm/music/Claude+Debussy",
-        "plays": "40",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Maurice Ravel",
         "url": "https://www.last.fm/music/Maurice+Ravel",
         "plays": "39",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Claude Debussy",
+        "url": "https://www.last.fm/music/Claude+Debussy",
+        "plays": "37",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -880,12 +880,6 @@
       {
         "name": "Ani DiFranco",
         "url": "https://www.last.fm/music/Ani+DiFranco",
-        "plays": "23",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Nicolai Myaskovsky",
-        "url": "https://www.last.fm/music/Nicolai+Myaskovsky",
         "plays": "23",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -980,6 +974,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Nicolai Myaskovsky",
+        "url": "https://www.last.fm/music/Nicolai+Myaskovsky",
+        "plays": "16",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Frédéric Chopin",
         "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin",
         "plays": "15",
@@ -1002,13 +1002,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9d366c5606653eaaae41582d07acb6b8.jpg"
       },
       {
-        "name": "Symphonies",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Symphonies",
-        "artist": "Dmitri Shostakovich",
-        "plays": "47",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/cfeec8539b3e5f748be83a21415b754a.jpg"
-      },
-      {
         "name": "Chin Up Buttercup",
         "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
         "artist": "Austra",
@@ -1028,6 +1021,13 @@
         "artist": "Ralph Vaughan Williams",
         "plays": "39",
         "image": ""
+      },
+      {
+        "name": "Symphonies",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Symphonies",
+        "artist": "Dmitri Shostakovich",
+        "plays": "37",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/cfeec8539b3e5f748be83a21415b754a.jpg"
       },
       {
         "name": "Music as a Mirror",
@@ -1626,12 +1626,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Miklós Rózsa",
-        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
-        "plays": "121",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Leoš Janáček",
         "url": "https://www.last.fm/music/Leo%C5%A1+Jan%C3%A1%C4%8Dek",
         "plays": "118",
@@ -1662,15 +1656,21 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Benjamin Britten",
-        "url": "https://www.last.fm/music/Benjamin+Britten",
-        "plays": "87",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Karol Szymanowski",
         "url": "https://www.last.fm/music/Karol+Szymanowski",
         "plays": "85",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Benjamin Britten",
+        "url": "https://www.last.fm/music/Benjamin+Britten",
+        "plays": "84",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Einstürzende Neubauten",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
+        "plays": "82",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1695,6 +1695,12 @@
         "name": "Coil",
         "url": "https://www.last.fm/music/Coil",
         "plays": "79",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Miklós Rózsa",
+        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
+        "plays": "77",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1725,12 +1731,6 @@
         "name": "John Williams",
         "url": "https://www.last.fm/music/John+Williams",
         "plays": "73",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Einstürzende Neubauten",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "72",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2013,13 +2013,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/c299ae68298f47d697dced1e0e36df47.png"
       },
       {
-        "name": "Ben-Hur: A Tale of the Christ",
-        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa/Ben-Hur:+A+Tale+of+the+Christ",
-        "artist": "Miklós Rózsa",
-        "plays": "44",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/442dfa2b8e584e0680aae0fe7f5bb985.jpg"
-      },
-      {
         "name": "Music as a Mirror",
         "url": "https://www.last.fm/music/Sophia+Jani/Music+as+a+Mirror",
         "artist": "Sophia Jani",
@@ -2046,6 +2039,13 @@
         "artist": "Leonard Bernstein",
         "plays": "42",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/236b2cef8a10793af24d2879d780e415.png"
+      },
+      {
+        "name": "Grundstück",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Grundst%C3%BCck",
+        "artist": "Einstürzende Neubauten",
+        "plays": "40",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4490d85e31754333c347cbf90f224e28.png"
       },
       {
         "name": "Prokofiev: Romeo & Juliet",
@@ -2382,7 +2382,7 @@
       {
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "5591",
+        "plays": "5601",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
