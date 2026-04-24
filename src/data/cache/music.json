@@ -4,13 +4,6 @@
   },
   "history": [
     {
-      "dayName": "Thu",
-      "date": "2026-04-16",
-      "hours": "1.9",
-      "lastHours": "1.5",
-      "topArtist": "Sergei Prokofiev"
-    },
-    {
       "dayName": "Fri",
       "date": "2026-04-17",
       "hours": "1.8",
@@ -51,6 +44,13 @@
       "hours": "0.3",
       "lastHours": "0.9",
       "topArtist": "Anne-Sophie Mutter, National Symphony Orchestra"
+    },
+    {
+      "dayName": "Thu",
+      "date": "2026-04-23",
+      "hours": "0.0",
+      "lastHours": "1.9",
+      "topArtist": null
     }
   ],
   "week": {
@@ -100,7 +100,7 @@
       {
         "name": "Caroline Shaw",
         "url": "https://www.last.fm/music/Caroline+Shaw",
-        "plays": "5",
+        "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -160,13 +160,6 @@
         "image": ""
       },
       {
-        "name": "Orange",
-        "url": "https://www.last.fm/music/Caroline+Shaw;+Attacca+Quartet/Orange",
-        "artist": "Caroline Shaw; Attacca Quartet",
-        "plays": "5",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a77303f3c4bb2bac17913ef873480cc1.jpg"
-      },
-      {
         "name": "Symphony No. 3 / Quiet City",
         "url": "https://www.last.fm/music/Aaron+Copland/Symphony+No.+3+%2F+Quiet+City",
         "artist": "Aaron Copland",
@@ -179,6 +172,13 @@
         "artist": "Aaron Copland",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/b6e9272716ac45cec5735a47663b3daa.jpg"
+      },
+      {
+        "name": "Orange",
+        "url": "https://www.last.fm/music/Caroline+Shaw;+Attacca+Quartet/Orange",
+        "artist": "Caroline Shaw; Attacca Quartet",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a77303f3c4bb2bac17913ef873480cc1.jpg"
       },
       {
         "name": "Symphony In D Minor / Piano Concerto No. 2",
@@ -267,13 +267,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Limestone & Felt",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Limestone+&+Felt",
-        "artist": "Caroline Shaw",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Plan & Elevation: III. The Herbaceous Border",
         "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+III.+The+Herbaceous+Border",
         "artist": "Caroline Shaw",
@@ -290,13 +283,6 @@
       {
         "name": "Plan & Elevation: V. The Beech Tree",
         "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+V.+The+Beech+Tree",
-        "artist": "Caroline Shaw",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ritornello 2.sq.2.j.a",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Ritornello+2.sq.2.j.a",
         "artist": "Caroline Shaw",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -475,6 +461,20 @@
         "artist": "Henri Dutilleux",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Métaboles, I. Incantatoire",
+        "url": "https://www.last.fm/music/Henri+Dutilleux/_/M%C3%A9taboles,+I.+Incantatoire",
+        "artist": "Henri Dutilleux",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Métaboles, II. Linéaire",
+        "url": "https://www.last.fm/music/Henri+Dutilleux/_/M%C3%A9taboles,+II.+Lin%C3%A9aire",
+        "artist": "Henri Dutilleux",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -511,12 +511,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Austra",
-        "url": "https://www.last.fm/music/Austra",
-        "plays": "41",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Ludwig van Beethoven",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
         "plays": "40",
@@ -526,6 +520,12 @@
         "name": "Caroline Shaw",
         "url": "https://www.last.fm/music/Caroline+Shaw",
         "plays": "39",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Austra",
+        "url": "https://www.last.fm/music/Austra",
+        "plays": "36",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -737,13 +737,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9d366c5606653eaaae41582d07acb6b8.jpg"
       },
       {
-        "name": "Chin Up Buttercup",
-        "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
-        "artist": "Austra",
-        "plays": "41",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
-      },
-      {
         "name": "The Five Piano Concertos / Overture on Hebrew Themes / Visions Fugitives",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/The+Five+Piano+Concertos+%2F+Overture+on+Hebrew+Themes+%2F+Visions+Fugitives",
         "artist": "Sergei Prokofiev",
@@ -756,6 +749,13 @@
         "artist": "Dmitri Shostakovich",
         "plays": "37",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/cfeec8539b3e5f748be83a21415b754a.jpg"
+      },
+      {
+        "name": "Chin Up Buttercup",
+        "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
+        "artist": "Austra",
+        "plays": "36",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
       },
       {
         "name": "Music as a Mirror",
@@ -1054,27 +1054,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Amnesia",
-        "url": "https://www.last.fm/music/Austra/_/Amnesia",
-        "artist": "Austra",
-        "plays": "6",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Math Equation",
-        "url": "https://www.last.fm/music/Austra/_/Math+Equation",
-        "artist": "Austra",
-        "plays": "6",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Siren Song",
-        "url": "https://www.last.fm/music/Austra/_/Siren+Song",
-        "artist": "Austra",
-        "plays": "6",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Piano Concerto No. 2 in G minor, Op. 16: IV. Finale. Allegro tempestoso",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Piano+Concerto+No.+2+in+G+minor,+Op.+16:+IV.+Finale.+Allegro+tempestoso",
         "artist": "Sergei Prokofiev",
@@ -1093,6 +1072,13 @@
         "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Piano+Concerto+No.+5+in+G+major,+Op.+55:+II.+Moderato+ben+accentuato",
         "artist": "Sergei Prokofiev",
         "plays": "6",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Siren Song",
+        "url": "https://www.last.fm/music/Austra/_/Siren+Song",
+        "artist": "Austra",
+        "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1131,6 +1117,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Amnesia",
+        "url": "https://www.last.fm/music/Austra/_/Amnesia",
+        "artist": "Austra",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Chin up Buttercup",
         "url": "https://www.last.fm/music/Austra/_/Chin+up+Buttercup",
         "artist": "Austra",
@@ -1140,6 +1133,13 @@
       {
         "name": "Fallen Cloud",
         "url": "https://www.last.fm/music/Austra/_/Fallen+Cloud",
+        "artist": "Austra",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Math Equation",
+        "url": "https://www.last.fm/music/Austra/_/Math+Equation",
         "artist": "Austra",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -1333,7 +1333,7 @@
       {
         "name": "Claude Debussy",
         "url": "https://www.last.fm/music/Claude+Debussy",
-        "plays": "184",
+        "plays": "182",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
