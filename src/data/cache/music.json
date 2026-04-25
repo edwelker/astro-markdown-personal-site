@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 275908
+    "scrobbles": 275919
   },
   "history": [
-    {
-      "dayName": "Sat",
-      "date": "2026-04-18",
-      "hours": "0.6",
-      "lastHours": "0.0",
-      "topArtist": "Einstürzende Neubauten"
-    },
     {
       "dayName": "Sun",
       "date": "2026-04-19",
@@ -51,6 +44,13 @@
       "hours": "0.0",
       "lastHours": "1.8",
       "topArtist": null
+    },
+    {
+      "dayName": "Sat",
+      "date": "2026-04-25",
+      "hours": "0.6",
+      "lastHours": "0.6",
+      "topArtist": "Sergei Prokofiev"
     }
   ],
   "week": {
@@ -59,12 +59,6 @@
         "name": "Henri Dutilleux",
         "url": "https://www.last.fm/music/Henri+Dutilleux",
         "plays": "24",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Einstürzende Neubauten",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -80,8 +74,26 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Sergei Prokofiev",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev",
+        "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Caroline Shaw",
         "url": "https://www.last.fm/music/Caroline+Shaw",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "George Enescu",
+        "url": "https://www.last.fm/music/George+Enescu",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -95,17 +107,17 @@
         "image": ""
       },
       {
-        "name": "Grundstück",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Grundst%C3%BCck",
-        "artist": "Einstürzende Neubauten",
-        "plays": "10",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4490d85e31754333c347cbf90f224e28.png"
-      },
-      {
         "name": "Violin Concerto No. 1, Symphonie Concertante",
         "url": "https://www.last.fm/music/Anne-Sophie+Mutter,+National+Symphony+Orchestra/Violin+Concerto+No.+1,+Symphonie+Concertante",
         "artist": "Anne-Sophie Mutter, National Symphony Orchestra",
         "plays": "6",
+        "image": ""
+      },
+      {
+        "name": "Enescu / Prokofiev / Szymanowski",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Enescu+%2F+Prokofiev+%2F+Szymanowski",
+        "artist": "Sergei Prokofiev",
+        "plays": "5",
         "image": ""
       },
       {
@@ -128,6 +140,20 @@
         "artist": "Caroline Shaw; Attacca Quartet",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a77303f3c4bb2bac17913ef873480cc1.jpg"
+      },
+      {
+        "name": "Enescu / Prokofiev / Szymanowski",
+        "url": "https://www.last.fm/music/George+Enescu/Enescu+%2F+Prokofiev+%2F+Szymanowski",
+        "artist": "George Enescu",
+        "plays": "3",
+        "image": ""
+      },
+      {
+        "name": "Enescu / Prokofiev / Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski/Enescu+%2F+Prokofiev+%2F+Szymanowski",
+        "artist": "Karol Szymanowski",
+        "plays": "3",
+        "image": ""
       }
     ],
     "tracks": [
@@ -223,72 +249,23 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Good Morning Everybody",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Good+Morning+Everybody",
-        "artist": "Einstürzende Neubauten",
+        "name": "Sonata no. 3 in A minor for Piano and Violin “In the Romanian Folk Style”, op. 25: Allegro con brio, ma non troppo mosso",
+        "url": "https://www.last.fm/music/George+Enescu/_/Sonata+no.+3+in+A+minor+for+Piano+and+Violin+%E2%80%9CIn+the+Romanian+Folk+Style%E2%80%9D,+op.+25:+Allegro+con+brio,+ma+non+troppo+mosso",
+        "artist": "George Enescu",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Grundstück: GS 1",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Grundst%C3%BCck:+GS+1",
-        "artist": "Einstürzende Neubauten",
+        "name": "Sonata no. 3 in A minor for Piano and Violin “In the Romanian Folk Style”, op. 25: Andante sostenuto e misterioso",
+        "url": "https://www.last.fm/music/George+Enescu/_/Sonata+no.+3+in+A+minor+for+Piano+and+Violin+%E2%80%9CIn+the+Romanian+Folk+Style%E2%80%9D,+op.+25:+Andante+sostenuto+e+misterioso",
+        "artist": "George Enescu",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Grundstück: GS 2",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Grundst%C3%BCck:+GS+2",
-        "artist": "Einstürzende Neubauten",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Grundstück: GS 3",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Grundst%C3%BCck:+GS+3",
-        "artist": "Einstürzende Neubauten",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Grundstück: November / Sie lächelt",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Grundst%C3%BCck:+November+%2F+Sie+l%C3%A4chelt",
-        "artist": "Einstürzende Neubauten",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Grundstück: Unseasonable Weather",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Grundst%C3%BCck:+Unseasonable+Weather",
-        "artist": "Einstürzende Neubauten",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Grundstück: Vox Populi",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Grundst%C3%BCck:+Vox+Populi",
-        "artist": "Einstürzende Neubauten",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Neun Arme / Die Nacht",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Neun+Arme+%2F+Die+Nacht",
-        "artist": "Einstürzende Neubauten",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Tagelang Weiss",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Tagelang+Weiss",
-        "artist": "Einstürzende Neubauten",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Wo sind meine Schuhe?",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Wo+sind+meine+Schuhe%3F",
-        "artist": "Einstürzende Neubauten",
+        "name": "Sonata no. 3 in A minor for Piano and Violin “In the Romanian Folk Style”, op. 25: Moderato malinconico",
+        "url": "https://www.last.fm/music/George+Enescu/_/Sonata+no.+3+in+A+minor+for+Piano+and+Violin+%E2%80%9CIn+the+Romanian+Folk+Style%E2%80%9D,+op.+25:+Moderato+malinconico",
+        "artist": "George Enescu",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -410,6 +387,55 @@
         "artist": "Henri Dutilleux",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Mystere de l'Instant, VII. Rumeurs",
+        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Mystere+de+l%27Instant,+VII.+Rumeurs",
+        "artist": "Henri Dutilleux",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Mystere de l'Instant, VIII. Soliloques",
+        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Mystere+de+l%27Instant,+VIII.+Soliloques",
+        "artist": "Henri Dutilleux",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Mystere de l'Instant, X. Embrasement",
+        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Mystere+de+l%27Instant,+X.+Embrasement",
+        "artist": "Henri Dutilleux",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Timbres, Espaces, Mouvement Ou La Nuit Étoilée, I. Nébuleuse",
+        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Timbres,+Espaces,+Mouvement+Ou+La+Nuit+%C3%89toil%C3%A9e,+I.+N%C3%A9buleuse",
+        "artist": "Henri Dutilleux",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Timbres, Espaces, Mouvement Ou La Nuit Étoilée, II. Interlude, Constellations",
+        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Timbres,+Espaces,+Mouvement+Ou+La+Nuit+%C3%89toil%C3%A9e,+II.+Interlude,+Constellations",
+        "artist": "Henri Dutilleux",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Tout Un Monde Lointain, I. Énigme",
+        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Tout+Un+Monde+Lointain,+I.+%C3%89nigme",
+        "artist": "Henri Dutilleux",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Tout Un Monde Lointain, II. Regard",
+        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Tout+Un+Monde+Lointain,+II.+Regard",
+        "artist": "Henri Dutilleux",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -418,7 +444,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "354",
+        "plays": "359",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -458,6 +484,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "plays": "38",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Sophia Jani",
         "url": "https://www.last.fm/music/Sophia+Jani",
         "plays": "36",
@@ -466,12 +498,6 @@
       {
         "name": "Austra",
         "url": "https://www.last.fm/music/Austra",
-        "plays": "35",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
         "plays": "35",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -548,6 +574,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "George Enescu",
+        "url": "https://www.last.fm/music/George+Enescu",
+        "plays": "21",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Lera Auerbach",
         "url": "https://www.last.fm/music/Lera+Auerbach",
         "plays": "21",
@@ -593,12 +625,6 @@
         "name": "Emma Ruth Rundle",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle",
         "plays": "19",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "George Enescu",
-        "url": "https://www.last.fm/music/George+Enescu",
-        "plays": "18",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1226,13 +1252,13 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "893",
+        "plays": "898",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Richard Strauss",
         "url": "https://www.last.fm/music/Richard+Strauss",
-        "plays": "335",
+        "plays": "332",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1328,7 +1354,7 @@
       {
         "name": "Karol Szymanowski",
         "url": "https://www.last.fm/music/Karol+Szymanowski",
-        "plays": "85",
+        "plays": "88",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1483,7 +1509,7 @@
         "name": "Eine Alpensinfonie / Rosenkavaliersuite",
         "url": "https://www.last.fm/music/Richard+Strauss;+Vienna+Philharmonic,+Christian+Thielemann/Eine+Alpensinfonie+%2F+Rosenkavaliersuite",
         "artist": "Richard Strauss; Vienna Philharmonic, Christian Thielemann",
-        "plays": "128",
+        "plays": "125",
         "image": ""
       },
       {
@@ -1769,16 +1795,16 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Eine Alpensinfonie, op. 64: XVII: Nacht",
-        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XVII:+Nacht",
-        "artist": "Richard Strauss",
-        "plays": "28",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Plan & Elevation: III. The Herbaceous Border",
         "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+III.+The+Herbaceous+Border",
         "artist": "Caroline Shaw",
+        "plays": "27",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Eine Alpensinfonie, op. 64: XVII: Nacht",
+        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XVII:+Nacht",
+        "artist": "Richard Strauss",
         "plays": "27",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1846,13 +1872,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Eine Alpensinfonie, op. 64: XVI: Ausklang",
-        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XVI:+Ausklang",
-        "artist": "Richard Strauss",
-        "plays": "19",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Chin up Buttercup",
         "url": "https://www.last.fm/music/Austra/_/Chin+up+Buttercup",
         "artist": "Austra",
@@ -1881,10 +1900,17 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Eine Alpensinfonie, op. 64: XVI: Ausklang",
+        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XVI:+Ausklang",
+        "artist": "Richard Strauss",
+        "plays": "18",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Eine Alpensinfonie, op. 64: XV: Sonnenuntergang",
         "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XV:+Sonnenuntergang",
         "artist": "Richard Strauss",
-        "plays": "17",
+        "plays": "16",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2046,7 +2072,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "5825",
+        "plays": "5830",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
