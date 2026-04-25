@@ -4,13 +4,6 @@
   },
   "history": [
     {
-      "dayName": "Fri",
-      "date": "2026-04-17",
-      "hours": "1.8",
-      "lastHours": "1.9",
-      "topArtist": "Olivier Messiaen"
-    },
-    {
       "dayName": "Sat",
       "date": "2026-04-18",
       "hours": "0.6",
@@ -51,6 +44,13 @@
       "hours": "0.0",
       "lastHours": "1.9",
       "topArtist": null
+    },
+    {
+      "dayName": "Fri",
+      "date": "2026-04-24",
+      "hours": "0.0",
+      "lastHours": "1.8",
+      "topArtist": null
     }
   ],
   "week": {
@@ -65,12 +65,6 @@
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
         "plays": "10",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Olivier Messiaen",
-        "url": "https://www.last.fm/music/Olivier+Messiaen",
-        "plays": "9",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -106,13 +100,6 @@
         "artist": "Einstürzende Neubauten",
         "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4490d85e31754333c347cbf90f224e28.png"
-      },
-      {
-        "name": "Turangalîla-Symphonie",
-        "url": "https://www.last.fm/music/Olivier+Messiaen/Turangal%C3%AEla-Symphonie",
-        "artist": "Olivier Messiaen",
-        "plays": "9",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/558cb9cedeb4d7df40180b74b0d5aedd.png"
       },
       {
         "name": "Violin Concerto No. 1, Symphonie Concertante",
@@ -1245,13 +1232,13 @@
       {
         "name": "Richard Strauss",
         "url": "https://www.last.fm/music/Richard+Strauss",
-        "plays": "378",
+        "plays": "342",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Caroline Shaw",
         "url": "https://www.last.fm/music/Caroline+Shaw",
-        "plays": "283",
+        "plays": "276",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1393,14 +1380,14 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "The Lonely Island",
-        "url": "https://www.last.fm/music/The+Lonely+Island",
-        "plays": "75",
+        "name": "Robert Schumann",
+        "url": "https://www.last.fm/music/Robert+Schumann",
+        "plays": "74",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Robert Schumann",
-        "url": "https://www.last.fm/music/Robert+Schumann",
+        "name": "The Lonely Island",
+        "url": "https://www.last.fm/music/The+Lonely+Island",
         "plays": "74",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1479,13 +1466,6 @@
     ],
     "albums": [
       {
-        "name": "Orange",
-        "url": "https://www.last.fm/music/Caroline+Shaw;+Attacca+Quartet/Orange",
-        "artist": "Caroline Shaw; Attacca Quartet",
-        "plays": "160",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a77303f3c4bb2bac17913ef873480cc1.jpg"
-      },
-      {
         "name": "Chin Up Buttercup",
         "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
         "artist": "Austra",
@@ -1493,10 +1473,17 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
       },
       {
+        "name": "Orange",
+        "url": "https://www.last.fm/music/Caroline+Shaw;+Attacca+Quartet/Orange",
+        "artist": "Caroline Shaw; Attacca Quartet",
+        "plays": "153",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/a77303f3c4bb2bac17913ef873480cc1.jpg"
+      },
+      {
         "name": "Eine Alpensinfonie / Rosenkavaliersuite",
         "url": "https://www.last.fm/music/Richard+Strauss;+Vienna+Philharmonic,+Christian+Thielemann/Eine+Alpensinfonie+%2F+Rosenkavaliersuite",
         "artist": "Richard Strauss; Vienna Philharmonic, Christian Thielemann",
-        "plays": "138",
+        "plays": "128",
         "image": ""
       },
       {
@@ -1531,7 +1518,7 @@
         "name": "Eine Alpensinfonie / Rosenkavaliersuite",
         "url": "https://www.last.fm/music/Richard+Strauss/Eine+Alpensinfonie+%2F+Rosenkavaliersuite",
         "artist": "Richard Strauss",
-        "plays": "95",
+        "plays": "93",
         "image": ""
       },
       {
@@ -1771,14 +1758,7 @@
         "name": "Plan & Elevation: I. The Ellipse",
         "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+I.+The+Ellipse",
         "artist": "Caroline Shaw",
-        "plays": "31",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Plan & Elevation: III. The Herbaceous Border",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+III.+The+Herbaceous+Border",
-        "artist": "Caroline Shaw",
-        "plays": "29",
+        "plays": "28",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1796,8 +1776,8 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Plan & Elevation: IV. The Orangery",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+IV.+The+Orangery",
+        "name": "Plan & Elevation: III. The Herbaceous Border",
+        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+III.+The+Herbaceous+Border",
         "artist": "Caroline Shaw",
         "plays": "27",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -1817,17 +1797,17 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Marked for Death",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Marked+for+Death",
-        "artist": "Emma Ruth Rundle",
+        "name": "Plan & Elevation: IV. The Orangery",
+        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+IV.+The+Orangery",
+        "artist": "Caroline Shaw",
         "plays": "26",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Valencia",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Valencia",
-        "artist": "Caroline Shaw",
-        "plays": "22",
+        "name": "Marked for Death",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Marked+for+Death",
+        "artist": "Emma Ruth Rundle",
+        "plays": "26",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1845,16 +1825,16 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Math Equation",
-        "url": "https://www.last.fm/music/Austra/_/Math+Equation",
-        "artist": "Austra",
-        "plays": "20",
+        "name": "Valencia",
+        "url": "https://www.last.fm/music/Caroline+Shaw/_/Valencia",
+        "artist": "Caroline Shaw",
+        "plays": "21",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Eine Alpensinfonie, op. 64: XVI: Ausklang",
-        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XVI:+Ausklang",
-        "artist": "Richard Strauss",
+        "name": "Math Equation",
+        "url": "https://www.last.fm/music/Austra/_/Math+Equation",
+        "artist": "Austra",
         "plays": "20",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1866,8 +1846,8 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Eine Alpensinfonie, op. 64: XV: Sonnenuntergang",
-        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XV:+Sonnenuntergang",
+        "name": "Eine Alpensinfonie, op. 64: XVI: Ausklang",
+        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XVI:+Ausklang",
         "artist": "Richard Strauss",
         "plays": "19",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -1901,10 +1881,10 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Eine Alpensinfonie, op. 64: XIV: Gewitter und Sturm, Abstieg",
-        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XIV:+Gewitter+und+Sturm,+Abstieg",
+        "name": "Eine Alpensinfonie, op. 64: XV: Sonnenuntergang",
+        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XV:+Sonnenuntergang",
         "artist": "Richard Strauss",
-        "plays": "16",
+        "plays": "17",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1971,15 +1951,8 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Eine Alpensinfonie, op. 64: IV: Eintritt in den Wald - Wanderung neben dem Bache",
-        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+IV:+Eintritt+in+den+Wald+-+Wanderung+neben+dem+Bache",
-        "artist": "Richard Strauss",
-        "plays": "13",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Eine Alpensinfonie, op. 64: XIII: Nebel steigen auf - Die Sonne verdüstert sich allmählich - Elegie - Stille vor dem Sturm",
-        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XIII:+Nebel+steigen+auf+-+Die+Sonne+verd%C3%BCstert+sich+allm%C3%A4hlich+-+Elegie+-+Stille+vor+dem+Sturm",
+        "name": "Eine Alpensinfonie, op. 64: XIV: Gewitter und Sturm, Abstieg",
+        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XIV:+Gewitter+und+Sturm,+Abstieg",
         "artist": "Richard Strauss",
         "plays": "13",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -2027,17 +2000,31 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Eine Alpensinfonie, op. 64: I: Nacht",
-        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+I:+Nacht",
+        "name": "Eine Alpensinfonie, op. 64: IV: Eintritt in den Wald - Wanderung neben dem Bache",
+        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+IV:+Eintritt+in+den+Wald+-+Wanderung+neben+dem+Bache",
         "artist": "Richard Strauss",
         "plays": "12",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Eine Alpensinfonie, op. 64: III: Der Anstieg",
-        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+III:+Der+Anstieg",
+        "name": "Eine Alpensinfonie, op. 64: XIII: Nebel steigen auf - Die Sonne verdüstert sich allmählich - Elegie - Stille vor dem Sturm",
+        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+XIII:+Nebel+steigen+auf+-+Die+Sonne+verd%C3%BCstert+sich+allm%C3%A4hlich+-+Elegie+-+Stille+vor+dem+Sturm",
         "artist": "Richard Strauss",
         "plays": "12",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Vidlik",
+        "url": "https://www.last.fm/music/Onuka/_/Vidlik",
+        "artist": "Onuka",
+        "plays": "11",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Eine Alpensinfonie, op. 64: I: Nacht",
+        "url": "https://www.last.fm/music/Richard+Strauss/_/Eine+Alpensinfonie,+op.+64:+I:+Nacht",
+        "artist": "Richard Strauss",
+        "plays": "11",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
