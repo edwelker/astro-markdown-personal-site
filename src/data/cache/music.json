@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 275923
+    "scrobbles": 275935
   },
   "history": [
-    {
-      "dayName": "Mon",
-      "date": "2026-04-20",
-      "hours": "1.4",
-      "lastHours": "3.8",
-      "topArtist": "Henri Dutilleux"
-    },
     {
       "dayName": "Tue",
       "date": "2026-04-21",
@@ -51,6 +44,13 @@
       "hours": "0.2",
       "lastHours": "0.0",
       "topArtist": "Mstislav Rostropovich"
+    },
+    {
+      "dayName": "Mon",
+      "date": "2026-04-27",
+      "hours": "0.7",
+      "lastHours": "1.4",
+      "topArtist": "Sergei Prokofiev"
     }
   ],
   "week": {
@@ -58,7 +58,13 @@
       {
         "name": "Henri Dutilleux",
         "url": "https://www.last.fm/music/Henri+Dutilleux",
-        "plays": "24",
+        "plays": "17",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sergei Prokofiev",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev",
+        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -74,9 +80,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sergei Prokofiev",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "5",
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "plays": "6",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Claudio Mondini & Anna Pecora",
+        "url": "https://www.last.fm/music/Claudio+Mondini+&+Anna+Pecora",
+        "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -96,12 +108,6 @@
         "url": "https://www.last.fm/music/George+Enescu",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
-        "plays": "3",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -109,7 +115,14 @@
         "name": "The Henri Dutilleux Edition (DG)",
         "url": "https://www.last.fm/music/Henri+Dutilleux/The+Henri+Dutilleux+Edition+(DG)",
         "artist": "Henri Dutilleux",
-        "plays": "24",
+        "plays": "17",
+        "image": ""
+      },
+      {
+        "name": "Enescu / Prokofiev / Szymanowski",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Enescu+%2F+Prokofiev+%2F+Szymanowski",
+        "artist": "Sergei Prokofiev",
+        "plays": "10",
         "image": ""
       },
       {
@@ -121,9 +134,9 @@
       },
       {
         "name": "Enescu / Prokofiev / Szymanowski",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/Enescu+%2F+Prokofiev+%2F+Szymanowski",
-        "artist": "Sergei Prokofiev",
-        "plays": "5",
+        "url": "https://www.last.fm/music/Karol+Szymanowski/Enescu+%2F+Prokofiev+%2F+Szymanowski",
+        "artist": "Karol Szymanowski",
+        "plays": "6",
         "image": ""
       },
       {
@@ -132,6 +145,13 @@
         "artist": "Aaron Copland",
         "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d5b9887e50dbf327233c01592f0ddbdc.jpg"
+      },
+      {
+        "name": "Bartók & Prokofiev: Works for 2 Violins",
+        "url": "https://www.last.fm/music/Claudio+Mondini+&+Anna+Pecora/Bart%C3%B3k+&+Prokofiev:+Works+for+2+Violins",
+        "artist": "Claudio Mondini & Anna Pecora",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/87dd68659f37d41ed4415b2a6f15f60b.jpg"
       },
       {
         "name": "Saint-Saëns: Cello Concerto No. 1 & Miaskovsky: Cello Concerto",
@@ -158,13 +178,6 @@
         "name": "Enescu / Prokofiev / Szymanowski",
         "url": "https://www.last.fm/music/George+Enescu/Enescu+%2F+Prokofiev+%2F+Szymanowski",
         "artist": "George Enescu",
-        "plays": "3",
-        "image": ""
-      },
-      {
-        "name": "Enescu / Prokofiev / Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski/Enescu+%2F+Prokofiev+%2F+Szymanowski",
-        "artist": "Karol Szymanowski",
         "plays": "3",
         "image": ""
       }
@@ -195,6 +208,62 @@
         "name": "Concerto N°1 Opus 19 D- Major - Scherzo - Vivacissimo",
         "url": "https://www.last.fm/music/Anne-Sophie+Mutter,+National+Symphony+Orchestra/_/Concerto+N%C2%B01+Opus+19+D-+Major+-+Scherzo+-+Vivacissimo",
         "artist": "Anne-Sophie Mutter, National Symphony Orchestra",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Myths, Three Poems for Violin and Piano, op. 30: Dryads and Pan",
+        "url": "https://www.last.fm/music/Karol+Szymanowski/_/Myths,+Three+Poems+for+Violin+and+Piano,+op.+30:+Dryads+and+Pan",
+        "artist": "Karol Szymanowski",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Myths, Three Poems for Violin and Piano, op. 30: Narcissus",
+        "url": "https://www.last.fm/music/Karol+Szymanowski/_/Myths,+Three+Poems+for+Violin+and+Piano,+op.+30:+Narcissus",
+        "artist": "Karol Szymanowski",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Myths, Three Poems for Violin and Piano, op. 30: The Fountain of Arethusa",
+        "url": "https://www.last.fm/music/Karol+Szymanowski/_/Myths,+Three+Poems+for+Violin+and+Piano,+op.+30:+The+Fountain+of+Arethusa",
+        "artist": "Karol Szymanowski",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Five melodies for violin and piano, op. 35bis: Allegretto leggero e scherzando",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Five+melodies+for+violin+and+piano,+op.+35bis:+Allegretto+leggero+e+scherzando",
+        "artist": "Sergei Prokofiev",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Five melodies for violin and piano, op. 35bis: Andante",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Five+melodies+for+violin+and+piano,+op.+35bis:+Andante",
+        "artist": "Sergei Prokofiev",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Five melodies for violin and piano, op. 35bis: Andante non troppo",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Five+melodies+for+violin+and+piano,+op.+35bis:+Andante+non+troppo",
+        "artist": "Sergei Prokofiev",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Five melodies for violin and piano, op. 35bis: Animato, ma non allegro",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Five+melodies+for+violin+and+piano,+op.+35bis:+Animato,+ma+non+allegro",
+        "artist": "Sergei Prokofiev",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Five melodies for violin and piano, op. 35bis: Lento, ma non troppo",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Five+melodies+for+violin+and+piano,+op.+35bis:+Lento,+ma+non+troppo",
+        "artist": "Sergei Prokofiev",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -269,6 +338,34 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Sonata for 2 Violins in C Major, Op. 56: I. Andante cantabile",
+        "url": "https://www.last.fm/music/Claudio+Mondini+&+Anna+Pecora/_/Sonata+for+2+Violins+in+C+Major,+Op.+56:+I.+Andante+cantabile",
+        "artist": "Claudio Mondini & Anna Pecora",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sonata for 2 Violins in C Major, Op. 56: II. Allegro",
+        "url": "https://www.last.fm/music/Claudio+Mondini+&+Anna+Pecora/_/Sonata+for+2+Violins+in+C+Major,+Op.+56:+II.+Allegro",
+        "artist": "Claudio Mondini & Anna Pecora",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sonata for 2 Violins in C Major, Op. 56: III. Commodo, quasi allegretto",
+        "url": "https://www.last.fm/music/Claudio+Mondini+&+Anna+Pecora/_/Sonata+for+2+Violins+in+C+Major,+Op.+56:+III.+Commodo,+quasi+allegretto",
+        "artist": "Claudio Mondini & Anna Pecora",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sonata for 2 Violins in C Major, Op. 56: IV. Allegro con brio",
+        "url": "https://www.last.fm/music/Claudio+Mondini+&+Anna+Pecora/_/Sonata+for+2+Violins+in+C+Major,+Op.+56:+IV.+Allegro+con+brio",
+        "artist": "Claudio Mondini & Anna Pecora",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Sonata no. 3 in A minor for Piano and Violin “In the Romanian Folk Style”, op. 25: Allegro con brio, ma non troppo mosso",
         "url": "https://www.last.fm/music/George+Enescu/_/Sonata+no.+3+in+A+minor+for+Piano+and+Violin+%E2%80%9CIn+the+Romanian+Folk+Style%E2%80%9D,+op.+25:+Allegro+con+brio,+ma+non+troppo+mosso",
         "artist": "George Enescu",
@@ -325,41 +422,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Métaboles, I. Incantatoire",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/M%C3%A9taboles,+I.+Incantatoire",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Métaboles, II. Linéaire",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/M%C3%A9taboles,+II.+Lin%C3%A9aire",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Métaboles, III. Obsessionnel",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/M%C3%A9taboles,+III.+Obsessionnel",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Métaboles, IV. Torpide",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/M%C3%A9taboles,+IV.+Torpide",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Métaboles, V. Flamboyant",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/M%C3%A9taboles,+V.+Flamboyant",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Mystere De L'Instant, I. Appels",
         "url": "https://www.last.fm/music/Henri+Dutilleux/_/Mystere+De+L%27Instant,+I.+Appels",
         "artist": "Henri Dutilleux",
@@ -400,55 +462,6 @@
         "artist": "Henri Dutilleux",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Mystere de l'Instant, VI. Choral",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Mystere+de+l%27Instant,+VI.+Choral",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Mystere de l'Instant, VII. Rumeurs",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Mystere+de+l%27Instant,+VII.+Rumeurs",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Mystere de l'Instant, VIII. Soliloques",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Mystere+de+l%27Instant,+VIII.+Soliloques",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Mystere de l'Instant, X. Embrasement",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Mystere+de+l%27Instant,+X.+Embrasement",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Timbres, Espaces, Mouvement Ou La Nuit Étoilée, I. Nébuleuse",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Timbres,+Espaces,+Mouvement+Ou+La+Nuit+%C3%89toil%C3%A9e,+I.+N%C3%A9buleuse",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Timbres, Espaces, Mouvement Ou La Nuit Étoilée, II. Interlude, Constellations",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Timbres,+Espaces,+Mouvement+Ou+La+Nuit+%C3%89toil%C3%A9e,+II.+Interlude,+Constellations",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Tout Un Monde Lointain, I. Énigme",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Tout+Un+Monde+Lointain,+I.+%C3%89nigme",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -457,7 +470,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "359",
+        "plays": "364",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -485,6 +498,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "plays": "41",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Ludwig van Beethoven",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
         "plays": "40",
@@ -494,12 +513,6 @@
         "name": "Caroline Shaw",
         "url": "https://www.last.fm/music/Caroline+Shaw",
         "plays": "39",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
-        "plays": "38",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1265,7 +1278,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "895",
+        "plays": "900",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1359,14 +1372,14 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Emma Ruth Rundle",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle",
-        "plays": "88",
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "plays": "91",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "name": "Emma Ruth Rundle",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle",
         "plays": "88",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -2085,7 +2098,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "5830",
+        "plays": "5835",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
