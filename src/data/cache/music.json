@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 275919
+    "scrobbles": 275923
   },
   "history": [
-    {
-      "dayName": "Sun",
-      "date": "2026-04-19",
-      "hours": "0.0",
-      "lastHours": "1.3",
-      "topArtist": null
-    },
     {
       "dayName": "Mon",
       "date": "2026-04-20",
@@ -51,6 +44,13 @@
       "hours": "0.6",
       "lastHours": "0.6",
       "topArtist": "Sergei Prokofiev"
+    },
+    {
+      "dayName": "Sun",
+      "date": "2026-04-26",
+      "hours": "0.2",
+      "lastHours": "0.0",
+      "topArtist": "Mstislav Rostropovich"
     }
   ],
   "week": {
@@ -77,6 +77,12 @@
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
         "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Mstislav Rostropovich",
+        "url": "https://www.last.fm/music/Mstislav+Rostropovich",
+        "plays": "4",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -128,6 +134,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d5b9887e50dbf327233c01592f0ddbdc.jpg"
       },
       {
+        "name": "Saint-Saëns: Cello Concerto No. 1 & Miaskovsky: Cello Concerto",
+        "url": "https://www.last.fm/music/Mstislav+Rostropovich/Saint-Sa%C3%ABns:+Cello+Concerto+No.+1+&+Miaskovsky:+Cello+Concerto",
+        "artist": "Mstislav Rostropovich",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/94ae86ed4dd98054470737364a7f1b2a.jpg"
+      },
+      {
         "name": "Appalachian Spring / Short Symphony / 3 Latin American Sketches / Quiet City",
         "url": "https://www.last.fm/music/Aaron+Copland/Appalachian+Spring+%2F+Short+Symphony+%2F+3+Latin+American+Sketches+%2F+Quiet+City",
         "artist": "Aaron Copland",
@@ -157,6 +170,13 @@
       }
     ],
     "tracks": [
+      {
+        "name": "Cello Concerto in C Minor, Op. 66: II. Allegro vivace - Andante semplice e tranquillo - Lento come prima",
+        "url": "https://www.last.fm/music/Mstislav+Rostropovich/_/Cello+Concerto+in+C+Minor,+Op.+66:+II.+Allegro+vivace+-+Andante+semplice+e+tranquillo+-+Lento+come+prima",
+        "artist": "Mstislav Rostropovich",
+        "plays": "3",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
       {
         "name": "Concerto N°1 Opus 19 D- Major - Andantino - Andante Assai",
         "url": "https://www.last.fm/music/Anne-Sophie+Mutter,+National+Symphony+Orchestra/_/Concerto+N%C2%B01+Opus+19+D-+Major+-+Andantino+-+Andante+Assai",
@@ -429,13 +449,6 @@
         "artist": "Henri Dutilleux",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Tout Un Monde Lointain, II. Regard",
-        "url": "https://www.last.fm/music/Henri+Dutilleux/_/Tout+Un+Monde+Lointain,+II.+Regard",
-        "artist": "Henri Dutilleux",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -658,12 +671,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Wolfgang Amadeus Mozart",
-        "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart",
-        "plays": "16",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Frédéric Chopin",
         "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin",
         "plays": "15",
@@ -678,6 +685,12 @@
       {
         "name": "Anastasia Yasko",
         "url": "https://www.last.fm/music/Anastasia+Yasko",
+        "plays": "14",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Clarice Jensen",
+        "url": "https://www.last.fm/music/Clarice+Jensen",
         "plays": "14",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -894,13 +907,6 @@
         "image": ""
       },
       {
-        "name": "Piano Concertos No. 20 K. 466 & No. 24 K. 491 / Concert Rondo, K. 382",
-        "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart/Piano+Concertos+No.+20+K.+466+&+No.+24+K.+491+%2F+Concert+Rondo,+K.+382",
-        "artist": "Wolfgang Amadeus Mozart",
-        "plays": "15",
-        "image": ""
-      },
-      {
         "name": "20th Century Russian Piano Sonatas",
         "url": "https://www.last.fm/music/Anastasia+Yasko/20th+Century+Russian+Piano+Sonatas",
         "artist": "Anastasia Yasko",
@@ -962,6 +968,13 @@
         "artist": "Coil",
         "plays": "13",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/f774599ee66976bc40257a34a17b1996.png"
+      },
+      {
+        "name": "Winterreise",
+        "url": "https://www.last.fm/music/Franz+Schubert/Winterreise",
+        "artist": "Franz Schubert",
+        "plays": "13",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/491393c31cc2d0d6c3ed63780854235e.jpg"
       }
     ],
     "tracks": [
@@ -1141,6 +1154,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Cello Concerto in C Minor, Op. 66: II. Allegro vivace - Andante semplice e tranquillo - Lento come prima",
+        "url": "https://www.last.fm/music/Mstislav+Rostropovich/_/Cello+Concerto+in+C+Minor,+Op.+66:+II.+Allegro+vivace+-+Andante+semplice+e+tranquillo+-+Lento+come+prima",
+        "artist": "Mstislav Rostropovich",
+        "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Piano Concerto No. 2 in G minor, Op. 16: I. Andantino",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Piano+Concerto+No.+2+in+G+minor,+Op.+16:+I.+Andantino",
         "artist": "Sergei Prokofiev",
@@ -1234,13 +1254,6 @@
       {
         "name": "Plan & Elevation: I. The Ellipse",
         "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+I.+The+Ellipse",
-        "artist": "Caroline Shaw",
-        "plays": "3",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Plan & Elevation: II. The Cutting Garden",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+II.+The+Cutting+Garden",
         "artist": "Caroline Shaw",
         "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -2156,7 +2169,7 @@
       {
         "name": "Mstislav Rostropovich",
         "url": "https://www.last.fm/music/Mstislav+Rostropovich",
-        "plays": "1914",
+        "plays": "1918",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
