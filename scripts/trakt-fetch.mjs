@@ -6,6 +6,22 @@ import { fetchOrThrow, runIfMain } from './lib-utils.mjs';
 
 const CONCURRENCY_LIMIT = 5;
 
+export async function getTraktAccessToken({ clientId, clientSecret, refreshToken }) {
+  const res = await fetchOrThrow('https://api.trakt.tv/oauth/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      client_id: clientId,
+      client_secret: clientSecret,
+      refresh_token: refreshToken,
+      redirect_uri: 'urn:ietf:wg:oauth:2.0:oob',
+      grant_type: 'refresh_token',
+    }),
+  });
+  const data = await res.json();
+  return data.access_token;
+}
+
 export async function enrichItem(item, { cache, apiKey }) {
   const imdbId = item.movie?.ids?.imdb || item.show?.ids?.imdb;
   if (imdbId && cache.has(imdbId) && cache.get(imdbId).poster) {
@@ -38,7 +54,7 @@ export async function enrichItem(item, { cache, apiKey }) {
   return { ...item, poster, director, genres };
 }
 
-export async function fetchAndEnrichTraktData({ clientId, username, tmdbApiKey, dataPath }) {
+export async function fetchAndEnrichTraktData({ clientId, accessToken, username, tmdbApiKey, dataPath }) {
   const existingRaw = await fs.readFile(dataPath, 'utf-8').catch(() => '{"allRatings":[]}');
   const existing = JSON.parse(existingRaw);
   const flatExisting = Array.isArray(existing.allRatings)
@@ -50,6 +66,7 @@ export async function fetchAndEnrichTraktData({ clientId, username, tmdbApiKey, 
     'Content-Type': 'application/json',
     'trakt-api-version': '2',
     'trakt-api-key': clientId,
+    Authorization: `Bearer ${accessToken}`,
   };
 
   console.log('... Fetching Trakt ratings...');
@@ -112,6 +129,8 @@ export async function run() {
   const creds = validateEnv(
     {
       clientId: 'TRAKT_CLIENT_ID',
+      clientSecret: 'TRAKT_CLIENT_SECRET',
+      refreshToken: 'TRAKT_REFRESH_TOKEN',
       username: 'TRAKT_USERNAME',
       tmdbApiKey: 'TMDB_API_KEY',
     },
@@ -124,11 +143,14 @@ export async function run() {
 
   await runETL({
     name: 'Trakt',
-    fetcher: () =>
-      fetchAndEnrichTraktData({
+    fetcher: async () => {
+      const accessToken = await getTraktAccessToken(creds);
+      return fetchAndEnrichTraktData({
         ...creds,
+        accessToken,
         dataPath: cacheFile,
-      }),
+      });
+    },
     transform: (data) =>
       transformAndAggregateTraktData(data, {
         username: creds.username,
