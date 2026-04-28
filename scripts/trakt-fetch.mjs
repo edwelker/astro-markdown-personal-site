@@ -15,7 +15,8 @@ export async function enrichItem(item, { cache, apiKey }) {
   const tmdbId = item.movie?.ids?.tmdb || item.show?.ids?.tmdb;
   const type = item.movie ? 'movie' : 'tv';
   let poster = null,
-    director = 'Unknown';
+    director = 'Unknown',
+    genres = [];
 
   if (tmdbId) {
     try {
@@ -29,11 +30,12 @@ export async function enrichItem(item, { cache, apiKey }) {
 
       poster = tData.poster_path ? `https://image.tmdb.org/t/p/w500${tData.poster_path}` : null;
       director = cData.crew?.find((c) => c.job === 'Director')?.name || 'Unknown';
+      genres = (tData.genres || []).map((g) => g.name.toLowerCase());
     } catch (err) {
       console.warn(`⚠️ TMDB enrichment failed for ${type} id ${tmdbId}`);
     }
   }
-  return { ...item, poster, director };
+  return { ...item, poster, director, genres };
 }
 
 export async function fetchAndEnrichTraktData({ clientId, username, tmdbApiKey, dataPath }) {
@@ -52,12 +54,8 @@ export async function fetchAndEnrichTraktData({ clientId, username, tmdbApiKey, 
 
   console.log('... Fetching Trakt ratings...');
   const [mRes, sRes] = await Promise.all([
-    fetchOrThrow(`https://api.trakt.tv/users/${username}/ratings/movies?limit=1000&extended=full`, {
-      headers,
-    }),
-    fetchOrThrow(`https://api.trakt.tv/users/${username}/ratings/shows?limit=1000&extended=full`, {
-      headers,
-    }),
+    fetchOrThrow(`https://api.trakt.tv/users/${username}/ratings/movies`, { headers }),
+    fetchOrThrow(`https://api.trakt.tv/users/${username}/ratings/shows`, { headers }),
   ]);
 
   const raw = [...(await mRes.json()), ...(await sRes.json())];
@@ -85,7 +83,7 @@ export function transformAndAggregateTraktData(enriched, { username }) {
     if (item.director && item.director !== 'Unknown') {
       directorMap[item.director] = (directorMap[item.director] || 0) + 1;
     }
-    (item.movie?.genres || item.show?.genres || []).forEach((g) => {
+    (item.genres || []).forEach((g) => {
       genreMap[g] = (genreMap[g] || 0) + 1;
     });
   });

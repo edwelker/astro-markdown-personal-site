@@ -49,7 +49,10 @@ describe('Trakt Fetch Logic', () => {
       const cache = new Map();
 
       global.fetch
-        .mockResolvedValueOnce({ ok: true, json: async () => ({ poster_path: '/poster.jpg' }) }) // TMDB details
+        .mockResolvedValueOnce({
+          ok: true,
+          json: async () => ({ poster_path: '/poster.jpg', genres: [{ id: 28, name: 'Action' }] }),
+        }) // TMDB details
         .mockResolvedValueOnce({
           ok: true,
           json: async () => ({ crew: [{ job: 'Director', name: 'Nolan' }] }),
@@ -59,6 +62,7 @@ describe('Trakt Fetch Logic', () => {
 
       expect(result.poster).toBe('https://image.tmdb.org/t/p/w500/poster.jpg');
       expect(result.director).toBe('Nolan');
+      expect(result.genres).toEqual(['action']);
     });
 
     it('should handle TMDB errors gracefully', async () => {
@@ -121,13 +125,15 @@ describe('Trakt Fetch Logic', () => {
           rating: 10,
           year: 2020,
           director: 'Director A',
-          movie: { title: 'M1', genres: ['Action'] },
+          genres: ['action'],
+          movie: { title: 'M1' },
         },
         {
           rating: 8,
           year: 2021,
           director: 'Director A',
-          movie: { title: 'M2', genres: ['Drama'] },
+          genres: ['drama'],
+          movie: { title: 'M2' },
         },
       ];
 
