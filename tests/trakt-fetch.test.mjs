@@ -2,6 +2,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import {
   enrichItem,
   fetchAndEnrichTraktData,
+  getTraktAccessToken,
   transformAndAggregateTraktData,
   run,
 } from '../scripts/trakt-fetch.mjs';
@@ -19,6 +20,8 @@ vi.mock('../scripts/lib-etl.mjs', () => ({
 vi.mock('../scripts/lib-credentials.mjs', () => ({
   validateEnv: vi.fn(() => ({
     clientId: 'mock-client-id',
+    clientSecret: 'mock-client-secret',
+    refreshToken: 'mock-refresh-token',
     username: 'mock-username',
     tmdbApiKey: 'mock-api-key',
   })),
@@ -32,6 +35,30 @@ describe('Trakt Fetch Logic', () => {
 
   afterEach(() => {
     vi.restoreAllMocks();
+  });
+
+  describe('getTraktAccessToken', () => {
+    it('should exchange refresh token for access token', async () => {
+      global.fetch.mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ access_token: 'new-access-token' }),
+      });
+
+      const token = await getTraktAccessToken({
+        clientId: 'cid',
+        clientSecret: 'csecret',
+        refreshToken: 'rtoken',
+      });
+
+      expect(token).toBe('new-access-token');
+      expect(global.fetch).toHaveBeenCalledWith(
+        'https://api.trakt.tv/oauth/token',
+        expect.objectContaining({
+          method: 'POST',
+          body: expect.stringContaining('"grant_type":"refresh_token"'),
+        })
+      );
+    });
   });
 
   describe('enrichItem', () => {
@@ -94,6 +121,7 @@ describe('Trakt Fetch Logic', () => {
 
       const result = await fetchAndEnrichTraktData({
         clientId: 'id',
+        accessToken: 'mock-token',
         username: 'user',
         tmdbApiKey: 'key',
         dataPath: 'path.json',
@@ -110,6 +138,7 @@ describe('Trakt Fetch Logic', () => {
       await expect(
         fetchAndEnrichTraktData({
           clientId: 'id',
+          accessToken: 'mock-token',
           username: 'user',
           tmdbApiKey: 'key',
           dataPath: 'path.json',
