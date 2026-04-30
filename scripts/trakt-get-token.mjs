@@ -17,7 +17,7 @@ if (!TRAKT_CLIENT_ID || !TRAKT_CLIENT_SECRET) {
 }
 
 const BASE = 'https://api.trakt.tv';
-const HEADERS = { 'Content-Type': 'application/json', 'trakt-api-version': '2' };
+const HEADERS = { 'Content-Type': 'application/json', 'trakt-api-version': '2', 'trakt-api-key': TRAKT_CLIENT_ID };
 
 // 1. Request a device code
 const codeRes = await fetch(`${BASE}/oauth/device/code`, {
