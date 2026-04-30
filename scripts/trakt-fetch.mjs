@@ -67,6 +67,7 @@ export async function fetchAndEnrichTraktData({ clientId, accessToken, username,
     'trakt-api-version': '2',
     'trakt-api-key': clientId,
     Authorization: `Bearer ${accessToken}`,
+    'User-Agent': 'TraktFetcher/1.0 (https://edwelker.com)', // Added User-Agent
   };
 
   console.log('... Fetching Trakt ratings...');
