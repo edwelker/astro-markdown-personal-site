@@ -38,19 +38,20 @@ describe('Trakt Fetch Logic', () => {
   });
 
   describe('getTraktAccessToken', () => {
-    it('should exchange refresh token for access token', async () => {
+    it('should exchange refresh token for access token and return both tokens', async () => {
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        json: async () => ({ access_token: 'new-access-token' }),
+        json: async () => ({ access_token: 'new-access-token', refresh_token: 'new-refresh-token' }),
       });
 
-      const token = await getTraktAccessToken({
+      const result = await getTraktAccessToken({
         clientId: 'cid',
         clientSecret: 'csecret',
         refreshToken: 'rtoken',
       });
 
-      expect(token).toBe('new-access-token');
+      expect(result.accessToken).toBe('new-access-token');
+      expect(result.newRefreshToken).toBe('new-refresh-token');
       expect(global.fetch).toHaveBeenCalledWith(
         'https://api.trakt.tv/oauth/token',
         expect.objectContaining({
@@ -183,7 +184,8 @@ describe('Trakt Fetch Logic', () => {
   });
 
   describe('run', () => {
-    it('should execute the ETL process', async () => {
+    it('should execute the ETL process (refresh token mode)', async () => {
+      delete process.env.TRAKT_ACCESS_TOKEN;
       await run();
       expect(runETL).toHaveBeenCalledWith(
         expect.objectContaining({
@@ -191,6 +193,18 @@ describe('Trakt Fetch Logic', () => {
           outFile: 'src/data/trakt.json',
         })
       );
+    });
+
+    it('should execute the ETL process (direct access token mode)', async () => {
+      process.env.TRAKT_ACCESS_TOKEN = 'direct-token';
+      await run();
+      expect(runETL).toHaveBeenCalledWith(
+        expect.objectContaining({
+          name: 'Trakt',
+          outFile: 'src/data/trakt.json',
+        })
+      );
+      delete process.env.TRAKT_ACCESS_TOKEN;
     });
   });
 });

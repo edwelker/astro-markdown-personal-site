@@ -19,7 +19,7 @@ export async function getTraktAccessToken({ clientId, clientSecret, refreshToken
     }),
   });
   const data = await res.json();
-  return data.access_token;
+  return { accessToken: data.access_token, newRefreshToken: data.refresh_token };
 }
 
 export async function enrichItem(item, { cache, apiKey }) {
@@ -126,16 +126,27 @@ export function transformAndAggregateTraktData(enriched, { username }) {
 }
 
 export async function run() {
-  const creds = validateEnv(
-    {
-      clientId: 'TRAKT_CLIENT_ID',
-      clientSecret: 'TRAKT_CLIENT_SECRET',
-      refreshToken: 'TRAKT_REFRESH_TOKEN',
-      username: 'TRAKT_USERNAME',
-      tmdbApiKey: 'TMDB_API_KEY',
-    },
-    'Trakt or TMDB'
-  );
+  // TRAKT_ACCESS_TOKEN can be set directly (e.g. in Cloudflare) to skip the OAuth
+  // token exchange. Trakt access tokens are valid for ~3 months. When one expires,
+  // set a fresh one via the Trakt API and update the env var manually.
+  //
+  // When running via GitHub Actions, omit TRAKT_ACCESS_TOKEN and provide
+  // TRAKT_CLIENT_SECRET + TRAKT_REFRESH_TOKEN instead — the refresh token flow
+  // will run, and the new refresh token is written to /tmp/trakt-new-refresh-token.txt
+  // so the workflow can update the secret for the next run.
+  const directAccessToken = process.env.TRAKT_ACCESS_TOKEN;
+
+  const baseEnv = {
+    clientId: 'TRAKT_CLIENT_ID',
+    username: 'TRAKT_USERNAME',
+    tmdbApiKey: 'TMDB_API_KEY',
+  };
+
+  const refreshEnv = directAccessToken
+    ? baseEnv
+    : { ...baseEnv, clientSecret: 'TRAKT_CLIENT_SECRET', refreshToken: 'TRAKT_REFRESH_TOKEN' };
+
+  const creds = validateEnv(refreshEnv, 'Trakt or TMDB');
 
   const outFile = 'src/data/trakt.json';
   // Use the committed cache file to seed the enrichment process
@@ -144,7 +155,16 @@ export async function run() {
   await runETL({
     name: 'Trakt',
     fetcher: async () => {
-      const accessToken = await getTraktAccessToken(creds);
+      let accessToken;
+      if (directAccessToken) {
+        accessToken = directAccessToken;
+      } else {
+        const result = await getTraktAccessToken(creds);
+        accessToken = result.accessToken;
+        if (result.newRefreshToken) {
+          await fs.writeFile('/tmp/trakt-new-refresh-token.txt', result.newRefreshToken, 'utf-8');
+        }
+      }
       return fetchAndEnrichTraktData({
         ...creds,
         accessToken,
