@@ -53,7 +53,7 @@ jobs:
             echo "ℹ️  No new refresh token written (TRAKT_ACCESS_TOKEN mode or fetch skipped)"
           fi
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Commit and Push Cache
         run: |
