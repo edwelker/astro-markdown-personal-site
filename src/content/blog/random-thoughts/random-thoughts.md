@@ -8,7 +8,7 @@ tags: ["career", "david letterman", "life", "music", "ncbi", "new york giants", 
 
 !["David Letterman"](./letterman.jpg) 2) I'm glad to hear that [David Letterman and his group pulled off a deal with the Writers Guild](https://gothamist.com/2007/12/29/wga_update_real.php). Not only do I like his humor more than others, but he impresses me as a substantial human being. Way to go Dave... the beard, however, is kinda weird.
 
-3\) [My friends are onto the fact that I have a blog](https://eddiewelker.com/2007/12/28/cats-out-of-the-bag/). They really don't need any more ammunition for calling me a nerd. Be that as it may, I am going to try to be more social, in the wake of my father's passing.
+3\) [My friends are onto the fact that I have a blog](/blog/2007/12/28/cats-out-of-the-bag/). They really don't need any more ammunition for calling me a nerd. Be that as it may, I am going to try to be more social, in the wake of my father's passing.
 
 4\) One of the books that was recommended as "beautiful" in #1 was [a book on Processing](https://processing.org/). I have been putting off looking into it (so I can relearn my [Graph Theory](https://www.amazon.com/Introductory-Graph-Theory-Gary-Chartrand/dp/0486247759), [learn Python](https://www.amazon.com/Learning-Python-3rd-Mark-Lutz/dp/0596513984/) for the first time, among other things). But when I found that it included techniques for data visualization, I added it near the top of my to-do list. If only I can find enough free time to finish with Graph Theory or Python!
 
