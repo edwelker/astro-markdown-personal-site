@@ -35,7 +35,7 @@ describe('Utils Library', () => {
   });
 
   describe('formatRelativeTime', () => {
-    const baseDate = new Date();
+    const baseDate = new Date('2024-05-10T12:00:00Z');
     beforeEach(() => {
       vi.useFakeTimers();
       vi.setSystemTime(baseDate);
