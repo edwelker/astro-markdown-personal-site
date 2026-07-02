@@ -7,10 +7,19 @@ import { formatPrice } from '../lib/utils';
 
 export function getStaticPaths() {
   return [
-  { params: { region: 'columbia_md' }, props: { name: 'Columbia, Maryland', data: gasData.md } },
-    { params: { region: 'long_island' }, props: { name: 'Eastern Long Island, New York', data: gasData.ny } },
-    { params: { region: 'western_ma' }, props: { name: 'Western Massachusetts', data: gasData.ma } },
-    { params: { region: 'frederick_md' }, props: { name: 'Frederick, Maryland', data: gasData.frederick } },
+    { params: { region: 'columbia_md' }, props: { name: 'Columbia, Maryland', data: gasData.md } },
+    {
+      params: { region: 'long_island' },
+      props: { name: 'Eastern Long Island, New York', data: gasData.ny },
+    },
+    {
+      params: { region: 'western_ma' },
+      props: { name: 'Western Massachusetts', data: gasData.ma },
+    },
+    {
+      params: { region: 'frederick_md' },
+      props: { name: 'Frederick, Maryland', data: gasData.frederick },
+    },
   ];
 }
 

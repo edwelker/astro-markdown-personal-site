@@ -3,7 +3,8 @@ import Layout from '@layouts/Layout.astro';
 import Container from '@components/Container.astro';
 import Link from '@components/Link.astro';
 
-const title = 'Local Gas Prices for Maryland, Long Island, and Western Massachusetts, updated 2x daily.';
+const title =
+  'Local Gas Prices for Maryland, Long Island, and Western Massachusetts, updated 2x daily.';
 const description = 'Local gas prices for MD, NY, and MA, scraped twice daily.';
 ---
 
@@ -12,15 +13,18 @@ const description = 'Local gas prices for MD, NY, and MA, scraped twice daily.';
     <div class="animate">
       <h1 class="mb-6 text-2xl font-semibold">Local Gas Prices</h1>
       <div class="prose prose-neutral dark:prose-invert">
-          <p>
-
-              Automated gas price tracking for central Maryland, Eastern Long Island, and Western Massachusetts, in the places I frequent.
+        <p>
+          Automated gas price tracking for central Maryland, Eastern Long Island, and Western
+          Massachusetts, in the places I frequent.
         </p>
         <ul>
           <li><Link href="/gas/columbia_md/">Maryland (Columbia/Ellicott City/Severn)</Link></li>
           <li><Link href="/gas/long_island/">New York (Long Island East End)</Link></li>
           <li><Link href="/gas/western_ma/">Massachusetts (Western I-91 Corridor)</Link></li>
-          <li><Link href="/gas/frederick_md/">Frederick MD (Columbia to Frederick to Point of Rocks and Brunswick MD)</Link></li>
+          <li>
+            <Link href="/gas/frederick_md/"
+              >Frederick MD (Columbia to Frederick to Point of Rocks and Brunswick MD)</Link>
+          </li>
         </ul>
         <p class="mt-8 text-sm text-neutral-500">
           Data is sourced from <Link href="https://github.com/edwelker/find_cheap_local_gas"

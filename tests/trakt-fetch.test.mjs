@@ -41,7 +41,10 @@ describe('Trakt Fetch Logic', () => {
     it('should exchange refresh token for access token and return both tokens', async () => {
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        json: async () => ({ access_token: 'new-access-token', refresh_token: 'new-refresh-token' }),
+        json: async () => ({
+          access_token: 'new-access-token',
+          refresh_token: 'new-refresh-token',
+        }),
       });
 
       const result = await getTraktAccessToken({

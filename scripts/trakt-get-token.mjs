@@ -12,7 +12,7 @@ const HEADERS = {
   'Content-Type': 'application/json',
   'trakt-api-version': '2',
   'trakt-api-key': TRAKT_CLIENT_ID,
-  'User-Agent': 'TraktTokenGenerator/1.0 (Node.js)'
+  'User-Agent': 'TraktTokenGenerator/1.0 (Node.js)',
 };
 
 const codeRes = await fetch(`${BASE}/oauth/device/code`, {

@@ -54,7 +54,13 @@ export async function enrichItem(item, { cache, apiKey }) {
   return { ...item, poster, director, genres };
 }
 
-export async function fetchAndEnrichTraktData({ clientId, accessToken, username, tmdbApiKey, dataPath }) {
+export async function fetchAndEnrichTraktData({
+  clientId,
+  accessToken,
+  username,
+  tmdbApiKey,
+  dataPath,
+}) {
   const existingRaw = await fs.readFile(dataPath, 'utf-8').catch(() => '{"allRatings":[]}');
   const existing = JSON.parse(existingRaw);
   const flatExisting = Array.isArray(existing.allRatings)
