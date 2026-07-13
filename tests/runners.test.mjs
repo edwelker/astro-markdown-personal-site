@@ -13,9 +13,8 @@ vi.mock('../scripts/lib-etl.mjs', () => ({
 describe('ETL Runners', () => {
   beforeEach(() => {
     vi.resetAllMocks();
-    process.env.STRAVA_CLIENT_ID = 'id';
-    process.env.STRAVA_CLIENT_SECRET = 'secret';
-    process.env.STRAVA_REFRESH_TOKEN = 'token';
+    process.env.INTERVALS_API_KEY = 'key';
+    process.env.INTERVALS_ATHLETE_ID = 'id';
     process.env.LASTFM_USERNAME = 'user';
     process.env.LASTFM_API_KEY = 'key';
     process.env.FLICKR_API_KEY = 'key';
@@ -24,7 +23,7 @@ describe('ETL Runners', () => {
 
   it('should run cycling ETL', async () => {
     await runCycling();
-    expect(runETL).toHaveBeenCalledWith(expect.objectContaining({ name: 'Strava' }));
+    expect(runETL).toHaveBeenCalledWith(expect.objectContaining({ name: 'Intervals (Cycling)' }));
   });
 
   it('should run music ETL', async () => {

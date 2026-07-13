@@ -1,6 +1,28 @@
 {
   "allRatings": [
     {
+      "id": 7484,
+      "imdbId": "tt0087003",
+      "title": "Broadway Danny Rose",
+      "year": 1984,
+      "rating": 8,
+      "type": "movie",
+      "href": "https://trakt.tv/movies/broadway-danny-rose-1984",
+      "poster": "https://image.tmdb.org/t/p/w500/oUgolImcg0PRiT33UNjK409aQoJ.jpg",
+      "director": "Woody Allen"
+    },
+    {
+      "id": 391004,
+      "imdbId": "tt8784956",
+      "title": "Ava",
+      "year": 2020,
+      "rating": 4,
+      "type": "movie",
+      "href": "https://trakt.tv/movies/ava-2020",
+      "poster": "https://image.tmdb.org/t/p/w500/qzA87Wf4jo1h8JMk9GilyIYvwsA.jpg",
+      "director": "Tate Taylor"
+    },
+    {
       "id": 967810,
       "imdbId": "tt8036976",
       "title": "Send Help",
@@ -5237,24 +5259,7 @@
       "director": "Unknown"
     }
   ],
-  "genres": [
-    [
-      "comedy",
-      2
-    ],
-    [
-      "horror",
-      1
-    ],
-    [
-      "thriller",
-      1
-    ],
-    [
-      "drama",
-      1
-    ]
-  ],
+  "genres": [],
   "directors": [
     [
       "Ingmar Bergman",
@@ -5267,6 +5272,10 @@
     [
       "Steven Spielberg",
       7
+    ],
+    [
+      "Woody Allen",
+      6
     ],
     [
       "David Yates",
@@ -5286,10 +5295,6 @@
     ],
     [
       "Christopher Nolan",
-      5
-    ],
-    [
-      "Woody Allen",
       5
     ],
     [
@@ -5326,7 +5331,7 @@
     {
       "decade": 1980,
       "score": "7.71",
-      "volume": 48
+      "volume": 49
     },
     {
       "decade": 1990,
@@ -5345,10 +5350,10 @@
     },
     {
       "decade": 2020,
-      "score": "6.72",
-      "volume": 43
+      "score": "6.66",
+      "volume": 44
     }
   ],
   "username": "edwelker",
-  "lastUpdated": "2026-04-30T04:34:30.427Z"
+  "lastUpdated": "2026-07-13T16:14:49.604Z"
 }

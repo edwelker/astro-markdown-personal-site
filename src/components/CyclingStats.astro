@@ -5,7 +5,8 @@ interface RecentRide {
   date: string;
   distance: string;
   elevation: string;
-  id: number;
+  id: number | string;
+  url?: string | null;
 }
 interface CyclingData {
   year: { distance: string; elevation: string; count: number };
@@ -118,7 +119,7 @@ const formatDistance = (val: string | number | undefined) => {
           <ul class="space-y-4">
             {filteredRides.map((r: RecentRide) => (
               <li class="group/ride">
-                <a href={`https://www.strava.com/activities/${r.id}`} target="_blank" class="block">
+                <a href={r.url || `https://www.strava.com/activities/${r.id}`} target="_blank" class="block">
                   <div class="flex items-baseline justify-between">
                     <span class="truncate text-sm text-neutral-800 transition-colors group-hover/ride:text-orange-500 dark:text-neutral-200">
                       {r.name}

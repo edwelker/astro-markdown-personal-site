@@ -1,5 +1,21 @@
 #!/usr/bin/env node
 
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+
+try {
+  if (typeof process.loadEnvFile === 'function') {
+    try {
+      process.loadEnvFile();
+    } catch {
+      const __dirname = dirname(fileURLToPath(import.meta.url));
+      process.loadEnvFile(join(__dirname, '../.env'));
+    }
+  }
+} catch (e) {
+  // Ignore
+}
+
 const { TRAKT_CLIENT_ID, TRAKT_CLIENT_SECRET } = process.env;
 
 if (!TRAKT_CLIENT_ID || !TRAKT_CLIENT_SECRET) {

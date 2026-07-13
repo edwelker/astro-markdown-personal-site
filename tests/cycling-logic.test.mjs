@@ -91,6 +91,7 @@ describe('Cycling Logic: transformStravaData', () => {
       date: 'Aug 10',
       distance: '10.0',
       elevation: '1,000',
+      url: null,
     });
     expect(result.recent[1]).toEqual({
       id: 2,
@@ -98,6 +99,7 @@ describe('Cycling Logic: transformStravaData', () => {
       date: 'Jan 15',
       distance: '20.0',
       elevation: '500',
+      url: null,
     });
     expect(result.recent[2]).toEqual({
       id: 5,
@@ -105,6 +107,7 @@ describe('Cycling Logic: transformStravaData', () => {
       date: 'Dec 25',
       distance: '10.0',
       elevation: '328',
+      url: null,
     });
 
     expect(result.chart[2]).toBe(20);

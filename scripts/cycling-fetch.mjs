@@ -3,74 +3,63 @@ import { transformStravaData } from './cycling-logic.mjs';
 import { validateEnv } from './lib-credentials.mjs';
 import { fetchOrThrow, runIfMain } from './lib-utils.mjs';
 
-export async function getStravaAccessToken({ clientId, clientSecret, refreshToken }) {
-  const res = await fetchOrThrow('https://www.strava.com/oauth/token', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      client_id: clientId,
-      client_secret: clientSecret,
-      refresh_token: refreshToken,
-      grant_type: 'refresh_token',
-    }),
-  });
-  const data = await res.json();
-  return data.access_token;
-}
-
-export async function fetchCyclingData({ token }) {
+export async function fetchIntervalsData({ apiKey, athleteId }) {
   const now = new Date();
   // Fetch 15 months of history to ensure we have context for the start of the year
   // and plenty of buffer for previous month calculations
   const cutoffDate = new Date(now.getFullYear(), now.getMonth() - 15, now.getDate());
 
-  const allActivities = [];
-  let page = 1;
-  let keepFetching = true;
+  // Format date as YYYY-MM-DD
+  const oldestDate = cutoffDate.toISOString().split('T')[0];
 
-  while (keepFetching) {
-    const res = await fetchOrThrow(
-      `https://www.strava.com/api/v3/athlete/activities?page=${page}&per_page=100`,
-      {
-        headers: { Authorization: `Bearer ${token}` },
-      }
-    );
+  const auth = Buffer.from(`API_KEY:${apiKey}`).toString('base64');
+  const url = `https://intervals.icu/api/v1/athlete/${athleteId}/activities?oldest=${oldestDate}`;
 
-    const list = await res.json();
-    if (list.length === 0) {
-      break; // Exit while loop if no more activities
-    }
+  console.log(`... Fetching activities from Intervals.icu starting from ${oldestDate}...`);
+  const res = await fetchOrThrow(url, {
+    headers: {
+      Authorization: `Basic ${auth}`,
+    },
+  });
 
-    for (const a of list) {
-      const rideDate = new Date(a.start_date);
+  const list = await res.json();
 
-      if (rideDate >= cutoffDate) {
-        allActivities.push(a);
-      } else {
-        keepFetching = false;
-        break;
-      }
-    }
-    page++;
-  }
-  return allActivities;
+  // Map Intervals.icu activities to Strava schema expected by transformStravaData
+  return list.map((act) => {
+    const stravaId = act.strava_id ? parseInt(act.strava_id, 10) : null;
+    const cleanId = String(act.id).replace('i', '');
+    const url = stravaId
+      ? `https://www.strava.com/activities/${stravaId}`
+      : `https://intervals.icu/activities/${cleanId}`;
+
+    return {
+      id: stravaId || act.id,
+      url,
+      name: act.name,
+      type: act.type,
+      sport_type: act.type,
+      distance: act.distance,
+      total_elevation_gain: act.total_elevation_gain,
+      start_date: act.start_date,
+      trainer: act.trainer === true,
+      visibility: 'everyone',
+    };
+  });
 }
 
 export async function run() {
   const creds = validateEnv(
     {
-      clientId: 'STRAVA_CLIENT_ID',
-      clientSecret: 'STRAVA_CLIENT_SECRET',
-      refreshToken: 'STRAVA_REFRESH_TOKEN',
+      apiKey: 'INTERVALS_API_KEY',
+      athleteId: 'INTERVALS_ATHLETE_ID',
     },
-    'Strava'
+    'Intervals'
   );
 
   await runETL({
-    name: 'Strava',
+    name: 'Intervals (Cycling)',
     fetcher: async () => {
-      const token = await getStravaAccessToken(creds);
-      return fetchCyclingData({ token });
+      return fetchIntervalsData(creds);
     },
     transform: transformStravaData,
     outFile: 'src/data/cycling.json',

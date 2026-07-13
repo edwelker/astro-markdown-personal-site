@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { getStravaAccessToken, fetchCyclingData } from '../scripts/cycling-fetch.mjs';
+import { fetchIntervalsData } from '../scripts/cycling-fetch.mjs';
 import { fetchMusicData } from '../scripts/music-fetch.mjs';
 import { fetchFlickrData } from '../scripts/flickr-fetch.mjs';
 
@@ -17,94 +17,93 @@ vi.mock('../scripts/lib-credentials.mjs', () => ({
   })),
 }));
 
-describe('Cycling Fetch Logic', () => {
+describe('Cycling Fetch Logic (Intervals.icu)', () => {
   beforeEach(() => {
     vi.resetAllMocks();
   });
 
-  describe('getStravaAccessToken', () => {
-    it('should return an access token on successful authentication', async () => {
+  describe('fetchIntervalsData', () => {
+    it('should fetch activities from Intervals.icu successfully and map them', async () => {
       global.fetch.mockResolvedValueOnce({
         ok: true,
-        json: async () => ({ access_token: 'test_token' }),
+        json: async () => [
+          {
+            id: 'i12345',
+            name: 'Test Activity',
+            type: 'Ride',
+            distance: 10000,
+            total_elevation_gain: 100,
+            start_date: '2026-06-01T12:00:00Z',
+            trainer: true,
+            strava_id: '987654321',
+          },
+        ],
       });
 
-      const token = await getStravaAccessToken({
-        clientId: 'id',
-        clientSecret: 'secret',
-        refreshToken: 'refresh',
-      });
+      const activities = await fetchIntervalsData({ apiKey: 'key', athleteId: 'athlete' });
 
       expect(global.fetch).toHaveBeenCalledWith(
-        'https://www.strava.com/oauth/token',
-        expect.any(Object)
+        expect.stringContaining('https://intervals.icu/api/v1/athlete/athlete/activities?oldest='),
+        expect.objectContaining({
+          headers: {
+            Authorization: 'Basic QVBJX0tFWTprZXk=', // API_KEY:key in base64
+          },
+        })
       );
-      expect(token).toBe('test_token');
+
+      expect(activities).toHaveLength(1);
+      expect(activities[0]).toEqual({
+        id: 987654321,
+        url: 'https://www.strava.com/activities/987654321',
+        name: 'Test Activity',
+        type: 'Ride',
+        sport_type: 'Ride',
+        distance: 10000,
+        total_elevation_gain: 100,
+        start_date: '2026-06-01T12:00:00Z',
+        trainer: true,
+        visibility: 'everyone',
+      });
     });
 
-    it('should throw an error on failed authentication', async () => {
-      global.fetch.mockResolvedValueOnce({ ok: false, status: 401, statusText: 'Unauthorized' });
+    it('should handle activities without strava_id by falling back to intervals link', async () => {
+      global.fetch.mockResolvedValueOnce({
+        ok: true,
+        json: async () => [
+          {
+            id: 'i12345',
+            name: 'Garmin Activity',
+            type: 'Ride',
+            distance: 10000,
+            total_elevation_gain: 100,
+            start_date: '2026-06-01T12:00:00Z',
+            trainer: false,
+          },
+        ],
+      });
 
+      const activities = await fetchIntervalsData({ apiKey: 'key', athleteId: 'athlete' });
+
+      expect(activities).toHaveLength(1);
+      expect(activities[0]).toEqual({
+        id: 'i12345',
+        url: 'https://intervals.icu/activities/12345',
+        name: 'Garmin Activity',
+        type: 'Ride',
+        sport_type: 'Ride',
+        distance: 10000,
+        total_elevation_gain: 100,
+        start_date: '2026-06-01T12:00:00Z',
+        trainer: false,
+        visibility: 'everyone',
+      });
+    });
+
+    it('should throw an error on failed request', async () => {
+      global.fetch.mockResolvedValueOnce({ ok: false, status: 500, statusText: 'Internal Error' });
       await expect(
-        getStravaAccessToken({ clientId: 'id', clientSecret: 'secret', refreshToken: 'refresh' })
-      ).rejects.toThrow('Request failed: 401 Unauthorized');
-    });
-  });
-
-  describe('fetchCyclingData', () => {
-    it('should fetch and paginate through activities (15 months window)', async () => {
-      const currentYear = new Date().getFullYear();
-      global.fetch
-        .mockResolvedValueOnce({
-          ok: true,
-          json: async () => [
-            { id: 1, start_date: `${currentYear}-06-01T00:00:00Z` },
-            { id: 2, start_date: `${currentYear}-07-01T00:00:00Z` },
-          ],
-        })
-        .mockResolvedValueOnce({
-          ok: true,
-          json: async () => [
-            { id: 3, start_date: `${currentYear}-08-01T00:00:00Z` },
-            { id: 4, start_date: `${currentYear - 1}-06-01T00:00:00Z` },
-          ],
-        })
-        .mockResolvedValueOnce({
-          ok: true,
-          json: async () => [
-            // Older than 15 months (approx 2 years ago)
-            { id: 5, start_date: `${currentYear - 2}-06-01T00:00:00Z` },
-          ],
-        });
-
-      const activities = await fetchCyclingData({ token: 'test_token' });
-
-      expect(global.fetch).toHaveBeenCalledTimes(3);
-      // It should include id 1, 2, 3, 4. id 5 is excluded by date check.
-      expect(activities).toHaveLength(4);
-      expect(activities.map((a) => a.id)).toEqual([1, 2, 3, 4]);
-    });
-
-    it('should stop fetching if an empty list is returned', async () => {
-      global.fetch
-        .mockResolvedValueOnce({
-          ok: true,
-          json: async () => [{ id: 1, start_date: `${new Date().getFullYear()}-06-01T00:00:00Z` }],
-        })
-        .mockResolvedValueOnce({
-          ok: true,
-          json: async () => [], // Empty response
-        });
-
-      await fetchCyclingData({ token: 'test_token' });
-      expect(global.fetch).toHaveBeenCalledTimes(2);
-    });
-
-    it('should throw an error if the fetch fails', async () => {
-      global.fetch.mockResolvedValueOnce({ ok: false, status: 500, statusText: 'Server Error' });
-      await expect(fetchCyclingData({ token: 'test_token' })).rejects.toThrow(
-        'Request failed: 500 Server Error'
-      );
+        fetchIntervalsData({ apiKey: 'key', athleteId: 'athlete' })
+      ).rejects.toThrow('Request failed: 500 Internal Error');
     });
   });
 });

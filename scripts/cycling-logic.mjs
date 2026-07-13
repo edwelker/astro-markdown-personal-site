@@ -123,6 +123,7 @@ export const transformStravaData = (activities, currentDate = new Date()) => {
       distance: (a.distance * 0.000621371).toFixed(1),
       elevation: Math.round(a.total_elevation_gain * 3.28084).toLocaleString(),
       id: a.id,
+      url: a.url || null,
     }));
 
   // Decide which month to show
