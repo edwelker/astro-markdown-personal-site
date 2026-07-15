@@ -54,17 +54,18 @@ function transform(rawData) {
 }
 
 export async function run() {
-  const creds = validateEnv(
-    {
-      username: 'LASTFM_USERNAME',
-      apiKey: 'LASTFM_API_KEY',
-    },
-    'Last.fm'
-  );
-
   await runETL({
     name: 'Music',
-    fetcher: () => fetchMusicData(creds),
+    fetcher: async () => {
+      const creds = validateEnv(
+        {
+          username: 'LASTFM_USERNAME',
+          apiKey: 'LASTFM_API_KEY',
+        },
+        'Last.fm'
+      );
+      return fetchMusicData(creds);
+    },
     transform,
     outFile: 'src/data/music.json',
   });

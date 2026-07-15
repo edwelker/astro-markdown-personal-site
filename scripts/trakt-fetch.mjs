@@ -153,8 +153,6 @@ export async function run() {
     ? baseEnv
     : { ...baseEnv, clientSecret: 'TRAKT_CLIENT_SECRET', refreshToken: 'TRAKT_REFRESH_TOKEN' };
 
-  const creds = validateEnv(refreshEnv, 'Trakt or TMDB');
-
   const outFile = 'src/data/trakt.json';
   // Use the committed cache file to seed the enrichment process
   const cacheFile = 'src/data/cache/trakt.json';
@@ -162,6 +160,7 @@ export async function run() {
   await runETL({
     name: 'Trakt',
     fetcher: async () => {
+      const creds = validateEnv(refreshEnv, 'Trakt or TMDB');
       let accessToken;
       if (directAccessToken) {
         accessToken = directAccessToken;
@@ -180,7 +179,7 @@ export async function run() {
     },
     transform: (data) =>
       transformAndAggregateTraktData(data, {
-        username: creds.username,
+        username: process.env.TRAKT_USERNAME || 'ewelker',
       }),
     outFile: outFile,
     defaultData: {

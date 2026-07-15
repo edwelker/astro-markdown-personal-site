@@ -48,17 +48,16 @@ export async function fetchIntervalsData({ apiKey, athleteId }) {
 }
 
 export async function run() {
-  const creds = validateEnv(
-    {
-      apiKey: 'INTERVALS_API_KEY',
-      athleteId: 'INTERVALS_ATHLETE_ID',
-    },
-    'Intervals'
-  );
-
   await runETL({
     name: 'Intervals (Cycling)',
     fetcher: async () => {
+      const creds = validateEnv(
+        {
+          apiKey: 'INTERVALS_API_KEY',
+          athleteId: 'INTERVALS_ATHLETE_ID',
+        },
+        'Intervals'
+      );
       return fetchIntervalsData(creds);
     },
     transform: transformStravaData,
