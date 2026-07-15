@@ -9,6 +9,9 @@ insecure = true
 # Hide progress bar (cleaner logs)
 no_progress = true
 
+# Accept status codes (including rate limiting and anti-bot responses)
+accept = ["100..=103", "200..=299", "403", "429"]
+
 # Exclude specific domains or patterns
 exclude = [
     "trakt\\.tv",
