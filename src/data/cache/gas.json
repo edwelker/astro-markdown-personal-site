@@ -3,17 +3,6 @@
     {
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
-      "Station": "7-Eleven",
-      "Address": "9651 Washington Blvd N, 20723",
-      "Base": "3.79",
-      "Discount": "7-Eleven",
-      "Lat": "42.739557",
-      "Long": "-83.0334814",
-      "Net": "3.76"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
       "Station": "Shell",
       "Address": "9280 All Saints Rd, 20723",
       "Base": "3.99",
@@ -21,6 +10,17 @@
       "Lat": "39.1195226",
       "Long": "-76.8519516",
       "Net": "3.94"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "7-Eleven",
+      "Address": "9651 Washington Blvd N, 20723",
+      "Base": "3.99",
+      "Discount": "7-Eleven",
+      "Lat": "42.739557",
+      "Long": "-83.0334814",
+      "Net": "3.96"
     },
     {
       "City": "Scaggsville / Laurel",
@@ -956,23 +956,23 @@
       "City": "Columbia (Town Center)",
       "Zip": "21044",
       "Station": "Exxon",
-      "Address": "10611 Little Patuxent Pkwy, 21044",
-      "Base": "4.29",
-      "Discount": "Exxon",
-      "Lat": "39.213332",
-      "Long": "-76.8709132",
-      "Net": "4.26"
-    },
-    {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
-      "Station": "Exxon",
       "Address": "10141 Little Patuxent Pkwy, 21044",
       "Base": "4.59",
       "Discount": "Exxon",
       "Lat": "39.2181995",
       "Long": "-76.8577067",
       "Net": "4.56"
+    },
+    {
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
+      "Station": "Exxon",
+      "Address": "10611 Little Patuxent Pkwy, 21044",
+      "Base": "4.29",
+      "Discount": "Exxon",
+      "Lat": "39.213332",
+      "Long": "-76.8709132",
+      "Net": "4.26"
     }
   ]
 }
