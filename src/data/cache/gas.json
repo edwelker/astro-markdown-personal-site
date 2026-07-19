@@ -25,17 +25,6 @@
     {
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
-      "Station": "7-Eleven",
-      "Address": "9651 Washington Blvd N, 20723",
-      "Base": "3.99",
-      "Discount": "7-Eleven",
-      "Lat": "42.739557",
-      "Long": "-83.0334814",
-      "Net": "3.96"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
       "Station": "Weis",
       "Address": "9250 Washington Blvd N, 20723",
       "Base": "3.99",
@@ -43,6 +32,17 @@
       "Lat": "42.739557",
       "Long": "-83.0334814",
       "Net": "3.99"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "7-Eleven",
+      "Address": "9651 Washington Blvd N, 20723",
+      "Base": "3.99",
+      "Discount": "7-Eleven",
+      "Lat": "42.739557",
+      "Long": "-83.0334814",
+      "Net": "3.96"
     },
     {
       "City": "Scaggsville / Laurel",
@@ -57,17 +57,6 @@
     }
   ],
   "ny": [
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Shell",
-      "Address": "1733 Old Country Rd, 11901",
-      "Base": "3.87",
-      "Discount": "Shell",
-      "Lat": "40.9239801",
-      "Long": "-72.7023482",
-      "Net": "3.82"
-    },
     {
       "City": "Riverhead",
       "Zip": "11901",
@@ -93,6 +82,39 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
+      "Station": "Speedway",
+      "Address": "870 Old Country Rd, 11901",
+      "Base": "3.97",
+      "Discount": "Speedway",
+      "Lat": "40.9346058",
+      "Long": "-72.6699464",
+      "Net": "3.92"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Shell",
+      "Address": "1733 Old Country Rd, 11901",
+      "Base": "3.87",
+      "Discount": "Shell",
+      "Lat": "40.9239801",
+      "Long": "-72.7023482",
+      "Net": "3.82"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "CITGO",
+      "Address": "1429 Main Rd, 11901",
+      "Base": "4.19",
+      "Discount": "-",
+      "Lat": "40.9391677",
+      "Long": "-72.6428426",
+      "Net": "4.19"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
       "Station": "Shell",
       "Address": "9 Lake Ave, 11901",
       "Base": "3.89",
@@ -111,28 +133,6 @@
       "Lat": "40.9149773",
       "Long": "-72.6623567",
       "Net": "3.89"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Speedway",
-      "Address": "870 Old Country Rd, 11901",
-      "Base": "3.97",
-      "Discount": "Speedway",
-      "Lat": "40.9346058",
-      "Long": "-72.6699464",
-      "Net": "3.92"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "CITGO",
-      "Address": "1429 Main Rd, 11901",
-      "Base": "4.19",
-      "Discount": "-",
-      "Lat": "40.9391677",
-      "Long": "-72.6428426",
-      "Net": "4.19"
     }
   ],
   "ma": [
@@ -1021,17 +1021,6 @@
     {
       "City": "Columbia (Town Center)",
       "Zip": "21044",
-      "Station": "BP",
-      "Address": "5485 HARPERS FARM RD, 21044",
-      "Base": "4.29",
-      "Discount": "BP",
-      "Lat": "39.2220799",
-      "Long": "-76.8907487",
-      "Net": "4.24"
-    },
-    {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
       "Station": "Exxon",
       "Address": "10141 Little Patuxent Pkwy, 21044",
       "Base": "4.59",
@@ -1039,6 +1028,17 @@
       "Lat": "39.2181995",
       "Long": "-76.8577067",
       "Net": "4.56"
+    },
+    {
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
+      "Station": "BP",
+      "Address": "5485 HARPERS FARM RD, 21044",
+      "Base": "4.29",
+      "Discount": "BP",
+      "Lat": "39.2220799",
+      "Long": "-76.8907487",
+      "Net": "4.24"
     }
   ]
 }
