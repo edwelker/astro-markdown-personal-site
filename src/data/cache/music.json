@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 276946
+    "scrobbles": 276955
   },
   "history": [
-    {
-      "dayName": "Mon",
-      "date": "2026-07-13",
-      "hours": "2.0",
-      "lastHours": "0.0",
-      "topArtist": "Lera Auerbach"
-    },
     {
       "dayName": "Tue",
       "date": "2026-07-14",
@@ -51,20 +44,21 @@
       "hours": "0.0",
       "lastHours": "0.0",
       "topArtist": null
+    },
+    {
+      "dayName": "Mon",
+      "date": "2026-07-20",
+      "hours": "0.5",
+      "lastHours": "2.0",
+      "topArtist": "Claude Debussy"
     }
   ],
   "week": {
     "artists": [
       {
-        "name": "Lera Auerbach",
-        "url": "https://www.last.fm/music/Lera+Auerbach",
-        "plays": "15",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Lingua Ignota",
-        "url": "https://www.last.fm/music/Lingua+Ignota",
-        "plays": "13",
+        "name": "Claude Debussy",
+        "url": "https://www.last.fm/music/Claude+Debussy",
+        "plays": "7",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -74,15 +68,21 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Lepo Sumera",
-        "url": "https://www.last.fm/music/Lepo+Sumera",
-        "plays": "5",
+        "name": "Lera Auerbach",
+        "url": "https://www.last.fm/music/Lera+Auerbach",
+        "plays": "7",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Eduard Tubin",
         "url": "https://www.last.fm/music/Eduard+Tubin",
-        "plays": "4",
+        "plays": "5",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Lepo Sumera",
+        "url": "https://www.last.fm/music/Lepo+Sumera",
+        "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -104,6 +104,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Dmitri Kabalevsky",
+        "url": "https://www.last.fm/music/Dmitri+Kabalevsky",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Leon Redbone",
         "url": "https://www.last.fm/music/Leon+Redbone",
         "plays": "1",
@@ -112,18 +118,25 @@
     ],
     "albums": [
       {
-        "name": "Milking Darkness",
-        "url": "https://www.last.fm/music/Lera+Auerbach/Milking+Darkness",
-        "artist": "Lera Auerbach",
-        "plays": "15",
+        "name": "La Mer / Nocturnes / Prelude to the Afternoon of a Faun",
+        "url": "https://www.last.fm/music/Claude+Debussy/La+Mer+%2F+Nocturnes+%2F+Prelude+to+the+Afternoon+of+a+Faun",
+        "artist": "Claude Debussy",
+        "plays": "7",
         "image": ""
       },
       {
-        "name": "CALIGULA",
-        "url": "https://www.last.fm/music/Lingua+Ignota/CALIGULA",
-        "artist": "Lingua Ignota",
-        "plays": "13",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/963269723079464606685c3093a06c68.jpg"
+        "name": "Milking Darkness",
+        "url": "https://www.last.fm/music/Lera+Auerbach/Milking+Darkness",
+        "artist": "Lera Auerbach",
+        "plays": "7",
+        "image": ""
+      },
+      {
+        "name": "Symphony No. 3 / Symphony No. 8",
+        "url": "https://www.last.fm/music/Eduard+Tubin/Symphony+No.+3+%2F+Symphony+No.+8",
+        "artist": "Eduard Tubin",
+        "plays": "5",
+        "image": ""
       },
       {
         "name": "Symphony No. 6 / Cello Concerto / Musica Profana",
@@ -131,13 +144,6 @@
         "artist": "Lepo Sumera",
         "plays": "5",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0ddec50584c40cfa291ae196a055a3bc.jpg"
-      },
-      {
-        "name": "Symphony No. 3 / Symphony No. 8",
-        "url": "https://www.last.fm/music/Eduard+Tubin/Symphony+No.+3+%2F+Symphony+No.+8",
-        "artist": "Eduard Tubin",
-        "plays": "4",
-        "image": ""
       },
       {
         "name": "Janáček / Brahms / Bartók",
@@ -175,6 +181,13 @@
         "image": ""
       },
       {
+        "name": "Volume 8: String Quartets nos. 1 & 2",
+        "url": "https://www.last.fm/music/Dmitri+Kabalevsky/Volume+8:+String+Quartets+nos.+1+&+2",
+        "artist": "Dmitri Kabalevsky",
+        "plays": "1",
+        "image": ""
+      },
+      {
         "name": "Up a Lazy River",
         "url": "https://www.last.fm/music/Leon+Redbone/Up+a+Lazy+River",
         "artist": "Leon Redbone",
@@ -183,20 +196,6 @@
       }
     ],
     "tracks": [
-      {
-        "name": "DO YOU DOUBT ME TRAITOR",
-        "url": "https://www.last.fm/music/Lingua+Ignota/_/DO+YOU+DOUBT+ME+TRAITOR",
-        "artist": "Lingua Ignota",
-        "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "FAITHFUL SERVANT FRIEND OF CHRIST",
-        "url": "https://www.last.fm/music/Lingua+Ignota/_/FAITHFUL+SERVANT+FRIEND+OF+CHRIST",
-        "artist": "Lingua Ignota",
-        "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
       {
         "name": "Sonata for Violin and Piano no. 1, op. 21, Sz. 75, BB 84: I. Allegro appassionato",
         "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k/_/Sonata+for+Violin+and+Piano+no.+1,+op.+21,+Sz.+75,+BB+84:+I.+Allegro+appassionato",
@@ -215,6 +214,62 @@
         "name": "Sonata for Violin and Piano no. 1, op. 21, Sz. 75, BB 84: III. Allegro",
         "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k/_/Sonata+for+Violin+and+Piano+no.+1,+op.+21,+Sz.+75,+BB+84:+III.+Allegro",
         "artist": "Béla Bartók",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "La Mer: De l'aube à midi sur la mer",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/La+Mer:+De+l%27aube+%C3%A0+midi+sur+la+mer",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "La Mer: Dialogue du vent et de la mer",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/La+Mer:+Dialogue+du+vent+et+de+la+mer",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "La Mer: Jeux de vagues",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/La+Mer:+Jeux+de+vagues",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Nocturnes: Fêtes",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/Nocturnes:+F%C3%AAtes",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Nocturnes: Nuages",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/Nocturnes:+Nuages",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Nocturnes: Sirènes",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/Nocturnes:+Sir%C3%A8nes",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Prélude à L'après-midi d'un faune",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/Pr%C3%A9lude+%C3%A0+L%27apr%C3%A8s-midi+d%27un+faune",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet no. 1 in A minor, op. 8: I. Andante - Allegro moderato",
+        "url": "https://www.last.fm/music/Dmitri+Kabalevsky/_/String+Quartet+no.+1+in+A+minor,+op.+8:+I.+Andante+-+Allegro+moderato",
+        "artist": "Dmitri Kabalevsky",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -242,6 +297,13 @@
       {
         "name": "Symphony No. 8: I. Andante quasi adagio",
         "url": "https://www.last.fm/music/Eduard+Tubin/_/Symphony+No.+8:+I.+Andante+quasi+adagio",
+        "artist": "Eduard Tubin",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony No. 8: II. Allegro moderato",
+        "url": "https://www.last.fm/music/Eduard+Tubin/_/Symphony+No.+8:+II.+Allegro+moderato",
         "artist": "Eduard Tubin",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -366,55 +428,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Lonely Suite - Ballet for a Lonely Violinist, Op 70: I. Dancing with Oneself (for Solo Violin)",
-        "url": "https://www.last.fm/music/Lera+Auerbach/_/Lonely+Suite+-+Ballet+for+a+Lonely+Violinist,+Op+70:+I.+Dancing+with+Oneself+(for+Solo+Violin)",
-        "artist": "Lera Auerbach",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Lonely Suite - Ballet for a Lonely Violinist, Op 70: II. Boredom (for Solo Violin)",
-        "url": "https://www.last.fm/music/Lera+Auerbach/_/Lonely+Suite+-+Ballet+for+a+Lonely+Violinist,+Op+70:+II.+Boredom+(for+Solo+Violin)",
-        "artist": "Lera Auerbach",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Lonely Suite - Ballet for a Lonely Violinist, Op 70: III. No Escape (for Solo Violin)",
-        "url": "https://www.last.fm/music/Lera+Auerbach/_/Lonely+Suite+-+Ballet+for+a+Lonely+Violinist,+Op+70:+III.+No+Escape+(for+Solo+Violin)",
-        "artist": "Lera Auerbach",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Lonely Suite - Ballet for a Lonely Violinist, Op 70: IV. Imaginary Dialogue (for Solo Violin)",
-        "url": "https://www.last.fm/music/Lera+Auerbach/_/Lonely+Suite+-+Ballet+for+a+Lonely+Violinist,+Op+70:+IV.+Imaginary+Dialogue+(for+Solo+Violin)",
-        "artist": "Lera Auerbach",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Lonely Suite - Ballet for a Lonely Violinist, Op 70: V. Worrisome Thought (For Solo Violin)",
-        "url": "https://www.last.fm/music/Lera+Auerbach/_/Lonely+Suite+-+Ballet+for+a+Lonely+Violinist,+Op+70:+V.+Worrisome+Thought+(For+Solo+Violin)",
-        "artist": "Lera Auerbach",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Lonely Suite - Ballet for a Lonely Violinist, Op 70: VI. Question (For Solo Violin)",
-        "url": "https://www.last.fm/music/Lera+Auerbach/_/Lonely+Suite+-+Ballet+for+a+Lonely+Violinist,+Op+70:+VI.+Question+(For+Solo+Violin)",
-        "artist": "Lera Auerbach",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Milking Darkness (for Solo Piano)",
-        "url": "https://www.last.fm/music/Lera+Auerbach/_/Milking+Darkness+(for+Solo+Piano)",
-        "artist": "Lera Auerbach",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Piano Trio No. 3: I. Grandioso",
         "url": "https://www.last.fm/music/Lera+Auerbach/_/Piano+Trio+No.+3:+I.+Grandioso",
         "artist": "Lera Auerbach",
@@ -443,13 +456,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Piano Trio No. 4",
-        "url": "https://www.last.fm/music/Lera+Auerbach/_/Piano+Trio+No.+4",
-        "artist": "Lera Auerbach",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Three Dances in the Old Style, Op. 54: I. Andantino scherzando (for Violin and Cello)",
         "url": "https://www.last.fm/music/Lera+Auerbach/_/Three+Dances+in+the+Old+Style,+Op.+54:+I.+Andantino+scherzando+(for+Violin+and+Cello)",
         "artist": "Lera Auerbach",
@@ -459,6 +465,13 @@
       {
         "name": "Three Dances in the Old Style, Op. 54: II. Andante (for Violin and Cello)",
         "url": "https://www.last.fm/music/Lera+Auerbach/_/Three+Dances+in+the+Old+Style,+Op.+54:+II.+Andante+(for+Violin+and+Cello)",
+        "artist": "Lera Auerbach",
+        "plays": "1",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Three Dances in the Old Style, Op. 54: III. Andante (for Violin and Cello)",
+        "url": "https://www.last.fm/music/Lera+Auerbach/_/Three+Dances+in+the+Old+Style,+Op.+54:+III.+Andante+(for+Violin+and+Cello)",
         "artist": "Lera Auerbach",
         "plays": "1",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -492,6 +505,12 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Claude Debussy",
+        "url": "https://www.last.fm/music/Claude+Debussy",
+        "plays": "36",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Mstislav Rostropovich",
         "url": "https://www.last.fm/music/Mstislav+Rostropovich",
         "plays": "34",
@@ -513,12 +532,6 @@
         "name": "Benjamin Britten",
         "url": "https://www.last.fm/music/Benjamin+Britten",
         "plays": "30",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Claude Debussy",
-        "url": "https://www.last.fm/music/Claude+Debussy",
-        "plays": "29",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -843,6 +856,13 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/38454ccb4ab34466a68584e28ca701a7.png"
       },
       {
+        "name": "La Mer / Nocturnes / Prelude to the Afternoon of a Faun",
+        "url": "https://www.last.fm/music/Claude+Debussy/La+Mer+%2F+Nocturnes+%2F+Prelude+to+the+Afternoon+of+a+Faun",
+        "artist": "Claude Debussy",
+        "plays": "13",
+        "image": ""
+      },
+      {
         "name": "Bloch: Suites for Solo Cello / Dallapiccola: Ciaccona, intermezzo e adagio / Ligeti: Sonata for Solo Cello",
         "url": "https://www.last.fm/music/Ernest+Bloch/Bloch:+Suites+for+Solo+Cello+%2F+Dallapiccola:+Ciaccona,+intermezzo+e+adagio+%2F+Ligeti:+Sonata+for+Solo+Cello",
         "artist": "Ernest Bloch",
@@ -981,13 +1001,6 @@
         "artist": "Emma Ruth Rundle",
         "plays": "9",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/07fbddf43fc2195a9c4918d19a33eb64.jpg"
-      },
-      {
-        "name": "Piano Quintet / String Quartet No. 4 / Three Idylls",
-        "url": "https://www.last.fm/music/Frank+Bridge/Piano+Quintet+%2F+String+Quartet+No.+4+%2F+Three+Idylls",
-        "artist": "Frank Bridge",
-        "plays": "9",
-        "image": ""
       }
     ],
     "tracks": [
@@ -1052,6 +1065,13 @@
         "url": "https://www.last.fm/music/William+Walton/_/Symphony+No.+1:+II.+Presto,+con+malizia",
         "artist": "William Walton",
         "plays": "4",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Prélude à L'après-midi d'un faune",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/Pr%C3%A9lude+%C3%A0+L%27apr%C3%A8s-midi+d%27un+faune",
+        "artist": "Claude Debussy",
+        "plays": "3",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1263,13 +1283,6 @@
         "artist": "Benjamin Britten",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Violin Concerto in D Minor, Op. 15: III. Passacaglia. Andante lento un poco meno mosso",
-        "url": "https://www.last.fm/music/Benjamin+Britten/_/Violin+Concerto+in+D+Minor,+Op.+15:+III.+Passacaglia.+Andante+lento+un+poco+meno+mosso",
-        "artist": "Benjamin Britten",
-        "plays": "2",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -1302,7 +1315,7 @@
       {
         "name": "Claude Debussy",
         "url": "https://www.last.fm/music/Claude+Debussy",
-        "plays": "182",
+        "plays": "189",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1510,8 +1523,8 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sleater-Kinney",
-        "url": "https://www.last.fm/music/Sleater-Kinney",
+        "name": "Dmitri Kabalevsky",
+        "url": "https://www.last.fm/music/Dmitri+Kabalevsky",
         "plays": "55",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -2254,7 +2267,7 @@
       {
         "name": "Claude Debussy",
         "url": "https://www.last.fm/music/Claude+Debussy",
-        "plays": "1603",
+        "plays": "1610",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
