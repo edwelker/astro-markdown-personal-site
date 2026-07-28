@@ -4,13 +4,6 @@
   },
   "history": [
     {
-      "dayName": "Mon",
-      "date": "2026-07-20",
-      "hours": "0.5",
-      "lastHours": "2.0",
-      "topArtist": "Claude Debussy"
-    },
-    {
       "dayName": "Tue",
       "date": "2026-07-21",
       "hours": "0.0",
@@ -51,35 +44,19 @@
       "hours": "0.0",
       "lastHours": "0.0",
       "topArtist": null
+    },
+    {
+      "dayName": "Mon",
+      "date": "2026-07-27",
+      "hours": "0.0",
+      "lastHours": "0.5",
+      "topArtist": null
     }
   ],
   "week": {
-    "artists": [
-      {
-        "name": "Carl Nielsen",
-        "url": "https://www.last.fm/music/Carl+Nielsen",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      }
-    ],
-    "albums": [
-      {
-        "name": "Complete Symphonies",
-        "url": "https://www.last.fm/music/Carl+Nielsen/Complete+Symphonies",
-        "artist": "Carl Nielsen",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/97bb3afcc1fd4288ab5d3a995eb4b0d2.jpg"
-      }
-    ],
-    "tracks": [
-      {
-        "name": "Symphony No. 1, Op. 7: I. Allegro orgoglioso",
-        "url": "https://www.last.fm/music/Carl+Nielsen/_/Symphony+No.+1,+Op.+7:+I.+Allegro+orgoglioso",
-        "artist": "Carl Nielsen",
-        "plays": "1",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      }
-    ]
+    "artists": [],
+    "albums": [],
+    "tracks": []
   },
   "month": {
     "artists": [
@@ -135,12 +112,6 @@
         "name": "Rammstein",
         "url": "https://www.last.fm/music/Rammstein",
         "plays": "25",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Carl Nielsen",
-        "url": "https://www.last.fm/music/Carl+Nielsen",
-        "plays": "21",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -255,6 +226,12 @@
         "name": "Switchblade Symphony",
         "url": "https://www.last.fm/music/Switchblade+Symphony",
         "plays": "11",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Carl Nielsen",
+        "url": "https://www.last.fm/music/Carl+Nielsen",
+        "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -459,13 +436,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/963269723079464606685c3093a06c68.jpg"
       },
       {
-        "name": "Orchestral Music",
-        "url": "https://www.last.fm/music/Carl+Nielsen/Orchestral+Music",
-        "artist": "Carl Nielsen",
-        "plays": "12",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7bfa57f32db64836878900137633a633.jpg"
-      },
-      {
         "name": "Perpetuum Mobile",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Perpetuum+Mobile",
         "artist": "Einstürzende Neubauten",
@@ -604,16 +574,16 @@
         "artist": "Edgar Meyer",
         "plays": "8",
         "image": ""
+      },
+      {
+        "name": "Brahms, Schumann - String Quartets",
+        "url": "https://www.last.fm/music/Emerson+String+Quartet/Brahms,+Schumann+-+String+Quartets",
+        "artist": "Emerson String Quartet",
+        "plays": "8",
+        "image": ""
       }
     ],
     "tracks": [
-      {
-        "name": "Ouverture Helios, Op. 17: Andante tranquillo - Allegro ma non troppo - Presto - Tempo I - Andante tranquillo",
-        "url": "https://www.last.fm/music/Carl+Nielsen/_/Ouverture+Helios,+Op.+17:+Andante+tranquillo+-+Allegro+ma+non+troppo+-+Presto+-+Tempo+I+-+Andante+tranquillo",
-        "artist": "Carl Nielsen",
-        "plays": "10",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
       {
         "name": "Cello Concerto in C Minor, Op. 66: II. Allegro vivace - Andante semplice e tranquillo - Lento come prima",
         "url": "https://www.last.fm/music/Mstislav+Rostropovich/_/Cello+Concerto+in+C+Minor,+Op.+66:+II.+Allegro+vivace+-+Andante+semplice+e+tranquillo+-+Lento+come+prima",
@@ -884,6 +854,13 @@
         "name": "Violin Concerto, op. 15 (revised version): III. Passacaglia: Andante lento (un poco meno mosso) - Largamente (lento) - Lento e solenne",
         "url": "https://www.last.fm/music/Benjamin+Britten/_/Violin+Concerto,+op.+15+(revised+version):+III.+Passacaglia:+Andante+lento+(un+poco+meno+mosso)+-+Largamente+(lento)+-+Lento+e+solenne",
         "artist": "Benjamin Britten",
+        "plays": "2",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Beau soir, L. 6 (Arr. for Cello & Piano by Alexander Grechaninov)",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/Beau+soir,+L.+6+(Arr.+for+Cello+&+Piano+by+Alexander+Grechaninov)",
+        "artist": "Claude Debussy",
         "plays": "2",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
