@@ -36,17 +36,6 @@
     {
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
-      "Station": "Weis",
-      "Address": "9250 Washington Blvd N, 20723",
-      "Base": "4.19",
-      "Discount": "-",
-      "Lat": "42.739557",
-      "Long": "-83.0334814",
-      "Net": "4.19"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
       "Station": "Exxon",
       "Address": "7500 Montpelier Rd, 20723",
       "Base": "4.39",
@@ -54,6 +43,17 @@
       "Lat": "39.159558",
       "Long": "-76.893227",
       "Net": "4.36"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Weis",
+      "Address": "9250 Washington Blvd N, 20723",
+      "Base": "4.19",
+      "Discount": "-",
+      "Lat": "42.739557",
+      "Long": "-83.0334814",
+      "Net": "4.19"
     },
     {
       "City": "Scaggsville / Laurel",
@@ -71,13 +71,13 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
-      "Station": "76",
-      "Address": "7 Peconic Ave, 11901",
+      "Station": "Mobil",
+      "Address": "1575 Old Country Rd, 11901",
       "Base": "3.99",
-      "Discount": "-",
-      "Lat": "40.9149773",
-      "Long": "-72.6623567",
-      "Net": "3.99"
+      "Discount": "Mobil",
+      "Lat": "40.9252206",
+      "Long": "-72.6951725",
+      "Net": "3.96"
     },
     {
       "City": "Riverhead",
@@ -89,6 +89,17 @@
       "Lat": "40.9346058",
       "Long": "-72.6699464",
       "Net": "4.06"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "76",
+      "Address": "7 Peconic Ave, 11901",
+      "Base": "3.99",
+      "Discount": "-",
+      "Lat": "40.9149773",
+      "Long": "-72.6623567",
+      "Net": "3.99"
     },
     {
       "City": "Riverhead",
@@ -137,17 +148,6 @@
       "Lat": "39.2181995",
       "Long": "-76.8577067",
       "Net": "4.76"
-    },
-    {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
-      "Station": "BP",
-      "Address": "5485 HARPERS FARM RD, 21044",
-      "Base": "4.49",
-      "Discount": "BP",
-      "Lat": "39.2220799",
-      "Long": "-76.8907487",
-      "Net": "4.44"
     }
   ]
 }
