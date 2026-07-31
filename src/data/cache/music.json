@@ -4,13 +4,6 @@
   },
   "history": [
     {
-      "dayName": "Thu",
-      "date": "2026-07-23",
-      "hours": "0.0",
-      "lastHours": "0.3",
-      "topArtist": null
-    },
-    {
       "dayName": "Fri",
       "date": "2026-07-24",
       "hours": "0.0",
@@ -48,6 +41,13 @@
     {
       "dayName": "Wed",
       "date": "2026-07-29",
+      "hours": "0.0",
+      "lastHours": "0.0",
+      "topArtist": null
+    },
+    {
+      "dayName": "Thu",
+      "date": "2026-07-30",
       "hours": "0.0",
       "lastHours": "0.0",
       "topArtist": null
@@ -193,12 +193,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "María Grand",
-        "url": "https://www.last.fm/music/Mar%C3%ADa+Grand",
-        "plays": "11",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Marina",
         "url": "https://www.last.fm/music/Marina",
         "plays": "11",
@@ -219,6 +213,12 @@
       {
         "name": "Franz Schubert",
         "url": "https://www.last.fm/music/Franz+Schubert",
+        "plays": "10",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "María Grand",
+        "url": "https://www.last.fm/music/Mar%C3%ADa+Grand",
         "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -450,13 +450,6 @@
         "image": ""
       },
       {
-        "name": "Both Sides",
-        "url": "https://www.last.fm/music/Mar%C3%ADa+Grand/Both+Sides",
-        "artist": "María Grand",
-        "plays": "11",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/23b74a5793d85dd4d30bd81a7859f618.jpg"
-      },
-      {
         "name": "Love + Fear",
         "url": "https://www.last.fm/music/Marina/Love+%252B+Fear",
         "artist": "Marina",
@@ -490,6 +483,13 @@
         "artist": "Emma Ruth Rundle",
         "plays": "10",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/47471424a6724510c56af49f4ce83144.jpg"
+      },
+      {
+        "name": "Both Sides",
+        "url": "https://www.last.fm/music/Mar%C3%ADa+Grand/Both+Sides",
+        "artist": "María Grand",
+        "plays": "10",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/23b74a5793d85dd4d30bd81a7859f618.jpg"
       },
       {
         "name": "Meyer: Quintet / Rorem: String Quartet No. 4",
@@ -923,12 +923,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Flight of the Conchords",
-        "url": "https://www.last.fm/music/Flight+of+the+Conchords",
-        "plays": "116",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Pyotr Ilyich Tchaikovsky",
         "url": "https://www.last.fm/music/Pyotr+Ilyich+Tchaikovsky",
         "plays": "107",
@@ -950,6 +944,12 @@
         "name": "Carl Nielsen",
         "url": "https://www.last.fm/music/Carl+Nielsen",
         "plays": "101",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Flight of the Conchords",
+        "url": "https://www.last.fm/music/Flight+of+the+Conchords",
+        "plays": "100",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1132,18 +1132,18 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/76626da326e005b734d56ed6e396c998.jpg"
       },
       {
-        "name": "I Told You I Was Freaky",
-        "url": "https://www.last.fm/music/Flight+of+the+Conchords/I+Told+You+I+Was+Freaky",
-        "artist": "Flight of the Conchords",
-        "plays": "102",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/1e400f06d20312ca7dd464f35398ebc1.jpg"
-      },
-      {
         "name": "Cinderella / \"Classical\" Symphony",
         "url": "https://www.last.fm/music/Sergei+Prokofiev;+London+Symphony+Orchestra,+Andr%C3%A9+Previn/Cinderella+%2F+%22Classical%22+Symphony",
         "artist": "Sergei Prokofiev; London Symphony Orchestra, André Previn",
         "plays": "96",
         "image": ""
+      },
+      {
+        "name": "I Told You I Was Freaky",
+        "url": "https://www.last.fm/music/Flight+of+the+Conchords/I+Told+You+I+Was+Freaky",
+        "artist": "Flight of the Conchords",
+        "plays": "89",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/1e400f06d20312ca7dd464f35398ebc1.jpg"
       },
       {
         "name": "Janacek: On an Overgrown Path / In the Mist / Sonata I. X. 1905 / Theme and Variations",
@@ -1396,7 +1396,7 @@
         "name": "Carol Brown",
         "url": "https://www.last.fm/music/Flight+of+the+Conchords/_/Carol+Brown",
         "artist": "Flight of the Conchords",
-        "plays": "85",
+        "plays": "84",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
