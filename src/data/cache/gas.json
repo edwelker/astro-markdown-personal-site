@@ -3,17 +3,6 @@
     {
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
-      "Station": "7-Eleven",
-      "Address": "9651 Washington Blvd N, 20723",
-      "Base": "4.19",
-      "Discount": "7-Eleven",
-      "Lat": "42.739557",
-      "Long": "-83.0334814",
-      "Net": "4.16"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
       "Station": "Weis",
       "Address": "9250 Washington Blvd N, 20723",
       "Base": "4.19",
@@ -21,6 +10,17 @@
       "Lat": "42.739557",
       "Long": "-83.0334814",
       "Net": "4.19"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "7-Eleven",
+      "Address": "9651 Washington Blvd N, 20723",
+      "Base": "4.19",
+      "Discount": "7-Eleven",
+      "Lat": "42.739557",
+      "Long": "-83.0334814",
+      "Net": "4.16"
     },
     {
       "City": "Scaggsville / Laurel",
@@ -38,6 +38,17 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
+      "Station": "Valero",
+      "Address": "1356 OLD COUNTRY RD, 11901",
+      "Base": "3.93",
+      "Discount": "-",
+      "Lat": "40.9283279",
+      "Long": "-72.6857992",
+      "Net": "3.93"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
       "Station": "Shell",
       "Address": "1733 Old Country Rd, 11901",
       "Base": "3.99",
@@ -45,6 +56,28 @@
       "Lat": "40.9239801",
       "Long": "-72.7023482",
       "Net": "3.94"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Sunoco",
+      "Address": "1879 Old Country Rd 58, 11901",
+      "Base": "4.09",
+      "Discount": "Sunoco",
+      "Lat": "",
+      "Long": "",
+      "Net": "4.06"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "7-Eleven",
+      "Address": "870 Old Country Rd, 11901",
+      "Base": "4.09",
+      "Discount": "7-Eleven",
+      "Lat": "40.9346058",
+      "Long": "-72.6699464",
+      "Net": "4.06"
     },
     {
       "City": "Riverhead",
@@ -67,17 +100,6 @@
       "Lat": "40.9252206",
       "Long": "-72.6951725",
       "Net": "3.96"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "7-Eleven",
-      "Address": "870 Old Country Rd, 11901",
-      "Base": "4.09",
-      "Discount": "7-Eleven",
-      "Lat": "40.9346058",
-      "Long": "-72.6699464",
-      "Net": "4.06"
     }
   ],
   "ma": [
@@ -108,17 +130,6 @@
     {
       "City": "Columbia (Town Center)",
       "Zip": "21044",
-      "Station": "Exxon",
-      "Address": "10611 Little Patuxent Pkwy, 21044",
-      "Base": "4.49",
-      "Discount": "Exxon",
-      "Lat": "39.213332",
-      "Long": "-76.8709132",
-      "Net": "4.46"
-    },
-    {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
       "Station": "Sunoco",
       "Address": "6440 Freetown Rd, 21044",
       "Base": "4.59",
@@ -141,13 +152,13 @@
     {
       "City": "Columbia (Town Center)",
       "Zip": "21044",
-      "Station": "BP",
-      "Address": "5485 HARPERS FARM RD, 21044",
-      "Base": "4.44",
-      "Discount": "BP",
-      "Lat": "39.2220799",
-      "Long": "-76.8907487",
-      "Net": "4.39"
+      "Station": "Exxon",
+      "Address": "10611 Little Patuxent Pkwy, 21044",
+      "Base": "4.49",
+      "Discount": "Exxon",
+      "Lat": "39.213332",
+      "Long": "-76.8709132",
+      "Net": "4.46"
     }
   ]
 }
