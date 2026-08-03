@@ -1,37 +1,26 @@
 {
   "md": [
     {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
-      "Station": "Weis",
-      "Address": "9250 Washington Blvd N, 20723",
-      "Base": "4.19",
-      "Discount": "-",
-      "Lat": "42.739557",
-      "Long": "-83.0334814",
-      "Net": "4.19"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
-      "Station": "7-Eleven",
-      "Address": "9651 Washington Blvd N, 20723",
-      "Base": "4.19",
-      "Discount": "7-Eleven",
-      "Lat": "42.739557",
-      "Long": "-83.0334814",
-      "Net": "4.16"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
       "Station": "Exxon",
-      "Address": "8850 Gorman Rd, 20723",
-      "Base": "4.39",
+      "Address": "10141 Little Patuxent Pkwy, 21044",
+      "Base": "4.79",
       "Discount": "Exxon",
-      "Lat": "39.1315805",
-      "Long": "-76.8205188",
-      "Net": "4.36"
+      "Lat": "39.2181995",
+      "Long": "-76.8577067",
+      "Net": "4.76"
+    },
+    {
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
+      "Station": "Sunoco",
+      "Address": "6440 Freetown Rd, 21044",
+      "Base": "4.59",
+      "Discount": "Sunoco",
+      "Lat": "39.1950229",
+      "Long": "-76.8817831",
+      "Net": "4.56"
     }
   ],
   "ny": [
@@ -78,28 +67,6 @@
       "Lat": "40.9346058",
       "Long": "-72.6699464",
       "Net": "4.06"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "USA Gasoline",
-      "Address": "1446 Flanders Rd, 11901",
-      "Base": "3.99",
-      "Discount": "-",
-      "Lat": "40.90403",
-      "Long": "-72.6056344",
-      "Net": "3.99"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Mobil",
-      "Address": "1575 Old Country Rd, 11901",
-      "Base": "3.99",
-      "Discount": "Mobil",
-      "Lat": "40.9252206",
-      "Long": "-72.6951725",
-      "Net": "3.96"
     }
   ],
   "ma": [
@@ -130,17 +97,6 @@
     {
       "City": "Columbia (Town Center)",
       "Zip": "21044",
-      "Station": "Sunoco",
-      "Address": "6440 Freetown Rd, 21044",
-      "Base": "4.59",
-      "Discount": "Sunoco",
-      "Lat": "39.1950229",
-      "Long": "-76.8817831",
-      "Net": "4.56"
-    },
-    {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
       "Station": "Exxon",
       "Address": "10141 Little Patuxent Pkwy, 21044",
       "Base": "4.79",
@@ -152,13 +108,13 @@
     {
       "City": "Columbia (Town Center)",
       "Zip": "21044",
-      "Station": "Exxon",
-      "Address": "10611 Little Patuxent Pkwy, 21044",
-      "Base": "4.49",
-      "Discount": "Exxon",
-      "Lat": "39.213332",
-      "Long": "-76.8709132",
-      "Net": "4.46"
+      "Station": "Sunoco",
+      "Address": "6440 Freetown Rd, 21044",
+      "Base": "4.59",
+      "Discount": "Sunoco",
+      "Lat": "39.1950229",
+      "Long": "-76.8817831",
+      "Net": "4.56"
     }
   ]
 }
