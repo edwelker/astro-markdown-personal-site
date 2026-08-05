@@ -265,12 +265,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "The Smashing Pumpkins",
-        "url": "https://www.last.fm/music/The+Smashing+Pumpkins",
-        "plays": "12",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Switchblade Symphony",
         "url": "https://www.last.fm/music/Switchblade+Symphony",
         "plays": "11",
@@ -369,6 +363,12 @@
       {
         "name": "Arvo Pärt",
         "url": "https://www.last.fm/music/Arvo+P%C3%A4rt",
+        "plays": "7",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Hans Abrahamsen",
+        "url": "https://www.last.fm/music/Hans+Abrahamsen",
         "plays": "7",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -536,13 +536,6 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4ab3c0c9965845b5b9a8e64532b3ad21.png"
       },
       {
-        "name": "Siamese Dream",
-        "url": "https://www.last.fm/music/The+Smashing+Pumpkins/Siamese+Dream",
-        "artist": "The Smashing Pumpkins",
-        "plays": "11",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/53131f63cde3d29e26930209b91fce57.jpg"
-      },
-      {
         "name": "The Centenary Edition - Erato",
         "url": "https://www.last.fm/music/Collegium+Musicum+Z%C3%BCrich,+Paul+Sacher/The+Centenary+Edition+-+Erato",
         "artist": "Collegium Musicum Zürich, Paul Sacher",
@@ -653,6 +646,13 @@
         "artist": "Paul Hindemith",
         "plays": "8",
         "image": ""
+      },
+      {
+        "name": "Tabula Rasa / Fratres / Symphony no. 3",
+        "url": "https://www.last.fm/music/Arvo+P%C3%A4rt/Tabula+Rasa+%2F+Fratres+%2F+Symphony+no.+3",
+        "artist": "Arvo Pärt",
+        "plays": "7",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/55087c37b23d4d769262bece46d668cb.png"
       }
     ],
     "tracks": [
@@ -1055,21 +1055,9 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Maurice Ravel",
-        "url": "https://www.last.fm/music/Maurice+Ravel",
-        "plays": "82",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Richard Strauss",
         "url": "https://www.last.fm/music/Richard+Strauss",
         "plays": "82",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Nicolai Myaskovsky",
-        "url": "https://www.last.fm/music/Nicolai+Myaskovsky",
-        "plays": "80",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1079,8 +1067,8 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "name": "Nicolai Myaskovsky",
+        "url": "https://www.last.fm/music/Nicolai+Myaskovsky",
         "plays": "77",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1100,6 +1088,18 @@
         "name": "Arvo Pärt",
         "url": "https://www.last.fm/music/Arvo+P%C3%A4rt",
         "plays": "70",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "plays": "70",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Maurice Ravel",
+        "url": "https://www.last.fm/music/Maurice+Ravel",
+        "plays": "68",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1130,12 +1130,6 @@
         "name": "Leonard Bernstein",
         "url": "https://www.last.fm/music/Leonard+Bernstein",
         "plays": "61",
-        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Wolfgang Amadeus Mozart",
-        "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart",
-        "plays": "60",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1175,9 +1169,15 @@
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sleater-Kinney",
-        "url": "https://www.last.fm/music/Sleater-Kinney",
-        "plays": "55",
+        "name": "Wolfgang Amadeus Mozart",
+        "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart",
+        "plays": "56",
+        "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Witold Lutosławski",
+        "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski",
+        "plays": "54",
         "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
