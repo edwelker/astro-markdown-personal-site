@@ -71,17 +71,6 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
-      "Station": "Valero",
-      "Address": "1356 OLD COUNTRY RD, 11901",
-      "Base": "3.99",
-      "Discount": "-",
-      "Lat": "40.9283279",
-      "Long": "-72.6857992",
-      "Net": "3.99"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
       "Station": "7-Eleven",
       "Address": "870 Old Country Rd, 11901",
       "Base": "4.09",
@@ -89,6 +78,17 @@
       "Lat": "40.9346058",
       "Long": "-72.6699464",
       "Net": "4.06"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Valero",
+      "Address": "1356 OLD COUNTRY RD, 11901",
+      "Base": "3.99",
+      "Discount": "-",
+      "Lat": "40.9283279",
+      "Long": "-72.6857992",
+      "Net": "3.99"
     }
   ],
   "ma": [
@@ -163,17 +163,6 @@
     {
       "City": "Columbia (Town Center)",
       "Zip": "21044",
-      "Station": "BP",
-      "Address": "5485 HARPERS FARM RD, 21044",
-      "Base": "4.49",
-      "Discount": "BP",
-      "Lat": "39.2220799",
-      "Long": "-76.8907487",
-      "Net": "4.44"
-    },
-    {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
       "Station": "Exxon",
       "Address": "10141 Little Patuxent Pkwy, 21044",
       "Base": "4.79",
@@ -181,6 +170,17 @@
       "Lat": "39.2181995",
       "Long": "-76.8577067",
       "Net": "4.76"
+    },
+    {
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
+      "Station": "BP",
+      "Address": "5485 HARPERS FARM RD, 21044",
+      "Base": "4.49",
+      "Discount": "BP",
+      "Lat": "39.2220799",
+      "Long": "-76.8907487",
+      "Net": "4.44"
     }
   ]
 }
