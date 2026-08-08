@@ -3,6 +3,17 @@
     {
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
+      "Station": "Exxon",
+      "Address": "9275 All Saints Rd, 20723",
+      "Base": "4.06",
+      "Discount": "Exxon",
+      "Lat": "39.1189484",
+      "Long": "-76.8513125",
+      "Net": "4.03"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
       "Station": "7-Eleven",
       "Address": "9651 Washington Blvd N, 20723",
       "Base": "4.09",
@@ -49,6 +60,17 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
+      "Station": "Mobil",
+      "Address": "1575 Old Country Rd, 11901",
+      "Base": "3.89",
+      "Discount": "Mobil",
+      "Lat": "40.9252206",
+      "Long": "-72.6951725",
+      "Net": "3.86"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
       "Station": "OK Petroleum",
       "Address": "1212 E Main St, 11901",
       "Base": "3.89",
@@ -78,17 +100,6 @@
       "Lat": "40.9346058",
       "Long": "-72.6699464",
       "Net": "4.06"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Valero",
-      "Address": "1356 OLD COUNTRY RD, 11901",
-      "Base": "3.99",
-      "Discount": "-",
-      "Lat": "40.9283279",
-      "Long": "-72.6857992",
-      "Net": "3.99"
     }
   ],
   "ma": [
@@ -153,34 +164,12 @@
       "City": "Columbia (Town Center)",
       "Zip": "21044",
       "Station": "Exxon",
-      "Address": "10611 Little Patuxent Pkwy, 21044",
-      "Base": "4.09",
-      "Discount": "Exxon",
-      "Lat": "39.213332",
-      "Long": "-76.8709132",
-      "Net": "4.06"
-    },
-    {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
-      "Station": "Exxon",
       "Address": "10141 Little Patuxent Pkwy, 21044",
       "Base": "4.79",
       "Discount": "Exxon",
       "Lat": "39.2181995",
       "Long": "-76.8577067",
       "Net": "4.76"
-    },
-    {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
-      "Station": "BP",
-      "Address": "5485 HARPERS FARM RD, 21044",
-      "Base": "4.49",
-      "Discount": "BP",
-      "Lat": "39.2220799",
-      "Long": "-76.8907487",
-      "Net": "4.44"
     }
   ]
 }
