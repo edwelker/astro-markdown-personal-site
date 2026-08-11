@@ -14,17 +14,6 @@
     {
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
-      "Station": "Weis",
-      "Address": "9250 Washington Blvd N, 20723",
-      "Base": "4.09",
-      "Discount": "-",
-      "Lat": "42.739557",
-      "Long": "-83.0334814",
-      "Net": "4.09"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
       "Station": "Exxon",
       "Address": "8850 Gorman Rd, 20723",
       "Base": "4.25",
@@ -49,6 +38,17 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
+      "Station": "76",
+      "Address": "7 Peconic Ave, 11901",
+      "Base": "3.89",
+      "Discount": "-",
+      "Lat": "40.9149773",
+      "Long": "-72.6623567",
+      "Net": "3.89"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
       "Station": "7-Eleven",
       "Address": "870 Old Country Rd, 11901",
       "Base": "3.97",
@@ -61,34 +61,34 @@
       "City": "Riverhead",
       "Zip": "11901",
       "Station": "Shell",
+      "Address": "9 Lake Ave, 11901",
+      "Base": "3.99",
+      "Discount": "Shell",
+      "Lat": "40.9142638",
+      "Long": "-72.6632928",
+      "Net": "3.94"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Empire",
+      "Address": "640 Main Rd, 11901",
+      "Base": "3.99",
+      "Discount": "-",
+      "Lat": "40.9396238",
+      "Long": "-72.6416222",
+      "Net": "3.99"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Shell",
       "Address": "1733 Old Country Rd, 11901",
       "Base": "3.89",
       "Discount": "Shell",
       "Lat": "40.9239801",
       "Long": "-72.7023482",
       "Net": "3.84"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Sunoco",
-      "Address": "1879 Old Country Rd 58, 11901",
-      "Base": "3.89",
-      "Discount": "Sunoco",
-      "Lat": "",
-      "Long": "",
-      "Net": "3.86"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Shell",
-      "Address": "626 W Main St, 11901",
-      "Base": "4.09",
-      "Discount": "Shell",
-      "Lat": "40.9184063",
-      "Long": "-72.6731535",
-      "Net": "4.04"
     }
   ],
   "ma": [
@@ -152,17 +152,6 @@
     {
       "City": "Columbia (Town Center)",
       "Zip": "21044",
-      "Station": "BP",
-      "Address": "5485 HARPERS FARM RD, 21044",
-      "Base": "4.49",
-      "Discount": "BP",
-      "Lat": "39.2220799",
-      "Long": "-76.8907487",
-      "Net": "4.44"
-    },
-    {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
       "Station": "Exxon",
       "Address": "10141 Little Patuxent Pkwy, 21044",
       "Base": "4.79",
@@ -170,6 +159,17 @@
       "Lat": "39.2181995",
       "Long": "-76.8577067",
       "Net": "4.76"
+    },
+    {
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
+      "Station": "BP",
+      "Address": "5485 HARPERS FARM RD, 21044",
+      "Base": "4.49",
+      "Discount": "BP",
+      "Lat": "39.2220799",
+      "Long": "-76.8907487",
+      "Net": "4.44"
     }
   ]
 }
