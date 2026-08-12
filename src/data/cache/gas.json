@@ -1,15 +1,48 @@
 {
   "md": [
     {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "7-Eleven",
+      "Address": "9651 Washington Blvd N, 20723",
+      "Base": "3.99",
+      "Discount": "7-Eleven",
+      "Lat": "42.739557",
+      "Long": "-83.0334814",
+      "Net": "3.96"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
       "Station": "Exxon",
-      "Address": "10141 Little Patuxent Pkwy, 21044",
-      "Base": "4.79",
+      "Address": "8850 Gorman Rd, 20723",
+      "Base": "4.25",
       "Discount": "Exxon",
-      "Lat": "39.2181995",
-      "Long": "-76.8577067",
-      "Net": "4.76"
+      "Lat": "39.1315805",
+      "Long": "-76.8205188",
+      "Net": "4.22"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Exxon",
+      "Address": "9275 All Saints Rd, 20723",
+      "Base": "4.19",
+      "Discount": "Exxon",
+      "Lat": "39.1189484",
+      "Long": "-76.8513125",
+      "Net": "4.16"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Exxon",
+      "Address": "7500 Montpelier Rd, 20723",
+      "Base": "4.29",
+      "Discount": "Exxon",
+      "Lat": "39.159558",
+      "Long": "-76.893227",
+      "Net": "4.26"
     }
   ],
   "ny": [
@@ -93,17 +126,6 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
-      "Station": "Shell",
-      "Address": "9 Lake Ave, 11901",
-      "Base": "3.99",
-      "Discount": "Shell",
-      "Lat": "40.9142638",
-      "Long": "-72.6632928",
-      "Net": "3.94"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
       "Station": "Empire",
       "Address": "640 Old Country Rd, 11901",
       "Base": "3.97",
@@ -111,6 +133,17 @@
       "Lat": "40.935281",
       "Long": "-72.6648692",
       "Net": "3.97"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Shell",
+      "Address": "9 Lake Ave, 11901",
+      "Base": "3.99",
+      "Discount": "Shell",
+      "Lat": "40.9142638",
+      "Long": "-72.6632928",
+      "Net": "3.94"
     }
   ],
   "ma": [
