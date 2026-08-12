@@ -15,23 +15,34 @@
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
       "Station": "Exxon",
-      "Address": "8850 Gorman Rd, 20723",
-      "Base": "4.25",
-      "Discount": "Exxon",
-      "Lat": "39.1315805",
-      "Long": "-76.8205188",
-      "Net": "4.22"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
-      "Station": "Exxon",
       "Address": "9275 All Saints Rd, 20723",
       "Base": "4.19",
       "Discount": "Exxon",
       "Lat": "39.1189484",
       "Long": "-76.8513125",
       "Net": "4.16"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Shell",
+      "Address": "9280 All Saints Rd, 20723",
+      "Base": "4.19",
+      "Discount": "Shell",
+      "Lat": "39.1195226",
+      "Long": "-76.8519516",
+      "Net": "4.14"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Exxon",
+      "Address": "8850 Gorman Rd, 20723",
+      "Base": "4.25",
+      "Discount": "Exxon",
+      "Lat": "39.1315805",
+      "Long": "-76.8205188",
+      "Net": "4.22"
     },
     {
       "City": "Scaggsville / Laurel",
@@ -46,6 +57,61 @@
     }
   ],
   "ny": [
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Empire",
+      "Address": "1050 Osborne Ave, 11901",
+      "Base": "3.87",
+      "Discount": "-",
+      "Lat": "40.8032257",
+      "Long": "-72.7577586",
+      "Net": "3.87"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Shell",
+      "Address": "626 W Main St, 11901",
+      "Base": "3.99",
+      "Discount": "Shell",
+      "Lat": "40.9184063",
+      "Long": "-72.6731535",
+      "Net": "3.94"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "7-Eleven",
+      "Address": "870 Old Country Rd, 11901",
+      "Base": "3.97",
+      "Discount": "7-Eleven",
+      "Lat": "40.9346058",
+      "Long": "-72.6699464",
+      "Net": "3.94"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Valero",
+      "Address": "1356 OLD COUNTRY RD, 11901",
+      "Base": "3.99",
+      "Discount": "-",
+      "Lat": "40.9283279",
+      "Long": "-72.6857992",
+      "Net": "3.99"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Mobil",
+      "Address": "415 E Main St, 11901",
+      "Base": "3.99",
+      "Discount": "Mobil",
+      "Lat": "40.9182937",
+      "Long": "-72.6568979",
+      "Net": "3.96"
+    },
     {
       "City": "Riverhead",
       "Zip": "11901",
@@ -72,12 +138,12 @@
       "City": "Riverhead",
       "Zip": "11901",
       "Station": "Empire",
-      "Address": "1050 Osborne Ave, 11901",
-      "Base": "3.87",
+      "Address": "640 Old Country Rd, 11901",
+      "Base": "3.97",
       "Discount": "-",
-      "Lat": "40.8032257",
-      "Long": "-72.7577586",
-      "Net": "3.87"
+      "Lat": "40.935281",
+      "Long": "-72.6648692",
+      "Net": "3.97"
     },
     {
       "City": "Riverhead",
@@ -93,28 +159,6 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
-      "Station": "Valero",
-      "Address": "1356 OLD COUNTRY RD, 11901",
-      "Base": "3.99",
-      "Discount": "-",
-      "Lat": "40.9283279",
-      "Long": "-72.6857992",
-      "Net": "3.99"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "7-Eleven",
-      "Address": "870 Old Country Rd, 11901",
-      "Base": "3.97",
-      "Discount": "7-Eleven",
-      "Lat": "40.9346058",
-      "Long": "-72.6699464",
-      "Net": "3.94"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
       "Station": "Empire",
       "Address": "640 Main Rd, 11901",
       "Base": "3.99",
@@ -122,17 +166,6 @@
       "Lat": "40.9396238",
       "Long": "-72.6416222",
       "Net": "3.99"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Empire",
-      "Address": "640 Old Country Rd, 11901",
-      "Base": "3.97",
-      "Discount": "-",
-      "Lat": "40.935281",
-      "Long": "-72.6648692",
-      "Net": "3.97"
     },
     {
       "City": "Riverhead",
@@ -205,15 +238,70 @@
   ],
   "frederick": [
     {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
+      "City": "Columbia (East)",
+      "Zip": "21045",
+      "Station": "Liberty",
+      "Address": "6425 Dobbin Center Way, 21045",
+      "Base": "3.87",
+      "Discount": "-",
+      "Lat": "39.1968235",
+      "Long": "-76.8216821",
+      "Net": "3.87"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
       "Station": "Exxon",
-      "Address": "10141 Little Patuxent Pkwy, 21044",
-      "Base": "4.79",
+      "Address": "6004 Foreland Garth, 21045",
+      "Base": "3.85",
       "Discount": "Exxon",
-      "Lat": "39.2181995",
-      "Long": "-76.8577067",
-      "Net": "4.76"
+      "Lat": "39.2049806",
+      "Long": "-76.8164844",
+      "Net": "3.82"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+      "Station": "7-Eleven",
+      "Address": "5901 Stevens Forest Rd, 21045",
+      "Base": "3.95",
+      "Discount": "7-Eleven",
+      "Lat": "39.210533",
+      "Long": "-76.847772",
+      "Net": "3.92"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+      "Station": "Shell",
+      "Address": "7248 Cradlerock Way, 21045",
+      "Base": "3.99",
+      "Discount": "Shell",
+      "Lat": "39.1862523",
+      "Long": "-76.8457193",
+      "Net": "3.94"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+      "Station": "Mobil",
+      "Address": "6251 Columbia Crossing Cir, 21045",
+      "Base": "4.09",
+      "Discount": "Mobil",
+      "Lat": "39.1995215",
+      "Long": "-76.8147128",
+      "Net": "4.06"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+      "Station": "7-Eleven",
+      "Address": "8251 Snowden River Pkwy, 21045",
+      "Base": "3.99",
+      "Discount": "7-Eleven",
+      "Lat": "39.2090716",
+      "Long": "-76.8034905",
+      "Net": "3.96"
     }
   ]
 }
