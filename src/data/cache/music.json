@@ -4,13 +4,6 @@
   },
   "history": [
     {
-      "dayName": "Mon",
-      "date": "2026-08-10",
-      "hours": "0.3",
-      "lastHours": "0.0",
-      "topArtist": "William Walton"
-    },
-    {
       "dayName": "Tue",
       "date": "2026-08-11",
       "hours": "0.0",
@@ -51,6 +44,13 @@
       "hours": "1.2",
       "lastHours": "0.6",
       "topArtist": "Petr Limonov, Laura van Der Heijden"
+    },
+    {
+      "dayName": "Mon",
+      "date": "2026-08-17",
+      "hours": "0.0",
+      "lastHours": "0.3",
+      "topArtist": null
     }
   ],
   "week": {
@@ -437,12 +437,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Gustav Mahler",
-        "url": "https://www.last.fm/music/Gustav+Mahler",
-        "plays": "8",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Ottorino Respighi",
         "url": "https://www.last.fm/music/Ottorino+Respighi",
         "plays": "8",
@@ -493,6 +487,12 @@
       {
         "name": "Frank Bridge",
         "url": "https://www.last.fm/music/Frank+Bridge",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Gustav Mahler",
+        "url": "https://www.last.fm/music/Gustav+Mahler",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1079,7 +1079,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "789",
+        "plays": "785",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
