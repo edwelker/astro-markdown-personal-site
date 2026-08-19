@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 277013
+    "scrobbles": 277020
   },
   "history": [
-    {
-      "dayName": "Tue",
-      "date": "2026-08-11",
-      "hours": "0.0",
-      "lastHours": "0.7",
-      "topArtist": null
-    },
     {
       "dayName": "Wed",
       "date": "2026-08-12",
@@ -51,10 +44,23 @@
       "hours": "0.0",
       "lastHours": "0.3",
       "topArtist": null
+    },
+    {
+      "dayName": "Tue",
+      "date": "2026-08-18",
+      "hours": "0.4",
+      "lastHours": "0.0",
+      "topArtist": "Frank Bridge"
     }
   ],
   "week": {
     "artists": [
+      {
+        "name": "Frank Bridge",
+        "url": "https://www.last.fm/music/Frank+Bridge",
+        "plays": "10",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
       {
         "name": "Petr Limonov, Laura van Der Heijden",
         "url": "https://www.last.fm/music/Petr+Limonov,+Laura+van+Der+Heijden",
@@ -74,12 +80,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Frank Bridge",
-        "url": "https://www.last.fm/music/Frank+Bridge",
-        "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Robert Schumann",
         "url": "https://www.last.fm/music/Robert+Schumann",
         "plays": "2",
@@ -87,6 +87,13 @@
       }
     ],
     "albums": [
+      {
+        "name": "Bridge: Oration / Frances Hoad: Earth, Sea, Air / Walton: Cello Concerto",
+        "url": "https://www.last.fm/music/Frank+Bridge,+Cheryl+Frances-Hoad,+William+Walton;+Laura+van+der+Heijden,+BBC+Scottish+Symphony+Orchestra,+Ryan+Wigglesworth/Bridge:+Oration+%2F+Frances+Hoad:+Earth,+Sea,+Air+%2F+Walton:+Cello+Concerto",
+        "artist": "Frank Bridge, Cheryl Frances-Hoad, William Walton; Laura van der Heijden, BBC Scottish Symphony Orchestra, Ryan Wigglesworth",
+        "plays": "10",
+        "image": ""
+      },
       {
         "name": "1948: Russian Works For Cello And Piano",
         "url": "https://www.last.fm/music/Petr+Limonov,+Laura+van+Der+Heijden/1948:+Russian+Works+For+Cello+And+Piano",
@@ -109,13 +116,6 @@
         "image": ""
       },
       {
-        "name": "Bridge: Oration / Frances Hoad: Earth, Sea, Air / Walton: Cello Concerto",
-        "url": "https://www.last.fm/music/Frank+Bridge,+Cheryl+Frances-Hoad,+William+Walton;+Laura+van+der+Heijden,+BBC+Scottish+Symphony+Orchestra,+Ryan+Wigglesworth/Bridge:+Oration+%2F+Frances+Hoad:+Earth,+Sea,+Air+%2F+Walton:+Cello+Concerto",
-        "artist": "Frank Bridge, Cheryl Frances-Hoad, William Walton; Laura van der Heijden, BBC Scottish Symphony Orchestra, Ryan Wigglesworth",
-        "plays": "3",
-        "image": ""
-      },
-      {
         "name": "Schumann: Piano Concerto / Strauss: Burleske",
         "url": "https://www.last.fm/music/Robert+Schumann/Schumann:+Piano+Concerto+%2F+Strauss:+Burleske",
         "artist": "Robert Schumann",
@@ -124,6 +124,20 @@
       }
     ],
     "tracks": [
+      {
+        "name": "Oration, Concerto elegiaco, H. 180: VIII. Epilogue. Andante tranquillo",
+        "url": "https://www.last.fm/music/Frank+Bridge/_/Oration,+Concerto+elegiaco,+H.+180:+VIII.+Epilogue.+Andante+tranquillo",
+        "artist": "Frank Bridge",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Oration, Concerto Elegiaco, H. 180: VII. Lento",
+        "url": "https://www.last.fm/music/Frank+Bridge/_/Oration,+Concerto+Elegiaco,+H.+180:+VII.+Lento",
+        "artist": "Frank Bridge",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
       {
         "name": "Piano Quartet in C major, Op.23 - I. Allegro Comodo",
         "url": "https://www.last.fm/music/Arthur+William+Foote/_/Piano+Quartet+in+C+major,+Op.23+-+I.+Allegro+Comodo",
@@ -169,6 +183,13 @@
       {
         "name": "Oration, Concerto elegiaco, H. 180: V. Ben moderato, mesto e tranquillo - Cadenza",
         "url": "https://www.last.fm/music/Frank+Bridge/_/Oration,+Concerto+elegiaco,+H.+180:+V.+Ben+moderato,+mesto+e+tranquillo+-+Cadenza",
+        "artist": "Frank Bridge",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Oration, Concerto Elegiaco, H. 180: VI. Allegro",
+        "url": "https://www.last.fm/music/Frank+Bridge/_/Oration,+Concerto+Elegiaco,+H.+180:+VI.+Allegro",
         "artist": "Frank Bridge",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -383,6 +404,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Frank Bridge",
+        "url": "https://www.last.fm/music/Frank+Bridge",
+        "plays": "12",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Sophia Jani",
         "url": "https://www.last.fm/music/Sophia+Jani",
         "plays": "12",
@@ -479,18 +506,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Frank Bridge",
-        "url": "https://www.last.fm/music/Frank+Bridge",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Lepo Sumera",
         "url": "https://www.last.fm/music/Lepo+Sumera",
         "plays": "5",
@@ -505,6 +520,12 @@
       {
         "name": "Orchestre de Paris, Paavo Järvi",
         "url": "https://www.last.fm/music/Orchestre+de+Paris,+Paavo+J%C3%A4rvi",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Валентин Васильович Сильвестров",
+        "url": "https://www.last.fm/music/%D0%92%D0%B0%D0%BB%D0%B5%D0%BD%D1%82%D0%B8%D0%BD+%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%BE%D0%B2%D0%B8%D1%87+%D0%A1%D0%B8%D0%BB%D1%8C%D0%B2%D0%B5%D1%81%D1%82%D1%80%D0%BE%D0%B2",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -565,6 +586,13 @@
         "artist": "Emma Ruth Rundle & Thou",
         "plays": "18",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b948335223d65555a3ff0410f0f0b0b2.jpg"
+      },
+      {
+        "name": "Bridge: Oration / Frances Hoad: Earth, Sea, Air / Walton: Cello Concerto",
+        "url": "https://www.last.fm/music/Frank+Bridge,+Cheryl+Frances-Hoad,+William+Walton;+Laura+van+der+Heijden,+BBC+Scottish+Symphony+Orchestra,+Ryan+Wigglesworth/Bridge:+Oration+%2F+Frances+Hoad:+Earth,+Sea,+Air+%2F+Walton:+Cello+Concerto",
+        "artist": "Frank Bridge, Cheryl Frances-Hoad, William Walton; Laura van der Heijden, BBC Scottish Symphony Orchestra, Ryan Wigglesworth",
+        "plays": "18",
+        "image": ""
       },
       {
         "name": "Eine Alpensinfonie / Rosenkavaliersuite",
@@ -654,13 +682,6 @@
         "name": "Path to the Moon",
         "url": "https://www.last.fm/music/Benjamin+Britten/Path+to+the+Moon",
         "artist": "Benjamin Britten",
-        "plays": "11",
-        "image": ""
-      },
-      {
-        "name": "Bridge: Oration / Frances Hoad: Earth, Sea, Air / Walton: Cello Concerto",
-        "url": "https://www.last.fm/music/Frank+Bridge,+Cheryl+Frances-Hoad,+William+Walton;+Laura+van+der+Heijden,+BBC+Scottish+Symphony+Orchestra,+Ryan+Wigglesworth/Bridge:+Oration+%2F+Frances+Hoad:+Earth,+Sea,+Air+%2F+Walton:+Cello+Concerto",
-        "artist": "Frank Bridge, Cheryl Frances-Hoad, William Walton; Laura van der Heijden, BBC Scottish Symphony Orchestra, Ryan Wigglesworth",
         "plays": "11",
         "image": ""
       },
@@ -796,6 +817,13 @@
         "name": "The Valley",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle+&+Thou/_/The+Valley",
         "artist": "Emma Ruth Rundle & Thou",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Oration, Concerto elegiaco, H. 180: VIII. Epilogue. Andante tranquillo",
+        "url": "https://www.last.fm/music/Frank+Bridge/_/Oration,+Concerto+elegiaco,+H.+180:+VIII.+Epilogue.+Andante+tranquillo",
+        "artist": "Frank Bridge",
         "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1064,13 +1092,6 @@
         "artist": "Benjamin Britten",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Violin Concerto in D Minor, Op. 15: III. Passacaglia. Andante lento un poco meno mosso",
-        "url": "https://www.last.fm/music/Benjamin+Britten/_/Violin+Concerto+in+D+Minor,+Op.+15:+III.+Passacaglia.+Andante+lento+un+poco+meno+mosso",
-        "artist": "Benjamin Britten",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -1209,6 +1230,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Frank Bridge",
+        "url": "https://www.last.fm/music/Frank+Bridge",
+        "plays": "70",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Karol Szymanowski",
         "url": "https://www.last.fm/music/Karol+Szymanowski",
         "plays": "70",
@@ -1242,12 +1269,6 @@
         "name": "Sophia Jani",
         "url": "https://www.last.fm/music/Sophia+Jani",
         "plays": "64",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Frank Bridge",
-        "url": "https://www.last.fm/music/Frank+Bridge",
-        "plays": "63",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1804,6 +1825,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Oration, Concerto elegiaco, H. 180: VIII. Epilogue. Andante tranquillo",
+        "url": "https://www.last.fm/music/Frank+Bridge/_/Oration,+Concerto+elegiaco,+H.+180:+VIII.+Epilogue.+Andante+tranquillo",
+        "artist": "Frank Bridge",
+        "plays": "8",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Streamline",
         "url": "https://www.last.fm/music/System+of+a+Down/_/Streamline",
         "artist": "System of a Down",
@@ -1870,13 +1898,6 @@
         "name": "More Human Than Human",
         "url": "https://www.last.fm/music/White+Zombie/_/More+Human+Than+Human",
         "artist": "White Zombie",
-        "plays": "7",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Viola Concerto (1961 version): III. Allegro moderato",
-        "url": "https://www.last.fm/music/William+Walton/_/Viola+Concerto+(1961+version):+III.+Allegro+moderato",
-        "artist": "William Walton",
         "plays": "7",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
