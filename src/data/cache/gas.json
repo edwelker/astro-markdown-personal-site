@@ -49,6 +49,28 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
+      "Station": "Valero",
+      "Address": "1356 OLD COUNTRY RD, 11901",
+      "Base": "3.99",
+      "Discount": "-",
+      "Lat": "40.9283279",
+      "Long": "-72.6857992",
+      "Net": "3.99"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Mobil",
+      "Address": "1575 Old Country Rd, 11901",
+      "Base": "3.99",
+      "Discount": "Mobil",
+      "Lat": "40.9252206",
+      "Long": "-72.6951725",
+      "Net": "3.96"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
       "Station": "Shell",
       "Address": "1733 Old Country Rd, 11901",
       "Base": "3.99",
@@ -60,35 +82,13 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
-      "Station": "Mobil",
-      "Address": "1575 Old Country Rd, 11901",
-      "Base": "3.97",
-      "Discount": "Mobil",
-      "Lat": "40.9252206",
-      "Long": "-72.6951725",
-      "Net": "3.94"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Empire",
-      "Address": "1050 Osborne Ave, 11901",
-      "Base": "3.97",
+      "Station": "USA Gasoline",
+      "Address": "1446 Flanders Rd, 11901",
+      "Base": "4.07",
       "Discount": "-",
-      "Lat": "40.8032257",
-      "Long": "-72.7577586",
-      "Net": "3.97"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "OK Petroleum",
-      "Address": "1212 E Main St, 11901",
-      "Base": "3.99",
-      "Discount": "-",
-      "Lat": "40.9308412",
-      "Long": "-72.6498192",
-      "Net": "3.99"
+      "Lat": "40.90403",
+      "Long": "-72.6056344",
+      "Net": "4.07"
     },
     {
       "City": "Riverhead",
@@ -104,13 +104,35 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
-      "Station": "Valero",
-      "Address": "1356 OLD COUNTRY RD, 11901",
+      "Station": "Sunoco",
+      "Address": "1879 Old Country Rd 58, 11901",
+      "Base": "4.16",
+      "Discount": "Sunoco",
+      "Lat": "",
+      "Long": "",
+      "Net": "4.13"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "OK Petroleum",
+      "Address": "1212 E Main St, 11901",
       "Base": "3.99",
       "Discount": "-",
-      "Lat": "40.9283279",
-      "Long": "-72.6857992",
+      "Lat": "40.9308412",
+      "Long": "-72.6498192",
       "Net": "3.99"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Empire",
+      "Address": "1050 Osborne Ave, 11901",
+      "Base": "3.97",
+      "Discount": "-",
+      "Lat": "40.8032257",
+      "Long": "-72.7577586",
+      "Net": "3.97"
     }
   ],
   "ma": [
