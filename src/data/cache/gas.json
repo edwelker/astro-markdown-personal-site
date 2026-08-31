@@ -25,6 +25,17 @@
     {
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
+      "Station": "Shell",
+      "Address": "9280 All Saints Rd, 20723",
+      "Base": "4.09",
+      "Discount": "Shell",
+      "Lat": "39.1195226",
+      "Long": "-76.8519516",
+      "Net": "4.04"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
       "Station": "Exxon",
       "Address": "8850 Gorman Rd, 20723",
       "Base": "4.09",
@@ -60,17 +71,6 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
-      "Station": "76",
-      "Address": "7 Peconic Ave, 11901",
-      "Base": "3.99",
-      "Discount": "-",
-      "Lat": "40.9149773",
-      "Long": "-72.6623567",
-      "Net": "3.99"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
       "Station": "Mobil",
       "Address": "415 E Main St, 11901",
       "Base": "3.99",
@@ -82,13 +82,13 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
-      "Station": "Empire",
-      "Address": "640 Main Rd, 11901",
-      "Base": "4.07",
+      "Station": "76",
+      "Address": "7 Peconic Ave, 11901",
+      "Base": "3.99",
       "Discount": "-",
-      "Lat": "40.9396238",
-      "Long": "-72.6416222",
-      "Net": "4.07"
+      "Lat": "40.9149773",
+      "Long": "-72.6623567",
+      "Net": "3.99"
     },
     {
       "City": "Riverhead",
@@ -105,12 +105,12 @@
       "City": "Riverhead",
       "Zip": "11901",
       "Station": "Empire",
-      "Address": "1050 Osborne Ave, 11901",
-      "Base": "3.97",
+      "Address": "640 Main Rd, 11901",
+      "Base": "4.07",
       "Discount": "-",
-      "Lat": "40.8032257",
-      "Long": "-72.7577586",
-      "Net": "3.97"
+      "Lat": "40.9396238",
+      "Long": "-72.6416222",
+      "Net": "4.07"
     },
     {
       "City": "Riverhead",
@@ -126,13 +126,13 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
-      "Station": "USA Gasoline",
-      "Address": "1446 Flanders Rd, 11901",
-      "Base": "4.07",
+      "Station": "Empire",
+      "Address": "1050 Osborne Ave, 11901",
+      "Base": "3.97",
       "Discount": "-",
-      "Lat": "40.90403",
-      "Long": "-72.6056344",
-      "Net": "4.07"
+      "Lat": "40.8032257",
+      "Long": "-72.7577586",
+      "Net": "3.97"
     }
   ],
   "ma": [
@@ -225,6 +225,17 @@
       "Lat": "39.2220799",
       "Long": "-76.8907487",
       "Net": "4.5"
+    },
+    {
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
+      "Station": "Sunoco",
+      "Address": "6440 Freetown Rd, 21044",
+      "Base": "4.59",
+      "Discount": "Sunoco",
+      "Lat": "39.1950229",
+      "Long": "-76.8817831",
+      "Net": "4.56"
     },
     {
       "City": "Columbia (Town Center)",
