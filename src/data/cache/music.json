@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 277466
+    "scrobbles": 277475
   },
   "history": [
-    {
-      "dayName": "Tue",
-      "date": "2026-08-25",
-      "hours": "1.9",
-      "lastHours": "0.4",
-      "topArtist": "Einstürzende Neubauten"
-    },
     {
       "dayName": "Wed",
       "date": "2026-08-26",
@@ -48,9 +41,16 @@
     {
       "dayName": "Mon",
       "date": "2026-08-31",
-      "hours": "1.2",
+      "hours": "1.3",
       "lastHours": "0.6",
       "topArtist": "Erik Satie"
+    },
+    {
+      "dayName": "Tue",
+      "date": "2026-09-01",
+      "hours": "0.5",
+      "lastHours": "1.9",
+      "topArtist": "Levinhurst"
     }
   ],
   "week": {
@@ -106,6 +106,12 @@
       {
         "name": "Bone Thugs-N-Harmony",
         "url": "https://www.last.fm/music/Bone+Thugs-N-Harmony",
+        "plays": "8",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Levinhurst",
+        "url": "https://www.last.fm/music/Levinhurst",
         "plays": "8",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -218,6 +224,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "OutKast",
+        "url": "https://www.last.fm/music/OutKast",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Shara Worden",
         "url": "https://www.last.fm/music/Shara+Worden",
         "plays": "2",
@@ -280,18 +292,6 @@
       {
         "name": "Lil Jon & The East Side Boyz",
         "url": "https://www.last.fm/music/Lil+Jon+&+The+East+Side+Boyz",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ludacris",
-        "url": "https://www.last.fm/music/Ludacris",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Mariah Carey",
-        "url": "https://www.last.fm/music/Mariah+Carey",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -359,6 +359,13 @@
         "artist": "Pyotr Ilyich Tchaikovsky",
         "plays": "9",
         "image": ""
+      },
+      {
+        "name": "Perfect life",
+        "url": "https://www.last.fm/music/Levinhurst/Perfect+life",
+        "artist": "Levinhurst",
+        "plays": "8",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3a568ee6ae63c3be1738e38c3bc12c53.jpg"
       },
       {
         "name": "LESSER ARCANA",
@@ -466,6 +473,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/64b48db246516a030360253dc177d865.png"
       },
       {
+        "name": "Stankonia",
+        "url": "https://www.last.fm/music/OutKast/Stankonia",
+        "artist": "OutKast",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/28229f48f77f2c5f648055c3b6273099.jpg"
+      },
+      {
         "name": "Incredibad",
         "url": "https://www.last.fm/music/The+Lonely+Island/Incredibad",
         "artist": "The Lonely Island",
@@ -562,20 +576,6 @@
         "artist": "Léo Delibes",
         "plays": "1",
         "image": ""
-      },
-      {
-        "name": "Part II",
-        "url": "https://www.last.fm/music/Lil+Jon+&+The+East+Side+Boyz/Part+II",
-        "artist": "Lil Jon & The East Side Boyz",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/42776224f9070b309cd7df4f58256a42.jpg"
-      },
-      {
-        "name": "Battle of the Sexes (Deluxe)",
-        "url": "https://www.last.fm/music/Ludacris/Battle+of+the+Sexes+(Deluxe)",
-        "artist": "Ludacris",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b5842c234d0cfbf5b154d9868303cbae.jpg"
       }
     ],
     "tracks": [
@@ -769,6 +769,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "So Fresh, So Clean",
+        "url": "https://www.last.fm/music/OutKast/_/So+Fresh,+So+Clean",
+        "artist": "OutKast",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Yolanta: Scène & Chœur",
         "url": "https://www.last.fm/music/Pyotr+Ilyich+Tchaikovsky/_/Yolanta:+Sc%C3%A8ne+&+Ch%C5%93ur",
         "artist": "Pyotr Ilyich Tchaikovsky",
@@ -848,13 +855,6 @@
       {
         "name": "Seasons Come, Seasons Go",
         "url": "https://www.last.fm/music/Bobbie+Gentry/_/Seasons+Come,+Seasons+Go",
-        "artist": "Bobbie Gentry",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Son of a Preacher Man",
-        "url": "https://www.last.fm/music/Bobbie+Gentry/_/Son+of+a+Preacher+Man",
         "artist": "Bobbie Gentry",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -938,6 +938,12 @@
       {
         "name": "Busta Rhymes",
         "url": "https://www.last.fm/music/Busta+Rhymes",
+        "plays": "17",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Levinhurst",
+        "url": "https://www.last.fm/music/Levinhurst",
         "plays": "17",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1047,12 +1053,6 @@
         "name": "Pyotr Ilyich Tchaikovsky",
         "url": "https://www.last.fm/music/Pyotr+Ilyich+Tchaikovsky",
         "plays": "10",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Levinhurst",
-        "url": "https://www.last.fm/music/Levinhurst",
-        "plays": "9",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1188,6 +1188,13 @@
         "artist": "Depeche Mode",
         "plays": "20",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/608eb3f715fb42a4b87130ae5671ac7b.png"
+      },
+      {
+        "name": "Perfect life",
+        "url": "https://www.last.fm/music/Levinhurst/Perfect+life",
+        "artist": "Levinhurst",
+        "plays": "17",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3a568ee6ae63c3be1738e38c3bc12c53.jpg"
       },
       {
         "name": "The Big Bang",
@@ -1342,13 +1349,6 @@
         "artist": "Carrie Frey",
         "plays": "9",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b58718d42f12915e39ae0e2d1a4046a7.jpg"
-      },
-      {
-        "name": "Perfect life",
-        "url": "https://www.last.fm/music/Levinhurst/Perfect+life",
-        "artist": "Levinhurst",
-        "plays": "9",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3a568ee6ae63c3be1738e38c3bc12c53.jpg"
       },
       {
         "name": "Yolanta",
@@ -1686,7 +1686,7 @@
       {
         "name": "Austra",
         "url": "https://www.last.fm/music/Austra",
-        "plays": "209",
+        "plays": "208",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1852,12 +1852,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Depeche Mode",
-        "url": "https://www.last.fm/music/Depeche+Mode",
-        "plays": "56",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Franz Schubert",
         "url": "https://www.last.fm/music/Franz+Schubert",
         "plays": "56",
@@ -1867,6 +1861,12 @@
         "name": "Wolfgang Amadeus Mozart",
         "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart",
         "plays": "56",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Depeche Mode",
+        "url": "https://www.last.fm/music/Depeche+Mode",
+        "plays": "54",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2227,7 +2227,7 @@
         "name": "Math Equation",
         "url": "https://www.last.fm/music/Austra/_/Math+Equation",
         "artist": "Austra",
-        "plays": "20",
+        "plays": "19",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
