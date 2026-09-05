@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 277676
+    "scrobbles": 277678
   },
   "history": [
-    {
-      "dayName": "Fri",
-      "date": "2026-08-28",
-      "hours": "2.5",
-      "lastHours": "2.8",
-      "topArtist": "Busta Rhymes"
-    },
     {
       "dayName": "Sat",
       "date": "2026-08-29",
@@ -51,6 +44,13 @@
       "hours": "4.4",
       "lastHours": "4.3",
       "topArtist": "Levinhurst"
+    },
+    {
+      "dayName": "Fri",
+      "date": "2026-09-04",
+      "hours": "0.1",
+      "lastHours": "2.5",
+      "topArtist": "Dolly Parton"
     }
   ],
   "week": {
@@ -134,6 +134,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Dolly Parton",
+        "url": "https://www.last.fm/music/Dolly+Parton",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Nas",
         "url": "https://www.last.fm/music/Nas",
         "plays": "4",
@@ -166,12 +172,6 @@
       {
         "name": "2Pac",
         "url": "https://www.last.fm/music/2Pac",
-        "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Dolly Parton",
-        "url": "https://www.last.fm/music/Dolly+Parton",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -242,12 +242,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Little Nell",
-        "url": "https://www.last.fm/music/Little+Nell",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Missy Elliott",
         "url": "https://www.last.fm/music/Missy+Elliott",
         "plays": "2",
@@ -256,6 +250,12 @@
       {
         "name": "Nelly",
         "url": "https://www.last.fm/music/Nelly",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Peter, Paul & Mary",
+        "url": "https://www.last.fm/music/Peter,+Paul+&+Mary",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -445,6 +445,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/bb77c77fc1a103842c22022d7ed68f7f.png"
       },
       {
+        "name": "Greatest Hits",
+        "url": "https://www.last.fm/music/Dolly+Parton/Greatest+Hits",
+        "artist": "Dolly Parton",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6fc79e727279558ad6b53be31da3d3ef.jpg"
+      },
+      {
         "name": "Œuvres pour violoncelle seul",
         "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti/%C5%92uvres+pour+violoncelle+seul",
         "artist": "György Ligeti",
@@ -487,6 +494,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/28229f48f77f2c5f648055c3b6273099.jpg"
       },
       {
+        "name": "Album 1700",
+        "url": "https://www.last.fm/music/Peter,+Paul+&+Mary/Album+1700",
+        "artist": "Peter, Paul & Mary",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/907c6b75e0f92d56cce807b38db547fa.jpg"
+      },
+      {
         "name": "Ghetto Supastar",
         "url": "https://www.last.fm/music/Pras/Ghetto+Supastar",
         "artist": "Pras",
@@ -513,13 +527,6 @@
         "artist": "The Lonely Island",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/cb10eb79ebf0be7dd35bc40201e1a692.jpg"
-      },
-      {
-        "name": "The Rocky Horror Picture Show - Original Soundtrack (Soundtrack from the Motion Picture)",
-        "url": "https://www.last.fm/music/The+Rocky+Horror+Picture+Show/The+Rocky+Horror+Picture+Show+-+Original+Soundtrack+(Soundtrack+from+the+Motion+Picture)",
-        "artist": "The Rocky Horror Picture Show",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c06f7cf4b82a10ef97a372370db4a542.jpg"
       },
       {
         "name": "Greatest Hits",
@@ -569,13 +576,6 @@
         "artist": "Busta Rhymes",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4e94fb37bc76bc9325d998633275ef21.jpg"
-      },
-      {
-        "name": "Come Home With Me",
-        "url": "https://www.last.fm/music/Cam%27ron/Come+Home+With+Me",
-        "artist": "Cam'ron",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6575fad2ea025a31baf0ba1648632213.jpg"
       }
     ],
     "tracks": [
@@ -657,6 +657,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Islands in the Stream",
+        "url": "https://www.last.fm/music/Dolly+Parton/_/Islands+in+the+Stream",
+        "artist": "Dolly Parton",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "The Little Old Lady (From Pasadena)",
         "url": "https://www.last.fm/music/Jan+&+Dean/_/The+Little+Old+Lady+(From+Pasadena)",
         "artist": "Jan & Dean",
@@ -685,16 +692,16 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Time Warp",
-        "url": "https://www.last.fm/music/Little+Nell/_/Time+Warp",
-        "artist": "Little Nell",
+        "name": "So Fresh, So Clean",
+        "url": "https://www.last.fm/music/OutKast/_/So+Fresh,+So+Clean",
+        "artist": "OutKast",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "So Fresh, So Clean",
-        "url": "https://www.last.fm/music/OutKast/_/So+Fresh,+So+Clean",
-        "artist": "OutKast",
+        "name": "Leaving on a Jet Plane",
+        "url": "https://www.last.fm/music/Peter,+Paul+&+Mary/_/Leaving+on+a+Jet+Plane",
+        "artist": "Peter, Paul & Mary",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -848,13 +855,6 @@
       {
         "name": "String Quartet in G Minor, CD 91: I. Animé et très décidé",
         "url": "https://www.last.fm/music/Claude+Debussy/_/String+Quartet+in+G+Minor,+CD+91:+I.+Anim%C3%A9+et+tr%C3%A8s+d%C3%A9cid%C3%A9",
-        "artist": "Claude Debussy",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "String Quartet in G Minor, CD 91: II. Scherzo. Assez vif et bien rythmé",
-        "url": "https://www.last.fm/music/Claude+Debussy/_/String+Quartet+in+G+Minor,+CD+91:+II.+Scherzo.+Assez+vif+et+bien+rythm%C3%A9",
         "artist": "Claude Debussy",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -1647,6 +1647,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Islands in the Stream",
+        "url": "https://www.last.fm/music/Dolly+Parton/_/Islands+in+the+Stream",
+        "artist": "Dolly Parton",
+        "plays": "3",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Gnossienne: No.5 (Arr. for Harp)",
         "url": "https://www.last.fm/music/Erik+Satie/_/Gnossienne:+No.5+(Arr.+for+Harp)",
         "artist": "Erik Satie",
@@ -1657,13 +1664,6 @@
         "name": "Night (Arr. for Cello & Piano by Tom Poster)",
         "url": "https://www.last.fm/music/Florence+Beatrice+Price/_/Night+(Arr.+for+Cello+&+Piano+by+Tom+Poster)",
         "artist": "Florence Beatrice Price",
-        "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Oration, H. 180 (Concerto elegiaco): Allegro - Meno energico - A tempo, energico - Allargando poco animato",
-        "url": "https://www.last.fm/music/Frank+Bridge/_/Oration,+H.+180+(Concerto+elegiaco):+Allegro+-+Meno+energico+-+A+tempo,+energico+-+Allargando+poco+animato",
-        "artist": "Frank Bridge",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1686,7 +1686,7 @@
       {
         "name": "Austra",
         "url": "https://www.last.fm/music/Austra",
-        "plays": "208",
+        "plays": "204",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
