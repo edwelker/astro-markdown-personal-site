@@ -4,13 +4,6 @@
   },
   "history": [
     {
-      "dayName": "Sat",
-      "date": "2026-08-29",
-      "hours": "0.3",
-      "lastHours": "4.1",
-      "topArtist": "Frank Bridge"
-    },
-    {
       "dayName": "Sun",
       "date": "2026-08-30",
       "hours": "0.1",
@@ -51,6 +44,13 @@
       "hours": "0.1",
       "lastHours": "2.5",
       "topArtist": "Dolly Parton"
+    },
+    {
+      "dayName": "Sat",
+      "date": "2026-09-05",
+      "hours": "0.0",
+      "lastHours": "0.3",
+      "topArtist": null
     }
   ],
   "week": {
@@ -158,12 +158,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "The Lonely Island",
-        "url": "https://www.last.fm/music/The+Lonely+Island",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "2Pac",
         "url": "https://www.last.fm/music/2Pac",
         "plays": "3",
@@ -262,6 +256,12 @@
       {
         "name": "Snoop Dogg",
         "url": "https://www.last.fm/music/Snoop+Dogg",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Lonely Island",
+        "url": "https://www.last.fm/music/The+Lonely+Island",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -515,13 +515,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/00742e9de8111ca1b5edd4a60ed39a20.jpg"
       },
       {
-        "name": "The Wack Album",
-        "url": "https://www.last.fm/music/The+Lonely+Island/The+Wack+Album",
-        "artist": "The Lonely Island",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/cb10eb79ebf0be7dd35bc40201e1a692.jpg"
-      },
-      {
         "name": "Greatest Hits",
         "url": "https://www.last.fm/music/2Pac/Greatest+Hits",
         "artist": "2Pac",
@@ -576,6 +569,13 @@
         "artist": "Cam'ron",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6575fad2ea025a31baf0ba1648632213.jpg"
+      },
+      {
+        "name": "The Sound of Revenge",
+        "url": "https://www.last.fm/music/Chamillionaire/The+Sound+of+Revenge",
+        "artist": "Chamillionaire",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a216b875da1e4c02cc33f67019f0cfb7.png"
       }
     ],
     "tracks": [
@@ -709,13 +709,6 @@
         "name": "Ghetto Supastar (That Is What You Are) (Feat. Ol' Dirty Bastard & Mýa)",
         "url": "https://www.last.fm/music/Pras/_/Ghetto+Supastar+(That+Is+What+You+Are)+(Feat.+Ol%27+Dirty+Bastard+&+M%C3%BDa)",
         "artist": "Pras",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Diaper Money",
-        "url": "https://www.last.fm/music/The+Lonely+Island/_/Diaper+Money",
-        "artist": "The Lonely Island",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -855,6 +848,13 @@
       {
         "name": "String Quartet in G Minor, CD 91: II. Scherzo. Assez vif et bien rythmé",
         "url": "https://www.last.fm/music/Claude+Debussy/_/String+Quartet+in+G+Minor,+CD+91:+II.+Scherzo.+Assez+vif+et+bien+rythm%C3%A9",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet in G Minor, CD 91: III. Andantino, doucement expressif",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/String+Quartet+in+G+Minor,+CD+91:+III.+Andantino,+doucement+expressif",
         "artist": "Claude Debussy",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
