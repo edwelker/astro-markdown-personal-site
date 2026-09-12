@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 277873
+    "scrobbles": 277882
   },
   "history": [
-    {
-      "dayName": "Sat",
-      "date": "2026-09-05",
-      "hours": "0.0",
-      "lastHours": "0.3",
-      "topArtist": null
-    },
     {
       "dayName": "Sun",
       "date": "2026-09-06",
@@ -48,9 +41,16 @@
     {
       "dayName": "Fri",
       "date": "2026-09-11",
-      "hours": "2.9",
+      "hours": "3.3",
       "lastHours": "0.1",
       "topArtist": "Nine Inch Nails"
+    },
+    {
+      "dayName": "Sat",
+      "date": "2026-09-12",
+      "hours": "0.1",
+      "lastHours": "0.0",
+      "topArtist": "Mindless Self Indulgence"
     }
   ],
   "week": {
@@ -58,7 +58,7 @@
       {
         "name": "Anna Clyne",
         "url": "https://www.last.fm/music/Anna+Clyne",
-        "plays": "51",
+        "plays": "59",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -130,12 +130,6 @@
       {
         "name": "Chamillionaire",
         "url": "https://www.last.fm/music/Chamillionaire",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Dolly Parton",
-        "url": "https://www.last.fm/music/Dolly+Parton",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -212,6 +206,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Mindless Self Indulgence",
+        "url": "https://www.last.fm/music/Mindless+Self+Indulgence",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Ol' Dirty Bastard",
         "url": "https://www.last.fm/music/Ol%27+Dirty+Bastard",
         "plays": "1",
@@ -235,7 +235,7 @@
         "name": "Anna Clyne: Abstractions",
         "url": "https://www.last.fm/music/Anna+Clyne/Anna+Clyne:+Abstractions",
         "artist": "Anna Clyne",
-        "plays": "46",
+        "plays": "54",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/bd050c9cf1bfedcd9f6a2c1620c58f34.png"
       },
       {
@@ -321,13 +321,6 @@
         "artist": "Chamillionaire",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a216b875da1e4c02cc33f67019f0cfb7.png"
-      },
-      {
-        "name": "Greatest Hits",
-        "url": "https://www.last.fm/music/Dolly+Parton/Greatest+Hits",
-        "artist": "Dolly Parton",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6fc79e727279558ad6b53be31da3d3ef.jpg"
       },
       {
         "name": "Paid in Full",
@@ -498,6 +491,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6ee44f9e24e89a3f4a079071461aa6e4.jpg"
       },
       {
+        "name": "You'll Rebel to Anything (Expanded and Remastered 2008)",
+        "url": "https://www.last.fm/music/Mindless+Self+Indulgence/You%27ll+Rebel+to+Anything+(Expanded+and+Remastered+2008)",
+        "artist": "Mindless Self Indulgence",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7efe943e1398bafb4d67444f623fc6c5.jpg"
+      },
+      {
         "name": "Return To The 36 Chambers: The Dirty Version",
         "url": "https://www.last.fm/music/Ol%27+Dirty+Bastard/Return+To+The+36+Chambers:+The+Dirty+Version",
         "artist": "Ol' Dirty Bastard",
@@ -514,15 +514,15 @@
     ],
     "tracks": [
       {
-        "name": "Abstractions: I. Marble Moon (Inspired by Sara VanDerBeek's Marble Moon, 2015)",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+I.+Marble+Moon+(Inspired+by+Sara+VanDerBeek%27s+Marble+Moon,+2015)",
+        "name": "Abstractions: V. Three (Inspired by Brice Marden’s 3, 1987-88)",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+V.+Three+(Inspired+by+Brice+Marden%E2%80%99s+3,+1987-88)",
         "artist": "Anna Clyne",
-        "plays": "6",
+        "plays": "7",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Abstractions: V. Three (Inspired by Brice Marden’s 3, 1987-88)",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+V.+Three+(Inspired+by+Brice+Marden%E2%80%99s+3,+1987-88)",
+        "name": "Abstractions: I. Marble Moon (Inspired by Sara VanDerBeek's Marble Moon, 2015)",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+I.+Marble+Moon+(Inspired+by+Sara+VanDerBeek%27s+Marble+Moon,+2015)",
         "artist": "Anna Clyne",
         "plays": "6",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -531,19 +531,33 @@
         "name": "Abstractions: II. Auguries (Inspired by Julie Mehretu's Auguries, 2010)",
         "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+II.+Auguries+(Inspired+by+Julie+Mehretu%27s+Auguries,+2010)",
         "artist": "Anna Clyne",
-        "plays": "5",
+        "plays": "6",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Abstractions: III. Seascape (Inspired by Hiroshi Sugimoto's Caribbean Sea, Jamaica, 1980)",
         "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+III.+Seascape+(Inspired+by+Hiroshi+Sugimoto%27s+Caribbean+Sea,+Jamaica,+1980)",
         "artist": "Anna Clyne",
-        "plays": "5",
+        "plays": "6",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Abstractions: IV. River (Inspired by Ellsworth Kelly's River II, 2005)",
         "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+IV.+River+(Inspired+by+Ellsworth+Kelly%27s+River+II,+2005)",
+        "artist": "Anna Clyne",
+        "plays": "6",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Color Field: I. Yellow",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+I.+Yellow",
+        "artist": "Anna Clyne",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Restless Oceans",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Restless+Oceans",
         "artist": "Anna Clyne",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -556,31 +570,17 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Color Field: I. Yellow",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+I.+Yellow",
-        "artist": "Anna Clyne",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Restless Oceans",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Restless+Oceans",
-        "artist": "Anna Clyne",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Color Field: II. Red",
         "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+II.+Red",
         "artist": "Anna Clyne",
-        "plays": "3",
+        "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Color Field: III. Orange",
         "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+III.+Orange",
         "artist": "Anna Clyne",
-        "plays": "3",
+        "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -671,13 +671,6 @@
         "name": "Suite in Old Style: Prelude. Fanfare from the Balconies – I. Through Mirrored Corridors",
         "url": "https://www.last.fm/music/Dobrinka+Tabakova/_/Suite+in+Old+Style:+Prelude.+Fanfare+from+the+Balconies+%E2%80%93+I.+Through+Mirrored+Corridors",
         "artist": "Dobrinka Tabakova",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Islands in the Stream",
-        "url": "https://www.last.fm/music/Dolly+Parton/_/Islands+in+the+Stream",
-        "artist": "Dolly Parton",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -792,6 +785,13 @@
         "artist": "Arrested Development",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Choice Is Yours (Revisited)",
+        "url": "https://www.last.fm/music/Black+Sheep/_/The+Choice+Is+Yours+(Revisited)",
+        "artist": "Black Sheep",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -806,7 +806,7 @@
       {
         "name": "Anna Clyne",
         "url": "https://www.last.fm/music/Anna+Clyne",
-        "plays": "51",
+        "plays": "59",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1050,7 +1050,7 @@
         "name": "Anna Clyne: Abstractions",
         "url": "https://www.last.fm/music/Anna+Clyne/Anna+Clyne:+Abstractions",
         "artist": "Anna Clyne",
-        "plays": "46",
+        "plays": "54",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/bd050c9cf1bfedcd9f6a2c1620c58f34.png"
       },
       {
@@ -1336,6 +1336,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Abstractions: V. Three (Inspired by Brice Marden’s 3, 1987-88)",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+V.+Three+(Inspired+by+Brice+Marden%E2%80%99s+3,+1987-88)",
+        "artist": "Anna Clyne",
+        "plays": "7",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Oration, Concerto elegiaco, H. 180: VIII. Epilogue. Andante tranquillo",
         "url": "https://www.last.fm/music/Frank+Bridge/_/Oration,+Concerto+elegiaco,+H.+180:+VIII.+Epilogue.+Andante+tranquillo",
         "artist": "Frank Bridge",
@@ -1350,8 +1357,22 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Abstractions: V. Three (Inspired by Brice Marden’s 3, 1987-88)",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+V.+Three+(Inspired+by+Brice+Marden%E2%80%99s+3,+1987-88)",
+        "name": "Abstractions: II. Auguries (Inspired by Julie Mehretu's Auguries, 2010)",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+II.+Auguries+(Inspired+by+Julie+Mehretu%27s+Auguries,+2010)",
+        "artist": "Anna Clyne",
+        "plays": "6",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Abstractions: III. Seascape (Inspired by Hiroshi Sugimoto's Caribbean Sea, Jamaica, 1980)",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+III.+Seascape+(Inspired+by+Hiroshi+Sugimoto%27s+Caribbean+Sea,+Jamaica,+1980)",
+        "artist": "Anna Clyne",
+        "plays": "6",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Abstractions: IV. River (Inspired by Ellsworth Kelly's River II, 2005)",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+IV.+River+(Inspired+by+Ellsworth+Kelly%27s+River+II,+2005)",
         "artist": "Anna Clyne",
         "plays": "6",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -1364,22 +1385,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Abstractions: II. Auguries (Inspired by Julie Mehretu's Auguries, 2010)",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+II.+Auguries+(Inspired+by+Julie+Mehretu%27s+Auguries,+2010)",
+        "name": "Color Field: I. Yellow",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+I.+Yellow",
         "artist": "Anna Clyne",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Abstractions: III. Seascape (Inspired by Hiroshi Sugimoto's Caribbean Sea, Jamaica, 1980)",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+III.+Seascape+(Inspired+by+Hiroshi+Sugimoto%27s+Caribbean+Sea,+Jamaica,+1980)",
-        "artist": "Anna Clyne",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Abstractions: IV. River (Inspired by Ellsworth Kelly's River II, 2005)",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+IV.+River+(Inspired+by+Ellsworth+Kelly%27s+River+II,+2005)",
+        "name": "Restless Oceans",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Restless+Oceans",
         "artist": "Anna Clyne",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -1399,15 +1413,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Color Field: I. Yellow",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+I.+Yellow",
+        "name": "Color Field: II. Red",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+II.+Red",
         "artist": "Anna Clyne",
         "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Restless Oceans",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Restless+Oceans",
+        "name": "Color Field: III. Orange",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+III.+Orange",
         "artist": "Anna Clyne",
         "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -1550,20 +1564,6 @@
         "url": "https://www.last.fm/music/Levinhurst/_/Vinti",
         "artist": "Levinhurst",
         "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Color Field: II. Red",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+II.+Red",
-        "artist": "Anna Clyne",
-        "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Color Field: III. Orange",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+III.+Orange",
-        "artist": "Anna Clyne",
-        "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1774,6 +1774,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Anna Clyne",
+        "url": "https://www.last.fm/music/Anna+Clyne",
+        "plays": "64",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Miklós Rózsa",
         "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
         "plays": "64",
@@ -1801,12 +1807,6 @@
         "name": "Dmitri Kabalevsky",
         "url": "https://www.last.fm/music/Dmitri+Kabalevsky",
         "plays": "57",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Anna Clyne",
-        "url": "https://www.last.fm/music/Anna+Clyne",
-        "plays": "56",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1911,6 +1911,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0ee13e885c7b045e61e1179747ca5860.png"
       },
       {
+        "name": "Anna Clyne: Abstractions",
+        "url": "https://www.last.fm/music/Anna+Clyne/Anna+Clyne:+Abstractions",
+        "artist": "Anna Clyne",
+        "plays": "54",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/bd050c9cf1bfedcd9f6a2c1620c58f34.png"
+      },
+      {
         "name": "The Symphonies / Tone Poems",
         "url": "https://www.last.fm/music/Jean+Sibelius/The+Symphonies+%2F+Tone+Poems",
         "artist": "Jean Sibelius",
@@ -1965,13 +1972,6 @@
         "artist": "Various Artists",
         "plays": "47",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/277888ef7c43e641df662273beab9e9b.jpg"
-      },
-      {
-        "name": "Anna Clyne: Abstractions",
-        "url": "https://www.last.fm/music/Anna+Clyne/Anna+Clyne:+Abstractions",
-        "artist": "Anna Clyne",
-        "plays": "46",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/bd050c9cf1bfedcd9f6a2c1620c58f34.png"
       },
       {
         "name": "Perfect life",
@@ -2375,6 +2375,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Abstractions: V. Three (Inspired by Brice Marden’s 3, 1987-88)",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+V.+Three+(Inspired+by+Brice+Marden%E2%80%99s+3,+1987-88)",
+        "artist": "Anna Clyne",
+        "plays": "7",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Ritornello 2.sq.2.j.a",
         "url": "https://www.last.fm/music/Caroline+Shaw/_/Ritornello+2.sq.2.j.a",
         "artist": "Caroline Shaw",
@@ -2399,13 +2406,6 @@
         "name": "Lontano (1967)",
         "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti/_/Lontano+(1967)",
         "artist": "György Ligeti",
-        "plays": "7",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Cello Concerto No. 1 in A Minor, Op. 33: Allegro non troppo -",
-        "url": "https://www.last.fm/music/Mstislav+Rostropovich/_/Cello+Concerto+No.+1+in+A+Minor,+Op.+33:+Allegro+non+troppo+-",
-        "artist": "Mstislav Rostropovich",
         "plays": "7",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
