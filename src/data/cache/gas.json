@@ -25,6 +25,17 @@
     {
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
+      "Station": "Weis",
+      "Address": "9250 Washington Blvd N, 20723",
+      "Base": "4.19",
+      "Discount": "-",
+      "Lat": "42.739557",
+      "Long": "-83.0334814",
+      "Net": "4.19"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
       "Station": "Exxon",
       "Address": "7500 Montpelier Rd, 20723",
       "Base": "4.39",
@@ -46,6 +57,28 @@
     }
   ],
   "ny": [
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Shell",
+      "Address": "1733 Old Country Rd, 11901",
+      "Base": "4.29",
+      "Discount": "Shell",
+      "Lat": "40.9239801",
+      "Long": "-72.7023482",
+      "Net": "4.24"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "OK Petroleum",
+      "Address": "1212 E Main St, 11901",
+      "Base": "4.29",
+      "Discount": "-",
+      "Lat": "40.9308412",
+      "Long": "-72.6498192",
+      "Net": "4.29"
+    },
     {
       "City": "Riverhead",
       "Zip": "11901",
@@ -78,17 +111,6 @@
       "Lat": "",
       "Long": "",
       "Net": "4.42"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Shell",
-      "Address": "1733 Old Country Rd, 11901",
-      "Base": "4.29",
-      "Discount": "Shell",
-      "Lat": "40.9239801",
-      "Long": "-72.7023482",
-      "Net": "4.24"
     }
   ],
   "ma": [
