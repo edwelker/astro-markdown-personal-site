@@ -3,17 +3,6 @@
     {
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
-      "Station": "Exxon",
-      "Address": "8850 Gorman Rd, 20723",
-      "Base": "4.25",
-      "Discount": "Exxon",
-      "Lat": "39.1315805",
-      "Long": "-76.8205188",
-      "Net": "4.22"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
       "Station": "Weis",
       "Address": "9250 Washington Blvd N, 20723",
       "Base": "4.19",
@@ -32,6 +21,28 @@
       "Lat": "42.739557",
       "Long": "-83.0334814",
       "Net": "4.16"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Exxon",
+      "Address": "9275 All Saints Rd, 20723",
+      "Base": "4.29",
+      "Discount": "Exxon",
+      "Lat": "39.1189484",
+      "Long": "-76.8513125",
+      "Net": "4.26"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Exxon",
+      "Address": "8850 Gorman Rd, 20723",
+      "Base": "4.25",
+      "Discount": "Exxon",
+      "Lat": "39.1315805",
+      "Long": "-76.8205188",
+      "Net": "4.22"
     },
     {
       "City": "Scaggsville / Laurel",
@@ -60,6 +71,28 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
+      "Station": "Shell",
+      "Address": "626 W Main St, 11901",
+      "Base": "4.35",
+      "Discount": "Shell",
+      "Lat": "40.9184063",
+      "Long": "-72.6731535",
+      "Net": "4.3"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "76",
+      "Address": "415 Flanders Rd, 11901",
+      "Base": "4.29",
+      "Discount": "-",
+      "Lat": "40.9119534",
+      "Long": "-72.6471547",
+      "Net": "4.29"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
       "Station": "OK Petroleum",
       "Address": "1212 E Main St, 11901",
       "Base": "4.29",
@@ -71,13 +104,13 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
-      "Station": "Shell",
-      "Address": "626 W Main St, 11901",
+      "Station": "Mobil",
+      "Address": "1575 Old Country Rd, 11901",
       "Base": "4.35",
-      "Discount": "Shell",
-      "Lat": "40.9184063",
-      "Long": "-72.6731535",
-      "Net": "4.3"
+      "Discount": "Mobil",
+      "Lat": "40.9252206",
+      "Long": "-72.6951725",
+      "Net": "4.32"
     },
     {
       "City": "Riverhead",
@@ -93,6 +126,17 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
+      "Station": "Empire",
+      "Address": "640 Old Country Rd, 11901",
+      "Base": "4.45",
+      "Discount": "-",
+      "Lat": "40.935281",
+      "Long": "-72.6648692",
+      "Net": "4.45"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
       "Station": "Sunoco",
       "Address": "1879 Old Country Rd 58, 11901",
       "Base": "4.45",
@@ -100,17 +144,6 @@
       "Lat": "",
       "Long": "",
       "Net": "4.42"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Mobil",
-      "Address": "415 E Main St, 11901",
-      "Base": "4.29",
-      "Discount": "Mobil",
-      "Lat": "40.9182937",
-      "Long": "-72.6568979",
-      "Net": "4.26"
     }
   ],
   "ma": [
@@ -208,23 +241,23 @@
       "City": "Columbia (Town Center)",
       "Zip": "21044",
       "Station": "Exxon",
-      "Address": "10141 Little Patuxent Pkwy, 21044",
-      "Base": "4.89",
-      "Discount": "Exxon",
-      "Lat": "39.2181995",
-      "Long": "-76.8577067",
-      "Net": "4.86"
-    },
-    {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
-      "Station": "Exxon",
       "Address": "10611 Little Patuxent Pkwy, 21044",
       "Base": "4.69",
       "Discount": "Exxon",
       "Lat": "39.213332",
       "Long": "-76.8709132",
       "Net": "4.66"
+    },
+    {
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
+      "Station": "Exxon",
+      "Address": "10141 Little Patuxent Pkwy, 21044",
+      "Base": "4.89",
+      "Discount": "Exxon",
+      "Lat": "39.2181995",
+      "Long": "-76.8577067",
+      "Net": "4.86"
     }
   ]
 }
