@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 278138
+    "scrobbles": 278151
   },
   "history": [
-    {
-      "dayName": "Sun",
-      "date": "2026-09-13",
-      "hours": "3.3",
-      "lastHours": "0.0",
-      "topArtist": "James Horner"
-    },
     {
       "dayName": "Mon",
       "date": "2026-09-14",
@@ -51,6 +44,13 @@
       "hours": "0.0",
       "lastHours": "0.8",
       "topArtist": null
+    },
+    {
+      "dayName": "Sun",
+      "date": "2026-09-20",
+      "hours": "0.8",
+      "lastHours": "3.3",
+      "topArtist": "Dmitri Shostakovich"
     }
   ],
   "week": {
@@ -77,6 +77,12 @@
         "name": "Emma Ruth Rundle",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle",
         "plays": "17",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Dmitri Shostakovich",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
+        "plays": "14",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -176,12 +182,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Oran \"Juice\" Jones",
-        "url": "https://www.last.fm/music/Oran+%22Juice%22+Jones",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Ray Charles",
         "url": "https://www.last.fm/music/Ray+Charles",
         "plays": "2",
@@ -196,12 +196,6 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Beatles",
-        "url": "https://www.last.fm/music/The+Beatles",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -248,12 +242,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Dmitri Shostakovich",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Everclear",
         "url": "https://www.last.fm/music/Everclear",
         "plays": "1",
@@ -294,6 +282,18 @@
         "url": "https://www.last.fm/music/Lera+Auerbach",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Letters to Cleo",
+        "url": "https://www.last.fm/music/Letters+to+Cleo",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Live",
+        "url": "https://www.last.fm/music/Live",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -331,6 +331,13 @@
         "artist": "Wet Leg",
         "plays": "14",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7156c05ac1f14050eb2160d8ef9d7cc8.png"
+      },
+      {
+        "name": "Shostakovich: The Piano Concertos; Solo Works",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Shostakovich:+The+Piano+Concertos;+Solo+Works",
+        "artist": "Dmitri Shostakovich",
+        "plays": "13",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f8a6185d888330067fdba292097dcbc8.jpg"
       },
       {
         "name": "Dig Me Out (Remastered)",
@@ -424,13 +431,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/39bd07f6144083dbec5a65b6b759c378.jpg"
       },
       {
-        "name": "Juice",
-        "url": "https://www.last.fm/music/Oran+%22Juice%22+Jones/Juice",
-        "artist": "Oran \"Juice\" Jones",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f7cae204cb83ba843ebd062934f42c17.jpg"
-      },
-      {
         "name": "True Genius",
         "url": "https://www.last.fm/music/Ray+Charles/True+Genius",
         "artist": "Ray Charles",
@@ -443,13 +443,6 @@
         "artist": "RuPaul",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/1f548180d7b64f8a443426bcf16e73f5.png"
-      },
-      {
-        "name": "Rubber Soul (Remastered 2009)",
-        "url": "https://www.last.fm/music/The+Beatles/Rubber+Soul+(Remastered+2009)",
-        "artist": "The Beatles",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/01d7f40bb40cef0e86251d491542943b.png"
       },
       {
         "name": "Ooooooohhh... On the TLC Tip",
@@ -576,6 +569,13 @@
         "artist": "Fever Ray",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3a4830c2914442f7b69c5b682075afcb.png"
+      },
+      {
+        "name": "Elgar & Bridge: Cello Concertos",
+        "url": "https://www.last.fm/music/Gabriel+Schwabe/Elgar+&+Bridge:+Cello+Concertos",
+        "artist": "Gabriel Schwabe",
+        "plays": "1",
+        "image": ""
       }
     ],
     "tracks": [
@@ -664,6 +664,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Piano Concerto No. 2 in F Major, Op. 102: II. Andante",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Piano+Concerto+No.+2+in+F+Major,+Op.+102:+II.+Andante",
+        "artist": "Dmitri Shostakovich",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Cello Concerto in E Minor, Op. 85: IV. Allegro – Moderato – Allegro, ma non-troppo – Poco più lento – Adagio",
         "url": "https://www.last.fm/music/Edward+Elgar/_/Cello+Concerto+in+E+Minor,+Op.+85:+IV.+Allegro+%E2%80%93+Moderato+%E2%80%93+Allegro,+ma+non-troppo+%E2%80%93+Poco+pi%C3%B9+lento+%E2%80%93+Adagio",
         "artist": "Edward Elgar",
@@ -741,13 +748,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "The Rain",
-        "url": "https://www.last.fm/music/Oran+%22Juice%22+Jones/_/The+Rain",
-        "artist": "Oran \"Juice\" Jones",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Hit the Road Jack",
         "url": "https://www.last.fm/music/Ray+Charles/_/Hit+the+Road+Jack",
         "artist": "Ray Charles",
@@ -758,13 +758,6 @@
         "name": "Supermodel (You Better Work)",
         "url": "https://www.last.fm/music/RuPaul/_/Supermodel+(You+Better+Work)",
         "artist": "RuPaul",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Run for Your Life - Remastered 2009",
-        "url": "https://www.last.fm/music/The+Beatles/_/Run+for+Your+Life+-+Remastered+2009",
-        "artist": "The Beatles",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -855,6 +848,13 @@
       {
         "name": "Fallen Cloud",
         "url": "https://www.last.fm/music/Austra/_/Fallen+Cloud",
+        "artist": "Austra",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Good Riddance",
+        "url": "https://www.last.fm/music/Austra/_/Good+Riddance",
         "artist": "Austra",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -978,6 +978,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Dmitri Shostakovich",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
+        "plays": "20",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Sir Edward Elgar",
         "url": "https://www.last.fm/music/Sir+Edward+Elgar",
         "plays": "20",
@@ -1094,12 +1100,6 @@
       {
         "name": "Kaija Saariaho",
         "url": "https://www.last.fm/music/Kaija+Saariaho",
-        "plays": "10",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Maurice Ravel",
-        "url": "https://www.last.fm/music/Maurice+Ravel",
         "plays": "10",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1302,6 +1302,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7156c05ac1f14050eb2160d8ef9d7cc8.png"
       },
       {
+        "name": "Shostakovich: The Piano Concertos; Solo Works",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Shostakovich:+The+Piano+Concertos;+Solo+Works",
+        "artist": "Dmitri Shostakovich",
+        "plays": "13",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f8a6185d888330067fdba292097dcbc8.jpg"
+      },
+      {
         "name": "Bloch: Suites for Solo Cello / Dallapiccola: Ciaccona, intermezzo e adagio / Ligeti: Sonata for Solo Cello",
         "url": "https://www.last.fm/music/Ernest+Bloch/Bloch:+Suites+for+Solo+Cello+%2F+Dallapiccola:+Ciaccona,+intermezzo+e+adagio+%2F+Ligeti:+Sonata+for+Solo+Cello",
         "artist": "Ernest Bloch",
@@ -1377,13 +1384,6 @@
         "artist": "hackedepicciotto",
         "plays": "10",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/09efddf437ae2b28d49c097f3cb54709.png"
-      },
-      {
-        "name": "Thalassa",
-        "url": "https://www.last.fm/music/Ioanna+Gika/Thalassa",
-        "artist": "Ioanna Gika",
-        "plays": "10",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/59c2b982ad3c97becb2e5441e921d0eb.jpg"
       }
     ],
     "tracks": [
@@ -1692,7 +1692,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "158",
+        "plays": "171",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2518,7 +2518,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "3961",
+        "plays": "3974",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
