@@ -3,17 +3,6 @@
     {
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
-      "Station": "7-Eleven",
-      "Address": "9651 Washington Blvd N, 20723",
-      "Base": "4.19",
-      "Discount": "7-Eleven",
-      "Lat": "42.739557",
-      "Long": "-83.0334814",
-      "Net": "4.16"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
       "Station": "Weis",
       "Address": "9250 Washington Blvd N, 20723",
       "Base": "4.19",
@@ -21,6 +10,17 @@
       "Lat": "42.739557",
       "Long": "-83.0334814",
       "Net": "4.19"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "7-Eleven",
+      "Address": "9651 Washington Blvd N, 20723",
+      "Base": "4.19",
+      "Discount": "7-Eleven",
+      "Lat": "42.739557",
+      "Long": "-83.0334814",
+      "Net": "4.16"
     },
     {
       "City": "Scaggsville / Laurel",
@@ -36,28 +36,6 @@
     {
       "City": "Scaggsville / Laurel",
       "Zip": "20723",
-      "Station": "Shell",
-      "Address": "9280 All Saints Rd, 20723",
-      "Base": "4.29",
-      "Discount": "Shell",
-      "Lat": "39.1195226",
-      "Long": "-76.8519516",
-      "Net": "4.24"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
-      "Station": "Exxon",
-      "Address": "7500 Montpelier Rd, 20723",
-      "Base": "4.44",
-      "Discount": "Exxon",
-      "Lat": "39.159558",
-      "Long": "-76.893227",
-      "Net": "4.41"
-    },
-    {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
       "Station": "Exxon",
       "Address": "9275 All Saints Rd, 20723",
       "Base": "4.29",
@@ -65,6 +43,28 @@
       "Lat": "39.1189484",
       "Long": "-76.8513125",
       "Net": "4.26"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Exxon",
+      "Address": "7500 Montpelier Rd, 20723",
+      "Base": "4.49",
+      "Discount": "Exxon",
+      "Lat": "39.159558",
+      "Long": "-76.893227",
+      "Net": "4.46"
+    },
+    {
+      "City": "Scaggsville / Laurel",
+      "Zip": "20723",
+      "Station": "Shell",
+      "Address": "9280 All Saints Rd, 20723",
+      "Base": "4.29",
+      "Discount": "Shell",
+      "Lat": "39.1195226",
+      "Long": "-76.8519516",
+      "Net": "4.24"
     }
   ],
   "ny": [
@@ -82,6 +82,17 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
+      "Station": "Empire",
+      "Address": "640 Main Rd, 11901",
+      "Base": "4.39",
+      "Discount": "-",
+      "Lat": "40.9396238",
+      "Long": "-72.6416222",
+      "Net": "4.39"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
       "Station": "OK Petroleum",
       "Address": "1212 E Main St, 11901",
       "Base": "4.39",
@@ -89,28 +100,6 @@
       "Lat": "40.9308412",
       "Long": "-72.6498192",
       "Net": "4.39"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "7-Eleven",
-      "Address": "870 Old Country Rd, 11901",
-      "Base": "4.45",
-      "Discount": "7-Eleven",
-      "Lat": "40.9346058",
-      "Long": "-72.6699464",
-      "Net": "4.42"
-    },
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Shell",
-      "Address": "1733 Old Country Rd, 11901",
-      "Base": "4.39",
-      "Discount": "Shell",
-      "Lat": "40.9239801",
-      "Long": "-72.7023482",
-      "Net": "4.34"
     },
     {
       "City": "Riverhead",
@@ -126,26 +115,81 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
-      "Station": "Empire",
-      "Address": "640 Old Country Rd, 11901",
-      "Base": "4.45",
+      "Station": "76",
+      "Address": "301 Flanders Rd, 11901",
+      "Base": "4.49",
       "Discount": "-",
-      "Lat": "40.935281",
-      "Long": "-72.6648692",
-      "Net": "4.45"
+      "Lat": "40.9120984",
+      "Long": "-72.6478696",
+      "Net": "4.49"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "7-Eleven",
+      "Address": "870 Old Country Rd, 11901",
+      "Base": "4.45",
+      "Discount": "7-Eleven",
+      "Lat": "40.9346058",
+      "Long": "-72.6699464",
+      "Net": "4.42"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "76",
+      "Address": "7 Peconic Ave, 11901",
+      "Base": "4.49",
+      "Discount": "-",
+      "Lat": "40.9149773",
+      "Long": "-72.6623567",
+      "Net": "4.49"
+    },
+    {
+      "City": "Riverhead",
+      "Zip": "11901",
+      "Station": "Shell",
+      "Address": "1733 Old Country Rd, 11901",
+      "Base": "4.39",
+      "Discount": "Shell",
+      "Lat": "40.9239801",
+      "Long": "-72.7023482",
+      "Net": "4.34"
     }
   ],
   "ma": [
     {
       "City": "Springfield (East)",
       "Zip": "01104",
-      "Station": "Pride",
-      "Address": "549 Page Blvd, 01104",
+      "Station": "Gulf",
+      "Address": "1100 Page Blvd, 01104",
       "Base": "4.09",
-      "Discount": "Pride",
-      "Lat": "42.1395392",
-      "Long": "-72.5601149",
-      "Net": "3.99"
+      "Discount": "-",
+      "Lat": "42.1397596",
+      "Long": "-72.5602116",
+      "Net": "4.09"
+    },
+    {
+      "City": "Springfield (East)",
+      "Zip": "01104",
+      "Station": "Stop & Shop",
+      "Address": "1277 Liberty St, 01104",
+      "Base": "4.19",
+      "Discount": "Stop & Shop",
+      "Lat": "42.1373538",
+      "Long": "-72.5820966",
+      "Net": "4.09"
+    },
+    {
+      "City": "Springfield (East)",
+      "Zip": "01104",
+      "Station": "Racing Mart",
+      "Address": "1037 St James Ave, 01104",
+      "Base": "4.19",
+      "Discount": "-",
+      "Lat": "42.1371817",
+      "Long": "-72.5693712",
+      "Net": "4.19"
     },
     {
       "City": "Springfield (East)",
@@ -161,13 +205,24 @@
     {
       "City": "Springfield (East)",
       "Zip": "01104",
-      "Station": "Stop & Shop",
-      "Address": "1277 Liberty St, 01104",
+      "Station": "Pride",
+      "Address": "549 Page Blvd, 01104",
+      "Base": "4.24",
+      "Discount": "Pride",
+      "Lat": "42.1395392",
+      "Long": "-72.5601149",
+      "Net": "4.14"
+    },
+    {
+      "City": "Springfield (East)",
+      "Zip": "01104",
+      "Station": "Liberty Gas",
+      "Address": "668 Liberty St, 01104",
       "Base": "4.19",
-      "Discount": "Stop & Shop",
-      "Lat": "42.1373538",
-      "Long": "-72.5820966",
-      "Net": "4.09"
+      "Discount": "-",
+      "Lat": "42.1214212",
+      "Long": "-72.5846698",
+      "Net": "4.19"
     },
     {
       "City": "Springfield (East)",
@@ -194,26 +249,92 @@
     {
       "City": "Springfield (East)",
       "Zip": "01104",
-      "Station": "Gulf",
-      "Address": "1100 Page Blvd, 01104",
-      "Base": "4.09",
-      "Discount": "-",
-      "Lat": "42.1397596",
-      "Long": "-72.5602116",
-      "Net": "4.09"
+      "Station": "Shell",
+      "Address": "2221 Main St, 01104",
+      "Base": "4.39",
+      "Discount": "Shell",
+      "Lat": "42.1101407",
+      "Long": "-72.6006844",
+      "Net": "4.34"
     }
   ],
   "frederick": [
     {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
+      "City": "Columbia (East)",
+      "Zip": "21045",
+      "Station": "Liberty",
+      "Address": "6425 Dobbin Center Way, 21045",
+      "Base": "4.09",
+      "Discount": "-",
+      "Lat": "39.1968235",
+      "Long": "-76.8216821",
+      "Net": "4.09"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+      "Station": "7-Eleven",
+      "Address": "5901 Stevens Forest Rd, 21045",
+      "Base": "4.19",
+      "Discount": "7-Eleven",
+      "Lat": "39.210533",
+      "Long": "-76.847772",
+      "Net": "4.16"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
       "Station": "Exxon",
-      "Address": "10141 Little Patuxent Pkwy, 21044",
-      "Base": "4.89",
+      "Address": "6004 Foreland Garth, 21045",
+      "Base": "4.17",
       "Discount": "Exxon",
-      "Lat": "39.2181995",
-      "Long": "-76.8577067",
-      "Net": "4.86"
+      "Lat": "39.2049806",
+      "Long": "-76.8164844",
+      "Net": "4.14"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+      "Station": "7-Eleven",
+      "Address": "8251 Snowden River Pkwy, 21045",
+      "Base": "4.19",
+      "Discount": "7-Eleven",
+      "Lat": "39.2090716",
+      "Long": "-76.8034905",
+      "Net": "4.16"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+      "Station": "Exxon",
+      "Address": "7100 Minstrel Way, 21045",
+      "Base": "4.19",
+      "Discount": "Exxon",
+      "Lat": "39.177736",
+      "Long": "-76.84448",
+      "Net": "4.16"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+      "Station": "Mobil",
+      "Address": "6251 Columbia Crossing Cir, 21045",
+      "Base": "4.29",
+      "Discount": "Mobil",
+      "Lat": "39.1995215",
+      "Long": "-76.8147128",
+      "Net": "4.26"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
+      "Station": "Shell",
+      "Address": "7248 Cradlerock Way, 21045",
+      "Base": "4.29",
+      "Discount": "Shell",
+      "Lat": "39.1862523",
+      "Long": "-76.8457193",
+      "Net": "4.24"
     }
   ]
 }
