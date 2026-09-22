@@ -1,6 +1,6 @@
 {
   "user": {
-    "scrobbles": 278230
+    "scrobbles": 278245
   },
   "history": [
     {
@@ -48,7 +48,7 @@
     {
       "dayName": "Tue",
       "date": "2026-09-22",
-      "hours": "2.3",
+      "hours": "3.1",
       "lastHours": "1.2",
       "topArtist": "Type O Negative"
     }
@@ -62,6 +62,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Type O Negative",
+        "url": "https://www.last.fm/music/Type+O+Negative",
+        "plays": "23",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Ioanna Gika",
         "url": "https://www.last.fm/music/Ioanna+Gika",
         "plays": "20",
@@ -71,12 +77,6 @@
         "name": "Tori Amos",
         "url": "https://www.last.fm/music/Tori+Amos",
         "plays": "19",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Type O Negative",
-        "url": "https://www.last.fm/music/Type+O+Negative",
-        "plays": "16",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -116,6 +116,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Camille Saint-Saëns",
+        "url": "https://www.last.fm/music/Camille+Saint-Sa%C3%ABns",
+        "plays": "7",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "En Vogue",
         "url": "https://www.last.fm/music/En+Vogue",
         "plays": "4",
@@ -131,12 +137,6 @@
         "name": "Siouxsie and the Banshees",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
         "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "ABBA",
-        "url": "https://www.last.fm/music/ABBA",
-        "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -202,6 +202,12 @@
       {
         "name": "A Perfect Circle",
         "url": "https://www.last.fm/music/A+Perfect+Circle",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "ABBA",
+        "url": "https://www.last.fm/music/ABBA",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -288,12 +294,6 @@
         "url": "https://www.last.fm/music/Johann+Sebastian+Bach",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Lera Auerbach",
-        "url": "https://www.last.fm/music/Lera+Auerbach",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -361,6 +361,20 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/40a299d93d8fef4cbe1029f562d03ac9.jpg"
       },
       {
+        "name": "October Rust (Special Edition)",
+        "url": "https://www.last.fm/music/Type+O+Negative/October+Rust+(Special+Edition)",
+        "artist": "Type O Negative",
+        "plays": "8",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f7be0bd272b445e4f651208e0a87b051.jpg"
+      },
+      {
+        "name": "Saint-Saens: Sinfonie Nr.3 \"Orgelsinfonie\"",
+        "url": "https://www.last.fm/music/Peter+Hurford/Saint-Saens:+Sinfonie+Nr.3+%22Orgelsinfonie%22",
+        "artist": "Peter Hurford",
+        "plays": "7",
+        "image": ""
+      },
+      {
         "name": "Ravel: Trio for Piano, Violin and Cello in A Minor, M. 67 & Debussy: Trio for Piano, Violin and Cello in G Major, L. 3",
         "url": "https://www.last.fm/music/Andr%C3%A9+Previn/Ravel:+Trio+for+Piano,+Violin+and+Cello+in+A+Minor,+M.+67+&+Debussy:+Trio+for+Piano,+Violin+and+Cello+in+G+Major,+L.+3",
         "artist": "André Previn",
@@ -368,11 +382,18 @@
         "image": ""
       },
       {
-        "name": "October Rust (Special Edition)",
-        "url": "https://www.last.fm/music/Type+O+Negative/October+Rust+(Special+Edition)",
+        "name": "Bloody Kisses (Top Shelf Edition)",
+        "url": "https://www.last.fm/music/Type+O+Negative/Bloody+Kisses+(Top+Shelf+Edition)",
         "artist": "Type O Negative",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f7be0bd272b445e4f651208e0a87b051.jpg"
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/86d59603916c33f2edc29e99295f211c.jpg"
+      },
+      {
+        "name": "Life Is Killing Me",
+        "url": "https://www.last.fm/music/Type+O+Negative/Life+Is+Killing+Me",
+        "artist": "Type O Negative",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d7ec28f1f9834e84864d719b0a4092dd.png"
       },
       {
         "name": "Tinderbox",
@@ -382,25 +403,11 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d3f23ca602dc3dae2284e876708cd71a.png"
       },
       {
-        "name": "Bloody Kisses (Top Shelf Edition)",
-        "url": "https://www.last.fm/music/Type+O+Negative/Bloody+Kisses+(Top+Shelf+Edition)",
+        "name": "World Coming Down",
+        "url": "https://www.last.fm/music/Type+O+Negative/World+Coming+Down",
         "artist": "Type O Negative",
         "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/86d59603916c33f2edc29e99295f211c.jpg"
-      },
-      {
-        "name": "Life Is Killing Me",
-        "url": "https://www.last.fm/music/Type+O+Negative/Life+Is+Killing+Me",
-        "artist": "Type O Negative",
-        "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d7ec28f1f9834e84864d719b0a4092dd.png"
-      },
-      {
-        "name": "Super Trouper",
-        "url": "https://www.last.fm/music/ABBA/Super+Trouper",
-        "artist": "ABBA",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d4bdb055af9f2ab12f8a785983602278.png"
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c31e9911d92c44a7b6312ceb156bf78d.png"
       },
       {
         "name": "Funky Divas",
@@ -452,6 +459,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c75cafa69d2e8222706b42182def475d.png"
       },
       {
+        "name": "Bloody Kisses",
+        "url": "https://www.last.fm/music/Type+O+Negative/Bloody+Kisses",
+        "artist": "Type O Negative",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/391b090e5d946374c2c8b7092782c12b.jpg"
+      },
+      {
         "name": "Dead Again",
         "url": "https://www.last.fm/music/Type+O+Negative/Dead+Again",
         "artist": "Type O Negative",
@@ -459,18 +473,18 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/dad5ea8b069d216ca96d93c8d765a273.jpg"
       },
       {
-        "name": "World Coming Down",
-        "url": "https://www.last.fm/music/Type+O+Negative/World+Coming+Down",
-        "artist": "Type O Negative",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c31e9911d92c44a7b6312ceb156bf78d.png"
-      },
-      {
         "name": "Thirteenth Step",
         "url": "https://www.last.fm/music/A+Perfect+Circle/Thirteenth+Step",
         "artist": "A Perfect Circle",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/24d89562266bf9a622c628b0f2ca9ee1.png"
+      },
+      {
+        "name": "Super Trouper",
+        "url": "https://www.last.fm/music/ABBA/Super+Trouper",
+        "artist": "ABBA",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d4bdb055af9f2ab12f8a785983602278.png"
       },
       {
         "name": "Vision Mantra",
@@ -562,20 +576,6 @@
         "artist": "Dmitri Shostakovich",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5d1e98ec71e53c98ae1c668785cd0d96.jpg"
-      },
-      {
-        "name": "Elgar: Cello Concerto, Op. 85 & Sea Pictures, Op. 37",
-        "url": "https://www.last.fm/music/Edward+Elgar/Elgar:+Cello+Concerto,+Op.+85+&+Sea+Pictures,+Op.+37",
-        "artist": "Edward Elgar",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/15757d6b97ebfaf734c7c8d6e6ed260c.jpg"
-      },
-      {
-        "name": "Born to Sing",
-        "url": "https://www.last.fm/music/En+Vogue/Born+to+Sing",
-        "artist": "En Vogue",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8c006e86db9db3f03fb435aaff475c88.jpg"
       }
     ],
     "tracks": [
@@ -633,13 +633,6 @@
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Powerless",
         "artist": "Emma Ruth Rundle",
         "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Winner Takes It All",
-        "url": "https://www.last.fm/music/ABBA/_/The+Winner+Takes+It+All",
-        "artist": "ABBA",
-        "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -790,9 +783,65 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Anesthesia",
+        "url": "https://www.last.fm/music/Type+O+Negative/_/Anesthesia",
+        "artist": "Type O Negative",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Be My Druidess",
+        "url": "https://www.last.fm/music/Type+O+Negative/_/Be+My+Druidess",
+        "artist": "Type O Negative",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Christian Woman",
+        "url": "https://www.last.fm/music/Type+O+Negative/_/Christian+Woman",
+        "artist": "Type O Negative",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Love You to Death",
+        "url": "https://www.last.fm/music/Type+O+Negative/_/Love+You+to+Death",
+        "artist": "Type O Negative",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "My Girlfriend's Girlfriend",
+        "url": "https://www.last.fm/music/Type+O+Negative/_/My+Girlfriend%27s+Girlfriend",
+        "artist": "Type O Negative",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Pyretta Blaze",
+        "url": "https://www.last.fm/music/Type+O+Negative/_/Pyretta+Blaze",
+        "artist": "Type O Negative",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Summer Breeze",
+        "url": "https://www.last.fm/music/Type+O+Negative/_/Summer+Breeze",
+        "artist": "Type O Negative",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Pet",
         "url": "https://www.last.fm/music/A+Perfect+Circle/_/Pet",
         "artist": "A Perfect Circle",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Winner Takes It All",
+        "url": "https://www.last.fm/music/ABBA/_/The+Winner+Takes+It+All",
+        "artist": "ABBA",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -807,55 +856,6 @@
         "name": "Bela Lugosi's Dead (official version)",
         "url": "https://www.last.fm/music/Bauhaus/_/Bela+Lugosi%27s+Dead+(official+version)",
         "artist": "Bauhaus",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Loser",
-        "url": "https://www.last.fm/music/Beck/_/Loser",
-        "artist": "Beck",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Bartók: Piano Concerto No. 3 in E Major, Sz. 119: I. Allegretto",
-        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k/_/Bart%C3%B3k:+Piano+Concerto+No.+3+in+E+Major,+Sz.+119:+I.+Allegretto",
-        "artist": "Béla Bartók",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Rhapsody No. 1 for Violin and Orchestra, Sz. 87: I. Lassú. Moderato",
-        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k/_/Rhapsody+No.+1+for+Violin+and+Orchestra,+Sz.+87:+I.+Lass%C3%BA.+Moderato",
-        "artist": "Béla Bartók",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Feed the Tree",
-        "url": "https://www.last.fm/music/Belly/_/Feed+the+Tree",
-        "artist": "Belly",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Army of Me",
-        "url": "https://www.last.fm/music/Bj%C3%B6rk/_/Army+of+Me",
-        "artist": "Björk",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "A chorus like distant screaming",
-        "url": "https://www.last.fm/music/Carrie+Frey/_/A+chorus+like+distant+screaming",
-        "artist": "Carrie Frey",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Jolene - slowed and reverbed",
-        "url": "https://www.last.fm/music/Covers+Unplugged/_/Jolene+-+slowed+and+reverbed",
-        "artist": "Covers Unplugged",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -954,6 +954,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Type O Negative",
+        "url": "https://www.last.fm/music/Type+O+Negative",
+        "plays": "23",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Busta Rhymes",
         "url": "https://www.last.fm/music/Busta+Rhymes",
         "plays": "22",
@@ -1022,12 +1028,6 @@
       {
         "name": "Nirvana",
         "url": "https://www.last.fm/music/Nirvana",
-        "plays": "16",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Type O Negative",
-        "url": "https://www.last.fm/music/Type+O+Negative",
         "plays": "16",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1686,7 +1686,7 @@
       {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "210",
+        "plays": "173",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1834,12 +1834,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Rasputina",
-        "url": "https://www.last.fm/music/Rasputina",
-        "plays": "67",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Dobrinka Tabakova",
         "url": "https://www.last.fm/music/Dobrinka+Tabakova",
         "plays": "66",
@@ -1848,6 +1842,12 @@
       {
         "name": "Miklós Rózsa",
         "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
+        "plays": "64",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Rasputina",
+        "url": "https://www.last.fm/music/Rasputina",
         "plays": "64",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
