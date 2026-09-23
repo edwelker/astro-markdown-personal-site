@@ -1,6 +1,6 @@
 {
   "user": {
-    "scrobbles": 278263
+    "scrobbles": 278281
   },
   "history": [
     {
@@ -41,16 +41,16 @@
     {
       "dayName": "Tue",
       "date": "2026-09-22",
-      "hours": "3.2",
+      "hours": "3.3",
       "lastHours": "1.2",
       "topArtist": "Type O Negative"
     },
     {
       "dayName": "Wed",
       "date": "2026-09-23",
-      "hours": "1.0",
+      "hours": "2.0",
       "lastHours": "4.7",
-      "topArtist": "Ragana"
+      "topArtist": "Caroline Shaw"
     }
   ],
   "week": {
@@ -74,12 +74,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Tori Amos",
-        "url": "https://www.last.fm/music/Tori+Amos",
-        "plays": "19",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
         "plays": "15",
@@ -89,6 +83,12 @@
         "name": "Sleater-Kinney",
         "url": "https://www.last.fm/music/Sleater-Kinney",
         "plays": "13",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Caroline Shaw",
+        "url": "https://www.last.fm/music/Caroline+Shaw",
+        "plays": "10",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -116,6 +116,18 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Terry Reid",
+        "url": "https://www.last.fm/music/Terry+Reid",
+        "plays": "7",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Siouxsie and the Banshees",
+        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "En Vogue",
         "url": "https://www.last.fm/music/En+Vogue",
         "plays": "4",
@@ -124,12 +136,6 @@
       {
         "name": "Maurice Ravel",
         "url": "https://www.last.fm/music/Maurice+Ravel",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Siouxsie and the Banshees",
-        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
         "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -288,12 +294,6 @@
         "url": "https://www.last.fm/music/Frank+Bridge",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Hole",
-        "url": "https://www.last.fm/music/Hole",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -312,13 +312,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/59c2b982ad3c97becb2e5441e921d0eb.jpg"
       },
       {
-        "name": "Boys for Pele (Deluxe Edition)",
-        "url": "https://www.last.fm/music/Tori+Amos/Boys+for+Pele+(Deluxe+Edition)",
-        "artist": "Tori Amos",
-        "plays": "19",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/93ce132b186f99a6d0e5aa2919de4733.jpg"
-      },
-      {
         "name": "Shostakovich: The Piano Concertos; Solo Works",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich/Shostakovich:+The+Piano+Concertos;+Solo+Works",
         "artist": "Dmitri Shostakovich",
@@ -331,6 +324,13 @@
         "artist": "Sleater-Kinney",
         "plays": "13",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/55acfdff363ae8ebf8242b1834e21453.jpg"
+      },
+      {
+        "name": "Caroline Shaw: Orange",
+        "url": "https://www.last.fm/music/Caroline+Shaw/Caroline+Shaw:+Orange",
+        "artist": "Caroline Shaw",
+        "plays": "10",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/42d7e1d3c57db3d8a37f6ed181b6374b.jpg"
       },
       {
         "name": "The Current",
@@ -366,6 +366,13 @@
         "artist": "Peter Hurford",
         "plays": "7",
         "image": ""
+      },
+      {
+        "name": "Seed Of Memory",
+        "url": "https://www.last.fm/music/Terry+Reid/Seed+Of+Memory",
+        "artist": "Terry Reid",
+        "plays": "7",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2bcc0ba90c5745b6975e5135f3e6de13.jpg"
       },
       {
         "name": "Ravel: Trio for Piano, Violin and Cello in A Minor, M. 67 & Debussy: Trio for Piano, Violin and Cello in G Major, L. 3",
@@ -450,6 +457,13 @@
         "artist": "Rob Zombie",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e0f0fc5a8edeccd6c1e329a7db3e8ba1.jpg"
+      },
+      {
+        "name": "Juju",
+        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/Juju",
+        "artist": "Siouxsie and the Banshees",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7653da5c1d3d4aebca9a1e1378b90cc0.png"
       },
       {
         "name": "Hatful of Hollow",
@@ -562,20 +576,6 @@
         "artist": "Covers Unplugged",
         "plays": "1",
         "image": ""
-      },
-      {
-        "name": "Barrio Fino (Bonus Track Version)",
-        "url": "https://www.last.fm/music/Daddy+Yankee/Barrio+Fino+(Bonus+Track+Version)",
-        "artist": "Daddy Yankee",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/18ca74d3172f4f3b872f2c6d063ca702.jpg"
-      },
-      {
-        "name": "Music Can Hear Us",
-        "url": "https://www.last.fm/music/DJ+Koze/Music+Can+Hear+Us",
-        "artist": "DJ Koze",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4b8ee23bbe293e31c0f45d8d525617f9.png"
       }
     ],
     "tracks": [
@@ -755,6 +755,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Spellbound",
+        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/_/Spellbound",
+        "artist": "Siouxsie and the Banshees",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "How Soon Is Now? - 2011 Remaster",
         "url": "https://www.last.fm/music/The+Smiths/_/How+Soon+Is+Now%3F+-+2011+Remaster",
         "artist": "The Smiths",
@@ -849,13 +856,6 @@
         "name": "Loser",
         "url": "https://www.last.fm/music/Beck/_/Loser",
         "artist": "Beck",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Bartók: Piano Concerto No. 3 in E Major, Sz. 119: I. Allegretto",
-        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k/_/Bart%C3%B3k:+Piano+Concerto+No.+3+in+E+Major,+Sz.+119:+I.+Allegretto",
-        "artist": "Béla Bartók",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1068,6 +1068,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Caroline Shaw",
+        "url": "https://www.last.fm/music/Caroline+Shaw",
+        "plays": "12",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Edgar Meyer",
         "url": "https://www.last.fm/music/Edgar+Meyer",
         "plays": "12",
@@ -1095,12 +1101,6 @@
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
         "plays": "11",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Cheryl Frances-Hoad",
-        "url": "https://www.last.fm/music/Cheryl+Frances-Hoad",
-        "plays": "10",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
@@ -1330,6 +1330,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/55acfdff363ae8ebf8242b1834e21453.jpg"
       },
       {
+        "name": "Caroline Shaw: Orange",
+        "url": "https://www.last.fm/music/Caroline+Shaw/Caroline+Shaw:+Orange",
+        "artist": "Caroline Shaw",
+        "plays": "12",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/42d7e1d3c57db3d8a37f6ed181b6374b.jpg"
+      },
+      {
         "name": "Perpetuum Mobile",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Perpetuum+Mobile",
         "artist": "Einstürzende Neubauten",
@@ -1377,13 +1384,6 @@
         "artist": "Carrie Frey",
         "plays": "10",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b58718d42f12915e39ae0e2d1a4046a7.jpg"
-      },
-      {
-        "name": "Grundstück",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Grundst%C3%BCck",
-        "artist": "Einstürzende Neubauten",
-        "plays": "10",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4490d85e31754333c347cbf90f224e28.png"
       }
     ],
     "tracks": [
@@ -1728,7 +1728,13 @@
       {
         "name": "Siouxsie and the Banshees",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
-        "plays": "112",
+        "plays": "113",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Caroline Shaw",
+        "url": "https://www.last.fm/music/Caroline+Shaw",
+        "plays": "110",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1747,12 +1753,6 @@
         "name": "Carl Nielsen",
         "url": "https://www.last.fm/music/Carl+Nielsen",
         "plays": "101",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Caroline Shaw",
-        "url": "https://www.last.fm/music/Caroline+Shaw",
-        "plays": "100",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2124,13 +2124,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/491393c31cc2d0d6c3ed63780854235e.jpg"
       },
       {
-        "name": "American Concertos",
-        "url": "https://www.last.fm/music/Leonard+Bernstein/American+Concertos",
-        "artist": "Leonard Bernstein",
-        "plays": "37",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/236b2cef8a10793af24d2879d780e415.png"
-      },
-      {
         "name": "Prokofiev: Piano Concerto no. 2 / Tchaikovsky: Piano Concerto no. 1",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev:+Piano+Concerto+no.+2+%2F+Tchaikovsky:+Piano+Concerto+no.+1",
         "artist": "Sergei Prokofiev",
@@ -2180,6 +2173,13 @@
         "image": ""
       },
       {
+        "name": "Juju",
+        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/Juju",
+        "artist": "Siouxsie and the Banshees",
+        "plays": "34",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7653da5c1d3d4aebca9a1e1378b90cc0.png"
+      },
+      {
         "name": "CALIGULA",
         "url": "https://www.last.fm/music/Lingua+Ignota/CALIGULA",
         "artist": "Lingua Ignota",
@@ -2187,11 +2187,11 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/963269723079464606685c3093a06c68.jpg"
       },
       {
-        "name": "Juju",
-        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/Juju",
-        "artist": "Siouxsie and the Banshees",
-        "plays": "33",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7653da5c1d3d4aebca9a1e1378b90cc0.png"
+        "name": "May Our Chambers Be Full",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle+&+Thou/May+Our+Chambers+Be+Full",
+        "artist": "Emma Ruth Rundle & Thou",
+        "plays": "32",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b948335223d65555a3ff0410f0f0b0b2.jpg"
       }
     ],
     "tracks": [
@@ -2315,6 +2315,27 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Entr'acte",
+        "url": "https://www.last.fm/music/Caroline+Shaw/_/Entr%27acte",
+        "artist": "Caroline Shaw",
+        "plays": "13",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Plan & Elevation: III. The Herbaceous Border",
+        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+III.+The+Herbaceous+Border",
+        "artist": "Caroline Shaw",
+        "plays": "13",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Plan & Elevation: V. The Beech Tree",
+        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+V.+The+Beech+Tree",
+        "artist": "Caroline Shaw",
+        "plays": "13",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Cello Concerto in C Minor, Op. 66: II. Allegro vivace - Andante semplice e tranquillo - Lento come prima",
         "url": "https://www.last.fm/music/Mstislav+Rostropovich/_/Cello+Concerto+in+C+Minor,+Op.+66:+II.+Allegro+vivace+-+Andante+semplice+e+tranquillo+-+Lento+come+prima",
         "artist": "Mstislav Rostropovich",
@@ -2322,29 +2343,22 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Entr'acte",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Entr%27acte",
-        "artist": "Caroline Shaw",
-        "plays": "12",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Plan & Elevation: III. The Herbaceous Border",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+III.+The+Herbaceous+Border",
-        "artist": "Caroline Shaw",
-        "plays": "12",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Plan & Elevation: V. The Beech Tree",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+V.+The+Beech+Tree",
-        "artist": "Caroline Shaw",
-        "plays": "12",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Plan & Elevation: IV. The Orangery",
         "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+IV.+The+Orangery",
+        "artist": "Caroline Shaw",
+        "plays": "12",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Plan & Elevation: I. The Ellipse",
+        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+I.+The+Ellipse",
+        "artist": "Caroline Shaw",
+        "plays": "11",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Plan & Elevation: II. The Cutting Garden",
+        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+II.+The+Cutting+Garden",
         "artist": "Caroline Shaw",
         "plays": "11",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -2364,20 +2378,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Plan & Elevation: I. The Ellipse",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+I.+The+Ellipse",
-        "artist": "Caroline Shaw",
-        "plays": "10",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Plan & Elevation: II. The Cutting Garden",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+II.+The+Cutting+Garden",
-        "artist": "Caroline Shaw",
-        "plays": "10",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Piano Concerto No. 2 in G Minor, Op. 16: III. Intermezzo. Allegro moderato",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Piano+Concerto+No.+2+in+G+Minor,+Op.+16:+III.+Intermezzo.+Allegro+moderato",
         "artist": "Sergei Prokofiev",
@@ -2392,9 +2392,30 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Punctum",
+        "url": "https://www.last.fm/music/Caroline+Shaw/_/Punctum",
+        "artist": "Caroline Shaw",
+        "plays": "9",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Valencia",
+        "url": "https://www.last.fm/music/Caroline+Shaw/_/Valencia",
+        "artist": "Caroline Shaw",
+        "plays": "9",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Oration, Concerto elegiaco, H. 180: VIII. Epilogue. Andante tranquillo",
         "url": "https://www.last.fm/music/Frank+Bridge/_/Oration,+Concerto+elegiaco,+H.+180:+VIII.+Epilogue.+Andante+tranquillo",
         "artist": "Frank Bridge",
+        "plays": "9",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Spellbound",
+        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/_/Spellbound",
+        "artist": "Siouxsie and the Banshees",
         "plays": "9",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -2406,15 +2427,8 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Punctum",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Punctum",
-        "artist": "Caroline Shaw",
-        "plays": "8",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Valencia",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Valencia",
+        "name": "Ritornello 2.sq.2.j.a",
+        "url": "https://www.last.fm/music/Caroline+Shaw/_/Ritornello+2.sq.2.j.a",
         "artist": "Caroline Shaw",
         "plays": "8",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -2430,13 +2444,6 @@
         "name": "Piano Concerto No. 2 in G minor, Op. 16: IV. Finale. Allegro tempestoso",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Piano+Concerto+No.+2+in+G+minor,+Op.+16:+IV.+Finale.+Allegro+tempestoso",
         "artist": "Sergei Prokofiev",
-        "plays": "8",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Spellbound",
-        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/_/Spellbound",
-        "artist": "Siouxsie and the Banshees",
         "plays": "8",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -2464,13 +2471,6 @@
       {
         "name": "Abstractions: III. Seascape (Inspired by Hiroshi Sugimoto's Caribbean Sea, Jamaica, 1980)",
         "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+III.+Seascape+(Inspired+by+Hiroshi+Sugimoto%27s+Caribbean+Sea,+Jamaica,+1980)",
-        "artist": "Anna Clyne",
-        "plays": "7",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Abstractions: IV. River (Inspired by Ellsworth Kelly's River II, 2005)",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+IV.+River+(Inspired+by+Ellsworth+Kelly%27s+River+II,+2005)",
         "artist": "Anna Clyne",
         "plays": "7",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -2530,7 +2530,7 @@
       {
         "name": "Siouxsie and the Banshees",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
-        "plays": "3310",
+        "plays": "3311",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2956,7 +2956,7 @@
         "name": "Caroline Shaw: Orange",
         "url": "https://www.last.fm/music/Caroline+Shaw/Caroline+Shaw:+Orange",
         "artist": "Caroline Shaw",
-        "plays": "705",
+        "plays": "715",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/42d7e1d3c57db3d8a37f6ed181b6374b.jpg"
       },
       {
@@ -2984,7 +2984,7 @@
         "name": "Juju",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/Juju",
         "artist": "Siouxsie and the Banshees",
-        "plays": "638",
+        "plays": "639",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7653da5c1d3d4aebca9a1e1378b90cc0.png"
       },
       {
@@ -3063,7 +3063,7 @@
         "name": "Plan & Elevation: V. The Beech Tree",
         "url": "https://www.last.fm/music/Caroline+Shaw/_/Plan+&+Elevation:+V.+The+Beech+Tree",
         "artist": "Caroline Shaw",
-        "plays": "261",
+        "plays": "262",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
