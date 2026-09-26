@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 278367
+    "scrobbles": 278373
   },
   "history": [
-    {
-      "dayName": "Sat",
-      "date": "2026-09-19",
-      "hours": "0.0",
-      "lastHours": "0.8",
-      "topArtist": null
-    },
     {
       "dayName": "Sun",
       "date": "2026-09-20",
@@ -51,6 +44,13 @@
       "hours": "0.8",
       "lastHours": "1.7",
       "topArtist": "Witold Lutosławski"
+    },
+    {
+      "dayName": "Sat",
+      "date": "2026-09-26",
+      "hours": "0.3",
+      "lastHours": "0.0",
+      "topArtist": "Emma Ruth Rundle & Thou"
     }
   ],
   "week": {
@@ -104,14 +104,14 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Terry Reid",
-        "url": "https://www.last.fm/music/Terry+Reid",
-        "plays": "8",
+        "name": "Witold Lutosławski",
+        "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski",
+        "plays": "9",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Witold Lutosławski",
-        "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski",
+        "name": "Terry Reid",
+        "url": "https://www.last.fm/music/Terry+Reid",
         "plays": "8",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -130,6 +130,12 @@
       {
         "name": "Edgar Meyer",
         "url": "https://www.last.fm/music/Edgar+Meyer",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Emma Ruth Rundle & Thou",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle+&+Thou",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -288,12 +294,6 @@
         "url": "https://www.last.fm/music/%C3%98",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Oneohtrix Point Never",
-        "url": "https://www.last.fm/music/Oneohtrix+Point+Never",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -361,6 +361,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d3f23ca602dc3dae2284e876708cd71a.png"
       },
       {
+        "name": "Symphonies / Concertos / Choral and Vocal Works",
+        "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski/Symphonies+%2F+Concertos+%2F+Choral+and+Vocal+Works",
+        "artist": "Witold Lutosławski",
+        "plays": "9",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/68a56f2ad11befccf91c09c4fe881653.png"
+      },
+      {
         "name": "Seed Of Memory",
         "url": "https://www.last.fm/music/Terry+Reid/Seed+Of+Memory",
         "artist": "Terry Reid",
@@ -373,13 +380,6 @@
         "artist": "Type O Negative",
         "plays": "8",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f7be0bd272b445e4f651208e0a87b051.jpg"
-      },
-      {
-        "name": "Symphonies / Concertos / Choral and Vocal Works",
-        "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski/Symphonies+%2F+Concertos+%2F+Choral+and+Vocal+Works",
-        "artist": "Witold Lutosławski",
-        "plays": "8",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/68a56f2ad11befccf91c09c4fe881653.png"
       },
       {
         "name": "Saint-Saens: Sinfonie Nr.3 \"Orgelsinfonie\"",
@@ -408,6 +408,13 @@
         "artist": "Siouxsie and the Banshees",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/1a0eb1e20dec6f97d51ce2ec64d7f4c0.jpg"
+      },
+      {
+        "name": "The Helm of Sorrow",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle+&+Thou/The+Helm+of+Sorrow",
+        "artist": "Emma Ruth Rundle & Thou",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e8efe0b38a5bb2e80ee147e6da2a67ce.jpg"
       },
       {
         "name": "Bloody Kisses (Top Shelf Edition)",
@@ -543,6 +550,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4b8ee23bbe293e31c0f45d8d525617f9.png"
       },
       {
+        "name": "May Our Chambers Be Full",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle+&+Thou/May+Our+Chambers+Be+Full",
+        "artist": "Emma Ruth Rundle & Thou",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b948335223d65555a3ff0410f0f0b0b2.jpg"
+      },
+      {
         "name": "This Is Real",
         "url": "https://www.last.fm/music/feeble+little+horse/This+Is+Real",
         "artist": "feeble little horse",
@@ -562,20 +576,6 @@
         "artist": "Hole",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6373e00a55bdbd68fe24369d2d05b2ee.jpg"
-      },
-      {
-        "name": "skin",
-        "url": "https://www.last.fm/music/kllhhr/skin",
-        "artist": "kllhhr",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5eae72a6a3e0bc00b0291f4857b858d7.jpg"
-      },
-      {
-        "name": "Henry, Come On",
-        "url": "https://www.last.fm/music/Lana+Del+Rey/Henry,+Come+On",
-        "artist": "Lana Del Rey",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8c9d177822f033956b2a494035763a71.jpg"
       }
     ],
     "tracks": [
@@ -1098,9 +1098,9 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Alan Hovhaness",
-        "url": "https://www.last.fm/music/Alan+Hovhaness",
-        "plays": "11",
+        "name": "Emma Ruth Rundle & Thou",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle+&+Thou",
+        "plays": "12",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
@@ -1854,7 +1854,7 @@
       {
         "name": "Witold Lutosławski",
         "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski",
-        "plays": "62",
+        "plays": "63",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2173,18 +2173,18 @@
         "image": ""
       },
       {
+        "name": "May Our Chambers Be Full",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle+&+Thou/May+Our+Chambers+Be+Full",
+        "artist": "Emma Ruth Rundle & Thou",
+        "plays": "33",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b948335223d65555a3ff0410f0f0b0b2.jpg"
+      },
+      {
         "name": "CALIGULA",
         "url": "https://www.last.fm/music/Lingua+Ignota/CALIGULA",
         "artist": "Lingua Ignota",
         "plays": "33",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/963269723079464606685c3093a06c68.jpg"
-      },
-      {
-        "name": "May Our Chambers Be Full",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle+&+Thou/May+Our+Chambers+Be+Full",
-        "artist": "Emma Ruth Rundle & Thou",
-        "plays": "32",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b948335223d65555a3ff0410f0f0b0b2.jpg"
       },
       {
         "name": "Anna Clyne: DANCE • Elgar: Cello Concerto",

@@ -1,51 +1,40 @@
 {
   "md": [
     {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
       "Station": "Exxon",
-      "Address": "8850 Gorman Rd, 20723",
-      "Base": "4.39",
+      "Address": "10611 Little Patuxent Pkwy, 21044",
+      "Base": "4.89",
       "Discount": "Exxon",
-      "Lat": "39.1315805",
-      "Long": "-76.8205188",
-      "Net": "4.36"
+      "Lat": "39.213332",
+      "Long": "-76.8709132",
+      "Net": "4.86"
     },
     {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
-      "Station": "7-Eleven",
-      "Address": "9651 Washington Blvd N, 20723",
-      "Base": "4.39",
-      "Discount": "7-Eleven",
-      "Lat": "42.739557",
-      "Long": "-83.0334814",
-      "Net": "4.36"
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
+      "Station": "Exxon",
+      "Address": "10141 Little Patuxent Pkwy, 21044",
+      "Base": "4.99",
+      "Discount": "Exxon",
+      "Lat": "39.2181995",
+      "Long": "-76.8577067",
+      "Net": "4.96"
     },
     {
-      "City": "Scaggsville / Laurel",
-      "Zip": "20723",
-      "Station": "Exxon",
-      "Address": "7500 Montpelier Rd, 20723",
-      "Base": "4.49",
-      "Discount": "Exxon",
-      "Lat": "39.159558",
-      "Long": "-76.893227",
-      "Net": "4.46"
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
+      "Station": "Sunoco",
+      "Address": "6440 Freetown Rd, 21044",
+      "Base": "4.86",
+      "Discount": "Sunoco",
+      "Lat": "39.1950229",
+      "Long": "-76.8817831",
+      "Net": "4.83"
     }
   ],
   "ny": [
-    {
-      "City": "Riverhead",
-      "Zip": "11901",
-      "Station": "Sunoco",
-      "Address": "1879 Old Country Rd 58, 11901",
-      "Base": "4.35",
-      "Discount": "Sunoco",
-      "Lat": "",
-      "Long": "",
-      "Net": "4.32"
-    },
     {
       "City": "Riverhead",
       "Zip": "11901",
@@ -93,48 +82,37 @@
     {
       "City": "Riverhead",
       "Zip": "11901",
-      "Station": "Shell",
-      "Address": "1733 Old Country Rd, 11901",
-      "Base": "4.47",
-      "Discount": "Shell",
-      "Lat": "40.9239801",
-      "Long": "-72.7023482",
-      "Net": "4.42"
+      "Station": "Sunoco",
+      "Address": "1879 Old Country Rd 58, 11901",
+      "Base": "4.35",
+      "Discount": "Sunoco",
+      "Lat": "",
+      "Long": "",
+      "Net": "4.32"
     }
   ],
   "ma": [
     {
       "City": "Springfield (East)",
       "Zip": "01104",
-      "Station": "Stop & Shop",
-      "Address": "1277 Liberty St, 01104",
-      "Base": "4.19",
-      "Discount": "Stop & Shop",
-      "Lat": "42.1373538",
-      "Long": "-72.5820966",
-      "Net": "4.09"
+      "Station": "Gulf",
+      "Address": "1100 Page Blvd, 01104",
+      "Base": "4.1",
+      "Discount": "-",
+      "Lat": "42.1397596",
+      "Long": "-72.5602116",
+      "Net": "4.1"
     },
     {
       "City": "Springfield (East)",
       "Zip": "01104",
-      "Station": "Pride",
-      "Address": "77 West St, 01104",
-      "Base": "4.23",
-      "Discount": "Pride",
-      "Lat": "42.1435596",
-      "Long": "-72.6112724",
-      "Net": "4.13"
-    },
-    {
-      "City": "Springfield (East)",
-      "Zip": "01104",
-      "Station": "Pride",
-      "Address": "549 Page Blvd, 01104",
-      "Base": "4.24",
-      "Discount": "Pride",
-      "Lat": "42.1395392",
-      "Long": "-72.5601149",
-      "Net": "4.14"
+      "Station": "CITGO",
+      "Address": "1271 Page Blvd, 01104",
+      "Base": "4.11",
+      "Discount": "-",
+      "Lat": "42.1498946",
+      "Long": "-72.5374867",
+      "Net": "4.11"
     },
     {
       "City": "Springfield (East)",
@@ -150,71 +128,38 @@
     {
       "City": "Springfield (East)",
       "Zip": "01104",
-      "Station": "Speedway",
-      "Address": "80 St James Blvd, 01104",
-      "Base": "4.19",
-      "Discount": "Speedway",
-      "Lat": "42.1356575",
-      "Long": "-72.5683105",
+      "Station": "Pride",
+      "Address": "77 West St, 01104",
+      "Base": "4.39",
+      "Discount": "Pride",
+      "Lat": "42.1435596",
+      "Long": "-72.6112724",
+      "Net": "4.29"
+    },
+    {
+      "City": "Springfield (East)",
+      "Zip": "01104",
+      "Station": "Pride",
+      "Address": "549 Page Blvd, 01104",
+      "Base": "4.24",
+      "Discount": "Pride",
+      "Lat": "42.1395392",
+      "Long": "-72.5601149",
       "Net": "4.14"
     },
     {
       "City": "Springfield (East)",
       "Zip": "01104",
-      "Station": "Racing Mart",
-      "Address": "612 Carew St, 01104",
+      "Station": "Stop & Shop",
+      "Address": "1277 Liberty St, 01104",
       "Base": "4.19",
-      "Discount": "-",
-      "Lat": "42.1225238",
-      "Long": "-72.5887328",
-      "Net": "4.19"
-    },
-    {
-      "City": "Springfield (East)",
-      "Zip": "01104",
-      "Station": "Shell",
-      "Address": "2221 Main St, 01104",
-      "Base": "4.39",
-      "Discount": "Shell",
-      "Lat": "42.1101407",
-      "Long": "-72.6006844",
-      "Net": "4.34"
-    },
-    {
-      "City": "Springfield (East)",
-      "Zip": "01104",
-      "Station": "CITGO",
-      "Address": "1271 Page Blvd, 01104",
-      "Base": "4.15",
-      "Discount": "-",
-      "Lat": "42.1498946",
-      "Long": "-72.5374867",
-      "Net": "4.15"
-    },
-    {
-      "City": "Springfield (East)",
-      "Zip": "01104",
-      "Station": "Cumberland Farms",
-      "Address": "798 Carew St, 01104",
-      "Base": "4.23",
-      "Discount": "Cumberland",
-      "Lat": "42.1258915",
-      "Long": "-72.5841307",
-      "Net": "4.13"
+      "Discount": "Stop & Shop",
+      "Lat": "42.1373538",
+      "Long": "-72.5820966",
+      "Net": "4.09"
     }
   ],
   "frederick": [
-    {
-      "City": "Columbia (Town Center)",
-      "Zip": "21044",
-      "Station": "Sunoco",
-      "Address": "6440 Freetown Rd, 21044",
-      "Base": "4.86",
-      "Discount": "Sunoco",
-      "Lat": "39.1950229",
-      "Long": "-76.8817831",
-      "Net": "4.83"
-    },
     {
       "City": "Columbia (Town Center)",
       "Zip": "21044",
@@ -236,6 +181,17 @@
       "Lat": "39.2181995",
       "Long": "-76.8577067",
       "Net": "4.96"
+    },
+    {
+      "City": "Columbia (Town Center)",
+      "Zip": "21044",
+      "Station": "Sunoco",
+      "Address": "6440 Freetown Rd, 21044",
+      "Base": "4.86",
+      "Discount": "Sunoco",
+      "Lat": "39.1950229",
+      "Long": "-76.8817831",
+      "Net": "4.83"
     }
   ]
 }
