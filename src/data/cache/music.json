@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 278466
+    "scrobbles": 278514
   },
   "history": [
-    {
-      "dayName": "Mon",
-      "date": "2026-09-21",
-      "hours": "1.8",
-      "lastHours": "2.4",
-      "topArtist": "Emma Ruth Rundle"
-    },
     {
       "dayName": "Tue",
       "date": "2026-09-22",
@@ -51,6 +44,13 @@
       "hours": "2.2",
       "lastHours": "1.3",
       "topArtist": "Taylor Swift"
+    },
+    {
+      "dayName": "Mon",
+      "date": "2026-09-28",
+      "hours": "2.8",
+      "lastHours": "1.8",
+      "topArtist": "Александр Николаевич Черепнин"
     }
   ],
   "week": {
@@ -59,6 +59,12 @@
         "name": "Taylor Swift",
         "url": "https://www.last.fm/music/Taylor+Swift",
         "plays": "68",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Александр Николаевич Черепнин",
+        "url": "https://www.last.fm/music/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87+%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%BD%D0%B8%D0%BD",
+        "plays": "30",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -80,26 +86,20 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Emma Ruth Rundle",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle",
-        "plays": "17",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Ernest Bloch",
         "url": "https://www.last.fm/music/Ernest+Bloch",
         "plays": "13",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Caroline Shaw",
-        "url": "https://www.last.fm/music/Caroline+Shaw",
+        "name": "Alfred Schnittke",
+        "url": "https://www.last.fm/music/Alfred+Schnittke",
         "plays": "10",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Ioanna Gika",
-        "url": "https://www.last.fm/music/Ioanna+Gika",
+        "name": "Caroline Shaw",
+        "url": "https://www.last.fm/music/Caroline+Shaw",
         "plays": "10",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -140,6 +140,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Arvo Pärt",
+        "url": "https://www.last.fm/music/Arvo+P%C3%A4rt",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Edgar Meyer",
         "url": "https://www.last.fm/music/Edgar+Meyer",
         "plays": "5",
@@ -154,6 +160,12 @@
       {
         "name": "Luigi Dallapiccola",
         "url": "https://www.last.fm/music/Luigi+Dallapiccola",
+        "plays": "3",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Nikolai Girshevich Kapustin",
+        "url": "https://www.last.fm/music/Nikolai+Girshevich+Kapustin",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -282,18 +294,6 @@
         "url": "https://www.last.fm/music/Limp+Bizkit",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Lov'Nee",
-        "url": "https://www.last.fm/music/Lov%27Nee",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Massive Attack",
-        "url": "https://www.last.fm/music/Massive+Attack",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -305,11 +305,11 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/837e4d37b0c4a0a65eb12177e1afb8ee.png"
       },
       {
-        "name": "These Killing Times",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/These+Killing+Times",
-        "artist": "Emma Ruth Rundle",
-        "plays": "17",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d6c56122fc2cd8fe18e51456714ef788.jpg"
+        "name": "The Symphonies and Piano Concertos",
+        "url": "https://www.last.fm/music/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87+%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%BD%D0%B8%D0%BD/The+Symphonies+and+Piano+Concertos",
+        "artist": "Александр Николаевич Черепнин",
+        "plays": "30",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/051e0279621b45f69b71559b413538be.jpg"
       },
       {
         "name": "Complete String Quartets / Reflections on the theme B-A-C-H / Quintet / Trio / Freue Dich!",
@@ -354,13 +354,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/42d7e1d3c57db3d8a37f6ed181b6374b.jpg"
       },
       {
-        "name": "Thalassa",
-        "url": "https://www.last.fm/music/Ioanna+Gika/Thalassa",
-        "artist": "Ioanna Gika",
-        "plays": "10",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/59c2b982ad3c97becb2e5441e921d0eb.jpg"
-      },
-      {
         "name": "Tinderbox",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/Tinderbox",
         "artist": "Siouxsie and the Banshees",
@@ -403,6 +396,13 @@
         "image": ""
       },
       {
+        "name": "Tabula Rasa",
+        "url": "https://www.last.fm/music/Arvo+P%C3%A4rt/Tabula+Rasa",
+        "artist": "Arvo Pärt",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/762aca468ee54879aec2c55919c98d9a.png"
+      },
+      {
         "name": "May Our Chambers Be Full",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle+&+Thou/May+Our+Chambers+Be+Full",
         "artist": "Emma Ruth Rundle & Thou",
@@ -422,6 +422,20 @@
         "artist": "Siouxsie and the Banshees",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/1a0eb1e20dec6f97d51ce2ec64d7f4c0.jpg"
+      },
+      {
+        "name": "Concertos for Viola and Cello",
+        "url": "https://www.last.fm/music/Alfred+Schnittke/Concertos+for+Viola+and+Cello",
+        "artist": "Alfred Schnittke",
+        "plays": "4",
+        "image": ""
+      },
+      {
+        "name": "Symphony No. 7 / Cello Concerto No. 1",
+        "url": "https://www.last.fm/music/Alfred+Schnittke/Symphony+No.+7+%2F+Cello+Concerto+No.+1",
+        "artist": "Alfred Schnittke",
+        "plays": "4",
+        "image": ""
       },
       {
         "name": "The Helm of Sorrow",
@@ -452,6 +466,13 @@
         "image": ""
       },
       {
+        "name": "Transitions: Cello Concertos",
+        "url": "https://www.last.fm/music/Nikolai+Girshevich+Kapustin/Transitions:+Cello+Concertos",
+        "artist": "Nikolai Girshevich Kapustin",
+        "plays": "3",
+        "image": ""
+      },
+      {
         "name": "Dead Again",
         "url": "https://www.last.fm/music/Type+O+Negative/Dead+Again",
         "artist": "Type O Negative",
@@ -464,6 +485,13 @@
         "artist": "Type O Negative",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c31e9911d92c44a7b6312ceb156bf78d.png"
+      },
+      {
+        "name": "Cello Concerto No. 2 & (K)ein Sommernachtstraum",
+        "url": "https://www.last.fm/music/Alfred+Schnittke/Cello+Concerto+No.+2+&+(K)ein+Sommernachtstraum",
+        "artist": "Alfred Schnittke",
+        "plays": "2",
+        "image": ""
       },
       {
         "name": "Tweak Till The End",
@@ -526,7 +554,7 @@
         "url": "https://www.last.fm/music/Taylor+Swift/I+Knew+It,+I+Knew+You+(From+%22Toy+Story+5%22)",
         "artist": "Taylor Swift",
         "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b7021152ab453d63b54742f35bc123e6.jpg"
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ad4c37e923227e49ce3b8b3182b745a3.jpg"
       },
       {
         "name": "Hatful of Hollow",
@@ -548,34 +576,6 @@
         "artist": "A Perfect Circle",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/24d89562266bf9a622c628b0f2ca9ee1.png"
-      },
-      {
-        "name": "Ravel: Trio for Piano, Violin and Cello in A Minor, M. 67 & Debussy: Trio for Piano, Violin and Cello in G Major, L. 3",
-        "url": "https://www.last.fm/music/Andr%C3%A9+Previn/Ravel:+Trio+for+Piano,+Violin+and+Cello+in+A+Minor,+M.+67+&+Debussy:+Trio+for+Piano,+Violin+and+Cello+in+G+Major,+L.+3",
-        "artist": "André Previn",
-        "plays": "1",
-        "image": ""
-      },
-      {
-        "name": "The Bela Session",
-        "url": "https://www.last.fm/music/Bauhaus/The+Bela+Session",
-        "artist": "Bauhaus",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/16b975af15011af3f59d52afe45ddd0d.jpg"
-      },
-      {
-        "name": "Mellow Gold",
-        "url": "https://www.last.fm/music/Beck/Mellow+Gold",
-        "artist": "Beck",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/81365d41cb26fec0cbc2c8defa86b152.jpg"
-      },
-      {
-        "name": "Post",
-        "url": "https://www.last.fm/music/Bj%C3%B6rk/Post",
-        "artist": "Björk",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3ef2b4e3f6399166bee68b27f875a5cb.jpg"
       }
     ],
     "tracks": [
@@ -678,13 +678,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Human Kindness",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Human+Kindness",
-        "artist": "Emma Ruth Rundle",
-        "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Cities in Dust",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/_/Cities+in+Dust",
         "artist": "Siouxsie and the Banshees",
@@ -706,6 +699,20 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Cello Concerto No. 1: Largo",
+        "url": "https://www.last.fm/music/Alfred+Schnittke/_/Cello+Concerto+No.+1:+Largo",
+        "artist": "Alfred Schnittke",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Fratres",
+        "url": "https://www.last.fm/music/Arvo+P%C3%A4rt/_/Fratres",
+        "artist": "Arvo Pärt",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Bumblebee",
         "url": "https://www.last.fm/music/Chuckyy/_/Bumblebee",
         "artist": "Chuckyy",
@@ -716,55 +723,6 @@
         "name": "String Quintet: I",
         "url": "https://www.last.fm/music/Edgar+Meyer/_/String+Quintet:+I",
         "artist": "Edgar Meyer",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Anvil",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Anvil",
-        "artist": "Emma Ruth Rundle",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Catherine Wheel",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Catherine+Wheel",
-        "artist": "Emma Ruth Rundle",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Don't Delay Heaven",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Don%27t+Delay+Heaven",
-        "artist": "Emma Ruth Rundle",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Enough",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Enough",
-        "artist": "Emma Ruth Rundle",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "God's Picture",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/God%27s+Picture",
-        "artist": "Emma Ruth Rundle",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Oceans Of Time",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Oceans+Of+Time",
-        "artist": "Emma Ruth Rundle",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Powerless",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Powerless",
-        "artist": "Emma Ruth Rundle",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -858,6 +816,48 @@
         "artist": "Type O Negative",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Love You to Death",
+        "url": "https://www.last.fm/music/Type+O+Negative/_/Love+You+to+Death",
+        "artist": "Type O Negative",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "My Girlfriend's Girlfriend",
+        "url": "https://www.last.fm/music/Type+O+Negative/_/My+Girlfriend%27s+Girlfriend",
+        "artist": "Type O Negative",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Pyretta Blaze",
+        "url": "https://www.last.fm/music/Type+O+Negative/_/Pyretta+Blaze",
+        "artist": "Type O Negative",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Summer Breeze",
+        "url": "https://www.last.fm/music/Type+O+Negative/_/Summer+Breeze",
+        "artist": "Type O Negative",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Pet",
+        "url": "https://www.last.fm/music/A+Perfect+Circle/_/Pet",
+        "artist": "A Perfect Circle",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Cello Concerto No. 1: Allegro vivace",
+        "url": "https://www.last.fm/music/Alfred+Schnittke/_/Cello+Concerto+No.+1:+Allegro+vivace",
+        "artist": "Alfred Schnittke",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -912,14 +912,14 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Béla Bartók",
-        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
-        "plays": "29",
+        "name": "Александр Николаевич Черепнин",
+        "url": "https://www.last.fm/music/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87+%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%BD%D0%B8%D0%BD",
+        "plays": "30",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Evelyn Chang",
-        "url": "https://www.last.fm/music/Evelyn+Chang",
+        "name": "Béla Bartók",
+        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
         "plays": "29",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -939,12 +939,6 @@
         "name": "The Lonely Island",
         "url": "https://www.last.fm/music/The+Lonely+Island",
         "plays": "28",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ernest Bloch",
-        "url": "https://www.last.fm/music/Ernest+Bloch",
-        "plays": "26",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1056,6 +1050,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Nikolai Girshevich Kapustin",
+        "url": "https://www.last.fm/music/Nikolai+Girshevich+Kapustin",
+        "plays": "17",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Emma Ruth Rundle & Thou",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle+&+Thou",
         "plays": "16",
@@ -1080,15 +1080,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Nikolai Girshevich Kapustin",
-        "url": "https://www.last.fm/music/Nikolai+Girshevich+Kapustin",
+        "name": "Wet Leg",
+        "url": "https://www.last.fm/music/Wet+Leg",
         "plays": "14",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Wet Leg",
-        "url": "https://www.last.fm/music/Wet+Leg",
-        "plays": "14",
+        "name": "Ernest Bloch",
+        "url": "https://www.last.fm/music/Ernest+Bloch",
+        "plays": "13",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1176,18 +1176,11 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3a568ee6ae63c3be1738e38c3bc12c53.jpg"
       },
       {
-        "name": "Poets From The East",
-        "url": "https://www.last.fm/music/Evelyn+Chang/Poets+From+The+East",
-        "artist": "Evelyn Chang",
-        "plays": "29",
-        "image": ""
-      },
-      {
-        "name": "Bloch: Suites for Solo Cello / Dallapiccola: Ciaccona, intermezzo e adagio / Ligeti: Sonata for Solo Cello",
-        "url": "https://www.last.fm/music/Ernest+Bloch/Bloch:+Suites+for+Solo+Cello+%2F+Dallapiccola:+Ciaccona,+intermezzo+e+adagio+%2F+Ligeti:+Sonata+for+Solo+Cello",
-        "artist": "Ernest Bloch",
-        "plays": "26",
-        "image": ""
+        "name": "The Symphonies and Piano Concertos",
+        "url": "https://www.last.fm/music/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80+%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87+%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%BD%D0%B8%D0%BD/The+Symphonies+and+Piano+Concertos",
+        "artist": "Александр Николаевич Черепнин",
+        "plays": "30",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/051e0279621b45f69b71559b413538be.jpg"
       },
       {
         "name": "The Three-Cornered Hat",
@@ -1335,6 +1328,13 @@
         "artist": "Wet Leg",
         "plays": "14",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7156c05ac1f14050eb2160d8ef9d7cc8.png"
+      },
+      {
+        "name": "Bloch: Suites for Solo Cello / Dallapiccola: Ciaccona, intermezzo e adagio / Ligeti: Sonata for Solo Cello",
+        "url": "https://www.last.fm/music/Ernest+Bloch/Bloch:+Suites+for+Solo+Cello+%2F+Dallapiccola:+Ciaccona,+intermezzo+e+adagio+%2F+Ligeti:+Sonata+for+Solo+Cello",
+        "artist": "Ernest Bloch",
+        "plays": "13",
+        "image": ""
       },
       {
         "name": "Dig Me Out (Remastered)",
@@ -1661,9 +1661,9 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Suite for Solo Cello no. 1: Allegro",
-        "url": "https://www.last.fm/music/Ernest+Bloch/_/Suite+for+Solo+Cello+no.+1:+Allegro",
-        "artist": "Ernest Bloch",
+        "name": "The Three-Cornered Hat:  Part I:  VI. The grapes",
+        "url": "https://www.last.fm/music/Frederica+von+Stade,+Andr%C3%A9+Previn,+Pittsburgh+Symphony+Orchestra/_/The+Three-Cornered+Hat:++Part+I:++VI.+The+grapes",
+        "artist": "Frederica von Stade, André Previn, Pittsburgh Symphony Orchestra",
         "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
