@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 278427
+    "scrobbles": 278466
   },
   "history": [
-    {
-      "dayName": "Sun",
-      "date": "2026-09-20",
-      "hours": "1.3",
-      "lastHours": "3.3",
-      "topArtist": "Dmitri Shostakovich"
-    },
     {
       "dayName": "Mon",
       "date": "2026-09-21",
@@ -51,6 +44,13 @@
       "hours": "3.4",
       "lastHours": "0.0",
       "topArtist": "Taylor Swift"
+    },
+    {
+      "dayName": "Sun",
+      "date": "2026-09-27",
+      "hours": "2.2",
+      "lastHours": "1.3",
+      "topArtist": "Taylor Swift"
     }
   ],
   "week": {
@@ -58,7 +58,7 @@
       {
         "name": "Taylor Swift",
         "url": "https://www.last.fm/music/Taylor+Swift",
-        "plays": "32",
+        "plays": "68",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -82,7 +82,7 @@
       {
         "name": "Emma Ruth Rundle",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle",
-        "plays": "18",
+        "plays": "17",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -152,12 +152,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Maurice Ravel",
-        "url": "https://www.last.fm/music/Maurice+Ravel",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Luigi Dallapiccola",
         "url": "https://www.last.fm/music/Luigi+Dallapiccola",
         "plays": "3",
@@ -166,12 +160,6 @@
       {
         "name": "Chuckyy",
         "url": "https://www.last.fm/music/Chuckyy",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Claude Debussy",
-        "url": "https://www.last.fm/music/Claude+Debussy",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -242,8 +230,20 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Claude Debussy",
+        "url": "https://www.last.fm/music/Claude+Debussy",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "DJ Koze",
         "url": "https://www.last.fm/music/DJ+Koze",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Einstürzende Neubauten",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -301,14 +301,14 @@
         "name": "The Life of a Showgirl",
         "url": "https://www.last.fm/music/Taylor+Swift/The+Life+of+a+Showgirl",
         "artist": "Taylor Swift",
-        "plays": "24",
+        "plays": "51",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/837e4d37b0c4a0a65eb12177e1afb8ee.png"
       },
       {
         "name": "These Killing Times",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle/These+Killing+Times",
         "artist": "Emma Ruth Rundle",
-        "plays": "18",
+        "plays": "17",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d6c56122fc2cd8fe18e51456714ef788.jpg"
       },
       {
@@ -368,6 +368,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d3f23ca602dc3dae2284e876708cd71a.png"
       },
       {
+        "name": "The Life of a Showgirl: The Encore",
+        "url": "https://www.last.fm/music/Taylor+Swift/The+Life+of+a+Showgirl:+The+Encore",
+        "artist": "Taylor Swift",
+        "plays": "10",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5ac6cf9c64574d43b13577564a4a5b9c.jpg"
+      },
+      {
         "name": "Symphonies / Concertos / Choral and Vocal Works",
         "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski/Symphonies+%2F+Concertos+%2F+Choral+and+Vocal+Works",
         "artist": "Witold Lutosławski",
@@ -396,13 +403,6 @@
         "image": ""
       },
       {
-        "name": "Ravel: Trio for Piano, Violin and Cello in A Minor, M. 67 & Debussy: Trio for Piano, Violin and Cello in G Major, L. 3",
-        "url": "https://www.last.fm/music/Andr%C3%A9+Previn/Ravel:+Trio+for+Piano,+Violin+and+Cello+in+A+Minor,+M.+67+&+Debussy:+Trio+for+Piano,+Violin+and+Cello+in+G+Major,+L.+3",
-        "artist": "André Previn",
-        "plays": "6",
-        "image": ""
-      },
-      {
         "name": "May Our Chambers Be Full",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle+&+Thou/May+Our+Chambers+Be+Full",
         "artist": "Emma Ruth Rundle & Thou",
@@ -422,13 +422,6 @@
         "artist": "Siouxsie and the Banshees",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/1a0eb1e20dec6f97d51ce2ec64d7f4c0.jpg"
-      },
-      {
-        "name": "The Life of a Showgirl: The Encore",
-        "url": "https://www.last.fm/music/Taylor+Swift/The+Life+of+a+Showgirl:+The+Encore",
-        "artist": "Taylor Swift",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5ac6cf9c64574d43b13577564a4a5b9c.jpg"
       },
       {
         "name": "The Helm of Sorrow",
@@ -463,7 +456,7 @@
         "url": "https://www.last.fm/music/Type+O+Negative/Dead+Again",
         "artist": "Type O Negative",
         "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/dad5ea8b069d216ca96d93c8d765a273.jpg"
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b4c447d6a1a43624e02203e9f87cbde9.png"
       },
       {
         "name": "World Coming Down",
@@ -522,6 +515,20 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e0f0fc5a8edeccd6c1e329a7db3e8ba1.jpg"
       },
       {
+        "name": "folklore",
+        "url": "https://www.last.fm/music/Taylor+Swift/folklore",
+        "artist": "Taylor Swift",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7283dedc810f971388eba0b710d90020.png"
+      },
+      {
+        "name": "I Knew It, I Knew You (From \"Toy Story 5\")",
+        "url": "https://www.last.fm/music/Taylor+Swift/I+Knew+It,+I+Knew+You+(From+%22Toy+Story+5%22)",
+        "artist": "Taylor Swift",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b7021152ab453d63b54742f35bc123e6.jpg"
+      },
+      {
         "name": "Hatful of Hollow",
         "url": "https://www.last.fm/music/The+Smiths/Hatful+of+Hollow",
         "artist": "The Smiths",
@@ -543,6 +550,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/24d89562266bf9a622c628b0f2ca9ee1.png"
       },
       {
+        "name": "Ravel: Trio for Piano, Violin and Cello in A Minor, M. 67 & Debussy: Trio for Piano, Violin and Cello in G Major, L. 3",
+        "url": "https://www.last.fm/music/Andr%C3%A9+Previn/Ravel:+Trio+for+Piano,+Violin+and+Cello+in+A+Minor,+M.+67+&+Debussy:+Trio+for+Piano,+Violin+and+Cello+in+G+Major,+L.+3",
+        "artist": "André Previn",
+        "plays": "1",
+        "image": ""
+      },
+      {
         "name": "The Bela Session",
         "url": "https://www.last.fm/music/Bauhaus/The+Bela+Session",
         "artist": "Bauhaus",
@@ -562,28 +576,112 @@
         "artist": "Björk",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3ef2b4e3f6399166bee68b27f875a5cb.jpg"
-      },
-      {
-        "name": "Von dutch",
-        "url": "https://www.last.fm/music/Charli+xcx/Von+dutch",
-        "artist": "Charli xcx",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7fa6bf89a5f4fc2d1f31ad0d6128635e.jpg"
-      },
-      {
-        "name": "Almighty So 2",
-        "url": "https://www.last.fm/music/Chief+Keef/Almighty+So+2",
-        "artist": "Chief Keef",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a9c4b0b31912dc8afd98fe7b3163278a.jpg"
       }
     ],
     "tracks": [
       {
+        "name": "The Fate of Ophelia",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/The+Fate+of+Ophelia",
+        "artist": "Taylor Swift",
+        "plays": "7",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Actually Romantic",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Actually+Romantic",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "CANCELLED!",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/CANCELLED!",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Cleveland!",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Cleveland!",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Eldest Daughter",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Eldest+Daughter",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Elizabeth Taylor",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Elizabeth+Taylor",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Father Figure",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Father+Figure",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Honey",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Honey",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Opalite",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Opalite",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Patient Zero",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Patient+Zero",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Ruin the Friendship",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Ruin+the+Friendship",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Life of a Showgirl (feat. Sabrina Carpenter)",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/The+Life+of+a+Showgirl+(feat.+Sabrina+Carpenter)",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Wi$h Li$t",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Wi$h+Li$t",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Wood",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Wood",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Human Kindness",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Human+Kindness",
         "artist": "Emma Ruth Rundle",
-        "plays": "4",
+        "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -611,13 +709,6 @@
         "name": "Bumblebee",
         "url": "https://www.last.fm/music/Chuckyy/_/Bumblebee",
         "artist": "Chuckyy",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Trio for Piano, Violin and Cello in G Major, L. 3: I. Andante con molto allegro",
-        "url": "https://www.last.fm/music/Claude+Debussy/_/Trio+for+Piano,+Violin+and+Cello+in+G+Major,+L.+3:+I.+Andante+con+molto+allegro",
-        "artist": "Claude Debussy",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -713,99 +804,22 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Actually Romantic",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Actually+Romantic",
+        "name": "august",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/august",
         "artist": "Taylor Swift",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "CANCELLED!",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/CANCELLED!",
+        "name": "I Knew It, I Knew You - From \"Toy Story 5\"",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/I+Knew+It,+I+Knew+You+-+From+%22Toy+Story+5%22",
         "artist": "Taylor Swift",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Cleveland!",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Cleveland!",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Eldest Daughter",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Eldest+Daughter",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Elizabeth Taylor",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Elizabeth+Taylor",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Father Figure",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Father+Figure",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Honey",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Honey",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Opalite",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Opalite",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Patient Zero",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Patient+Zero",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ruin the Friendship",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Ruin+the+Friendship",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Fate of Ophelia",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/The+Fate+of+Ophelia",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Life of a Showgirl (feat. Sabrina Carpenter)",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/The+Life+of+a+Showgirl+(feat.+Sabrina+Carpenter)",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Wi$h Li$t",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Wi$h+Li$t",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Wood",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Wood",
+        "name": "Pink Clouding",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Pink+Clouding",
         "artist": "Taylor Swift",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -844,20 +858,6 @@
         "artist": "Type O Negative",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Love You to Death",
-        "url": "https://www.last.fm/music/Type+O+Negative/_/Love+You+to+Death",
-        "artist": "Type O Negative",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "My Girlfriend's Girlfriend",
-        "url": "https://www.last.fm/music/Type+O+Negative/_/My+Girlfriend%27s+Girlfriend",
-        "artist": "Type O Negative",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -878,7 +878,7 @@
       {
         "name": "Taylor Swift",
         "url": "https://www.last.fm/music/Taylor+Swift",
-        "plays": "45",
+        "plays": "81",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -890,7 +890,7 @@
       {
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "39",
+        "plays": "40",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1120,6 +1120,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/bd050c9cf1bfedcd9f6a2c1620c58f34.png"
       },
       {
+        "name": "The Life of a Showgirl",
+        "url": "https://www.last.fm/music/Taylor+Swift/The+Life+of+a+Showgirl",
+        "artist": "Taylor Swift",
+        "plays": "51",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/837e4d37b0c4a0a65eb12177e1afb8ee.png"
+      },
+      {
         "name": "Earth, Sea & Air",
         "url": "https://www.last.fm/music/Laura+van+der+Heijden/Earth,+Sea+&+Air",
         "artist": "Laura van der Heijden",
@@ -1188,13 +1195,6 @@
         "artist": "Frederica von Stade, André Previn, Pittsburgh Symphony Orchestra",
         "plays": "25",
         "image": ""
-      },
-      {
-        "name": "The Life of a Showgirl",
-        "url": "https://www.last.fm/music/Taylor+Swift/The+Life+of+a+Showgirl",
-        "artist": "Taylor Swift",
-        "plays": "24",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/837e4d37b0c4a0a65eb12177e1afb8ee.png"
       },
       {
         "name": "Popstar: Never Stop Never Stopping",
@@ -1444,6 +1444,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "The Fate of Ophelia",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/The+Fate+of+Ophelia",
+        "artist": "Taylor Swift",
+        "plays": "7",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Human Kindness",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Human+Kindness",
         "artist": "Emma Ruth Rundle",
@@ -1659,13 +1666,6 @@
         "artist": "Ernest Bloch",
         "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Suite for Solo Cello no. 2: Allegro",
-        "url": "https://www.last.fm/music/Ernest+Bloch/_/Suite+for+Solo+Cello+no.+2:+Allegro",
-        "artist": "Ernest Bloch",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -1780,9 +1780,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Taylor Swift",
+        "url": "https://www.last.fm/music/Taylor+Swift",
+        "plays": "81",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "77",
+        "plays": "78",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1904,12 +1910,6 @@
         "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart",
         "plays": "54",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Béla Bartók",
-        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
-        "plays": "51",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -1996,6 +1996,13 @@
         "artist": "Ralph Vaughan Williams",
         "plays": "51",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9d366c5606653eaaae41582d07acb6b8.jpg"
+      },
+      {
+        "name": "The Life of a Showgirl",
+        "url": "https://www.last.fm/music/Taylor+Swift/The+Life+of+a+Showgirl",
+        "artist": "Taylor Swift",
+        "plays": "51",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/837e4d37b0c4a0a65eb12177e1afb8ee.png"
       },
       {
         "name": "Spaliček / The Spectre's Bride / The Romance Of The Dandelions / The Primrose",
@@ -2185,13 +2192,6 @@
         "artist": "Lingua Ignota",
         "plays": "33",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/963269723079464606685c3093a06c68.jpg"
-      },
-      {
-        "name": "Anna Clyne: DANCE • Elgar: Cello Concerto",
-        "url": "https://www.last.fm/music/Inbal+Segev/Anna+Clyne:+DANCE+%E2%80%A2+Elgar:+Cello+Concerto",
-        "artist": "Inbal Segev",
-        "plays": "32",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3d20ab8431b78a90308da170b29e5afd.jpg"
       }
     ],
     "tracks": [
@@ -2500,7 +2500,7 @@
       {
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "5640",
+        "plays": "5641",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
