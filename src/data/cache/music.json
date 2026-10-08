@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 278778
+    "scrobbles": 278799
   },
   "history": [
-    {
-      "dayName": "Thu",
-      "date": "2026-10-01",
-      "hours": "2.0",
-      "lastHours": "1.2",
-      "topArtist": "KMFDM"
-    },
     {
       "dayName": "Fri",
       "date": "2026-10-02",
@@ -51,6 +44,13 @@
       "hours": "4.0",
       "lastHours": "0.5",
       "topArtist": "Plug"
+    },
+    {
+      "dayName": "Thu",
+      "date": "2026-10-08",
+      "hours": "1.2",
+      "lastHours": "2.0",
+      "topArtist": "Sergei Prokofiev"
     }
   ],
   "week": {
@@ -58,13 +58,13 @@
       {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "30",
+        "plays": "34",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "28",
+        "plays": "25",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -89,12 +89,6 @@
         "name": "Plug",
         "url": "https://www.last.fm/music/Plug",
         "plays": "15",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "KMFDM",
-        "url": "https://www.last.fm/music/KMFDM",
-        "plays": "13",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -134,6 +128,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Sergei Prokofiev",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev",
+        "plays": "8",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Frédéric Chopin",
         "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin",
         "plays": "6",
@@ -152,20 +152,8 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Jean Sibelius",
-        "url": "https://www.last.fm/music/Jean+Sibelius",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Johannes Brahms",
         "url": "https://www.last.fm/music/Johannes+Brahms",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Komitas",
-        "url": "https://www.last.fm/music/Komitas",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -176,20 +164,26 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Aaron Copland",
+        "url": "https://www.last.fm/music/Aaron+Copland",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Alan Hovhaness",
+        "url": "https://www.last.fm/music/Alan+Hovhaness",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Miklós Rózsa",
+        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Anatoly Lyadov",
         "url": "https://www.last.fm/music/Anatoly+Lyadov",
-        "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Caroline Shaw",
-        "url": "https://www.last.fm/music/Caroline+Shaw",
-        "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Eleanor Alberga",
-        "url": "https://www.last.fm/music/Eleanor+Alberga",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -206,26 +200,14 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
-        "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sergei Prokofiev",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Sergei Rachmaninoff",
         "url": "https://www.last.fm/music/Sergei+Rachmaninoff",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Andrew Yee",
-        "url": "https://www.last.fm/music/Andrew+Yee",
+        "name": "Caroline Shaw",
+        "url": "https://www.last.fm/music/Caroline+Shaw",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -248,8 +230,8 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Hildegard von Bingen",
-        "url": "https://www.last.fm/music/Hildegard+von+Bingen",
+        "name": "Andrew Yee",
+        "url": "https://www.last.fm/music/Andrew+Yee",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -302,13 +284,6 @@
         "artist": "Nikolai Rimsky-Korsakov",
         "plays": "14",
         "image": ""
-      },
-      {
-        "name": "Sturm & Drang Tour 2002",
-        "url": "https://www.last.fm/music/KMFDM/Sturm+&+Drang+Tour+2002",
-        "artist": "KMFDM",
-        "plays": "13",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/516834b7701244a08716cc11cddf90e9.png"
       },
       {
         "name": "Quatuor pour la Fin du Temps",
@@ -381,20 +356,6 @@
         "image": ""
       },
       {
-        "name": "Earthdrawn Skies",
-        "url": "https://www.last.fm/music/Jean+Sibelius/Earthdrawn+Skies",
-        "artist": "Jean Sibelius",
-        "plays": "5",
-        "image": ""
-      },
-      {
-        "name": "Earthdrawn Skies",
-        "url": "https://www.last.fm/music/Komitas/Earthdrawn+Skies",
-        "artist": "Komitas",
-        "plays": "5",
-        "image": ""
-      },
-      {
         "name": "Mareridt",
         "url": "https://www.last.fm/music/Myrkur/Mareridt",
         "artist": "Myrkur",
@@ -402,16 +363,44 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/1dd8009dfd91ffa6b88e8e1567b95c2e.jpg"
       },
       {
-        "name": "or, The Whale",
-        "url": "https://www.last.fm/music/Caroline+Shaw/or,+The+Whale",
-        "artist": "Caroline Shaw",
+        "name": "Hovhaness: Mysterious Mountain / Prokofiev: Lieutenant Kije Suite / Stravinsky: The Fairy's Kiss Divertimento",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Hovhaness:+Mysterious+Mountain+%2F+Prokofiev:+Lieutenant+Kije+Suite+%2F+Stravinsky:+The+Fairy%27s+Kiss+Divertimento",
+        "artist": "Sergei Prokofiev",
+        "plays": "5",
+        "image": ""
+      },
+      {
+        "name": "Appalachian Spring / Short Symphony / 3 Latin American Sketches / Quiet City",
+        "url": "https://www.last.fm/music/Aaron+Copland/Appalachian+Spring+%2F+Short+Symphony+%2F+3+Latin+American+Sketches+%2F+Quiet+City",
+        "artist": "Aaron Copland",
         "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/20531abe60706a6ecb1a296b2df9a0a0.png"
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b6e9272716ac45cec5735a47663b3daa.jpg"
+      },
+      {
+        "name": "Hovhaness: Mysterious Mountain / Prokofiev: Lieutenant Kije Suite / Stravinsky: The Fairy's Kiss Divertimento",
+        "url": "https://www.last.fm/music/Alan+Hovhaness/Hovhaness:+Mysterious+Mountain+%2F+Prokofiev:+Lieutenant+Kije+Suite+%2F+Stravinsky:+The+Fairy%27s+Kiss+Divertimento",
+        "artist": "Alan Hovhaness",
+        "plays": "4",
+        "image": ""
+      },
+      {
+        "name": "Hovhaness: Mysterious Mountain / Prokofiev: Lieutenant Kije Suite / Stravinsky: The Fairy's Kiss Divertimento",
+        "url": "https://www.last.fm/music/Igor+Stravinsky/Hovhaness:+Mysterious+Mountain+%2F+Prokofiev:+Lieutenant+Kije+Suite+%2F+Stravinsky:+The+Fairy%27s+Kiss+Divertimento",
+        "artist": "Igor Stravinsky",
+        "plays": "4",
+        "image": ""
       },
       {
         "name": "Symphonie no. 3 / Tragische Ouvertüre / Schicksalslied",
         "url": "https://www.last.fm/music/Johannes+Brahms/Symphonie+no.+3+%2F+Tragische+Ouvert%C3%BCre+%2F+Schicksalslied",
         "artist": "Johannes Brahms",
+        "plays": "4",
+        "image": ""
+      },
+      {
+        "name": "String Quartets nos. 1 and 2 / String Trio (original version)",
+        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa/String+Quartets+nos.+1+and+2+%2F+String+Trio+(original+version)",
+        "artist": "Miklós Rózsa",
         "plays": "4",
         "image": ""
       },
@@ -430,18 +419,11 @@
         "image": ""
       },
       {
-        "name": "Ende Neu",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Ende+Neu",
-        "artist": "Einstürzende Neubauten",
+        "name": "or, The Whale",
+        "url": "https://www.last.fm/music/Caroline+Shaw/or,+The+Whale",
+        "artist": "Caroline Shaw",
         "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d51ddf4b15914649b972854afe537786.png"
-      },
-      {
-        "name": "Earthdrawn Skies",
-        "url": "https://www.last.fm/music/Eleanor+Alberga/Earthdrawn+Skies",
-        "artist": "Eleanor Alberga",
-        "plays": "3",
-        "image": ""
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/20531abe60706a6ecb1a296b2df9a0a0.png"
       },
       {
         "name": "Inception",
@@ -449,13 +431,6 @@
         "artist": "Hans Zimmer",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/78b8f48424310434abe2f9e5eea39369.jpg"
-      },
-      {
-        "name": "Violin Concertos / Mythes",
-        "url": "https://www.last.fm/music/Karol+Szymanowski/Violin+Concertos+%2F+Mythes",
-        "artist": "Karol Szymanowski",
-        "plays": "3",
-        "image": ""
       },
       {
         "name": "Great Pianists of the 20th Century, Volume 2: Martha Argerich I",
@@ -500,23 +475,9 @@
         "image": ""
       },
       {
-        "name": "Shaw: Concerto for Harpsichord and Strings: III. Gangbusters",
-        "url": "https://www.last.fm/music/Caroline+Shaw/Shaw:+Concerto+for+Harpsichord+and+Strings:+III.+Gangbusters",
-        "artist": "Caroline Shaw",
-        "plays": "1",
-        "image": ""
-      },
-      {
         "name": "Orchestral Works, Volume 1: Isabella / Enter Spring / Mid of the Night / Two Poems for Orchestra",
         "url": "https://www.last.fm/music/Frank+Bridge/Orchestral+Works,+Volume+1:+Isabella+%2F+Enter+Spring+%2F+Mid+of+the+Night+%2F+Two+Poems+for+Orchestra",
         "artist": "Frank Bridge",
-        "plays": "1",
-        "image": ""
-      },
-      {
-        "name": "Earthdrawn Skies",
-        "url": "https://www.last.fm/music/Hildegard+von+Bingen/Earthdrawn+Skies",
-        "artist": "Hildegard von Bingen",
         "plays": "1",
         "image": ""
       },
@@ -583,13 +544,6 @@
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Tagelang+Weiss",
         "artist": "Einstürzende Neubauten",
         "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Trees of Green-Wood",
-        "url": "https://www.last.fm/music/Andrew+Yee/_/The+Trees+of+Green-Wood",
-        "artist": "Andrew Yee",
-        "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -691,6 +645,62 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Appalachian Spring (Suite)",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Appalachian+Spring+(Suite)",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Short Symphony (No. 2): I. Tempo = 144 (incisivo)",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Short+Symphony+(No.+2):+I.+Tempo+=+144+(incisivo)",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Short Symphony (No. 2): II. Tempo = circa 44",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Short+Symphony+(No.+2):+II.+Tempo+=+circa+44",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Short Symphony (No. 2): III. Tempo = 144 (preciso e ritmico)",
+        "url": "https://www.last.fm/music/Aaron+Copland/_/Short+Symphony+(No.+2):+III.+Tempo+=+144+(preciso+e+ritmico)",
+        "artist": "Aaron Copland",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony No. 2, Op. 132 \"Mysterious Mountain\": I. Andante",
+        "url": "https://www.last.fm/music/Alan+Hovhaness/_/Symphony+No.+2,+Op.+132+%22Mysterious+Mountain%22:+I.+Andante",
+        "artist": "Alan Hovhaness",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony No. 2, Op. 132 \"Mysterious Mountain\": II. Moderato maestoso",
+        "url": "https://www.last.fm/music/Alan+Hovhaness/_/Symphony+No.+2,+Op.+132+%22Mysterious+Mountain%22:+II.+Moderato+maestoso",
+        "artist": "Alan Hovhaness",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony No. 2, Op. 132 \"Mysterious Mountain\": III. Allegro vivo",
+        "url": "https://www.last.fm/music/Alan+Hovhaness/_/Symphony+No.+2,+Op.+132+%22Mysterious+Mountain%22:+III.+Allegro+vivo",
+        "artist": "Alan Hovhaness",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony No. 2, Op. 132 \"Mysterious Mountain\": IV. Andante espressivo",
+        "url": "https://www.last.fm/music/Alan+Hovhaness/_/Symphony+No.+2,+Op.+132+%22Mysterious+Mountain%22:+IV.+Andante+espressivo",
+        "artist": "Alan Hovhaness",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Baba-Yaga, Op. 56",
         "url": "https://www.last.fm/music/Anatoly+Lyadov/_/Baba-Yaga,+Op.+56",
         "artist": "Anatoly Lyadov",
@@ -712,9 +722,9 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Concerto for Harpsichord and Strings: III. Gangbusters",
-        "url": "https://www.last.fm/music/Caroline+Shaw/_/Concerto+for+Harpsichord+and+Strings:+III.+Gangbusters",
-        "artist": "Caroline Shaw",
+        "name": "The Trees of Green-Wood",
+        "url": "https://www.last.fm/music/Andrew+Yee/_/The+Trees+of+Green-Wood",
+        "artist": "Andrew Yee",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -729,48 +739,6 @@
         "name": "Shenandoah",
         "url": "https://www.last.fm/music/Caroline+Shaw/_/Shenandoah",
         "artist": "Caroline Shaw",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Die Explosion im Festspielhaus",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Die+Explosion+im+Festspielhaus",
-        "artist": "Einstürzende Neubauten",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Stella Maris",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Stella+Maris",
-        "artist": "Einstürzende Neubauten",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Was ist ist",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Was+ist+ist",
-        "artist": "Einstürzende Neubauten",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "String Quartet No. 1: I. Détaché et martellato e zehr lebhaft und swing it man.",
-        "url": "https://www.last.fm/music/Eleanor+Alberga/_/String+Quartet+No.+1:+I.+D%C3%A9tach%C3%A9+et+martellato+e+zehr+lebhaft+und+swing+it+man.",
-        "artist": "Eleanor Alberga",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "String Quartet No. 1: II. Espressivo, with wonder and yearning.",
-        "url": "https://www.last.fm/music/Eleanor+Alberga/_/String+Quartet+No.+1:+II.+Espressivo,+with+wonder+and+yearning.",
-        "artist": "Eleanor Alberga",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "String Quartet No. 1: III. Frantically Driven yet Playful",
-        "url": "https://www.last.fm/music/Eleanor+Alberga/_/String+Quartet+No.+1:+III.+Frantically+Driven+yet+Playful",
-        "artist": "Eleanor Alberga",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -815,13 +783,6 @@
         "artist": "Franz Schubert",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Piano Sonata In A Minor, D784: II. Andante",
-        "url": "https://www.last.fm/music/Franz+Schubert/_/Piano+Sonata+In+A+Minor,+D784:+II.+Andante",
-        "artist": "Franz Schubert",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -858,6 +819,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Igor Stravinsky",
+        "url": "https://www.last.fm/music/Igor+Stravinsky",
+        "plays": "38",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
         "plays": "36",
@@ -882,12 +849,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Igor Stravinsky",
-        "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "34",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Levinhurst",
         "url": "https://www.last.fm/music/Levinhurst",
         "plays": "30",
@@ -902,6 +863,12 @@
       {
         "name": "Béla Bartók",
         "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
+        "plays": "29",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sergei Prokofiev",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev",
         "plays": "29",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -945,12 +912,6 @@
         "name": "Sleater-Kinney",
         "url": "https://www.last.fm/music/Sleater-Kinney",
         "plays": "25",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sergei Prokofiev",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "24",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1044,6 +1005,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Alan Hovhaness",
+        "url": "https://www.last.fm/music/Alan+Hovhaness",
+        "plays": "15",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Caroline Shaw",
         "url": "https://www.last.fm/music/Caroline+Shaw",
         "plays": "15",
@@ -1059,12 +1026,6 @@
         "name": "Plug",
         "url": "https://www.last.fm/music/Plug",
         "plays": "15",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Wet Leg",
-        "url": "https://www.last.fm/music/Wet+Leg",
-        "plays": "14",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
@@ -1638,7 +1599,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "720",
+        "plays": "725",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1650,7 +1611,7 @@
       {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "203",
+        "plays": "207",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1810,6 +1771,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Miklós Rózsa",
+        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
+        "plays": "65",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Sophia Jani",
         "url": "https://www.last.fm/music/Sophia+Jani",
         "plays": "64",
@@ -1825,12 +1792,6 @@
         "name": "Witold Lutosławski",
         "url": "https://www.last.fm/music/Witold+Lutos%C5%82awski",
         "plays": "63",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Miklós Rózsa",
-        "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
-        "plays": "61",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2458,7 +2419,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "5882",
+        "plays": "5887",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2524,7 +2485,7 @@
       {
         "name": "Miklós Rózsa",
         "url": "https://www.last.fm/music/Mikl%C3%B3s+R%C3%B3zsa",
-        "plays": "2437",
+        "plays": "2441",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2572,7 +2533,7 @@
       {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "1800",
+        "plays": "1804",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
