@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 278855
+    "scrobbles": 278860
   },
   "history": [
-    {
-      "dayName": "Sun",
-      "date": "2026-10-04",
-      "hours": "1.5",
-      "lastHours": "1.1",
-      "topArtist": "Igor Stravinsky"
-    },
     {
       "dayName": "Mon",
       "date": "2026-10-05",
@@ -51,6 +44,13 @@
       "hours": "1.2",
       "lastHours": "0.6",
       "topArtist": "Austra"
+    },
+    {
+      "dayName": "Sun",
+      "date": "2026-10-11",
+      "hours": "0.3",
+      "lastHours": "1.5",
+      "topArtist": "Austra"
     }
   ],
   "week": {
@@ -59,6 +59,12 @@
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
         "plays": "34",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Austra",
+        "url": "https://www.last.fm/music/Austra",
+        "plays": "20",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -74,18 +80,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Austra",
-        "url": "https://www.last.fm/music/Austra",
-        "plays": "15",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Einstürzende Neubauten",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "15",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Nikolai Rimsky-Korsakov",
         "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov",
         "plays": "15",
@@ -95,6 +89,12 @@
         "name": "Plug",
         "url": "https://www.last.fm/music/Plug",
         "plays": "15",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Einstürzende Neubauten",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
+        "plays": "14",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -275,11 +275,11 @@
         "image": ""
       },
       {
-        "name": "Grundstück",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Grundst%C3%BCck",
-        "artist": "Einstürzende Neubauten",
-        "plays": "15",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4490d85e31754333c347cbf90f224e28.png"
+        "name": "Chin Up Buttercup",
+        "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
+        "artist": "Austra",
+        "plays": "17",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
       },
       {
         "name": "Complete String Quartets, Volume 4: Quartets nos. 9, 10 & 11",
@@ -296,18 +296,18 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b593556a1bdacb1bb0cb86e244a4a17a.jpg"
       },
       {
+        "name": "Grundstück",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Grundst%C3%BCck",
+        "artist": "Einstürzende Neubauten",
+        "plays": "14",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4490d85e31754333c347cbf90f224e28.png"
+      },
+      {
         "name": "3 Symphonies / Capriccio espagnol / Russian Easter Overture",
         "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov/3+Symphonies+%2F+Capriccio+espagnol+%2F+Russian+Easter+Overture",
         "artist": "Nikolai Rimsky-Korsakov",
         "plays": "14",
         "image": ""
-      },
-      {
-        "name": "Chin Up Buttercup",
-        "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
-        "artist": "Austra",
-        "plays": "12",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
       },
       {
         "name": "Jaws (Music from the Original Motion Picture Soundtrack)",
@@ -550,6 +550,20 @@
     ],
     "tracks": [
       {
+        "name": "Chin up Buttercup",
+        "url": "https://www.last.fm/music/Austra/_/Chin+up+Buttercup",
+        "artist": "Austra",
+        "plays": "3",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Fallen Cloud",
+        "url": "https://www.last.fm/music/Austra/_/Fallen+Cloud",
+        "artist": "Austra",
+        "plays": "3",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Wo sind meine Schuhe?",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Wo+sind+meine+Schuhe%3F",
         "artist": "Einstürzende Neubauten",
@@ -557,15 +571,22 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Chin up Buttercup",
-        "url": "https://www.last.fm/music/Austra/_/Chin+up+Buttercup",
+        "name": "Amnesia",
+        "url": "https://www.last.fm/music/Austra/_/Amnesia",
         "artist": "Austra",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Fallen Cloud",
-        "url": "https://www.last.fm/music/Austra/_/Fallen+Cloud",
+        "name": "Math Equation",
+        "url": "https://www.last.fm/music/Austra/_/Math+Equation",
+        "artist": "Austra",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Siren Song",
+        "url": "https://www.last.fm/music/Austra/_/Siren+Song",
         "artist": "Austra",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -573,13 +594,6 @@
       {
         "name": "Good Morning Everybody",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Good+Morning+Everybody",
-        "artist": "Einstürzende Neubauten",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Grundstück: November / Sie lächelt",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Grundst%C3%BCck:+November+%2F+Sie+l%C3%A4chelt",
         "artist": "Einstürzende Neubauten",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -760,13 +774,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Amnesia",
-        "url": "https://www.last.fm/music/Austra/_/Amnesia",
-        "artist": "Austra",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Beat and the Pulse",
         "url": "https://www.last.fm/music/Austra/_/Beat+and+the+Pulse",
         "artist": "Austra",
@@ -802,20 +809,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Math Equation",
-        "url": "https://www.last.fm/music/Austra/_/Math+Equation",
-        "artist": "Austra",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Siren Song",
-        "url": "https://www.last.fm/music/Austra/_/Siren+Song",
-        "artist": "Austra",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Spellwork",
         "url": "https://www.last.fm/music/Austra/_/Spellwork",
         "artist": "Austra",
@@ -825,6 +818,13 @@
       {
         "name": "The Hopefulness of Dawn",
         "url": "https://www.last.fm/music/Austra/_/The+Hopefulness+of+Dawn",
+        "artist": "Austra",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Think Twice",
+        "url": "https://www.last.fm/music/Austra/_/Think+Twice",
         "artist": "Austra",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -900,6 +900,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Austra",
+        "url": "https://www.last.fm/music/Austra",
+        "plays": "31",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Levinhurst",
         "url": "https://www.last.fm/music/Levinhurst",
         "plays": "30",
@@ -939,12 +945,6 @@
         "name": "Maurice Ravel",
         "url": "https://www.last.fm/music/Maurice+Ravel",
         "plays": "27",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Austra",
-        "url": "https://www.last.fm/music/Austra",
-        "plays": "26",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1153,6 +1153,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/051e0279621b45f69b71559b413538be.jpg"
       },
       {
+        "name": "Chin Up Buttercup",
+        "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
+        "artist": "Austra",
+        "plays": "28",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
+      },
+      {
         "name": "The Three-Cornered Hat",
         "url": "https://www.last.fm/music/Frederica+von+Stade,+Andr%C3%A9+Previn,+Pittsburgh+Symphony+Orchestra/The+Three-Cornered+Hat",
         "artist": "Frederica von Stade, André Previn, Pittsburgh Symphony Orchestra",
@@ -1165,13 +1172,6 @@
         "artist": "Nine Inch Nails",
         "plays": "25",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8eaa9146fbad4b62bd5a489fc0651ec0.png"
-      },
-      {
-        "name": "Chin Up Buttercup",
-        "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
-        "artist": "Austra",
-        "plays": "23",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
       },
       {
         "name": "Popstar: Never Stop Never Stopping",
@@ -1533,6 +1533,27 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Amnesia",
+        "url": "https://www.last.fm/music/Austra/_/Amnesia",
+        "artist": "Austra",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Chin up Buttercup",
+        "url": "https://www.last.fm/music/Austra/_/Chin+up+Buttercup",
+        "artist": "Austra",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Fallen Cloud",
+        "url": "https://www.last.fm/music/Austra/_/Fallen+Cloud",
+        "artist": "Austra",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Tha Crossroads",
         "url": "https://www.last.fm/music/Bone+Thugs-N-Harmony/_/Tha+Crossroads",
         "artist": "Bone Thugs-N-Harmony",
@@ -1615,27 +1636,6 @@
         "artist": "Emma Ruth Rundle",
         "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Enough",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Enough",
-        "artist": "Emma Ruth Rundle",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "God's Picture",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/God%27s+Picture",
-        "artist": "Emma Ruth Rundle",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Oceans Of Time",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Oceans+Of+Time",
-        "artist": "Emma Ruth Rundle",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -1650,7 +1650,7 @@
       {
         "name": "Austra",
         "url": "https://www.last.fm/music/Austra",
-        "plays": "227",
+        "plays": "232",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1887,7 +1887,7 @@
         "name": "Chin Up Buttercup",
         "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
         "artist": "Austra",
-        "plays": "181",
+        "plays": "186",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
       },
       {
@@ -2183,7 +2183,7 @@
         "name": "Amnesia",
         "url": "https://www.last.fm/music/Austra/_/Amnesia",
         "artist": "Austra",
-        "plays": "24",
+        "plays": "25",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2197,28 +2197,28 @@
         "name": "Chin up Buttercup",
         "url": "https://www.last.fm/music/Austra/_/Chin+up+Buttercup",
         "artist": "Austra",
-        "plays": "21",
+        "plays": "22",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Math Equation",
         "url": "https://www.last.fm/music/Austra/_/Math+Equation",
         "artist": "Austra",
-        "plays": "21",
+        "plays": "22",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Siren Song",
         "url": "https://www.last.fm/music/Austra/_/Siren+Song",
         "artist": "Austra",
-        "plays": "20",
+        "plays": "21",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Fallen Cloud",
         "url": "https://www.last.fm/music/Austra/_/Fallen+Cloud",
         "artist": "Austra",
-        "plays": "18",
+        "plays": "19",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
