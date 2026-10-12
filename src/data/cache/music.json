@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 278883
+    "scrobbles": 278884
   },
   "history": [
-    {
-      "dayName": "Mon",
-      "date": "2026-10-05",
-      "hours": "2.1",
-      "lastHours": "2.9",
-      "topArtist": "Igor Stravinsky"
-    },
     {
       "dayName": "Tue",
       "date": "2026-10-06",
@@ -51,6 +44,13 @@
       "hours": "1.6",
       "lastHours": "1.5",
       "topArtist": "God Lives Underwater"
+    },
+    {
+      "dayName": "Mon",
+      "date": "2026-10-12",
+      "hours": "0.1",
+      "lastHours": "2.1",
+      "topArtist": "Ludwig van Beethoven"
     }
   ],
   "week": {
@@ -250,6 +250,12 @@
       {
         "name": "John Adams",
         "url": "https://www.last.fm/music/John+Adams",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Ludwig van Beethoven",
+        "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -547,11 +553,11 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b967f9e040c241a1bcc1e56ac9c013ad.jpg"
       },
       {
-        "name": "The Dust",
-        "url": "https://www.last.fm/music/Miyagi/The+Dust",
-        "artist": "Miyagi",
+        "name": "Beethoven: Concerto for Violin / Bernstein: Serenade",
+        "url": "https://www.last.fm/music/Ludwig+van+Beethoven/Beethoven:+Concerto+for+Violin+%2F+Bernstein:+Serenade",
+        "artist": "Ludwig van Beethoven",
         "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/29bd3bbfecda1f2783d96181b4ae0636.jpg"
+        "image": ""
       }
     ],
     "tracks": [
@@ -1758,7 +1764,7 @@
       {
         "name": "Ludwig van Beethoven",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
-        "plays": "83",
+        "plays": "84",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
