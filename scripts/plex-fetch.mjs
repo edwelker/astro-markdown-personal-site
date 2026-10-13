@@ -1,3 +1,42 @@
+/**
+ * scripts/plex-fetch.mjs
+ *
+ * Architecture: Plex Cloud-First with Sovereign Append-Only Historical Ledger
+ * ----------------------------------------------------------------------------
+ * 1. Why Plex Cloud-First over Per-Server:
+ *    - The user operates multiple Plex servers (e.g. main server `shostakovich` and
+ *      laptop server `stravinsky` used while traveling/remote).
+ *    - Querying individual PMS instances requires maintaining fragile network
+ *      endpoints (dynamic IPs, port forwards, waking sleeping laptops).
+ *    - Plex Cloud (https://community.plex.tv/api GraphQL `ratingsV2`) automatically
+ *      federates account-level ratings across all servers and streaming titles into
+ *      a single unified stream, regardless of which machine was used or whether
+ *      media files were migrated between servers.
+ *
+ * 2. Why a Sovereign Historical Ledger (src/data/cache/historical-ratings.json):
+ *    - PMS and Plex Cloud are third-party systems. If local media files are deleted
+ *      from disk, PMS purges the item from its library.
+ *    - Direct backdating to Plex Cloud is not possible because Plex sets `date: NOW()`,
+ *      which would corrupt historical order and displace recent watches.
+ *    - If cloud data is ever desynced or policies change, data could be lost.
+ *    - Solution: An append-only, version-controlled archive in Git. On every build,
+ *      we ingest cloud and PMS ratings, update ratings/dates in place, but NEVER delete
+ *      any item. This permanently preserved 18 historical Trakt titles rated years ago
+ *      that no longer exist on server disks.
+ *
+ * 3. Technical Learnings & Key Gotchas:
+ *    - Persistent IDs vs. String Fragility: Service titles diverge (e.g. Trakt "Se7en"
+ *      vs Plex "Seven"; "Star Wars: Andor" vs "Andor"). Anchoring matching on immutable
+ *      IDs (`id`, `imdbId`, `tmdbId`) makes presentation metadata (title, poster, genres)
+ *      fungible, allowing automatic deduplication and adoption of canonical Plex titles.
+ *    - Poster URLs: Local PMS returns relative thumbnail paths (`/library/metadata/...`)
+ *      which only work when proxied through PMS port 32400 and fail on the public web.
+ *      The fetcher and merger enforce that only absolute public CDN URLs (TMDb /
+ *      metadata-static.plex.tv) are saved to the archive.
+ *    - Dynamic User Identity: GraphQL requires the user's account UUID. We dynamically
+ *      query `https://plex.tv/api/v2/user` rather than hardcoding.
+ */
+
 import fs from 'node:fs/promises';
 import { runETL, mapConcurrent } from './lib-etl.mjs';
 import {
