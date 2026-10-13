@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
-  testMatch: ['**/homepage-integrity.spec.ts', '**/homepage.spec.mjs'],
+  testMatch: ['**/homepage-integrity.spec.ts', '**/homepage.spec.mjs', '**/e2e/media.spec.ts'],
   fullyParallel: true,
   workers: '50%',
   reporter: 'list',
