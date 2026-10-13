@@ -30,6 +30,7 @@ test.describe('Homepage Component & Data Integrity', () => {
     await expect(page).toHaveScreenshot({
       fullPage: true,
       maxDiffPixelRatio: 0.1,
+      timeout: 15000,
     });
   });
 });

@@ -74,7 +74,7 @@
     @apply text-black/75 dark:text-white/75;
   }
 
-  header {
+  body > header {
     @apply fixed top-0 right-0 left-0 z-50 py-6;
     @apply bg-neutral-100/75 dark:bg-neutral-900/75;
     @apply saturate-200 backdrop-blur-xs;
