@@ -376,4 +376,44 @@ describe('Music Logic: transformMusicData', () => {
     const today = result.history[6];
     expect(today.topArtist).toBe('Artist A');
   });
+
+  it('correctly attributes evening tracks in EDT to the current day instead of next day UTC', () => {
+    // 2026-10-13 21:00:00 EDT is 2026-10-14 01:00:00 UTC (next day in UTC)
+    const lateEveningTs = Math.floor(new Date('2026-10-14T01:00:00Z').getTime() / 1000).toString();
+    const systemNow = new Date('2026-10-14T02:00:00Z'); // 10 PM EDT on Oct 13
+    vi.setSystemTime(systemNow);
+
+    const mockInfo = { user: { playcount: '100' } };
+    const mockRecent = {
+      recenttracks: {
+        track: [
+          { date: { uts: lateEveningTs }, artist: { '#text': 'Evening Band' } },
+        ],
+      },
+    };
+    const emptyList = {};
+
+    const result = transformMusicData(
+      mockInfo,
+      mockRecent,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList,
+      emptyList
+    );
+
+    const todayStat = result.history[6];
+    expect(todayStat.date).toBe('2026-10-13');
+    expect(todayStat.dayName).toBe('Tue');
+    expect(todayStat.topArtist).toBe('Evening Band');
+    expect(todayStat.hours).toBe('0.1');
+  });
 });

@@ -27,12 +27,21 @@ export function transformMusicData(
     }));
   };
 
-  // Helper to get local YYYY-MM-DD string to ensure alignment with user's timezone
+  // Helper to format YYYY-MM-DD string in user's Eastern timezone
   const getLocalDateKey = (dateObj) => {
-    const year = dateObj.getFullYear();
-    const month = String(dateObj.getMonth() + 1).padStart(2, '0');
-    const day = String(dateObj.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
+    return new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'America/New_York',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    }).format(dateObj);
+  };
+
+  const getLocalDayName = (dateObj) => {
+    return new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/New_York',
+      weekday: 'short',
+    }).format(dateObj);
   };
 
   const processHistory = () => {
@@ -48,7 +57,7 @@ export function transformMusicData(
         const ts = parseInt(t.date?.uts);
         if (!ts) return;
 
-        // Convert UTC timestamp to local date key
+        // Convert UTC timestamp to local Eastern date key
         const dateObj = new Date(ts * 1000);
         const date = getLocalDateKey(dateObj);
 
@@ -60,30 +69,30 @@ export function transformMusicData(
       });
     }
 
-    // 2. Determine the 7-day window
+    // 2. Determine the 7-day window in America/New_York
     // If "Today" has no data yet (e.g. 12:01 AM), shift the window back by 1 day
     // so we don't show an empty graph.
-    const today = new Date();
-    const todayKey = getLocalDateKey(today);
+    const now = new Date();
+    const todayKey = getLocalDateKey(now);
 
-    let anchorDate = today;
+    const [y, m, d] = todayKey.split('-').map(Number);
+    // Use noon UTC to step calendar days cleanly without timezone/DST edge-case shifting
+    const anchor = new Date(Date.UTC(y, m - 1, d, 12, 0, 0));
     if (!daysMap[todayKey] || daysMap[todayKey].count === 0) {
-      anchorDate = new Date(today);
-      anchorDate.setDate(anchorDate.getDate() - 1);
+      anchor.setUTCDate(anchor.getUTCDate() - 1);
     }
 
     // 3. Build the history array for the chosen window
     const history = [];
     for (let i = 6; i >= 0; i--) {
-      const d = new Date(anchorDate);
-      d.setDate(d.getDate() - i);
-
-      const dateStr = getLocalDateKey(d);
+      const current = new Date(anchor);
+      current.setUTCDate(anchor.getUTCDate() - i);
+      const dateStr = getLocalDateKey(current);
 
       // Calculate comparison date (7 days prior)
-      const dLast = new Date(d);
-      dLast.setDate(dLast.getDate() - 7);
-      const dateStrLast = getLocalDateKey(dLast);
+      const past = new Date(current);
+      past.setUTCDate(past.getUTCDate() - 7);
+      const dateStrLast = getLocalDateKey(past);
 
       const thisDayData = daysMap[dateStr];
       const lastDayData = daysMap[dateStrLast];
@@ -101,7 +110,7 @@ export function transformMusicData(
       }
 
       history.push({
-        dayName: d.toLocaleDateString('en-US', { weekday: 'short' }),
+        dayName: getLocalDayName(current),
         date: dateStr,
         hours: (((thisDayData?.count || 0) * 3.5) / 60).toFixed(1),
         lastHours: (((lastDayData?.count || 0) * 3.5) / 60).toFixed(1),
