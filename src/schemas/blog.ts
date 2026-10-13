@@ -1,6 +1,6 @@
 import { z } from 'astro/zod';
 
-export const BlogSchema = ({ image }) =>
+export const BlogSchema = ({ image }: { image: any }) =>
   z.object({
     title: z.string(),
     date: z.coerce.date(),

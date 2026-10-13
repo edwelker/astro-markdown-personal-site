@@ -4,7 +4,7 @@ const allPhotos = data || [];
 const photosToShow = allPhotos.slice(0, 10);
 const hasPhotos = photosToShow.length > 0;
 
-const getRelativeTime = (dateStr) => {
+const getRelativeTime = (dateStr: string) => {
   if (!dateStr) return '';
 
   // 1. Get "Now" in America/New_York
@@ -16,7 +16,7 @@ const getRelativeTime = (dateStr) => {
     day: 'numeric',
   }).formatToParts(now);
 
-  const getPart = (type) => nyNowParts.find((p) => p.type === type).value;
+  const getPart = (type: string) => nyNowParts.find((p) => p.type === type)?.value || '0';
   const nyYear = parseInt(getPart('year'));
   const nyMonth = parseInt(getPart('month')) - 1; // 0-indexed
   const nyDay = parseInt(getPart('day'));

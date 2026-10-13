@@ -36,7 +36,7 @@ export function getStationsToFetch(
   });
 }
 
-interface Coords {
+export interface Coords {
   lat: number;
   lon: number;
 }
@@ -167,8 +167,9 @@ export async function calculateDistances({
       uiCallbacks.updateTable();
     } catch (e) {
       console.error('Matrix calculation failed:', e);
+      const msg = e instanceof Error ? e.message : String(e);
       uiCallbacks.alert(
-        `Failed to calculate driving times: ${e.message}. Check console for details.`
+        `Failed to calculate driving times: ${msg}. Check console for details.`
       );
       uiCallbacks.setStatus('', false);
       uiCallbacks.setButtonState('Calculate Driving Times', false);

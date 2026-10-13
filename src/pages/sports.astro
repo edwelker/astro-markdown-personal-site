@@ -261,7 +261,7 @@ const tabs = [
 </Layout>
 
 <script>
-  let updateInterval;
+  let updateInterval: ReturnType<typeof setInterval> | undefined;
 
   function initSportsPage() {
     // Clear any existing interval to prevent duplicates on page navigation

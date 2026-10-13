@@ -1,7 +1,7 @@
 ---
 const { schedule = [], scheduleLink } = Astro.props;
 
-function formatGameDate(date) {
+function formatGameDate(date: string | number | Date) {
   return new Date(date).toLocaleString('en-US', {
     month: 'short',
     day: 'numeric',
@@ -11,7 +11,7 @@ function formatGameDate(date) {
   });
 }
 
-function formatPastGameDate(date) {
+function formatPastGameDate(date: string | number | Date) {
   const d = new Date(date);
   const now = new Date();
   const yesterday = new Date(now);
@@ -68,7 +68,7 @@ function formatPastGameDate(date) {
   </div>
   <ul class="space-y-4">
     {
-      schedule.map((game) => (
+      schedule.map((game: any) => (
         <li>
           <div class="flex items-center justify-end text-sm font-medium text-neutral-900 dark:text-neutral-100">
             {game.text}

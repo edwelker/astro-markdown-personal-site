@@ -8,11 +8,11 @@ thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
 thirtyDaysAgo.setHours(0, 0, 0, 0);
 
 // Filter items to last 30 days
-const recentItems = items.filter((item) => item.data.date >= thirtyDaysAgo);
+const recentItems = items.filter((item: any) => item.data.date >= thirtyDaysAgo);
 
 // Bin data by day for the sparkline
 const dayCounts = new Array(30).fill(0);
-recentItems.forEach((item) => {
+recentItems.forEach((item: any) => {
   const dayDiff = Math.floor(
     (item.data.date.getTime() - thirtyDaysAgo.getTime()) / (1000 * 60 * 60 * 24)
   );
@@ -23,7 +23,7 @@ recentItems.forEach((item) => {
 
 const maxCount = Math.max(...dayCounts, 1);
 
-const formatDate = (date) => {
+const formatDate = (date: Date) => {
   return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 };
 
@@ -71,7 +71,7 @@ const rangeLabel = `${formatDate(thirtyDaysAgo)} - ${formatDate(now)}`;
     <!-- Horizontal Scroll List -->
     <div class="-mx-1 flex overflow-x-auto px-1 pb-2">
       {
-        recentItems.map((item) => (
+        recentItems.map((item: any) => (
           <a
             href={item.type === 'blog' ? `/blog/${item.slug}/` : `/${item.type}/${item.slug}/`}
             class="group w-48 flex-none pr-6"

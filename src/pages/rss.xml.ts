@@ -2,7 +2,7 @@ import rss from '@astrojs/rss';
 import { SITE } from '../consts';
 import { getAllActivity } from '../lib/activity';
 
-export async function GET(context) {
+export async function GET(context: any) {
   const allItems = await getAllActivity();
 
   return rss({

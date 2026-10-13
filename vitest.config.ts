@@ -27,7 +27,6 @@ export default defineConfig({
         'tests/sitemap-integrity.test.ts',
         'tests/mocks/**',
       ],
-      all: true,
     },
   },
 });

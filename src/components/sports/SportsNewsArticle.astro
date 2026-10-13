@@ -1,7 +1,7 @@
 ---
 const { item } = Astro.props;
 
-function formatRelativeTime(dateInput) {
+function formatRelativeTime(dateInput: string | number | Date) {
   if (!dateInput) return '';
   const date = new Date(dateInput);
   if (isNaN(date.getTime())) return '';
@@ -19,11 +19,11 @@ function formatRelativeTime(dateInput) {
   }
 }
 
-function decodeHtmlEntities(str) {
+function decodeHtmlEntities(str: string) {
   if (!str) return '';
   return str
-    .replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(dec))
-    .replace(/&#x([0-9a-fA-F]+);/g, (match, hex) => String.fromCharCode(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_match, dec) => String.fromCharCode(Number(dec)))
+    .replace(/&#x([0-9a-fA-F]+);/g, (_match, hex) => String.fromCharCode(parseInt(hex, 16)))
     .replace(/&quot;/g, '"')
     .replace(/&apos;/g, "'")
     .replace(/&amp;/g, '&')
@@ -31,7 +31,7 @@ function decodeHtmlEntities(str) {
     .replace(/&gt;/g, '>');
 }
 
-function getSourceDomain(url) {
+function getSourceDomain(url: string) {
   try {
     const domain = new URL(url).hostname;
     return domain.replace('www.', '');

@@ -19,6 +19,6 @@ const { posts } = Astro.props;
     </Link>
   </div>
   <ul class="flex flex-col gap-2">
-    {posts.map((post) => <BlogItem post={post} />)}
+    {posts.map((post: any) => <BlogItem post={post} />)}
   </ul>
 </section>

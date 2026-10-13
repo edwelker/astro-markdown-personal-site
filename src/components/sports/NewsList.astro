@@ -6,7 +6,7 @@ const { recentItems = [], olderItems = [] } = Astro.props;
 
 <div class="space-y-4">
   <ul class="space-y-4">
-    {recentItems.map((item) => <SportsNewsArticle item={item} />)}
+    {recentItems.map((item: any) => <SportsNewsArticle item={item} />)}
   </ul>
 
   {
@@ -16,7 +16,7 @@ const { recentItems = [], olderItems = [] } = Astro.props;
           Show {olderItems.length} older articles...
         </button>
         <ul class="mt-4 hidden space-y-4">
-          {olderItems.map((item) => (
+          {olderItems.map((item: any) => (
             <SportsNewsArticle item={item} />
           ))}
         </ul>

@@ -7,7 +7,7 @@ const { post } = Astro.props;
 // Import all images in the blog content directory to resolve relative paths
 const images = import.meta.glob('/src/content/blog/**/*.{jpeg,jpg,png,gif,svg}');
 
-async function getPostImage(post) {
+async function getPostImage(post: any) {
   const { data, body, id } = post;
 
   // 1. Check frontmatter
@@ -48,7 +48,7 @@ async function getPostImage(post) {
   // 5. Load image via glob
   const imageLoader = images[fullPath];
   if (imageLoader) {
-    const mod = await imageLoader();
+    const mod = (await imageLoader()) as any;
     return mod.default.src;
   }
 

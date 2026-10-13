@@ -9,12 +9,12 @@ interface RecentRide {
   url?: string | null;
 }
 interface CyclingData {
-  year: { distance: string; elevation: string; count: number };
-  month: { name: string; distance: number; count: number; elevation: string };
-  recent: RecentRide[];
-  chart: number[];
+  year?: { distance?: string; elevation?: string; count?: number };
+  month?: { name?: string; distance?: number | string; count?: number; elevation?: string };
+  recent?: RecentRide[];
+  chart?: number[];
 }
-const cyclingData = (cyclingDataRaw || {}) as CyclingData;
+const cyclingData = (cyclingDataRaw || {}) as unknown as CyclingData;
 const { year, month, recent, chart = [] } = cyclingData;
 const maxWeekly = Math.max(...(chart || [1]), 1);
 const currentYear = new Date().toLocaleDateString('en-US', {

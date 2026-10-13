@@ -13,14 +13,14 @@ const {
   directors = [] as [string, DirectorInfo][],
   sparkline = [] as SparklineDecade[],
   username = 'edwelker',
-} = plexData || {};
+} = (plexData || {}) as any;
 
-const { tens, nines, eights, midQuality, lowQuality, recentlyRated } = filterRatings(allRatings);
+const { tens, nines, eights, midQuality, lowQuality, recentlyRated } = filterRatings(allRatings as RatingItem[]);
 const { topDirectorName, topDirectorId, directorSpotlight } = getDirectorSpotlight(
-  allRatings,
-  directors
+  allRatings as RatingItem[],
+  directors as [string, DirectorInfo][]
 );
-const { topGenres, topDirectors } = mapTopLists(genres, directors, username);
+const { topGenres, topDirectors } = mapTopLists(genres as [string, number][], directors as [string, DirectorInfo][], username);
 ---
 
 <div class="space-y-16">
