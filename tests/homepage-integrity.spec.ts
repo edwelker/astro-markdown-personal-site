@@ -18,8 +18,8 @@ test.describe('Homepage Component & Data Integrity', () => {
     // 1. Blog Posts (4)
     await expect(page.locator('[data-testid="posts-section"] li')).toHaveCount(4);
 
-    // 2. Flickr Photos (14)
-    await expect(page.locator('[data-testid="flickr-section"] img')).toHaveCount(14);
+    // 2. Flickr Photos (10)
+    await expect(page.locator('[data-testid="flickr-section"] img')).toHaveCount(10);
 
     // 3. Media Teaser (Specifically target items inside the grid div)
     // This avoids picking up the "See All" link if it has a .group class

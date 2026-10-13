@@ -6,10 +6,19 @@ import matter from 'gray-matter';
 test.describe('Content Integrity', () => {
   test('Blog count matches non-draft files', async ({ page }) => {
     const blogDir = path.resolve('src/content/blog');
-    const files = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md') || f.endsWith('.mdx'));
+    function getFiles(dir) {
+      let res = [];
+      for (const f of fs.readdirSync(dir, { withFileTypes: true })) {
+        const p = path.join(dir, f.name);
+        if (f.isDirectory()) res.push(...getFiles(p));
+        else if (f.name.endsWith('.md') || f.name.endsWith('.mdx')) res.push(p);
+      }
+      return res;
+    }
+    const files = getFiles(blogDir);
 
     const nonDrafts = files.filter((file) => {
-      const { data } = matter(fs.readFileSync(path.join(blogDir, file), 'utf-8'));
+      const { data } = matter(fs.readFileSync(file, 'utf-8'));
       return !data.draft;
     });
 
@@ -20,7 +29,7 @@ test.describe('Content Integrity', () => {
 
   test('Highlights full count verification', async ({ page }) => {
     await page.goto('/highlights');
-    const highlights = page.locator('ul li');
+    const highlights = page.locator('[data-testid="highlights-section"] .grid > div');
     await expect(highlights).toHaveCount(6);
   });
 

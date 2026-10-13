@@ -27,7 +27,6 @@ describe('getAllActivity', () => {
         let items: any[] = [];
         if (name === 'blog') items = blogData;
         if (name === 'recipes') items = recipeData;
-        if (name === 'photos') items = photoData;
 
         if (filter) {
           return items.filter(filter);
@@ -38,27 +37,22 @@ describe('getAllActivity', () => {
 
     const result = await getAllActivity();
 
-    // Expect 3 items (draft filtered out)
-    expect(result).toHaveLength(3);
+    // Expect 2 items (draft filtered out)
+    expect(result).toHaveLength(2);
 
     // Verify sorting (descending by date) and type assignment
-    // 1. Photo (March)
-    expect(result[0]).toMatchObject({ type: 'photos', slug: 'photo-1' });
-    // 2. Recipe (Feb)
-    expect(result[1]).toMatchObject({ type: 'recipes', slug: 'recipe-1' });
-    // 3. Blog (Jan)
-    expect(result[2]).toMatchObject({ type: 'blog', slug: 'post-1' });
+    // 1. Recipe (Feb)
+    expect(result[0]).toMatchObject({ type: 'recipes', slug: 'recipe-1' });
+    // 2. Blog (Jan)
+    expect(result[1]).toMatchObject({ type: 'blog', slug: 'post-1' });
   });
 
-  it('handles missing photos collection gracefully', async () => {
-    (getCollection as any).mockImplementation(async (name: string) => {
-      if (name === 'photos') throw new Error('Collection does not exist');
-      return [];
-    });
+  it('handles empty collections gracefully', async () => {
+    (getCollection as any).mockResolvedValue([]);
 
     const result = await getAllActivity();
 
-    // Should return empty array (assuming other collections return empty in this mock setup)
+    // Should return empty array
     expect(result).toEqual([]);
   });
 });

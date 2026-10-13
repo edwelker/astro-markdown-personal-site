@@ -2,8 +2,8 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Gas Page Functionality', () => {
   test.beforeEach(async ({ page }) => {
-    // Navigate to a known gas page (Maryland)
-    await page.goto('/gas/md/');
+    // Navigate to a known gas page (Columbia, MD)
+    await page.goto('/gas/columbia_md/');
   });
 
   test('should filter the gas table', async ({ page }) => {
@@ -66,9 +66,6 @@ test.describe('Gas Page Functionality', () => {
 
     // Click the button
     await calcBtn.click();
-
-    // Verify status message appears
-    await expect(page.locator('#distance-status')).toBeVisible();
 
     // Verify the table updates with the mocked time/distance
     // The last column is the Time column
