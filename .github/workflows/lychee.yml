@@ -33,10 +33,8 @@ jobs:
           STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
           LASTFM_USERNAME: ${{ secrets.LASTFM_USERNAME }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
-          TRAKT_CLIENT_ID: ${{ secrets.TRAKT_CLIENT_ID }}
-          TRAKT_CLIENT_SECRET: ${{ secrets.TRAKT_CLIENT_SECRET }}
-          TRAKT_REFRESH_TOKEN: ${{ secrets.TRAKT_REFRESH_TOKEN }}
-          TRAKT_USERNAME: ${{ secrets.TRAKT_USERNAME }}
+          PLEX_SERVER_URL: ${{ secrets.PLEX_SERVER_URL }}
+          PLEX_TOKEN: ${{ secrets.PLEX_TOKEN }}
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
 
       - name: Link Checker

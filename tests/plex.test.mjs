@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import data from '../src/data/cache/trakt.json';
+import data from '../src/data/cache/plex.json';
 
-describe('Trakt Final Output Validation', () => {
+describe('Plex Final Output Validation', () => {
   it('checks that allRatings is a flat Array (Fixes UI Bigness)', () => {
     // If this fails, your fetcher is nesting { allRatings: { allRatings: [] } }
     expect(Array.isArray(data.allRatings)).toBe(true);

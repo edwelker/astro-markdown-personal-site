@@ -59,8 +59,9 @@ describe.skipIf(!distExists)('Build Artifact Integrity', () => {
       expect(Object.keys(data).length).toBeGreaterThan(0);
     });
 
-    it('should have valid trakt.json', () => {
-      const filePath = path.join(distPath, 'data', 'trakt.json');
+
+    it('should have valid plex.json', () => {
+      const filePath = path.join(distPath, 'data', 'plex.json');
       expect(fs.existsSync(filePath)).toBe(true);
 
       const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));

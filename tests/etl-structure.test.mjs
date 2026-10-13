@@ -10,7 +10,7 @@ const ETL_SCRIPTS = [
   'flickr-fetch.mjs',
   'gas-fetch.mjs',
   'music-fetch.mjs',
-  'trakt-fetch.mjs',
+  'plex-fetch.mjs',
 ];
 
 describe('ETL Script Structure', () => {

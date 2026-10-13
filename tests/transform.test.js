@@ -4,7 +4,7 @@ import path from 'path';
 import { transformMusicData } from '../scripts/music-logic.mjs';
 import { transformStravaData } from '../scripts/cycling-logic.mjs';
 import { transformFlickrData } from '../scripts/flickr-logic.mjs';
-import { transformTraktData } from '../scripts/trakt-logic.mjs';
+import { transformPlexData } from '../scripts/plex-logic.mjs';
 
 const getData = (filename) => {
   const fullPath = path.resolve(`./src/data/${filename}`);
@@ -70,11 +70,11 @@ describe('Data Transformation Logic', () => {
       expect(res.user.scrobbles).toBe(500);
     });
 
-    it('Trakt: unifies schema for movies and shows', () => {
-      const mock = [{ movie: { title: 'A', ids: { trakt: 1, slug: 'a' } }, rating: 10 }];
-      const res = transformTraktData(mock);
+    it('Plex: unifies schema for movies and shows', () => {
+      const mock = [{ ratingKey: '1', title: 'A', Guid: [{ id: 'tmdb://123' }], userRating: 10 }];
+      const res = transformPlexData(mock);
       expect(res[0].type).toBe('movie');
-      expect(res[0].href).toContain('trakt.tv/movies/a');
+      expect(res[0].href).toContain('themoviedb.org/movie/123');
     });
   });
 
@@ -82,7 +82,7 @@ describe('Data Transformation Logic', () => {
     const cycling = getData('cycling.json');
     const flickr = getData('flickr-photos.json');
     const music = getData('music.json');
-    const trakt = getData('trakt.json');
+    const plex = getData('plex.json');
 
     it('validates cycling data if present', () => {
       if (!cycling) return console.warn('Skipping: cycling.json not found');
@@ -103,11 +103,11 @@ describe('Data Transformation Logic', () => {
       expect(music.user.scrobbles).toBeGreaterThan(0);
     });
 
-    it('validates trakt data if present', () => {
-      if (!trakt) return console.warn('Skipping: trakt.json not found');
-      expect(Array.isArray(trakt.allRatings)).toBe(true);
-      if (trakt.allRatings.length > 0) {
-        expect(trakt.allRatings[0]).toHaveProperty('imdbId');
+    it('validates plex data if present', () => {
+      if (!plex) return console.warn('Skipping: plex.json not found');
+      expect(Array.isArray(plex.allRatings)).toBe(true);
+      if (plex.allRatings.length > 0) {
+        expect(plex.allRatings[0]).toHaveProperty('imdbId');
       }
     });
   });

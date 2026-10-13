@@ -34,25 +34,10 @@ jobs:
           INTERVALS_ATHLETE_ID: ${{ secrets.INTERVALS_ATHLETE_ID }}
           LASTFM_USERNAME: ${{ secrets.LASTFM_USERNAME }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
-          TRAKT_CLIENT_ID: ${{ secrets.TRAKT_CLIENT_ID }}
-          TRAKT_CLIENT_SECRET: ${{ secrets.TRAKT_CLIENT_SECRET }}
-          TRAKT_REFRESH_TOKEN: ${{ secrets.TRAKT_REFRESH_TOKEN }}
-          TRAKT_USERNAME: ${{ secrets.TRAKT_USERNAME }}
+          PLEX_SERVER_URL: ${{ secrets.PLEX_SERVER_URL }}
+          PLEX_TOKEN: ${{ secrets.PLEX_TOKEN }}
+          PLEX_USERNAME: ${{ secrets.PLEX_USERNAME }}
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-
-      - name: Rotate Trakt Refresh Token
-        # After a successful token exchange Trakt returns a new refresh token.
-        # Persist it back to GitHub Secrets so the next run uses a valid token.
-        run: |
-          if [ -f /tmp/trakt-new-refresh-token.txt ]; then
-            NEW_TOKEN=$(cat /tmp/trakt-new-refresh-token.txt)
-            gh secret set TRAKT_REFRESH_TOKEN --body "$NEW_TOKEN"
-            echo "✅ TRAKT_REFRESH_TOKEN rotated"
-          else
-            echo "ℹ️  No new refresh token written (TRAKT_ACCESS_TOKEN mode or fetch skipped)"
-          fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and Push Cache
         run: |

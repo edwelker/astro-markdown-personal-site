@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { filterRatings, getDirectorSpotlight, mapTopLists } from '../src/lib/trakt-logic';
-import type { RatingItem, DirectorInfo } from '../src/components/trakt/types';
+import { filterRatings, getDirectorSpotlight, mapTopLists } from '../src/lib/media-logic';
+import type { RatingItem, DirectorInfo } from '../src/components/media/types';
 
 // Helper to create a mock rating item
 const mockItem = (id: string, rating: number, director: string = 'Unknown'): RatingItem => ({
@@ -14,7 +14,7 @@ const mockItem = (id: string, rating: number, director: string = 'Unknown'): Rat
   poster: `img-${id}.jpg`,
 });
 
-describe('Trakt Logic', () => {
+describe('Media Logic', () => {
   describe('filterRatings', () => {
     const ratings = [
       mockItem('1', 10),
@@ -110,7 +110,7 @@ describe('Trakt Logic', () => {
       expect(result.topGenres[0]).toEqual({
         label: 'Action',
         count: 10,
-        href: 'https://trakt.tv/users/testuser/history/movies/added?genres=action',
+        href: 'https://www.themoviedb.org/search?query=Action',
       });
 
       expect(result.topDirectors[0]).toEqual({

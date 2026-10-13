@@ -1,21 +1,20 @@
 ---
-import traktData from '../data/trakt.json';
-import type { RatingItem, SparklineDecade, DirectorInfo } from './trakt/types';
-import HistoryGraph from './trakt/HistoryGraph.astro';
-import PosterScroll from './trakt/PosterScroll.astro';
-import TopLists from './trakt/TopLists.astro';
-import RecentlyRated from './trakt/RecentlyRated.astro';
-import { filterRatings, getDirectorSpotlight, mapTopLists } from '../lib/trakt-logic';
+import plexData from '../data/plex.json';
+import type { RatingItem, SparklineDecade, DirectorInfo } from './media/types';
+import HistoryGraph from './media/HistoryGraph.astro';
+import PosterScroll from './media/PosterScroll.astro';
+import TopLists from './media/TopLists.astro';
+import RecentlyRated from './media/RecentlyRated.astro';
+import { filterRatings, getDirectorSpotlight, mapTopLists } from '../lib/media-logic';
 
 const {
   allRatings = [] as RatingItem[],
   genres = [] as [string, number][],
   directors = [] as [string, DirectorInfo][],
   sparkline = [] as SparklineDecade[],
-  username = 'ewelker',
-} = traktData || {};
+  username = 'edwelker',
+} = plexData || {};
 
-// Logic extracted to src/lib/trakt-logic.ts
 const { tens, nines, eights, midQuality, lowQuality, recentlyRated } = filterRatings(allRatings);
 const { topDirectorName, topDirectorId, directorSpotlight } = getDirectorSpotlight(
   allRatings,
@@ -31,8 +30,6 @@ const { topGenres, topDirectors } = mapTopLists(genres, directors, username);
     <PosterScroll
       title={`The 10/10 Collection (${tens.length})`}
       items={tens}
-      viewAllLink={`https://trakt.tv/users/${username}/ratings/all/10/added/asc`}
-      viewAllText="Full Set ↗"
       variant="xl"
       titleColorClass="text-orange-600"
     />
@@ -59,14 +56,12 @@ const { topGenres, topDirectors } = mapTopLists(genres, directors, username);
     <PosterScroll
       title="The 9/10 Tier"
       items={nines.slice(0, 15)}
-      viewAllLink={`https://trakt.tv/users/${username}/ratings/all/9/added/asc`}
       variant="md"
       titleColorClass="text-orange-500"
     />
     <PosterScroll
       title="The 8/10 Tier"
       items={eights.slice(0, 15)}
-      viewAllLink={`https://trakt.tv/users/${username}/ratings/all/8/added/asc`}
       variant="md"
     />
   </div>
@@ -80,15 +75,11 @@ const { topGenres, topDirectors } = mapTopLists(genres, directors, username);
     <PosterScroll
       title="6.0 - 7.9 range"
       items={midQuality.slice(0, 15)}
-      viewAllLink={`https://trakt.tv/users/${username}/ratings/all/7/added/asc`}
-      viewAllText="View 7s ↗"
       variant="sm"
     />
     <PosterScroll
       title="5.0 and below"
       items={lowQuality.slice(0, 15)}
-      viewAllLink={`https://trakt.tv/users/${username}/ratings/all/5/added/asc`}
-      viewAllText="View 5s ↗"
       variant="sm"
     />
   </div>

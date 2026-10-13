@@ -41,7 +41,6 @@ export const SOCIALS: Socials = [
   { NAME: 'RSS', HREF: '/rss.xml' },
   { NAME: 'Spotify', HREF: 'https://open.spotify.com/user/edwelker' },
   { NAME: 'Strava', HREF: 'https://www.strava.com/athletes/43444098' },
-  { NAME: 'Trakt', HREF: 'https://trakt.tv/users/edwelker' },
   { NAME: 'Last.fm', HREF: 'https://www.last.fm/user/edwelker' },
   { NAME: 'Flickr', HREF: 'https://www.flickr.com/photos/ed_welker/' },
 ];

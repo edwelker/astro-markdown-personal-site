@@ -1,4 +1,4 @@
-import type { RatingItem, DirectorInfo, TopListItem } from '../components/trakt/types';
+import type { RatingItem, DirectorInfo, TopListItem } from '../components/media/types';
 
 export function filterRatings(allRatings: RatingItem[]) {
   const tens = allRatings.filter((r) => r.rating === 10);
@@ -39,7 +39,7 @@ export function mapTopLists(
   const topGenres: TopListItem[] = genres.slice(0, 10).map((g) => ({
     label: g[0],
     count: g[1],
-    href: `https://trakt.tv/users/${username}/history/movies/added?genres=${g[0].toLowerCase()}`,
+    href: `https://www.themoviedb.org/search?query=${encodeURIComponent(g[0])}`,
   }));
 
   const topDirectors: TopListItem[] = directors.slice(0, 10).map((d) => ({

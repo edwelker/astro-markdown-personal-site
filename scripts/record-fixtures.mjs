@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 export const FIXTURE_DIR = './tests/fixtures';
 export const DATA_DIR = './src/data';
-export const FILES_TO_RECORD = ['flickr-photos.json', 'trakt.json', 'cycling.json', 'music.json'];
+export const FILES_TO_RECORD = ['flickr-photos.json', 'plex.json', 'cycling.json', 'music.json'];
 
 export async function record() {
   await fs.mkdir(FIXTURE_DIR, { recursive: true });

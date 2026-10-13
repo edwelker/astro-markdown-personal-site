@@ -1,27 +1,28 @@
 import { describe, it, expect } from 'vitest';
-import { transformTraktData } from '../scripts/trakt-logic.mjs';
+import { transformPlexData } from '../scripts/plex-logic.mjs';
 import { transformMusicData } from '../scripts/music-logic.mjs';
 import { transformStravaData } from '../scripts/cycling-logic.mjs';
 
 describe('ETL Logic Manifest', () => {
-  describe('Trakt Integrity', () => {
-    it('1. Schema Enforcement: correctly maps complex nested Trakt IDs', () => {
-      const mock = [{ movie: { title: 'Test', ids: { trakt: 123 } }, rating: 10 }];
-      const res = transformTraktData(mock);
-      // Signature is now a flat array
-      expect(res[0].id).toBe(123);
+
+  describe('Plex Integrity', () => {
+    it('1. Schema Enforcement: correctly maps Plex ratingKey and external GUIDs', () => {
+      const mock = [{ ratingKey: 'plex-123', Guid: [{ id: 'tmdb://456' }], rating: 10 }];
+      const res = transformPlexData(mock);
+      expect(res[0].id).toBe('plex-123');
+      expect(res[0].tmdbId).toBe('456');
     });
 
-    it('2. Boundary Integrity: handles 1/10 and 10/10 ratings', () => {
-      const mock = [{ rating: 1 }, { rating: 10 }];
-      const res = transformTraktData(mock);
+    it('2. Boundary Integrity: handles 1/10 and 10/10 userRatings', () => {
+      const mock = [{ userRating: 1 }, { userRating: 10 }];
+      const res = transformPlexData(mock);
       expect(res[0].rating).toBe(1);
       expect(res[1].rating).toBe(10);
     });
 
     it('3. Hydration: ensures poster and director are never null (fallback to string)', () => {
-      const mock = [{ movie: { title: 'No Data' } }];
-      const res = transformTraktData(mock);
+      const mock = [{ title: 'No Data' }];
+      const res = transformPlexData(mock);
       expect(typeof res[0].poster).toBe('string');
       expect(typeof res[0].director).toBe('string');
     });
