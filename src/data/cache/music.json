@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 279166
+    "scrobbles": 279188
   },
   "history": [
-    {
-      "dayName": "Sun",
-      "date": "2026-10-11",
-      "hours": "1.3",
-      "lastHours": "1.5",
-      "topArtist": "God Lives Underwater"
-    },
     {
       "dayName": "Mon",
       "date": "2026-10-12",
@@ -51,6 +44,13 @@
       "hours": "3.0",
       "lastHours": "1.1",
       "topArtist": "Emma Ruth Rundle"
+    },
+    {
+      "dayName": "Sun",
+      "date": "2026-10-18",
+      "hours": "1.3",
+      "lastHours": "1.3",
+      "topArtist": "Béla Bartók"
     }
   ],
   "week": {
@@ -58,7 +58,7 @@
       {
         "name": "Béla Bartók",
         "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
-        "plays": "57",
+        "plays": "71",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -89,6 +89,12 @@
         "name": "Tõnu Kõrvits",
         "url": "https://www.last.fm/music/T%C3%B5nu+K%C3%B5rvits",
         "plays": "14",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sergei Prokofiev",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev",
+        "plays": "13",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -131,18 +137,6 @@
         "name": "Hector Berlioz",
         "url": "https://www.last.fm/music/Hector+Berlioz",
         "plays": "8",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Philip Glass",
-        "url": "https://www.last.fm/music/Philip+Glass",
-        "plays": "7",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sergei Prokofiev",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "7",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -212,6 +206,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Alfred Schnittke",
+        "url": "https://www.last.fm/music/Alfred+Schnittke",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Nicolai Myaskovsky",
         "url": "https://www.last.fm/music/Nicolai+Myaskovsky",
         "plays": "2",
@@ -265,6 +265,13 @@
         "artist": "Austra",
         "plays": "17",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
+      },
+      {
+        "name": "Concerto for Orchestra / Music for Strings, Percussion and Celesta / Hungarian Sketches",
+        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k/Concerto+for+Orchestra+%2F+Music+for+Strings,+Percussion+and+Celesta+%2F+Hungarian+Sketches",
+        "artist": "Béla Bartók",
+        "plays": "14",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e138a07ca2b32b71ef92b061f325394b.jpg"
       },
       {
         "name": "Hymns to the Nordic Lights",
@@ -323,18 +330,18 @@
         "image": ""
       },
       {
-        "name": "Kronos Quartet performs Philip Glass",
-        "url": "https://www.last.fm/music/Philip+Glass/Kronos+Quartet+performs+Philip+Glass",
-        "artist": "Philip Glass",
-        "plays": "7",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/59679cd42fef4e419e27bc639fe48652.png"
-      },
-      {
         "name": "Feel It Break",
         "url": "https://www.last.fm/music/Austra/Feel+It+Break",
         "artist": "Austra",
         "plays": "6",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c1a5a1a5d55043049f0cfc75a2b1fb90.png"
+      },
+      {
+        "name": "Symphony No. 5 / The Year 1941",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Symphony+No.+5+%2F+The+Year+1941",
+        "artist": "Sergei Prokofiev",
+        "plays": "6",
+        "image": ""
       },
       {
         "name": "Symphony no. 5 \"Solitudo\" / Violin Concerto",
@@ -440,6 +447,13 @@
         "artist": "The Ides Of March",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ac1dd7e773fd47e38b2f338f786408dc.jpg"
+      },
+      {
+        "name": "Cello Concerto No. 2 / In Memoriam...",
+        "url": "https://www.last.fm/music/Alfred+Schnittke/Cello+Concerto+No.+2+%2F+In+Memoriam...",
+        "artist": "Alfred Schnittke",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e0348c6817b14c57ccec7cd8a31e5953.jpg"
       },
       {
         "name": "Siren Reprise",
@@ -759,9 +773,9 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Chin up Buttercup",
-        "url": "https://www.last.fm/music/Austra/_/Chin+up+Buttercup",
-        "artist": "Austra",
+        "name": "Concerto For Violoncello And Orchestra No. 2: I. Moderato",
+        "url": "https://www.last.fm/music/Alfred+Schnittke/_/Concerto+For+Violoncello+And+Orchestra+No.+2:+I.+Moderato",
+        "artist": "Alfred Schnittke",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -769,6 +783,12 @@
   },
   "month": {
     "artists": [
+      {
+        "name": "Béla Bartók",
+        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
+        "plays": "97",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
       {
         "name": "Frank Bridge",
         "url": "https://www.last.fm/music/Frank+Bridge",
@@ -779,12 +799,6 @@
         "name": "Anna Clyne",
         "url": "https://www.last.fm/music/Anna+Clyne",
         "plays": "85",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Béla Bartók",
-        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
-        "plays": "83",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -824,6 +838,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Sergei Prokofiev",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev",
+        "plays": "42",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
         "plays": "39",
@@ -836,21 +856,9 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sergei Prokofiev",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "36",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Taylor Swift",
         "url": "https://www.last.fm/music/Taylor+Swift",
         "plays": "36",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Claude Debussy",
-        "url": "https://www.last.fm/music/Claude+Debussy",
-        "plays": "34",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -875,6 +883,12 @@
         "name": "The Lonely Island",
         "url": "https://www.last.fm/music/The+Lonely+Island",
         "plays": "28",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Claude Debussy",
+        "url": "https://www.last.fm/music/Claude+Debussy",
+        "plays": "27",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1117,6 +1131,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8eaa9146fbad4b62bd5a489fc0651ec0.png"
       },
       {
+        "name": "Concerto for Orchestra / Music for Strings, Percussion and Celesta / Hungarian Sketches",
+        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k/Concerto+for+Orchestra+%2F+Music+for+Strings,+Percussion+and+Celesta+%2F+Hungarian+Sketches",
+        "artist": "Béla Bartók",
+        "plays": "23",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e138a07ca2b32b71ef92b061f325394b.jpg"
+      },
+      {
         "name": "Popstar: Never Stop Never Stopping",
         "url": "https://www.last.fm/music/The+Lonely+Island/Popstar:+Never+Stop+Never+Stopping",
         "artist": "The Lonely Island",
@@ -1170,7 +1191,7 @@
         "url": "https://www.last.fm/music/Taylor+Swift/The+Life+of+a+Showgirl",
         "artist": "Taylor Swift",
         "plays": "19",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a2a6d41001952e446674cea903f95540.jpg"
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/837e4d37b0c4a0a65eb12177e1afb8ee.png"
       },
       {
         "name": "Boys for Pele (Deluxe Edition)",
@@ -1281,13 +1302,6 @@
         "name": "Violin Concertos / Mythes",
         "url": "https://www.last.fm/music/Karol+Szymanowski/Violin+Concertos+%2F+Mythes",
         "artist": "Karol Szymanowski",
-        "plays": "14",
-        "image": ""
-      },
-      {
-        "name": "Works for Cello",
-        "url": "https://www.last.fm/music/Nikolai+Girshevich+Kapustin/Works+for+Cello",
-        "artist": "Nikolai Girshevich Kapustin",
         "plays": "14",
         "image": ""
       }
@@ -1580,7 +1594,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "606",
+        "plays": "612",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1602,15 +1616,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Siouxsie and the Banshees",
-        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
-        "plays": "157",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Emma Ruth Rundle",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle",
         "plays": "143",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Siouxsie and the Banshees",
+        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
+        "plays": "137",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1632,6 +1646,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Béla Bartók",
+        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
+        "plays": "122",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Pyotr Ilyich Tchaikovsky",
         "url": "https://www.last.fm/music/Pyotr+Ilyich+Tchaikovsky",
         "plays": "116",
@@ -1641,12 +1661,6 @@
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
         "plays": "111",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Béla Bartók",
-        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
-        "plays": "108",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1911,13 +1925,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9d366c5606653eaaae41582d07acb6b8.jpg"
       },
       {
-        "name": "Juju",
-        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/Juju",
-        "artist": "Siouxsie and the Banshees",
-        "plays": "50",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7653da5c1d3d4aebca9a1e1378b90cc0.png"
-      },
-      {
         "name": "Spaliček / The Spectre's Bride / The Romance Of The Dandelions / The Primrose",
         "url": "https://www.last.fm/music/Bohuslav+Martin%C5%AF/Spali%C4%8Dek+%2F+The+Spectre%27s+Bride+%2F+The+Romance+Of+The+Dandelions+%2F+The+Primrose",
         "artist": "Bohuslav Martinů",
@@ -2028,6 +2035,13 @@
         "artist": "Ralph Vaughan Williams",
         "plays": "39",
         "image": ""
+      },
+      {
+        "name": "Juju",
+        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/Juju",
+        "artist": "Siouxsie and the Banshees",
+        "plays": "39",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7653da5c1d3d4aebca9a1e1378b90cc0.png"
       },
       {
         "name": "May Our Chambers Be Full",
@@ -2228,13 +2242,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Spellbound",
-        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/_/Spellbound",
-        "artist": "Siouxsie and the Banshees",
-        "plays": "11",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Ouverture Helios, Op. 17: Andante tranquillo - Allegro ma non troppo - Presto - Tempo I - Andante tranquillo",
         "url": "https://www.last.fm/music/Carl+Nielsen/_/Ouverture+Helios,+Op.+17:+Andante+tranquillo+-+Allegro+ma+non+troppo+-+Presto+-+Tempo+I+-+Andante+tranquillo",
         "artist": "Carl Nielsen",
@@ -2273,6 +2280,13 @@
         "name": "Oration, Concerto elegiaco, H. 180: VIII. Epilogue. Andante tranquillo",
         "url": "https://www.last.fm/music/Frank+Bridge/_/Oration,+Concerto+elegiaco,+H.+180:+VIII.+Epilogue.+Andante+tranquillo",
         "artist": "Frank Bridge",
+        "plays": "9",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Spellbound",
+        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees/_/Spellbound",
+        "artist": "Siouxsie and the Banshees",
         "plays": "9",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -2400,7 +2414,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "5894",
+        "plays": "5900",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
