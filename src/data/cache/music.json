@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 279246
+    "scrobbles": 279250
   },
   "history": [
-    {
-      "dayName": "Tue",
-      "date": "2026-10-13",
-      "hours": "4.5",
-      "lastHours": "3.7",
-      "topArtist": "Austra"
-    },
     {
       "dayName": "Wed",
       "date": "2026-10-14",
@@ -51,6 +44,13 @@
       "hours": "2.9",
       "lastHours": "3.6",
       "topArtist": "Thomas Adès"
+    },
+    {
+      "dayName": "Tue",
+      "date": "2026-10-20",
+      "hours": "0.2",
+      "lastHours": "4.5",
+      "topArtist": "Nikolai Tcherepnin"
     }
   ],
   "week": {
@@ -74,15 +74,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sergei Prokofiev",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "19",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Rasputina",
         "url": "https://www.last.fm/music/Rasputina",
         "plays": "18",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sergei Prokofiev",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev",
+        "plays": "16",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -128,20 +128,8 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Wilhelm Peterson‐Berger",
-        "url": "https://www.last.fm/music/Wilhelm+Peterson%E2%80%90Berger",
-        "plays": "6",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Nicolai Myaskovsky",
         "url": "https://www.last.fm/music/Nicolai+Myaskovsky",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "William Perry",
-        "url": "https://www.last.fm/music/William+Perry",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -160,6 +148,12 @@
       {
         "name": "Timo Andres, Metropolis Ensemble, Andrew Cyr",
         "url": "https://www.last.fm/music/Timo+Andres,+Metropolis+Ensemble,+Andrew+Cyr",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Николай Николаевич Черепнин",
+        "url": "https://www.last.fm/music/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9+%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87+%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%BD%D0%B8%D0%BD",
         "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -294,6 +288,12 @@
         "url": "https://www.last.fm/music/Type+O+Negative",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Van Halen",
+        "url": "https://www.last.fm/music/Van+Halen",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -379,7 +379,7 @@
         "url": "https://www.last.fm/music/Krzysztof+Penderecki/Hommage+%C3%A0+Penderecki",
         "artist": "Krzysztof Penderecki",
         "plays": "9",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/320fb709a84d729d5f79198d0f16cb18.jpg"
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6931ac796c0b6edd6f3eaca25739ad51.jpg"
       },
       {
         "name": "Symphonie Fantastique / Tristia",
@@ -396,25 +396,18 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c1a5a1a5d55043049f0cfc75a2b1fb90.png"
       },
       {
-        "name": "Symphony no. 5 \"Solitudo\" / Violin Concerto",
-        "url": "https://www.last.fm/music/Wilhelm+Peterson%E2%80%90Berger/Symphony+no.+5+%22Solitudo%22+%2F+Violin+Concerto",
-        "artist": "Wilhelm Peterson‐Berger",
-        "plays": "6",
-        "image": ""
-      },
-      {
-        "name": "Jamestown Concerto: American Music for Cello and Orchestra",
-        "url": "https://www.last.fm/music/William+Perry/Jamestown+Concerto:+American+Music+for+Cello+and+Orchestra",
-        "artist": "William Perry",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4270270f90a846759aaf777df574d4f7.jpg"
-      },
-      {
         "name": "Future Politics",
         "url": "https://www.last.fm/music/Austra/Future+Politics",
         "artist": "Austra",
         "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/99f8b0398a83903c7bf2a6a05b5f46ce.jpg"
+      },
+      {
+        "name": "Narcisse et Echo",
+        "url": "https://www.last.fm/music/Nikolai+Tcherepnin/Narcisse+et+Echo",
+        "artist": "Nikolai Tcherepnin",
+        "plays": "4",
+        "image": ""
       },
       {
         "name": "Adagio / Symphony no. 1 / The School for Scandal",
@@ -455,13 +448,6 @@
         "name": "Russian Music for Cello & Piano",
         "url": "https://www.last.fm/music/Nicolai+Myaskovsky/Russian+Music+for+Cello+&+Piano",
         "artist": "Nicolai Myaskovsky",
-        "plays": "3",
-        "image": ""
-      },
-      {
-        "name": "Prokofieff: Violinkonzert Nr. 1 / Glasunow: Violinkonzert / Chedrin: Stihira",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofieff:+Violinkonzert+Nr.+1+%2F+Glasunow:+Violinkonzert+%2F+Chedrin:+Stihira",
-        "artist": "Sergei Prokofiev",
         "plays": "3",
         "image": ""
       },
@@ -576,6 +562,20 @@
         "artist": "György Ligeti",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/50b06d9ba3ed43babb0de3b395b35c2a.jpg"
+      },
+      {
+        "name": "Le Pop",
+        "url": "https://www.last.fm/music/Katzenjammer/Le+Pop",
+        "artist": "Katzenjammer",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6fd082c645f0404dbc6d04ea3a7e8d1a.png"
+      },
+      {
+        "name": "Metallica",
+        "url": "https://www.last.fm/music/Metallica/Metallica",
+        "artist": "Metallica",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d6a960e23328230e5e203007b7690cde.png"
       }
     ],
     "tracks": [
@@ -1752,7 +1752,7 @@
       {
         "name": "Siouxsie and the Banshees",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
-        "plays": "98",
+        "plays": "97",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
