@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 279301
+    "scrobbles": 279321
   },
   "history": [
-    {
-      "dayName": "Thu",
-      "date": "2026-10-15",
-      "hours": "2.0",
-      "lastHours": "1.5",
-      "topArtist": "Béla Bartók"
-    },
     {
       "dayName": "Fri",
       "date": "2026-10-16",
@@ -51,6 +44,13 @@
       "hours": "2.5",
       "lastHours": "2.1",
       "topArtist": "George Enescu , Luiza Borac"
+    },
+    {
+      "dayName": "Thu",
+      "date": "2026-10-22",
+      "hours": "1.2",
+      "lastHours": "2.0",
+      "topArtist": "Frédéric Chopin"
     }
   ],
   "week": {
@@ -86,21 +86,39 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Frédéric Chopin",
+        "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin",
+        "plays": "12",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Siouxsie and the Banshees",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
         "plays": "12",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Coil",
-        "url": "https://www.last.fm/music/Coil",
-        "plays": "11",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Николай Николаевич Черепнин",
         "url": "https://www.last.fm/music/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9+%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87+%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%BD%D0%B8%D0%BD",
         "plays": "9",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Coil",
+        "url": "https://www.last.fm/music/Coil",
+        "plays": "8",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Einstürzende Neubauten",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
+        "plays": "7",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "George Enescu",
+        "url": "https://www.last.fm/music/George+Enescu",
+        "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -112,12 +130,6 @@
       {
         "name": "Franz Schubert",
         "url": "https://www.last.fm/music/Franz+Schubert",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Frédéric Chopin",
-        "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin",
         "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -282,18 +294,6 @@
         "url": "https://www.last.fm/music/PinkPantheress",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Steppenwolf",
-        "url": "https://www.last.fm/music/Steppenwolf",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Stevie Wonder",
-        "url": "https://www.last.fm/music/Stevie+Wonder",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -340,13 +340,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6353d251df424c4eb608dc80417d71f0.jpg"
       },
       {
-        "name": "Scatology",
-        "url": "https://www.last.fm/music/Coil/Scatology",
-        "artist": "Coil",
-        "plays": "11",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f774599ee66976bc40257a34a17b1996.png"
-      },
-      {
         "name": "Symphony No. 5 / The Year 1941",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Symphony+No.+5+%2F+The+Year+1941",
         "artist": "Sergei Prokofiev",
@@ -359,6 +352,27 @@
         "artist": "Nikolai Tcherepnin",
         "plays": "9",
         "image": ""
+      },
+      {
+        "name": "Scatology",
+        "url": "https://www.last.fm/music/Coil/Scatology",
+        "artist": "Coil",
+        "plays": "8",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f774599ee66976bc40257a34a17b1996.png"
+      },
+      {
+        "name": "Chopin: Piano Concerto No. 2 in F Minor, Op. 21 / Introduction & Polonaise brillante, Op. 3 / Cello Sonata in G Minor, Op. 65",
+        "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin/Chopin:+Piano+Concerto+No.+2+in+F+Minor,+Op.+21+%2F+Introduction+&+Polonaise+brillante,+Op.+3+%2F+Cello+Sonata+in+G+Minor,+Op.+65",
+        "artist": "Frédéric Chopin",
+        "plays": "8",
+        "image": ""
+      },
+      {
+        "name": "The Jewels",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/The+Jewels",
+        "artist": "Einstürzende Neubauten",
+        "plays": "7",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b0aabfea50334e76b30a03a43d584b98.jpg"
       },
       {
         "name": "Mendelssohn & Shostakovich: Violin Concertos",
@@ -403,6 +417,13 @@
         "image": ""
       },
       {
+        "name": "Symphony no. 2 / Romanian Rhapsody no. 2",
+        "url": "https://www.last.fm/music/George+Enescu/Symphony+no.+2+%2F+Romanian+Rhapsody+no.+2",
+        "artist": "George Enescu",
+        "plays": "3",
+        "image": ""
+      },
+      {
         "name": "Russian Music for Cello & Piano",
         "url": "https://www.last.fm/music/Nicolai+Myaskovsky/Russian+Music+for+Cello+&+Piano",
         "artist": "Nicolai Myaskovsky",
@@ -436,6 +457,13 @@
         "artist": "Alfred Schnittke",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e0348c6817b14c57ccec7cd8a31e5953.jpg"
+      },
+      {
+        "name": "Symphonies 1–3 / Romanian Rhapsodies 1 & 2",
+        "url": "https://www.last.fm/music/George+Enescu/Symphonies+1%E2%80%933+%2F+Romanian+Rhapsodies+1+&+2",
+        "artist": "George Enescu",
+        "plays": "2",
+        "image": ""
       },
       {
         "name": "Transitions: Cello Concertos",
@@ -548,34 +576,6 @@
         "artist": "Gogol Bordello",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/38454ccb4ab34466a68584e28ca701a7.png"
-      },
-      {
-        "name": "Death and the Maiden",
-        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Kurt%C3%A1g/Death+and+the+Maiden",
-        "artist": "György Kurtág",
-        "plays": "1",
-        "image": ""
-      },
-      {
-        "name": "Death and the Maiden",
-        "url": "https://www.last.fm/music/John+Dowland/Death+and+the+Maiden",
-        "artist": "John Dowland",
-        "plays": "1",
-        "image": ""
-      },
-      {
-        "name": "Le Pop",
-        "url": "https://www.last.fm/music/Katzenjammer/Le+Pop",
-        "artist": "Katzenjammer",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6fd082c645f0404dbc6d04ea3a7e8d1a.png"
-      },
-      {
-        "name": "Metallica",
-        "url": "https://www.last.fm/music/Metallica/Metallica",
-        "artist": "Metallica",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d6a960e23328230e5e203007b7690cde.png"
       }
     ],
     "tracks": [
@@ -762,6 +762,20 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Cello Sonata in G minor, Op. 65: I. Allegro moderato",
+        "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin/_/Cello+Sonata+in+G+minor,+Op.+65:+I.+Allegro+moderato",
+        "artist": "Frédéric Chopin",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Cello Sonata in G minor, Op. 65: III. Largo",
+        "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin/_/Cello+Sonata+in+G+minor,+Op.+65:+III.+Largo",
+        "artist": "Frédéric Chopin",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Symphony No. 5 in B-Flat Major, Op. 100: I. Andante",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+I.+Andante",
         "artist": "Sergei Prokofiev",
@@ -844,20 +858,6 @@
         "artist": "Austra",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Utopia",
-        "url": "https://www.last.fm/music/Austra/_/Utopia",
-        "artist": "Austra",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "2 Pictures, op. 10, Sz. 46: I. In Full Flower",
-        "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k/_/2+Pictures,+op.+10,+Sz.+46:+I.+In+Full+Flower",
-        "artist": "Béla Bartók",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -888,15 +888,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Austra",
-        "url": "https://www.last.fm/music/Austra",
-        "plays": "66",
+        "name": "Einstürzende Neubauten",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
+        "plays": "68",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Einstürzende Neubauten",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "61",
+        "name": "Austra",
+        "url": "https://www.last.fm/music/Austra",
+        "plays": "66",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1068,6 +1068,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Frédéric Chopin",
+        "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin",
+        "plays": "18",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Rasputina",
         "url": "https://www.last.fm/music/Rasputina",
         "plays": "18",
@@ -1094,12 +1100,6 @@
       {
         "name": "Nirvana",
         "url": "https://www.last.fm/music/Nirvana",
-        "plays": "16",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "William Walton",
-        "url": "https://www.last.fm/music/William+Walton",
         "plays": "16",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1744,15 +1744,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Einstürzende Neubauten",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
+        "name": "Siouxsie and the Banshees",
+        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
         "plays": "97",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Siouxsie and the Banshees",
-        "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
-        "plays": "97",
+        "name": "Einstürzende Neubauten",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
+        "plays": "94",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2500,7 +2500,7 @@
       {
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "5674",
+        "plays": "5681",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
