@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 279501
+    "scrobbles": 279549
   },
   "history": [
-    {
-      "dayName": "Sat",
-      "date": "2026-10-17",
-      "hours": "3.0",
-      "lastHours": "1.1",
-      "topArtist": "Emma Ruth Rundle"
-    },
     {
       "dayName": "Sun",
       "date": "2026-10-18",
@@ -48,13 +41,26 @@
     {
       "dayName": "Fri",
       "date": "2026-10-23",
-      "hours": "4.2",
+      "hours": "4.3",
       "lastHours": "1.2",
+      "topArtist": "Taylor Swift"
+    },
+    {
+      "dayName": "Sat",
+      "date": "2026-10-24",
+      "hours": "2.7",
+      "lastHours": "3.0",
       "topArtist": "Taylor Swift"
     }
   ],
   "week": {
     "artists": [
+      {
+        "name": "Taylor Swift",
+        "url": "https://www.last.fm/music/Taylor+Swift",
+        "plays": "91",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
@@ -62,21 +68,9 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Taylor Swift",
-        "url": "https://www.last.fm/music/Taylor+Swift",
-        "plays": "43",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Einstürzende Neubauten",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
         "plays": "24",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Emma Ruth Rundle",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle",
-        "plays": "21",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -119,6 +113,12 @@
         "name": "Nine Inch Nails",
         "url": "https://www.last.fm/music/Nine+Inch+Nails",
         "plays": "6",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Emma Ruth Rundle",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle",
+        "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -301,15 +301,15 @@
         "name": "THE TORTURED POETS DEPARTMENT",
         "url": "https://www.last.fm/music/Taylor+Swift/THE+TORTURED+POETS+DEPARTMENT",
         "artist": "Taylor Swift",
-        "plays": "28",
+        "plays": "64",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/81fbd21feee8ac0eeea93cdc118745bb.jpg"
       },
       {
-        "name": "These Killing Times",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/These+Killing+Times",
-        "artist": "Emma Ruth Rundle",
-        "plays": "21",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d6c56122fc2cd8fe18e51456714ef788.jpg"
+        "name": "The Life of a Showgirl",
+        "url": "https://www.last.fm/music/Taylor+Swift/The+Life+of+a+Showgirl",
+        "artist": "Taylor Swift",
+        "plays": "24",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/837e4d37b0c4a0a65eb12177e1afb8ee.png"
       },
       {
         "name": "Cinderella / \"Classical\" Symphony",
@@ -354,13 +354,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5242d9417c79c48fa81ff0babcd2eb12.jpg"
       },
       {
-        "name": "The Life of a Showgirl",
-        "url": "https://www.last.fm/music/Taylor+Swift/The+Life+of+a+Showgirl",
-        "artist": "Taylor Swift",
-        "plays": "12",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/837e4d37b0c4a0a65eb12177e1afb8ee.png"
-      },
-      {
         "name": "Symphony No. 5 / The Year 1941",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Symphony+No.+5+%2F+The+Year+1941",
         "artist": "Sergei Prokofiev",
@@ -387,6 +380,13 @@
         "artist": "Frédéric Chopin",
         "plays": "8",
         "image": ""
+      },
+      {
+        "name": "These Killing Times",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/These+Killing+Times",
+        "artist": "Emma Ruth Rundle",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d6c56122fc2cd8fe18e51456714ef788.jpg"
       },
       {
         "name": "Mendelssohn & Shostakovich: Violin Concertos",
@@ -580,6 +580,34 @@
     ],
     "tracks": [
       {
+        "name": "Down Bad",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Down+Bad",
+        "artist": "Taylor Swift",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "My Boy Only Breaks His Favorite Toys",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/My+Boy+Only+Breaks+His+Favorite+Toys",
+        "artist": "Taylor Swift",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "So Long, London",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/So+Long,+London",
+        "artist": "Taylor Swift",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Tortured Poets Department",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/The+Tortured+Poets+Department",
+        "artist": "Taylor Swift",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Piano Concerto No. 2 in G minor, Op. 16: II. Scherzo: Vivace",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Piano+Concerto+No.+2+in+G+minor,+Op.+16:+II.+Scherzo:+Vivace",
         "artist": "Sergei Prokofiev",
@@ -594,38 +622,59 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Anvil",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Anvil",
-        "artist": "Emma Ruth Rundle",
-        "plays": "3",
+        "name": "But Daddy I Love Him",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/But+Daddy+I+Love+Him",
+        "artist": "Taylor Swift",
+        "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Catherine Wheel",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Catherine+Wheel",
-        "artist": "Emma Ruth Rundle",
-        "plays": "3",
+        "name": "Florida!!! (feat. Florence + the Machine)",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Florida!!!+(feat.+Florence+%252B+the+Machine)",
+        "artist": "Taylor Swift",
+        "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Human Kindness",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Human+Kindness",
-        "artist": "Emma Ruth Rundle",
-        "plays": "3",
+        "name": "Fresh Out the Slammer",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Fresh+Out+the+Slammer",
+        "artist": "Taylor Swift",
+        "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Oceans Of Time",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Oceans+Of+Time",
-        "artist": "Emma Ruth Rundle",
-        "plays": "3",
+        "name": "Guilty as Sin?",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Guilty+as+Sin%3F",
+        "artist": "Taylor Swift",
+        "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Powerless",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Powerless",
-        "artist": "Emma Ruth Rundle",
-        "plays": "3",
+        "name": "I Can Do It with a Broken Heart",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/I+Can+Do+It+with+a+Broken+Heart",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "I Can Fix Him (No Really I Can)",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/I+Can+Fix+Him+(No+Really+I+Can)",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "loml",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/loml",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Who’s Afraid of Little Old Me?",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Who%E2%80%99s+Afraid+of+Little+Old+Me%3F",
+        "artist": "Taylor Swift",
+        "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -650,24 +699,31 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Don't Delay Heaven",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Don%27t+Delay+Heaven",
-        "artist": "Emma Ruth Rundle",
-        "plays": "2",
+        "name": "Clara Bow",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Clara+Bow",
+        "artist": "Taylor Swift",
+        "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Enough",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Enough",
-        "artist": "Emma Ruth Rundle",
-        "plays": "2",
+        "name": "Fortnight (feat. Post Malone)",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Fortnight+(feat.+Post+Malone)",
+        "artist": "Taylor Swift",
+        "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "God's Picture",
-        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/God%27s+Picture",
-        "artist": "Emma Ruth Rundle",
-        "plays": "2",
+        "name": "The Alchemy",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/The+Alchemy",
+        "artist": "Taylor Swift",
+        "plays": "3",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Smallest Man Who Ever Lived",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/The+Smallest+Man+Who+Ever+Lived",
+        "artist": "Taylor Swift",
+        "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -748,121 +804,71 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "But Daddy I Love Him",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/But+Daddy+I+Love+Him",
+        "name": "Actually Romantic",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Actually+Romantic",
         "artist": "Taylor Swift",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Down Bad",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Down+Bad",
+        "name": "CANCELLED!",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/CANCELLED!",
         "artist": "Taylor Swift",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Florida!!! (feat. Florence + the Machine)",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Florida!!!+(feat.+Florence+%252B+the+Machine)",
+        "name": "Eldest Daughter",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Eldest+Daughter",
         "artist": "Taylor Swift",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Fortnight (feat. Post Malone)",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Fortnight+(feat.+Post+Malone)",
+        "name": "Elizabeth Taylor",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Elizabeth+Taylor",
         "artist": "Taylor Swift",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Fresh Out the Slammer",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Fresh+Out+the+Slammer",
+        "name": "Father Figure",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Father+Figure",
         "artist": "Taylor Swift",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Guilty as Sin?",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Guilty+as+Sin%3F",
+        "name": "Honey",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Honey",
         "artist": "Taylor Swift",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "I Can Fix Him (No Really I Can)",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/I+Can+Fix+Him+(No+Really+I+Can)",
+        "name": "Opalite",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Opalite",
         "artist": "Taylor Swift",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "loml",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/loml",
+        "name": "Ruin the Friendship",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Ruin+the+Friendship",
         "artist": "Taylor Swift",
         "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "My Boy Only Breaks His Favorite Toys",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/My+Boy+Only+Breaks+His+Favorite+Toys",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "So Long, London",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/So+Long,+London",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Tortured Poets Department",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/The+Tortured+Poets+Department",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Who’s Afraid of Little Old Me?",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Who%E2%80%99s+Afraid+of+Little+Old+Me%3F",
-        "artist": "Taylor Swift",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Frankenstein",
-        "url": "https://www.last.fm/music/The+Edgar+Winter+Group/_/Frankenstein",
-        "artist": "The Edgar Winter Group",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Boris the Spider",
-        "url": "https://www.last.fm/music/The+Who/_/Boris+the+Spider",
-        "artist": "The Who",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Byzantine Chant on Psalm 140 for Solo Violin and Strings",
-        "url": "https://www.last.fm/music/%5Banonymous%5D+arr.+Patricia+Kopatchinskaja/_/Byzantine+Chant+on+Psalm+140+for+Solo+Violin+and+Strings",
-        "artist": "[anonymous] arr. Patricia Kopatchinskaja",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Gimme! Gimme! Gimme! (A Man After Midnight)",
-        "url": "https://www.last.fm/music/ABBA/_/Gimme!+Gimme!+Gimme!+(A+Man+After+Midnight)",
-        "artist": "ABBA",
-        "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
   "month": {
     "artists": [
+      {
+        "name": "Taylor Swift",
+        "url": "https://www.last.fm/music/Taylor+Swift",
+        "plays": "127",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
       {
         "name": "Béla Bartók",
         "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
@@ -897,12 +903,6 @@
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
         "plays": "80",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Taylor Swift",
-        "url": "https://www.last.fm/music/Taylor+Swift",
-        "plays": "79",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1106,6 +1106,13 @@
     ],
     "albums": [
       {
+        "name": "THE TORTURED POETS DEPARTMENT",
+        "url": "https://www.last.fm/music/Taylor+Swift/THE+TORTURED+POETS+DEPARTMENT",
+        "artist": "Taylor Swift",
+        "plays": "76",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/81fbd21feee8ac0eeea93cdc118745bb.jpg"
+      },
+      {
         "name": "These Killing Times",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle/These+Killing+Times",
         "artist": "Emma Ruth Rundle",
@@ -1148,6 +1155,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b502229d2137ec72fe67dc5d95b9ddfc.png"
       },
       {
+        "name": "The Life of a Showgirl",
+        "url": "https://www.last.fm/music/Taylor+Swift/The+Life+of+a+Showgirl",
+        "artist": "Taylor Swift",
+        "plays": "43",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/837e4d37b0c4a0a65eb12177e1afb8ee.png"
+      },
+      {
         "name": "Grundstück",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Grundst%C3%BCck",
         "artist": "Einstürzende Neubauten",
@@ -1160,13 +1174,6 @@
         "artist": "Gabriel Schwabe",
         "plays": "40",
         "image": ""
-      },
-      {
-        "name": "THE TORTURED POETS DEPARTMENT",
-        "url": "https://www.last.fm/music/Taylor+Swift/THE+TORTURED+POETS+DEPARTMENT",
-        "artist": "Taylor Swift",
-        "plays": "40",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/81fbd21feee8ac0eeea93cdc118745bb.jpg"
       },
       {
         "name": "Bridge: Oration / Frances Hoad: Earth, Sea, Air / Walton: Cello Concerto",
@@ -1188,13 +1195,6 @@
         "artist": "Carrie Frey",
         "plays": "31",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6e0f339ecfe6d7b91fb88950ac202d39.jpg"
-      },
-      {
-        "name": "The Life of a Showgirl",
-        "url": "https://www.last.fm/music/Taylor+Swift/The+Life+of+a+Showgirl",
-        "artist": "Taylor Swift",
-        "plays": "31",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/837e4d37b0c4a0a65eb12177e1afb8ee.png"
       },
       {
         "name": "Perfect life",
@@ -1528,6 +1528,34 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Down Bad",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Down+Bad",
+        "artist": "Taylor Swift",
+        "plays": "6",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "My Boy Only Breaks His Favorite Toys",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/My+Boy+Only+Breaks+His+Favorite+Toys",
+        "artist": "Taylor Swift",
+        "plays": "6",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "So Long, London",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/So+Long,+London",
+        "artist": "Taylor Swift",
+        "plays": "6",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Tortured Poets Department",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/The+Tortured+Poets+Department",
+        "artist": "Taylor Swift",
+        "plays": "6",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Color Field: I. Yellow",
         "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+I.+Yellow",
         "artist": "Anna Clyne",
@@ -1605,66 +1633,38 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Concerto for Cello and Orchestra: III. Tema ed improvvisazioni",
-        "url": "https://www.last.fm/music/William+Walton/_/Concerto+for+Cello+and+Orchestra:+III.+Tema+ed+improvvisazioni",
-        "artist": "William Walton",
+        "name": "But Daddy I Love Him",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/But+Daddy+I+Love+Him",
+        "artist": "Taylor Swift",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Color Field: II. Red",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+II.+Red",
-        "artist": "Anna Clyne",
-        "plays": "4",
+        "name": "Florida!!! (feat. Florence + the Machine)",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Florida!!!+(feat.+Florence+%252B+the+Machine)",
+        "artist": "Taylor Swift",
+        "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Color Field: III. Orange",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/Color+Field:+III.+Orange",
-        "artist": "Anna Clyne",
-        "plays": "4",
+        "name": "Fresh Out the Slammer",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Fresh+Out+the+Slammer",
+        "artist": "Taylor Swift",
+        "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "DANCE: I. when you're broken open",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/DANCE:+I.+when+you%27re+broken+open",
-        "artist": "Anna Clyne",
-        "plays": "4",
+        "name": "Guilty as Sin?",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Guilty+as+Sin%3F",
+        "artist": "Taylor Swift",
+        "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "DANCE: II. if you’ve torn the bandage off",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/DANCE:+II.+if+you%E2%80%99ve+torn+the+bandage+off",
-        "artist": "Anna Clyne",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "DANCE: IV. in your blood",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/DANCE:+IV.+in+your+blood",
-        "artist": "Anna Clyne",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "DANCE: V. when you’re perfectly free",
-        "url": "https://www.last.fm/music/Anna+Clyne/_/DANCE:+V.+when+you%E2%80%99re+perfectly+free",
-        "artist": "Anna Clyne",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Beat and the Pulse",
-        "url": "https://www.last.fm/music/Austra/_/Beat+and+the+Pulse",
-        "artist": "Austra",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Blindsided",
-        "url": "https://www.last.fm/music/Austra/_/Blindsided",
-        "artist": "Austra",
-        "plays": "4",
+        "name": "I Can Fix Him (No Really I Can)",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/I+Can+Fix+Him+(No+Really+I+Can)",
+        "artist": "Taylor Swift",
+        "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
@@ -1717,6 +1717,12 @@
         "name": "Ralph Vaughan Williams",
         "url": "https://www.last.fm/music/Ralph+Vaughan+Williams",
         "plays": "128",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Taylor Swift",
+        "url": "https://www.last.fm/music/Taylor+Swift",
+        "plays": "127",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1795,12 +1801,6 @@
         "name": "Carl Nielsen",
         "url": "https://www.last.fm/music/Carl+Nielsen",
         "plays": "80",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Taylor Swift",
-        "url": "https://www.last.fm/music/Taylor+Swift",
-        "plays": "79",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1926,6 +1926,13 @@
         "artist": "Sergei Prokofiev",
         "plays": "79",
         "image": ""
+      },
+      {
+        "name": "THE TORTURED POETS DEPARTMENT",
+        "url": "https://www.last.fm/music/Taylor+Swift/THE+TORTURED+POETS+DEPARTMENT",
+        "artist": "Taylor Swift",
+        "plays": "76",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/81fbd21feee8ac0eeea93cdc118745bb.jpg"
       },
       {
         "name": "These Killing Times",
@@ -2068,6 +2075,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b502229d2137ec72fe67dc5d95b9ddfc.png"
       },
       {
+        "name": "The Life of a Showgirl",
+        "url": "https://www.last.fm/music/Taylor+Swift/The+Life+of+a+Showgirl",
+        "artist": "Taylor Swift",
+        "plays": "43",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/837e4d37b0c4a0a65eb12177e1afb8ee.png"
+      },
+      {
         "name": "3 Symphonies / Capriccio espagnol / Russian Easter Overture",
         "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov/3+Symphonies+%2F+Capriccio+espagnol+%2F+Russian+Easter+Overture",
         "artist": "Nikolai Rimsky-Korsakov",
@@ -2087,13 +2101,6 @@
         "artist": "Sergei Prokofiev",
         "plays": "40",
         "image": ""
-      },
-      {
-        "name": "THE TORTURED POETS DEPARTMENT",
-        "url": "https://www.last.fm/music/Taylor+Swift/THE+TORTURED+POETS+DEPARTMENT",
-        "artist": "Taylor Swift",
-        "plays": "40",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/81fbd21feee8ac0eeea93cdc118745bb.jpg"
       },
       {
         "name": "Dobrinka Tabakova",
@@ -2185,13 +2192,6 @@
         "artist": "Siouxsie and the Banshees",
         "plays": "35",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7653da5c1d3d4aebca9a1e1378b90cc0.png"
-      },
-      {
-        "name": "Bridge: Oration / Frances Hoad: Earth, Sea, Air / Walton: Cello Concerto",
-        "url": "https://www.last.fm/music/Frank+Bridge,+Cheryl+Frances-Hoad,+William+Walton;+Laura+van+der+Heijden,+BBC+Scottish+Symphony+Orchestra,+Ryan+Wigglesworth/Bridge:+Oration+%2F+Frances+Hoad:+Earth,+Sea,+Air+%2F+Walton:+Cello+Concerto",
-        "artist": "Frank Bridge, Cheryl Frances-Hoad, William Walton; Laura van der Heijden, BBC Scottish Symphony Orchestra, Ryan Wigglesworth",
-        "plays": "34",
-        "image": ""
       }
     ],
     "tracks": [
