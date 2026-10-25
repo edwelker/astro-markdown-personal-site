@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 279560
+    "scrobbles": 279564
   },
   "history": [
-    {
-      "dayName": "Sun",
-      "date": "2026-10-18",
-      "hours": "1.8",
-      "lastHours": "1.3",
-      "topArtist": "Béla Bartók"
-    },
     {
       "dayName": "Mon",
       "date": "2026-10-19",
@@ -51,6 +44,13 @@
       "hours": "3.4",
       "lastHours": "3.0",
       "topArtist": "Taylor Swift"
+    },
+    {
+      "dayName": "Sun",
+      "date": "2026-10-25",
+      "hours": "0.2",
+      "lastHours": "1.8",
+      "topArtist": "Sergei Prokofiev"
     }
   ],
   "week": {
@@ -58,13 +58,13 @@
       {
         "name": "Taylor Swift",
         "url": "https://www.last.fm/music/Taylor+Swift",
-        "plays": "102",
+        "plays": "103",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "44",
+        "plays": "47",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -301,7 +301,7 @@
         "name": "THE TORTURED POETS DEPARTMENT",
         "url": "https://www.last.fm/music/Taylor+Swift/THE+TORTURED+POETS+DEPARTMENT",
         "artist": "Taylor Swift",
-        "plays": "75",
+        "plays": "76",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/81fbd21feee8ac0eeea93cdc118745bb.jpg"
       },
       {
@@ -494,6 +494,13 @@
         "image": ""
       },
       {
+        "name": "Prokofiev: Symphony no. 5",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev:+Symphony+no.+5",
+        "artist": "Sergei Prokofiev",
+        "plays": "3",
+        "image": ""
+      },
+      {
         "name": "Cello Concerto No. 2 / In Memoriam...",
         "url": "https://www.last.fm/music/Alfred+Schnittke/Cello+Concerto+No.+2+%2F+In+Memoriam...",
         "artist": "Alfred Schnittke",
@@ -569,13 +576,6 @@
         "artist": "The Cramps",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/bcea95c46d9e4bd7bfaf05cfebf7bc16.png"
-      },
-      {
-        "name": "Quasi parlando",
-        "url": "https://www.last.fm/music/Tigran+Mansurian/Quasi+parlando",
-        "artist": "Tigran Mansurian",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c1eb3548fe1e4914c9ed3371433225ab.jpg"
       }
     ],
     "tracks": [
@@ -685,6 +685,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Fortnight (feat. Post Malone)",
+        "url": "https://www.last.fm/music/Taylor+Swift/_/Fortnight+(feat.+Post+Malone)",
+        "artist": "Taylor Swift",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "The Alchemy",
         "url": "https://www.last.fm/music/Taylor+Swift/_/The+Alchemy",
         "artist": "Taylor Swift",
@@ -720,9 +727,23 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Fortnight (feat. Post Malone)",
-        "url": "https://www.last.fm/music/Taylor+Swift/_/Fortnight+(feat.+Post+Malone)",
-        "artist": "Taylor Swift",
+        "name": "Symphony No. 5 in B-Flat Major, Op. 100: I. Andante",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+I.+Andante",
+        "artist": "Sergei Prokofiev",
+        "plays": "3",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony No. 5 in B-Flat Major, Op. 100: II. Allegro marcato",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+II.+Allegro+marcato",
+        "artist": "Sergei Prokofiev",
+        "plays": "3",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony No. 5 in B-Flat Major, Op. 100: IV. Allegro giocoso",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+IV.+Allegro+giocoso",
+        "artist": "Sergei Prokofiev",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -769,29 +790,8 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Symphony No. 5 in B-Flat Major, Op. 100: I. Andante",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+I.+Andante",
-        "artist": "Sergei Prokofiev",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Symphony No. 5 in B-Flat Major, Op. 100: II. Allegro marcato",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+II.+Allegro+marcato",
-        "artist": "Sergei Prokofiev",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Symphony No. 5 in B-Flat Major, Op. 100: III. Adagio",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+III.+Adagio",
-        "artist": "Sergei Prokofiev",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Symphony No. 5 in B-Flat Major, Op. 100: IV. Allegro giocoso",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+IV.+Allegro+giocoso",
         "artist": "Sergei Prokofiev",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -866,7 +866,7 @@
       {
         "name": "Taylor Swift",
         "url": "https://www.last.fm/music/Taylor+Swift",
-        "plays": "138",
+        "plays": "139",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -902,7 +902,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "80",
+        "plays": "83",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1109,7 +1109,7 @@
         "name": "THE TORTURED POETS DEPARTMENT",
         "url": "https://www.last.fm/music/Taylor+Swift/THE+TORTURED+POETS+DEPARTMENT",
         "artist": "Taylor Swift",
-        "plays": "87",
+        "plays": "88",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/81fbd21feee8ac0eeea93cdc118745bb.jpg"
       },
       {
@@ -1674,7 +1674,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "615",
+        "plays": "618",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1704,7 +1704,7 @@
       {
         "name": "Taylor Swift",
         "url": "https://www.last.fm/music/Taylor+Swift",
-        "plays": "138",
+        "plays": "139",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1924,7 +1924,7 @@
         "name": "THE TORTURED POETS DEPARTMENT",
         "url": "https://www.last.fm/music/Taylor+Swift/THE+TORTURED+POETS+DEPARTMENT",
         "artist": "Taylor Swift",
-        "plays": "87",
+        "plays": "88",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/81fbd21feee8ac0eeea93cdc118745bb.jpg"
       },
       {
@@ -2494,7 +2494,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "5938",
+        "plays": "5941",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
