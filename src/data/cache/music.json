@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 279692
+    "scrobbles": 279708
   },
   "history": [
-    {
-      "dayName": "Tue",
-      "date": "2026-10-20",
-      "hours": "0.8",
-      "lastHours": "4.5",
-      "topArtist": "Nikolai Tcherepnin"
-    },
     {
       "dayName": "Wed",
       "date": "2026-10-21",
@@ -51,6 +44,13 @@
       "hours": "3.7",
       "lastHours": "2.9",
       "topArtist": "Sergei Prokofiev"
+    },
+    {
+      "dayName": "Tue",
+      "date": "2026-10-27",
+      "hours": "0.9",
+      "lastHours": "0.8",
+      "topArtist": "Dmitri Shostakovich"
     }
   ],
   "week": {
@@ -110,9 +110,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Николай Николаевич Черепнин",
-        "url": "https://www.last.fm/music/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9+%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87+%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%BD%D0%B8%D0%BD",
-        "plays": "9",
+        "name": "Dmitri Shostakovich",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
+        "plays": "10",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Kennedy Center Chamber Players",
+        "url": "https://www.last.fm/music/Kennedy+Center+Chamber+Players",
+        "plays": "6",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -288,12 +294,6 @@
         "url": "https://www.last.fm/music/Blue+%C3%96yster+Cult",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Bobby 'Boris' Pickett",
-        "url": "https://www.last.fm/music/Bobby+%27Boris%27+Pickett",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -368,18 +368,18 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6373e00a55bdbd68fe24369d2d05b2ee.jpg"
       },
       {
+        "name": "Violin Concertos Nos. 1 & 2",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/Violin+Concertos+Nos.+1+&+2",
+        "artist": "Dmitri Shostakovich",
+        "plays": "10",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8068b3bcd05b49a1a254122e5879d04c.jpg"
+      },
+      {
         "name": "Supporter Album #1",
         "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Supporter+Album+%231",
         "artist": "Einstürzende Neubauten",
         "plays": "9",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/48509011e3d24394ac32e367287d839f.png"
-      },
-      {
-        "name": "Narcisse et Echo",
-        "url": "https://www.last.fm/music/Nikolai+Tcherepnin/Narcisse+et+Echo",
-        "artist": "Nikolai Tcherepnin",
-        "plays": "9",
-        "image": ""
       },
       {
         "name": "Chopin: Piano Concerto No. 2 in F Minor, Op. 21 / Introduction & Polonaise brillante, Op. 3 / Cello Sonata in G Minor, Op. 65",
@@ -393,6 +393,13 @@
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev:+Symphony+no.+5",
         "artist": "Sergei Prokofiev",
         "plays": "7",
+        "image": ""
+      },
+      {
+        "name": "The Beauty Of Two",
+        "url": "https://www.last.fm/music/Kennedy+Center+Chamber+Players/The+Beauty+Of+Two",
+        "artist": "Kennedy Center Chamber Players",
+        "plays": "6",
         "image": ""
       },
       {
@@ -569,13 +576,6 @@
         "artist": "Aaron Copland",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2d96dfc12727e86dc47fa067353dcbda.jpg"
-      },
-      {
-        "name": "Halloween Howls: Fun & Scary Music (Deluxe Edition)",
-        "url": "https://www.last.fm/music/Andrew+Gold/Halloween+Howls:+Fun+&+Scary+Music+(Deluxe+Edition)",
-        "artist": "Andrew Gold",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e45e048153c491508b674a21aad1a242.png"
       }
     ],
     "tracks": [
@@ -769,6 +769,27 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Violin Concerto no. 1 in A minor, op. 77 / 99: I. Nocturno. Moderato",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Violin+Concerto+no.+1+in+A+minor,+op.+77+%2F+99:+I.+Nocturno.+Moderato",
+        "artist": "Dmitri Shostakovich",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Violin Concerto no. 1 in A minor, op. 77 / 99: II. Scherzo. Allegro",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Violin+Concerto+no.+1+in+A+minor,+op.+77+%2F+99:+II.+Scherzo.+Allegro",
+        "artist": "Dmitri Shostakovich",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Violin Concerto no. 1 in A minor, op. 77 / 99: III. Pasacaglia. Andante",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich/_/Violin+Concerto+no.+1+in+A+minor,+op.+77+%2F+99:+III.+Pasacaglia.+Andante",
+        "artist": "Dmitri Shostakovich",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Cello Sonata in G minor, Op. 65: I. Allegro moderato",
         "url": "https://www.last.fm/music/Fr%C3%A9d%C3%A9ric+Chopin/_/Cello+Sonata+in+G+minor,+Op.+65:+I.+Allegro+moderato",
         "artist": "Frédéric Chopin",
@@ -834,27 +855,6 @@
       {
         "name": "Cinderella, Op. 87, Act I: Clock Scene (Allegro moderato)",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Cinderella,+Op.+87,+Act+I:+Clock+Scene+(Allegro+moderato)",
-        "artist": "Sergei Prokofiev",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Cinderella, Op. 87, Act I: Departure for the Ball (Vivo)",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Cinderella,+Op.+87,+Act+I:+Departure+for+the+Ball+(Vivo)",
-        "artist": "Sergei Prokofiev",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Cinderella, Op. 87, Act I: Gavotte (Allegretto)",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Cinderella,+Op.+87,+Act+I:+Gavotte+(Allegretto)",
-        "artist": "Sergei Prokofiev",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Cinderella, Op. 87, Act I: Grasshoppers and Dragonflies (Vivace con brio)",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Cinderella,+Op.+87,+Act+I:+Grasshoppers+and+Dragonflies+(Vivace+con+brio)",
         "artist": "Sergei Prokofiev",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -924,6 +924,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Dmitri Shostakovich",
+        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
+        "plays": "46",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Dobrinka Tabakova",
         "url": "https://www.last.fm/music/Dobrinka+Tabakova",
         "plays": "42",
@@ -933,12 +939,6 @@
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
         "plays": "39",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Dmitri Shostakovich",
-        "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "36",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1674,7 +1674,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "689",
+        "plays": "671",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1692,7 +1692,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "186",
+        "plays": "192",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2518,7 +2518,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "3990",
+        "plays": "4000",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
