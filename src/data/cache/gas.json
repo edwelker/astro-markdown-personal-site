@@ -95,17 +95,6 @@
     {
       "City": "Springfield (East)",
       "Zip": "01104",
-      "Station": "CITGO",
-      "Address": "1271 Page Blvd, 01104",
-      "Base": "3.85",
-      "Discount": "-",
-      "Lat": "42.1498946",
-      "Long": "-72.5374867",
-      "Net": "3.85"
-    },
-    {
-      "City": "Springfield (East)",
-      "Zip": "01104",
       "Station": "Stop & Shop",
       "Address": "1277 Liberty St, 01104",
       "Base": "3.89",
@@ -113,28 +102,6 @@
       "Lat": "42.1373538",
       "Long": "-72.5820966",
       "Net": "3.79"
-    },
-    {
-      "City": "Springfield (East)",
-      "Zip": "01104",
-      "Station": "Racing Mart",
-      "Address": "1037 St James Ave, 01104",
-      "Base": "3.89",
-      "Discount": "-",
-      "Lat": "42.1371817",
-      "Long": "-72.5693712",
-      "Net": "3.89"
-    },
-    {
-      "City": "Springfield (East)",
-      "Zip": "01104",
-      "Station": "Racing Mart",
-      "Address": "612 Carew St, 01104",
-      "Base": "3.89",
-      "Discount": "-",
-      "Lat": "42.1225238",
-      "Long": "-72.5887328",
-      "Net": "3.89"
     },
     {
       "City": "Springfield (East)",
@@ -150,12 +117,12 @@
     {
       "City": "Springfield (East)",
       "Zip": "01104",
-      "Station": "CITGO",
-      "Address": "289 Carew St, 01104",
+      "Station": "Liberty Gas",
+      "Address": "668 Liberty St, 01104",
       "Base": "3.89",
       "Discount": "-",
-      "Lat": "42.149015",
-      "Long": "-72.5644193",
+      "Lat": "42.1214212",
+      "Long": "-72.5846698",
       "Net": "3.89"
     },
     {
@@ -168,6 +135,17 @@
       "Lat": "42.1435596",
       "Long": "-72.6112724",
       "Net": "3.89"
+    },
+    {
+      "City": "Springfield (East)",
+      "Zip": "01104",
+      "Station": "Cumberland Farms",
+      "Address": "798 Carew St, 01104",
+      "Base": "4.23",
+      "Discount": "Cumberland",
+      "Lat": "42.1258915",
+      "Long": "-72.5841307",
+      "Net": "4.13"
     }
   ],
   "frederick": [
@@ -196,6 +174,17 @@
     {
       "City": "Columbia (East)",
       "Zip": "21045",
+      "Station": "Shell",
+      "Address": "7248 Cradlerock Way, 21045",
+      "Base": "3.99",
+      "Discount": "Shell",
+      "Lat": "39.1862523",
+      "Long": "-76.8457193",
+      "Net": "3.94"
+    },
+    {
+      "City": "Columbia (East)",
+      "Zip": "21045",
       "Station": "Mobil",
       "Address": "6251 Columbia Crossing Cir, 21045",
       "Base": "3.99",
@@ -214,17 +203,6 @@
       "Lat": "39.1968235",
       "Long": "-76.8216821",
       "Net": "3.89"
-    },
-    {
-      "City": "Columbia (East)",
-      "Zip": "21045",
-      "Station": "Shell",
-      "Address": "7248 Cradlerock Way, 21045",
-      "Base": "3.99",
-      "Discount": "Shell",
-      "Lat": "39.1862523",
-      "Long": "-76.8457193",
-      "Net": "3.94"
     }
   ]
 }

@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 279788
+    "scrobbles": 279802
   },
   "history": [
-    {
-      "dayName": "Sun",
-      "date": "2026-10-25",
-      "hours": "4.0",
-      "lastHours": "1.8",
-      "topArtist": "Soundgarden"
-    },
     {
       "dayName": "Mon",
       "date": "2026-10-26",
@@ -48,9 +41,16 @@
     {
       "dayName": "Sat",
       "date": "2026-10-31",
-      "hours": "2.5",
+      "hours": "2.6",
       "lastHours": "0.0",
       "topArtist": "Igor Stravinsky"
+    },
+    {
+      "dayName": "Sun",
+      "date": "2026-11-01",
+      "hours": "0.8",
+      "lastHours": "4.0",
+      "topArtist": "Mieczysław Weinberg"
     }
   ],
   "week": {
@@ -58,7 +58,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "78",
+        "plays": "63",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -95,6 +95,12 @@
         "name": "Soundgarden",
         "url": "https://www.last.fm/music/Soundgarden",
         "plays": "16",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Mieczysław Weinberg",
+        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg",
+        "plays": "14",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -288,12 +294,6 @@
         "url": "https://www.last.fm/music/Shakira",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Stabbing Westward",
-        "url": "https://www.last.fm/music/Stabbing+Westward",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -301,7 +301,7 @@
         "name": "Cinderella / \"Classical\" Symphony",
         "url": "https://www.last.fm/music/Sergei+Prokofiev;+London+Symphony+Orchestra,+Andr%C3%A9+Previn/Cinderella+%2F+%22Classical%22+Symphony",
         "artist": "Sergei Prokofiev; London Symphony Orchestra, André Previn",
-        "plays": "54",
+        "plays": "51",
         "image": ""
       },
       {
@@ -340,10 +340,10 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2c1f50b6ffc8ae64248803c0db732b6c.jpg"
       },
       {
-        "name": "Symphony no. 5 / The Year 1941",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev;+S%C3%A3o+Paulo+Symphony+Orchestra,+Marin+Alsop/Symphony+no.+5+%2F+The+Year+1941",
-        "artist": "Sergei Prokofiev; São Paulo Symphony Orchestra, Marin Alsop",
-        "plays": "13",
+        "name": "Symphonies, Volume 1: Symphony no. 5 / Sinfonietta no. 1",
+        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg/Symphonies,+Volume+1:+Symphony+no.+5+%2F+Sinfonietta+no.+1",
+        "artist": "Mieczysław Weinberg",
+        "plays": "14",
         "image": ""
       },
       {
@@ -403,9 +403,9 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/42d2f8d1dec94989c9e63ea5172d57fe.png"
       },
       {
-        "name": "Prokofiev: Symphony no. 5",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev:+Symphony+no.+5",
-        "artist": "Sergei Prokofiev",
+        "name": "Symphony no. 5 / The Year 1941",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev;+S%C3%A3o+Paulo+Symphony+Orchestra,+Marin+Alsop/Symphony+no.+5+%2F+The+Year+1941",
+        "artist": "Sergei Prokofiev; São Paulo Symphony Orchestra, Marin Alsop",
         "plays": "7",
         "image": ""
       },
@@ -587,37 +587,16 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Symphony No. 5 in B-Flat Major, Op. 100: II. Allegro marcato",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+II.+Allegro+marcato",
-        "artist": "Sergei Prokofiev",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Symphony No. 5 in B-Flat Major, Op. 100: III. Adagio",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+III.+Adagio",
-        "artist": "Sergei Prokofiev",
-        "plays": "4",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Cinderella, Op. 87, Act II: Court dance (Andante grazioso)",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Cinderella,+Op.+87,+Act+II:+Court+dance+(Andante+grazioso)",
-        "artist": "Sergei Prokofiev",
+        "name": "Symphony No. 5 in F minor, Op. 76: I. Allegro moderato",
+        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg/_/Symphony+No.+5+in+F+minor,+Op.+76:+I.+Allegro+moderato",
+        "artist": "Mieczysław Weinberg",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Symphony No. 5 in B-Flat Major, Op. 100: I. Andante",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+I.+Andante",
-        "artist": "Sergei Prokofiev",
-        "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Symphony No. 5 in B-Flat Major, Op. 100: IV. Allegro giocoso",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+IV.+Allegro+giocoso",
-        "artist": "Sergei Prokofiev",
+        "name": "Symphony No. 5 in F minor, Op. 76: IV. Andantino",
+        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg/_/Symphony+No.+5+in+F+minor,+Op.+76:+IV.+Andantino",
+        "artist": "Mieczysław Weinberg",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -685,6 +664,20 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Symphony No. 5 in F minor, Op. 76: II. Adagio sostenuto",
+        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg/_/Symphony+No.+5+in+F+minor,+Op.+76:+II.+Adagio+sostenuto",
+        "artist": "Mieczysław Weinberg",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony No. 5 in F minor, Op. 76: III. Allegro",
+        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg/_/Symphony+No.+5+in+F+minor,+Op.+76:+III.+Allegro",
+        "artist": "Mieczysław Weinberg",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Closer (Deviation)",
         "url": "https://www.last.fm/music/Nine+Inch+Nails/_/Closer+(Deviation)",
         "artist": "Nine Inch Nails",
@@ -699,20 +692,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Cinderella, Op. 87, Act I: Cinderella's departure for the Ball (Allegro espressivo)",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Cinderella,+Op.+87,+Act+I:+Cinderella%27s+departure+for+the+Ball+(Allegro+espressivo)",
-        "artist": "Sergei Prokofiev",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Cinderella, Op. 87, Act I: Clock Scene (Allegro moderato)",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Cinderella,+Op.+87,+Act+I:+Clock+Scene+(Allegro+moderato)",
-        "artist": "Sergei Prokofiev",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Cinderella, Op. 87, Act I: Introduction (Andante dolce)",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Cinderella,+Op.+87,+Act+I:+Introduction+(Andante+dolce)",
         "artist": "Sergei Prokofiev",
@@ -720,22 +699,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "The Year 1941, Op. 90 (Symphonic Suite): I. In the Struggle",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/The+Year+1941,+Op.+90+(Symphonic+Suite):+I.+In+the+Struggle",
+        "name": "Cinderella, Op. 87, Act II: Court dance (Andante grazioso)",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Cinderella,+Op.+87,+Act+II:+Court+dance+(Andante+grazioso)",
         "artist": "Sergei Prokofiev",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "The Year 1941, Op. 90 (Symphonic Suite): II. In the Night",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/The+Year+1941,+Op.+90+(Symphonic+Suite):+II.+In+the+Night",
-        "artist": "Sergei Prokofiev",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Year 1941, Op. 90 (Symphonic Suite): III. For the Brotherhood of Man",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/The+Year+1941,+Op.+90+(Symphonic+Suite):+III.+For+the+Brotherhood+of+Man",
+        "name": "Symphony No. 5 in B-Flat Major, Op. 100: III. Adagio",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+III.+Adagio",
         "artist": "Sergei Prokofiev",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -855,6 +827,34 @@
       {
         "name": "\"Children's Corner\": I. Doctor Gradus ad Parnassum",
         "url": "https://www.last.fm/music/Claude+Debussy/_/%22Children%27s+Corner%22:+I.+Doctor+Gradus+ad+Parnassum",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "\"Children's Corner\": II. Jimbo's Lullaby",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/%22Children%27s+Corner%22:+II.+Jimbo%27s+Lullaby",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "\"Children's Corner\": III. Serenade for the Doll",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/%22Children%27s+Corner%22:+III.+Serenade+for+the+Doll",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "\"Children's Corner\": IV. The Snow Is Dancing",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/%22Children%27s+Corner%22:+IV.+The+Snow+Is+Dancing",
+        "artist": "Claude Debussy",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "\"Children's Corner\": V. The Little Shepherd",
+        "url": "https://www.last.fm/music/Claude+Debussy/_/%22Children%27s+Corner%22:+V.+The+Little+Shepherd",
         "artist": "Claude Debussy",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
