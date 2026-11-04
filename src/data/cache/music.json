@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 279885
+    "scrobbles": 279940
   },
   "history": [
-    {
-      "dayName": "Wed",
-      "date": "2026-10-28",
-      "hours": "3.0",
-      "lastHours": "2.5",
-      "topArtist": "Claude Debussy"
-    },
     {
       "dayName": "Thu",
       "date": "2026-10-29",
@@ -51,26 +44,27 @@
       "hours": "3.1",
       "lastHours": "1.3",
       "topArtist": "Zoltán Kodály"
+    },
+    {
+      "dayName": "Wed",
+      "date": "2026-11-04",
+      "hours": "3.2",
+      "lastHours": "3.0",
+      "topArtist": "Sergei Prokofiev"
     }
   ],
   "week": {
     "artists": [
       {
-        "name": "Claude Debussy",
-        "url": "https://www.last.fm/music/Claude+Debussy",
-        "plays": "29",
+        "name": "Sergei Prokofiev",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev",
+        "plays": "59",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
         "plays": "29",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "György Ligeti",
-        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti",
-        "plays": "25",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -83,6 +77,12 @@
         "name": "Zoltán Kodály",
         "url": "https://www.last.fm/music/Zolt%C3%A1n+Kod%C3%A1ly",
         "plays": "17",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "György Ligeti",
+        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti",
+        "plays": "16",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -149,12 +149,6 @@
         "name": "Siouxsie and the Banshees",
         "url": "https://www.last.fm/music/Siouxsie+and+the+Banshees",
         "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sergei Prokofiev",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -294,15 +288,21 @@
         "url": "https://www.last.fm/music/Willie+Nelson",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Wipers",
+        "url": "https://www.last.fm/music/Wipers",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
       {
-        "name": "Arturo Benedetti Michelangeli plays Debussy",
-        "url": "https://www.last.fm/music/Claude+Debussy/Arturo+Benedetti+Michelangeli+plays+Debussy",
-        "artist": "Claude Debussy",
-        "plays": "27",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/29ee0397c233e9ec4e9888337101aa89.jpg"
+        "name": "Cinderella / Summer Night Suite",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Cinderella+%2F+Summer+Night+Suite",
+        "artist": "Sergei Prokofiev",
+        "plays": "55",
+        "image": ""
       },
       {
         "name": "Stravinsky: The Rite of Spring / Bartók: Concerto for Orchestra",
@@ -345,13 +345,6 @@
         "artist": "Kronos Quartet",
         "plays": "15",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/32a076fd31579c69dabe09128a9de7e4.jpg"
-      },
-      {
-        "name": "Clear or Cloudy: Complete Recordings on Deutsche Grammophon",
-        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti/Clear+or+Cloudy:+Complete+Recordings+on+Deutsche+Grammophon",
-        "artist": "György Ligeti",
-        "plays": "12",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d59682fd4ecb4339c3de3dd798cc0bcd.png"
       },
       {
         "name": "The Three Calamities",
@@ -403,6 +396,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/23b74a5793d85dd4d30bd81a7859f618.jpg"
       },
       {
+        "name": "Clear or Cloudy: Complete Recordings on Deutsche Grammophon",
+        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti/Clear+or+Cloudy:+Complete+Recordings+on+Deutsche+Grammophon",
+        "artist": "György Ligeti",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d59682fd4ecb4339c3de3dd798cc0bcd.png"
+      },
+      {
         "name": "Prokofiev: Piano Concerto no. 2 / Tchaikovsky: Piano Concerto no. 1",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev:+Piano+Concerto+no.+2+%2F+Tchaikovsky:+Piano+Concerto+no.+1",
         "artist": "Sergei Prokofiev",
@@ -424,13 +424,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/113c762f98e645228f320b682cc4d5fc.jpg"
       },
       {
-        "name": "Ligeti: Atmosphères; Volumina; Lux aeterna; Lontano",
-        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti/Ligeti:+Atmosph%C3%A8res;+Volumina;+Lux+aeterna;+Lontano",
-        "artist": "György Ligeti",
-        "plays": "3",
-        "image": ""
-      },
-      {
         "name": "30 Rock",
         "url": "https://www.last.fm/music/Jeff+Richmond/30+Rock",
         "artist": "Jeff Richmond",
@@ -442,13 +435,6 @@
         "url": "https://www.last.fm/music/William+Walton/Britten:+Violin+Concerto+%2F+Walton:+Viola+Concerto",
         "artist": "William Walton",
         "plays": "3",
-        "image": ""
-      },
-      {
-        "name": "The Berlin Recital",
-        "url": "https://www.last.fm/music/Claude+Debussy/The+Berlin+Recital",
-        "artist": "Claude Debussy",
-        "plays": "2",
         "image": ""
       },
       {
@@ -543,6 +529,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/dccb2f929702cfd01bf2cece0274f9f7.jpg"
       },
       {
+        "name": "Ligeti: Atmosphères; Volumina; Lux aeterna; Lontano",
+        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti/Ligeti:+Atmosph%C3%A8res;+Volumina;+Lux+aeterna;+Lontano",
+        "artist": "György Ligeti",
+        "plays": "1",
+        "image": ""
+      },
+      {
         "name": "Halloween Motion Picture Soundtrack",
         "url": "https://www.last.fm/music/John+Carpenter/Halloween+Motion+Picture+Soundtrack",
         "artist": "John Carpenter",
@@ -576,21 +569,28 @@
         "artist": "Korn",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8ad0ede562bd4bd98940366b3c9a2923.png"
+      },
+      {
+        "name": "Daphnis et Chloé / La Valse",
+        "url": "https://www.last.fm/music/Maurice+Ravel/Daphnis+et+Chlo%C3%A9+%2F+La+Valse",
+        "artist": "Maurice Ravel",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5f1b14fa9ddf8f52694e7e8e604d08b9.jpg"
       }
     ],
     "tracks": [
-      {
-        "name": "Lontano",
-        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti/_/Lontano",
-        "artist": "György Ligeti",
-        "plays": "12",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
       {
         "name": "Spem In Alium",
         "url": "https://www.last.fm/music/Kronos+Quartet/_/Spem+In+Alium",
         "artist": "Kronos Quartet",
         "plays": "6",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Lontano",
+        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti/_/Lontano",
+        "artist": "György Ligeti",
+        "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -839,23 +839,23 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "\"Children's Corner\": I. Doctor Gradus ad Parnassum",
-        "url": "https://www.last.fm/music/Claude+Debussy/_/%22Children%27s+Corner%22:+I.+Doctor+Gradus+ad+Parnassum",
-        "artist": "Claude Debussy",
+        "name": "Holiday in Cambodia",
+        "url": "https://www.last.fm/music/Dead+Kennedys/_/Holiday+in+Cambodia",
+        "artist": "Dead Kennedys",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "\"Children's Corner\": II. Jimbo's Lullaby",
-        "url": "https://www.last.fm/music/Claude+Debussy/_/%22Children%27s+Corner%22:+II.+Jimbo%27s+Lullaby",
-        "artist": "Claude Debussy",
+        "name": "Arms I Know So Well (Demo)",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Arms+I+Know+So+Well+(Demo)",
+        "artist": "Emma Ruth Rundle",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "\"Children's Corner\": III. Serenade for the Doll",
-        "url": "https://www.last.fm/music/Claude+Debussy/_/%22Children%27s+Corner%22:+III.+Serenade+for+the+Doll",
-        "artist": "Claude Debussy",
+        "name": "Haunted Houses (Demo)",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Haunted+Houses+(Demo)",
+        "artist": "Emma Ruth Rundle",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -866,7 +866,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "158",
+        "plays": "213",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1141,6 +1141,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ac3f225443711c6efe32283d5c666223.jpg"
       },
       {
+        "name": "Cinderella / Summer Night Suite",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Cinderella+%2F+Summer+Night+Suite",
+        "artist": "Sergei Prokofiev",
+        "plays": "55",
+        "image": ""
+      },
+      {
         "name": "Chin Up Buttercup",
         "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
         "artist": "Austra",
@@ -1377,13 +1384,6 @@
         "artist": "Igor Stravinsky",
         "plays": "16",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4fac1df6a9305b53632faf7ccb6a0c13.jpg"
-      },
-      {
-        "name": "Symphonies, Volume 1: Symphony no. 5 / Sinfonietta no. 1",
-        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg/Symphonies,+Volume+1:+Symphony+no.+5+%2F+Sinfonietta+no.+1",
-        "artist": "Mieczysław Weinberg",
-        "plays": "16",
-        "image": ""
       }
     ],
     "tracks": [
@@ -1674,7 +1674,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "673",
+        "plays": "728",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1921,6 +1921,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
       },
       {
+        "name": "Cinderella / Summer Night Suite",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/Cinderella+%2F+Summer+Night+Suite",
+        "artist": "Sergei Prokofiev",
+        "plays": "110",
+        "image": ""
+      },
+      {
         "name": "Fiftieth Anniversary Edition",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Fiftieth+Anniversary+Edition",
         "artist": "Sergei Prokofiev",
@@ -1982,13 +1989,6 @@
         "artist": "György Ligeti",
         "plays": "55",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d59682fd4ecb4339c3de3dd798cc0bcd.png"
-      },
-      {
-        "name": "Cinderella / Summer Night Suite",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/Cinderella+%2F+Summer+Night+Suite",
-        "artist": "Sergei Prokofiev",
-        "plays": "55",
-        "image": ""
       },
       {
         "name": "Prokofiev: Winter Bonfire (World Premiere with the Original Text)",
@@ -2142,7 +2142,7 @@
         "url": "https://www.last.fm/music/Franz+Schubert/Winterreise",
         "artist": "Franz Schubert",
         "plays": "37",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95a6ab80433683fafd3149d69eb3ffd5.png"
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/59a3f62fd30b462fddf1be2bea63f105.jpg"
       },
       {
         "name": "Arturo Benedetti Michelangeli plays Debussy",
@@ -2488,7 +2488,7 @@
       {
         "name": "Sergei Prokofiev",
         "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "6016",
+        "plays": "6071",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
