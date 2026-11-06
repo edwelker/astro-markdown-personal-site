@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
+import RecipeCard from '@components/RecipeCard.astro';
+import BlogItem from '@components/BlogItem.astro';
+
+const draftRecipes = (await getCollection('recipes'))
+  .filter((recipe) => Boolean(recipe.data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const draftPosts = (await getCollection('blog'))
+  .filter((post) => Boolean(post.data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const totalDrafts = draftRecipes.length + draftPosts.length;
+---
+
+<Layout title="Drafts (Unlisted)" description="Unlisted works in progress and draft recipes/posts." noindex={true}>
+  <Container>
+    <div class="space-y-10" data-pagefind-ignore>
+      <div class="space-y-3">
+        <div class="flex items-center gap-3">
+          <h1 class="text-3xl font-semibold text-black dark:text-white">Drafts & WIP</h1>
+          <span class="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
+            Unlisted ({totalDrafts})
+          </span>
+        </div>
+        <p class="text-sm text-neutral-600 dark:text-neutral-400">
+          This section is unlisted and excluded from navigation, search indexing, and RSS feeds. Use these links to test and review recipes and posts before publishing.
+        </p>
+      </div>
+
+      <!-- Draft Recipes -->
+      <section class="space-y-4">
+        <div class="flex items-center justify-between border-b border-black/10 pb-2 dark:border-white/10">
+          <h2 class="text-xl font-semibold text-black dark:text-white">
+            Draft Recipes ({draftRecipes.length})
+          </h2>
+        </div>
+
+        {draftRecipes.length > 0 ? (
+          <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2">
+            {draftRecipes.map((recipe) => (
+              <RecipeCard recipe={recipe} underlineOnHover={true} />
+            ))}
+          </div>
+        ) : (
+          <p class="text-sm italic text-neutral-500">No draft recipes right now.</p>
+        )}
+      </section>
+
+      <!-- Draft Blog Posts -->
+      <section class="space-y-4">
+        <div class="flex items-center justify-between border-b border-black/10 pb-2 dark:border-white/10">
+          <h2 class="text-xl font-semibold text-black dark:text-white">
+            Draft Blog Posts ({draftPosts.length})
+          </h2>
+        </div>
+
+        {draftPosts.length > 0 ? (
+          <ul class="not-prose flex flex-col gap-4">
+            {draftPosts.map((post) => (
+              <BlogItem post={post} />
+            ))}
+          </ul>
+        ) : (
+          <p class="text-sm italic text-neutral-500">No draft blog posts right now.</p>
+        )}
+      </section>
+    </div>
+  </Container>
+</Layout>

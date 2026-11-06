@@ -11,16 +11,23 @@ type Props = { recipe: Recipe; prevPost?: Recipe; nextPost?: Recipe };
 
 export async function getStaticPaths() {
   const allRecipes = (await getCollection('recipes'))
-    .filter((recipe) => !recipe.data.draft)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+  const publishedRecipes = allRecipes.filter((recipe) => !recipe.data.draft);
 
   if (allRecipes.length === 0) {
     console.warn('No recipes found for static paths generation!');
   }
 
-  return allRecipes.map((recipe, index) => {
-    const nextPost = allRecipes[index - 1] || undefined;
-    const prevPost = allRecipes[index + 1] || undefined;
+  return allRecipes.map((recipe) => {
+    let nextPost: Recipe | undefined;
+    let prevPost: Recipe | undefined;
+
+    if (!recipe.data.draft) {
+      const pubIndex = publishedRecipes.findIndex((r) => r.slug === recipe.slug);
+      nextPost = publishedRecipes[pubIndex - 1] || undefined;
+      prevPost = publishedRecipes[pubIndex + 1] || undefined;
+    }
 
     return {
       params: { slug: recipe.slug },
@@ -32,6 +39,7 @@ export async function getStaticPaths() {
 const { recipe, prevPost, nextPost } = Astro.props;
 const { Content } = await render(recipe);
 const data = recipe.data;
+const isDraft = data.draft === true;
 
 const prevHref = prevPost ? `/recipes/${prevPost.slug}/` : undefined;
 const nextHref = nextPost ? `/recipes/${nextPost.slug}/` : undefined;
@@ -59,9 +67,27 @@ const ldJson = {
 };
 ---
 
-<Layout title={data.title} description={data.description} image={data.coverPhoto}>
+<Layout
+  title={data.title}
+  description={data.description}
+  image={data.coverPhoto}
+  noindex={isDraft}
+>
   <Container>
-    <main class="prose dark:prose-invert mx-auto py-8">
+    <main class="prose dark:prose-invert mx-auto py-8" {...(isDraft ? { 'data-pagefind-ignore': true } : {})}>
+      {
+        isDraft && (
+          <aside class="not-prose mb-8 flex flex-col gap-2 rounded-lg border border-amber-300/80 bg-amber-50 p-4 text-sm text-amber-900 sm:flex-row sm:items-center sm:justify-between dark:border-amber-700/60 dark:bg-amber-950/40 dark:text-amber-200">
+            <span class="flex items-center gap-2 font-medium">
+              <span>⚠️</span>
+              <span>Draft Recipe — Work in progress, unlisted preview</span>
+            </span>
+            <a href="/drafts/" class="font-medium underline hover:text-amber-700 dark:hover:text-amber-100">
+              View all drafts &rarr;
+            </a>
+          </aside>
+        )
+      }
       <h1 class="text-3xl font-bold">{data.title}</h1>
       <div class="mb-8 flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
         <span
@@ -99,7 +125,11 @@ const ldJson = {
           nextPost={nextPost ? { ...nextPost, href: nextHref } : undefined}
         />
       </div>
-      <div class="mt-8"><BackToPrevious href="/recipes/">Back to recipes</BackToPrevious></div>
+      <div class="mt-8">
+        <BackToPrevious href={isDraft ? '/drafts/' : '/recipes/'}>
+          {isDraft ? 'Back to drafts' : 'Back to recipes'}
+        </BackToPrevious>
+      </div>
     </main>
   </Container>
 

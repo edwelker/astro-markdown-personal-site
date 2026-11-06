@@ -51,7 +51,7 @@ export default defineConfig({
       key: 'a65da6c13546cfc1ba9ce202a16754166c09d7e3f7ce142d60d41ed7d514326b',
     }),
     sitemap({
-      filter: (page) => !page.includes('/dash'),
+      filter: (page) => !page.includes('/dash') && !page.includes('/drafts'),
       serialize(item) {
         try {
           const url = new URL(item.url);
@@ -69,6 +69,14 @@ export default defineConfig({
             const nested = path.resolve(`src/content/${collection}/${slug}/${slug}.md`);
             const flat = path.resolve(`src/content/${collection}/${slug}.md`);
             filePath = fs.existsSync(nested) ? nested : fs.existsSync(flat) ? flat : '';
+
+            // Exclude drafts from sitemap
+            if (filePath && fs.existsSync(filePath)) {
+              const fileContent = fs.readFileSync(filePath, 'utf-8');
+              if (/^draft:\s*true/m.test(fileContent)) {
+                return undefined;
+              }
+            }
           }
           // 2. Handle Static Pages
           else {
@@ -116,7 +124,7 @@ export default defineConfig({
           userAgent: '*',
           allow: '/',
           // Optional: Block things you don't want indexed
-          disallow: ['/dash/', '/dashboard/'],
+          disallow: ['/dash/', '/dashboard/', '/drafts/'],
         },
       ],
     }),

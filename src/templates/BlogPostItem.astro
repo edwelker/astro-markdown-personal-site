@@ -17,12 +17,19 @@ type Props = { post: Post; prevPost?: Post; nextPost?: Post };
 
 export async function getStaticPaths() {
   const allPosts = (await getCollection('blog'))
-    .filter((post) => !post.data.draft)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-  return allPosts.map((post, index) => {
-    const nextPost = allPosts[index - 1] || undefined;
-    const prevPost = allPosts[index + 1] || undefined;
+  const publishedPosts = allPosts.filter((post) => !post.data.draft);
+
+  return allPosts.map((post) => {
+    let nextPost: Post | undefined;
+    let prevPost: Post | undefined;
+
+    if (!post.data.draft) {
+      const pubIndex = publishedPosts.findIndex((p) => p.slug === post.slug);
+      nextPost = publishedPosts[pubIndex - 1] || undefined;
+      prevPost = publishedPosts[pubIndex + 1] || undefined;
+    }
 
     return { params: { slug: post.slug }, props: { post, prevPost, nextPost } as Props };
   });
@@ -30,6 +37,7 @@ export async function getStaticPaths() {
 
 const { post, prevPost, nextPost } = Astro.props;
 const { Content, headings } = await render(post);
+const isDraft = post.data.draft === true;
 
 const seoDescription =
   post.data.description ||
@@ -44,10 +52,23 @@ const prevHref = prevPost ? getPostHref(prevPost) : undefined;
 const nextHref = nextPost ? getPostHref(nextPost) : undefined;
 ---
 
-<Layout title={post.data.title} description={seoDescription}>
+<Layout title={post.data.title} description={seoDescription} noindex={isDraft}>
   <BlogSchema post={post} slot="head" />
   <Container>
-    <main class="prose dark:prose-invert mx-auto py-8">
+    <main class="prose dark:prose-invert mx-auto py-8" {...(isDraft ? { 'data-pagefind-ignore': true } : {})}>
+      {
+        isDraft && (
+          <aside class="not-prose mb-8 flex flex-col gap-2 rounded-lg border border-amber-300/80 bg-amber-50 p-4 text-sm text-amber-900 sm:flex-row sm:items-center sm:justify-between dark:border-amber-700/60 dark:bg-amber-950/40 dark:text-amber-200">
+            <span class="flex items-center gap-2 font-medium">
+              <span>⚠️</span>
+              <span>Draft Post — Work in progress, unlisted preview</span>
+            </span>
+            <a href="/drafts/" class="font-medium underline hover:text-amber-700 dark:hover:text-amber-100">
+              View all drafts &rarr;
+            </a>
+          </aside>
+        )
+      }
       <h1 class="text-3xl font-bold">{post.data.title}</h1>
       <div class="mb-8 flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
         <FormattedDate date={post.data.date} />
@@ -84,8 +105,18 @@ const nextHref = nextPost ? getPostHref(nextPost) : undefined;
           nextPost={nextPost ? { ...nextPost, href: nextHref } : undefined}
         />
       </div>
-      <div class="mt-8"><BackToPrevious href="/blog/">Back to blog</BackToPrevious></div>
-      <div class="mt-24"><Giscus /></div>
+      <div class="mt-8">
+        <BackToPrevious href={isDraft ? '/drafts/' : '/blog/'}>
+          {isDraft ? 'Back to drafts' : 'Back to blog'}
+        </BackToPrevious>
+      </div>
+      {
+        !isDraft && (
+          <div class="mt-24">
+            <Giscus />
+          </div>
+        )
+      }
     </main>
   </Container>
 </Layout>

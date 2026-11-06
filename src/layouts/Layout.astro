@@ -14,17 +14,23 @@ type Props = {
   title: string;
   description: string;
   image?: string;
+  noindex?: boolean;
 };
 
 import { SITE } from '@consts';
 
-const { title, description, image } = Astro.props;
+const { title, description, image, noindex } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <Head title={`${SITE.TITLE}: ${title}`} description={description} image={image} />
+    <Head
+      title={`${SITE.TITLE}: ${title}`}
+      description={description}
+      image={image}
+      noindex={noindex}
+    />
     <Analytics />
 
     <!-- Clarity tracking code for https://eddiewelker.com/ -->
