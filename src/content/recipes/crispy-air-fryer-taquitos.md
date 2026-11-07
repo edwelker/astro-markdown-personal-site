@@ -37,7 +37,7 @@ recipeInstructions:
   - "The Flash Freeze: Freeze the tray for 60 to 90 minutes until rock-hard. Transfer frozen taquitos into a gallon freezer Ziploc bag. Store for up to 3 months. Cook on demand straight from frozen—never thaw!"
   - "Cook Across Appliances: Air Fryer: 380°F for 9 to 11 minutes, then 400°F for 2 minutes. Convection Oven (Cooks the Entire 16-Count Batch): 400°F Convection on a wire rack inside a baking sheet for 14 to 16 minutes without flipping. Standard Radiant Oven: 425°F on a baking sheet for 18 to 20 minutes (flip at minute 10)."
   - "The 2-Minute Rest: Let taquitos rest for 2 minutes before serving so the surface steam evaporates into a shattering brittle crunch while the molten cheesy core stabilizes."
-draft: false
+draft: true
 ---
 
 ### Why This Recipe Works
