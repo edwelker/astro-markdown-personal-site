@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 280082
+    "scrobbles": 280087
   },
   "history": [
-    {
-      "dayName": "Mon",
-      "date": "2026-11-02",
-      "hours": "1.2",
-      "lastHours": "3.7",
-      "topArtist": "Weinberg, Mieczyslaw"
-    },
     {
       "dayName": "Tue",
       "date": "2026-11-03",
@@ -51,6 +44,13 @@
       "hours": "2.2",
       "lastHours": "1.2",
       "topArtist": "Igor Stravinsky"
+    },
+    {
+      "dayName": "Mon",
+      "date": "2026-11-09",
+      "hours": "0.3",
+      "lastHours": "1.2",
+      "topArtist": "Mieczysław Weinberg"
     }
   ],
   "week": {
@@ -98,12 +98,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Weinberg, Mieczyslaw",
-        "url": "https://www.last.fm/music/Weinberg,+Mieczyslaw",
-        "plays": "10",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "George Antheil",
         "url": "https://www.last.fm/music/George+Antheil",
         "plays": "9",
@@ -142,6 +136,12 @@
       {
         "name": "Evgeni Mravinski",
         "url": "https://www.last.fm/music/Evgeni+Mravinski",
+        "plays": "5",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Mieczysław Weinberg",
+        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -190,12 +190,6 @@
       {
         "name": "Jeff Richmond",
         "url": "https://www.last.fm/music/Jeff+Richmond",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Mieczysław Weinberg",
-        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -294,6 +288,12 @@
         "url": "https://www.last.fm/music/Stabbing+Westward",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Weinberg, Mieczyslaw",
+        "url": "https://www.last.fm/music/Weinberg,+Mieczyslaw",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -343,13 +343,6 @@
         "name": "Stravinsky: The Firebird / Lyadov: Baba-Yaga / Rimsky-Korsakov: Dubinushka",
         "url": "https://www.last.fm/music/Igor+Stravinsky/Stravinsky:+The+Firebird+%2F+Lyadov:+Baba-Yaga+%2F+Rimsky-Korsakov:+Dubinushka",
         "artist": "Igor Stravinsky",
-        "plays": "10",
-        "image": ""
-      },
-      {
-        "name": "Cello Sonatas Nos. 1 and 2; Cello Solo Sonatas Nos. 1 and 3",
-        "url": "https://www.last.fm/music/Weinberg,+Mieczyslaw/Cello+Sonatas+Nos.+1+and+2;+Cello+Solo+Sonatas+Nos.+1+and+3",
-        "artist": "Weinberg, Mieczyslaw",
         "plays": "10",
         "image": ""
       },
@@ -415,6 +408,13 @@
         "artist": "Igor Stravinsky",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f4d6408afb764e00cedf80d53925eb5b.jpg"
+      },
+      {
+        "name": "Symphony no. 17, op. 137 \"Memory\" / The Banners of Peace, op. 143",
+        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg/Symphony+no.+17,+op.+137+%22Memory%22+%2F+The+Banners+of+Peace,+op.+143",
+        "artist": "Mieczysław Weinberg",
+        "plays": "5",
+        "image": ""
       },
       {
         "name": "Symphony no. 5 in D major / Fantasia on a Theme of Thomas Tallis",
@@ -494,13 +494,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e7605ccbb6d5d7e7976dea23c182ba63.png"
       },
       {
-        "name": "Symphonies, Volume 1: Symphony no. 5 / Sinfonietta no. 1",
-        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg/Symphonies,+Volume+1:+Symphony+no.+5+%2F+Sinfonietta+no.+1",
-        "artist": "Mieczysław Weinberg",
-        "plays": "2",
-        "image": ""
-      },
-      {
         "name": "Prokofiev: Winter Bonfire (World Premiere with the Original Text)",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev:+Winter+Bonfire+(World+Premiere+with+the+Original+Text)",
         "artist": "Sergei Prokofiev",
@@ -576,6 +569,13 @@
         "artist": "Dead Kennedys",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d98474f63b13436ec31864bd30ea59b9.jpg"
+      },
+      {
+        "name": "Splinter (Songs from a Broken Mind)",
+        "url": "https://www.last.fm/music/Gary+Numan/Splinter+(Songs+from+a+Broken+Mind)",
+        "artist": "Gary Numan",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/873f9f06072c46c985225364ea28ede5.png"
       }
     ],
     "tracks": [
@@ -688,20 +688,6 @@
         "name": "Lean Back",
         "url": "https://www.last.fm/music/Terror+Squad/_/Lean+Back",
         "artist": "Terror Squad",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "II. Allegretto",
-        "url": "https://www.last.fm/music/Weinberg,+Mieczyslaw/_/II.+Allegretto",
-        "artist": "Weinberg, Mieczyslaw",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "III. Allegro",
-        "url": "https://www.last.fm/music/Weinberg,+Mieczyslaw/_/III.+Allegro",
-        "artist": "Weinberg, Mieczyslaw",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -855,6 +841,20 @@
       {
         "name": "Abstractions: I. Marble Moon (Inspired by Sara VanDerBeek's Marble Moon, 2015)",
         "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+I.+Marble+Moon+(Inspired+by+Sara+VanDerBeek%27s+Marble+Moon,+2015)",
+        "artist": "Anna Clyne",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Abstractions: II. Auguries (Inspired by Julie Mehretu's Auguries, 2010)",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+II.+Auguries+(Inspired+by+Julie+Mehretu%27s+Auguries,+2010)",
+        "artist": "Anna Clyne",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Abstractions: III. Seascape (Inspired by Hiroshi Sugimoto's Caribbean Sea, Jamaica, 1980)",
+        "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+III.+Seascape+(Inspired+by+Hiroshi+Sugimoto%27s+Caribbean+Sea,+Jamaica,+1980)",
         "artist": "Anna Clyne",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -1050,6 +1050,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Mieczysław Weinberg",
+        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg",
+        "plays": "21",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Ioanna Gika",
         "url": "https://www.last.fm/music/Ioanna+Gika",
         "plays": "20",
@@ -1094,12 +1100,6 @@
       {
         "name": "Дмитрий Дмитриевич Шостакович",
         "url": "https://www.last.fm/music/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9+%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B5%D0%B2%D0%B8%D1%87+%D0%A8%D0%BE%D1%81%D1%82%D0%B0%D0%BA%D0%BE%D0%B2%D0%B8%D1%87",
-        "plays": "19",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Николай Николаевич Черепнин",
-        "url": "https://www.last.fm/music/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9+%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87+%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%BD%D0%B8%D0%BD",
         "plays": "19",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
