@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 280132
+    "scrobbles": 280150
   },
   "history": [
-    {
-      "dayName": "Tue",
-      "date": "2026-11-03",
-      "hours": "3.2",
-      "lastHours": "1.3",
-      "topArtist": "Zoltán Kodály"
-    },
     {
       "dayName": "Wed",
       "date": "2026-11-04",
@@ -48,9 +41,16 @@
     {
       "dayName": "Mon",
       "date": "2026-11-09",
-      "hours": "2.9",
+      "hours": "3.0",
       "lastHours": "1.2",
       "topArtist": "Nikolai Tcherepnin"
+    },
+    {
+      "dayName": "Tue",
+      "date": "2026-11-10",
+      "hours": "1.0",
+      "lastHours": "3.2",
+      "topArtist": "Carl Nielsen"
     }
   ],
   "week": {
@@ -74,12 +74,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Zoltán Kodály",
-        "url": "https://www.last.fm/music/Zolt%C3%A1n+Kod%C3%A1ly",
-        "plays": "17",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Anatoly Lyadov",
         "url": "https://www.last.fm/music/Anatoly+Lyadov",
         "plays": "14",
@@ -92,15 +86,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Kronos Quartet",
-        "url": "https://www.last.fm/music/Kronos+Quartet",
-        "plays": "13",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Henri Dutilleux",
         "url": "https://www.last.fm/music/Henri+Dutilleux",
         "plays": "10",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Carl Nielsen",
+        "url": "https://www.last.fm/music/Carl+Nielsen",
+        "plays": "8",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -116,6 +110,18 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Benjamin Britten",
+        "url": "https://www.last.fm/music/Benjamin+Britten",
+        "plays": "6",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "plays": "6",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Korn",
         "url": "https://www.last.fm/music/Korn",
         "plays": "6",
@@ -125,12 +131,6 @@
         "name": "Undefined Music",
         "url": "https://www.last.fm/music/Undefined+Music",
         "plays": "6",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Benjamin Britten",
-        "url": "https://www.last.fm/music/Benjamin+Britten",
-        "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -179,6 +179,12 @@
         "name": "Gary Numan",
         "url": "https://www.last.fm/music/Gary+Numan",
         "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Dmitri Kabalevsky",
+        "url": "https://www.last.fm/music/Dmitri+Kabalevsky",
+        "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -288,12 +294,6 @@
         "url": "https://www.last.fm/music/Nas",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Nikolai Rimsky-Korsakov",
-        "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -319,20 +319,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4df899383aa041d6c13e2a8e52a9917f.jpg"
       },
       {
-        "name": "Kodaly: Orchestral Works",
-        "url": "https://www.last.fm/music/Zolt%C3%A1n+Kod%C3%A1ly/Kodaly:+Orchestral+Works",
-        "artist": "Zoltán Kodály",
-        "plays": "17",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/06ee56066d97e906c81295681f31d4ba.jpg"
-      },
-      {
-        "name": "Black Angels",
-        "url": "https://www.last.fm/music/Kronos+Quartet/Black+Angels",
-        "artist": "Kronos Quartet",
-        "plays": "13",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/32a076fd31579c69dabe09128a9de7e4.jpg"
-      },
-      {
         "name": "Stravinsky: 4 Norwegian Moods & Firebird Suite - Lyadov: The Enchanted Lake & Russian Folk Songs",
         "url": "https://www.last.fm/music/Anatoly+Lyadov/Stravinsky:+4+Norwegian+Moods+&+Firebird+Suite+-+Lyadov:+The+Enchanted+Lake+&+Russian+Folk+Songs",
         "artist": "Anatoly Lyadov",
@@ -351,6 +337,13 @@
         "url": "https://www.last.fm/music/Igor+Stravinsky/Stravinsky:+The+Firebird+%2F+Lyadov:+Baba-Yaga+%2F+Rimsky-Korsakov:+Dubinushka",
         "artist": "Igor Stravinsky",
         "plays": "10",
+        "image": ""
+      },
+      {
+        "name": "Violin Concerto / Symphony no. 4 “The Inextinguishable”",
+        "url": "https://www.last.fm/music/Carl+Nielsen/Violin+Concerto+%2F+Symphony+no.+4+%E2%80%9CThe+Inextinguishable%E2%80%9D",
+        "artist": "Carl Nielsen",
+        "plays": "8",
         "image": ""
       },
       {
@@ -375,6 +368,20 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/521b4e6fa342994c8611222c3dccc846.jpg"
       },
       {
+        "name": "Four Sea Interludes / Passacaglia From \"Peter Grimes\" / Sinfonia da Requiem",
+        "url": "https://www.last.fm/music/Benjamin+Britten/Four+Sea+Interludes+%2F+Passacaglia+From+%22Peter+Grimes%22+%2F+Sinfonia+da+Requiem",
+        "artist": "Benjamin Britten",
+        "plays": "6",
+        "image": ""
+      },
+      {
+        "name": "Quartets",
+        "url": "https://www.last.fm/music/Karol+Szymanowski/Quartets",
+        "artist": "Karol Szymanowski",
+        "plays": "6",
+        "image": ""
+      },
+      {
         "name": "Belle Epoque",
         "url": "https://www.last.fm/music/Undefined+Music/Belle+Epoque",
         "artist": "Undefined Music",
@@ -387,13 +394,6 @@
         "artist": "Witold Lutosławski",
         "plays": "6",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c265b647ed6e4b63cb840df7db612f8b.jpg"
-      },
-      {
-        "name": "Four Sea Interludes / Passacaglia From \"Peter Grimes\" / Sinfonia da Requiem",
-        "url": "https://www.last.fm/music/Benjamin+Britten/Four+Sea+Interludes+%2F+Passacaglia+From+%22Peter+Grimes%22+%2F+Sinfonia+da+Requiem",
-        "artist": "Benjamin Britten",
-        "plays": "5",
-        "image": ""
       },
       {
         "name": "In the Shadow of Your Shadow",
@@ -462,6 +462,13 @@
         "name": "Stravinsky: The Firebird / Lyadov: Baba-Yaga / Rimsky-Korsakov: Dubinushka",
         "url": "https://www.last.fm/music/Anatoly+Lyadov/Stravinsky:+The+Firebird+%2F+Lyadov:+Baba-Yaga+%2F+Rimsky-Korsakov:+Dubinushka",
         "artist": "Anatoly Lyadov",
+        "plays": "3",
+        "image": ""
+      },
+      {
+        "name": "Symphonies 1-4",
+        "url": "https://www.last.fm/music/Dmitri+Kabalevsky/Symphonies+1-4",
+        "artist": "Dmitri Kabalevsky",
         "plays": "3",
         "image": ""
       },
@@ -569,23 +576,9 @@
         "artist": "campdogzz",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/22fc92065bc1f1a1a0d78fd359e5e830.jpg"
-      },
-      {
-        "name": "Chris Cornell (Deluxe Edition)",
-        "url": "https://www.last.fm/music/Chris+Cornell/Chris+Cornell+(Deluxe+Edition)",
-        "artist": "Chris Cornell",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f0863624ec7651d96c76e5a78a5946a8.png"
       }
     ],
     "tracks": [
-      {
-        "name": "Spem In Alium",
-        "url": "https://www.last.fm/music/Kronos+Quartet/_/Spem+In+Alium",
-        "artist": "Kronos Quartet",
-        "plays": "6",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
       {
         "name": "This Is My Hair",
         "url": "https://www.last.fm/music/Alaska+Thunderfuck/_/This+Is+My+Hair",
@@ -604,6 +597,13 @@
         "name": "The Enchanted Lake, Op. 62",
         "url": "https://www.last.fm/music/Anatoly+Lyadov/_/The+Enchanted+Lake,+Op.+62",
         "artist": "Anatoly Lyadov",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Symphony no. 4, op. 29, FS 76 “The Inextinguishable”: Allegro",
+        "url": "https://www.last.fm/music/Carl+Nielsen/_/Symphony+no.+4,+op.+29,+FS+76+%E2%80%9CThe+Inextinguishable%E2%80%9D:+Allegro",
+        "artist": "Carl Nielsen",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1010,7 +1010,13 @@
       {
         "name": "Benjamin Britten",
         "url": "https://www.last.fm/music/Benjamin+Britten",
-        "plays": "26",
+        "plays": "27",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "plays": "27",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1047,12 +1053,6 @@
         "name": "James Horner",
         "url": "https://www.last.fm/music/James+Horner",
         "plays": "22",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
-        "plays": "21",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1692,7 +1692,7 @@
       {
         "name": "Dmitri Shostakovich",
         "url": "https://www.last.fm/music/Dmitri+Shostakovich",
-        "plays": "197",
+        "plays": "193",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1714,15 +1714,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Frank Bridge",
-        "url": "https://www.last.fm/music/Frank+Bridge",
-        "plays": "131",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Béla Bartók",
         "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k",
         "plays": "127",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Frank Bridge",
+        "url": "https://www.last.fm/music/Frank+Bridge",
+        "plays": "123",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1756,14 +1756,14 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "György Ligeti",
-        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti",
-        "plays": "96",
+        "name": "Karol Szymanowski",
+        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "plays": "97",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "William Walton",
-        "url": "https://www.last.fm/music/William+Walton",
+        "name": "György Ligeti",
+        "url": "https://www.last.fm/music/Gy%C3%B6rgy+Ligeti",
         "plays": "96",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1774,8 +1774,14 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Karol Szymanowski",
-        "url": "https://www.last.fm/music/Karol+Szymanowski",
+        "name": "William Walton",
+        "url": "https://www.last.fm/music/William+Walton",
+        "plays": "93",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Benjamin Britten",
+        "url": "https://www.last.fm/music/Benjamin+Britten",
         "plays": "91",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1786,21 +1792,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Benjamin Britten",
-        "url": "https://www.last.fm/music/Benjamin+Britten",
-        "plays": "90",
+        "name": "Carl Nielsen",
+        "url": "https://www.last.fm/music/Carl+Nielsen",
+        "plays": "87",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
         "name": "Ludwig van Beethoven",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
         "plays": "86",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Carl Nielsen",
-        "url": "https://www.last.fm/music/Carl+Nielsen",
-        "plays": "79",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1825,12 +1825,6 @@
         "name": "Robert Schumann",
         "url": "https://www.last.fm/music/Robert+Schumann",
         "plays": "76",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Lera Auerbach",
-        "url": "https://www.last.fm/music/Lera+Auerbach",
-        "plays": "70",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1876,15 +1870,15 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Rasputina",
-        "url": "https://www.last.fm/music/Rasputina",
+        "name": "Lera Auerbach",
+        "url": "https://www.last.fm/music/Lera+Auerbach",
         "plays": "62",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "The Lonely Island",
-        "url": "https://www.last.fm/music/The+Lonely+Island",
-        "plays": "60",
+        "name": "Rasputina",
+        "url": "https://www.last.fm/music/Rasputina",
+        "plays": "62",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1897,6 +1891,12 @@
         "name": "Nikolai Rimsky-Korsakov",
         "url": "https://www.last.fm/music/Nikolai+Rimsky-Korsakov",
         "plays": "59",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Lonely Island",
+        "url": "https://www.last.fm/music/The+Lonely+Island",
+        "plays": "56",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2350,13 +2350,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Concerto for Cello and Orchestra: III. Tema ed improvvisazioni",
-        "url": "https://www.last.fm/music/William+Walton/_/Concerto+for+Cello+and+Orchestra:+III.+Tema+ed+improvvisazioni",
-        "artist": "William Walton",
-        "plays": "10",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Abstractions: V. Three (Inspired by Brice Marden’s 3, 1987-88)",
         "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+V.+Three+(Inspired+by+Brice+Marden%E2%80%99s+3,+1987-88)",
         "artist": "Anna Clyne",
@@ -2392,13 +2385,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Oration, Concerto elegiaco, H. 180: VIII. Epilogue. Andante tranquillo",
-        "url": "https://www.last.fm/music/Frank+Bridge/_/Oration,+Concerto+elegiaco,+H.+180:+VIII.+Epilogue.+Andante+tranquillo",
-        "artist": "Frank Bridge",
-        "plays": "9",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Symphony No. 5 in B-Flat Major, Op. 100: II. Allegro marcato",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+II.+Allegro+marcato",
         "artist": "Sergei Prokofiev",
@@ -2409,6 +2395,13 @@
         "name": "Symphony No. 5 in B-Flat Major, Op. 100: III. Adagio",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Symphony+No.+5+in+B-Flat+Major,+Op.+100:+III.+Adagio",
         "artist": "Sergei Prokofiev",
+        "plays": "9",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Concerto for Cello and Orchestra: III. Tema ed improvvisazioni",
+        "url": "https://www.last.fm/music/William+Walton/_/Concerto+for+Cello+and+Orchestra:+III.+Tema+ed+improvvisazioni",
+        "artist": "William Walton",
         "plays": "9",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -2471,6 +2464,13 @@
       {
         "name": "God's Picture",
         "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/God%27s+Picture",
+        "artist": "Emma Ruth Rundle",
+        "plays": "8",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Oceans Of Time",
+        "url": "https://www.last.fm/music/Emma+Ruth+Rundle/_/Oceans+Of+Time",
         "artist": "Emma Ruth Rundle",
         "plays": "8",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
