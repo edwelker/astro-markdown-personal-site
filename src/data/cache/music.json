@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 280207
+    "scrobbles": 280231
   },
   "history": [
-    {
-      "dayName": "Fri",
-      "date": "2026-11-06",
-      "hours": "1.9",
-      "lastHours": "3.8",
-      "topArtist": "Sergei Prokofiev"
-    },
     {
       "dayName": "Sat",
       "date": "2026-11-07",
@@ -51,6 +44,13 @@
       "hours": "0.6",
       "lastHours": "2.2",
       "topArtist": "Bohuslav Martinů"
+    },
+    {
+      "dayName": "Fri",
+      "date": "2026-11-13",
+      "hours": "1.4",
+      "lastHours": "1.9",
+      "topArtist": "Ludwig van Beethoven"
     }
   ],
   "week": {
@@ -62,21 +62,27 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Sergei Prokofiev",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev",
-        "plays": "29",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
         "plays": "19",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Mieczysław Weinberg",
+        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg",
+        "plays": "16",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Anatoly Lyadov",
         "url": "https://www.last.fm/music/Anatoly+Lyadov",
         "plays": "14",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Ludwig van Beethoven",
+        "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
+        "plays": "13",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -134,20 +140,8 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Evgeni Mravinski",
-        "url": "https://www.last.fm/music/Evgeni+Mravinski",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Jessica Moss",
         "url": "https://www.last.fm/music/Jessica+Moss",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Mieczysław Weinberg",
-        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -190,6 +184,12 @@
       {
         "name": "Liza Stepanova",
         "url": "https://www.last.fm/music/Liza+Stepanova",
+        "plays": "3",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Sergei Prokofiev",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -305,16 +305,23 @@
         "image": ""
       },
       {
-        "name": "Piano Concertos Nos. 1-5",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/Piano+Concertos+Nos.+1-5",
-        "artist": "Sergei Prokofiev",
-        "plays": "20",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4df899383aa041d6c13e2a8e52a9917f.jpg"
+        "name": "Complete Beethoven Edition Vol. 1 - Symphonies (Herbert von Karajan)",
+        "url": "https://www.last.fm/music/Ludwig+van+Beethoven/Complete+Beethoven+Edition+Vol.+1+-+Symphonies+(Herbert+von+Karajan)",
+        "artist": "Ludwig van Beethoven",
+        "plays": "13",
+        "image": ""
       },
       {
         "name": "Stravinsky: 4 Norwegian Moods & Firebird Suite - Lyadov: The Enchanted Lake & Russian Folk Songs",
         "url": "https://www.last.fm/music/Anatoly+Lyadov/Stravinsky:+4+Norwegian+Moods+&+Firebird+Suite+-+Lyadov:+The+Enchanted+Lake+&+Russian+Folk+Songs",
         "artist": "Anatoly Lyadov",
+        "plays": "11",
+        "image": ""
+      },
+      {
+        "name": "Symphonies nos. 3 & 7 / Flute Concerto no. 1",
+        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg/Symphonies+nos.+3+&+7+%2F+Flute+Concerto+no.+1",
+        "artist": "Mieczysław Weinberg",
         "plays": "11",
         "image": ""
       },
@@ -389,13 +396,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4257708eb306cdcb1cf6045237d42378.jpg"
       },
       {
-        "name": "The Mravinski Collection: Prokofiev, Lyadov, Scriabin",
-        "url": "https://www.last.fm/music/Evgeni+Mravinski/The+Mravinski+Collection:+Prokofiev,+Lyadov,+Scriabin",
-        "artist": "Evgeni Mravinski",
-        "plays": "5",
-        "image": ""
-      },
-      {
         "name": "Pétrouchka / Le Sacre du printemps",
         "url": "https://www.last.fm/music/Igor+Stravinsky/P%C3%A9trouchka+%2F+Le+Sacre+du+printemps",
         "artist": "Igor Stravinsky",
@@ -441,13 +441,6 @@
         "name": "Hovhaness: Mysterious Mountain / Prokofiev: Lieutenant Kije Suite / Stravinsky: The Fairy's Kiss Divertimento",
         "url": "https://www.last.fm/music/Igor+Stravinsky/Hovhaness:+Mysterious+Mountain+%2F+Prokofiev:+Lieutenant+Kije+Suite+%2F+Stravinsky:+The+Fairy%27s+Kiss+Divertimento",
         "artist": "Igor Stravinsky",
-        "plays": "4",
-        "image": ""
-      },
-      {
-        "name": "The Warner Edition - Complete HMV & Teldec Recordings",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/The+Warner+Edition+-+Complete+HMV+&+Teldec+Recordings",
-        "artist": "Sergei Prokofiev",
         "plays": "4",
         "image": ""
       },
@@ -529,13 +522,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/23b74a5793d85dd4d30bd81a7859f618.jpg"
       },
       {
-        "name": "Prokofiev: Winter Bonfire (World Premiere with the Original Text)",
-        "url": "https://www.last.fm/music/Sergei+Prokofiev/Prokofiev:+Winter+Bonfire+(World+Premiere+with+the+Original+Text)",
-        "artist": "Sergei Prokofiev",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0ee13e885c7b045e61e1179747ca5860.png"
-      },
-      {
         "name": "True Story",
         "url": "https://www.last.fm/music/Terror+Squad/True+Story",
         "artist": "Terror Squad",
@@ -576,6 +562,20 @@
         "artist": "August Burns Red",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/963b44ca7c084def95d635b664780eef.png"
+      },
+      {
+        "name": "Creepin on Ah Come Up",
+        "url": "https://www.last.fm/music/Bone+Thugs-N-Harmony/Creepin+on+Ah+Come+Up",
+        "artist": "Bone Thugs-N-Harmony",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3b7050c01e07c678d765dee8cc62d6cd.png"
+      },
+      {
+        "name": "Riders in the Hills of Dying Heaven",
+        "url": "https://www.last.fm/music/campdogzz/Riders+in+the+Hills+of+Dying+Heaven",
+        "artist": "campdogzz",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/22fc92065bc1f1a1a0d78fd359e5e830.jpg"
       }
     ],
     "tracks": [
@@ -960,6 +960,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Mieczysław Weinberg",
+        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg",
+        "plays": "32",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Levinhurst",
         "url": "https://www.last.fm/music/Levinhurst",
         "plays": "30",
@@ -1056,14 +1062,14 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Carrie Frey",
-        "url": "https://www.last.fm/music/Carrie+Frey",
-        "plays": "21",
+        "name": "Ludwig van Beethoven",
+        "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
+        "plays": "22",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Mieczysław Weinberg",
-        "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg",
+        "name": "Carrie Frey",
+        "url": "https://www.last.fm/music/Carrie+Frey",
         "plays": "21",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1094,12 +1100,6 @@
       {
         "name": "Rasputina",
         "url": "https://www.last.fm/music/Rasputina",
-        "plays": "19",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "The Birthday Massacre",
-        "url": "https://www.last.fm/music/The+Birthday+Massacre",
         "plays": "19",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1152,7 +1152,7 @@
         "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
         "artist": "Austra",
         "plays": "49",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9078489eade8c223a30959c3b223be38.jpg"
       },
       {
         "name": "Earth, Sea & Air",
@@ -1686,7 +1686,7 @@
       {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
-        "plays": "256",
+        "plays": "245",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1750,6 +1750,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Ludwig van Beethoven",
+        "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
+        "plays": "99",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Nicolai Myaskovsky",
         "url": "https://www.last.fm/music/Nicolai+Myaskovsky",
         "plays": "99",
@@ -1795,12 +1801,6 @@
         "name": "Carl Nielsen",
         "url": "https://www.last.fm/music/Carl+Nielsen",
         "plays": "87",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Ludwig van Beethoven",
-        "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
-        "plays": "86",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1918,7 +1918,7 @@
         "url": "https://www.last.fm/music/Austra/Chin+Up+Buttercup",
         "artist": "Austra",
         "plays": "207",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9515d3016d0f61a19c2c955ea988063b.jpg"
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9078489eade8c223a30959c3b223be38.jpg"
       },
       {
         "name": "Cinderella / Summer Night Suite",
@@ -1970,13 +1970,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/43a4f30295949e597ed4f26016196716.jpg"
       },
       {
-        "name": "L’Oiseau de feu / Feu d’artifice / Quatre Etudes pour orchestre",
-        "url": "https://www.last.fm/music/Igor+Stravinsky/L%E2%80%99Oiseau+de+feu+%2F+Feu+d%E2%80%99artifice+%2F+Quatre+Etudes+pour+orchestre",
-        "artist": "Igor Stravinsky",
-        "plays": "60",
-        "image": ""
-      },
-      {
         "name": "Boulez Conducts Bartók",
         "url": "https://www.last.fm/music/B%C3%A9la+Bart%C3%B3k/Boulez+Conducts+Bart%C3%B3k",
         "artist": "Béla Bartók",
@@ -1996,6 +1989,13 @@
         "artist": "Sergei Prokofiev",
         "plays": "57",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0ee13e885c7b045e61e1179747ca5860.png"
+      },
+      {
+        "name": "L’Oiseau de feu / Feu d’artifice / Quatre Etudes pour orchestre",
+        "url": "https://www.last.fm/music/Igor+Stravinsky/L%E2%80%99Oiseau+de+feu+%2F+Feu+d%E2%80%99artifice+%2F+Quatre+Etudes+pour+orchestre",
+        "artist": "Igor Stravinsky",
+        "plays": "55",
+        "image": ""
       },
       {
         "name": "The Complete Works for Cello and Piano",
