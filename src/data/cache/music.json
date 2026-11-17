@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 280305
+    "scrobbles": 280328
   },
   "history": [
-    {
-      "dayName": "Tue",
-      "date": "2026-11-10",
-      "hours": "1.1",
-      "lastHours": "3.2",
-      "topArtist": "Carl Nielsen"
-    },
     {
       "dayName": "Wed",
       "date": "2026-11-11",
@@ -48,13 +41,26 @@
     {
       "dayName": "Mon",
       "date": "2026-11-16",
-      "hours": "1.9",
+      "hours": "2.0",
       "lastHours": "3.0",
       "topArtist": "Ludwig van Beethoven"
+    },
+    {
+      "dayName": "Tue",
+      "date": "2026-11-17",
+      "hours": "1.2",
+      "lastHours": "1.1",
+      "topArtist": "Arthur Foote"
     }
   ],
   "week": {
     "artists": [
+      {
+        "name": "ohGr",
+        "url": "https://www.last.fm/music/ohGr",
+        "plays": "30",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
       {
         "name": "Ludwig van Beethoven",
         "url": "https://www.last.fm/music/Ludwig+van+Beethoven",
@@ -62,9 +68,9 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "ohGr",
-        "url": "https://www.last.fm/music/ohGr",
-        "plays": "19",
+        "name": "Arthur Foote",
+        "url": "https://www.last.fm/music/Arthur+Foote",
+        "plays": "12",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -77,12 +83,6 @@
         "name": "Mieczysław Weinberg",
         "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg",
         "plays": "11",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Carl Nielsen",
-        "url": "https://www.last.fm/music/Carl+Nielsen",
-        "plays": "8",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -224,6 +224,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Carl Nielsen",
+        "url": "https://www.last.fm/music/Carl+Nielsen",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Faith No More",
         "url": "https://www.last.fm/music/Faith+No+More",
         "plays": "1",
@@ -288,12 +294,6 @@
         "url": "https://www.last.fm/music/Soft+Cell",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Sorcery",
-        "url": "https://www.last.fm/music/Sorcery",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
     "albums": [
@@ -312,6 +312,20 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/deea12f99dbb6d5d734e3c1c1c53e3a9.png"
       },
       {
+        "name": "Devils In My Details",
+        "url": "https://www.last.fm/music/ohGr/Devils+In+My+Details",
+        "artist": "ohGr",
+        "plays": "14",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c5424e7b022678aa4da08c78fd0de1de.jpg"
+      },
+      {
+        "name": "FOOTE: Piano Quintet / String Quartets Op. 32 and Op. 70",
+        "url": "https://www.last.fm/music/Arthur+Foote/FOOTE:+Piano+Quintet+%2F+String+Quartets+Op.+32+and+Op.+70",
+        "artist": "Arthur Foote",
+        "plays": "12",
+        "image": ""
+      },
+      {
         "name": "Magdalena",
         "url": "https://www.last.fm/music/Maria+Grand/Magdalena",
         "artist": "Maria Grand",
@@ -323,13 +337,6 @@
         "url": "https://www.last.fm/music/Mieczys%C5%82aw+Weinberg/Symphonies+nos.+3+&+7+%2F+Flute+Concerto+no.+1",
         "artist": "Mieczysław Weinberg",
         "plays": "11",
-        "image": ""
-      },
-      {
-        "name": "Violin Concerto / Symphony no. 4 “The Inextinguishable”",
-        "url": "https://www.last.fm/music/Carl+Nielsen/Violin+Concerto+%2F+Symphony+no.+4+%E2%80%9CThe+Inextinguishable%E2%80%9D",
-        "artist": "Carl Nielsen",
-        "plays": "8",
         "image": ""
       },
       {
@@ -415,13 +422,6 @@
         "artist": "Ludwig van Beethoven",
         "plays": "3",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/cf884e5b47ce414cc16e693f6cf448fe.jpg"
-      },
-      {
-        "name": "Devils In My Details",
-        "url": "https://www.last.fm/music/ohGr/Devils+In+My+Details",
-        "artist": "ohGr",
-        "plays": "3",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c5424e7b022678aa4da08c78fd0de1de.jpg"
       },
       {
         "name": "Violin Concertos No. 1",
@@ -522,6 +522,13 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/963b44ca7c084def95d635b664780eef.png"
       },
       {
+        "name": "Violin Concerto / Symphony no. 4 “The Inextinguishable”",
+        "url": "https://www.last.fm/music/Carl+Nielsen/Violin+Concerto+%2F+Symphony+no.+4+%E2%80%9CThe+Inextinguishable%E2%80%9D",
+        "artist": "Carl Nielsen",
+        "plays": "1",
+        "image": ""
+      },
+      {
         "name": "Sol Invictus",
         "url": "https://www.last.fm/music/Faith+No+More/Sol+Invictus",
         "artist": "Faith No More",
@@ -569,13 +576,6 @@
         "artist": "Ozzy Osbourne",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2750eaa283e2b242397257fd51341c6e.jpg"
-      },
-      {
-        "name": "Ghetto Supastar",
-        "url": "https://www.last.fm/music/Pras/Ghetto+Supastar",
-        "artist": "Pras",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/cea6a07f856ace918929cedc96d5a908.jpg"
       }
     ],
     "tracks": [
@@ -622,13 +622,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Symphony no. 4, op. 29, FS 76 “The Inextinguishable”: Allegro",
-        "url": "https://www.last.fm/music/Carl+Nielsen/_/Symphony+no.+4,+op.+29,+FS+76+%E2%80%9CThe+Inextinguishable%E2%80%9D:+Allegro",
-        "artist": "Carl Nielsen",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Jolene",
         "url": "https://www.last.fm/music/Dolly+Parton/_/Jolene",
         "artist": "Dolly Parton",
@@ -659,6 +652,41 @@
       {
         "name": "101_intro",
         "url": "https://www.last.fm/music/ohGr/_/101_intro",
+        "artist": "ohGr",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Eyecandy",
+        "url": "https://www.last.fm/music/ohGr/_/Eyecandy",
+        "artist": "ohGr",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Feelin' Chicken",
+        "url": "https://www.last.fm/music/ohGr/_/Feelin%27+Chicken",
+        "artist": "ohGr",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Pepper",
+        "url": "https://www.last.fm/music/ohGr/_/Pepper",
+        "artist": "ohGr",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Shhh",
+        "url": "https://www.last.fm/music/ohGr/_/Shhh",
+        "artist": "ohGr",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Three",
+        "url": "https://www.last.fm/music/ohGr/_/Three",
         "artist": "ohGr",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
@@ -713,6 +741,90 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "Piano Quintet in A Minor, Op. 38 (1897) I. Allegro giusto (appassionato)",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/Piano+Quintet+in+A+Minor,+Op.+38+(1897)+I.+Allegro+giusto+(appassionato)",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Piano Quintet in A Minor, Op. 38 (1897) II. Allegretto",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/Piano+Quintet+in+A+Minor,+Op.+38+(1897)+II.+Allegretto",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Piano Quintet in A Minor, Op. 38 (1897) III. Scherzo: Vivace",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/Piano+Quintet+in+A+Minor,+Op.+38+(1897)+III.+Scherzo:+Vivace",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Piano Quintet in A Minor, Op. 38 (1897) IV. Allegro giusto",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/Piano+Quintet+in+A+Minor,+Op.+38+(1897)+IV.+Allegro+giusto",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 2 in E Major, Op. 32 (1893) I. Allegro giocoso",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+2+in+E+Major,+Op.+32+(1893)+I.+Allegro+giocoso",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 2 in E Major, Op. 32 (1893) II. Scherzo: Vivace",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+2+in+E+Major,+Op.+32+(1893)+II.+Scherzo:+Vivace",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 2 in E Major, Op. 32 (1893) III. Tema con variazioni",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+2+in+E+Major,+Op.+32+(1893)+III.+Tema+con+variazioni",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 2 in E Major, Op. 32 (1893) IV. Allegro assai",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+2+in+E+Major,+Op.+32+(1893)+IV.+Allegro+assai",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 3 in D Major, Op. 70 (1910) (1910) II. Scherzo: Capriccioso",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+3+in+D+Major,+Op.+70+(1910)+(1910)+II.+Scherzo:+Capriccioso",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 3 in D Major, Op. 70 (1910) (1910) III. Andante esspressivo",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+3+in+D+Major,+Op.+70+(1910)+(1910)+III.+Andante+esspressivo",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 3 in D Major, Op. 70 (1910) (1910) IV. Andante esspressivo. Allegro non troppo, marcato",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+3+in+D+Major,+Op.+70+(1910)+(1910)+IV.+Andante+esspressivo.+Allegro+non+troppo,+marcato",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 3 in D Major, Op. 70 (1910) I. Allegro",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+3+in+D+Major,+Op.+70+(1910)+I.+Allegro",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Carol of the Bells",
         "url": "https://www.last.fm/music/August+Burns+Red/_/Carol+of+the+Bells",
         "artist": "August Burns Red",
@@ -744,118 +856,6 @@
         "name": "Violin Concerto, Op. 15 (revised version): I. Moderato con moto",
         "url": "https://www.last.fm/music/Benjamin+Britten/_/Violin+Concerto,+Op.+15+(revised+version):+I.+Moderato+con+moto",
         "artist": "Benjamin Britten",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Violin Concerto, Op. 15 (Revised version): II. Vivace - Cadenza",
-        "url": "https://www.last.fm/music/Benjamin+Britten/_/Violin+Concerto,+Op.+15+(Revised+version):+II.+Vivace+-+Cadenza",
-        "artist": "Benjamin Britten",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Violin Concerto, op. 15 (revised version): III. Passacaglia: Andante lento (un poco meno mosso) - Largamente (lento) - Lento e solenne",
-        "url": "https://www.last.fm/music/Benjamin+Britten/_/Violin+Concerto,+op.+15+(revised+version):+III.+Passacaglia:+Andante+lento+(un+poco+meno+mosso)+-+Largamente+(lento)+-+Lento+e+solenne",
-        "artist": "Benjamin Britten",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Concerto, op. 33, FS 61: I. Allegro cavalleresco",
-        "url": "https://www.last.fm/music/Carl+Nielsen/_/Concerto,+op.+33,+FS+61:+I.+Allegro+cavalleresco",
-        "artist": "Carl Nielsen",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Concerto, op. 33, FS 61: I. Praeludium",
-        "url": "https://www.last.fm/music/Carl+Nielsen/_/Concerto,+op.+33,+FS+61:+I.+Praeludium",
-        "artist": "Carl Nielsen",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Concerto, op. 33, FS 61: II. Poco Adagio",
-        "url": "https://www.last.fm/music/Carl+Nielsen/_/Concerto,+op.+33,+FS+61:+II.+Poco+Adagio",
-        "artist": "Carl Nielsen",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Concerto, op. 33, FS 61: II. Rondo",
-        "url": "https://www.last.fm/music/Carl+Nielsen/_/Concerto,+op.+33,+FS+61:+II.+Rondo",
-        "artist": "Carl Nielsen",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Symphony no. 4, op. 29, FS 76 “The Inextinguishable”: A tempo (Poco allegretto)",
-        "url": "https://www.last.fm/music/Carl+Nielsen/_/Symphony+no.+4,+op.+29,+FS+76+%E2%80%9CThe+Inextinguishable%E2%80%9D:+A+tempo+(Poco+allegretto)",
-        "artist": "Carl Nielsen",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Symphony no. 4, op. 29, FS 76 “The Inextinguishable”: Poco adagio",
-        "url": "https://www.last.fm/music/Carl+Nielsen/_/Symphony+no.+4,+op.+29,+FS+76+%E2%80%9CThe+Inextinguishable%E2%80%9D:+Poco+adagio",
-        "artist": "Carl Nielsen",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "A chorus like distant screaming",
-        "url": "https://www.last.fm/music/Carrie+Frey/_/A+chorus+like+distant+screaming",
-        "artist": "Carrie Frey",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Gone/Back",
-        "url": "https://www.last.fm/music/Carrie+Frey/_/Gone%2FBack",
-        "artist": "Carrie Frey",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "LATHE",
-        "url": "https://www.last.fm/music/Carrie+Frey/_/LATHE",
-        "artist": "Carrie Frey",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Seaglass/Pebble",
-        "url": "https://www.last.fm/music/Carrie+Frey/_/Seaglass%2FPebble",
-        "artist": "Carrie Frey",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "1,2",
-        "url": "https://www.last.fm/music/Clarice+Jensen/_/1,2",
-        "artist": "Clarice Jensen",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "2,1",
-        "url": "https://www.last.fm/music/Clarice+Jensen/_/2,1",
-        "artist": "Clarice Jensen",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "From A to B",
-        "url": "https://www.last.fm/music/Clarice+Jensen/_/From+A+to+B",
-        "artist": "Clarice Jensen",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "In holiday clothing out of the great darkness Part 1",
-        "url": "https://www.last.fm/music/Clarice+Jensen/_/In+holiday+clothing+out+of+the+great+darkness+Part+1",
-        "artist": "Clarice Jensen",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -984,6 +984,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "ohGr",
+        "url": "https://www.last.fm/music/ohGr",
+        "plays": "30",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Type O Negative",
         "url": "https://www.last.fm/music/Type+O+Negative",
         "plays": "30",
@@ -1094,12 +1100,6 @@
       {
         "name": "Alan Hovhaness",
         "url": "https://www.last.fm/music/Alan+Hovhaness",
-        "plays": "19",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Nikolai Girshevich Kapustin",
-        "url": "https://www.last.fm/music/Nikolai+Girshevich+Kapustin",
         "plays": "19",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1888,6 +1888,12 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
+        "name": "ohGr",
+        "url": "https://www.last.fm/music/ohGr",
+        "plays": "57",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
         "name": "Henri Dutilleux",
         "url": "https://www.last.fm/music/Henri+Dutilleux",
         "plays": "55",
@@ -1903,12 +1909,6 @@
         "name": "Wolfgang Amadeus Mozart",
         "url": "https://www.last.fm/music/Wolfgang+Amadeus+Mozart",
         "plays": "54",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Philip Glass",
-        "url": "https://www.last.fm/music/Philip+Glass",
-        "plays": "53",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ],
@@ -2536,7 +2536,7 @@
       {
         "name": "ohGr",
         "url": "https://www.last.fm/music/ohGr",
-        "plays": "3213",
+        "plays": "3224",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -2813,18 +2813,18 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/76626da326e005b734d56ed6e396c998.jpg"
       },
       {
+        "name": "Devils In My Details",
+        "url": "https://www.last.fm/music/ohGr/Devils+In+My+Details",
+        "artist": "ohGr",
+        "plays": "904",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c5424e7b022678aa4da08c78fd0de1de.jpg"
+      },
+      {
         "name": "Superunknown",
         "url": "https://www.last.fm/music/Soundgarden/Superunknown",
         "artist": "Soundgarden",
         "plays": "899",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ba46062e0b094a889ac06447fd5714f8.png"
-      },
-      {
-        "name": "Devils In My Details",
-        "url": "https://www.last.fm/music/ohGr/Devils+In+My+Details",
-        "artist": "ohGr",
-        "plays": "893",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c5424e7b022678aa4da08c78fd0de1de.jpg"
       },
       {
         "name": "Year Zero",
