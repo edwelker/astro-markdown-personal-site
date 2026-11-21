@@ -1,15 +1,8 @@
 {
   "user": {
-    "scrobbles": 280538
+    "scrobbles": 280542
   },
   "history": [
-    {
-      "dayName": "Sat",
-      "date": "2026-11-14",
-      "hours": "0.8",
-      "lastHours": "2.0",
-      "topArtist": "Alice in Chains"
-    },
     {
       "dayName": "Sun",
       "date": "2026-11-15",
@@ -51,6 +44,13 @@
       "hours": "3.8",
       "lastHours": "1.6",
       "topArtist": "Carl Nielsen"
+    },
+    {
+      "dayName": "Sat",
+      "date": "2026-11-21",
+      "hours": "0.2",
+      "lastHours": "0.8",
+      "topArtist": "The Nocturnes"
     }
   ],
   "week": {
@@ -164,12 +164,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Alice in Chains",
-        "url": "https://www.last.fm/music/Alice+in+Chains",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Rasputina",
         "url": "https://www.last.fm/music/Rasputina",
         "plays": "5",
@@ -184,6 +178,12 @@
       {
         "name": "Maurice Ravel",
         "url": "https://www.last.fm/music/Maurice+Ravel",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "The Nocturnes",
+        "url": "https://www.last.fm/music/The+Nocturnes",
         "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -226,12 +226,6 @@
       {
         "name": "Aaliyah",
         "url": "https://www.last.fm/music/Aaliyah",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Austra",
-        "url": "https://www.last.fm/music/Austra",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -292,6 +286,12 @@
       {
         "name": "Soft Cell",
         "url": "https://www.last.fm/music/Soft+Cell",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Talking Heads",
+        "url": "https://www.last.fm/music/Talking+Heads",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -431,13 +431,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/07ab074622244bc1ddeda8cb1cf1c813.jpg"
       },
       {
-        "name": "Black Gives Way to Blue",
-        "url": "https://www.last.fm/music/Alice+in+Chains/Black+Gives+Way+to+Blue",
-        "artist": "Alice in Chains",
-        "plays": "5",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/1fd4ea2f6f3448bd9365cb63c8cb2aa3.png"
-      },
-      {
         "name": "Schubert: The Late String Quartets; String Quintet",
         "url": "https://www.last.fm/music/Franz+Schubert/Schubert:+The+Late+String+Quartets;+String+Quintet",
         "artist": "Franz Schubert",
@@ -478,6 +471,13 @@
         "artist": "Pig",
         "plays": "4",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/1f598cb0590caf3022e126bbf9133975.jpg"
+      },
+      {
+        "name": "A Year of Spring",
+        "url": "https://www.last.fm/music/The+Nocturnes/A+Year+of+Spring",
+        "artist": "The Nocturnes",
+        "plays": "4",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3df523e40a7d4f36af00e3de92c81cd2.jpg"
       },
       {
         "name": "The Blind Banister",
@@ -543,13 +543,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/391c0fd73705bfe881fcbc1d2b647b43.png"
       },
       {
-        "name": "Bittersweet / Chains and Anchors",
-        "url": "https://www.last.fm/music/Austra/Bittersweet+%2F+Chains+and+Anchors",
-        "artist": "Austra",
-        "plays": "2",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/51951d09483561e42dcecee02e873a50.jpg"
-      },
-      {
         "name": "Billie's Best",
         "url": "https://www.last.fm/music/Billie+Holiday/Billie%27s+Best",
         "artist": "Billie Holiday",
@@ -576,6 +569,13 @@
         "artist": "Rasputina",
         "plays": "2",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ae667052be3b4fbca8964ec8d70d3918.jpg"
+      },
+      {
+        "name": "Floodland",
+        "url": "https://www.last.fm/music/The+Sisters+of+Mercy/Floodland",
+        "artist": "The Sisters of Mercy",
+        "plays": "2",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/cea8623a31cf020ab4537efa221baad8.jpg"
       }
     ],
     "tracks": [
@@ -762,41 +762,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "A Looking in View",
-        "url": "https://www.last.fm/music/Alice+in+Chains/_/A+Looking+in+View",
-        "artist": "Alice in Chains",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "All Secrets Known",
-        "url": "https://www.last.fm/music/Alice+in+Chains/_/All+Secrets+Known",
-        "artist": "Alice in Chains",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Check My Brain",
-        "url": "https://www.last.fm/music/Alice+in+Chains/_/Check+My+Brain",
-        "artist": "Alice in Chains",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Last of My Kind",
-        "url": "https://www.last.fm/music/Alice+in+Chains/_/Last+of+My+Kind",
-        "artist": "Alice in Chains",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
-        "name": "Your Decision",
-        "url": "https://www.last.fm/music/Alice+in+Chains/_/Your+Decision",
-        "artist": "Alice in Chains",
-        "plays": "1",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Abstractions: I. Marble Moon (Inspired by Sara VanDerBeek's Marble Moon, 2015)",
         "url": "https://www.last.fm/music/Anna+Clyne/_/Abstractions:+I.+Marble+Moon+(Inspired+by+Sara+VanDerBeek%27s+Marble+Moon,+2015)",
         "artist": "Anna Clyne",
@@ -858,6 +823,41 @@
         "artist": "Anna Clyne",
         "plays": "1",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Piano Quintet in A Minor, Op. 38 (1897) I. Allegro giusto (appassionato)",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/Piano+Quintet+in+A+Minor,+Op.+38+(1897)+I.+Allegro+giusto+(appassionato)",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Piano Quintet in A Minor, Op. 38 (1897) II. Allegretto",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/Piano+Quintet+in+A+Minor,+Op.+38+(1897)+II.+Allegretto",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Piano Quintet in A Minor, Op. 38 (1897) III. Scherzo: Vivace",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/Piano+Quintet+in+A+Minor,+Op.+38+(1897)+III.+Scherzo:+Vivace",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Piano Quintet in A Minor, Op. 38 (1897) IV. Allegro giusto",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/Piano+Quintet+in+A+Minor,+Op.+38+(1897)+IV.+Allegro+giusto",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "String Quartet No. 2 in E Major, Op. 32 (1893) I. Allegro giocoso",
+        "url": "https://www.last.fm/music/Arthur+Foote/_/String+Quartet+No.+2+in+E+Major,+Op.+32+(1893)+I.+Allegro+giocoso",
+        "artist": "Arthur Foote",
+        "plays": "1",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
     ]
   },
@@ -882,12 +882,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Einstürzende Neubauten",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
-        "plays": "85",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Igor Stravinsky",
         "url": "https://www.last.fm/music/Igor+Stravinsky",
         "plays": "83",
@@ -903,6 +897,12 @@
         "name": "Nine Inch Nails",
         "url": "https://www.last.fm/music/Nine+Inch+Nails",
         "plays": "78",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Einstürzende Neubauten",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten",
+        "plays": "75",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
@@ -1086,12 +1086,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Frank Bridge",
-        "url": "https://www.last.fm/music/Frank+Bridge",
-        "plays": "20",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Franz Schubert",
         "url": "https://www.last.fm/music/Franz+Schubert",
         "plays": "20",
@@ -1100,6 +1094,12 @@
       {
         "name": "Ioanna Gika",
         "url": "https://www.last.fm/music/Ioanna+Gika",
+        "plays": "20",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "William Walton",
+        "url": "https://www.last.fm/music/William+Walton",
         "plays": "20",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
@@ -1148,13 +1148,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9078489eade8c223a30959c3b223be38.jpg"
       },
       {
-        "name": "Grundstück",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Grundst%C3%BCck",
-        "artist": "Einstürzende Neubauten",
-        "plays": "41",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4490d85e31754333c347cbf90f224e28.png"
-      },
-      {
         "name": "Arturo Benedetti Michelangeli plays Debussy",
         "url": "https://www.last.fm/music/Claude+Debussy/Arturo+Benedetti+Michelangeli+plays+Debussy",
         "artist": "Claude Debussy",
@@ -1174,6 +1167,13 @@
         "artist": "Carrie Frey",
         "plays": "31",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6e0f339ecfe6d7b91fb88950ac202d39.jpg"
+      },
+      {
+        "name": "Grundstück",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/Grundst%C3%BCck",
+        "artist": "Einstürzende Neubauten",
+        "plays": "31",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4490d85e31754333c347cbf90f224e28.png"
       },
       {
         "name": "Narcisse et Echo / Prelude to \"La princesse lointaine\"",
@@ -1274,13 +1274,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/59c2b982ad3c97becb2e5441e921d0eb.jpg"
       },
       {
-        "name": "Earth, Sea & Air",
-        "url": "https://www.last.fm/music/Laura+van+der+Heijden/Earth,+Sea+&+Air",
-        "artist": "Laura van der Heijden",
-        "plays": "20",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b502229d2137ec72fe67dc5d95b9ddfc.png"
-      },
-      {
         "name": "Piano Concertos Nos. 1-5",
         "url": "https://www.last.fm/music/Sergei+Prokofiev/Piano+Concertos+Nos.+1-5",
         "artist": "Sergei Prokofiev",
@@ -1300,6 +1293,13 @@
         "artist": "Emerson String Quartet",
         "plays": "19",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f097fae4adfa4b6ccba24e4e5945eb63.jpg"
+      },
+      {
+        "name": "Earth, Sea & Air",
+        "url": "https://www.last.fm/music/Laura+van+der+Heijden/Earth,+Sea+&+Air",
+        "artist": "Laura van der Heijden",
+        "plays": "19",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b502229d2137ec72fe67dc5d95b9ddfc.png"
       },
       {
         "name": "Narcisse et Echo",
@@ -1521,13 +1521,6 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Good Morning Everybody",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Good+Morning+Everybody",
-        "artist": "Einstürzende Neubauten",
-        "plays": "7",
-        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
-      },
-      {
         "name": "Closer",
         "url": "https://www.last.fm/music/Nine+Inch+Nails/_/Closer",
         "artist": "Nine Inch Nails",
@@ -1552,6 +1545,13 @@
         "name": "Fallen Cloud",
         "url": "https://www.last.fm/music/Austra/_/Fallen+Cloud",
         "artist": "Austra",
+        "plays": "6",
+        "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+      },
+      {
+        "name": "Good Morning Everybody",
+        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Good+Morning+Everybody",
+        "artist": "Einstürzende Neubauten",
         "plays": "6",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
@@ -1661,9 +1661,9 @@
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       },
       {
-        "name": "Tagelang Weiss",
-        "url": "https://www.last.fm/music/Einst%C3%BCrzende+Neubauten/_/Tagelang+Weiss",
-        "artist": "Einstürzende Neubauten",
+        "name": "Piano Concerto No. 2 in G minor, Op. 16: IV. Finale: Allegro tempestoso",
+        "url": "https://www.last.fm/music/Sergei+Prokofiev/_/Piano+Concerto+No.+2+in+G+minor,+Op.+16:+IV.+Finale:+Allegro+tempestoso",
+        "artist": "Sergei Prokofiev",
         "plays": "5",
         "image": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
       }
