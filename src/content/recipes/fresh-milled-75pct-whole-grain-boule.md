@@ -1,45 +1,40 @@
 ---
 title: "Fresh-Milled 75% Whole-Grain & Quinoa-Amaranth Boule"
-description: "A nutrient-dense, 76% hydration no-knead Dutch-oven loaf milled fresh at 75% whole grains and seeds (hard red wheat, dark rye, spelt, oats, quinoa, amaranth) with 25% bread flour for loft."
+description: "A low-toil, destination-grouped NutriMill no-knead Dutch-oven loaf milled fresh at 75% whole grains and oats (hard red wheat, dark rye, spelt, rolled oats, quinoa, amaranth) with 25% bread flour."
 date: 2026-11-21T23:15:00-05:00
 draft: true
-prepTime: "PT15M"
+prepTime: "PT10M"
 cookTime: "PT45M"
-totalTime: "PT62H"
+totalTime: "PT60H"
 recipeYield: "19 slices (50g each, ~952g loaf)"
 recipeCategory: "Bread"
 recipeCuisine: "American"
 keywords: ["bread", "fresh-milled", "no-knead", "dutch oven", "whole grain", "spelt", "rye", "quinoa", "amaranth"]
 recipeIngredient:
-  - "270g fresh-milled hard red wheat berries (~2 1/4 cups milled)"
-  - "150g high-protein bread flour (~1 1/4 cups)"
-  - "72g fresh-milled dark rye berries (~1/2 cup + 1 tbsp milled)"
-  - "48g fresh-milled spelt berries (~1/3 cup + 1 tbsp milled)"
-  - "30g rolled oats, pulsed in spice grinder or food processor (~1/3 cup dry, NOT stone mill)"
-  - "18g quinoa, pre-rinsed/dry-toasted if bitter and milled with wheat (~1 1/2 tbsp dry)"
-  - "12g amaranth, milled with wheat (~1 tbsp dry)"
-  - "455-465g cold water (50-55°F for NutriMill Classic/Plus, 60-65°F for Harvest, ~76-77% hydration)"
+  - "=== TO NUTRIMILL (1 pass, Fine/Bread setting) ==="
+  - "270g hard red wheat berries (45%)"
+  - "72g dark rye berries (12%)"
+  - "48g spelt berries (8%)"
+  - "18g pre-washed quinoa (3%)"
+  - "12g amaranth (2%)"
+  - "=== TO SPICE GRINDER ==="
+  - "30g rolled oats (5% — keeps sticky oats out of the NutriMill)"
+  - "=== DIRECT TO MIXING BOWL ==="
+  - "150g high-protein bread flour (25%)"
   - "12g fine sea salt (2 tsp)"
-  - "0.8g instant yeast (scant 1/4 tsp; 1.0g if kitchen is under 68°F)"
+  - "0.8g instant yeast (scant 1/4 tsp)"
+  - "460g cold tap water (~77% hydration — cools warm NutriMill flour)"
 recipeInstructions:
-  - "Prep & Mill Grains: Bite 5 raw quinoa seeds—if bitter/soapy, rinse and dry-toast until 100% bone-dry and cool. Pulse the 30g rolled oats in a food processor or spice grinder (never put rolled oats in a NutriMill). Blend 18g quinoa and 12g amaranth into the 270g hard red wheat berries in your mill hopper, tap the air filter clean, and mill with the 72g rye and 48g spelt on fine."
-  - "Cool Flour & Mix: Let NutriMill flour cool 20-30 minutes below 80°F OR use 50-55°F cold water (60-65°F for Harvest) so dough starts at 72-75°F. Whisk fresh-milled flours with 150g bread flour, 12g sea salt, and 0.8g instant yeast, then stir in 455-465g water for ~1 minute until no dry pockets remain."
-  - "Build Structure & Bulk (10-13 Hours): Cover and bulk ferment 10-13 hours at 68-72°F (check at 10 hours), stopping at 60-75% rise (not full 2x). If baking in a wide 7-qt Lodge, do 2-3 quick 20-second coil folds at 30, 60, and 90 minutes into bulk; optional for a 5-qt Dutch oven."
-  - "Shape & Cold Retard (24-48 Hours): Lightly flour the counter, fold edges toward the center into a tight round boule, and place seam-side UP in a snug 7.5-8 inch bowl lined with a clean cotton towel dusted heavily with 50/50 rice flour and AP flour (do not retard on parchment). Cover tightly and refrigerate 24-48 hours."
-  - "Bake (450°F Covered -> 425°F Uncovered): Preheat your 5-qt (metal knob) or 7-qt Dutch oven + lid at 450°F (232°C) for 35-45 minutes, with an empty baking sheet on the rack below to prevent bottom scorching. Flip cold dough seam-side down onto fresh dry parchment, slash 1/2 inch deep, cover, and bake 22-25 minutes at 450°F."
-  - "Uncover & Probe: Remove lid, drop oven to 425°F, and bake 18-22 minutes until deep chestnut-mahogany and a ThermoWorks probe reads 208-210°F (tent loosely with foil if darkening too fast)."
-  - "Cool Completely (2.5-3 Hours): Rest on a wire rack 2.5-3 hours before slicing so the 75% whole-grain crumb sets without smearing."
+  - "NutriMill Batch (1 Pass, Fine/Bread Setting): Weigh the 5 NutriMill grains (270g hard red wheat, 72g dark rye, 48g spelt, 18g pre-washed quinoa, 12g amaranth) into one container, pour into the NutriMill hopper together, and mill everything in ONE pass on Fine/Bread (no changing dial numbers between grains). Empty into your mixing bowl."
+  - "Spice Grinder Batch: Weigh 30g rolled oats into your spice grinder, pulse ~10 seconds into a coarse flour, and dump into the mixing bowl."
+  - "Mix in Mixing Bowl (1 Minute): Whisk 150g bread flour, 12g salt, and 0.8g yeast into the milled flours. Pour in 460g cold tap water and stir ~1 minute until no dry pockets remain."
+  - "Overnight Rest (10-13 Hours, Hands-Off): Cover the bowl and leave on the counter overnight (68-72°F) until puffy and bubbly on top—zero folding or babysitting needed."
+  - "Shape & Fridge (24-48 Hours): Scrape dough onto a lightly floured counter, fold edges into a tight round ball, and place seam-side UP in a snug 7.5-8 inch bowl lined with a floured cotton towel. Cover and refrigerate 24-48 hours."
+  - "Bake in 5-Qt Dutch Oven (450°F -> 425°F): Preheat your 5-qt Tramontina Dutch oven (metal knob) + lid at 450°F for 35-45 minutes. Flip cold dough onto fresh dry parchment, slash the top, cover, and bake 25 minutes at 450°F. Remove lid, drop oven to 425°F, and bake 18-22 minutes until deep chestnut-brown (208-210°F inside)."
+  - "Cool & Freeze: Cool 2.5-3 hours on a wire rack before slicing into ~50g slices; freeze half for quick toasting."
 ---
 
-A rustic, high-flavor Dutch-oven loaf milled fresh at **75% whole grains and seeds** (`45%` hard red wheat, `12%` dark rye, `8%` spelt, `5%` rolled oats, `3%` quinoa, `2%` amaranth) paired with **25% high-protein bread flour** for reliable oven spring.
+A **destination-grouped, zero-babysitting** Dutch-oven loaf sized for your **5-qt Tramontina**: weigh each machine's batch once, mill in **one NutriMill pass on one setting**, stir once with cold water, and let time do the work.
 
-### Why This Formula Works
-* **24–48h Cold Retard:** Activates dark rye's natural phytase enzymes to break down `~50–70%` of phytic acid (unlocking magnesium, zinc, and iron) while building deep, malty sourdough-like tang without proteolytic collapse.
-* **Complete Amino-Acid Complementarity:** Quinoa and amaranth supply lysine lacking in wheat, rye, and spelt without turning the crumb gummy.
-* **Slice, Freeze & Toast (RS3):** Weighing `50g` slices and freezing half the cooled loaf prevents warm-bread grazing and creates Type 3 Resistant Starch when toasted straight from frozen.
-
-### Nutrition (Per `50g` Measured Slice — 19 Slices Total)
+### Nutrition (Per `50g` Measured Slice — ~19 Slices Total)
 * **110 kcal** | **4.2g Protein** | **22.7g Total Carbs** (**2.9g Fiber** / 19.8g Net) | **0.7g Fat** | **~245mg Sodium**
-
-### Portioning & Storage
-* Weigh and slice the cooled loaf into **19 uniform `50g` slices**; freeze at least half immediately with parchment squares between slices and toast straight from frozen.
