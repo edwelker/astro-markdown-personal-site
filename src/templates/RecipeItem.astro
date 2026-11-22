@@ -110,7 +110,35 @@ const ldJson = {
 
       <h2>Ingredients</h2>
       <ul>
-        {data.recipeIngredient.map((ingredient) => <li>{ingredient}</li>)}
+        {
+          (() => {
+            const groups: { header: string | null; items: string[] }[] = [];
+            for (const line of data.recipeIngredient) {
+              const m = line.match(/^===\s*(.+?)\s*===$/);
+              if (m) {
+                groups.push({ header: m[1], items: [] });
+              } else if (groups.length > 0) {
+                groups[groups.length - 1].items.push(line);
+              } else {
+                groups.push({ header: null, items: [line] });
+              }
+            }
+            return groups.map((g) =>
+              g.header ? (
+                <li>
+                  <strong>{g.header}</strong>
+                  <ul>
+                    {g.items.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                </li>
+              ) : (
+                g.items.map((item) => <li>{item}</li>)
+              )
+            );
+          })()
+        }
       </ul>
 
       <h2>Instructions</h2>
