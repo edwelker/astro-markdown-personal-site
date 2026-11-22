@@ -11,7 +11,7 @@ recipeCategory: "Bread"
 recipeCuisine: "American"
 keywords: ["bread", "fresh-milled", "no-knead", "dutch oven", "whole grain", "spelt", "rye", "quinoa", "amaranth"]
 recipeIngredient:
-  - "=== TO NUTRIMILL (1 pass, Fine/Bread setting) ==="
+  - "=== TO NUTRIMILL IMPACT (Setting 2-3, 1 pass) ==="
   - "270g hard red wheat berries (45%)"
   - "72g dark rye berries (12%)"
   - "48g spelt berries (8%)"
@@ -25,7 +25,7 @@ recipeIngredient:
   - "0.8g instant yeast (scant 1/4 tsp)"
   - "460g cold tap water (~77% hydration — offsets warm milled flour)"
 recipeInstructions:
-  - "NutriMill Batch (1 Pass, Fine/Bread Setting): Weigh the 5 NutriMill grains (270g hard red wheat, 72g dark rye, 48g spelt, 18g pre-washed quinoa, 12g amaranth) into one container, pour into the NutriMill hopper together, and mill everything in ONE pass on Fine/Bread (no changing dial numbers between grains). Empty into your mixing bowl."
+  - "NutriMill Impact Batch (Setting 2-3, 1 Pass): Weigh the 5 NutriMill grains (270g hard red wheat, 72g dark rye, 48g spelt, 18g pre-washed quinoa, 12g amaranth) into one container. Turn the NutriMill Impact on to Setting 2 or 3 first, then pour all 5 grains into the hopper together and mill in ONE pass. Empty into your mixing bowl."
   - "Spice Grinder Batch: Weigh 30g rolled oats into your spice grinder, pulse ~10 seconds into a coarse flour, and dump into the mixing bowl."
   - "Mix in Mixing Bowl (1 Minute): Whisk 150g bread flour, 12g salt, and 0.8g yeast into the milled flours. Pour in 460g cold tap water and stir ~1 minute until no dry pockets remain."
   - "Overnight Rest (10-13 Hours): Cover the bowl and leave on the counter overnight (68-72°F) until puffy and bubbly on top."
