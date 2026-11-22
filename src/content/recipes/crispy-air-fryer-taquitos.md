@@ -16,7 +16,7 @@ nutrition:
   fatContent: "5.5 g"
   sodiumContent: "230 mg"
 recipeIngredient:
-  - "16 to 18 standard 6-inch yellow or white corn tortillas (or standard 6-inch thin flour tortillas)"
+  - "16 to 18 standard 6-inch yellow or white corn tortillas (saves ~250-350mg sodium vs. 6-inch thin flour tortillas)"
   - "1.5 lbs boneless skinless chicken thighs (or 3 cups warm shredded rotisserie chicken, or 1 lb 93/7 lean ground turkey)"
   - "1 can (15 oz) black or pinto beans, rinsed and thoroughly drained (or 1.5 cups Instant Pot home-cooked beans)"
   - "1.5 cups (6 oz) shredded Monterey Jack, Pepper Jack, or Cheddar-Jack cheese"

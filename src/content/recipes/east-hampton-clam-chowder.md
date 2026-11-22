@@ -38,7 +38,7 @@ recipeInstructions:
   - "Deglaze: Splash in the wine or vinegar, scraping up every speck of fond from the bottom of the pot with a wooden spoon until the liquid is nearly evaporated (30 to 45 seconds)."
   - "The Starch & Liquor Simmer: Pour in the strained clam juice from all three cans plus the 8 oz bottle of clam juice. Add the cubed potatoes, grated potato shreds, bay leaf, and Worcestershire sauce. Bring to a brisk simmer, then lower to medium-low, cover partially, and simmer for 12 to 14 minutes until the cubes are fork-tender and the shreds dissolve into the broth."
   - "The Off-Heat Clam Steep: Remove the pot completely from the heat burner. Pour in the 2 cups of cold whole milk, reserved clam meat, and half of the crisp bacon. Stir thoroughly; the residual broth heat will gently warm the clams and milk without toughening the delicate clam proteins."
-  - "The 24-Hour Cure: Let the pot rest at room temperature on a trivet for 45 minutes uncovered to shed initial heat, then cover and refrigerate for 24 hours to allow the potato starches to settle into a velvety texture."
+  - "The 24-Hour Cure (Fridge Batch Only - Do NOT Freeze): Let the pot rest at room temperature on a trivet for 45 minutes uncovered to shed initial heat, then cover and refrigerate for 24 hours (keeps 4-5 days in fridge; do not freeze, as whole milk breaks and potato cubes turn spongy)."
   - "Service Reheat: Reheat only your portion over medium-low heat until steaming (roughly 145F to 155F; do not boil). Taste, adjust with salt and pepper, and garnish with the remaining crisp bacon."
 draft: true
 ---

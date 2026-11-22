@@ -30,7 +30,7 @@ recipeIngredient:
   - "SPICE BOWL: 1/2 tsp MSG"
   - "SPICE BOWL: 1–2 tbsp minced chipotle peppers in adobo (optional, for smoky heat)"
   - "POT LIQUIDS & MEAT: 1 tbsp (14g) olive oil or unsalted butter"
-  - "POT LIQUIDS & MEAT: 1.25 cups (300 mL) water + 1 tbsp Chicken Better Than Bouillon, dissolved"
+  - "POT LIQUIDS & MEAT: 1.25 cups (300 mL) plain water or unsalted broth (skips bouillon to cut ~350-450mg sodium/bowl)"
   - "POT LIQUIDS & MEAT: 2 lbs (908g) boneless, skinless chicken thighs, trimmed of excess fat flaps"
   - "POT LIQUIDS & MEAT: 2 cans (4 oz each / 225g) diced roasted green chiles, undrained"
   - "POT LIQUIDS & MEAT: 2 jars (16 oz each / 900g) Herdez Salsa Verde (Roasted Tomatillo)"
