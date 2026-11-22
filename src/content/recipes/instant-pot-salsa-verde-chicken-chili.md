@@ -10,10 +10,10 @@ recipeCategory: "Soup"
 recipeCuisine: "Mexican"
 keywords: ["instant pot", "salsa verde", "green chili", "chicken thighs", "pinto beans", "white beans", "masa harina", "batch cooking", "high protein", "freezer meal"]
 nutrition:
-  calories: "545 kcal"
-  carbohydrateContent: "61 g"
-  proteinContent: "49 g"
-  fatContent: "11.5 g"
+  calories: "607 kcal"
+  carbohydrateContent: "77 g"
+  proteinContent: "51 g"
+  fatContent: "10.5 g"
 recipeIngredient:
   - "BEANS (Step 1): 1.5 cups (300g) dry pinto beans, rinsed"
   - "BEANS (Step 1): 1 cup (200g) dry Great Northern or Cannellini white beans, rinsed (plus 8 cups water + 1.5 tsp kosher salt for soaking)"
@@ -36,12 +36,12 @@ recipeIngredient:
   - "POT LIQUIDS & MEAT: 2 jars (16 oz each / 900g) Herdez Salsa Verde (Roasted Tomatillo)"
   - "FINISH & SERVE: 1/4 cup (30g) Masa Harina or fresh-milled cornmeal whisked into 1/2 cup cold water"
   - "FINISH & SERVE: 1–2 tsp brown sugar or honey (to balance tomatillo acid)"
-  - "FINISH & SERVE: 150g (~2/3 cup) cold 0% plain Greek yogurt per bowl"
+  - "FINISH & SERVE: 1/2 avocado (70g) + fresh lime + cilantro per bowl (150g cold 0% plain Greek yogurt is an optional non-iron-day swap)"
 recipeInstructions:
   - "Quick-Soak the Beans (Start Here): Rinse 1.5 cups pinto beans and 1 cup white beans and put them in the Instant Pot with 8 cups cold water and 1.5 tsp kosher salt. Lock lid, set valve to Sealing, and Pressure Cook (High) for 5 minutes. Let sit for 10–15 minutes Natural Release, then vent remaining steam, drain, rinse, and wipe out the pot."
   - "Prep Your Cutting Board & Spice Bowl (While Beans Soak): Dice 1 large yellow onion, 3 poblanos, 2–3 celery ribs, and mince 6–8 garlic cloves; chop 1/2 cup cilantro leaves and stems and set aside for Step 5. Measure 2 tbsp cumin, 1 tbsp Mexican oregano, 1 tsp smoked paprika, 1 tsp coriander, 1/2 tsp black pepper, 1/2 tsp MSG, and 1–2 tbsp chipotle in adobo (if using) into one small bowl."
   - "Sauté Veggies, Bloom Spice Bowl & Deglaze: Set Instant Pot to Sauté (Normal) and heat 1 tbsp olive oil or butter. Sauté onion, poblanos, and celery for 3–4 minutes until softened. Add the minced garlic and dump in the entire spice bowl; stir 1 minute until fragrant. Pour in 1.25 cups water + 1 tbsp dissolved chicken bouillon and scrape the bottom completely clean. Turn off Sauté."
   - "Layer the Pot & Pressure Cook (Do Not Stir): Add the drained beans and 2 cans of diced green chiles (with liquid) into the bouillon base. Lay the 2 lbs chicken thighs on top, then pour both 16 oz jars of Herdez Salsa Verde evenly over the chicken. Do not stir—keeping the thick tomatillo salsa off the bottom prevents a BURN notice. Lock lid, valve to Sealing, Pressure Cook (High) for 20 minutes, then allow 15 minutes Natural Release before venting."
-  - "Shred, Thicken, Balance & Pack: Use two forks right in the pot to shred the chicken thighs. Turn on Sauté, stir in the Masa Harina or fresh-milled cornmeal slurry (1/4 cup + 1/2 cup cold water), and simmer 4–5 minutes (full 5 minutes for fresh-milled cornmeal so raw starch cooks out) until thick and glossy. Stir in the 1/2 cup chopped cilantro and 1–2 tsp brown sugar or honey to balance the tomatillo acid; taste and adjust salt. Ladle 1/6th (~575g) into a bowl with 150g cold 0% Greek yogurt, and pack the rest into 5 pint (16-oz) deli containers."
+  - "Shred, Thicken, Balance & Pack: Use two forks right in the pot to shred the chicken thighs. Turn on Sauté, stir in the Masa Harina or fresh-milled cornmeal slurry (1/4 cup + 1/2 cup cold water), and simmer 4–5 minutes (full 5 minutes for fresh-milled cornmeal so raw starch cooks out) until thick and glossy. Stir in the 1/2 cup chopped cilantro and 1–2 tsp brown sugar or honey to balance the tomatillo acid; taste and adjust salt. Ladle 1/6th (~575g) into a bowl and finish with 1/2 avocado (70g) + fresh lime + cilantro (or 150g cold 0% Greek yogurt as an optional non-iron-day swap), and pack the rest into 5 pint (16-oz) deli containers."
 draft: true
 ---
