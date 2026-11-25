@@ -12,7 +12,7 @@
     "check:links": "lychee ./dist/**/*.html --config lychee.toml",
     "check:links:full": "lychee ./dist/**/*.html --config lychee.toml --verbose",
     "format": "prettier --write .",
-    "test": "vitest run --coverage --exclude tests/build_artifacts_tests",
+    "test": "vitest run --exclude tests/build_artifacts_tests",
     "test:cov": "vitest run --coverage --exclude tests/build_artifacts_tests",
     "test:artifacts": "vitest run tests/build_artifacts_tests",
     "test:local": "npm test && npx playwright test --config=playwright.config.local.mjs",

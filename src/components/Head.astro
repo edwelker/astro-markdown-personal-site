@@ -26,8 +26,10 @@ const { title, description, image, noindex } = Astro.props;
 
 {/* 3. Theme & UI Logic (Untouched) */}
 <script is:inline>
-  function init() {
-    preloadTheme();
+  function init(isSwap = false) {
+    if (isSwap) {
+      preloadTheme();
+    }
     onScroll();
     animate();
     updateThemeButtons();
@@ -60,14 +62,6 @@ const { title, description, image, noindex } = Astro.props;
       toggleTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
       updateThemeButtons();
     });
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-      if (localStorage.theme === 'system') {
-        toggleTheme(event.matches);
-      }
-    });
-
-    document.addEventListener('scroll', onScroll);
   }
 
   function updateThemeButtons() {
@@ -214,7 +208,13 @@ const { title, description, image, noindex } = Astro.props;
     }
   };
 
-  document.addEventListener('DOMContentLoaded', () => init());
-  document.addEventListener('astro:after-swap', () => init());
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    if (localStorage.theme === 'system') {
+      toggleTheme(event.matches);
+    }
+  });
+  document.addEventListener('scroll', onScroll, { passive: true });
+  document.addEventListener('DOMContentLoaded', () => init(false));
+  document.addEventListener('astro:after-swap', () => init(true));
   preloadTheme();
 </script>

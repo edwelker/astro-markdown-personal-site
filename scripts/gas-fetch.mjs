@@ -10,12 +10,13 @@ export const FILES = {
 };
 
 export async function fetchGasData() {
-  const data = {};
-  for (const [region, filename] of Object.entries(FILES)) {
-    const res = await fetchOrThrow(`${REPO_BASE}/${filename}`);
-    data[region] = await res.text();
-  }
-  return data;
+  const entries = await Promise.all(
+    Object.entries(FILES).map(async ([region, filename]) => {
+      const res = await fetchOrThrow(`${REPO_BASE}/${filename}`);
+      return [region, await res.text()];
+    })
+  );
+  return Object.fromEntries(entries);
 }
 
 export function parseCSV(text) {

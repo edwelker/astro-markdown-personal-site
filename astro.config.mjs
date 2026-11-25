@@ -13,6 +13,31 @@ import path from 'node:path'; // This fixes the 'path is not defined' error
 
 const isBuild = process.argv.includes('build');
 
+let gitLastModCache = null;
+function getGitLastModMap() {
+  if (gitLastModCache) return gitLastModCache;
+  gitLastModCache = new Map();
+  try {
+    const out = execSync('git log --format="COMMIT:%cI" --name-only', {
+      encoding: 'utf-8',
+      maxBuffer: 50 * 1024 * 1024,
+    });
+    let currentDate = '';
+    for (const line of out.split('\n')) {
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+      if (trimmed.startsWith('COMMIT:')) {
+        currentDate = trimmed.slice(7);
+      } else if (currentDate && !gitLastModCache.has(trimmed)) {
+        gitLastModCache.set(trimmed, currentDate);
+      }
+    }
+  } catch (e) {
+    console.warn(`⚠️ [Sitemap] Failed to build git lastmod cache: ${e.message}`);
+  }
+  return gitLastModCache;
+}
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://eddiewelker.com',
@@ -90,13 +115,11 @@ export default defineConfig({
             filePath = searchPaths.find((p) => fs.existsSync(p)) || '';
           }
 
-          // 3. Get Git Lastmod
+          // 3. Get Git Lastmod (from single cached git log pass)
           if (filePath && fs.existsSync(filePath)) {
-            const gitDate = execSync(`git log -1 --format=%cI "${filePath}"`, {
-              encoding: 'utf-8',
-            }).trim();
+            const relPath = path.relative(process.cwd(), filePath).split(path.sep).join('/');
+            const gitDate = getGitLastModMap().get(relPath);
             if (gitDate) {
-              // console.log(`✅ [Sitemap] Found: ${url.pathname} -> ${path.basename(filePath)}`);
               item.lastmod = gitDate;
               return item;
             }

@@ -37,9 +37,9 @@ jobs:
         run: npm run knip
         continue-on-error: true
 
-      # Run Tests (now includes coverage by default)
+      # Run Tests with coverage for Codecov
       - name: Run Tests
-        run: npm run test
+        run: npm run test:cov
         env:
           TZ: 'America/New_York'
 
