@@ -90,5 +90,28 @@ describe('Gas Fetch Logic', () => {
       expect(result.ny).toHaveLength(1);
       expect(result.ny[0]).toEqual({ Station: 'Exxon', Price: '3.60' });
     });
+
+    it('should sort stations deterministically without losing any rows', () => {
+      const csvA = [
+        'City,Zip,Station,Address,Net',
+        'Laurel,20723,Weis,9250 Washington Blvd,3.69',
+        'Columbia,21045,Liberty,6425 Dobbin Center Way,3.49',
+        'Laurel,20723,Shell,9100 Washington Blvd,3.64',
+      ].join('\n');
+
+      const csvB = [
+        'City,Zip,Station,Address,Net',
+        'Columbia,21045,Liberty,6425 Dobbin Center Way,3.49',
+        'Laurel,20723,Shell,9100 Washington Blvd,3.64',
+        'Laurel,20723,Weis,9250 Washington Blvd,3.69',
+      ].join('\n');
+
+      const resultA = transformGasData({ md: csvA });
+      const resultB = transformGasData({ md: csvB });
+
+      expect(resultA.md).toHaveLength(3);
+      expect(resultA.md).toEqual(resultB.md);
+      expect(resultA.md.map((s) => s.Station)).toEqual(['Shell', 'Weis', 'Liberty']);
+    });
   });
 });

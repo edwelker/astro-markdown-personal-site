@@ -56,10 +56,26 @@ export function parseCSV(text) {
   });
 }
 
+function stationSortKey(station) {
+  return [station.Zip ?? '', station.Address ?? '', station.Station ?? '', station.City ?? ''].join(
+    '|'
+  );
+}
+
+export function sortStationsDeterministically(stations) {
+  return [...stations].sort((a, b) => {
+    const keyA = stationSortKey(a);
+    const keyB = stationSortKey(b);
+    if (keyA < keyB) return -1;
+    if (keyA > keyB) return 1;
+    return 0;
+  });
+}
+
 export function transformGasData(rawData) {
   const result = {};
   for (const [region, csv] of Object.entries(rawData)) {
-    result[region] = parseCSV(csv);
+    result[region] = sortStationsDeterministically(parseCSV(csv));
   }
   return result;
 }

@@ -15,7 +15,6 @@
     "scripts/**/*.{mjs,cjs}",
     "tests/**/*.{js,mjs,cjs,ts}",
     "migration_scripts/**/*.{mjs,cjs}",
-    "functions/**/*.js",
     "src/types/**/*.ts"
   ],
   "ignore": ["src/env.d.ts", "**/*.d.ts", "public/**", "venv/**"],

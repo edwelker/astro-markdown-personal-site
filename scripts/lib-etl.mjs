@@ -41,6 +41,29 @@ export async function writeFile(filePath, data) {
 }
 
 /**
+ * Compares two JSON-serializable values for meaningful changes while ignoring
+ * volatile top-level metadata keys (e.g., `lastUpdated`).
+ * @param {any} prev Previously cached data.
+ * @param {any} next Newly fetched data.
+ * @param {string[]} [ignoreKeys=['lastUpdated']] Top-level keys to ignore during comparison.
+ * @returns {boolean} True if meaningful data changed.
+ */
+export function hasDataChanged(prev, next, ignoreKeys = ['lastUpdated']) {
+  const strip = (value) => {
+    if (!value || typeof value !== 'object' || Array.isArray(value)) {
+      return value;
+    }
+    const copy = { ...value };
+    for (const key of ignoreKeys) {
+      delete copy[key];
+    }
+    return copy;
+  };
+
+  return JSON.stringify(strip(prev)) !== JSON.stringify(strip(next));
+}
+
+/**
  * A generic ETL runner that orchestrates fetching, transforming, and writing data.
  * It handles errors and logs progress.
  * @param {object} options
@@ -64,10 +87,28 @@ export async function runETL({ name, fetcher, transform, outFile, defaultData = 
     const rawData = await fetcher();
     data = transform(rawData);
 
-    // If fetch succeeds, update the cache file (the "latest" working version)
-    // This file should be committed to the repo by the GitHub Action
-    console.log(`💾 ${name}: Updating cache at ${cacheFile}`);
-    await writeFile(cacheFile, data);
+    let shouldUpdateCache = true;
+    if (existsSync(cacheFile)) {
+      try {
+        const cachedContent = await fs.readFile(cacheFile, 'utf-8');
+        const cachedData = JSON.parse(cachedContent);
+        if (!hasDataChanged(cachedData, data)) {
+          shouldUpdateCache = false;
+          data = cachedData;
+          console.log(
+            `⏭️ ${name}: No meaningful data changes, keeping existing cache at ${cacheFile}`
+          );
+        }
+      } catch {
+        // Existing cache is unreadable/corrupt; overwrite with fresh data
+      }
+    }
+
+    // If fetch succeeds and data meaningfully changed, update the cache file
+    if (shouldUpdateCache) {
+      console.log(`💾 ${name}: Updating cache at ${cacheFile}`);
+      await writeFile(cacheFile, data);
+    }
   } catch (error) {
     console.error(`❌ ${name}: Fetch failed (${error.message})`);
     source = 'cache';

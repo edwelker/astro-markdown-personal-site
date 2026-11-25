@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { mapConcurrent, writeFile, runETL } from '../scripts/lib-etl.mjs';
+import { mapConcurrent, writeFile, hasDataChanged, runETL } from '../scripts/lib-etl.mjs';
 import fs from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 
@@ -83,6 +83,92 @@ describe('lib-etl', () => {
         expect.stringContaining('out.json'),
         JSON.stringify({ default: 'data' }, null, 2)
       );
+    });
+
+    it('should skip updating cache when only lastUpdated changed', async () => {
+      const cached = { items: [1, 2], lastUpdated: '2026-11-21T00:00:00.000Z' };
+      const fresh = { items: [1, 2], lastUpdated: '2026-11-22T00:00:00.000Z' };
+      const fetcher = vi.fn().mockResolvedValue(fresh);
+      const transform = vi.fn().mockReturnValue(fresh);
+      vi.spyOn(console, 'log').mockImplementation(() => {});
+
+      vi.mocked(existsSync).mockReturnValue(true);
+      vi.mocked(fs.readFile).mockResolvedValue(JSON.stringify(cached));
+
+      await runETL({
+        name: 'Plex',
+        fetcher,
+        transform,
+        outFile: 'src/data/plex.json',
+      });
+
+      // Only outFile should be written, NOT cacheFile
+      expect(fs.writeFile).toHaveBeenCalledTimes(1);
+      expect(fs.writeFile).toHaveBeenCalledWith(
+        expect.stringContaining('src/data/plex.json'),
+        JSON.stringify(cached, null, 2)
+      );
+    });
+
+    it('should update cache when meaningful data changed', async () => {
+      const cached = { items: [1, 2], lastUpdated: '2026-11-21T00:00:00.000Z' };
+      const fresh = { items: [1, 2, 3], lastUpdated: '2026-11-22T00:00:00.000Z' };
+      const fetcher = vi.fn().mockResolvedValue(fresh);
+      const transform = vi.fn().mockReturnValue(fresh);
+      vi.spyOn(console, 'log').mockImplementation(() => {});
+
+      vi.mocked(existsSync).mockReturnValue(true);
+      vi.mocked(fs.readFile).mockResolvedValue(JSON.stringify(cached));
+
+      await runETL({
+        name: 'Plex',
+        fetcher,
+        transform,
+        outFile: 'src/data/plex.json',
+      });
+
+      expect(fs.writeFile).toHaveBeenCalledTimes(2);
+      expect(fs.writeFile).toHaveBeenCalledWith(
+        expect.stringContaining('src/data/cache/plex.json'),
+        JSON.stringify(fresh, null, 2)
+      );
+      expect(fs.writeFile).toHaveBeenCalledWith(
+        expect.stringContaining('src/data/plex.json'),
+        JSON.stringify(fresh, null, 2)
+      );
+    });
+
+    it('should overwrite cache when existing cache is corrupt JSON', async () => {
+      const fresh = { items: [1] };
+      const fetcher = vi.fn().mockResolvedValue(fresh);
+      const transform = vi.fn().mockReturnValue(fresh);
+      vi.spyOn(console, 'log').mockImplementation(() => {});
+
+      vi.mocked(existsSync).mockReturnValue(true);
+      vi.mocked(fs.readFile).mockResolvedValue('{invalid json');
+
+      await runETL({
+        name: 'Plex',
+        fetcher,
+        transform,
+        outFile: 'src/data/plex.json',
+      });
+
+      expect(fs.writeFile).toHaveBeenCalledTimes(2);
+    });
+  });
+
+  describe('hasDataChanged', () => {
+    it('ignores top-level lastUpdated differences by default', () => {
+      expect(
+        hasDataChanged({ a: 1, lastUpdated: '2026-01-01' }, { a: 1, lastUpdated: '2026-01-02' })
+      ).toBe(false);
+    });
+
+    it('detects meaningful changes in objects and arrays', () => {
+      expect(hasDataChanged({ a: 1 }, { a: 2 })).toBe(true);
+      expect(hasDataChanged([1, 2], [1, 2])).toBe(false);
+      expect(hasDataChanged([1, 2], [2, 1])).toBe(true);
     });
   });
 });
