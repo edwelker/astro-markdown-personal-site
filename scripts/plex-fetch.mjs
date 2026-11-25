@@ -39,20 +39,13 @@
 
 import fs from 'node:fs/promises';
 import { runETL, mapConcurrent } from './lib-etl.mjs';
-import {
-  extractGuids,
-  mergeAppendOnly,
-  transformAndAggregatePlexData,
-} from './plex-logic.mjs';
+import { extractGuids, mergeAppendOnly, transformAndAggregatePlexData } from './plex-logic.mjs';
 import { validateEnv } from './lib-credentials.mjs';
 import { fetchOrThrow, runIfMain } from './lib-utils.mjs';
 
 const CONCURRENCY_LIMIT = 5;
 
-export async function fetchPlexUserUuid({
-  plexToken,
-  clientIdentifier = 'edwelker-site-fetcher',
-}) {
+export async function fetchPlexUserUuid({ plexToken, clientIdentifier = 'edwelker-site-fetcher' }) {
   const res = await fetchOrThrow('https://plex.tv/api/v2/user', {
     headers: {
       Accept: 'application/json',
@@ -204,7 +197,9 @@ export async function fetchPlexRatedItems({ plexUrl, plexToken, sectionKey }) {
   const data = await res.json();
   const metadata = data.MediaContainer?.Metadata || [];
   const list = Array.isArray(metadata) ? metadata : [metadata];
-  return list.filter((item) => item && item.userRating !== undefined && Number(item.userRating) > 0);
+  return list.filter(
+    (item) => item && item.userRating !== undefined && Number(item.userRating) > 0
+  );
 }
 
 export async function fetchPlexServerRatings({ plexUrl, plexToken }) {
@@ -216,7 +211,10 @@ export async function fetchPlexServerRatings({ plexUrl, plexToken }) {
       effectiveUrl = discovered.uri;
       effectiveToken = discovered.token;
     }
-    const sections = await fetchPlexLibrarySections({ plexUrl: effectiveUrl, plexToken: effectiveToken });
+    const sections = await fetchPlexLibrarySections({
+      plexUrl: effectiveUrl,
+      plexToken: effectiveToken,
+    });
     const sectionItems = await Promise.all(
       sections.map((section) =>
         fetchPlexRatedItems({
@@ -228,7 +226,9 @@ export async function fetchPlexServerRatings({ plexUrl, plexToken }) {
     );
     return sectionItems.flat();
   } catch (err) {
-    console.warn(`⚠️ Could not fetch from local Plex Media Server (${err.message}). Proceeding with cloud ratings.`);
+    console.warn(
+      `⚠️ Could not fetch from local Plex Media Server (${err.message}). Proceeding with cloud ratings.`
+    );
     return [];
   }
 }
@@ -293,7 +293,9 @@ export async function fetchAndEnrichPlexData({
   existingArchive.forEach((i) => {
     if (i.imdbId) cacheMap.set(i.imdbId.toLowerCase(), i);
     if (i.title && i.year) {
-      const norm = String(i.title).toLowerCase().replace(/[^a-z0-9]/g, '');
+      const norm = String(i.title)
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, '');
       cacheMap.set(`${norm}|${i.year}`, i);
     }
   });
@@ -302,11 +304,19 @@ export async function fetchAndEnrichPlexData({
   const { uuid: userUuid, username } = await fetchPlexUserUuid({ plexToken });
   console.log(`... Fetching cloud ratings for user ${username} (${userUuid})...`);
   const cloudNodes = await fetchPlexCloudRatings({ plexToken, userUuid });
-  console.log(`... Found ${cloudNodes.length} cloud rating(s)...`);
+  const eligibleCloudNodes = cloudNodes.filter((node) => {
+    const rawType = (node?.metadataItem?.type || '').toLowerCase();
+    return !rawType || rawType === 'movie' || rawType === 'show';
+  });
+  console.log(
+    `... Found ${cloudNodes.length} cloud rating(s) (${eligibleCloudNodes.length} movie/show)...`
+  );
 
-  const enrichedCloud = await mapConcurrent(cloudNodes, CONCURRENCY_LIMIT, async (node) => {
+  const enrichedCloud = await mapConcurrent(eligibleCloudNodes, CONCURRENCY_LIMIT, async (node) => {
     const m = node.metadataItem;
-    const norm = String(m?.title || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    const norm = String(m?.title || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, '');
     const titleKey = `${norm}|${m?.year}`;
     const cached = cacheMap.get(titleKey);
 
@@ -389,7 +399,9 @@ export async function fetchAndEnrichPlexData({
   const mergedWithCloud = mergeAppendOnly(existingArchive, enrichedCloud);
   const finalArchive = mergeAppendOnly(mergedWithCloud, pmsFormatted);
 
-  console.log(`... Append-only archive now holds ${finalArchive.length} lifetime ratings. Persisting archive...`);
+  console.log(
+    `... Append-only archive now holds ${finalArchive.length} lifetime ratings. Persisting archive...`
+  );
   await fs.writeFile(archivePath, JSON.stringify(finalArchive, null, 2), 'utf-8');
 
   return finalArchive;
