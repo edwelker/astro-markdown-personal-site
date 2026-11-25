@@ -22,6 +22,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Hydrate src/data/*.json from committed cache so astro check can resolve data imports
+      - name: Hydrate Data from Cache
+        run: cp src/data/cache/*.json src/data/
+
       # Typecheck Astro & TypeScript
       - name: Run Astro Check
         run: npm run check
