@@ -21,6 +21,9 @@ For nearly two decades, I worked at the [National Center for Biotechnology Infor
 I am a natural leader skilled at guiding teams through big organizational changes. I have managed 30-person engineering groups, standardized hiring processes to efficiently vet thousands of candidates, and taught Git and CI/CD curriculums to hundreds of established developers.
 
 Pre-pandemic, I had been strongly involved in the local Python community. I led the [DCPython Meetup group](https://www.meetup.com/DCPython/) for four years, taught free local classes ([DjangoGirls](https://djangogirls.org/), etc.), and have reviewed technical books for [Manning Publications](https://www.manning.com/). I’m good at Python, Django, Platform Engineering, Data, and making complex systems actually work.
+
+You can see more of my work and background on [GitHub](https://github.com/edwelker) and [LinkedIn](https://www.linkedin.com/in/edwardwelker/).
+
 ## Loves
 
 I love riding my bicycles, and I own too many of them. I've done 3 straight yearly tours of the [GAP](https://gaptrail.org/)/[C&O](https://www.nps.gov/choh/index.htm), the [Erie Canal](https://eriecanalway.org/), and a bunch of other shorter tours. Riding is one of the things that brings me great joy. Especially on my [All-City Space Horse](/blog/2025/12/05/all_city_space_horse/). That and my cat Sophie.

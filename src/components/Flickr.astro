@@ -75,7 +75,7 @@ const getRelativeTime = (dateStr: string) => {
 
 {
   hasPhotos ? (
-    <section class="animate my-16" data-testid="flickr-section">
+    <section class="animate" data-testid="flickr-section">
       <div class="mb-4 flex items-baseline justify-between border-b border-black/10 pb-4 dark:border-white/10">
         <h3 class="text-lg font-semibold text-black dark:text-white">Photo Archive</h3>
         <a
@@ -87,7 +87,7 @@ const getRelativeTime = (dateStr: string) => {
         </a>
       </div>
 
-      <div class="grid auto-rows-[120px] grid-cols-2 gap-2 md:auto-rows-[160px] md:grid-cols-4">
+      <div class="grid auto-rows-[120px] grid-cols-2 gap-2 md:auto-rows-[140px] md:grid-cols-4">
         {photosToShow.map((photo, i) => {
           const isTopHero = i === 0;
           const isBottomHero = i === 9;

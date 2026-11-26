@@ -1,5 +1,4 @@
 ---
-import { Schema } from 'astro-seo-schema';
 import type { Highlight } from '@data/highlights';
 
 interface Props {
@@ -36,4 +35,4 @@ const listSchema = {
 };
 ---
 
-<Schema item={listSchema as any} />
+<script is:inline type="application/ld+json" set:html={JSON.stringify(listSchema)} />

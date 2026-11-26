@@ -190,6 +190,8 @@ function getDayName(dateStr: string) {
                     <img
                       src={alb.image}
                       alt={truncateString(alb.name, 150)}
+                      loading="lazy"
+                      decoding="async"
                       class="h-8 w-8 rounded border border-black/10 object-cover dark:border-white/10"
                     />
                   ) : (
@@ -259,6 +261,8 @@ function getDayName(dateStr: string) {
                     <img
                       src={alb.image}
                       alt={truncateString(alb.name, 150)}
+                      loading="lazy"
+                      decoding="async"
                       class="h-8 w-8 rounded border border-black/10 object-cover dark:border-white/10"
                     />
                   ) : (
