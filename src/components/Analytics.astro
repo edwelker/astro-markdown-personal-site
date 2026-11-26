@@ -3,14 +3,11 @@
 const GA_MEASUREMENT_ID = 'G-19CWWGK0FL';
 ---
 
-{/* GA4 SCRIPT SETUP FOR PARTYTOWN */}
-<script
-  is:inline
-  async
-  type="text/partytown"
-  src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+{/* GA4 (native async so user_engagement & ClientRouter navigations record accurately) */}
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+></script>
 
-<script is:inline type="text/partytown" define:vars={{ GA_MEASUREMENT_ID }}>
+<script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);

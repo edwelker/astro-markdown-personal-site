@@ -11,6 +11,8 @@
   table)
 * consider having `npm run build` hydrate from `src/data/cache/` instead of re-running `npm run fetch` on Cloudflare Pages (rebuild.yml already fetches every 6h; saves ~15-18s per prod deploy)
 * consider reordering homepage so on-site content (Blog, Recipes, Highlights) appears above the fold ahead of outbound activity feeds (Flickr, Cycling, Music, Media)
+* writing focus (from GSC): concrete, specific posts (bike gear/builds, local spots, real engineering migrations, and refined recipes once out of draft) naturally reach page 1
+* periodic analytics check: Clarity (Heatmaps → `/` → Scroll & Click tabs) + GA4 (Reports → Acquisition → Traffic acquisition, and Engagement → Pages and screens)
 
 
 Code: Write in MDX -> schema-dts validates data -> astro-og-canvas makes images.

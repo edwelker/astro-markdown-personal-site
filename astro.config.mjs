@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import pagefind from 'astro-pagefind';
 import tailwindcss from '@tailwindcss/vite';
-import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 import cloudflare from '@astrojs/cloudflare';
@@ -141,10 +140,6 @@ export default defineConfig({
     }),
     mdx(),
     pagefind(),
-    partytown({
-      // This is necessary to tell Partytown to handle GA events
-      forward: ['dataLayer.push'],
-    }),
     robotsTxt({
       sitemapBaseFileName: 'sitemap-index', // Matches default astro-sitemap name
       policy: [
