@@ -1,10 +1,8 @@
 # --- GLOBAL DEFAULTS (The Safety Net) ---
 # Apply this to EVERYTHING first.
-# 1. Force Google to Index everything (overrides any accidental noindex)
-# 2. Force Cloudflare to re-check for fresh content (prevents "Zombie" pages)
-# 3. Standard security headers
+# 1. Force Cloudflare to re-check for fresh content (prevents "Zombie" pages)
+# 2. Standard security headers
 /*
-  X-Robots-Tag: index, follow
   Cache-Control: public, max-age=0, must-revalidate
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN

@@ -17,20 +17,19 @@ type Props = {
   noindex?: boolean;
 };
 
-import { SITE } from '@consts';
+import { SITE, HOME } from '@consts';
 
 const { title, description, image, noindex } = Astro.props;
+const fullTitle =
+  title === HOME.TITLE
+    ? 'Eddie Welker — Software, Bikes, Music & Recipes'
+    : `${SITE.TITLE}: ${title}`;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <Head
-      title={`${SITE.TITLE}: ${title}`}
-      description={description}
-      image={image}
-      noindex={noindex}
-    />
+    <Head title={fullTitle} description={description} image={image} noindex={noindex} />
     <Analytics />
 
     <!-- Clarity tracking code for https://eddiewelker.com/ -->
@@ -75,6 +74,7 @@ const { title, description, image, noindex } = Astro.props;
         sameAs: [
           'https://github.com/edwelker',
           'https://www.linkedin.com/in/edwardwelker/',
+          'https://bsky.app/profile/edwelker.bsky.social',
           'https://instagram.com/edwelker',
           'https://www.strava.com/athletes/43444098',
           'https://www.last.fm/user/edwelker',

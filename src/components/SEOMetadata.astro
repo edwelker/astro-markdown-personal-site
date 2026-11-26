@@ -51,7 +51,19 @@ const resolvedImage = image || defaultImage;
     description: description,
   }}
   extend={{
-    link: [{ rel: 'icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { rel: 'manifest', href: '/site.webmanifest' },
+      { rel: 'alternate', type: 'application/rss+xml', title: SITE.TITLE, href: '/rss.xml' },
+      {
+        rel: 'alternate',
+        type: 'application/rss+xml',
+        title: `${SITE.TITLE} — Highlights`,
+        href: '/highlights.xml',
+      },
+    ],
     meta: [{ name: 'theme-color', content: '#1a202c' }],
   }}
 />
