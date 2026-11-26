@@ -17,6 +17,13 @@
 * medium-term writing: 2-3 "show, don't tell" technical posts (e.g., scaling/migrating a legacy stack at 5M req/day, building an IDP across 47 data sources, engineering hiring / Git & CI training)
 * consider using one rotating `Highlights` card for recent work/writing
 * monthly 5-min GA4 + GSC MCP check-in to spot rising queries and validate homepage changes
+* Astro 5 -> 7 upgrade (medium-term, fresh branch from `astro`—Astro is at 7.4.x now): migrate Zod v3 -> v4 (`astro/zod`), AND note `@astrojs/cloudflare` moves from legacy Cloudflare Pages adapter to Cloudflare Workers with Static Assets (Node >= 22.12); also clears remaining Astro/Cloudflare Dependabot advisories
+* plugin candidates (Astro 5/6 compatible):
+  - `src/pages/llms.txt.ts` (zero-dep native endpoint for AI assistants, excluding drafts/dash)
+  - `rehype-autolink-headings` + `rehype-external-links` (clickable heading anchors + safe external markdown links)
+  - `astro-expressive-code` (upgraded code blocks w/ titles, highlights, copy button for upcoming engineering posts)
+  - `astro-og-canvas` (per-post/recipe dynamic OG cards; needs `canvaskit-wasm` + `cacheDir: './node_modules/.astro/astro-og-canvas'`)
+  - `astro-mermaid` (defer until writing a post with architecture diagrams)
 
 
 Code: Write in MDX -> schema-dts validates data -> astro-og-canvas makes images.
