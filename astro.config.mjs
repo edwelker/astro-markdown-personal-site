@@ -12,6 +12,7 @@ import fs from 'node:fs';
 import path from 'node:path'; // This fixes the 'path is not defined' error
 
 const isBuild = process.argv.includes('build');
+const isProdDeploy = process.env.CF_PAGES === '1' && process.env.CF_PAGES_BRANCH === 'astro';
 
 let gitLastModCache = null;
 function getGitLastModMap() {
@@ -72,9 +73,13 @@ export default defineConfig({
         },
       },
     },
-    indexNow({
-      key: 'a65da6c13546cfc1ba9ce202a16754166c09d7e3f7ce142d60d41ed7d514326b',
-    }),
+    ...(isProdDeploy
+      ? [
+          indexNow({
+            key: 'a65da6c13546cfc1ba9ce202a16754166c09d7e3f7ce142d60d41ed7d514326b',
+          }),
+        ]
+      : []),
     sitemap({
       filter: (page) => !page.includes('/dash') && !page.includes('/drafts'),
       serialize(item) {

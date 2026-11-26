@@ -22,18 +22,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Site
-        run: npm run build
+      - name: Build Site from Cache
+        run: cp src/data/cache/*.json src/data/ && npm run mvdata && npx astro build
         env:
-          FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
-          INTERVALS_API_KEY: ${{ secrets.INTERVALS_API_KEY }}
-          INTERVALS_ATHLETE_ID: ${{ secrets.INTERVALS_ATHLETE_ID }}
-          LASTFM_USERNAME: ${{ secrets.LASTFM_USERNAME }}
-          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
-          PLEX_SERVER_URL: ${{ secrets.PLEX_SERVER_URL }}
-          PLEX_TOKEN: ${{ secrets.PLEX_TOKEN }}
-          PLEX_USERNAME: ${{ secrets.PLEX_USERNAME }}
-          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          ASTRO_TELEMETRY_DISABLED: '1'
 
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1.10.0
