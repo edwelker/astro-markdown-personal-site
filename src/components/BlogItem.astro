@@ -42,8 +42,15 @@ async function getPostImage(post: any) {
 
   // Resolve relative path (e.g. "./astro.png") relative to post file
   const cleanPath = imagePath.replace(/^\.\//, '');
-  const postDir = id.substring(0, id.lastIndexOf('/'));
-  const fullPath = `/src/content/blog/${postDir ? postDir + '/' : ''}${cleanPath}`;
+  let fullPath: string;
+  if (post.filePath) {
+    const normalized = String(post.filePath).replace(/^\/?/, '/');
+    const dir = normalized.substring(0, normalized.lastIndexOf('/'));
+    fullPath = `${dir}/${cleanPath}`;
+  } else {
+    const postDir = id.substring(0, id.lastIndexOf('/'));
+    fullPath = `/src/content/blog/${postDir ? postDir + '/' : ''}${cleanPath}`;
+  }
 
   // 5. Load image via glob
   const imageLoader = images[fullPath];

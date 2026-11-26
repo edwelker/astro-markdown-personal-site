@@ -3,7 +3,6 @@ import mdx from '@astrojs/mdx';
 import pagefind from 'astro-pagefind';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
-import robotsTxt from 'astro-robots-txt';
 import cloudflare from '@astrojs/cloudflare';
 import indexNow from 'astro-indexnow';
 import { execSync } from 'node:child_process';
@@ -11,7 +10,9 @@ import fs from 'node:fs';
 import path from 'node:path'; // This fixes the 'path is not defined' error
 
 const isBuild = process.argv.includes('build');
-const isProdDeploy = process.env.CF_PAGES === '1' && process.env.CF_PAGES_BRANCH === 'astro';
+const isProdDeploy =
+  (process.env.WORKERS_CI === '1' && process.env.WORKERS_CI_BRANCH === 'astro') ||
+  (process.env.CF_PAGES === '1' && process.env.CF_PAGES_BRANCH === 'astro');
 
 let gitLastModCache = null;
 function getGitLastModMap() {
@@ -140,17 +141,6 @@ export default defineConfig({
     }),
     mdx(),
     pagefind(),
-    robotsTxt({
-      sitemapBaseFileName: 'sitemap-index', // Matches default astro-sitemap name
-      policy: [
-        {
-          userAgent: '*',
-          allow: '/',
-          // Optional: Block things you don't want indexed
-          disallow: ['/dash/', '/dashboard/', '/drafts/', '/~partytown/', '/data/'],
-        },
-      ],
-    }),
   ],
   vite: {
     plugins: [tailwindcss()],

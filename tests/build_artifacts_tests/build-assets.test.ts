@@ -2,7 +2,8 @@ import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const DIST_DIR = path.join(process.cwd(), 'dist');
+const CLIENT_DIST = path.join(process.cwd(), 'dist', 'client');
+const DIST_DIR = fs.existsSync(CLIENT_DIST) ? CLIENT_DIST : path.join(process.cwd(), 'dist');
 
 function getHtmlFiles(dir: string): string[] {
   let results: string[] = [];

@@ -38,12 +38,14 @@ function isAllowedOrigin(originHeader, refererHeader, isProduction) {
     return true;
   }
 
-  // Allow Cloudflare Pages preview domains (https://<subdomain>.pages.dev)
+  // Allow Cloudflare Pages & Workers preview domains
   if (
     candidateOrigin.protocol === 'https:' &&
     candidateOrigin.port === '' &&
-    candidateOrigin.hostname.endsWith('.pages.dev') &&
-    candidateOrigin.hostname.length > '.pages.dev'.length
+    ((candidateOrigin.hostname.endsWith('.pages.dev') &&
+      candidateOrigin.hostname.length > '.pages.dev'.length) ||
+      (candidateOrigin.hostname.endsWith('.workers.dev') &&
+        candidateOrigin.hostname.length > '.workers.dev'.length))
   ) {
     return true;
   }
@@ -143,8 +145,18 @@ function validateAndSanitizePayload(body) {
   return { payload: sanitized };
 }
 
+async function getCloudflareEnv() {
+  try {
+    const mod = await import('cloudflare:workers');
+    return mod?.env || null;
+  } catch {
+    return null;
+  }
+}
+
 export async function POST({ request, locals }) {
-  const isProduction = Boolean(locals?.runtime);
+  const cfEnv = await getCloudflareEnv();
+  const isProduction = Boolean(locals?.runtime || cfEnv?.ORS_API_KEY);
   const origin = request.headers?.get('origin');
   const referer = request.headers?.get('referer');
 
@@ -152,10 +164,12 @@ export async function POST({ request, locals }) {
     return jsonResponse({ message: 'Forbidden' }, 403);
   }
 
-  // In Astro's Cloudflare adapter:
-  // 1. locals.runtime.env contains runtime secrets/vars on Cloudflare
-  // 2. import.meta.env contains variables from .env during local development
-  const apiKey = locals?.runtime?.env?.ORS_API_KEY || import.meta.env.ORS_API_KEY;
+  // In Astro 6/7 Cloudflare Workers adapter:
+  // 1. `cloudflare:workers` `env` contains runtime secrets/vars on Cloudflare
+  // 2. `locals.runtime.env` kept as fallback for tests/legacy mocks
+  // 3. `import.meta.env` contains variables from .env during local development
+  const apiKey =
+    cfEnv?.ORS_API_KEY || locals?.runtime?.env?.ORS_API_KEY || import.meta.env.ORS_API_KEY;
 
   if (!apiKey) {
     console.error('ORS_API_KEY is missing from environment');

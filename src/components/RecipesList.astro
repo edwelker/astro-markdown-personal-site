@@ -23,7 +23,7 @@ const { recipes } = Astro.props;
     {
       recipes.map((recipe: any) => (
         <a
-          href={`/recipes/${recipe.slug}/`}
+          href={`/recipes/${recipe.id}/`}
           class="group relative aspect-square overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-800"
         >
           {recipe.data.coverPhoto ? (

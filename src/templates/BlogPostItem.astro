@@ -26,12 +26,12 @@ export async function getStaticPaths() {
     let prevPost: Post | undefined;
 
     if (!post.data.draft) {
-      const pubIndex = publishedPosts.findIndex((p) => p.slug === post.slug);
+      const pubIndex = publishedPosts.findIndex((p) => p.id === post.id);
       nextPost = publishedPosts[pubIndex - 1] || undefined;
       prevPost = publishedPosts[pubIndex + 1] || undefined;
     }
 
-    return { params: { slug: post.slug }, props: { post, prevPost, nextPost } as Props };
+    return { params: { slug: post.id }, props: { post, prevPost, nextPost } as Props };
   });
 }
 

@@ -2,7 +2,8 @@ import { describe, it, expect } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 
-const distPath = path.join(process.cwd(), 'dist');
+const clientDist = path.join(process.cwd(), 'dist', 'client');
+const distPath = fs.existsSync(clientDist) ? clientDist : path.join(process.cwd(), 'dist');
 const distExists = fs.existsSync(distPath);
 
 // Only run these tests if the build output exists

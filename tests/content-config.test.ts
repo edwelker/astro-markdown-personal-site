@@ -7,6 +7,10 @@ vi.mock('astro:content', () => ({
   z: z,
 }));
 
+vi.mock('astro/loaders', () => ({
+  glob: (opts: any) => ({ name: 'glob-loader', ...opts }),
+}));
+
 import { collections } from '../src/content.config';
 
 describe('Content Configuration', () => {
@@ -17,13 +21,13 @@ describe('Content Configuration', () => {
 
   it('defines blog collection', () => {
     expect(collections.blog).toBeDefined();
-    expect(collections.blog.type).toBe('content');
+    expect(collections.blog.loader).toBeDefined();
     expect(collections.blog.schema).toBeDefined();
   });
 
   it('defines recipes collection', () => {
     expect(collections.recipes).toBeDefined();
-    expect(collections.recipes.type).toBe('content');
+    expect(collections.recipes.loader).toBeDefined();
     expect(collections.recipes.schema).toBeDefined();
   });
 });

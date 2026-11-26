@@ -2,7 +2,8 @@ import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const distDir = path.join(process.cwd(), 'dist');
+const clientDist = path.join(process.cwd(), 'dist', 'client');
+const distDir = fs.existsSync(clientDist) ? clientDist : path.join(process.cwd(), 'dist');
 const distExists = fs.existsSync(distDir);
 
 describe.skipIf(!distExists)('Sitemap & Page Integrity', () => {

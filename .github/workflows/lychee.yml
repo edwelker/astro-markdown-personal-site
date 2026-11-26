@@ -32,7 +32,7 @@ jobs:
         with:
           # Check the built files in dist
           # The action automatically picks up lychee.toml for config
-          args: ./dist/**/*.html
+          args: ./dist/client/**/*.html
           fail: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

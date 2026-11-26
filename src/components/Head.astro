@@ -16,10 +16,7 @@ const { title, description, image, noindex } = Astro.props;
 {/* 1. New SEO Component (Handles Title, Meta, OG, Twitter, Canonical) */}
 <SEOMetadata title={title} description={description} image={image} noindex={noindex} />
 
-{/* 2. Search & Router */}
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-<script is:inline src="/pagefind/pagefind-ui.js" defer></script>
-
+{/* 2. Router (Pagefind 2.x component UI loads its own assets via PageFind.astro) */}
 <ClientRouter />
 
 {/* 3. Theme & UI Logic (Untouched) */}

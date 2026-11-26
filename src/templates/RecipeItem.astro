@@ -24,13 +24,13 @@ export async function getStaticPaths() {
     let prevPost: Recipe | undefined;
 
     if (!recipe.data.draft) {
-      const pubIndex = publishedRecipes.findIndex((r) => r.slug === recipe.slug);
+      const pubIndex = publishedRecipes.findIndex((r) => r.id === recipe.id);
       nextPost = publishedRecipes[pubIndex - 1] || undefined;
       prevPost = publishedRecipes[pubIndex + 1] || undefined;
     }
 
     return {
-      params: { slug: recipe.slug },
+      params: { slug: recipe.id },
       props: { recipe, prevPost, nextPost } as Props,
     };
   });
@@ -41,8 +41,8 @@ const { Content } = await render(recipe);
 const data = recipe.data;
 const isDraft = data.draft === true;
 
-const prevHref = prevPost ? `/recipes/${prevPost.slug}/` : undefined;
-const nextHref = nextPost ? `/recipes/${nextPost.slug}/` : undefined;
+const prevHref = prevPost ? `/recipes/${prevPost.id}/` : undefined;
+const nextHref = nextPost ? `/recipes/${nextPost.id}/` : undefined;
 
 const ldJson = {
   '@context': 'https://schema.org/',

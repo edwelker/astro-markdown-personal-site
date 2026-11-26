@@ -13,7 +13,10 @@ export async function GET(context: any) {
       title: item.data.title,
       pubDate: item.data.date,
       description: item.data.description || '',
-      link: item.type === 'blog' ? `/blog/${item.slug}/` : `/${item.type}/${item.slug}/`,
+      link:
+        item.type === 'blog'
+          ? `/blog/${item.data.slug || item.id || (item as any).slug}/`
+          : `/${item.type}/${item.id || (item as any).slug}/`,
     })),
     customData: `<language>en-us</language>`,
   });

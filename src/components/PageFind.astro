@@ -1,5 +1,5 @@
 ---
-import Search from 'astro-pagefind/components/Search';
+import Search from 'astro-pagefind/components/Search.astro';
 ---
 
 <aside data-pagefind-ignore>
@@ -12,15 +12,9 @@ import Search from 'astro-pagefind/components/Search';
       id="pagefind-container"
       class="m-0 flex h-fit max-h-[80%] w-full max-w-(--breakpoint-sm) flex-col overflow-auto rounded-sm border border-black/15 bg-neutral-100 p-2 px-4 py-3 shadow-lg dark:border-white/20 dark:bg-neutral-900"
     >
-      <Search
-        id="search"
-        className="pagefind-ui"
-        uiOptions={{
-          showImages: false,
-          excerptLength: 15,
-          resetStyles: false,
-        }}
-      />
+      <div id="search">
+        <Search className="pagefind-ui" />
+      </div>
       <div class="dark:prose-invert mr-2 pt-4 pb-1 text-right text-xs">
         Press <span class="prose dark:prose-invert text-xs"><kbd class="">Esc</kbd></span> or click anywhere
         to close

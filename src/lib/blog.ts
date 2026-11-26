@@ -1,8 +1,10 @@
-export function getPostHref(post: string | { slug?: string; data?: { slug?: string } }) {
+export function getPostHref(
+  post: string | { id?: string; slug?: string; data?: { slug?: string } }
+) {
   if (typeof post === 'string') {
     return `/blog/${post}/`;
   }
-  const slug = post.slug || post.data?.slug;
+  const slug = post.slug || post.data?.slug || post.id;
   if (!slug) {
     throw new Error(`Post has no slug: ${JSON.stringify(post)}`);
   }

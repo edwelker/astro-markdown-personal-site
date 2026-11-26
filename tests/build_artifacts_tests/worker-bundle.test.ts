@@ -4,20 +4,18 @@ import path from 'node:path';
 
 describe('Cloudflare Worker Bundle', () => {
   it('should not contain "node:path" or "node:path/posix" imports', () => {
-    // The Cloudflare adapter outputs the worker script to dist/_worker.js
-    let workerPath = path.join(process.cwd(), 'dist', '_worker.js');
+    // Cloudflare Workers adapter (Astro 6/7) outputs to dist/server/entry.mjs; legacy Pages used dist/_worker.js
+    const candidates = [
+      path.join(process.cwd(), 'dist', 'server', 'entry.mjs'),
+      path.join(process.cwd(), 'dist', '_worker.js', 'index.js'),
+      path.join(process.cwd(), 'dist', '_worker.js'),
+    ];
+    const workerPath = candidates.find((p) => fs.existsSync(p) && fs.statSync(p).isFile());
 
-    if (!fs.existsSync(workerPath)) {
-      // If the build hasn't run, we can't test the artifact.
-      // In a CI environment, 'npm run build' (which includes this test) runs the build first.
+    if (!workerPath) {
       throw new Error(
-        `_worker.js not found at ${workerPath}. Ensure 'astro build' has run before this test.`
+        `Cloudflare worker bundle not found in dist/server/entry.mjs or dist/_worker.js. Ensure 'astro build' has run before this test.`
       );
-    }
-
-    // If _worker.js is a directory, look for index.js inside it
-    if (fs.statSync(workerPath).isDirectory()) {
-      workerPath = path.join(workerPath, 'index.js');
     }
 
     const content = fs.readFileSync(workerPath, 'utf-8');
