@@ -152,7 +152,7 @@ export default defineConfig({
           userAgent: '*',
           allow: '/',
           // Optional: Block things you don't want indexed
-          disallow: ['/dash/', '/dashboard/', '/drafts/'],
+          disallow: ['/dash/', '/dashboard/', '/drafts/', '/~partytown/', '/data/'],
         },
       ],
     }),
