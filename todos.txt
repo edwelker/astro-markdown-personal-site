@@ -9,6 +9,8 @@
 * discord integration?
 * allow anything to be pin-nable as a highlight (may want comments, so it'd need to be a separate
   table)
+* consider having `npm run build` hydrate from `src/data/cache/` instead of re-running `npm run fetch` on Cloudflare Pages (rebuild.yml already fetches every 6h; saves ~15-18s per prod deploy)
+* consider reordering homepage so on-site content (Blog, Recipes, Highlights) appears above the fold ahead of outbound activity feeds (Flickr, Cycling, Music, Media)
 
 
 Code: Write in MDX -> schema-dts validates data -> astro-og-canvas makes images.
