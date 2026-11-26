@@ -22,8 +22,45 @@ describe.skipIf(!distExists)('Build Artifact Integrity', () => {
       expect(fs.existsSync(path.join(distPath, 'sitemap-index.xml'))).toBe(true);
     });
 
-    it('should have generated robots.txt', () => {
-      expect(fs.existsSync(path.join(distPath, 'robots.txt'))).toBe(true);
+    it('should have generated robots.txt with expected rules', () => {
+      const robotsPath = path.join(distPath, 'robots.txt');
+      expect(fs.existsSync(robotsPath)).toBe(true);
+      const content = fs.readFileSync(robotsPath, 'utf-8');
+      expect(content).toContain('Sitemap: https://eddiewelker.com/sitemap-index.xml');
+      expect(content).toContain('Disallow: /drafts/');
+      expect(content).toContain('Disallow: /dash/');
+    });
+
+    it('should not emit global X-Robots-Tag index header in _headers', () => {
+      const headersPath = path.join(distPath, '_headers');
+      expect(fs.existsSync(headersPath)).toBe(true);
+      const content = fs.readFileSync(headersPath, 'utf-8');
+      expect(content).not.toMatch(/X-Robots-Tag:\s*index/i);
+    });
+
+    it('should have valid web manifest without placeholder names', () => {
+      const manifestPath = path.join(distPath, 'site.webmanifest');
+      expect(fs.existsSync(manifestPath)).toBe(true);
+      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+      expect(manifest.name).toBe('Eddie Welker');
+      expect(manifest.short_name).not.toBe('MySite');
+    });
+
+    it('should have valid JSON-LD and discovery links on homepage', () => {
+      const html = fs.readFileSync(path.join(distPath, 'index.html'), 'utf-8');
+      expect(html).toContain('rel="manifest" href="/site.webmanifest"');
+      expect(html).toContain('type="application/rss+xml"');
+      expect(html).toContain('href="/rss.xml"');
+
+      const ldBlocks = [
+        ...html.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi),
+      ];
+      expect(ldBlocks.length).toBeGreaterThanOrEqual(2);
+      for (const match of ldBlocks) {
+        expect(() => JSON.parse(match[1])).not.toThrow();
+        expect(match[1]).not.toContain('&apos;');
+        expect(match[1]).not.toContain('&quot;');
+      }
     });
   });
 
