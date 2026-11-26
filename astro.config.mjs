@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, sessionDrivers } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import pagefind from 'astro-pagefind';
 import tailwindcss from '@tailwindcss/vite';
@@ -43,6 +43,9 @@ function getGitLastModMap() {
 export default defineConfig({
   site: 'https://eddiewelker.com',
   output: 'static',
+  session: {
+    driver: sessionDrivers.memory(),
+  },
   adapter: cloudflare({
     imageService: 'compile',
   }),
