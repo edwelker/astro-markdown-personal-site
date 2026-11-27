@@ -1,66 +1,68 @@
-# --- SECTION 1: Specific Renames & Typo Fixes (Must be first) ---
-# These fix specific 404s found in your Google Search Console data where
-# the old URL text does not match the new URL text.
+# --- SECTION 1: Exact Static Redirects (Must precede any * splat rules) ---
 
-# Fix "Dirty" URLs (dots and typos from GSC)
-/2007/09/01/*all-this-traffic* /blog/2007/09/01/all-this-traffic/ 301
-/2008/03/04/throwing-ie8-in-acid* /blog/2008/03/04/throwing-ie8-in-acid/ 301
-/2008/01/13/website-usability-annoyance-no* /blog/2008/01/13/website-usability-annoyance-no-1/ 301
+# Dirty URLs (dots, typos, smart quotes from Wayback & GSC)
+/2007/08/20/being-different. /blog/2007/08/20/being-different/ 301
+/2007/09/01/...all-this-traffic. /blog/2007/09/01/all-this-traffic/ 301
+/2008/01/13/website-usability-annoyance-no.-1 /blog/2008/01/13/website-usability-annoyance-no-1/ 301
+/2008/03/04/throwing-ie8-in-acid. /blog/2008/03/04/throwing-ie8-in-acid/ 301
+/2008/08/04/review-of-%E2%80%9Cweb-form-design-filling-in-the-blanks%E2%80%9D /blog/2008/08/04/review-of-web-form-design-filling-in-the-blanks/ 301
+/2009/01/09/sibelius-symphony-no.-1 /blog/2009/01/09/sibelius-symphony-no-1/ 301
+/2014/03/16/st.-patricks-day-corned-beef-and-cabbage-irish-soda-bread /blog/2014/03/16/st-patricks-day-corned-beef-and-cabbage-irish-soda-bread/ 301
 
-# Fix Slug Mismatches (Old Title -> New Title)
-/2008/04/13/python-number-1* /blog/2008/04/13/python/ 301
-/2008/09/03/django-1.0* /blog/2008/09/03/django-10/ 301
-/2008/12/27/my-xslt-toolbox-copy-and-copy-of* /blog/2008/12/27/xslt-copy-copy-of/ 301
-/2008/10/25/review-of-object-oriented-javascript* /blog/2008/10/25/object-oriented-javascript-review/ 301
-/2009/01/08/my-xslt-toolbox-5-favorite-xslt-books* /blog/2009/01/08/top-5-xslt-books/ 301
-/2009/09/24/review-of-learning-jquery-1.3* /blog/2009/09/24/review-of-learning-jquery-1-3/ 301
-/2007/08/30/18* /blog/2007/08/30/my-new-look-on-old-characters/ 301
-/2007/08/17/4* /blog/2007/08/17/blog-software/ 301
+# Slug & Date Mismatches (Old WordPress / Hugo slugs -> Current Astro slugs)
+/2007/08/17/4 /blog/2007/08/17/blog-software/ 301
+/2007/08/21/ie-6-background-flicker-problem-revisited /blog/2007/08/21/ie-6-background-flicker-problem/ 301
+/2007/08/30/18 /blog/2007/08/30/my-new-look-on-old-characters/ 301
+/2007/09/06/css-shorthand-cheat-sheet/css-shorthand-cheat-sheet /blog/2007/09/06/css-shorthand-cheat-sheet/ 301
+/2007/09/12/welcome-to-fall /blog/2007/09/12/cool-september-air/ 301
+/2007/12/19/microsoft-claims-ie8-passes-acid2 /blog/2007/12/19/wow/ 301
+/2008/04/04/86 /blog/2008/04/04/wrong/ 301
+/2008/04/13/python-number-1 /blog/2008/04/13/python/ 301
+/2008/09/03/django-1.0 /blog/2008/09/03/django-10/ 301
+/2008/10/25/review-of-object-oriented-javascript /blog/2008/10/25/object-oriented-javascript-review/ 301
+/2008/11/25/advantages-of-push-style-xslt-over-pull-style /blog/2008/11/25/push-style-xslt-vs-pull-style/ 301
+/2008/12/27/my-xslt-toolbox-copy-and-copy-of /blog/2008/12/27/xslt-copy-copy-of/ 301
+/2008/12/28/my-xslt-toolbox-recursive-xslt-templates /blog/2008/12/28/recursive-xslt-templates/ 301
+/2009/01/08/my-xslt-toolbox-5-favorite-xslt-books /blog/2009/01/08/top-5-xslt-books/ 301
+/2009/09/24/review-of-learning-jquery-1.3 /blog/2009/09/24/review-of-learning-jquery-1-3/ 301
+/2010/03/31/installing-pil-inside-virtualenv-for-ubuntu-9.10 /blog/2010/03/31/installing-pil-virtualenv-ubuntu/ 301
+/blog/2008/09/19/funny-thing-about-bugs /blog/2008/09/18/funny-thing-about-bugs/ 301
 
-# Fix Smart Quotes
-/2008/08/04/review-of-*web-form-design-filling-in-the-blanks* /blog/2008/08/04/review-of-web-form-design-filling-in-the-blanks 301
+# Recipes (Moved from dated blog paths to /recipes/)
+/2011/07/12/relatively-quick-pizza-from-scratch /recipes/relatively-quick-pizza-from-scratch/ 301
+/blog/2011/07/12/relatively-quick-pizza-from-scratch /recipes/relatively-quick-pizza-from-scratch/ 301
+/2011/08/03/onion-dill-rice /recipes/onion-dill-rice/ 301
+/2025/09/01/my-szechuan-noodles /recipes/szechuan-noodles/ 301
+/2025/09/01/szechuan_noodles /recipes/szechuan-noodles/ 301
+/blog/2025/09/01/szechuan_noodles /recipes/szechuan-noodles/ 301
 
-# --- SECTION 2: Recipes (Moved to /recipes/ directory) ---
-# Added the "My Szechuan" variation found in GSC
-/2025/09/01/my-szechuan-noodles* /recipes/szechuan-noodles/ 301
-/2025/09/01/szechuan_noodles* /recipes/szechuan-noodles/ 301
-/blog/2025/09/01/szechuan_noodles* /recipes/szechuan-noodles/ 301
-/2011/08/03/onion-dill-rice* /recipes/onion-dill-rice/ 301
-/2011/07/12/relatively-quick-pizza-from-scratch* /recipes/relatively-quick-pizza-from-scratch/ 301
-/blog/2011/07/12/relatively-quick-pizza-from-scratch* /recipes/relatively-quick-pizza-from-scratch/ 301
-/blog/2008/09/19/funny-thing-about-bugs/ /blog/2008/09/18/funny-thing-about-bugs/ 301
+# Gas shorthand URLs
+/gas/md /gas/columbia_md/ 301
+/gas/ma /gas/western_ma/ 301
+/gas/ny /gas/long_island/ 301
 
-# gas
-/gas/md /gas/columbia_md 301
-/gas/ma /gas/western_ma 301
-/gas/ny /gas/long_island 301
+# Legacy pages, feeds & assets
+/index.xml /rss.xml 301
+/index.php / 301
+/xmlrpc.php / 301
+/aboutme /about/ 301
+/about-2 /about/ 301
+/archive /blog/ 301
+/wp-content/uploads/2007/09/csscheatsheet.pdf /blog/2007/09/06/css-shorthand-cheat-sheet/ 301
 
-# --- SECTION 3: Structural Cleanup (Feeds, Categories, Pages) ---
-# Consolidates all RSS requests to the one true feed
+# --- SECTION 2: Splat / Wildcard Redirects (Must be after all exact rules) ---
+
 /feed/* /rss.xml 301
-/index.xml   /rss.xml 301
-
-# Redirects old WordPress pagination to the main blog index
 /page/* /blog/ 301
 /author/* /about/ 301
-/categories/recipes* /recipes/ 301
-/tags/recipes* /recipes/ 301
-
-# Catch-all for deleted taxonomies (Redirects to Home or Blog)
+/categories/recipes/* /recipes/ 301
+/tags/recipes/* /recipes/ 301
 /category/* / 301
 /categories/* / 301
-
+/tag/* / 301
 /tags/* / 301
 
-# Misc Assets
-/wp-content/uploads/2007/09/csscheatsheet.pdf /blog/2007/09/06/css-shorthand-cheat-sheet 301
-/xmlrpc.php    / 301
-/aboutme/      /about 301
-
-# --- SECTION 4: The Wildcards (Must be last) ---
-# These catch ANY remaining posts starting with a year.
-# They automatically fix the "Trailing Slash" issues.
-
+# Catch-all for remaining dated WordPress/Hugo post URLs
 /200* /blog/200:splat 301
 /201* /blog/201:splat 301
 /202* /blog/202:splat 301
