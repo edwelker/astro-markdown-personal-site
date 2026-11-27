@@ -21,6 +21,7 @@
     "test:update": "npx playwright test --config=playwright.config.local.mjs --update-snapshots",
     "clean": "rm -rf dist .astro src/data/*.json",
     "mvdata": "mkdir -p public/data; cp src/data/*.json public/data",
+    "ideas": "node scripts/ideas.mjs",
     "knip": "knip"
   },
   "dependencies": {
