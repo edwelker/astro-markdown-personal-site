@@ -18,3 +18,5 @@ It uses the [Astro Micro](https://github.com/trevortylerlee/astro-micro) theme, 
 ## Info for me
 
 **Frontmatter Note:** Always use double quotes for string values in frontmatter (e.g., `title: "My Title"`, `slug: "2023/01/01/my-slug"`). This is the most foolproof way to ensure special characters (like colons) don't break the YAML parsing.
+
+**Exclude My Devices from Google Analytics:** Visit `https://eddiewelker.com/?notrack=1` once on any personal browser/device to persist `localStorage.ga_opt_out = "1"` and skip loading GA4 (`?notrack=0` re-enables tracking). Non-production hostnames (`localhost`, `.workers.dev`, `.pages.dev`) are always skipped automatically.
