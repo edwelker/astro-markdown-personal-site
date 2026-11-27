@@ -3,6 +3,10 @@
   "name": "eddiewelker-com",
   "compatibility_date": "2026-11-26",
   "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    { "pattern": "eddiewelker.com", "custom_domain": true },
+    { "pattern": "www.eddiewelker.com", "custom_domain": true }
+  ],
   "assets": {
     "binding": "ASSETS",
     "directory": "./dist/client"
