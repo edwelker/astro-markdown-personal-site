@@ -57,3 +57,13 @@ jobs:
           name: coverage-report
           path: coverage/
           retention-days: 7
+
+      # Build site and run browser smoke tests (skipped automatically on Cloudflare)
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Build & Run Smoke Tests
+        run: npm run build
+        env:
+          ASTRO_TELEMETRY_DISABLED: '1'
+          TZ: 'America/New_York'

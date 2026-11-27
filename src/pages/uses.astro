@@ -4,13 +4,14 @@ import Container from '@components/Container.astro';
 
 const title = 'Uses';
 const description =
-  'A list of the hardware software and gear I use every day. From Python libraries and Vim plugins to cycling equipment and kitchen tools.';
+  'A list of the hardware, software, and gear I use every day. From Python libraries and Vim plugins to cycling equipment and kitchen tools.';
 ---
 
 <Layout title={title} description={description}>
   <Container>
     <div class="animate">
-      <h1 class="mb-6 text-2xl font-semibold">Uses</h1>
+      <h1 class="mb-2 text-2xl font-semibold">Uses</h1>
+      <p class="mb-6 text-xs text-neutral-500 dark:text-neutral-400">Last updated: November 2026</p>
       <div class="prose prose-neutral dark:prose-invert">
         <p>
           Inspired by <a href="https://uses.tech">uses.tech</a>, here is a list of the hardware,
@@ -51,7 +52,7 @@ const description =
 
         <h3>Software</h3>
 
-        <h4>Languages & Frameworks</h4>
+        <h4>Languages &amp; Frameworks</h4>
         <ul>
           <li><a href="https://astro.build/">Astro</a></li>
           <li><a href="https://www.djangoproject.com/">Django</a></li>
@@ -65,264 +66,296 @@ const description =
         </ul>
 
         <h4>Command Line</h4>
+
+        <h5>Shell &amp; Multiplexing</h5>
         <ul>
           <li>
-            <a href="https://beyondgrep.com/">ack</a>
-            <span class="uses_desc">Search tool designed for code</span>
-          </li>
-          <li>
-            <a href="https://www.harding.motd.ca/autossh/">autossh</a>
-            <span class="uses_desc">Monitor and restart SSH sessions</span>
-          </li>
-          <li>
             <a href="https://www.gnu.org/software/bash/">Bash</a>
-            <span class="uses_desc">I use this vanilla, for portability</span>
+            <span class="uses_desc">— I use this vanilla, for portability</span>
           </li>
           <li>
             <a href="https://github.com/scop/bash-completion">bash-completion</a>
-            <span class="uses_desc">Programmable completion for Bash</span>
-          </li>
-          <li>
-            <a href="https://github.com/sharkdp/bat">bat</a>
-            <span class="uses_desc">File viewer with syntax highlighting</span>
-          </li>
-          <li>
-            <a href="https://github.com/TomWright/dasel">dasel</a>
-            <span class="uses_desc">Query and update data structures</span>
-          </li>
-          <li>
-            <a href="https://github.com/pkolaczk/fclones">fclones</a>
-            <span class="uses_desc">Efficient duplicate file finder</span>
-          </li>
-          <li>
-            <a href="https://github.com/sharkdp/fd">fd</a>
-            <span class="uses_desc">User-friendly alternative to find</span>
-          </li>
-          <li>
-            <a href="https://github.com/junegunn/fzf">fzf</a>
-            <span class="uses_desc">Command-line fuzzy finder</span>
-          </li>
-          <li>
-            <a href="https://github.com/pcarrier/gauth">gauth</a>
-            <span class="uses_desc">Two-factor authentication code generator</span>
-          </li>
-          <li>
-            <a href="https://git-scm.com/">Git</a>
-            <span class="uses_desc">Distributed version control system</span>
-          </li>
-          <li>
-            <a href="https://github.com/dandavison/delta">git-delta</a>
-            <span class="uses_desc">Syntax-highlighting pager for git (Rust)</span>
-          </li>
-          <li>
-            <a href="https://www.gnu.org/software/sed/">gnu-sed</a>
-            <span class="uses_desc">Stream editor for filtering text</span>
+            <span class="uses_desc">— Programmable completion for Bash</span>
           </li>
           <li>
             <a href="https://brew.sh/">Homebrew</a>
-            <span class="uses_desc">The Missing Package Manager for macOS</span>
-          </li>
-          <li>
-            <a href="https://irssi.org/">irssi</a>
-            <span class="uses_desc">Terminal based IRC client</span>
-          </li>
-          <li>
-            <a href="https://stedolan.github.io/jq/">jq</a>
-            <span class="uses_desc">Command-line JSON processor</span>
-          </li>
-          <li>
-            <a href="http://software.schmorp.de/pkg/libev.html">libev</a>
-            <span class="uses_desc">High-performance event loop</span>
-          </li>
-          <li>
-            <a href="https://meldmerge.org/">meld</a>
-            <span class="uses_desc">Visual diff and merge tool</span>
-          </li>
-          <li>
-            <a href="https://mosh.org/">mosh</a>
-            <span class="uses_desc">Mobile shell that survives disconnects</span>
-          </li>
-          <li>
-            <a href="https://github.com/OpenSC/OpenSC">opensc</a>
-            <span class="uses_desc">Tools and libraries for smart cards</span>
-          </li>
-          <li>
-            <a href="http://psmisc.sourceforge.net/">pstree</a>
-            <span class="uses_desc">Display running processes as a tree</span>
-          </li>
-          <li>
-            <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a>
-            <span class="uses_desc">Fast text search tool (Written in Rust)</span>
-          </li>
-          <li>
-            <a href="https://github.com/libfuse/sshfs">sshfs</a>
-            <span class="uses_desc">Mount remote filesystems via SSH</span>
+            <span class="uses_desc">— The Missing Package Manager for macOS</span>
           </li>
           <li>
             <a href="https://github.com/tmux/tmux">tmux</a>
-            <span class="uses_desc">Terminal multiplexer</span>
+            <span class="uses_desc">— Terminal multiplexer</span>
+          </li>
+        </ul>
+
+        <h5>Search &amp; Files</h5>
+        <ul>
+          <li>
+            <a href="https://beyondgrep.com/">ack</a>
+            <span class="uses_desc">— Search tool designed for code</span>
+          </li>
+          <li>
+            <a href="https://github.com/sharkdp/bat">bat</a>
+            <span class="uses_desc">— File viewer with syntax highlighting</span>
+          </li>
+          <li>
+            <a href="https://github.com/pkolaczk/fclones">fclones</a>
+            <span class="uses_desc">— Efficient duplicate file finder</span>
+          </li>
+          <li>
+            <a href="https://github.com/sharkdp/fd">fd</a>
+            <span class="uses_desc">— User-friendly alternative to find</span>
+          </li>
+          <li>
+            <a href="https://github.com/junegunn/fzf">fzf</a>
+            <span class="uses_desc">— Command-line fuzzy finder</span>
+          </li>
+          <li>
+            <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a>
+            <span class="uses_desc">— Fast text search tool (Written in Rust)</span>
           </li>
           <li>
             <a href="https://github.com/dduan/tre">tre</a>
-            <span class="uses_desc">Tree command with git awareness (Rust)</span>
+            <span class="uses_desc">— Tree command with git awareness (Rust)</span>
           </li>
           <li>
-            <a href="http://mama.indstate.edu/users/ice/tree/">tree</a>
-            <span class="uses_desc">Recursive directory listing command</span>
+            <a href="https://gitlab.com/OldManProgrammer/unix-tree">tree</a>
+            <span class="uses_desc">— Recursive directory listing command</span>
           </li>
           <li>
             <a href="https://github.com/universal-ctags/ctags">universal-ctags</a>
-            <span class="uses_desc">Generate tag files for source code</span>
+            <span class="uses_desc">— Generate tag files for source code</span>
+          </li>
+        </ul>
+
+        <h5>Git &amp; Diffs</h5>
+        <ul>
+          <li>
+            <a href="https://git-scm.com/">Git</a>
+            <span class="uses_desc">— Distributed version control system</span>
           </li>
           <li>
-            <a href="https://gitlab.com/procps-ng/procps">watch</a>
-            <span class="uses_desc">Execute a program periodically</span>
+            <a href="https://github.com/dandavison/delta">git-delta</a>
+            <span class="uses_desc">— Syntax-highlighting pager for git (Rust)</span>
+          </li>
+          <li>
+            <a href="https://meldmerge.org/">meld</a>
+            <span class="uses_desc">— Visual diff and merge tool</span>
+          </li>
+        </ul>
+
+        <h5>Networking &amp; Remote</h5>
+        <ul>
+          <li>
+            <a href="https://www.harding.motd.ca/autossh/">autossh</a>
+            <span class="uses_desc">— Monitor and restart SSH sessions</span>
+          </li>
+          <li>
+            <a href="https://irssi.org/">irssi</a>
+            <span class="uses_desc">— Terminal based IRC client</span>
+          </li>
+          <li>
+            <a href="https://mosh.org/">mosh</a>
+            <span class="uses_desc">— Mobile shell that survives disconnects</span>
+          </li>
+          <li>
+            <a href="https://github.com/libfuse/sshfs">sshfs</a>
+            <span class="uses_desc">— Mount remote filesystems via SSH</span>
           </li>
           <li>
             <a href="https://www.gnu.org/software/wget/">wget</a>
-            <span class="uses_desc">Retrieving files using HTTP, HTTPS, FTP</span>
+            <span class="uses_desc">— Retrieving files using HTTP, HTTPS, FTP</span>
+          </li>
+        </ul>
+
+        <h5>Data &amp; System Utilities</h5>
+        <ul>
+          <li>
+            <a href="https://github.com/TomWright/dasel">dasel</a>
+            <span class="uses_desc">— Query and update data structures</span>
+          </li>
+          <li>
+            <a href="https://github.com/pcarrier/gauth">gauth</a>
+            <span class="uses_desc">— Two-factor authentication code generator</span>
+          </li>
+          <li>
+            <a href="https://www.gnu.org/software/sed/">gnu-sed</a>
+            <span class="uses_desc">— Stream editor for filtering text</span>
+          </li>
+          <li>
+            <a href="https://jqlang.org/">jq</a>
+            <span class="uses_desc">— Command-line JSON processor</span>
+          </li>
+          <li>
+            <a href="https://software.schmorp.de/pkg/libev.html">libev</a>
+            <span class="uses_desc">— High-performance event loop</span>
+          </li>
+          <li>
+            <a href="https://github.com/OpenSC/OpenSC">opensc</a>
+            <span class="uses_desc">— Tools and libraries for smart cards</span>
+          </li>
+          <li>
+            <a href="https://gitlab.com/psmisc/psmisc">pstree</a>
+            <span class="uses_desc">— Display running processes as a tree</span>
+          </li>
+          <li>
+            <a href="https://gitlab.com/procps-ng/procps">watch</a>
+            <span class="uses_desc">— Execute a program periodically</span>
           </li>
         </ul>
 
         <h4>Graphical</h4>
+
+        <h5>Browsers &amp; Communication</h5>
         <ul>
-          <li>
-            <a href="https://apphousekitchen.com/">AlDente</a>
-            <span class="uses_desc">Charge limiter for MacBook batteries</span>
-          </li>
-          <li>
-            <a href="https://www.alfredapp.com/">Alfred</a>
-            <span class="uses_desc">Application launcher and productivity app</span>
-          </li>
-          <li>
-            <a href="https://freemacsoft.net/appcleaner/">AppCleaner</a>
-            <span class="uses_desc">Uninstall apps and related files</span>
-          </li>
-          <li>
-            <a href="https://www.backblaze.com/">Backblaze</a>
-            <span class="uses_desc">Cloud backup service</span>
-          </li>
-          <li>
-            <a href="https://github.com/kyleneideck/BackgroundMusic">Background Music</a>
-            <span class="uses_desc">Audio utility to pause music automatically</span>
-          </li>
-          <li>
-            <a href="https://www.caffeine-app.net/">Caffeine</a>
-            <span class="uses_desc">Prevents Mac from going to sleep</span>
-          </li>
-          <li>
-            <a href="https://coteditor.com/">CotEditor</a>
-            <span class="uses_desc">Lightweight plain-text editor</span>
-          </li>
-          <li>
-            <a href="https://www.titanium-software.fr/en/deeper.html">Deeper</a>
-            <span class="uses_desc">Personalization utility for macOS</span>
-          </li>
-          <li>
-            <a href="https://discord.com/">Discord</a>
-            <span class="uses_desc">Voice, video and text communication</span>
-          </li>
-          <li>
-            <a href="https://github.com/Mortennn/Dozer">Dozer</a>
-            <span class="uses_desc">Hide menu bar icons</span>
-          </li>
-          <li>
-            <a href="https://justgetflux.com/">f.lux</a>
-            <span class="uses_desc">Adjusts display color temperature</span>
-          </li>
           <li><a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a></li>
           <li><a href="https://www.google.com/chrome/">Google Chrome</a></li>
           <li>
-            <a href="https://github.com/dwarvesf/hidden">Hidden Bar</a>
-            <span class="uses_desc">Hide menu bar items</span>
-          </li>
-          <li>
-            <a href="https://iterm2.com/">iTerm2</a>
-            <span class="uses_desc">Terminal emulator for macOS</span>
-          </li>
-          <li>
-            <a href="https://karabiner-elements.pqrs.org/">Karabiner-Elements</a>
-            <span class="uses_desc">Keyboard customization</span>
-          </li>
-          <li>
-            <a href="https://www.last.fm/">Last.fm</a>
-            <span class="uses_desc">Music recommendation and scrobbling</span>
-          </li>
-          <li>
-            <a href="https://macdown.uranusjr.com/">MacDown</a>
-            <span class="uses_desc">Open source Markdown editor</span>
-          </li>
-          <li>
-            <a href="https://macvim.org/">MacVim</a>
-            <span class="uses_desc">Vim text editor for macOS</span>
-          </li>
-          <li>
-            <a href="https://ingmarstein.github.io/Monolingual/">Monolingual</a>
-            <span class="uses_desc">Remove unnecessary language resources</span>
-          </li>
-          <li>
-            <a href="https://mullvad.net/">Mullvad VPN</a>
-            <span class="uses_desc">Privacy-focused VPN service</span>
-          </li>
-          <li>
-            <a href="https://picard.musicbrainz.org/">MusicBrainz Picard</a>
-            <span class="uses_desc">Cross-platform music tagger</span>
-          </li>
-          <li>
-            <a href="https://www.titanium-software.fr/en/onyx.html">OnyX</a>
-            <span class="uses_desc">Multifunction utility for macOS</span>
-          </li>
-          <li>
-            <a href="https://www.plex.tv/">Plex</a>
-            <span class="uses_desc">Client-server media player system</span>
-          </li>
-          <li>
-            <a href="https://github.com/SokoloffA/radiola">Radiola</a>
-            <span class="uses_desc">Internet radio player</span>
-          </li>
-          <li>
-            <a href="https://matthewpalmer.net/rocket/">Rocket</a>
-            <span class="uses_desc">Emoji picker for macOS</span>
-          </li>
-          <li>
-            <a href="https://selfcontrolapp.com/">SelfControl</a>
-            <span class="uses_desc">Block distracting websites</span>
+            <a href="https://discord.com/">Discord</a>
+            <span class="uses_desc">— Voice, video and text communication</span>
           </li>
           <li>
             <a href="https://slack.com/">Slack</a>
-            <span class="uses_desc">Business communication platform</span>
+            <span class="uses_desc">— Business communication platform</span>
           </li>
           <li>
-            <a href="https://www.spotify.com/">Spotify</a>
-            <span class="uses_desc">Digital music service</span>
+            <a href="https://texts.com/">Texts</a>
+            <span class="uses_desc">— All-in-one messaging app</span>
+          </li>
+        </ul>
+
+        <h5>Editors &amp; Terminal</h5>
+        <ul>
+          <li>
+            <a href="https://iterm2.com/">iTerm2</a>
+            <span class="uses_desc">— Terminal emulator for macOS</span>
           </li>
           <li>
-            <a href="https://swinsian.com/">Swinsian</a>
-            <span class="uses_desc">Advanced music player for macOS</span>
+            <a href="https://macvim.org/">MacVim</a>
+            <span class="uses_desc">— Vim text editor for macOS</span>
           </li>
           <li>
-            <a href="http://www.texts.io/">Texts</a>
-            <span class="uses_desc">All-in-one messaging app</span>
+            <a href="https://coteditor.com/">CotEditor</a>
+            <span class="uses_desc">— Lightweight plain-text editor</span>
           </li>
           <li>
-            <a href="https://www.dejal.com/timeout/">Time Out</a>
-            <span class="uses_desc">Break reminder tool</span>
-          </li>
-          <li>
-            <a href="https://www.vienna-rss.com/">Vienna</a>
-            <span class="uses_desc">RSS/Atom reader</span>
-          </li>
-          <li>
-            <a href="https://www.videolan.org/vlc/">VLC</a>
-            <span class="uses_desc">Portable multimedia player</span>
-          </li>
-          <li>
-            <a href="https://manytricks.com/witch/">Witch</a>
-            <span class="uses_desc">Window switcher</span>
+            <a href="https://macdown.uranusjr.com/">MacDown</a>
+            <span class="uses_desc">— Open source Markdown editor</span>
           </li>
           <li>
             <a href="https://www.zettlr.com/">Zettlr</a>
-            <span class="uses_desc">Markdown editor for academic writing</span>
+            <span class="uses_desc">— Markdown editor for academic writing</span>
+          </li>
+        </ul>
+
+        <h5>Music, Media &amp; RSS</h5>
+        <ul>
+          <li>
+            <a href="https://github.com/kyleneideck/BackgroundMusic">Background Music</a>
+            <span class="uses_desc">— Audio utility to pause music automatically</span>
+          </li>
+          <li>
+            <a href="https://www.last.fm/">Last.fm</a>
+            <span class="uses_desc">— Music recommendation and scrobbling</span>
+          </li>
+          <li>
+            <a href="https://picard.musicbrainz.org/">MusicBrainz Picard</a>
+            <span class="uses_desc">— Cross-platform music tagger</span>
+          </li>
+          <li>
+            <a href="https://www.plex.tv/">Plex</a>
+            <span class="uses_desc">— Client-server media player system</span>
+          </li>
+          <li>
+            <a href="https://github.com/SokoloffA/radiola">Radiola</a>
+            <span class="uses_desc">— Internet radio player</span>
+          </li>
+          <li>
+            <a href="https://www.spotify.com/">Spotify</a>
+            <span class="uses_desc">— Digital music service</span>
+          </li>
+          <li>
+            <a href="https://swinsian.com/">Swinsian</a>
+            <span class="uses_desc">— Advanced music player for macOS</span>
+          </li>
+          <li>
+            <a href="https://www.vienna-rss.com/">Vienna</a>
+            <span class="uses_desc">— RSS/Atom reader</span>
+          </li>
+          <li>
+            <a href="https://www.videolan.org/vlc/">VLC</a>
+            <span class="uses_desc">— Portable multimedia player</span>
+          </li>
+        </ul>
+
+        <h5>macOS Utilities &amp; Productivity</h5>
+        <ul>
+          <li>
+            <a href="https://apphousekitchen.com/">AlDente</a>
+            <span class="uses_desc">— Charge limiter for MacBook batteries</span>
+          </li>
+          <li>
+            <a href="https://www.alfredapp.com/">Alfred</a>
+            <span class="uses_desc">— Application launcher and productivity app</span>
+          </li>
+          <li>
+            <a href="https://freemacsoft.net/appcleaner/">AppCleaner</a>
+            <span class="uses_desc">— Uninstall apps and related files</span>
+          </li>
+          <li>
+            <a href="https://www.backblaze.com/">Backblaze</a>
+            <span class="uses_desc">— Cloud backup service</span>
+          </li>
+          <li>
+            <a href="https://www.caffeine-app.net/">Caffeine</a>
+            <span class="uses_desc">— Prevents Mac from going to sleep</span>
+          </li>
+          <li>
+            <a href="https://www.titanium-software.fr/en/deeper.html">Deeper</a>
+            <span class="uses_desc">— Personalization utility for macOS</span>
+          </li>
+          <li>
+            <a href="https://github.com/Mortennn/Dozer">Dozer</a>
+            <span class="uses_desc">— Hide menu bar icons</span>
+          </li>
+          <li>
+            <a href="https://justgetflux.com/">f.lux</a>
+            <span class="uses_desc">— Adjusts display color temperature</span>
+          </li>
+          <li>
+            <a href="https://github.com/dwarvesf/hidden">Hidden Bar</a>
+            <span class="uses_desc">— Hide menu bar items</span>
+          </li>
+          <li>
+            <a href="https://karabiner-elements.pqrs.org/">Karabiner-Elements</a>
+            <span class="uses_desc">— Keyboard customization</span>
+          </li>
+          <li>
+            <a href="https://ingmarstein.github.io/Monolingual/">Monolingual</a>
+            <span class="uses_desc">— Remove unnecessary language resources</span>
+          </li>
+          <li>
+            <a href="https://mullvad.net/">Mullvad VPN</a>
+            <span class="uses_desc">— Privacy-focused VPN service</span>
+          </li>
+          <li>
+            <a href="https://www.titanium-software.fr/en/onyx.html">OnyX</a>
+            <span class="uses_desc">— Multifunction utility for macOS</span>
+          </li>
+          <li>
+            <a href="https://matthewpalmer.net/rocket/">Rocket</a>
+            <span class="uses_desc">— Emoji picker for macOS</span>
+          </li>
+          <li>
+            <a href="https://selfcontrolapp.com/">SelfControl</a>
+            <span class="uses_desc">— Block distracting websites</span>
+          </li>
+          <li>
+            <a href="https://www.dejal.com/timeout/">Time Out</a>
+            <span class="uses_desc">— Break reminder tool</span>
+          </li>
+          <li>
+            <a href="https://manytricks.com/witch/">Witch</a>
+            <span class="uses_desc">— Window switcher</span>
           </li>
         </ul>
 
@@ -330,34 +363,34 @@ const description =
         <ul>
           <li>
             <a href="https://www.cloudflare.com/">Cloudflare</a>
-            <span class="uses_desc">CDN and DNS</span>
+            <span class="uses_desc">— CDN and DNS</span>
           </li>
           <li>
             <a href="https://github.com/">GitHub</a>
-            <span class="uses_desc">Code hosting and collaboration</span>
+            <span class="uses_desc">— Code hosting and collaboration</span>
           </li>
           <li>
             <a href="https://github.com/features/actions">GitHub Actions</a>
-            <span class="uses_desc">CI/CD automation</span>
+            <span class="uses_desc">— CI/CD automation</span>
           </li>
           <li>
             <a href="https://gemini.google.com/">Google Gemini</a>
-            <span class="uses_desc">AI assistant</span>
+            <span class="uses_desc">— AI assistant</span>
           </li>
           <li>
             <a href="https://intervals.icu/">Intervals.icu</a>
-            <span class="uses_desc">Cycling training analysis</span>
+            <span class="uses_desc">— Cycling training analysis</span>
           </li>
           <li>
             <a href="https://wandrer.earth/">Wandrer.Earth</a>
-            <span class="uses_desc">Game to explore the world</span> &amp; <a
+            <span class="uses_desc">— Game to explore the world</span> &amp; <a
               href="https://www.openstreetmap.org/">OpenStreetMap</a
             >
-            <span class="uses_desc">Collaborative project to create a free editable map</span>
+            <span class="uses_desc">— Collaborative project to create a free editable map</span>
           </li>
           <li>
             <a href="https://www.wunderground.com/">Weather Underground</a>
-            <span class="uses_desc">Weather forecasting</span>
+            <span class="uses_desc">— Weather forecasting</span>
           </li>
         </ul>
 
@@ -365,39 +398,41 @@ const description =
         <ul>
           <li>
             <a href="https://github.com/slavfox/Cozette">Cozette</a>
-            <span class="uses_desc">Bitmap programming font</span>
+            <span class="uses_desc">— Bitmap programming font</span>
           </li>
           <li>
             <a href="https://dejavu-fonts.github.io/">DejaVu</a>
-            <span class="uses_desc">Font family</span>
+            <span class="uses_desc">— Font family</span>
           </li>
           <li>
             <a
               href="https://damieng.com/blog/2008/05/26/envy-code-r-preview-7-coding-font-released/"
               >Envy Code R</a
             >
-            <span class="uses_desc">Coding font</span>
+            <span class="uses_desc">— Coding font</span>
           </li>
           <li>
             <a href="https://github.com/tonsky/FiraCode">Fira Code</a>
-            <span class="uses_desc">Monospaced font with ligatures</span>
+            <span class="uses_desc">— Monospaced font with ligatures</span>
           </li>
           <li>
             <a href="https://fonts.google.com/specimen/Inconsolata">Inconsolata</a>
-            <span class="uses_desc">Monospaced font</span>
+            <span class="uses_desc">— Monospaced font</span>
           </li>
           <li>
             <a href="https://fonts.google.com/specimen/Roboto">Roboto</a>
-            <span class="uses_desc">Sans-serif typeface</span>
+            <span class="uses_desc">— Sans-serif typeface</span>
           </li>
           <li>
             <a href="https://fonts.google.com/specimen/Source+Code+Pro">Source Code Pro</a>
-            <span class="uses_desc">Monospaced font</span>
+            <span class="uses_desc">— Monospaced font</span>
           </li>
         </ul>
 
         <h4>Vim</h4>
         <p>They're all, always, a work-in-progress.</p>
+
+        <h5>Colorschemes &amp; UI</h5>
         <ul>
           <li><a href="https://github.com/vim-scripts/oceandeep">oceandeep</a></li>
           <li><a href="https://github.com/mhartington/oceanic-next">oceanic-next</a></li>
@@ -409,10 +444,37 @@ const description =
           <li>
             <a href="https://github.com/xolox/vim-colorscheme-switcher">vim-colorscheme-switcher</a>
           </li>
-          <li><a href="https://github.com/tpope/vim-git">vim-git</a></li>
+          <li><a href="https://github.com/vim-airline/vim-airline">vim-airline</a></li>
+          <li>
+            <a href="https://github.com/vim-airline/vim-airline-themes">vim-airline-themes</a>
+          </li>
+        </ul>
+
+        <h5>Navigation &amp; Editing</h5>
+        <ul>
+          <li><a href="https://github.com/junegunn/fzf">fzf</a></li>
+          <li><a href="https://github.com/junegunn/fzf.vim">fzf.vim</a></li>
+          <li><a href="https://github.com/scrooloose/nerdtree">nerdtree</a></li>
+          <li>
+            <a href="https://github.com/christoomey/vim-tmux-navigator">vim-tmux-navigator</a>
+          </li>
+          <li><a href="https://github.com/tpope/vim-commentary">vim-commentary</a></li>
+          <li><a href="https://github.com/tpope/vim-surround">vim-surround</a></li>
           <li><a href="https://github.com/godlygeek/tabular">tabular</a></li>
-          <li><a href="https://github.com/plasticboy/vim-markdown">vim-markdown</a></li>
-          <li><a href="https://github.com/sheerun/vim-polyglot">vim-polyglot</a></li>
+          <li><a href="https://github.com/Raimondi/delimitMate">delimitMate</a></li>
+          <li>
+            <a href="https://github.com/ConradIrwin/vim-bracketed-paste">vim-bracketed-paste</a>
+          </li>
+          <li><a href="https://github.com/vim-scripts/nextval">nextval</a></li>
+          <li><a href="https://github.com/ludovicchabant/vim-gutentags">vim-gutentags</a></li>
+          <li><a href="https://github.com/editorconfig/editorconfig-vim">editorconfig-vim</a></li>
+          <li><a href="https://github.com/xolox/vim-misc">vim-misc</a></li>
+        </ul>
+
+        <h5>Python</h5>
+        <ul>
+          <li><a href="https://github.com/psf/black">black</a></li>
+          <li><a href="https://github.com/davidhalter/jedi-vim">jedi-vim</a></li>
           <li><a href="https://github.com/jmcantrell/vim-virtualenv">vim-virtualenv</a></li>
           <li><a href="https://github.com/vim-scripts/indentpython.vim">indentpython.vim</a></li>
           <li>
@@ -420,42 +482,31 @@ const description =
           </li>
           <li><a href="https://github.com/fisadev/vim-isort">vim-isort</a></li>
           <li><a href="https://github.com/tmhedberg/SimpylFold">SimpylFold</a></li>
-          <li><a href="https://github.com/Raimondi/delimitMate">delimitMate</a></li>
-          <li><a href="https://github.com/psf/black">black</a></li>
-          <li><a href="https://github.com/hashivim/vim-terraform">vim-terraform</a></li>
-          <li><a href="https://github.com/editorconfig/editorconfig-vim">editorconfig-vim</a></li>
-          <li><a href="https://github.com/mattn/emmet-vim">emmet-vim</a></li>
-          <li><a href="https://github.com/alvan/vim-closetag">vim-closetag</a></li>
-          <li><a href="https://github.com/maralla/completor.vim">completor.vim</a></li>
-          <li><a href="https://github.com/davidhalter/jedi-vim">jedi-vim</a></li>
-          <li><a href="https://github.com/tpope/vim-fugitive">vim-fugitive</a></li>
-          <li><a href="https://github.com/dense-analysis/ale">ale</a></li>
-          <li><a href="https://github.com/junegunn/fzf">fzf</a></li>
-          <li><a href="https://github.com/junegunn/fzf.vim">fzf.vim</a></li>
-          <li>
-            <a href="https://github.com/ConradIrwin/vim-bracketed-paste">vim-bracketed-paste</a>
-          </li>
-          <li><a href="https://github.com/vim-scripts/nextval">nextval</a></li>
-          <li><a href="https://github.com/ludovicchabant/vim-gutentags">vim-gutentags</a></li>
-          <li><a href="https://github.com/scrooloose/nerdtree">nerdtree</a></li>
-          <li><a href="https://github.com/xolox/vim-misc">vim-misc</a></li>
-          <li>
-            <a href="https://github.com/christoomey/vim-tmux-navigator">vim-tmux-navigator</a>
-          </li>
-          <li><a href="https://github.com/vim-airline/vim-airline">vim-airline</a></li>
-          <li>
-            <a href="https://github.com/vim-airline/vim-airline-themes">vim-airline-themes</a>
-          </li>
-          <li><a href="https://github.com/tpope/vim-commentary">vim-commentary</a></li>
+        </ul>
+
+        <h5>JavaScript, Web &amp; Markup</h5>
+        <ul>
+          <li><a href="https://github.com/wuelnerdotexe/vim-astro">vim-astro</a></li>
           <li><a href="https://github.com/pangloss/vim-javascript">vim-javascript</a></li>
           <li><a href="https://github.com/leafgarland/typescript-vim">typescript-vim</a></li>
           <li><a href="https://github.com/maxmellon/vim-jsx-pretty">vim-jsx-pretty</a></li>
           <li><a href="https://github.com/jparise/vim-graphql">vim-graphql</a></li>
           <li><a href="https://github.com/prettier/vim-prettier">vim-prettier</a></li>
-          <li><a href="https://github.com/wuelnerdotexe/vim-astro">vim-astro</a></li>
-          <li><a href="https://github.com/tpope/vim-dispatch">vim-dispatch</a></li>
-          <li><a href="https://github.com/tpope/vim-surround">vim-surround</a></li>
+          <li><a href="https://github.com/plasticboy/vim-markdown">vim-markdown</a></li>
+          <li><a href="https://github.com/mattn/emmet-vim">emmet-vim</a></li>
+          <li><a href="https://github.com/alvan/vim-closetag">vim-closetag</a></li>
+          <li><a href="https://github.com/sheerun/vim-polyglot">vim-polyglot</a></li>
+          <li><a href="https://github.com/hashivim/vim-terraform">vim-terraform</a></li>
+        </ul>
+
+        <h5>Git, Linting &amp; Tooling</h5>
+        <ul>
+          <li><a href="https://github.com/tpope/vim-fugitive">vim-fugitive</a></li>
+          <li><a href="https://github.com/tpope/vim-git">vim-git</a></li>
           <li><a href="https://github.com/airblade/vim-gitgutter">vim-gitgutter</a></li>
+          <li><a href="https://github.com/dense-analysis/ale">ale</a></li>
+          <li><a href="https://github.com/maralla/completor.vim">completor.vim</a></li>
+          <li><a href="https://github.com/tpope/vim-dispatch">vim-dispatch</a></li>
         </ul>
 
         <h2>Cameras and Lenses</h2>
@@ -483,29 +534,29 @@ const description =
         <ul>
           <li>
             <a href="/blog/2025/12/05/all_city_space_horse/"
-              >All City Space Horse, already described here</a
+              >All-City Space Horse, already described here</a
             >
           </li>
           <li>
             <a href="https://allcitycycles.com/bikes/archive/mr_pink_pink"
-              >All City Pink Mr. Pink (my fav)</a
+              >All-City Pink Mr. Pink (my fav)</a
             >
           </li>
           <li>
-            <a href="https://allcitycycles.com/bikes/mr_pink_classic">All City Mr. Pink Classic</a>
+            <a href="https://allcitycycles.com/bikes/mr_pink_classic">All-City Mr. Pink Classic</a>
           </li>
           <li><a href="https://clcycle.ca/products/bassi-rachel-frameset">Bassi Rachel</a></li>
           <li><a href="https://surlybikes.com/bikes/ogre">Surly Ogre</a></li>
           <li>
             <a href="https://crustbikes.com/collections/frames/products/evasion">Crust Evasion</a>
           </li>
-          <li><a href="http://gunnarbikes.com/">Gunnar MTB</a></li>
+          <li><a href="https://gunnarbikes.com/">Gunnar MTB</a></li>
           <li><a href="https://surlybikes.com/collections/bridge-club">Surly Bridge Club</a></li>
           <li><a href="https://surlybikes.com/bikes/wednesday">Surly Wednesday</a></li>
           <li><a href="https://surlybikes.com/">Surly Moonlander</a></li>
           <li>
             <a href="https://us.zwift.com/pages/zwift-hub-one">Zwift Hub</a>
-            <span class="uses_desc">for indoor riding</span>
+            <span class="uses_desc">— for indoor riding</span>
           </li>
           <li><a href="https://www.garmin.com/en-US/p/798946/">Garmin 840 Solar</a></li>
           <li><a href="https://arkel.ca/">Arkel Panniers</a></li>
@@ -526,7 +577,7 @@ const description =
           <li>
             <a
               href="https://www.victorinox.com/en-US/Products/Cutlery/Paring-Knives/c/CUT_ParingKnives/"
-              >Victroinox "Swiss Classic" paring knife</a
+              >Victorinox "Swiss Classic" paring knife</a
             >
             <span class="uses_desc"
               >(It's the best! I use it constantly at home, and the folding one lives with my
@@ -546,7 +597,7 @@ const description =
           </li>
           <li>
             <a href="https://baratza.com/product/encore">Baratza Encore</a>
-            <span class="uses_desc">coffee grinder</span>
+            <span class="uses_desc">— coffee grinder</span>
           </li>
         </ul>
       </div>

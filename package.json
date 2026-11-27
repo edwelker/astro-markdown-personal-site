@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm run fetch && npm run mvdata && npm test && astro build && npm run test:artifacts",
+    "build": "npm run fetch && npm run mvdata && npm test && astro build && npm run test:artifacts && npm run test:smoke",
     "preview": "astro preview",
     "fetch": "node tests/run-all.mjs",
     "check": "astro check",
@@ -15,6 +15,7 @@
     "test": "vitest run --exclude tests/build_artifacts_tests",
     "test:cov": "vitest run --coverage --exclude tests/build_artifacts_tests",
     "test:artifacts": "vitest run tests/build_artifacts_tests",
+    "test:smoke": "node scripts/smoke-test.mjs",
     "test:local": "npm test && npx playwright test --config=playwright.config.local.mjs",
     "test:build": "npx playwright test --config=playwright.config.build.mjs",
     "test:update": "npx playwright test --config=playwright.config.local.mjs --update-snapshots",
