@@ -20,3 +20,8 @@
   - **`strava-webhook-bridge` Worker:** Fires when a ride finishes to trigger a fresh site rebuild (pulling updated Intervals.icu cycling data).
   - **`plex-ratings-poller` Worker:** Polls for new Plex ratings and triggers a fresh site rebuild.
   - **Important:** Both external Workers call this site's Cloudflare deploy hook—if hosting, project name, or deploy hooks ever change, update both Workers as well.
+- **Cloudflare Dashboard Config (Outside Git — Required if Migrating Off Cloudflare):**
+  - **Edge Redirect Rule (`eddiewelker.com` zone → Rules → Redirect Rules):** Single Redirect `"Redirect from WWW to root"` (`https://www.*` → `https://${1}`, `301 Permanent Redirect`, **Preserve query string = ON**).
+  - **Custom Domains:** `eddiewelker.com` and `www.eddiewelker.com` declared in `wrangler.jsonc` (Cloudflare manages DNS/TLS automatically).
+  - **Non-Git State to Recreate on Any Future Host:** `ORS_API_KEY` runtime secret, 7 build-time ETL env vars, deploy hook URL in `strava-webhook-bridge` & `plex-ratings-poller`, `www.` → root 301 redirect, and `_redirects` / `_headers` rules (`public/_redirects`, `public/_headers`).
+- **Local Planning Scratchpad:** `suggestions.md` (gitignored) holds Eddie's untracked publishing, indie-directory, and growth ideas.
