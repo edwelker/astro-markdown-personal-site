@@ -252,7 +252,7 @@ describe('API Matrix Endpoint', () => {
       const response = await POST({ request, locals: PROD_LOCALS });
 
       expect(response.status).toBe(200);
-      expect(fetch).toHaveBeenCalledWith('https://api.openrouteservice.org/v2/matrix/driving-car', {
+      expect(fetch).toHaveBeenCalledWith('https://api.heigit.org/openrouteservice/v2/matrix/driving-car', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -301,7 +301,7 @@ describe('API Matrix Endpoint', () => {
       const request = createRequest(mockBody);
       const response = await POST({ request, locals: PROD_LOCALS });
 
-      expect(fetch).toHaveBeenCalledWith('https://api.openrouteservice.org/v2/matrix/driving-car', {
+      expect(fetch).toHaveBeenCalledWith('https://api.heigit.org/openrouteservice/v2/matrix/driving-car', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

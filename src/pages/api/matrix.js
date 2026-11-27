@@ -189,7 +189,7 @@ export async function POST({ request, locals }) {
   }
 
   try {
-    const response = await fetch('https://api.openrouteservice.org/v2/matrix/driving-car', {
+    const response = await fetch('https://api.heigit.org/openrouteservice/v2/matrix/driving-car', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
