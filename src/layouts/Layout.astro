@@ -17,13 +17,15 @@ type Props = {
   noindex?: boolean;
 };
 
-import { SITE, HOME } from '@consts';
+import { HOME } from '@consts';
 
 const { title, description, image, noindex } = Astro.props;
 const fullTitle =
   title === HOME.TITLE
     ? 'Eddie Welker — Software, Bikes, Music & Recipes'
-    : `${SITE.TITLE}: ${title}`;
+    : title.length > 52
+      ? title
+      : `${title} — Eddie Welker`;
 ---
 
 <!doctype html>

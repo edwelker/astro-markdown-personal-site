@@ -28,7 +28,7 @@ const { region } = Astro.params;
 const { name, data: rawData } = Astro.props;
 
 const title = `Gas Prices - ${name}`;
-const description = `Latest gas prices for ${name}.`;
+const description = `Compare the latest net gas prices, station discounts, and real-time driving times for ${name}, updated automatically multiple times daily.`;
 
 const data = normalizeGasData(rawData, region).sort(sortByNetPrice as any);
 ---

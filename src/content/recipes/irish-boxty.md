@@ -1,6 +1,6 @@
 ---
 title: "Traditional Irish Boxty"
-description: "A delicious Irish Boxty that uses only the simplest ingredients, making me love it more."
+description: "A crisp, traditional Irish Boxty potato pancake made with just grated potatoes, flour, salt, and butter—simple ingredients and a golden skillet crust."
 date: 2026-03-17T12:24:00-04:00
 prepTime: "PT20M"
 cookTime: "PT30M"

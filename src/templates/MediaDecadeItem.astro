@@ -44,7 +44,10 @@ const schema = {
 };
 ---
 
-<Layout title={title} description={`Cinematic history from the ${decade}s.`}>
+<Layout
+  title={title}
+  description={`Personal archive of ${decadeMovies.length} movies and TV shows from the ${decade}s, ranked by rating from Eddie Welker's watched media log.`}
+>
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Container>
     <div class="animate">

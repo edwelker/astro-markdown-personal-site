@@ -54,7 +54,9 @@ const ldJson = {
   },
   datePublished: data.date.toISOString().split('T')[0],
   description: data.description,
-  image: data.coverPhoto ? new URL(data.coverPhoto, Astro.site).href : undefined,
+  image: data.coverPhoto
+    ? new URL(data.coverPhoto, Astro.site).href
+    : 'https://eddiewelker.com/social-card.png',
   prepTime: data.prepTime,
   cookTime: data.cookTime,
   totalTime: data.totalTime,
