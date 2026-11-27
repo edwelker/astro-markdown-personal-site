@@ -3,15 +3,37 @@
 const GA_MEASUREMENT_ID = 'G-19CWWGK0FL';
 ---
 
-{/* GA4 (native async so user_engagement & ClientRouter navigations record accurately) */}
-<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-></script>
-
+{/* GA4 (native async on prod only, with ?notrack=1 / ?notrack=0 localStorage opt-out) */}
 <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-  gtag('config', GA_MEASUREMENT_ID);
+  (function () {
+    const PROD_HOSTS = new Set(['eddiewelker.com', 'www.eddiewelker.com']);
+    const OPT_OUT_KEY = 'ga_opt_out';
+
+    try {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('notrack') === '1') {
+        localStorage.setItem(OPT_OUT_KEY, '1');
+      } else if (params.get('notrack') === '0') {
+        localStorage.removeItem(OPT_OUT_KEY);
+      }
+      if (localStorage.getItem(OPT_OUT_KEY) === '1') return;
+    } catch {
+      // Ignore storage access errors (e.g., restricted private mode)
+    }
+
+    if (!PROD_HOSTS.has(window.location.hostname)) return;
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_MEASUREMENT_ID);
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    document.head.appendChild(script);
+  })();
 </script>
