@@ -32,6 +32,12 @@ const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
       </div>
       <div class="mb-8 flex items-baseline justify-between">
         <h1 class="text-2xl font-semibold text-black dark:text-white">Blog</h1>
+        <a
+          href="/rss.xml"
+          class="group font-mono text-[10px] tracking-[0.15em] text-neutral-400 uppercase no-underline transition-colors hover:text-black dark:hover:text-white"
+        >
+          RSS <span class="inline-block transition-transform group-hover:translate-x-0.5">→</span>
+        </a>
       </div>
     </div>
     <aside data-pagefind-ignore>
