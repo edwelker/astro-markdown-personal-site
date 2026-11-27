@@ -6,7 +6,7 @@ import Search from 'astro-pagefind/components/Search.astro';
   <div
     transition:persist
     id="backdrop"
-    class="bg-[rgba(0, 0, 0, 0.5] invisible fixed top-0 left-0 z-50 flex h-screen w-full justify-center p-6 backdrop-blur-xs"
+    class="fixed top-0 left-0 z-50 hidden h-screen w-full justify-center bg-black/50 p-6 backdrop-blur-xs"
   >
     <div
       id="pagefind-container"
@@ -28,20 +28,21 @@ import Search from 'astro-pagefind/components/Search.astro';
   const backdrop = document.getElementById('backdrop');
 
   function openPagefind() {
+    backdrop?.classList.remove('hidden');
+    backdrop?.classList.add('flex');
     const searchDiv = document.getElementById('search');
-    const search = searchDiv.querySelector('input');
+    const search = searchDiv?.querySelector('input');
     setTimeout(() => {
-      search.focus();
+      search?.focus();
     }, 0);
-    backdrop?.classList.remove('invisible');
-    backdrop?.classList.add('visible');
   }
 
   function closePagefind() {
-    const search = document.getElementById('search');
-    search.value = '';
-    backdrop?.classList.remove('visible');
-    backdrop?.classList.add('invisible');
+    const searchDiv = document.getElementById('search');
+    const search = searchDiv?.querySelector('input');
+    if (search) search.value = '';
+    backdrop?.classList.remove('flex');
+    backdrop?.classList.add('hidden');
   }
 
   // open pagefind
