@@ -49,6 +49,9 @@ export default defineConfig({
   adapter: cloudflare({
     imageService: 'compile',
   }),
+  image: {
+    domains: ['live.staticflickr.com'],
+  },
   redirects: {
     '/dashboard': '/dash/',
   },

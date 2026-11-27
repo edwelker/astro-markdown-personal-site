@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
 import Layout from '@layouts/Layout.astro';
 import Container from '@components/Container.astro';
 import { readingTime } from '@lib/utils';
@@ -105,9 +106,26 @@ const ldJson = {
         <span>{readingTime(recipe.body ?? '')}</span>
       </div>
       {
-        data.coverPhoto && (
-          <img src={data.coverPhoto} alt={data.title} class="mb-4 w-full rounded-lg" />
-        )
+        data.coverPhoto &&
+          (data.coverPhoto.startsWith('https://live.staticflickr.com/') ? (
+            <Image
+              src={data.coverPhoto}
+              inferSize
+              alt={data.title}
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              class="mb-4 h-auto w-full rounded-lg"
+            />
+          ) : (
+            <img
+              src={data.coverPhoto}
+              alt={data.title}
+              loading="eager"
+              decoding="async"
+              class="mb-4 w-full rounded-lg"
+            />
+          ))
       }
 
       <h2>Ingredients</h2>

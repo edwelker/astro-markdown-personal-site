@@ -10,23 +10,40 @@ interface Props {
 
 const { coverImage, alt, title } = Astro.props;
 const imageAlt = alt || `Cover image for ${title}`;
+const isFlickrUrl =
+  typeof coverImage === 'string' && coverImage.startsWith('https://live.staticflickr.com/');
 ---
 
 {
   coverImage && (
     <figure class="my-6">
       {typeof coverImage === 'string' ? (
-        <img
-          src={coverImage}
-          alt={imageAlt}
-          loading="lazy"
-          class="h-auto w-full rounded-lg shadow-lg"
-        />
+        isFlickrUrl ? (
+          <Image
+            src={coverImage}
+            inferSize
+            alt={imageAlt}
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            class="h-auto w-full rounded-lg shadow-lg"
+          />
+        ) : (
+          <img
+            src={coverImage}
+            alt={imageAlt}
+            loading="eager"
+            decoding="async"
+            class="h-auto w-full rounded-lg shadow-lg"
+          />
+        )
       ) : (
         <Image
           src={coverImage}
           alt={imageAlt}
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
           class="h-auto w-full rounded-lg shadow-lg"
         />
       )}

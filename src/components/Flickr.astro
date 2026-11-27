@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import data from '../data/flickr-photos.json';
 const allPhotos = data || [];
 const photosToShow = allPhotos.slice(0, 10);
@@ -105,12 +106,32 @@ const getRelativeTime = (dateStr: string) => {
                 rel="noopener noreferrer"
                 class="block h-full w-full"
               >
-                <img
-                  src={photo.src}
-                  alt={photo.title || 'Flickr photo'}
-                  loading="lazy"
-                  class="h-full w-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
-                />
+                {photo.src.startsWith('https://live.staticflickr.com/') ? (
+                  <Image
+                    src={photo.src}
+                    inferSize
+                    alt={
+                      photo.title && photo.title !== 'Untitled'
+                        ? photo.title
+                        : `Photo by Eddie Welker (${getRelativeTime(photo.date)})`
+                    }
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
+                  />
+                ) : (
+                  <img
+                    src={photo.src}
+                    alt={
+                      photo.title && photo.title !== 'Untitled'
+                        ? photo.title
+                        : `Photo by Eddie Welker (${getRelativeTime(photo.date)})`
+                    }
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
+                  />
+                )}
                 <div class="absolute top-2 right-2 rounded bg-black/60 px-2 py-1 opacity-0 shadow-sm backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100">
                   <span class="block font-mono text-[10px] font-bold tracking-wider text-white/90 uppercase">
                     {getRelativeTime(photo.date)}

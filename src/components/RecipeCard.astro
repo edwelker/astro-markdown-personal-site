@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 
 interface Props {
   recipe: CollectionEntry<'recipes'>;
@@ -32,12 +33,24 @@ function formatTime(pt: string | undefined) {
   >
     {
       recipe.data.coverPhoto ? (
-        <img
-          src={recipe.data.coverPhoto}
-          alt={recipe.data.title}
-          class="absolute inset-0 h-full w-full object-cover"
-          loading="lazy"
-        />
+        recipe.data.coverPhoto.startsWith('https://live.staticflickr.com/') ? (
+          <Image
+            src={recipe.data.coverPhoto}
+            inferSize
+            alt={recipe.data.title}
+            class="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <img
+            src={recipe.data.coverPhoto}
+            alt={recipe.data.title}
+            class="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        )
       ) : (
         <div class="flex h-full w-full flex-col items-center justify-center gap-2 bg-neutral-50 text-neutral-400 dark:bg-neutral-800">
           <svg
