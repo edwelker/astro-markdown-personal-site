@@ -29,16 +29,19 @@ recipeIngredient:
   - "=== RECIPE 2: TO SMALL BOWL (STAGE 3 FINISH — ACID POPS) ==="
   - "85g fresh cranberries (~1/4 of a 12-oz bag / ~1 generous cup, kept whole)"
 recipeInstructions:
-  - "Boiled Sauce — Dissolve Sugar: Bring 240 mL water and 225g sugar to a full boil in a 2-3 qt saucepan over medium-high heat, stirring once to dissolve."
-  - "Boiled Sauce — Simmer 10 Minutes: Dump in 340g cranberries, grated ginger, and freshly ground cardamom. Drop heat to medium, cover (leave a slight crack if foaming), and boil gently for 10 minutes until berries pop and collapse."
-  - "Boiled Sauce — Skim & Chill: Pull off heat, skim any pale foam if desired, discard cracked cardamom pods if used, and cool completely so natural cranberry pectin thickens the sauce cleanly."
-  - "Raw Relish — Stage 1 Pulse (Citrus & Chili Base): Add quartered unpeeled navel orange, stemmed 2/3 Fresno chili (or jalapeno), optional fresh ginger, and 150g sugar to the Cuisinart food processor. Pulse in 6-8 short 1-second bursts until finely minced (~1/8-inch bits) with no large bitter peel chunks."
-  - "Raw Relish — Stage 2 Pulse (Main Berries): Add 255g (~3/4 bag) raw cranberries. Pulse 6-8 times in short bursts, scraping the bowl wall once halfway, until finely chopped so they release juice to dissolve the sugar."
-  - "Raw Relish — Stage 3 Finish (Acid Pops): Add the reserved 85g (~1 cup) whole cranberries on top and give just 2-3 light, quick pulses so they crack into coarse halves and quarters rather than pureeing. Do not run continuously."
-  - "Raw Relish — Macerate & Chill: Transfer to a bowl or Mason jar, cover, and refrigerate at least 2-3 hours (ideally overnight) so the sugar dissolves and mellows the raw cranberry bite."
+  - "=== PROCESS 1: BOILED GINGER-CARDAMOM SAUCE ==="
+  - "Grind Cardamom: Shell seeds from 3-4 fresh green cardamom pods (or ~5 older pantry pods) and pulverize in a spice grinder."
+  - "Dissolve Sugar: Bring 240 mL water and 225g sugar to a full boil in a 2-3 qt saucepan over medium-high heat, stirring once to dissolve."
+  - "Simmer 10 Minutes: Dump in 340g cranberries, grated ginger, and freshly ground cardamom. Drop heat to medium, cover (leave a slight crack if foaming), and boil gently for 10 minutes until berries pop and collapse."
+  - "Skim & Chill: Pull off heat, skim any pale foam if desired, discard cracked cardamom pods if used, and cool completely so natural cranberry pectin thickens the sauce cleanly."
+  - "=== PROCESS 2: CHILI-CITRUS RAW RELISH ==="
+  - "Stage 1 Pulse (Citrus & Chili Base): Add quartered unpeeled navel orange, stemmed 2/3 Fresno chili (or jalapeno), optional fresh ginger, and 150g sugar to the Cuisinart food processor. Pulse in 6-8 short 1-second bursts until finely minced (~1/8-inch bits) with no large bitter peel chunks."
+  - "Stage 2 Pulse (Main Berries): Add 255g (~3/4 bag) raw cranberries. Pulse 6-8 times in short bursts, scraping the bowl wall once halfway, until finely chopped so they release juice to dissolve the sugar."
+  - "Stage 3 Finish (Acid Pops): Add the reserved 85g (~1 cup) whole cranberries on top and give just 2-3 light, quick pulses so they crack into coarse halves and quarters rather than pureeing. Do not run continuously."
+  - "Macerate & Chill: Transfer to a bowl or Mason jar, cover, and refrigerate at least 2-3 hours (ideally overnight) so the sugar dissolves and mellows the raw cranberry bite."
 ---
 
-Every Thanksgiving, two complementary bowls cover the entire cranberry spectrum: a **glossy, spoonable boiled sauce** scented with warm ginger and cardamom, alongside a **bright, raw food-processed orange relish** sparked with fresh jalapeño or Fresno chili.
+These are my personal variations on two classic cranberry preparations: a **glossy, spoonable boiled sauce** scented with warm ginger and freshly ground cardamom, and a **bright, raw food-processed orange relish** sparked with fresh Fresno or jalapeño chili.
 
 ### Original 1896 Base Text (Public Domain)
 From Fannie Merritt Farmer, *The Boston Cooking-School Cook Book* (Boston: Little, Brown, and Company, 1896 — [Project Gutenberg #65061](https://www.gutenberg.org/ebooks/65061) / [Internet Archive](https://archive.org/details/bostoncookingsch00farm_0)):
