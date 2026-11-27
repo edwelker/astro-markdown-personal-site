@@ -44,6 +44,8 @@ What each section means:
      Exact follow-up phrases real people type into Google. Use these as post angles or H2 subheadings.
   3. Hacker News:
      Recent dev/tech discussions matching your topic (shows whether devs are actively talking about it).
+  4. Google Trends (5-Year Compare Link):
+     One-click 5-year US trend chart to see if interest is rising, steady, seasonal, or fading.
 `);
   process.exit(0);
 }
@@ -225,6 +227,17 @@ for (const t of topicResults) {
     }
   }
 }
+
+const trendsTopics = topics.slice(0, 5);
+const trendsUrl = `https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=${trendsTopics
+  .map((q) => encodeURIComponent(q))
+  .join(',')}`;
+
+console.log('\n=== 3. GOOGLE TRENDS (5-Year Trajectory & Seasonality) ===');
+console.log(
+  '  How to read: Open to see whether interest is rising, steady, seasonal, or fading over 5 years.'
+);
+console.log(`  Compare (${trendsTopics.length} topics): ${trendsUrl}`);
 
 console.log('\n=== TIP: PASS YOUR OWN SEED TOPICS ===');
 console.log('  npm run ideas -- "astro 7 cloudflare" "surly ogre bikepacking"');
