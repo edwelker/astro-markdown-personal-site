@@ -25,6 +25,29 @@ const DEFAULT_TOPICS = [
 ];
 
 const cliArgs = process.argv.slice(2).filter((a) => a !== '--');
+
+if (cliArgs.includes('--help') || cliArgs.includes('-h')) {
+  console.log(`
+Usage:
+  npm run ideas
+  npm run ideas -- "topic 1" "topic 2"
+
+Examples:
+  npm run ideas -- "astro 7 cloudflare" "surly ogre bikepacking"
+  npm run ideas -- "all-city mr pink" "cast iron soda bread"
+
+What each section means:
+  1. Google Search Console (Striking Distance):
+     Queries Google ALREADY shows eddiewelker.com for (positions 8-50).
+     Low-hanging fruit: tightening a title/intro or adding a photo can bump these onto Page 1.
+  2. Google Autocomplete:
+     Exact follow-up phrases real people type into Google. Use these as post angles or H2 subheadings.
+  3. Hacker News:
+     Recent dev/tech discussions matching your topic (shows whether devs are actively talking about it).
+`);
+  process.exit(0);
+}
+
 const topics = cliArgs.length > 0 ? cliArgs : DEFAULT_TOPICS;
 
 const GSC_SITE = process.env.GSC_SITE_URL || 'sc-domain:eddiewelker.com';
@@ -162,6 +185,12 @@ const [gsc, topicResults] = await Promise.all([
 ]);
 
 console.log('=== 1. GOOGLE SEARCH CONSOLE (Last 90 Days — Striking Distance) ===');
+console.log(
+  '  How to read: Google ALREADY shows your site for these queries (positions 8-50).'
+);
+console.log(
+  '  Improving the page (clearer title/intro, photo, or covering the exact phrase) can lift it to Page 1.\n'
+);
 if (gsc.skipped) {
   console.log(`  Skipped: ${gsc.skipped}`);
 } else if (gsc.error) {
@@ -172,13 +201,20 @@ if (gsc.skipped) {
   const striking = gsc.rows.filter((r) => r.position >= 8 && r.position <= 50).slice(0, 10);
   const top = (striking.length > 0 ? striking : gsc.rows).slice(0, 10);
   for (const r of top) {
+    const bucket = r.position <= 12 ? '[Page 1 edge]' : r.position <= 20 ? '[Page 2]' : '[Page 3+]';
     console.log(
-      `  • "${r.query}" — ${r.impressions} impr, ${r.clicks} clicks, pos ${r.position.toFixed(1)} (${r.page})`
+      `  • ${bucket} "${r.query}" — ${r.impressions} impr, ${r.clicks} clicks, pos ${r.position.toFixed(1)} → ${r.page}`
     );
   }
 }
 
 console.log('\n=== 2. TOPIC SIGNALS (Google Autocomplete · Hacker News) ===');
+console.log(
+  '  How to read: Autocomplete = exact phrases real people type into Google (great post angles/subheadings).'
+);
+console.log(
+  '  Hacker News = recent dev stories on that topic (higher points/comments = active developer interest).'
+);
 for (const t of topicResults) {
   console.log(`\n## ${t.query}`);
   console.log(`  Google Autocomplete: ${t.suggestions.join(' | ') || '(none)'}`);
@@ -189,5 +225,8 @@ for (const t of topicResults) {
     }
   }
 }
-console.log('');
+
+console.log('\n=== TIP: PASS YOUR OWN SEED TOPICS ===');
+console.log('  npm run ideas -- "astro 7 cloudflare" "surly ogre bikepacking"');
+console.log('  npm run ideas -- --help\n');
 process.exit(0);
