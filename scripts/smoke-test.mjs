@@ -162,7 +162,7 @@ try {
   await backdrop.waitFor({ state: 'visible', timeout: 3000 });
   await searchInput.waitFor({ state: 'visible', timeout: 3000 });
   await searchInput.fill('astro');
-  await page.waitForTimeout(600);
+  await page.locator('#search a[href]').first().waitFor({ state: 'visible', timeout: 10000 });
   const resultLinks = await page.locator('#search a[href]').count();
   assert(resultLinks > 0, 'Pagefind search for "astro" should return at least one result');
 
