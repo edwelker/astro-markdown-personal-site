@@ -7,7 +7,6 @@ import { readingTime } from '@lib/utils';
 import BackToPrevious from '@components/BackToPrevious.astro';
 import PostNavigation from '@components/PostNavigation.astro';
 import TableOfContents from '@components/TableOfContents.astro';
-import Giscus from '@components/Giscus.astro';
 import BlogSchema from '@components/BlogSchema.astro';
 import { getPostHref } from '@lib/blog';
 import BlogFeaturedImage from '@components/BlogFeaturedImage.astro';
@@ -110,13 +109,6 @@ const nextHref = nextPost ? getPostHref(nextPost) : undefined;
           {isDraft ? 'Back to drafts' : 'Back to blog'}
         </BackToPrevious>
       </div>
-      {
-        !isDraft && (
-          <div class="mt-24">
-            <Giscus />
-          </div>
-        )
-      }
     </main>
   </Container>
 </Layout>
