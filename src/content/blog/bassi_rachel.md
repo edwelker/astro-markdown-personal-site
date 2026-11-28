@@ -1,13 +1,13 @@
 ---
 title: "Bikes: Bassi Rachel"
-description: "A look at my maroon Bassi Rachel touring build, current specs, and the budget gearing, thumb-shifter, and drivetrain upgrades planned for it."
-date: '2026-11-27T15:45:00-05:00'
-slug: "2026/11/27/bassi_rachel"
+description: "A look at my maroon 59cm Bassi Rachel setup, current specs, and the planned friction-thumbie and wide-range gearing upgrades."
+date: '2026-11-28T10:00:00-05:00'
+slug: "2026/11/28/bassi_rachel"
 draft: true
 tags: ["cycling"]
 ---
 
-My maroon 59cm Bassi Rachel is the long-wheelbase, upright touring and utility rig in the Maryland fleet. I picked it up for $450 already equipped with a SON dynamo front hub, a Nitto front rack, and swept Nitto Boscomoose bars—a fantastic foundation for a plush steel cruiser with massive 470mm chainstays and clearance for high-volume 700c rubber.
+My maroon 59cm Bassi Rachel is the upright, long-wheelbase cruiser in my Maryland fleet. I picked it up for $450 already set up with a SON dynamo front hub, a Nitto rack, and Nitto Boscomoose bars. With 490mm chainstays and room for 700c × 42mm tires, it rides like a sofa, though out of the box the gearing is way too tall for Maryland hills.
 
 <!-- TODO: Add Flickr <figure> photos matching all_city_space_horse.md -->
 
@@ -17,93 +17,69 @@ My maroon 59cm Bassi Rachel is the long-wheelbase, upright touring and utility r
 
 | Component | Part / Model | Notes |
 | :--- | :--- | :--- |
-| *Frameset* | | Bassi Rachel, Maroon, size 59cm (470mm chainstays) |
+| *Frameset* | | Bassi Rachel, Maroon, size 59cm (`490mm` chainstays) |
 | | Headset | *TBD* |
-| | Stem | Nitto Boscomoose integrated bullmoose stem/bar |
-| | Handlebar | Nitto Boscomoose (`22.2mm` MTB clamp diameter) |
-| | Grips / Bar Tape | *TBD* |
+| | Stem / Handlebar | Nitto Boscomoose (`22.2mm` MTB clamp, integrated bullmoose) |
+| | Grips | *TBD* |
 | | Seatpost | *TBD* |
 | | Saddle | *TBD* |
-| *Drivetrain* | Shifters | Current 8-speed shifters *(upgrading to thumbies — see below)* |
-| | Front Derailleur | *TBD* Triple |
-| | Rear Derailleur | Shimano Deore `RD-M591-SGS` Long Cage (`34t` official / `36t` real-world max cog; `45t` wrap capacity) |
-| | Crankset | New Albion XDT (`110/74mm` 5-bolt BCD, `46/36/24t` triple with upgraded 24t inner ring) |
-| | Bottom Bracket | Square taper BSA |
+| *Drivetrain* | Shifters | Current 8-speed shifters *(converting to friction thumbies, see below)* |
+| | Front Derailleur | *TBD* |
+| | Rear Derailleur | Shimano Deore `RD-M591-SGS` (`34t` official / `36t` real-world max cog; `45t` wrap capacity; 1.7 pull ratio) |
+| | Crankset | [New Albion XDT](https://newalbioncycles.com/xdt-crankset) (`110/74mm` 5-bolt BCD, `46/36/24t` with upgraded `24t` inner ring) |
+| | Bottom Bracket | *TBD* |
 | | Cassette | 8-speed, `11-32t` *(current low gear: `21.1"`)* |
-| | Chain | 8-speed *(extra length spliced to cover 470mm stays)* |
-| *Brakes* | Calipers / Levers | Linear pull / V-brakes |
+| | Chain | 8-speed *(extra links spliced in to span the `490mm` stays)* |
+| *Brakes* | Calipers / Levers | *TBD* |
 | *Wheels* | | |
-| | Rims | 700c double wall silver (24h front / 32h rear) |
-| | Front hub | SON Dynamo hub (24-hole) |
-| | Rear hub | Shimano HG freehub (8/9/10-speed compatible) |
-| | Spokes | Stainless steel (24-spoke front wheel) |
-| | Tires | `700c × 42mm` (~28.1" effective wheel diameter) |
+| | Rims | *TBD* (`700c`) |
+| | Front hub | SON Dynamo hub (`24h`) |
+| | Rear hub | Shimano HG freehub (`8/9/10`-speed compatible) |
+| | Spokes | `24`-spoke front wheel *(see notes below)* |
+| | Tires | `700c × 42mm` (`~28.1"` effective wheel diameter) |
 | *Accessories* | | |
-| | Front Rack | Nitto rack |
-| | Fenders | Silver full-coverage |
-| | Lights | Dynamo front headlight |
+| | Rack | Nitto rack |
+| | Fenders | *TBD* |
+| | Lights | *TBD* |
 
 ---
 
-### Setup Notes & The Gearing Problem
+### Setup Notes & Current Baseline
 
-The Rachel is a comfortable, upright cruiser, but it is a heavy steel touring bike. On Maryland's steep gravel kickers, the current stock gearing is simply too tall:
-
-* **The Problem:** The current setup is a `46/36/24t` New Albion XDT triple paired with an 8-speed `11-32t` cassette. The low gear is `24 × 32t` = **21.1 gear inches** (0.75 ratio on `700c × 42mm` tires). In practice, that means I am stuck grinding in the 24t granny ring 100% of the time, almost never touching the 36t middle ring.
-* **The Long-Stay Reality:** At **470mm**, the Rachel's chainstays are exceptionally long. A standard 114–116 link chain cannot physically wrap around a 46t big ring and a 36t or 42t cog without ripping the rear derailleur off the hanger on an accidental cross-chain. Any wide-range upgrade requires splicing two chains together with quick links.
-* **Front Wheel Spoke Count (24 Spoke):** The front wheel is built on a **24-spoke SON dynamo hub**. While 24 spokes aren't ideal on paper for a heavier bike or loaded touring, it should hold up just fine given the relaxed, upright, and less aggressive cruising the Rachel naturally lends itself to.
+* **The Gearing Problem:** On `700c × 42mm` tires, the current `24 × 32t` low gear works out to **21.1 gear inches**. On a heavy steel bike in Maryland, that is too high. I spend almost all my time stuck in the `24t` inner ring and rarely even shift into the `36t` middle ring.
+* **490mm Chainstays:** The Rachel's chainstays are long enough that a standard 114-116 link chain will not span the `46t` big ring and a wide rear cog. Even with the current `11-32t` cassette, I had to add extra links; any `36t` or `42t` upgrade requires splicing two chains together.
+* **24-Spoke Front Wheel:** The SON dynamo front wheel is only 24 spokes. On paper that isn't ideal for a heavy steel bike, but it should hold up fine given the relaxed, less aggressive riding the Rachel naturally lends itself to.
 
 ---
 
 ## Planned Improvements & Why I Picked What I Picked
 
-The goal is to get a true "wall-climbing" low gear so the 24t ring is reserved for genuine steeps, moving general cruising back to the middle ring where it belongs—without ugly modern black components clashing with the bike's classic aesthetic.
+The goal is straightforward: drop the low gear enough that I can actually use the middle chainring on flats and save the `24t` inner ring for real climbs, convert the Boscomoose cockpit to clean friction thumbies, and keep the silver classic look intact on a reasonable budget.
 
-### The Planned Drivetrain Options
+### Gearing Math (`700c × 42mm` / `~28.1"` Wheel Diameter)
 
-| Setup | Low Cog | Ratio | Low Gear (700×42) | Climbing Effort | Drivetrain Reality |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **Current Baseline** | `32t` | 0.75 | **21.1"** | Baseline (100%) | Stuck in 24t ring all day |
-| **Option 1: 9-Speed Clean Jump** | `36t` | 0.67 | **18.7"** | **11% easier** | Shimano CS-HG400-9 (silver); native fit on RD-M591; **no RoadLink** |
-| **Option 2: 9-Speed Mega-Range** | `42t` | 0.57 | **16.1"** | **24% easier** | SunRace CSM990 (silver) + Wolf Tooth RoadLink; tractor crawling gear |
+| Setup | Gear Inches | vs. Current (`21.1"`) | Chain & Capacity Notes |
+| :--- | :---: | :---: | :--- |
+| **`24 × 32t` (Current)** | **21.1"** | Baseline | Stuck in `24t` ring most of the time |
+| `26 × 32t` | 22.8" | 8% harder | No chain issues, wrong direction |
+| `28 × 36t` | 21.9" | 4% harder | No chain issues, still harder than current |
+| `28 × 40t` | 19.7" | 7% easier | Needs spliced chain + exceeds derailleur wrap |
+| **`24 × 36t` (Clean 9-Sp)** | **18.7"** | **11% easier** | Clears `RD-M591` natively (no RoadLink); needs spliced chain (`~120L`) |
+| **`24 × 42t` (Wide 9-Sp)** | **16.1"** | **24% easier** | Needs RoadLink + spliced chain (`~123-124L`); sags in small-small (`24 × 11/13t`) |
 
----
+Keeping the `24t` inner ring is the only way to get a meaningful climbing improvement. Moving up to a `26t` or `28t` inner ring actually makes climbing *harder* unless paired with a massive rear cog.
 
-### Why I Picked These Specific Parts (and Skipped Others)
+### Why I Picked Certain Parts (and Skipped Others)
 
-#### 1. Why NOT microSHIFT (Aesthetic Veto)
-microSHIFT ADVENT cassettes and derailleurs get recommended constantly for budget wide-range setups, but **they are finished in matte black and look completely out of place on a classic steel touring bike**. The Bassi Rachel has a timeless maroon frame, silver Nitto rack, silver Nitto Boscomoose bars, polished New Albion cranks, and silver wheels. Sticking an aggressive black microSHIFT cassette and clunky black modern mech on this bike ruins the aesthetic. We are sticking strictly to **silver/nickel-plated cassettes** (Shimano `CS-HG400-9` or silver SunRace).
-
-#### 2. Why Reusing the Gray Rubber Shimano Bar-End Pods in Friction Mode
-I had a pair of Dura-Ace `SL-BS79` 10-speed bar-end shifters sitting on my desk, but Shimano removed the friction toggle on the BS79—they are indexed-only. 
-Instead, I have a pair of **gray rubber-coated Shimano bar-end shifters with the D-ring Friction/Index toggle** (classic `SL-BS77` style). Switched to friction mode, they act as a universal "skeleton key":
-* They sweep across 8, 9, or 10-speed cassettes smoothly with zero indexing headaches.
-* Friction shifting on a 9-speed cassette has wider cog spacing than 10-speed, making it far more forgiving to trim by feel without ghost-shifting or gear chatter.
-
-#### 3. Why Rivendell Silver Thumb Mounts ($90/pair) over Paul Thumbies ($150/pair)
-To mount those bar-end pods onto the `22.2mm` grip section of the Nitto Boscomoose bars:
-* **Paul Thumbies** are nice with their hinged clamp, but they run ~$140–$160 a pair and have a fixed cable stop.
-* **Rivendell Silver Thumb Shifter Mounts** cost $90/pair and include a **16-position rotating cable stop**. This allows the housing to exit at the exact angle needed to track cleanly along the sweep of the Boscomoose bars without awkward cable bends. Sliding the grips and levers off once to install the non-hinged Rivendell clamp is an easy trade-off to save $60 and get better cable lines.
-
-#### 4. The 36t vs. 42t Fork: Zero-Hack vs. Wall-Climber
-* **The Zero-Hack Path (Shimano CS-HG400-9, 11-36t, Silver):** The Shimano Deore `RD-M591-SGS` is a classic "golden era" touring derailleur. Its official max cog is 34t, but turning the B-tension screw in lets it clear a **36t** cog cleanly without any hanger extenders. At `18.7"`, it's 11% easier than stock and completely bulletproof.
-* **The Wall-Climber Path (Silver SunRace 11-42t + Wolf Tooth RoadLink):** Moving to a 42t cog yields **16.1 gear inches** (a massive 24% reduction in effort), making steep loaded grades effortless. The RD-M591 upper pulley physically cannot clear a 42t cog on its own, requiring a **Wolf Tooth RoadLink** ($24) to lower the derailleur.
-
-#### 5. Why Not an RD-M5120-SGS Derailleur?
-Modern Shadow derailleurs like the Deore RD-M5120 clear a 42t cog natively, but:
-* It has a **lower total chain wrap capacity (41t)** than the older RD-M591 (45t).
-* It uses a mountain Dyna-Sys cable pull ratio that requires significantly more cable pull from a friction lever, risking running out of shifter throw.
-* It is only rated for large cogs in 1x or 2x setups; on a `46/36/24` triple (which requires 53t wrap capacity), no modern derailleur can soak up all the slack anyway. Keeping the classic silver RD-M591 is both cheaper and mechanically superior for this build.
-
-#### 6. Chain Management & Splicing
-Because of the 470mm chainstays and the wide gear spread:
-* **Why two 9-speed chains:** An 8-speed chain has the same 3/32" internal width as a 9-speed chain, but its outer plates are ~7.1mm wide versus ~6.6mm for 9-speed. On a 9-speed cassette (where cogs are spaced tighter on the exact same freehub width), an 8-speed chain will constantly rub adjacent cogs and grind.
-* **The Splicing Setup:** Buy two identical 9-speed chains that include quick links (e.g., **SRAM PC-951** with PowerLinks or **KMC X9** with MissingLinks). Splice them to ~122–126 links using the **Big-Big method** (wrap around the 46t front ring and largest rear cog, bypass the derailleur, and add 2 full links). This guarantees that if you accidentally shift into big-big, you won't rip the derailleur off the frame.
-* **The Small-Small Slack Trade-Off:** Sizing for Big-Big means that in the small ring and small cogs (24 × 11t or 24 × 13t), the chain will droop and drag on the stays because the triple exceeds the derailleur's 45t wrap limit. Since you should never cross-chain small-to-small anyway, this is a completely safe, known trade-off.
-
-#### 7. Middle Chainring Note: Why Origin8 Ramped/Pinned if Dropping to 34t
-If eventually dropping the middle chainring from 36t to 34t to tighten cruising steps:
-* A road double ring (like an inner SRAM 34t) lacks the lifting pins and ramps needed to pull a chain up from a tiny 24t granny ring.
-* The **Origin8 Alloy Ramped & Pinned 110 BCD 34t** ring is explicitly multi-speed compatible (8/9/10-speed) and features the machined lift gates required for a triple middle ring. For now, keeping the stock 36t preserves factory New Albion shifting while the rear cassette solves the climbing gear problem.
+* **No microSHIFT (Aesthetic Veto):** microSHIFT ADVENT cassettes (`11-42t`) come up constantly as the cheapest wide-range option, but they're finished in black and clash badly with a maroon steel frame, silver Nitto bars and rack, polished New Albion cranks, and silver wheels. I'm sticking strictly to **silver / nickel-plated cassettes**: **Shimano `CS-HG400-9` (`11-36t`)** for the zero-adapter path, or a silver nickel **SunRace `CSM980` (`11-42t` or `11-40t`)** if I add a RoadLink.
+* **Reusing Gray Rubber Shimano Bar-End Pods in Friction Mode (Skipping `SL-BS79`):** I have a pair of Shimano Dura-Ace `SL-BS79` 10-speed bar-ends on my desk, but Shimano removed the friction toggle on the `BS79`, so they're indexed-only. I also have a pair of **gray rubber-coated Shimano bar-ends with the D-ring Index/Friction toggle** (`SL-BS77` style). In friction mode, they sweep cleanly across 8-, 9-, or 10-speed cassettes on a Shimano HG freehub.
+* **9-Speed Over 10-Speed for Friction Shifting:** On an `11-36t` block, 9-speed (`11-13-15-18-21-24-28-32-36`) and 10-speed (`11-13-15-17-19-21-24-28-32-36`) only differ in one middle step. With friction shifters, 9-speed's wider physical cog spacing is much easier to trim by feel without ghost-shifting or chatter. Name-brand 8-speed `11-36t` cassettes don't exist from major makers (they jump from `11-34t` straight to `11-40t`/`12-42t`).
+* **Rivendell Silver Thumb Mounts (`$90/pair`) Over Paul Thumbies (`~$140-160/pair`):** Paul Thumbies have a hinged clamp, which is convenient, but Rivendell's Silver mounts (`22.2mm` with shims) save ~$50-70 and add a **16-position rotating cable-housing stop** that dials in clean housing lines along the Boscomoose sweep. Pulling grips and brake levers off once to install non-hinged mounts is an easy trade.
+* **The `36t` vs. `42t` Fork (and Keeping the `RD-M591-SGS`):**
+  * **No-RoadLink Path (`11-36t`, `18.7"`):** The Deore `RD-M591-SGS` clears a `36t` cog natively with the B-screw turned in, giving crisp shifting with zero hanger extenders and an easy future path to `42t` if `18.7"` still feels tall.
+  * **Wall-Climber Path (`11-42t` + Wolf Tooth RoadLink, `16.1"`):** Drops climbing effort by 24% into true loaded-touring territory. The `RD-M591` physically collides with anything over `36t` without a RoadLink (`~$24`).
+  * **Why NOT Swap to a Modern `RD-M5120-SGS`:** It clears `42t` without a RoadLink, *but* it actually has **less chain wrap capacity (`41t` vs. `45t`)** than the `RD-M591` already on the bike, uses Dyna-Sys pull (requiring longer friction-lever throw), and still can't absorb the `53t` wrap of a `46/36/24` triple + `11-42t`.
+* **Two Identical 9-Speed Chains with Quick Links (No Reusing the 8-Speed Chain):** Even though 8- and 9-speed chains share `3/32"` internal width, an 8-speed chain is `~7.1mm` wide externally vs. `~6.6mm` for 9-speed, so on a tighter 9-speed cassette it will constantly rub adjacent cogs. To span the `490mm` stays safely, I'll buy **two identical 9-speed chains that include quick links** (**SRAM `PC-951`** or **KMC `X9`**, skipping basic Shimano press-pin chains), size **Big-Big (`46t` × largest cog) + 2 full links** so an accidental cross-chain never rips the derailleur off, and simply avoid small-small (`24 × 11/13t`), where the chain will sag past the `45t` wrap limit.
+* **Middle Chainring (`36t` vs. `34t`):** Keeping the stock `36t` preserves the New Albion crank's factory shift ramps (dropping to `34t` is only a `5.5%` reduction). If I ever decide to drop to `34t` later for flatter cruising, I'll use an **Origin8 Alloy Ramped & Pinned `110 BCD 34t`** (8/9/10-speed rated with lift gates) rather than a 10-speed-only SRAM compact-double inner ring that lacks ramps and pins for lifting off a `24t` granny ring.
 
 <!-- TODO: Add closing Flickr <figure> photo -->
